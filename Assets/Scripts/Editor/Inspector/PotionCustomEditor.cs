@@ -20,8 +20,8 @@ public class PotionEditor : Editor
     void OnEnable()
     {
         // Load properties
-        recipeProp = serializedObject.FindProperty("Recipe");
         nameProp = serializedObject.FindProperty("Name");
+        recipeProp = serializedObject.FindProperty("Recipe");
 
         // create the reorderable list
         Recipe = new ReorderableList(serializedObject, recipeProp, true, true, true, true);
@@ -35,10 +35,12 @@ public class PotionEditor : Editor
             // Increase target rect y to move the next object down on screen (rect 0,0 is in top left)
             rect.y += 2;
 
+            float thirdWidth = rect.width / 3;
+
             // Create a property field for the ingredient
             EditorGUI.PropertyField (
                 // Set the rectangle for the property field position
-                new Rect(rect.x, rect.y, rect.width / 3, EditorGUIUtility.singleLineHeight),
+                new Rect(rect.x, rect.y, thirdWidth, EditorGUIUtility.singleLineHeight),
                 // Get the serialized property
                 element.FindPropertyRelative("Ingredient"),
                 // no GUI content needed
@@ -47,7 +49,7 @@ public class PotionEditor : Editor
             // Create a property field for the cooking time
             EditorGUI.PropertyField (
                 // Set the rectangle for the property field position
-                new Rect(rect.x + rect.width / 3, rect.y, rect.width / 3, EditorGUIUtility.singleLineHeight),
+                new Rect(rect.x + thirdWidth, rect.y, thirdWidth, EditorGUIUtility.singleLineHeight),
                 // Get the serialized Property
                 element.FindPropertyRelative("Time"),
                 // no GUI content needed
@@ -56,7 +58,7 @@ public class PotionEditor : Editor
             // Create a propertyField for the error magin
             EditorGUI.PropertyField (
                 // Set the rectangle for the property field position
-                new Rect(rect.x + rect.width / 3 * 2, rect.y, rect.width / 3, EditorGUIUtility.singleLineHeight),
+                new Rect(rect.x + thirdWidth * 2, rect.y, thirdWidth, EditorGUIUtility.singleLineHeight),
                 // Get the serialized Property
                 element.FindPropertyRelative("ErrorMargin"),
                 // no GUI content needed

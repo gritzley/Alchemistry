@@ -31,7 +31,7 @@ public class Potion : ScriptableObject
 
         Debug.Log($"{steps.Count} / {Recipe.Count}");
 
-        // If the numbers of steps don't match, it's wrong
+        // If the numbers of steps doesn't match, it's wrong
         if (steps.Count != Recipe.Count) return false;
 
         Debug.Log("Recipe Count Fits");
