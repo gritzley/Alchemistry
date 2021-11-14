@@ -5,16 +5,12 @@ using UnityEditor.UIElements;
 using UnityEditorInternal;
 using System.Collections;
 
-[CustomEditor(typeof(Encounter))]
+[CustomEditor(typeof(Quest))]
 [CanEditMultipleObjects]
-public class EncounterEditor : Editor
+public class QuestEditor : Editor
 {
     SerializedProperty startBitProp;
     SerializedProperty linksProp;
-
-    // Reorderable list for the Links
-    ReorderableList Links;
-
     
     // This gets called when the inspector is opened
     void OnEnable()
@@ -51,7 +47,7 @@ public class EncounterEditor : Editor
                 // Set the rectangle for the property field position
                 new Rect(rect.x + quarterWidth * 2, rect.y, quarterWidth * 2, EditorGUIUtility.singleLineHeight),
                 // Get the serialized Property
-                element.FindPropertyRelative("NextEncounter"),
+                element.FindPropertyRelative("NextQuest"),
                 // no GUI content needed
                 GUIContent.none
             );
@@ -66,8 +62,10 @@ public class EncounterEditor : Editor
         // Create a property field for the start prop
         EditorGUILayout.PropertyField(startBitProp);
 
-        // Add the reorderable list to the layout
-        Links.DoLayoutList();
+        foreach(KeyValuePair<Potion, Quest> entry in linksProp)
+
+        // // Add the reorderable list to the layout
+        // Links.DoLayoutList();
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();

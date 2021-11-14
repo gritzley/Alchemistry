@@ -5,22 +5,10 @@ using System.Linq;
 
 public class KettleController : MonoBehaviour
 {
-    // List of all possible potions
-    [SerializeField] List<Potion> AllPotions;
     // Flag for cooking. Set to false to stop cooking
     public bool cooking = false;
     // Field for a new ingredient that is added to the pot
     public Ingredient NewIngredient;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     // Enumerator to handle cooking
     public IEnumerator Cooking() {
@@ -79,7 +67,7 @@ public class KettleController : MonoBehaviour
         Steps[Steps.Count - 1] = lastStep;
 
         // Filter out Potions that don't fit the recipe
-        List<Potion> Potions = AllPotions.Where( e => e.ValidateSteps(Steps) ).ToList();
+        List<Potion> Potions = GameManager.Instance.Potions.Where( e => e.ValidateSteps(Steps) ).ToList();
         
         // If there are no or several potions that fit the recipe, make a failed potion
         if (Potions.Count != 1)

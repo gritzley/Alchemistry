@@ -35,15 +35,18 @@ public class PlayerController : Moveable
         // Set rotation to new rotation
         transform.rotation = Quaternion.LookRotation(initalDirection);
 
+        // Init Hand
         handTransform = transform.Find("Hand");
     }
 
     // Called every frame
     void Update()
     { 
-        // Handle Inputs
+        // INPUTS ////////////////////////
         if (!inputDisabled)
         {
+
+
             // On Turn Buttons (A and D)
             if (Input.GetButtonDown("Turn"))
             {
@@ -54,6 +57,8 @@ public class PlayerController : Moveable
                 }
             }
             
+
+
             // On Move Buttons (W and S)
             if (Input.GetButtonDown("Move"))
             {
@@ -67,6 +72,8 @@ public class PlayerController : Moveable
                     MoveToPos(nextPos);
                 }
             }
+
+
 
 
             // Handle Mouseclick Event
@@ -161,6 +168,9 @@ public class PlayerController : Moveable
                     }
                 }
             }
+
+            
+
         }
     }
 
@@ -188,6 +198,9 @@ public class PlayerController : Moveable
     /// <param name="dir">The turn direction. 1 for clockwise and -1 for anticlockwise</param>
     void TurnCorner (float dir)
     {
+        // Normalize the direction
+        dir /= Mathf.Abs(dir);
+        
         // Set the target rotation to 90 degrees in the specified direction around the y axis
         cardinalDirection = Quaternion.Euler(0, dir * 90, 0) * cardinalDirection;
 

@@ -12,6 +12,7 @@ public class BakeInkStory : EditorWindow
 {
 
     ////////// THIS IS CURRENTLY UNUSED
+    /// Comment in the following line to make the window usable
 
     // [MenuItem("Window/Bake Ink Story")]
     // public static void ShowWindow () {
@@ -23,17 +24,20 @@ public class BakeInkStory : EditorWindow
 
         if (GUILayout.Button("Bake Story"))
         {
+            // Paths
+            string dialoguePath = "Assets/BakedDialogue";
+            string dialogueRessourcePath = @$"{Directory.GetCurrentDirectory()}\\Assets\\Resources\\Dialogue\\";
+
             /////// CLEAR OLD ASSETS ///////
 
             // Clear old Dialogue
-            string[] paths = AssetDatabase.GetSubFolders("Assets/Dialogue");
+            string[] paths = AssetDatabase.GetSubFolders(dialoguePath);
             AssetDatabase.DeleteAssets(paths, new List<string>());
 
             /////// CREATE NEW ASSETS ///////
             
             // Read main.ink
-            string mainPath = @$"{Directory.GetCurrentDirectory()}\\Assets\\Resources\\Dialogue\\";
-            string mainInk = System.IO.File.ReadAllText(mainPath + @"main.ink");
+            string mainInk = System.IO.File.ReadAllText(dialogueRessourcePath + @"main.ink");
 
 
 
@@ -55,11 +59,11 @@ public class BakeInkStory : EditorWindow
                 // Add character to list
                 characters.Add(name);
 
-                if (!AssetDatabase.IsValidFolder($"Assets/Dialogue/{name}"))
+                if (!AssetDatabase.IsValidFolder($"{dialoguePath}/{name}"))
                 {
                     // Create a directory corresponding to the character
-                    AssetDatabase.CreateFolder("Assets/Dialogue", name);
-                    AssetDatabase.CreateFolder($"Assets/Dialogue/{name}", "Bits");
+                    AssetDatabase.CreateFolder("{dialoguePath}", name);
+                    AssetDatabase.CreateFolder($"{dialoguePath}/{name}", "Bits");
                 }
             }
 
@@ -93,7 +97,7 @@ public class BakeInkStory : EditorWindow
                 // Thus we store the content first and iterate over it again, once all the story bits are there.
 
                 // Read character.ink line by line
-                string characterPath = @$"{Directory.GetCurrentDirectory()}\\Assets\\Resources\\Dialogue\\{character}.ink";
+                string characterPath = @$"{dialogueRessourcePath}\\{character}.ink";
                 foreach (string line in System.IO.File.ReadLines(characterPath))
                 {  
                     // Filter out non-content
@@ -152,7 +156,7 @@ public class BakeInkStory : EditorWindow
                         }
                     }
 
-                    AssetDatabase.CreateAsset(bit, $"Assets/Dialogue/{character}/Bits/{entry.Key}.asset");
+                    AssetDatabase.CreateAsset(bit, $"{dialoguePath}/{character}/Bits/{entry.Key}.asset");
                 }
             }
 
