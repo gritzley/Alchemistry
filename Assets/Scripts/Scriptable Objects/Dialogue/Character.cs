@@ -7,6 +7,11 @@ public class Character : ScriptableObject
 {
     // The name of the character
     public string Name;
-    public DialogueBit StartBit;
-    DialogueBit currentBit;
+    public Quest StartQuest;
+    Quest currentQuest;
+
+    public DialogueLine CurrentDialogueLine
+    {
+        get { return currentQuest.CurrentLine; }
+    }
 }

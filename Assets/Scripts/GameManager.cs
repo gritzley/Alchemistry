@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     // Instance of GameManager
     public static GameManager Instance;
     public List<Potion> Potions;
+
+    public Character test_Character;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.
@@ -27,5 +29,11 @@ public class GameManager : MonoBehaviour
             return AssetDatabase.LoadMainAssetAtPath(path) as Potion;
         })
         .ToList();
+    }
+
+    void Start()
+    {
+        // DialogueLine line = test_Character.CurrentDialogueLine;
+        // Debug.Log(line.Text);
     }
 }

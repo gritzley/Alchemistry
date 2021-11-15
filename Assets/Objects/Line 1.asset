@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6dc2150f0ea84384083316156473a, type: 3}
-  m_Name: ConstipatedCow
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 1
   m_EditorClassIdentifier: 
-  StartBit: {fileID: 11400000, guid: afdd054773d2a554e9f60a637ee1c1b4, type: 2}
-  Links: []
+  Text: bla
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 1
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: f0a66cae21dadbc4a91dcde650d81919, type: 2}

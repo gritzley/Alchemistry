@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quest", menuName = "Quest")]
 public class Quest : ScriptableObject
 {
-    public DialogueBit StartBit;
-
-    DialogueBit currentBit;
 
     [System.Serializable]
     public struct Link
@@ -18,14 +15,10 @@ public class Quest : ScriptableObject
 
     public List<Link> Links;
 
-    public Quest()
+    public DialogueLine StartLine;
+    private DialogueLine currentLine;
+    public DialogueLine CurrentLine
     {
-        currentBit = StartBit;
-        Links = new List<Link>();
-        foreach (Potion potion in GameManager.Instance.Potions)
-        {
-            Link link = new Link();
-            link.Potion = potion;
-        }
+        get { return currentLine; }
     }
 }

@@ -32,8 +32,6 @@ public class KettleController : MonoBehaviour
             // Handle a new ingredient in the pot
             if (NewIngredient != null)
             {
-                Debug.Log($"Added {NewIngredient.Name}");
-
                 // Create a new step
                 Potion.Step step = new Potion.Step();
                 // Set step ingredient

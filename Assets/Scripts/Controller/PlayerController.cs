@@ -133,7 +133,7 @@ public class PlayerController : Moveable
                         // Get held item components for later reference
                         IngredientContainer ingredientContainer = heldItem.gameObject.GetComponent<IngredientContainer>();
                         // Handle kettle hit
-                        if (kettle != null)
+                        if (kettle != null) 
                         {
                             // if the held item is an ingredient
                             if (ingredientContainer != null)

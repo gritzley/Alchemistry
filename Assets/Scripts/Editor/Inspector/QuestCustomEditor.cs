@@ -9,17 +9,19 @@ using System.Collections;
 [CanEditMultipleObjects]
 public class QuestEditor : Editor
 {
-    SerializedProperty startBitProp;
+    SerializedProperty lineProp;
     SerializedProperty linksProp;
+
+    ReorderableList Links;
     
     // This gets called when the inspector is opened
     void OnEnable()
     {
         // Load serialized properties
-        startBitProp = serializedObject.FindProperty("StartBit");
+        lineProp = serializedObject.FindProperty("StartLine");
         linksProp = serializedObject.FindProperty("Links");
 
-        // create the reorderable list
+        // Create ReorderableList
         Links = new ReorderableList(serializedObject, linksProp, true, true, true, true);
 
         // Define how the Unity should display elements in the list by overriding the exposed callback
@@ -52,6 +54,11 @@ public class QuestEditor : Editor
                 GUIContent.none
             );
         };
+
+        Links.drawHeaderCallback = (Rect rect) =>
+        {
+            EditorGUI.LabelField(rect, "Links");
+        };
     }
 
     public override void OnInspectorGUI()
@@ -60,12 +67,10 @@ public class QuestEditor : Editor
         serializedObject.Update();
 
         // Create a property field for the start prop
-        EditorGUILayout.PropertyField(startBitProp);
-
-        foreach(KeyValuePair<Potion, Quest> entry in linksProp)
+        EditorGUILayout.PropertyField(lineProp, new GUIContent("Start Line"));
 
         // // Add the reorderable list to the layout
-        // Links.DoLayoutList();
+        Links.DoLayoutList();
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();

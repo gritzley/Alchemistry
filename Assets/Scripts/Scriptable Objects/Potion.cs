@@ -26,15 +26,9 @@ public class Potion : ScriptableObject
     // Validate wheter a given list of steps matches this potions recipe
     public bool ValidateSteps(List<Step> steps)
     {
-        Debug.Log("----------");
-        Debug.Log(Name);
-
-        Debug.Log($"{steps.Count} / {Recipe.Count}");
 
         // If the numbers of steps doesn't match, it's wrong
         if (steps.Count != Recipe.Count) return false;
-
-        Debug.Log("Recipe Count Fits");
 
         // Go through every step
         for (int i = 0; i < steps.Count; i++) {
@@ -46,11 +40,8 @@ public class Potion : ScriptableObject
             // If the ingredient is wrong, it's out
             if (target.Ingredient != actual.Ingredient) return false;
 
-            Debug.Log($"Ingredient {target.Ingredient} fits");
-
             // Calculate the difference between how long it cooked and how long it was supposed to cook
             float deltaTime = Mathf.Abs(target.Time - actual.Time);
-            Debug.Log($"Time difference is {deltaTime}. Error Margin is {target.ErrorMargin}");
             // If the time difference is greater than the steps error margin, it's out
             if (deltaTime > target.ErrorMargin) return false;
         }

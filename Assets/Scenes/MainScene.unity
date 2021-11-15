@@ -908,6 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Potions: []
+  test_Character: {fileID: 11400000, guid: 6b36c947da4e3284a967494e33293cab, type: 2}
 --- !u!4 &1384027330
 Transform:
   m_ObjectHideFlags: 0
@@ -1137,35 +1138,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.70710653
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000021597349
+      value: -0.0006332826
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.70710653
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000021597349
+      value: -0.0006332826
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5720614
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.41562697
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.5720614
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.41562697
       objectReference: {fileID: 0}
     - target: {fileID: 7422586892581342517, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_Name
