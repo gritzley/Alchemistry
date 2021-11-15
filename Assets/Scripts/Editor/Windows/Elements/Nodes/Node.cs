@@ -2,7 +2,6 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-[System.Serializable]
 public class Node
 {
     // Reference to rect
@@ -99,7 +98,11 @@ public class Node
 
             // on mouseup stop dragging
             case EventType.MouseUp:
-                isDragged = false;
+                if (isDragged)
+                {
+                    isDragged = false;
+                    OnDragEnd();
+                }
                 break;
 
             // in mousemove with leftclick, move this object
@@ -115,6 +118,8 @@ public class Node
 
         return false;
     }
+
+    public virtual void OnDragEnd() { } // just for overrides
 
     // Create a context menu
     private void ProcessContextMenu()

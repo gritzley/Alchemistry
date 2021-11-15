@@ -54,51 +54,39 @@ public class DialogueEditor : EditorWindow
         outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
 
-        // Fill node list
+        // REPLACE THIS LINE WITH SOMETHING SENSIBLE
         DialogueLine firstLine = AssetDatabase.LoadMainAssetAtPath("Assets/Objects/Line 1.asset") as DialogueLine;
 
-        GetDialogueTreeFromLine(firstLine);
-
-        // var data = EditorPrefs.GetString("DialogueEditorContent", JsonUtility.ToJson(this, false));
-
-        // // Then we apply them to this window
-        // JsonUtility.FromJsonOverwrite(data, this);
-    }
-    
-    private void OnDisable()
-    {
-
-        // var data = JsonUtility.ToJson(this, false);
-        // // And we save it
-        // EditorPrefs.SetString("DialogueEditorContent", data);
-
+        // Create the dialogue tree from the first line
+        BuildDialogueTreeFromLine(firstLine);
     }
 
-    public void GetDialogueTreeFromLine(DialogueLine startLine)
+    // Draws a full Dialogue tree from one line
+    public void BuildDialogueTreeFromLine(DialogueLine startLine)
     {
+        // If there are no nodes, init the list
         if (nodes == null)
         {
             nodes = new List<Node>();
         }
 
+        // This is the start position
         Vector2 currentPos = new Vector2(0, 0);
 
+        // Create a lookupTable to match lines to nodes because there is no other backreference
         Dictionary<DialogueLine, DialogueLineNode> nodeLookupTable = new Dictionary<DialogueLine, DialogueLineNode>();
+
+        // I will replace this soon so fuck it
         List<List<DialogueLine>> LayeredDialogueLines = new List<List<DialogueLine>>();
+
         LayeredDialogueLines.Add(new List<DialogueLine>() {startLine});
-        DialogueLineNode node = new DialogueLineNode(startLine, currentPos, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+        DialogueLineNode node = new DialogueLineNode(startLine, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
         nodeLookupTable.Add(startLine, node);
         nodes.Add(node);
-
-
 
         for (int i = 0; i < LayeredDialogueLines.Count; i++)
         {
             List<DialogueLine> layer = LayeredDialogueLines[i];
-
-            currentPos.y = (layer.Count - 1) * -50;
-
-            currentPos.x += 150;
             for (int j = 0; j < layer.Count; j++)
             {
                 DialogueLine line = layer[j];
@@ -112,11 +100,10 @@ public class DialogueEditor : EditorWindow
                     {
                         if (!nodeLookupTable.ContainsKey(line.NextRight))
                         {
-                            node = new DialogueLineNode(line.NextRight, currentPos, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+                            node = new DialogueLineNode(line.NextRight, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
                             nodeLookupTable.Add(line.NextRight, node);
                             nodes.Add(node);
                             LayeredDialogueLines[i+1].Add(line.NextRight);
-                            currentPos.y += 100;
                         }
                         else
                         {
@@ -130,11 +117,10 @@ public class DialogueEditor : EditorWindow
                     {
                         if (!nodeLookupTable.ContainsKey(line.NextLeft))
                         {
-                            node = new DialogueLineNode(line.NextLeft, currentPos, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+                            node = new DialogueLineNode(line.NextLeft, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
                             nodeLookupTable.Add(line.NextLeft, node);
                             nodes.Add(node);
                             LayeredDialogueLines[i+1].Add(line.NextLeft);
-                            currentPos.y += 100;
                         }
                         else
                         {
@@ -424,15 +410,16 @@ public class DialogueEditor : EditorWindow
     // Remove a connection
     private void OnClickRemoveConnection(Connection connection)
     {
-        DialogueLineNode node = connection.outPoint.node as DialogueLineNode;
 
-        if (connection.outPoint == node.outPointLeft )
+        // Set the appropriate nextLine of the outNodes dialogueLine to null 
+        DialogueLineNode outNode = connection.outPoint.node as DialogueLineNode;
+        if (connection.outPoint == outNode.outPointLeft )
         {
-            node.Line.NextLeft = null;
+            outNode.Line.NextLeft = null;
         }
-        else if (connection.outPoint == node.outPointRight)
+        else if (connection.outPoint == outNode.outPointRight)
         {
-            node.Line.NextRight = null;
+            outNode.Line.NextRight = null;
         }
         
         connections.Remove(connection);
@@ -441,22 +428,24 @@ public class DialogueEditor : EditorWindow
     // Create a connection
     private void CreateConnection()
     {
+        // If there are no connections yet, init list;
         if (connections == null)
         {
             connections = new List<Connection>();
         }
 
-        DialogueLineNode node = selectedOutPoint.node as DialogueLineNode;
-
-        if (selectedOutPoint == node.outPointLeft )
+        // Set the appropriate nextLine of the outNodes dialogueLine to the inNodes dialogueLine
+        DialogueLineNode outNode = selectedOutPoint.node as DialogueLineNode;
+        if (selectedOutPoint == outNode.outPointLeft )
         {
-            node.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
+            outNode.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
         }
-        else if (selectedOutPoint == node.outPointRight)
+        else if (selectedOutPoint == outNode.outPointRight)
         {
-            node.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
+            outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
         }
 
+        // Finally add connection to list
         connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
     }
 

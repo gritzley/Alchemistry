@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-[System.Serializable]
 [CreateAssetMenu(fileName = "DialogueLine", menuName = "DialogueLine")]
 public class DialogueLine : ScriptableObject
 {
@@ -14,4 +13,6 @@ public class DialogueLine : ScriptableObject
     public bool HasAnswers = true;
     public DialogueLine NextLeft;
     public DialogueLine NextRight;
+
+    public Vector2 EditorPos = Vector2.zero;
 }

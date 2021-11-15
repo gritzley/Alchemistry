@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Define types of connection points
-[System.Serializable] public enum ConnectionPointType { In, Out }
+public enum ConnectionPointType { In, Out }
 
-[System.Serializable]
 public class ConnectionPoint
 {
     // Rectangle reference

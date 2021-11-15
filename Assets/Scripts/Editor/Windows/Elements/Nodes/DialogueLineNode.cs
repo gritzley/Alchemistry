@@ -2,7 +2,6 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-[System.Serializable]
 public class DialogueLineNode : Node
 {
     public DialogueLine Line;
@@ -14,8 +13,8 @@ public class DialogueLineNode : Node
         set { this.outPoint = value; }
     }
     // Constructor mostly does the same as base node but with some extra stuff
-    public DialogueLineNode(DialogueLine line, Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
-    :base(position, 100, 50, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public DialogueLineNode(DialogueLine line, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    :base(line.EditorPos, 100, 50, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
     {
         // Save line ref
         Line = line;
@@ -26,6 +25,11 @@ public class DialogueLineNode : Node
     public override void SelectAssociatedObject()
     {
         Selection.activeObject = Line;
+    }
+
+    public override void OnDragEnd()
+    {
+        Line.EditorPos = rect.position;
     }
 
     public override void Draw()
