@@ -16,5 +16,6 @@ MonoBehaviour:
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 1
-  NextLeft: {fileID: 0}
+  NextLeft: {fileID: 11400000, guid: f0a66cae21dadbc4a91dcde650d81919, type: 2}
   NextRight: {fileID: 11400000, guid: f0a66cae21dadbc4a91dcde650d81919, type: 2}
+  EditorPos: {x: 49, y: 173}

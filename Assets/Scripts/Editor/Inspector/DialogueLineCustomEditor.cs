@@ -58,10 +58,10 @@ public class DialogueLineEditor : Editor
             EditorGUILayout.PropertyField(nextRightProp, new GUIContent("Next"));
         }
 
-        DialogueEditor dialogueEditor = EditorWindow.GetWindow<DialogueEditor>();
-        if (dialogueEditor != null)
+
+        if (DialogueEditor.IsOpen)
         {
-            dialogueEditor.Repaint();
+            EditorWindow.GetWindow<DialogueEditor>().Repaint();
         }
 
         // Apply all changes made to serialized properties

@@ -4,10 +4,15 @@ using System.Collections.Generic;
 
 public class DialogueEditor : EditorWindow
 {
+    public static DialogueEditor Instance { get; private set; }
+    public static bool IsOpen {
+        get { return Instance != null; }
+    }
+
     // Nodes and connections
-    [SerializeField] private List<Node> nodes;
-    [SerializeField] private List<Connection> connections;
-    [SerializeField] private List<ConnectionPoint> connectionPoints;
+    private List<Node> nodes;
+    private List<Connection> connections;
+
 
     // Style
     private GUIStyle nodeStyle;
@@ -21,8 +26,8 @@ public class DialogueEditor : EditorWindow
     private ConnectionPoint selectedOutPoint;
 
     // offset and drag are used to log the current position in the grid
-    [SerializeField] private Vector2 offset;
-    [SerializeField] private Vector2 drag;
+    private Vector2 offset;
+    private Vector2 drag;
 
 
     // Show the window
@@ -35,6 +40,9 @@ public class DialogueEditor : EditorWindow
 
     private void OnEnable()
     {
+        // Instantiate
+        Instance = this;
+
         // Set all the styles
         nodeStyle = new GUIStyle();
         nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
@@ -61,8 +69,15 @@ public class DialogueEditor : EditorWindow
         BuildDialogueTreeFromLine(firstLine);
     }
 
+    private void OnDisable()
+    {
+        // Deinstantiate
+        Instance = null;
+    }
+    
+
     // Draws a full Dialogue tree from one line
-    public void BuildDialogueTreeFromLine(DialogueLine startLine)
+    public void BuildDialogueTreeFromLine(DialogueLine line)
     {
         // If there are no nodes, init the list
         if (nodes == null)
@@ -70,69 +85,72 @@ public class DialogueEditor : EditorWindow
             nodes = new List<Node>();
         }
 
-        // This is the start position
-        Vector2 currentPos = new Vector2(0, 0);
+        // Start the recursive process
+        BuildSubTree(line);
 
-        // Create a lookupTable to match lines to nodes because there is no other backreference
-        Dictionary<DialogueLine, DialogueLineNode> nodeLookupTable = new Dictionary<DialogueLine, DialogueLineNode>();
+        
 
-        // I will replace this soon so fuck it
-        List<List<DialogueLine>> LayeredDialogueLines = new List<List<DialogueLine>>();
-
-        LayeredDialogueLines.Add(new List<DialogueLine>() {startLine});
-        DialogueLineNode node = new DialogueLineNode(startLine, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-        nodeLookupTable.Add(startLine, node);
-        nodes.Add(node);
-
-        for (int i = 0; i < LayeredDialogueLines.Count; i++)
+        // Recursive function. If all subtrees of a node are built, the nodes tree is built.
+        DialogueLineNode BuildSubTree(DialogueLine line)
         {
-            List<DialogueLine> layer = LayeredDialogueLines[i];
-            for (int j = 0; j < layer.Count; j++)
-            {
-                DialogueLine line = layer[j];
+            // Create the node for the first line
+            DialogueLineNode node = new DialogueLineNode(line, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+            nodes.Add(node);
 
-                if (line.NextLeft != null || line.NextRight != null )
+
+            // Create left and right nodes, if they are not null
+            if (line.NextRight != null)
+            {
+                // See if the node already exists, if not, build it by building it's subtree
+                DialogueLineNode nextNode = GetNodeByLine(line.NextRight);
+                if (nextNode == null)
                 {
-                    if (i == LayeredDialogueLines.Count - 1) {
-                        LayeredDialogueLines.Add(new List<DialogueLine>());
-                    }
-                    if (line.NextRight != null)
-                    {
-                        if (!nodeLookupTable.ContainsKey(line.NextRight))
-                        {
-                            node = new DialogueLineNode(line.NextRight, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-                            nodeLookupTable.Add(line.NextRight, node);
-                            nodes.Add(node);
-                            LayeredDialogueLines[i+1].Add(line.NextRight);
-                        }
-                        else
-                        {
-                            node = nodeLookupTable[line.NextRight];
-                        }
-                        selectedOutPoint = nodeLookupTable[line].outPointRight;
-                        selectedInPoint = node.inPoint;
-                        CreateConnection();
-                    }
-                    if (line.NextLeft != null)
-                    {
-                        if (!nodeLookupTable.ContainsKey(line.NextLeft))
-                        {
-                            node = new DialogueLineNode(line.NextLeft, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-                            nodeLookupTable.Add(line.NextLeft, node);
-                            nodes.Add(node);
-                            LayeredDialogueLines[i+1].Add(line.NextLeft);
-                        }
-                        else
-                        {
-                            node = nodeLookupTable[line.NextLeft];
-                        }
-                        selectedOutPoint = nodeLookupTable[line].outPointLeft;
-                        selectedInPoint = node.inPoint;
-                        CreateConnection();
-                    }
+                    nextNode = BuildSubTree(line.NextRight);
                 }
-                ClearConnectionSelection();
+
+                // Create a connection to the new node
+                selectedOutPoint = node.outPointRight;
+                selectedInPoint = nextNode.inPoint;
+                CreateConnection();
             }
+            if (line.NextLeft != null)
+            {
+                // See if the node already exists, if not, build it by building it's subtree
+
+                DialogueLineNode nextNode = GetNodeByLine(line.NextLeft);
+                if (nextNode == null)
+                {
+                    nextNode = BuildSubTree(line.NextLeft);
+                }
+
+                // Create a connection to the nde node
+                selectedOutPoint = node.outPointLeft;
+                selectedInPoint = nextNode.inPoint;
+                CreateConnection();
+            }
+
+
+            // Clear whatever selected in and out points remain
+            ClearConnectionSelection();
+
+            // return parent node of the subtree for recursive purposes
+            return node;
+        }
+
+        // Get a node by referencing the line it describes
+        DialogueLineNode GetNodeByLine(DialogueLine line)
+        {
+            // Go through all nodes, if one matches, return it;
+            foreach (DialogueLineNode node in nodes)
+            {
+                if (node.Line == line)
+                {
+                    return node;
+                }
+            }
+
+            // If all fails return null
+            return null;
         }
     }
 
@@ -422,6 +440,7 @@ public class DialogueEditor : EditorWindow
             outNode.Line.NextRight = null;
         }
         
+        // Finally remove the conenction
         connections.Remove(connection);
     }
 

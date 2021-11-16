@@ -20,6 +20,7 @@ public class DialogueLineNode : Node
         Line = line;
         outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         outPointLeft.YPercent = 0.66f;
+        Type type = typeof(DialogueEditor);
     }
 
     public override void SelectAssociatedObject()
