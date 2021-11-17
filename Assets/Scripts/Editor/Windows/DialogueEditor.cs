@@ -11,6 +11,7 @@ public class DialogueEditor : EditorWindow
 
     // Nodes and connections
     private List<Node> nodes;
+    private List<DialogueLineNode> dialogueLineNodes;
     private List<Connection> connections;
 
 
@@ -30,14 +31,21 @@ public class DialogueEditor : EditorWindow
     private Vector2 drag;
 
 
-    // Show the window
+
+    /// <summary>
+    /// OnepWindow is called when the user is selecting the window in the Editors Open Window dialogue
+    /// </summary>
     [MenuItem("Window/Dialogue Editor")]
     private static void OpenWindow()
     {
+        // Create an instance of the window and set the title
         DialogueEditor window = GetWindow<DialogueEditor>();
         window.titleContent = new GUIContent("Dialogue Editor");
     }
 
+    /// <summary>
+    /// OnEnable is called when the window is opened or editor is reloaded
+    /// </summary>
     private void OnEnable()
     {
         // Instantiate
@@ -62,120 +70,192 @@ public class DialogueEditor : EditorWindow
         outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
 
-        // REPLACE THIS LINE WITH SOMETHING SENSIBLE
-        DialogueLine firstLine = AssetDatabase.LoadMainAssetAtPath("Assets/Objects/Line 1.asset") as DialogueLine;
+        // Initialize node list
+        nodes = new List<Node>();
+        connections = new List<Connection>();
+        dialogueLineNodes = new List<DialogueLineNode>();
 
-        // Create the dialogue tree from the first line
-        BuildDialogueTreeFromLine(firstLine);
-    }
-
-    private void OnDisable()
-    {
-        // Deinstantiate
-        Instance = null;
-    }
-    
-
-    // Draws a full Dialogue tree from one line
-    public void BuildDialogueTreeFromLine(DialogueLine line)
-    {
-        // If there are no nodes, init the list
-        if (nodes == null)
+        // Create DialogueLineNodes from DialogueLine Assets
+        foreach (var line in AssetDatabase.LoadAllAssetsAtPath("Assets/Dialogue/Line.asset")) 
         {
-            nodes = new List<Node>();
+            DialogueLineNode node = new DialogueLineNode((line as DialogueLine), nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+            dialogueLineNodes.Add(node);
+            nodes.Add((Node)node);
         }
 
-        // Start the recursive process
-        BuildSubTree(line);
-
-        
-
-        // Recursive function. If all subtrees of a node are built, the nodes tree is built.
-        DialogueLineNode BuildSubTree(DialogueLine line)
+        // Assign node connections
+        foreach (DialogueLineNode node in dialogueLineNodes)
         {
-            // Create the node for the first line
-            DialogueLineNode node = new DialogueLineNode(line, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
-            nodes.Add(node);
+            DialogueLine line = node.Line;
 
-
-            // Create left and right nodes, if they are not null
+            // Set connections to the left and right, if applicable
             if (line.NextRight != null)
             {
-                // See if the node already exists, if not, build it by building it's subtree
                 DialogueLineNode nextNode = GetNodeByLine(line.NextRight);
-                if (nextNode == null)
-                {
-                    nextNode = BuildSubTree(line.NextRight);
-                }
-
-                // Create a connection to the new node
                 selectedOutPoint = node.outPointRight;
                 selectedInPoint = nextNode.inPoint;
                 CreateConnection();
             }
             if (line.NextLeft != null)
             {
-                // See if the node already exists, if not, build it by building it's subtree
 
                 DialogueLineNode nextNode = GetNodeByLine(line.NextLeft);
-                if (nextNode == null)
-                {
-                    nextNode = BuildSubTree(line.NextLeft);
-                }
-
-                // Create a connection to the nde node
                 selectedOutPoint = node.outPointLeft;
                 selectedInPoint = nextNode.inPoint;
                 CreateConnection();
             }
 
-
             // Clear whatever selected in and out points remain
             ClearConnectionSelection();
-
-            // return parent node of the subtree for recursive purposes
-            return node;
-        }
-
-        // Get a node by referencing the line it describes
-        DialogueLineNode GetNodeByLine(DialogueLine line)
-        {
-            // Go through all nodes, if one matches, return it;
-            foreach (DialogueLineNode node in nodes)
-            {
-                if (node.Line == line)
-                {
-                    return node;
-                }
-            }
-
-            // If all fails return null
-            return null;
         }
     }
 
+    /// <summary>
+    /// Get a DialogueLineNode from it's associated DialogueLine
+    /// </summary>
+    /// <param name="line">The nodes associated Dialogue Line</param>
+    /// <returns>The DialogueLineNode</returns>
+    private DialogueLineNode GetNodeByLine(DialogueLine line)
+    {
+        // Go through all nodes, if one matches, return it;
+        foreach (Node node in nodes)
+        {
+            if ((node is DialogueLineNode) && ((node as DialogueLineNode).Line == line))
+            {
+                return (node as DialogueLineNode);
+            }
+        }
+
+        // If all fails return null
+        return null;
+    }
+
+    /// <summary>
+    /// Called when the Editor Window is disabled
+    /// </summary>
+    private void OnDisable()
+    {
+        // Deinstantiate
+        Instance = null;
+    }
+
+    /// <summary>
+    /// OnGUI is called whenever the window is being drawn. This is essentially the main function of the Window
+    /// </summary>
     private void OnGUI()
     {
-        // Draw a cute grid
+        // Draw two grids for orientation
         DrawGrid(20, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
 
-        // Draw content
-        DrawNodes();
-        DrawConnections();
+        // Draw all nodes on the screen
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].Draw();
+        }
 
-        // Draw the line for the current drag event
-        DrawConnectionLine(Event.current);
+        // Draw all connections on the screen
+        for (int i = 0; i < connections.Count; i++)
+        {
+            connections[i].Draw();
+        }
 
-        // Process window events (clicks and drags and stuff)
-        ProcessNodeEvents(Event.current);
-        ProcessEvents(Event.current);
+        // Draw a line from mouse to SelectedInPoint if the user still has to select an outPoint
+        if (selectedInPoint != null && selectedOutPoint == null)
+        {
+            Handles.DrawBezier(
+                selectedInPoint.rect.center,
+                Event.current.mousePosition,
+                selectedInPoint.rect.center + Vector2.left * 50f,
+                Event.current.mousePosition - Vector2.left * 50f,
+                Color.white,
+                null,
+                2f
+            );
+
+            GUI.changed = true; // Set this to redraw
+        }
+
+        // Draw a line from mouse to SelectedOutPoint if the user still has to select an inPoint
+        if (selectedOutPoint != null && selectedInPoint == null)
+        {
+            Handles.DrawBezier(
+                selectedOutPoint.rect.center,
+                Event.current.mousePosition,
+                selectedOutPoint.rect.center - Vector2.left * 50f,
+                Event.current.mousePosition + Vector2.left * 50f,
+                Color.white,
+                null,
+                2f
+            );
+
+            GUI.changed = true; // Set this to redraw
+        }
+
+        // Process Events for all nodes
+        for (int i = nodes.Count - 1; i >= 0; i--)
+        {
+            bool guiChanged = nodes[i].ProcessEvents(Event.current);
+
+            if (guiChanged)
+            {
+                GUI.changed = true;
+            }
+        }
+
+        // Reset drag vector
+        drag = Vector2.zero;
+
+        // Process Event for Window
+        switch (Event.current.type)
+        {
+            // Mouseclick Events
+            case EventType.MouseDown:
+                // On LeftClick clear selected connection points
+                if (Event.current.button == 0)
+                {
+                    ClearConnectionSelection();
+                }   
+                // On RightClick open the context menu
+                if (Event.current.button == 1)
+                {
+                    GenericMenu genericMenu = new GenericMenu();
+                    Vector2 mousePosition = Event.current.mousePosition;
+                    genericMenu.AddItem(new GUIContent("Add Node"), false, () => CreateNodeAtPosition(mousePosition));
+                    genericMenu.ShowAsContext();
+                }
+            break;
+
+            // Mousedrag Events
+            case EventType.MouseDrag:
+                // Leftclick Drag
+                if (Event.current.button == 0)
+                {
+                    // Get the drag vector
+                    drag = Event.current.delta;
+
+                    // Go through all nodes and call their drags
+                    for (int i = 0; i < nodes.Count; i++)
+                    {
+                        nodes[i].Drag(Event.current.delta);
+                    }
+
+                    // Log window changes so we get a repaint
+                    GUI.changed = true;
+                }
+            break;
+        }
 
         // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();
     }
 
-    // Draws a grid
+    /// <summary>
+    /// Draw a grid in the window
+    /// </summary>
+    /// <param name="gridSpacing">The spacing between the grids line</param>
+    /// <param name="gridOpacity">The opacity of the grids lines</param>
+    /// <param name="gridColor">The color of the girds lines</param>
     private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
     {
         // calculate how many lines to draw
@@ -207,154 +287,29 @@ public class DialogueEditor : EditorWindow
         Handles.EndGUI();
     }
 
-    // Draw all the nodes
-    private void DrawNodes()
+    /// <summary>
+    /// Add a new node at a mouse position 
+    /// </summary>
+    /// <param name="mousePosition"> Vector2 of the position to create the asset at</param>
+    /// <typeparam name="T"></typeparam>
+    private void CreateNodeAtPosition(Vector2 position)
     {
-        if (nodes != null)
-        {
-            for (int i = 0; i < nodes.Count; i++)
-            {
-                nodes[i].Draw();
-            }
-        }
+        string path = AssetDatabase.GenerateUniqueAssetPath("Assets/Dialogue/Line.asset");
+
+        DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
+
+        AssetDatabase.CreateAsset(line, path);
+        AssetDatabase.SaveAssets();
+
+        line.Title = line.name;
+
+        nodes.Add(new DialogueLineNode(line, position, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
 
-    // Draw all the connections
-    private void DrawConnections()
-    {
-        if (connections != null)
-        {
-            for (int i = 0; i < connections.Count; i++)
-            {
-                connections[i].Draw();
-            } 
-        }
-    }
-
-    // Process window events
-    private void ProcessEvents(Event e)
-    {
-        // Set the Drag to 0
-        drag = Vector2.zero;
-
-        switch (e.type)
-        {
-            // On Mousedown
-            case EventType.MouseDown:
-                if (e.button == 0)
-                {
-                    // On leftclick clear selection
-                    ClearConnectionSelection();
-                }
-
-                if (e.button == 1)
-                {
-                    // On rightlick open context menu
-                    ProcessContextMenu(e.mousePosition);
-                }
-            break;
-
-            // On drag set the drag ref
-            case EventType.MouseDrag:
-                if (e.button == 0)
-                {
-                    OnDrag(e.delta);
-                }
-            break;
-        }
-    }
-
-    // Process events for all nodes
-    private void ProcessNodeEvents(Event e)
-    {
-        if (nodes != null)
-        {
-            for (int i = nodes.Count - 1; i >= 0; i--)
-            {
-                bool guiChanged = nodes[i].ProcessEvents(e);
-
-                if (guiChanged)
-                {
-                    GUI.changed = true;
-                }
-            }
-        }
-    }
-
-    // Draw connection line to the mouse on setting connections
-    private void DrawConnectionLine(Event e)
-    {
-        // When dragging from in to out
-        if (selectedInPoint != null && selectedOutPoint == null)
-        {
-            Handles.DrawBezier(
-                selectedInPoint.rect.center,
-                e.mousePosition,
-                selectedInPoint.rect.center + Vector2.left * 50f,
-                e.mousePosition - Vector2.left * 50f,
-                Color.white,
-                null,
-                2f
-            );
-
-            GUI.changed = true; // Set this to redraw
-        }
-
-        // When dragging from out to in
-        if (selectedOutPoint != null && selectedInPoint == null)
-        {
-            Handles.DrawBezier(
-                selectedOutPoint.rect.center,
-                e.mousePosition,
-                selectedOutPoint.rect.center - Vector2.left * 50f,
-                e.mousePosition + Vector2.left * 50f,
-                Color.white,
-                null,
-                2f
-            );
-
-            GUI.changed = true; // Set this to redraw
-        }
-    }
-
-    // Display a context menu
-    private void ProcessContextMenu(Vector2 mousePosition)
-    {
-        // Just a point to add nodes
-        GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Add node"), false, () => OnClickAddNode(mousePosition)); 
-        genericMenu.ShowAsContext();
-    }
-
-    // when dragging do this
-    private void OnDrag(Vector2 delta)
-    {
-        drag = delta;
-
-        // Go through all nodes and call their drags
-        if (nodes != null)
-        {
-            for (int i = 0; i < nodes.Count; i++)
-            {
-                nodes[i].Drag(delta);
-            }
-        }
-
-        GUI.changed = true;
-    }
-
-    // Add a new node at a mouse position
-    private void OnClickAddNode(Vector2 mousePosition)
-    {
-        if (nodes == null)
-        {
-            nodes = new List<Node>();
-        }
-
-        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
-    }
-
-    // When clicking an  in connection point
+    /// <summary>
+    /// Callback for clicking on an inPoint
+    /// </summary>
+    /// <param name="inPoint">the ConnectionPoint clicked</param>
     private void OnClickInPoint(ConnectionPoint inPoint)
     {
         // note this point
@@ -366,12 +321,8 @@ public class DialogueEditor : EditorWindow
             if (selectedOutPoint.node != selectedInPoint.node)
             {
                 CreateConnection();
-                ClearConnectionSelection(); 
             }
-            else
-            {
-                ClearConnectionSelection();
-            }
+            ClearConnectionSelection();
         }
     }
 
@@ -386,12 +337,8 @@ public class DialogueEditor : EditorWindow
             if (selectedOutPoint.node != selectedInPoint.node)
             {
                 CreateConnection();
-                ClearConnectionSelection();
             }
-            else
-            {
-                ClearConnectionSelection();
-            }
+            ClearConnectionSelection();
         }
     }
 
@@ -414,11 +361,17 @@ public class DialogueEditor : EditorWindow
             // remove the nodes you found
             for (int i = 0; i < connectionsToRemove.Count; i++)
             {
-                connections.Remove(connectionsToRemove[i]);
+                RemoveConnection(connectionsToRemove[i]);
             }
 
             // cleanup
             connectionsToRemove = null;
+        }
+
+        if (node is DialogueLineNode)
+        {
+            AssetDatabase.DeleteAsset($"Assets/Dialogue/{(node as DialogueLineNode).Line.name}.asset");
+            AssetDatabase.SaveAssets();
         }
 
         // Finally remove the node
@@ -426,18 +379,24 @@ public class DialogueEditor : EditorWindow
     }
 
     // Remove a connection
-    private void OnClickRemoveConnection(Connection connection)
+    private void RemoveConnection(Connection connection)
     {
 
-        // Set the appropriate nextLine of the outNodes dialogueLine to null 
-        DialogueLineNode outNode = connection.outPoint.node as DialogueLineNode;
-        if (connection.outPoint == outNode.outPointLeft )
+        // get outNode
+        Node _outNode = connection.outPoint.node;
+
+        // If outNode is a DialogueLine set NextLeft or NextRight to null, depending on where the connection is
+        if (_outNode is DialogueLineNode)
         {
-            outNode.Line.NextLeft = null;
-        }
-        else if (connection.outPoint == outNode.outPointRight)
-        {
-            outNode.Line.NextRight = null;
+            DialogueLineNode outNode = (_outNode as DialogueLineNode);
+            if (connection.outPoint == outNode.outPointLeft )
+            {
+                outNode.Line.NextLeft = null;
+            }
+            else if (connection.outPoint == outNode.outPointRight)
+            {
+                outNode.Line.NextRight = null;
+            }
         }
         
         // Finally remove the conenction
@@ -453,19 +412,28 @@ public class DialogueEditor : EditorWindow
             connections = new List<Connection>();
         }
 
-        // Set the appropriate nextLine of the outNodes dialogueLine to the inNodes dialogueLine
-        DialogueLineNode outNode = selectedOutPoint.node as DialogueLineNode;
-        if (selectedOutPoint == outNode.outPointLeft )
+        // get in and out node
+        Node _outNode = selectedOutPoint.node;
+        Node _inNode = selectedInPoint.node;
+
+        // if both nodes are DialogueNodes set in and out points appropriately
+        if ((_outNode is DialogueLineNode) && (_inNode is DialogueLineNode))
         {
-            outNode.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
-        }
-        else if (selectedOutPoint == outNode.outPointRight)
-        {
-            outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
+            DialogueLineNode outNode = (_outNode as DialogueLineNode);
+            DialogueLineNode inNode = (_inNode as DialogueLineNode);
+
+            if (selectedOutPoint == outNode.outPointLeft )
+            {
+                outNode.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
+            }
+            else if (selectedOutPoint == outNode.outPointRight)
+            {
+                outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
+            }
         }
 
         // Finally add connection to list
-        connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
+        connections.Add(new Connection(selectedInPoint, selectedOutPoint, RemoveConnection));
     }
 
     // Clear the selected connection points

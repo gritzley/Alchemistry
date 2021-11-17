@@ -7,6 +7,7 @@ using UnityEngine.Assertions;
 [CreateAssetMenu(fileName = "DialogueLine", menuName = "DialogueLine")]
 public class DialogueLine : ScriptableObject
 {
+    public string Title;
     public string Text;
     public string AnswerLeft;
     public string AnswerRight;

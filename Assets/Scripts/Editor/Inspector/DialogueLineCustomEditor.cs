@@ -10,6 +10,7 @@ using System.Collections;
 public class DialogueLineEditor : Editor
 {
     // Serialized properties for recipe and name
+    SerializedProperty titleProp;
     SerializedProperty textProp;
     SerializedProperty hasAnswersProp;
     SerializedProperty answerLeftProp;
@@ -25,12 +26,18 @@ public class DialogueLineEditor : Editor
     void OnEnable()
     {
         // Load properties
+        titleProp = serializedObject.FindProperty("Title");
         textProp = serializedObject.FindProperty("Text");
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
         answerRightProp = serializedObject.FindProperty("AnswerRight");
         nextLeftProp = serializedObject.FindProperty("NextLeft");
         nextRightProp = serializedObject.FindProperty("NextRight");
+
+        if (DialogueEditor.IsOpen)
+        {
+            EditorWindow.GetWindow<DialogueEditor>().Repaint();
+        }
     }
 
     // This gets called every frame that the inspector is drawn
@@ -39,7 +46,8 @@ public class DialogueLineEditor : Editor
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
 
-        // Add a property field for the text
+        // Add a property field for title and text
+        EditorGUILayout.PropertyField(titleProp);
         EditorGUILayout.PropertyField(textProp);
 
         // Toggle for hasAnswer
@@ -56,12 +64,6 @@ public class DialogueLineEditor : Editor
         else
         {
             EditorGUILayout.PropertyField(nextRightProp, new GUIContent("Next"));
-        }
-
-
-        if (DialogueEditor.IsOpen)
-        {
-            EditorWindow.GetWindow<DialogueEditor>().Repaint();
         }
 
         // Apply all changes made to serialized properties

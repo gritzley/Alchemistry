@@ -13,8 +13,8 @@ public class DialogueLineNode : Node
         set { this.outPoint = value; }
     }
     // Constructor mostly does the same as base node but with some extra stuff
-    public DialogueLineNode(DialogueLine line, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
-    :base(line.EditorPos, 100, 50, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    public DialogueLineNode(DialogueLine line, Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    :base(position, 100, 50, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
     {
         // Save line ref
         Line = line;
@@ -22,6 +22,9 @@ public class DialogueLineNode : Node
         outPointLeft.YPercent = 0.66f;
         Type type = typeof(DialogueEditor);
     }
+    public DialogueLineNode(DialogueLine line, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    :this(line, line.EditorPos, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    { }
 
     public override void SelectAssociatedObject()
     {
@@ -53,6 +56,6 @@ public class DialogueLineNode : Node
         GUIStyle style = new GUIStyle(GUI.skin.label);
         style.alignment = TextAnchor.UpperCenter;
         style.padding = new RectOffset(0, 0, 10, 0);
-        GUI.Label(rect, Line.name, style);
+        GUI.Label(rect, Line.Title, style);
     }
 }
