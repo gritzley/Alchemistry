@@ -17,6 +17,8 @@ public class ConnectionPoint
     // Reference to parent node
     public Node node;
 
+    public Connection connection;
+
     // style reference
     public GUIStyle style;
 

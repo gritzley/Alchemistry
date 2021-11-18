@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System.Linq;
 
 public class DialogueEditor : EditorWindow
 {
@@ -11,8 +12,9 @@ public class DialogueEditor : EditorWindow
 
     // Nodes and connections
     private List<Node> nodes;
-    private List<DialogueLineNode> dialogueLineNodes;
     private List<Connection> connections;
+    private List<DialogueLineNode> dialogueLineNodes;
+    private List<DialogueLine> dialogueLines;
 
 
     // Style
@@ -70,15 +72,25 @@ public class DialogueEditor : EditorWindow
         outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
 
-        // Initialize node list
+        // Initialize lists
         nodes = new List<Node>();
         connections = new List<Connection>();
         dialogueLineNodes = new List<DialogueLineNode>();
+        dialogueLines = new List<DialogueLine>();
+        
+        
+        string[] directories = new string[] { "Assets/Dialogue" };
+        string filter = "t:DialogueLine";
+        DialogueLine[] lines = AssetDatabase.FindAssets(filter, directories)
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (DialogueLine)AssetDatabase.LoadAssetAtPath(e, typeof(DialogueLine)))
+        .ToArray();
+        
 
         // Create DialogueLineNodes from DialogueLine Assets
-        foreach (var line in AssetDatabase.LoadAllAssetsAtPath("Assets/Dialogue/Line.asset")) 
+        foreach (DialogueLine line in lines) 
         {
-            DialogueLineNode node = new DialogueLineNode((line as DialogueLine), nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+            DialogueLineNode node = new DialogueLineNode(line, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
             dialogueLineNodes.Add(node);
             nodes.Add((Node)node);
         }
@@ -98,7 +110,6 @@ public class DialogueEditor : EditorWindow
             }
             if (line.NextLeft != null)
             {
-
                 DialogueLineNode nextNode = GetNodeByLine(line.NextLeft);
                 selectedOutPoint = node.outPointLeft;
                 selectedInPoint = nextNode.inPoint;
@@ -118,11 +129,11 @@ public class DialogueEditor : EditorWindow
     private DialogueLineNode GetNodeByLine(DialogueLine line)
     {
         // Go through all nodes, if one matches, return it;
-        foreach (Node node in nodes)
+        foreach (DialogueLineNode node in dialogueLineNodes)
         {
-            if ((node is DialogueLineNode) && ((node as DialogueLineNode).Line == line))
+            if (node.Line == line)
             {
-                return (node as DialogueLineNode);
+                return node;
             }
         }
 
@@ -302,6 +313,7 @@ public class DialogueEditor : EditorWindow
         AssetDatabase.SaveAssets();
 
         line.Title = line.name;
+        line.EditorPos = position;
 
         nodes.Add(new DialogueLineNode(line, position, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
@@ -315,29 +327,45 @@ public class DialogueEditor : EditorWindow
         // note this point
         selectedInPoint = inPoint;
 
-        // if there is a selected out point, set a connection, unless it is the same node
+        // If there already is a selected out point, create a connection
         if (selectedOutPoint != null)
         {
+            // if the out point already has a connection, remove it
+            if (selectedOutPoint.connection != null) {
+                RemoveConnection(selectedOutPoint.connection);
+            }
+
+            // If the nodes are not the same, create the connection
             if (selectedOutPoint.node != selectedInPoint.node)
             {
                 CreateConnection();
             }
+
+            // cleanup
             ClearConnectionSelection();
         }
     }
 
     private void OnClickOutPoint(ConnectionPoint outPoint)
     {
+        // if the out point already has a connection, remove it
+        if (outPoint.connection != null) {
+            RemoveConnection(outPoint.connection);
+        }
+
         // Note this point
         selectedOutPoint = outPoint;
 
-        // if there is a selected in point, set a connection, unless it is the same node
+        // If there already is a selected in point, create the connection
         if (selectedInPoint != null)
         {
+            // If the nodes are not the same, create the point
             if (selectedOutPoint.node != selectedInPoint.node)
             {
                 CreateConnection();
             }
+
+            // cleanup
             ClearConnectionSelection();
         }
     }
@@ -398,6 +426,10 @@ public class DialogueEditor : EditorWindow
                 outNode.Line.NextRight = null;
             }
         }
+
+        // remove connectionpoints references to connection;
+        connection.inPoint.connection = null;
+        connection.outPoint.connection = null;
         
         // Finally remove the conenction
         connections.Remove(connection);
@@ -406,12 +438,6 @@ public class DialogueEditor : EditorWindow
     // Create a connection
     private void CreateConnection()
     {
-        // If there are no connections yet, init list;
-        if (connections == null)
-        {
-            connections = new List<Connection>();
-        }
-
         // get in and out node
         Node _outNode = selectedOutPoint.node;
         Node _inNode = selectedInPoint.node;
@@ -432,8 +458,15 @@ public class DialogueEditor : EditorWindow
             }
         }
 
+        // Create connection
+        Connection connection = new Connection(selectedInPoint, selectedOutPoint, RemoveConnection);
+
+        // Reference connection in the connection points
+        selectedInPoint.connection = connection;
+        selectedOutPoint.connection = connection;
+
         // Finally add connection to list
-        connections.Add(new Connection(selectedInPoint, selectedOutPoint, RemoveConnection));
+        connections.Add(connection);
     }
 
     // Clear the selected connection points

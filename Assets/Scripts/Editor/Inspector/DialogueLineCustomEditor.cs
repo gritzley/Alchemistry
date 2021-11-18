@@ -15,8 +15,6 @@ public class DialogueLineEditor : Editor
     SerializedProperty hasAnswersProp;
     SerializedProperty answerLeftProp;
     SerializedProperty answerRightProp;
-    SerializedProperty nextLeftProp;
-    SerializedProperty nextRightProp;
 
 
     // Reorderable list for the recipe
@@ -31,8 +29,6 @@ public class DialogueLineEditor : Editor
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
         answerRightProp = serializedObject.FindProperty("AnswerRight");
-        nextLeftProp = serializedObject.FindProperty("NextLeft");
-        nextRightProp = serializedObject.FindProperty("NextRight");
 
         if (DialogueEditor.IsOpen)
         {
@@ -46,24 +42,29 @@ public class DialogueLineEditor : Editor
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
 
+        if (GUILayout.Button("Open Dialogue Editor"))
+        {
+            EditorWindow.GetWindow<DialogueEditor>();
+        }
+
         // Add a property field for title and text
         EditorGUILayout.PropertyField(titleProp);
         EditorGUILayout.PropertyField(textProp);
+
+        bool hasAnswerPreviousValue = hasAnswersProp.boolValue;
 
         // Toggle for hasAnswer
         EditorGUILayout.PropertyField(hasAnswersProp);
 
 
-        if(hasAnswersProp.boolValue)
+        if (hasAnswersProp.boolValue)
         {
             EditorGUILayout.PropertyField(answerLeftProp);
-            EditorGUILayout.PropertyField(nextLeftProp);
             EditorGUILayout.PropertyField(answerRightProp);
-            EditorGUILayout.PropertyField(nextRightProp);
         }
-        else
+        if (hasAnswerPreviousValue != hasAnswersProp.boolValue && DialogueEditor.IsOpen)
         {
-            EditorGUILayout.PropertyField(nextRightProp, new GUIContent("Next"));
+            EditorWindow.GetWindow<DialogueEditor>().Repaint();
         }
 
         // Apply all changes made to serialized properties

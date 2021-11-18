@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line
   m_EditorClassIdentifier: 
-  Title: Line 0
-  Text: bla
+  Title: Line
+  Text: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 1
-  NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: f0a66cae21dadbc4a91dcde650d81919, type: 2}
-  EditorPos: {x: 57, y: 222}
+  NextLeft: {fileID: 11400000, guid: 9cbd514f649bf634982e518fd702e8f0, type: 2}
+  NextRight: {fileID: 11400000, guid: b64390b2ec355b74887fe3f07767393c, type: 2}
+  EditorPos: {x: 58, y: 201}

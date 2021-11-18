@@ -23,6 +23,10 @@ public class Connection
     // This is called whenever the screen gets redrawn
     public void Draw()
     {
+
+        // If the outPoint is the left side of a dialogueLineNode which has the left side disabled, don't draw the connection;
+        if (outPoint.node is DialogueLineNode && outPoint == (outPoint.node as DialogueLineNode).outPointLeft && !(outPoint.node as DialogueLineNode).Line.HasAnswers) return;
+
         // Draw a smooth curve between the two points
         Handles.DrawBezier(
             inPoint.rect.center,
@@ -34,7 +38,7 @@ public class Connection
             2f
         );
 
-        // If there is a button on the connection, call the remove method
+        // Draw a Button in the middle of the curve that removes the connection
         if (Handles.Button((inPoint.rect.center + outPoint.rect.center) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
         {
             if (OnClickRemoveConnection != null)
