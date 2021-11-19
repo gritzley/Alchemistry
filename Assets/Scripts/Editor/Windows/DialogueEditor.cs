@@ -14,7 +14,7 @@ public class DialogueEditor : EditorWindow
     private List<Node> nodes;
     private List<Connection> connections;
     private List<DialogueLineNode> dialogueLineNodes;
-    private List<DialogueLine> dialogueLines;
+    private List<QuestNode> questNodes;
 
 
     // Style
@@ -23,6 +23,8 @@ public class DialogueEditor : EditorWindow
     private GUIStyle inPointStyle;
     private GUIStyle outPointStyle;
 
+    // default node data object
+    private NodeData defaultNodeData;
 
     // Refs selected points
     private ConnectionPoint selectedInPoint;
@@ -31,6 +33,9 @@ public class DialogueEditor : EditorWindow
     // offset and drag are used to log the current position in the grid
     private Vector2 offset;
     private Vector2 drag;
+
+    // paths
+    private string dialoguePath = "Assets/Dialogue";
 
 
 
@@ -72,25 +77,61 @@ public class DialogueEditor : EditorWindow
         outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
 
+        // Initialize default node data
+        defaultNodeData = new NodeData();
+        defaultNodeData.nodeStyle = nodeStyle;
+        defaultNodeData.selectedNodeStyle = selectedNodeStyle;
+        defaultNodeData.inPointStyle = inPointStyle;
+        defaultNodeData.outPointStyle = outPointStyle;
+        defaultNodeData.OnClickInPoint = OnClickInPoint;
+        defaultNodeData.OnClickOutPoint = OnClickOutPoint;
+        defaultNodeData.OnClickRemoveNode = OnClickRemoveNode;
+
         // Initialize lists
         nodes = new List<Node>();
         connections = new List<Connection>();
         dialogueLineNodes = new List<DialogueLineNode>();
-        dialogueLines = new List<DialogueLine>();
+        questNodes = new List<QuestNode>();
         
-        
-        string[] directories = new string[] { "Assets/Dialogue" };
-        string filter = "t:DialogueLine";
-        DialogueLine[] lines = AssetDatabase.FindAssets(filter, directories)
+        // prepare the string array needed for the FindAssets method
+        string[] directories = new string[] { dialoguePath };
+
+        // Collect Line Assets
+        DialogueLine[] lines = AssetDatabase.FindAssets("t:DialogueLine", directories)
         .Select( e => AssetDatabase.GUIDToAssetPath(e))
         .Select( e => (DialogueLine)AssetDatabase.LoadAssetAtPath(e, typeof(DialogueLine)))
         .ToArray();
-        
 
+        // Collect Quest Assets (a generic function for this would be wicked)
+        Quest[] quests = AssetDatabase.FindAssets("t:Quest", directories)
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (Quest)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
+        .ToArray();
+
+        // Creeate QuestNodes from Quest Assets
+        foreach (Quest quest in quests)
+        {
+            QuestNode node = new QuestNode(quest, defaultNodeData);
+            questNodes.Add(node);
+            nodes.Add((Node)node);
+        }
+
+        CreateDialogueLineNodesFromArray(lines);
+    }
+
+    /// <summary>
+    /// Create a List of DialogueLineNodes from an array of DialogueLines
+    /// </summary>
+    /// <param name="lines">An array containing all the DialogueLines that need to be parsed</param>
+    /// <returns>A List of DialogueLineNodes matching the DialogueLines</returns>
+    private void CreateDialogueLineNodesFromArray(DialogueLine[] lines)
+    {
+        nodes = nodes.Except(dialogueLineNodes).ToList();
+        dialogueLineNodes = new List<DialogueLineNode>();
         // Create DialogueLineNodes from DialogueLine Assets
         foreach (DialogueLine line in lines) 
         {
-            DialogueLineNode node = new DialogueLineNode(line, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode);
+            DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
             dialogueLineNodes.Add(node);
             nodes.Add((Node)node);
         }
@@ -232,7 +273,8 @@ public class DialogueEditor : EditorWindow
                 {
                     GenericMenu genericMenu = new GenericMenu();
                     Vector2 mousePosition = Event.current.mousePosition;
-                    genericMenu.AddItem(new GUIContent("Add Node"), false, () => CreateNodeAtPosition(mousePosition));
+                    genericMenu.AddItem(new GUIContent("Add Dialogue Line"), false, () => CreateNewDialogueLine(mousePosition));
+                    genericMenu.AddItem(new GUIContent("Add Quest"), false, () => CreateNewQuest(mousePosition));
                     genericMenu.ShowAsContext();
                 }
             break;
@@ -299,13 +341,12 @@ public class DialogueEditor : EditorWindow
     }
 
     /// <summary>
-    /// Add a new node at a mouse position 
+    /// Create a new DialogueLine Asset and a Node for it
     /// </summary>
-    /// <param name="mousePosition"> Vector2 of the position to create the asset at</param>
-    /// <typeparam name="T"></typeparam>
-    private void CreateNodeAtPosition(Vector2 position)
+    /// <param name="position"> Vector2 of the position to create the Node at</param>
+    private void CreateNewDialogueLine(Vector2 position)
     {
-        string path = AssetDatabase.GenerateUniqueAssetPath("Assets/Dialogue/Line.asset");
+        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Line.asset");
 
         DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
 
@@ -315,7 +356,32 @@ public class DialogueEditor : EditorWindow
         line.Title = line.name;
         line.EditorPos = position;
 
-        nodes.Add(new DialogueLineNode(line, position, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
+
+        nodes.Add(node);
+        dialogueLineNodes.Add(node);
+    }
+
+    /// <summary>
+    /// Create a new Quest Asset and a Node for it
+    /// </summary>
+    /// <param name="position"> Vector2 of the position to create the Node at</param>
+    private void CreateNewQuest(Vector2 position)
+    {
+        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Quest.asset");
+
+        Quest quest = ScriptableObject.CreateInstance<Quest>();
+
+        AssetDatabase.CreateAsset(quest, path);
+        AssetDatabase.SaveAssets();
+
+        quest.Title = quest.name;
+        quest.EditorPos = position;
+
+        QuestNode node = new QuestNode(quest, defaultNodeData);
+
+        nodes.Add(node);
+        questNodes.Add(node);
     }
 
     /// <summary>

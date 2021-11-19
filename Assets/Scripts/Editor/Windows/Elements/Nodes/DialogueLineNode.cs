@@ -4,54 +4,64 @@ using UnityEngine;
 
 public class DialogueLineNode : Node
 {
+    // Reference to Dialogue Line
     public DialogueLine Line;
 
+    // Create a second out point for the left side answer
     public ConnectionPoint outPointLeft;
+    // Create a reference for the right side answer that really just points to the normal out Point
     public ConnectionPoint outPointRight
     {
         get { return this.outPoint; }
         set { this.outPoint = value; }
     }
-    // Constructor mostly does the same as base node but with some extra stuff
-    public DialogueLineNode(DialogueLine line, Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
-    :base(position, 100, 50, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
+    /// <summary>
+    /// Create a new DialogueLineNode from a line and a set of node data
+    /// </summary>
+    /// <param name="line">The associated DialogueLine</param>
+    /// <param name="nodeData">A NodeData Object to use for the node</param>
+    public DialogueLineNode(DialogueLine line, NodeData nodeData)
+    :base(line.EditorPos, 100, 50, nodeData)
     {
         // Save line ref
         Line = line;
-        outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
-        outPointLeft.YPercent = 0.66f;
-        Type type = typeof(DialogueEditor);
+        // Create the second out point
+        outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 50);
     }
-    public DialogueLineNode(DialogueLine line, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
-    :this(line, line.EditorPos, nodeStyle, selectedStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode)
-    { }
 
+    /// <summary>
+    /// On select, set the inspector selection to the associated DialogueLine
+    /// </summary>
     public override void SelectAssociatedObject()
     {
         Selection.activeObject = Line;
     }
 
+    /// <summary>
+    /// OnDragEnd, override the Lines EditorPosition
+    /// </summary>
     public override void OnDragEnd()
     {
         Line.EditorPos = rect.position;
     }
 
+    /// <summary>
+    /// Override the Draw Method of the Base Class
+    /// </summary>
     public override void Draw()
     {
+        // Adjust the look of the node depending on wheter it has answers
         if (Line.HasAnswers)
         {
-            outPoint.YPercent = 0.33f;
-            inPoint.YPercent = 0.33f;
             rect.height = 75;
 
             outPointLeft.Draw();
         }
         else
         {
-            outPoint.YPercent = 0.5f;
-            inPoint.YPercent = 0.5f;
             rect.height = 50;
         }
+        // draw the base
         base.Draw();
         GUIStyle style = new GUIStyle(GUI.skin.label);
         style.alignment = TextAnchor.UpperCenter;

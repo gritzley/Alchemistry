@@ -2,13 +2,21 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
+public struct NodeData
+{
+    public GUIStyle nodeStyle;
+    public GUIStyle selectedNodeStyle;
+    public GUIStyle inPointStyle;
+    public GUIStyle outPointStyle;
+    public Action<ConnectionPoint> OnClickInPoint;
+    public Action<ConnectionPoint> OnClickOutPoint;
+    public Action<Node> OnClickRemoveNode;
+}
 public class Node
 {
+
     // Reference to rect
     public Rect rect;
-
-    // empty title is nices than using "" for everything
-    public string title;
 
     // Flags
     public bool isDragged;
@@ -27,16 +35,16 @@ public class Node
     public Action<Node> OnRemoveNode;
 
     // Create a new Node
-    public Node(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    public Node(Vector2 position, float width, float height, NodeData nodeData)
     {
         // Set references
         rect = new Rect(position.x, position.y, width, height);
-        style = nodeStyle;
-        inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
-        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
-        defaultNodeStyle = nodeStyle;
-        selectedNodeStyle = selectedStyle;
-        OnRemoveNode = OnClickRemoveNode;
+        style = nodeData.nodeStyle;
+        inPoint = new ConnectionPoint(this, ConnectionPointType.In, nodeData.inPointStyle, nodeData.OnClickInPoint, height / 2);
+        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, height / 2);
+        defaultNodeStyle = nodeData.nodeStyle;
+        selectedNodeStyle = nodeData.selectedNodeStyle;
+        OnRemoveNode = nodeData.OnClickRemoveNode;
     }
 
     // Move the Node to a position;
@@ -51,9 +59,8 @@ public class Node
         // Draw children
         inPoint.Draw();
         outPoint.Draw();
-
         // Draw own box
-        GUI.Box(rect, title, style);
+        GUI.Box(rect, "", style);
     }
 
     public virtual void SelectAssociatedObject()

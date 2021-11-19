@@ -21,4 +21,7 @@ public class Quest : ScriptableObject
     {
         get { return currentLine; }
     }
+
+    public Vector2 EditorPos;
+    public string Title;
 }

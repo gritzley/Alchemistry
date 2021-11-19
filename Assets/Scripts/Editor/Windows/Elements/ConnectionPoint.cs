@@ -25,16 +25,17 @@ public class ConnectionPoint
     // Reference to the Connectionpoint click ethod
     public Action<ConnectionPoint> OnClickConnectionPoint;
 
-    public float YPercent = 0.5f;
+    public float yPos;
 
     // Create a new connection point
-    public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint)
+    public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint, float yPos)
     {
         // Set references
         this.node = node;
         this.type = type;
         this.style = style;
         this.OnClickConnectionPoint = OnClickConnectionPoint;
+        this.yPos = yPos;
 
         // Create rectangle
         rect = new Rect(0, 0, 10f, 20f);
@@ -44,7 +45,7 @@ public class ConnectionPoint
     public void Draw()
     {
         // set rect y in relation to the node
-        rect.y = node.rect.y + (node.rect.height * YPercent) - rect.height * 0.5f;
+        rect.y = node.rect.y + yPos - (rect.height * 0.5f);
 
         // Set rec x in relation to the node and to connection type
         switch (type)
