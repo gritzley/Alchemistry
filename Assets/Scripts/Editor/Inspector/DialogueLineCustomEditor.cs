@@ -42,11 +42,6 @@ public class DialogueLineEditor : Editor
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
 
-        if (GUILayout.Button("Open Dialogue Editor"))
-        {
-            EditorWindow.GetWindow<DialogueEditor>();
-        }
-
         // Add a property field for title and text
         EditorGUILayout.PropertyField(titleProp);
         EditorGUILayout.PropertyField(textProp);
