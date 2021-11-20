@@ -4,12 +4,13 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEditorInternal;
 using System.Collections;
+using System.Collections.Generic;
 
 [CustomEditor(typeof(Quest))]
 [CanEditMultipleObjects]
 public class QuestEditor : Editor
 {
-    SerializedProperty lineProp;
+    SerializedProperty titleProp;
     SerializedProperty linksProp;
 
     ReorderableList Links;
@@ -18,47 +19,10 @@ public class QuestEditor : Editor
     void OnEnable()
     {
         // Load serialized properties
-        lineProp = serializedObject.FindProperty("StartLine");
+        titleProp = serializedObject.FindProperty("Title");
         linksProp = serializedObject.FindProperty("Links");
 
-        // Create ReorderableList
-        Links = new ReorderableList(serializedObject, linksProp, true, true, true, true);
-
-        // Define how the Unity should display elements in the list by overriding the exposed callback
-        Links.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
-        {
-            // Get the current element
-            var element = Links.serializedProperty.GetArrayElementAtIndex(index);
-
-            // Increase target rect y to move the next object down on screen (rect 0,0 is in top left)
-            rect.y += 2;
-
-            float quarterWidth = rect.width / 4;
-
-            // Create a property field for the text
-            EditorGUI.PropertyField (
-                // Set the rectangle for the property field position
-                new Rect(rect.x, rect.y, (quarterWidth * 2) - 5, EditorGUIUtility.singleLineHeight),
-                // Get the serialized property
-                element.FindPropertyRelative("Potion"),
-                // no GUI content needed
-                GUIContent.none
-            );
-            // Create a property field for the next bit
-            EditorGUI.PropertyField (
-                // Set the rectangle for the property field position
-                new Rect(rect.x + quarterWidth * 2, rect.y, quarterWidth * 2, EditorGUIUtility.singleLineHeight),
-                // Get the serialized Property
-                element.FindPropertyRelative("NextQuest"),
-                // no GUI content needed
-                GUIContent.none
-            );
-        };
-
-        Links.drawHeaderCallback = (Rect rect) =>
-        {
-            EditorGUI.LabelField(rect, "Links");
-        };
+        (target as Quest).UpdateLinks();
     }
 
     public override void OnInspectorGUI()
@@ -67,13 +31,26 @@ public class QuestEditor : Editor
         serializedObject.Update();
 
         // Create a property field for the start prop
-        EditorGUILayout.PropertyField(lineProp, new GUIContent("Start Line"));
+        EditorGUILayout.PropertyField(titleProp);
 
-        // // Add the reorderable list to the layout
-        Links.DoLayoutList();
+        for (int i = 0 ; i < linksProp.arraySize; i++)
+        {
+            SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
+            Potion potion = (Potion)element.FindPropertyRelative("Potion").objectReferenceValue;
+            SerializedProperty nextQuestProp = element.FindPropertyRelative("NextQuest");
+            EditorGUILayout.PropertyField(nextQuestProp, new GUIContent(potion.Name));
+
+            if (nextQuestProp.objectReferenceValue == target)
+            {
+                nextQuestProp.objectReferenceValue = null;
+                Debug.LogWarning("Quests can not refer to themselves");
+            }
+        }
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();
     }
+
+    
 
 }

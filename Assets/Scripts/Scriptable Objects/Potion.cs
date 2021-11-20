@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEditor;
 
 
 [CreateAssetMenu(fileName = "Potion", menuName = "Potion")]
@@ -23,6 +25,13 @@ public class Potion : ScriptableObject
     // The list of steps required to make the potion
     public List<Step> Recipe;
 
+    void OnEnable()
+    {
+        if (Name == "")
+        {
+            Name = name;
+        }
+    }
     // Validate wheter a given list of steps matches this potions recipe
     public bool ValidateSteps(List<Step> steps)
     {
@@ -49,4 +58,5 @@ public class Potion : ScriptableObject
         // If it's not out by now, the recipe is correct
         return true;
     }
+
 }

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 1
+  m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
+  m_Name: Potion 4
   m_EditorClassIdentifier: 
-  Links: []
-  StartLine: {fileID: 11400000, guid: 34c3d4a404866db4fa90596495fd48bb, type: 2}
+  Name: 
+  Recipe: []

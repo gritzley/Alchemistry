@@ -98,7 +98,9 @@ public class Node
                 // on node rightclicks
                 if (e.button == 1 && isSelected && rect.Contains(e.mousePosition))
                 {
-                    ProcessContextMenu();
+                    GenericMenu genericMenu = new GenericMenu();
+                    FillContextMenu(genericMenu);
+                    genericMenu.ShowAsContext();
                     e.Use();
                 }
                 break;
@@ -129,12 +131,10 @@ public class Node
     public virtual void OnDragEnd() { } // just for overrides
 
     // Create a context menu
-    private void ProcessContextMenu()
+    public virtual void FillContextMenu(GenericMenu menu)
     {
         // Just a remove button
-        GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
-        genericMenu.ShowAsContext();
+        menu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
     }
 
     // Remove node method

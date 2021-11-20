@@ -5,36 +5,54 @@ using System.Linq;
 
 public class DialogueEditor : EditorWindow
 {
+    // An enum to symbolize the different states the window can be in
+    public enum WindowState {
+        QuestView,
+        DialogueView
+    }
+    // The current state of the window
+    public WindowState State;
+
+    // A static instance of the DialogueEditor to address it from the outside
     public static DialogueEditor Instance { get; private set; }
+    // Shows whether there is an open instance of this window
     public static bool IsOpen {
         get { return Instance != null; }
     }
 
-    // Nodes and connections
+    // The currently displayed nodes and connections
     private List<Node> nodes;
     private List<Connection> connections;
+
+    // References to dialogueNodes and questNodes. These may overlap with the "main" nodes list.
+    // If a deeper level of editor is displayed, higher level nodes are preserved in these lists for quick loading.
     private List<DialogueLineNode> dialogueLineNodes;
     private List<QuestNode> questNodes;
 
+    // If the window is in dialogueView, this holds a reference to the questNode the current dialogue derives from
+    private QuestNode currentQuestNode;
 
-    // Style
+    // Style References
     private GUIStyle nodeStyle;
     private GUIStyle selectedNodeStyle;
     private GUIStyle inPointStyle;
     private GUIStyle outPointStyle;
 
-    // default node data object
+    // Node data objects
     private NodeData defaultNodeData;
+    private NodeData dialogueLineNodeData;
+    private NodeData questNodeData;
 
-    // Refs selected points
+    // References to the currently selected points
     private ConnectionPoint selectedInPoint;
     private ConnectionPoint selectedOutPoint;
 
-    // offset and drag are used to log the current position in the grid
+    // Out current position in the grid
     private Vector2 offset;
+    // The amount the window has been dragged since the last repaint
     private Vector2 drag;
 
-    // paths
+    // Quick reference to the Dialogue Path
     private string dialoguePath = "Assets/Dialogue";
 
 
@@ -55,7 +73,7 @@ public class DialogueEditor : EditorWindow
     /// </summary>
     private void OnEnable()
     {
-        // Instantiate
+        // Instantiate the Editor
         Instance = this;
 
         // Set all the styles
@@ -85,55 +103,91 @@ public class DialogueEditor : EditorWindow
         defaultNodeData.outPointStyle = outPointStyle;
         defaultNodeData.OnClickInPoint = OnClickInPoint;
         defaultNodeData.OnClickOutPoint = OnClickOutPoint;
-        defaultNodeData.OnClickRemoveNode = OnClickRemoveNode;
+        defaultNodeData.OnClickRemoveNode = RemoveNode;
 
-        // Initialize lists
-        nodes = new List<Node>();
-        connections = new List<Connection>();
-        dialogueLineNodes = new List<DialogueLineNode>();
-        questNodes = new List<QuestNode>();
-        
-        // prepare the string array needed for the FindAssets method
-        string[] directories = new string[] { dialoguePath };
-
-        // Collect Line Assets
-        DialogueLine[] lines = AssetDatabase.FindAssets("t:DialogueLine", directories)
-        .Select( e => AssetDatabase.GUIDToAssetPath(e))
-        .Select( e => (DialogueLine)AssetDatabase.LoadAssetAtPath(e, typeof(DialogueLine)))
-        .ToArray();
-
-        // Collect Quest Assets (a generic function for this would be wicked)
-        Quest[] quests = AssetDatabase.FindAssets("t:Quest", directories)
+        // Collect Quest Assets
+        Quest[] quests = AssetDatabase.FindAssets("t:Quest", new string[] { dialoguePath })
         .Select( e => AssetDatabase.GUIDToAssetPath(e))
         .Select( e => (Quest)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
         .ToArray();
 
-        // Creeate QuestNodes from Quest Assets
+        // Show the quests
+        ShowQuests(quests);
+    }
+
+    private void ShowQuests(Quest[] quests)
+    {
+        // Set Window State
+        State = WindowState.QuestView;
+
+        // Reset Nodes, Connections and QuestNodes
+        nodes = new List<Node>();
+        connections = new List<Connection>();
+        questNodes = new List<QuestNode>();
+        dialogueLineNodes = new List<DialogueLineNode>();
+
+        // Create QuestNodes from Quest Assets
         foreach (Quest quest in quests)
         {
-            QuestNode node = new QuestNode(quest, defaultNodeData);
+            QuestNode node = new QuestNode(quest, defaultNodeData, ShowQuestDialogue, OnQuestNodeDragEnd);
             questNodes.Add(node);
             nodes.Add((Node)node);
         }
 
-        CreateDialogueLineNodesFromArray(lines);
+        DrawQuestViewConnections();
+    }
+
+    private void DrawQuestViewConnections()
+    {
+        foreach (QuestNode node in questNodes)
+        {
+            for (int i = 0; i < node.Quest.Links.Count; i++)
+            {
+                Quest next = node.Quest.Links[i].NextQuest;
+                if (next != null)
+                {
+                    selectedInPoint = GetNodeByQuest(next).inPoint;
+                    selectedOutPoint = node.linkOutPoints[i];
+                    CreateConnection();
+                }
+            }
+        }
+        ClearConnectionSelection();
     }
 
     /// <summary>
-    /// Create a List of DialogueLineNodes from an array of DialogueLines
+    /// Create a List of DialogueLineNodes from an array of DialogueLines and adds them to the nodes List
+    /// Previously Created DialogueLineNodes are overwritten
     /// </summary>
     /// <param name="lines">An array containing all the DialogueLines that need to be parsed</param>
     /// <returns>A List of DialogueLineNodes matching the DialogueLines</returns>
-    private void CreateDialogueLineNodesFromArray(DialogueLine[] lines)
+    private void ShowQuestDialogue(QuestNode questNode)
     {
-        nodes = nodes.Except(dialogueLineNodes).ToList();
+        // Set State variables
+        State = WindowState.DialogueView;
+        currentQuestNode = questNode;
+
+        // Reset Nodes, Connections and DialogueLineNodes
+        nodes = new List<Node>();
+        connections = new List<Connection>();
         dialogueLineNodes = new List<DialogueLineNode>();
+
         // Create DialogueLineNodes from DialogueLine Assets
-        foreach (DialogueLine line in lines) 
+        foreach (DialogueLine line in questNode.Quest.Lines) 
         {
             DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
             dialogueLineNodes.Add(node);
             nodes.Add((Node)node);
+        }
+
+        // Add the QuestNode with a connection to the first DialogueLineNode
+        nodes.Add(questNode);
+        if (questNode.Quest.StartLine != null)
+        {
+            selectedOutPoint = questNode.outPoint;
+            selectedInPoint = GetNodeByDialogueLine(questNode.Quest.StartLine).inPoint;
+            CreateConnection();
+            ClearConnectionSelection();
         }
 
         // Assign node connections
@@ -144,14 +198,14 @@ public class DialogueEditor : EditorWindow
             // Set connections to the left and right, if applicable
             if (line.NextRight != null)
             {
-                DialogueLineNode nextNode = GetNodeByLine(line.NextRight);
+                DialogueLineNode nextNode = GetNodeByDialogueLine(line.NextRight);
                 selectedOutPoint = node.outPointRight;
                 selectedInPoint = nextNode.inPoint;
                 CreateConnection();
             }
             if (line.NextLeft != null)
             {
-                DialogueLineNode nextNode = GetNodeByLine(line.NextLeft);
+                DialogueLineNode nextNode = GetNodeByDialogueLine(line.NextLeft);
                 selectedOutPoint = node.outPointLeft;
                 selectedInPoint = nextNode.inPoint;
                 CreateConnection();
@@ -163,11 +217,29 @@ public class DialogueEditor : EditorWindow
     }
 
     /// <summary>
+    /// Return the view to the Quest View from the Dialogue View
+    /// </summary>
+    private void DialogueToQuestView()
+    {
+        if (State != WindowState.DialogueView)
+        {
+            Debug.LogError("Tried to run DialogueToQuestView when not in DialogueView");
+        }
+        nodes = questNodes.Select( node => (Node)node).ToList();
+        connections = new List<Connection>();
+        dialogueLineNodes = new List<DialogueLineNode>();
+        State = WindowState.QuestView;
+        currentQuestNode = null;
+
+        DrawQuestViewConnections();
+    }
+
+    /// <summary>
     /// Get a DialogueLineNode from it's associated DialogueLine
     /// </summary>
     /// <param name="line">The nodes associated Dialogue Line</param>
     /// <returns>The DialogueLineNode</returns>
-    private DialogueLineNode GetNodeByLine(DialogueLine line)
+    private DialogueLineNode GetNodeByDialogueLine(DialogueLine line)
     {
         // Go through all nodes, if one matches, return it;
         foreach (DialogueLineNode node in dialogueLineNodes)
@@ -179,6 +251,19 @@ public class DialogueEditor : EditorWindow
         }
 
         // If all fails return null
+        return null;
+    }
+
+    private QuestNode GetNodeByQuest(Quest quest)
+    {
+        foreach (QuestNode node in questNodes)
+        {
+            if (node.Quest == quest)
+            {
+                return node;
+            }
+        }
+
         return null;
     }
 
@@ -199,6 +284,8 @@ public class DialogueEditor : EditorWindow
         // Draw two grids for orientation
         DrawGrid(20, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
+
+        GUI.Label(new Rect(0, 0, 100, 100), State.ToString(), new GUIStyle());
 
         // Draw all nodes on the screen
         for (int i = 0; i < nodes.Count; i++)
@@ -273,25 +360,32 @@ public class DialogueEditor : EditorWindow
                 {
                     GenericMenu genericMenu = new GenericMenu();
                     Vector2 mousePosition = Event.current.mousePosition;
-                    genericMenu.AddItem(new GUIContent("Add Dialogue Line"), false, () => CreateNewDialogueLine(mousePosition));
-                    genericMenu.AddItem(new GUIContent("Add Quest"), false, () => CreateNewQuest(mousePosition));
+                    // Context Menu is relative to current window state
+                    switch (State)
+                    {
+                        case WindowState.DialogueView:
+                            genericMenu.AddItem(new GUIContent("Add Dialogue Line"), false, () => CreateNewDialogueLine(mousePosition));
+                            genericMenu.AddItem(new GUIContent("Return to Quest View"), false, DialogueToQuestView);
+                            break;
+                        case WindowState.QuestView:
+                            genericMenu.AddItem(new GUIContent("Add Quest"), false, () => CreateNewQuest(mousePosition));
+                            break;
+                    }
                     genericMenu.ShowAsContext();
                 }
             break;
 
             // Mousedrag Events
             case EventType.MouseDrag:
-                // Leftclick Drag
+                // If Left Mouse Button is clicked, drag
                 if (Event.current.button == 0)
                 {
-                    // Get the drag vector
+                    // Set the windows drag vector. This gets added to the windows offset, saving
                     drag = Event.current.delta;
 
-                    // Go through all nodes and call their drags
-                    for (int i = 0; i < nodes.Count; i++)
-                    {
-                        nodes[i].Drag(Event.current.delta);
-                    }
+                    // Drag all nodes along with the window
+                    nodes.ForEach( e => e.Drag(drag));
+                    questNodes.Except(nodes).ToList().ForEach( e => e.Drag(drag));
 
                     // Log window changes so we get a repaint
                     GUI.changed = true;
@@ -356,6 +450,8 @@ public class DialogueEditor : EditorWindow
         line.Title = line.name;
         line.EditorPos = position;
 
+        currentQuestNode.Quest.Lines.Add(line);
+
         DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
 
         nodes.Add(node);
@@ -378,7 +474,7 @@ public class DialogueEditor : EditorWindow
         quest.Title = quest.name;
         quest.EditorPos = position;
 
-        QuestNode node = new QuestNode(quest, defaultNodeData);
+        QuestNode node = new QuestNode(quest, defaultNodeData, ShowQuestDialogue, OnQuestNodeDragEnd);
 
         nodes.Add(node);
         questNodes.Add(node);
@@ -436,8 +532,32 @@ public class DialogueEditor : EditorWindow
         }
     }
 
+    private void OnQuestNodeDragEnd(QuestNode node)
+    {
+        Vector2 dragVector = node.rect.position - node.Quest.EditorPos;
+        switch (DialogueEditor.Instance.State)
+        {
+            case DialogueEditor.WindowState.QuestView:
+                foreach (DialogueLine line in node.Quest.Lines)
+                {
+                    line.EditorPos += dragVector;
+                }
+                break;
+
+            case DialogueEditor.WindowState.DialogueView:
+                foreach (QuestNode questNode in questNodes.Where(e => e != node).ToList())
+                {
+                    questNode.rect.position += dragVector;
+                    questNode.Quest.EditorPos += dragVector;
+                }
+                break;
+
+        }
+        node.Quest.EditorPos = node.rect.position;
+    }
+
     // Remove a node
-    private void OnClickRemoveNode(Node node)
+    private void RemoveNode(Node node)
     {
         // If there are connections, clear the ones connected to this one
         if (connections != null)
@@ -464,12 +584,33 @@ public class DialogueEditor : EditorWindow
 
         if (node is DialogueLineNode)
         {
-            AssetDatabase.DeleteAsset($"Assets/Dialogue/{(node as DialogueLineNode).Line.name}.asset");
+            AssetDatabase.DeleteAsset($"{dialoguePath}/{(node as DialogueLineNode).Line.name}.asset");
+            AssetDatabase.SaveAssets();
+        }
+        if (node is QuestNode)
+        {
+            if (State == WindowState.DialogueView)
+            {
+                DialogueToQuestView();
+            }
+            AssetDatabase.DeleteAsset($"{dialoguePath}/{(node as QuestNode).Quest.name}.asset");
+            foreach(DialogueLine line in (node as QuestNode).Quest.Lines)
+            {
+                AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
+            }
             AssetDatabase.SaveAssets();
         }
 
         // Finally remove the node
         nodes.Remove(node);
+    }
+    public void RemoveNode(DialogueLine line)
+    {
+        RemoveNode(GetNodeByDialogueLine(line));
+    }
+    public void RemoveNode(Quest quest)
+    {
+        RemoveNode(GetNodeByQuest(quest));
     }
 
     // Remove a connection
@@ -508,12 +649,15 @@ public class DialogueEditor : EditorWindow
         Node _outNode = selectedOutPoint.node;
         Node _inNode = selectedInPoint.node;
 
-        // if both nodes are DialogueNodes set in and out points appropriately
+
+
+        // DialogueLine -> DialogueLine
         if ((_outNode is DialogueLineNode) && (_inNode is DialogueLineNode))
         {
-            DialogueLineNode outNode = (_outNode as DialogueLineNode);
-            DialogueLineNode inNode = (_inNode as DialogueLineNode);
+            DialogueLineNode outNode = (DialogueLineNode)_outNode;
+            DialogueLineNode inNode = (DialogueLineNode)_inNode;
 
+            // Select whether to put the line in nextLeft or nextRight
             if (selectedOutPoint == outNode.outPointLeft )
             {
                 outNode.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
@@ -523,6 +667,27 @@ public class DialogueEditor : EditorWindow
                 outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
             }
         }
+
+        // Quest -> DialogueLine
+        if ((_outNode is QuestNode) && (_inNode is DialogueLineNode))
+        {
+            (_outNode as QuestNode).Quest.StartLine = (_inNode as DialogueLineNode).Line;
+        }
+
+        // Quest -> Quest
+        if ((_outNode is QuestNode) && (_inNode is QuestNode))
+        {
+            QuestNode outNode = (QuestNode)_outNode;
+            int index = outNode.linkOutPoints.IndexOf(selectedOutPoint);
+            if (index >= 0)
+            {
+                Quest.Link link = outNode.Quest.Links[index];
+                link.NextQuest = (_inNode as QuestNode).Quest;
+                outNode.Quest.Links[index] = link;
+            }
+        }
+
+
 
         // Create connection
         Connection connection = new Connection(selectedInPoint, selectedOutPoint, RemoveConnection);

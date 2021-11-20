@@ -20,20 +20,12 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    void Awake()
+    void OnEnable()
     {
         // Load all Potions
         Potions = AssetDatabase.FindAssets("t:Potion")
-        .Select( guid => {
-            string path = AssetDatabase.GUIDToAssetPath(guid);
-            return AssetDatabase.LoadMainAssetAtPath(path) as Potion;
-        })
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (Potion)AssetDatabase.LoadAssetAtPath(e, typeof(Potion)))
         .ToList();
-    }
-
-    void Start()
-    {
-        // DialogueLine line = test_Character.CurrentDialogueLine;
-        // Debug.Log(line.Text);
     }
 }
