@@ -175,7 +175,7 @@ public class DialogueEditor : EditorWindow
         // Create DialogueLineNodes from DialogueLine Assets
         foreach (DialogueLine line in questNode.Quest.Lines) 
         {
-            DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
+            DialogueLineNode node = new DialogueLineNode(questNode, line, defaultNodeData);
             dialogueLineNodes.Add(node);
             nodes.Add((Node)node);
         }
@@ -448,11 +448,11 @@ public class DialogueEditor : EditorWindow
         AssetDatabase.SaveAssets();
 
         line.Title = line.name;
-        line.EditorPos = position;
+        line.EditorPos = position - currentQuestNode.Quest.EditorPos;
 
         currentQuestNode.Quest.Lines.Add(line);
 
-        DialogueLineNode node = new DialogueLineNode(line, defaultNodeData);
+        DialogueLineNode node = new DialogueLineNode(currentQuestNode, line, defaultNodeData);
 
         nodes.Add(node);
         dialogueLineNodes.Add(node);
@@ -535,23 +535,17 @@ public class DialogueEditor : EditorWindow
     private void OnQuestNodeDragEnd(QuestNode node)
     {
         Vector2 dragVector = node.rect.position - node.Quest.EditorPos;
-        switch (DialogueEditor.Instance.State)
+        if (DialogueEditor.Instance.State == DialogueEditor.WindowState.DialogueView)
         {
-            case DialogueEditor.WindowState.QuestView:
-                foreach (DialogueLine line in node.Quest.Lines)
-                {
-                    line.EditorPos += dragVector;
-                }
-                break;
-
-            case DialogueEditor.WindowState.DialogueView:
-                foreach (QuestNode questNode in questNodes.Where(e => e != node).ToList())
-                {
-                    questNode.rect.position += dragVector;
-                    questNode.Quest.EditorPos += dragVector;
-                }
-                break;
-
+            foreach (QuestNode questNode in questNodes.Where(e => e != node).ToList())
+            {
+                questNode.rect.position += dragVector;
+                questNode.Quest.EditorPos += dragVector;
+            }
+            foreach (DialogueLineNode dialogueLineNode in dialogueLineNodes)
+            {
+                dialogueLineNode.Line.EditorPos -= dragVector;
+            }
         }
         node.Quest.EditorPos = node.rect.position;
     }

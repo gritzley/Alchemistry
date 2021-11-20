@@ -7,6 +7,9 @@ public class DialogueLineNode : Node
     // Reference to Dialogue Line
     public DialogueLine Line;
 
+    // Reference to parent node
+    private QuestNode parent;
+
     // Create a second out point for the left side answer
     public ConnectionPoint outPointLeft;
     // Create a reference for the right side answer that really just points to the normal out Point
@@ -20,11 +23,13 @@ public class DialogueLineNode : Node
     /// </summary>
     /// <param name="line">The associated DialogueLine</param>
     /// <param name="nodeData">A NodeData Object to use for the node</param>
-    public DialogueLineNode(DialogueLine line, NodeData nodeData)
-    :base(line.EditorPos, 100, 50, nodeData)
+    public DialogueLineNode(QuestNode parent, DialogueLine line, NodeData nodeData)
+    :base(line.EditorPos + parent.rect.position, 100, 50, nodeData)
     {
         // Save line ref
         Line = line;
+        // Save parent ref
+        this.parent = parent;
         // Create the second out point
         outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 50);
     }
@@ -42,7 +47,7 @@ public class DialogueLineNode : Node
     /// </summary>
     public override void OnDragEnd()
     {
-        Line.EditorPos = rect.position;
+        Line.EditorPos = rect.position - parent.rect.position;
     }
 
     /// <summary>
