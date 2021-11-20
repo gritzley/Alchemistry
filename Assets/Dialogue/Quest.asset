@@ -23,8 +23,7 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: ce1dfed425dfc144b852a48fdea122c1, type: 2}
     NextQuest: {fileID: 0}
-  StartLine: {fileID: 11400000, guid: 34c3d4a404866db4fa90596495fd48bb, type: 2}
-  EditorPos: {x: 241, y: 233}
-  Title: Quest
-  Lines:
-  - {fileID: 11400000, guid: 34c3d4a404866db4fa90596495fd48bb, type: 2}
+  StartLine: {fileID: 0}
+  EditorPos: {x: 0, y: 0}
+  Title: 
+  Lines: []

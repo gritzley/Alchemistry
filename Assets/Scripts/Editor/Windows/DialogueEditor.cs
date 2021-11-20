@@ -584,17 +584,20 @@ public class DialogueEditor : EditorWindow
 
         if (node is DialogueLineNode)
         {
-            AssetDatabase.DeleteAsset($"{dialoguePath}/{(node as DialogueLineNode).Line.name}.asset");
+            DialogueLine line = (node as DialogueLineNode).Line;
+            currentQuestNode.Quest.Lines.Remove(line);
+            AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
             AssetDatabase.SaveAssets();
         }
         if (node is QuestNode)
         {
+            Quest quest = (node as QuestNode).Quest;
             if (State == WindowState.DialogueView)
             {
                 DialogueToQuestView();
             }
-            AssetDatabase.DeleteAsset($"{dialoguePath}/{(node as QuestNode).Quest.name}.asset");
-            foreach(DialogueLine line in (node as QuestNode).Quest.Lines)
+            AssetDatabase.DeleteAsset($"{dialoguePath}/{quest.name}.asset");
+            foreach (DialogueLine line in quest.Lines)
             {
                 AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
             }
@@ -618,20 +621,36 @@ public class DialogueEditor : EditorWindow
     {
 
         // get outNode
-        Node _outNode = connection.outPoint.node;
+        Node outNode = connection.outPoint.node;
+        Node inNode = connection.inPoint.node;
 
         // If outNode is a DialogueLine set NextLeft or NextRight to null, depending on where the connection is
-        if (_outNode is DialogueLineNode)
+        if (outNode is DialogueLineNode)
         {
-            DialogueLineNode outNode = (_outNode as DialogueLineNode);
-            if (connection.outPoint == outNode.outPointLeft )
+            DialogueLineNode lineNode = (outNode as DialogueLineNode);
+            if (connection.outPoint == lineNode.outPointLeft )
             {
-                outNode.Line.NextLeft = null;
+                lineNode.Line.NextLeft = null;
             }
-            else if (connection.outPoint == outNode.outPointRight)
+            else if (connection.outPoint == lineNode.outPointRight)
             {
-                outNode.Line.NextRight = null;
+                lineNode.Line.NextRight = null;
             }
+        }
+
+        if ((outNode is QuestNode) && (inNode is DialogueLineNode))
+        {
+            (outNode as QuestNode).Quest.StartLine = null;
+        }
+
+        if ((outNode is QuestNode) && (inNode is QuestNode))
+        {
+            Quest quest = (outNode as QuestNode).Quest;
+            int index = (outNode as QuestNode).linkOutPoints.IndexOf(connection.outPoint);
+            
+            Quest.Link link = quest.Links[index];
+            link.NextQuest = null;
+            quest.Links[index] = link;            
         }
 
         // remove connectionpoints references to connection;
