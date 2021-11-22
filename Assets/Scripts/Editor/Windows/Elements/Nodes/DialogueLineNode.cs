@@ -46,7 +46,12 @@ public class DialogueLineNode : Node
     /// </summary>
     public override void OnDragEnd()
     {
+        // Set this 
         Line.EditorPos = rect.position - parent.rect.position;
+
+        // mark Line for savig
+        EditorUtility.SetDirt(Line);
+        AssetDatabase.SaveAssets();
     }
 
     /// <summary>
