@@ -16,7 +16,6 @@ public class DialogueLineEditor : Editor
     SerializedProperty answerLeftProp;
     SerializedProperty answerRightProp;
 
-
     // Reorderable list for the recipe
     ReorderableList Recipe;
 

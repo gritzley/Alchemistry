@@ -42,6 +42,7 @@ public class Quest : ScriptableObject
     {
         // Init Links
         Links = new List<Link>();
+        Lines = new List<LinkedList>();
     }
     void OnEnable()
     {
