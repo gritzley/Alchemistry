@@ -115,12 +115,16 @@ public class DialogueEditor : EditorWindow
         ShowQuests(quests);
     }
 
+    /// <summary>
+    /// Show all quests from an array
+    /// </summary>
+    /// <param name="quests">An arra of quests</param>
     private void ShowQuests(Quest[] quests)
     {
         // Set Window State
         State = WindowState.QuestView;
 
-        // Reset Nodes, Connections and QuestNodes
+        // Reset Nodes and Connections
         nodes = new List<Node>();
         connections = new List<Connection>();
         questNodes = new List<QuestNode>();
@@ -134,24 +138,32 @@ public class DialogueEditor : EditorWindow
             nodes.Add((Node)node);
         }
 
+        // Draw the connections
         DrawQuestViewConnections();
     }
 
+    /// <summary>
+    /// Draw the connections between all displayed questNodes
+    /// </summary>
     private void DrawQuestViewConnections()
     {
+        // Loop through all links in all questNodes
         foreach (QuestNode node in questNodes)
         {
             for (int i = 0; i < node.Quest.Links.Count; i++)
             {
+                // Get a reference to the quest the link points to
                 Quest next = node.Quest.Links[i].NextQuest;
                 if (next != null)
                 {
+                    // Create a connection. It's not hard
                     selectedInPoint = GetNodeByQuest(next).inPoint;
                     selectedOutPoint = node.linkOutPoints[i];
                     CreateConnection();
                 }
             }
         }
+        // clean selections
         ClearConnectionSelection();
     }
 
@@ -221,17 +233,23 @@ public class DialogueEditor : EditorWindow
     /// </summary>
     private void DialogueToQuestView()
     {
+        // Throw an error if the editor is not in dialogue view
         if (State != WindowState.DialogueView)
         {
             Debug.LogError("Tried to run DialogueToQuestView when not in DialogueView");
         }
 
+        // as questNodes are not cleared when going to dialogueView, we can just do this
         nodes = questNodes.Select( node => (Node)node).ToList();
+
+        // reset connections, dialogueLineNodes and currentQuestNode
         connections = new List<Connection>();
         dialogueLineNodes = new List<DialogueLineNode>();
-        State = WindowState.QuestView;
         currentQuestNode = null;
+        // Set the window state
+        State = WindowState.QuestView;
 
+        // Draw the connections between the quests
         DrawQuestViewConnections();
     }
 
@@ -364,9 +382,9 @@ public class DialogueEditor : EditorWindow
                 // On RightClick open the context menu
                 if (Event.current.button == 1)
                 {
+                    // Create a generic menu at the mouse position and add options depending on the current view
                     GenericMenu genericMenu = new GenericMenu();
                     Vector2 mousePosition = Event.current.mousePosition;
-                    // Context Menu is relative to current window state
                     switch (State)
                     {
                         case WindowState.DialogueView:
@@ -446,23 +464,33 @@ public class DialogueEditor : EditorWindow
     /// <param name="position"> Vector2 of the position to create the Node at</param>
     private void CreateNewDialogueLine(Vector2 position)
     {
+        // Get a unique path for a line
         string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Line.asset");
 
+        // Create the new asset
         DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
-
         AssetDatabase.CreateAsset(line, path);
 
+        // Add the Dialogue Line to the currently viewed Quest
+        // If this line throws an error, you are trying to create a new dialogue line when not in dialogue view
         currentQuestNode.Quest.Lines.Add(line);
+        // Mark the currently viewed quest to be saved
         EditorUtility.SetDirty(currentQuestNode.Quest);
 
+        // Set the lines inital title
         line.Title = line.name;
+        // The Lines position is always relative to the questNode
         line.EditorPos = position - currentQuestNode.Quest.EditorPos;
+        // Mark the line to be saved
         EditorUtility.SetDirty(line);
 
+        // Save changes
         AssetDatabase.SaveAssets();
 
+        // Create a node for the line
         DialogueLineNode node = new DialogueLineNode(currentQuestNode, line, defaultNodeData);
 
+        // Add node to lists
         nodes.Add(node);
         dialogueLineNodes.Add(node);
     }
@@ -473,19 +501,27 @@ public class DialogueEditor : EditorWindow
     /// <param name="position"> Vector2 of the position to create the Node at</param>
     private void CreateNewQuest(Vector2 position)
     {
+        // Get a unique path for for a quest
         string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Quest.asset");
 
+        // Create the new asset
         Quest quest = ScriptableObject.CreateInstance<Quest>();
-
         AssetDatabase.CreateAsset(quest, path);
 
+        // set the quests initial title and position
         quest.Title = quest.name;
         quest.EditorPos = position;
 
+        // Mark quest asset to be saved
+        EditorUtility.SetDirty(quest);
+
+        // Save changes to assets
         AssetDatabase.SaveAssets();
 
+        // Create a node for the quest
         QuestNode node = new QuestNode(quest, defaultNodeData, ShowQuestDialogue, OnQuestNodeDragEnd);
 
+        // add the node to lists
         nodes.Add(node);
         questNodes.Add(node);
     }
@@ -542,30 +578,48 @@ public class DialogueEditor : EditorWindow
         }
     }
 
+    /// <summary>
+    /// This is passed to the quest node to be executed when a drag ends. It is used to modify editor positions of different elements throughout diefferent views.
+    /// </summary>
+    /// <param name="node">Reference to the node whose drag event just ended</param>
     private void OnQuestNodeDragEnd(QuestNode node)
     {
+        // Calculate the vector from the objects original position to the new one
         Vector2 dragVector = node.rect.position - node.Quest.EditorPos;
+
+        // When in DialogueView, special behaviour is necessary to preserve relative positions
         if (DialogueEditor.Instance.State == DialogueEditor.WindowState.DialogueView)
         {
+            // Move the quest Nodes that are currently not being rendered by the same vector
+            // This way, when moving the quest node, you are actually moving the whole quest tree, thereby preserving the relative position
             foreach (QuestNode questNode in questNodes.Where(e => e != node).ToList())
             {
+                // Move the actual rectangle and the editor position in the asset
                 questNode.rect.position += dragVector;
                 questNode.Quest.EditorPos += dragVector;
+                // Mark the asset as dirty so it will be saved properly
                 EditorUtility.SetDirty(questNode.Quest);
             }
+            // Modify the dialogue lines editor positions by the inverse drag vector to preserve the relative position
             foreach (DialogueLineNode dialogueLineNode in dialogueLineNodes)
             {
                 dialogueLineNode.Line.EditorPos -= dragVector;
+                // Mark the asset as dirty
                 EditorUtility.SetDirty(dialogueLineNode.Quest);
             }
         }
+        // Save the new Editor Position of the dragged quest node
         node.Quest.EditorPos = node.rect.position;
+        // Mark the asset as dirty
         EditorUtility.SetDirty(node.Quest);
-
+        // Save assets
         AssetDatabase.SaveAssets();
     }
 
-    // Remove a node
+    /// <summary>
+    /// Remove a node
+    /// </summary>
+    /// <param name="node">The node to be removed</param>
     private void RemoveNode(Node node)
     {
         // If there are connections, clear the ones connected to this one
@@ -591,72 +645,105 @@ public class DialogueEditor : EditorWindow
             connectionsToRemove = null;
         }
 
+        // Remove associated dialogue line assets
         if (node is DialogueLineNode)
         {
+            // Get the dialogue line
             DialogueLine line = (node as DialogueLineNode).Line;
+            // remove the dialogueline from the currentQuestNode
+            // If this line throws an error, you are probably trying to remove a dialoguenode while not in DialogueView
             currentQuestNode.Quest.Lines.Remove(line);
+            // Remove the asset
             AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
+            // Save changes
             AssetDatabase.SaveAssets();
         }
+
+        // Remove associated quest assets
         if (node is QuestNode)
         {
+            // Get a reference to the quest asset
             Quest quest = (node as QuestNode).Quest;
+
+            // If in dialogue view, go back to quest view, as viewing the dialogue of a non-existant quest node would not make sense
             if (State == WindowState.DialogueView)
             {
                 DialogueToQuestView();
             }
+            // Remove the asset
             AssetDatabase.DeleteAsset($"{dialoguePath}/{quest.name}.asset");
+            // Remove all associated lines assets
             foreach (DialogueLine line in quest.Lines)
             {
                 AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
             }
+            // Save changes
             AssetDatabase.SaveAssets();
         }
 
         // Finally remove the node
         nodes.Remove(node);
     }
+    /// <summary>
+    /// Remove the Node representation of a dialogueLine
+    /// </summary>
+    /// <param name="line">Reference to the dialogue line asset</param>
     public void RemoveNode(DialogueLine line)
     {
         RemoveNode(GetNodeByDialogueLine(line));
     }
+    /// <summary>
+    /// Remove the Node representation of a quest
+    /// </summary>
+    /// <param name="line">Reference to the quest asset</param>
     public void RemoveNode(Quest quest)
     {
         RemoveNode(GetNodeByQuest(quest));
     }
 
-    // Remove a connection
+    /// <summary>
+    /// Remove the connection between two nodes
+    /// </summary>
+    /// <param name="connection"></param>
     private void RemoveConnection(Connection connection)
     {
 
-        // get outNode
+        // Get references to the in and out nodes
         Node outNode = connection.outPoint.node;
         Node inNode = connection.inPoint.node;
 
-        // If outNode is a DialogueLine set NextLeft or NextRight to null, depending on where the connection is
+        // Behaviour for a connection between two dialogue lines
         if (outNode is DialogueLineNode)
         {
+            // Find out if the connection is on the left or right output and set the relevant reference in the DialogueLine to null#
             DialogueLineNode lineNode = (outNode as DialogueLineNode);
-            if (connection.outPoint == lineNode.outPointLeft )
+            switch(connection.outPoint)
             {
-                lineNode.Line.NextLeft = null;
-            }
-            else if (connection.outPoint == lineNode.outPointRight)
-            {
-                lineNode.Line.NextRight = null;
+                case lineNode.outPointLeft:
+                    lineNode.Line.NextLeft = null;
+                    break;
+                case lineNode.outPointRight:
+                    lineNode.Line.NextRight = null;
+                    break;
             }
         }
 
+        // Behaviour for a connection between a questNode and a DialogueLIne
         if ((outNode is QuestNode) && (inNode is DialogueLineNode))
         {
+            // Set the quests precedingStartLine to null
             (outNode as QuestNode).Quest.PrecedingStartLine = null;
         }
 
+        // Behaviour for a connection between two quests
         if ((outNode is QuestNode) && (inNode is QuestNode))
         {
+            // Get a reference to the outNode
             Quest quest = (outNode as QuestNode).Quest;
+            // Determine the index of the connection point the connection is coming from
             int index = (outNode as QuestNode).linkOutPoints.IndexOf(connection.outPoint);
             
+            // Set the link at the index to point to null
             Quest.Link link = quest.Links[index];
             link.NextQuest = null;
             quest.Links[index] = link;            
@@ -670,14 +757,14 @@ public class DialogueEditor : EditorWindow
         connections.Remove(connection);
     }
 
-    // Create a connection
+    /// <summary>
+    /// Create a connection between the selectedInPoint and the selectedOutPoint
+    /// </summary>
     private void CreateConnection()
     {
         // get in and out node
         Node _outNode = selectedOutPoint.node;
         Node _inNode = selectedInPoint.node;
-
-
 
         // DialogueLine -> DialogueLine
         if ((_outNode is DialogueLineNode) && (_inNode is DialogueLineNode))
@@ -715,8 +802,6 @@ public class DialogueEditor : EditorWindow
             }
         }
 
-
-
         // Create connection
         Connection connection = new Connection(selectedInPoint, selectedOutPoint, RemoveConnection);
 
@@ -728,7 +813,9 @@ public class DialogueEditor : EditorWindow
         connections.Add(connection);
     }
 
-    // Clear the selected connection points
+    /// <summary>
+    /// Clear the selected connection points
+    /// </summary>//  
     private void ClearConnectionSelection()
     {
         selectedInPoint = null;
