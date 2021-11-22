@@ -725,13 +725,20 @@ public class DialogueEditor : EditorWindow
             {
                 lineNode.Line.NextRight = null;
             }
+
+            // Mark the edited line for saving
+            EditorUtility.SetDirty(lineNode.Line);
         }
 
         // Behaviour for a connection between a questNode and a DialogueLIne
         if ((outNode is QuestNode) && (inNode is DialogueLineNode))
         {
+            Quest quest = (outNode as QuestNode).Quest;
             // Set the quests precedingStartLine to null
-            (outNode as QuestNode).Quest.PrecedingStartLine = null;
+            quest.PrecedingStartLine = null;
+            
+            // Mark the edited quest for saving
+            EditorUtility.SetDirty(quest);
         }
 
         // Behaviour for a connection between two quests
@@ -745,8 +752,14 @@ public class DialogueEditor : EditorWindow
             // Set the link at the index to point to null
             Quest.Link link = quest.Links[index];
             link.NextQuest = null;
-            quest.Links[index] = link;            
+            quest.Links[index] = link;  
+            
+            // Mark the edited quest for saving
+            EditorUtility.SetDirty(quest);          
         }
+
+        // Save changes to assets
+        AssetDatabase.SaveAssets();
 
         // remove connectionpoints references to connection;
         connection.inPoint.connection = null;
@@ -765,7 +778,7 @@ public class DialogueEditor : EditorWindow
         Node _outNode = selectedOutPoint.node;
         Node _inNode = selectedInPoint.node;
 
-        // DialogueLine -> DialogueLine
+        // Behaviour: DialogueLine -> DialogueLine
         if ((_outNode is DialogueLineNode) && (_inNode is DialogueLineNode))
         {
             DialogueLineNode outNode = (DialogueLineNode)_outNode;
@@ -780,26 +793,43 @@ public class DialogueEditor : EditorWindow
             {
                 outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
             }
+            
+            // Mark the out Dialogue Line for saving 
+            EditorUtility.SetDirty(outNode.Line);
         }
 
-        // Quest -> DialogueLine
+        // Behaviour: Quest -> DialogueLine
         if ((_outNode is QuestNode) && (_inNode is DialogueLineNode))
         {
-            (_outNode as QuestNode).Quest.PrecedingStartLine = (_inNode as DialogueLineNode).Line;
+            Quest quest = (QuestNode)_outNode.Quest;
+            LinkedList line = (DialogueLineNode)_inNode.Line;
+
+            // Set the preceding start line of the Quest
+            quest.PrecedingStartLine = line;
+
+            // Mark the quest for saving
+            EditorUtility.SetDirty(quest);
         }
 
-        // Quest -> Quest
+        // Beahviour: Quest -> Quest
         if ((_outNode is QuestNode) && (_inNode is QuestNode))
         {
-            QuestNode outNode = (QuestNode)_outNode;
+            Quest quest = (QuestNode)_outNode.Quest;
+
+            // Get the index of the selected Connection Point of the outNode 
             int index = outNode.linkOutPoints.IndexOf(selectedOutPoint);
-            if (index >= 0)
-            {
-                Quest.Link link = outNode.Quest.Links[index];
-                link.NextQuest = (_inNode as QuestNode).Quest;
-                outNode.Quest.Links[index] = link;
-            }
+            
+            // Set the link at the index to point to the correct next quest
+            Quest.Link link = quest.Links[index];
+            link.NextQuest = (QuestNode)_inNode.Quest;
+            quest.Links[index] = link;
+
+            // Mark the quest for saving
+            EditorUtility.SetDirt(quest);
         }
+
+        // Save asset changes
+        AssetDatabase.SaveAssets();
 
         // Create connection
         Connection connection = new Connection(selectedInPoint, selectedOutPoint, RemoveConnection);
