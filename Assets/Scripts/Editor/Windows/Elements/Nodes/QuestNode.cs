@@ -60,6 +60,14 @@ public class QuestNode : Node
     }
 
     /// <summary>
+    /// Gets called on - you guessed it - doubleclicks 
+    /// </summary>
+    public override void OnDoubleclick()
+    {
+        ShowDialogue(this);
+    }
+
+    /// <summary>
     /// Gets called every time the window is repainted
     /// </summary>
     public override void Draw()
@@ -113,9 +121,6 @@ public class QuestNode : Node
     /// </summary>
     private void OnClickShowDialogue()
     {
-        if (ShowDialogue != null)
-        {
-            ShowDialogue(this);
-        }
+        ShowDialogue(this);
     }
 }

@@ -34,6 +34,9 @@ public class Node
     // On Remove method
     public Action<Node> OnRemoveNode;
 
+    // Saves the last time this was clicked to detect doubleclicks
+    private double lastClicked;
+
     // Create a new Node
     public Node(Vector2 position, float width, float height, NodeData nodeData)
     {
@@ -86,6 +89,13 @@ public class Node
                         style = selectedNodeStyle;
 
                         SelectAssociatedObject();
+
+                        // Detect Doubleclicks
+                        if (EditorApplication.timeSinceStartup - lastClicked < .25)
+                        {
+                            OnDoubleclick();
+                        }
+                        lastClicked = EditorApplication.timeSinceStartup;
                     }
                     else
                     {
@@ -128,7 +138,9 @@ public class Node
         return false;
     }
 
-    public virtual void OnDragEnd() { } // just for overrides
+    // Overidables
+    public virtual void OnDragEnd() { }
+    public virtual void OnDoubleclick() { }
 
     // Create a context menu
     public virtual void FillContextMenu(GenericMenu menu)

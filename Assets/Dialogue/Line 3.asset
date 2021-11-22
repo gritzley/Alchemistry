@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 1
+  m_Name: Line 3
   m_EditorClassIdentifier: 
-  Title: Line 1
+  Title: Line 3
   Text: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 1
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
-  EditorPos: {x: 1123, y: 34}
+  NextRight: {fileID: 11400000, guid: 9871f42aa734bac4f8ad24747bdcd54f, type: 2}
+  EditorPos: {x: 938, y: 61}
