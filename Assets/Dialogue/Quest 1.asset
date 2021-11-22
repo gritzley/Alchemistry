@@ -26,6 +26,6 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 0}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: -108, y: 264}
+  EditorPos: {x: 110, y: 298}
   Title: Bli
   Lines: []

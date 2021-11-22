@@ -26,7 +26,7 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 11400000, guid: 9ea64879bd946f8439581d94a929373c, type: 2}
   SucceedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 159, y: 344}
+  EditorPos: {x: 449, y: 309}
   Title: Bla
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
