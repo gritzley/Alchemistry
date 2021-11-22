@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Links:
   - Potion: {fileID: 11400000, guid: a4d60f6e7f923ad459b176c08203316b, type: 2}
-    NextQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
+    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: a31c029d340019c448597982b8ff3b5b, type: 2}
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 41adf9cc78f6b244c9874d1e197a4033, type: 2}
@@ -26,6 +26,6 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 0}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 110, y: 298}
-  Title: Bli
+  EditorPos: {x: 191, y: 256}
+  Title: Quest 1
   Lines: []

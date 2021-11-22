@@ -55,7 +55,8 @@ public class DialogueEditor : EditorWindow
     // Quick reference to the Dialogue Path
     private string dialoguePath = "Assets/Dialogue";
 
-
+    // A simple flag to see if you are dragging the editor
+    private bool isDragging;
 
     /// <summary>
     /// OnepWindow is called when the user is selecting the window in the Editors Open Window dialogue
@@ -402,13 +403,14 @@ public class DialogueEditor : EditorWindow
                     }
                     genericMenu.ShowAsContext();
                 }
-            break;
+                break;
 
             // Mousedrag Events
             case EventType.MouseDrag:
                 // If Left Mouse Button is clicked, drag
                 if (Event.current.button == 0)
                 {
+                    isDragging = true;
                     // Set the windows drag vector. This gets added to the windows offset, saving
                     drag = Event.current.delta;
 
@@ -419,7 +421,21 @@ public class DialogueEditor : EditorWindow
                     // Log window changes so we get a repaint
                     GUI.changed = true;
                 }
-            break;
+                break;
+
+            // On Mouse Up
+            case EventType.MouseUp:
+                if (isDragging)
+                {
+                    foreach (QuestNode node in questNodes)
+                    {
+                        node.Quest.EditorPos = node.rect.position;
+                        EditorUtility.SetDirty(node.Quest);
+                        AssetDatabase.SaveAssets();
+                    }
+                    isDragging = false;
+                }
+                break;
         }
 
         // If the window changed in any way, redraw it.
@@ -658,6 +674,7 @@ public class DialogueEditor : EditorWindow
             // remove the dialogueline from the currentQuestNode
             // If this line throws an error, you are probably trying to remove a dialoguenode while not in DialogueView
             currentQuestNode.Quest.Lines.Remove(line);
+            dialogueLineNodes.Remove((DialogueLineNode)node);
             // Remove the asset
             AssetDatabase.DeleteAsset($"{dialoguePath}/{line.name}.asset");
             // Save changes
@@ -675,6 +692,7 @@ public class DialogueEditor : EditorWindow
             {
                 DialogueToQuestView();
             }
+            questNodes.Remove((QuestNode)node);
             // Remove the asset
             AssetDatabase.DeleteAsset($"{dialoguePath}/{quest.name}.asset");
             // Remove all associated lines assets
