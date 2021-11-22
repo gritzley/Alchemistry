@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Quest", menuName = "Quest")]
 public class Quest : ScriptableObject
 {
@@ -17,12 +18,9 @@ public class Quest : ScriptableObject
 
     public List<Link> Links;
 
-    public DialogueLine StartLine;
-    private DialogueLine currentLine;
-    public DialogueLine CurrentLine
-    {
-        get { return currentLine; }
-    }
+    public DialogueLine PrecedingStartLine;
+    public DialogueLine SucceedingStartLine;
+    public DialogueLine CurrentLine;
 
     public Vector2 EditorPos;
     public string Title;
@@ -31,7 +29,6 @@ public class Quest : ScriptableObject
 
     public Quest()
     {
-        Lines = new List<DialogueLine>();
         Links = new List<Link>();
     }
 

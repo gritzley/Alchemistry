@@ -15,8 +15,7 @@ public class DialogueLineNode : Node
     // Create a reference for the right side answer that really just points to the normal out Point
     public ConnectionPoint outPointRight
     {
-        get { return this.outPoint; }
-        set { this.outPoint = value; }
+        get { return base.outPoint; }
     }
     /// <summary>
     /// Create a new DialogueLineNode from a line and a set of node data
@@ -68,9 +67,9 @@ public class DialogueLineNode : Node
         }
         // draw the base
         base.Draw();
-        GUIStyle style = new GUIStyle(GUI.skin.label);
-        style.alignment = TextAnchor.UpperCenter;
-        style.padding = new RectOffset(0, 0, 10, 0);
-        GUI.Label(rect, Line.Title, style);
+        GUIStyle labelStyle = new GUIStyle(GUI.skin.label);
+        labelStyle.alignment = TextAnchor.UpperCenter;
+        labelStyle.padding = new RectOffset(0, 0, 10, 0);
+        GUI.Label(rect, Line.Title, labelStyle);
     }
 }

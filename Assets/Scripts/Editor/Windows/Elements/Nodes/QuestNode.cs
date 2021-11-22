@@ -12,6 +12,12 @@ public class QuestNode : Node
 
     public List<ConnectionPoint> linkOutPoints;
 
+    public ConnectionPoint outPointSucceding;
+    public ConnectionPoint outPointPreceding
+    {
+        get { return base.outPoint; }
+    }
+
     public QuestNode (Quest quest, NodeData nodeData, Action<QuestNode> showDialogue, Action<QuestNode> dragEnd)
     :base(quest.EditorPos, 100, 50, nodeData)
     {
