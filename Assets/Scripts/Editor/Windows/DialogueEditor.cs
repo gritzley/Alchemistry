@@ -605,7 +605,7 @@ public class DialogueEditor : EditorWindow
             {
                 dialogueLineNode.Line.EditorPos -= dragVector;
                 // Mark the asset as dirty
-                EditorUtility.SetDirty(dialogueLineNode.Quest);
+                EditorUtility.SetDirty(dialogueLineNode.Line);
             }
         }
         // Save the new Editor Position of the dragged quest node
@@ -717,14 +717,13 @@ public class DialogueEditor : EditorWindow
         {
             // Find out if the connection is on the left or right output and set the relevant reference in the DialogueLine to null#
             DialogueLineNode lineNode = (outNode as DialogueLineNode);
-            switch(connection.outPoint)
+            if (connection.outPoint == lineNode.outPointLeft)
             {
-                case lineNode.outPointLeft:
-                    lineNode.Line.NextLeft = null;
-                    break;
-                case lineNode.outPointRight:
-                    lineNode.Line.NextRight = null;
-                    break;
+                lineNode.Line.NextLeft = null;
+            }
+            if (connection.outPoint == lineNode.outPointRight)
+            {
+                lineNode.Line.NextRight = null;
             }
         }
 
