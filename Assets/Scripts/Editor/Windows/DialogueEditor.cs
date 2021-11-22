@@ -196,10 +196,15 @@ public class DialogueEditor : EditorWindow
         nodes.Add(questNode);
         if (questNode.Quest.PrecedingStartLine != null)
         {
-            selectedOutPoint = questNode.outPoint;
+            selectedOutPoint = questNode.outPointPreceding;
             selectedInPoint = GetNodeByDialogueLine(questNode.Quest.PrecedingStartLine).inPoint;
             CreateConnection();
-            ClearConnectionSelection();
+        }
+        if (questNode.Quest.SucceedingStartLine != null)
+        {
+            selectedOutPoint = questNode.outPointSucceding;
+            selectedInPoint = GetNodeByDialogueLine(questNode.Quest.SucceedingStartLine).inPoint;
+            CreateConnection();
         }
 
         // Assign node connections
@@ -715,8 +720,8 @@ public class DialogueEditor : EditorWindow
         // Behaviour for a connection between two dialogue lines
         if (outNode is DialogueLineNode)
         {
-            // Find out if the connection is on the left or right output and set the relevant reference in the DialogueLine to null#
-            DialogueLineNode lineNode = (outNode as DialogueLineNode);
+            // Find out if the connection is on the left or right output and set the relevant reference in the DialogueLine to null
+            DialogueLineNode lineNode = (DialogueLineNode)outNode;
             if (connection.outPoint == lineNode.outPointLeft)
             {
                 lineNode.Line.NextLeft = null;
@@ -733,12 +738,19 @@ public class DialogueEditor : EditorWindow
         // Behaviour for a connection between a questNode and a DialogueLIne
         if ((outNode is QuestNode) && (inNode is DialogueLineNode))
         {
-            Quest quest = (outNode as QuestNode).Quest;
-            // Set the quests precedingStartLine to null
-            quest.PrecedingStartLine = null;
+            QuestNode questNode = (QuestNode)outNode;
+            // Find out if the connection is on the preceding or succeding output and set the relevant reference in the Quest to null
+            if (connection.outPoint == questNode.outPointPreceding)
+            {
+                questNode.Quest.PrecedingStartLine = null;
+            }
+            if (connection.outPoint == questNode.outPointSucceding)
+            {
+                questNode.Quest.SucceedingStartLine = null;
+            }
             
             // Mark the edited quest for saving
-            EditorUtility.SetDirty(quest);
+            EditorUtility.SetDirty(questNode.Quest);
         }
 
         // Behaviour for a connection between two quests
@@ -775,57 +787,64 @@ public class DialogueEditor : EditorWindow
     private void CreateConnection()
     {
         // get in and out node
-        Node _outNode = selectedOutPoint.node;
-        Node _inNode = selectedInPoint.node;
+        Node outNode = selectedOutPoint.node;
+        Node inNode = selectedInPoint.node;
 
         // Behaviour: DialogueLine -> DialogueLine
-        if ((_outNode is DialogueLineNode) && (_inNode is DialogueLineNode))
+        if ((outNode is DialogueLineNode) && (inNode is DialogueLineNode))
         {
-            DialogueLineNode outNode = (DialogueLineNode)_outNode;
-            DialogueLineNode inNode = (DialogueLineNode)_inNode;
+            DialogueLineNode lineNode = (DialogueLineNode)outNode;
+            DialogueLine line = (inNode as DialogueLineNode).Line;
 
             // Select whether to put the line in nextLeft or nextRight
-            if (selectedOutPoint == outNode.outPointLeft )
+            if (selectedOutPoint == lineNode.outPointLeft )
             {
-                outNode.Line.NextLeft = (selectedInPoint.node as DialogueLineNode).Line;
+                lineNode.Line.NextLeft = line;
             }
-            else if (selectedOutPoint == outNode.outPointRight)
+            else if (selectedOutPoint == lineNode.outPointRight)
             {
-                outNode.Line.NextRight = (selectedInPoint.node as DialogueLineNode).Line;
+                lineNode.Line.NextRight = line;
             }
             
             // Mark the out Dialogue Line for saving 
-            EditorUtility.SetDirty(outNode.Line);
+            EditorUtility.SetDirty(lineNode.Line);
         }
 
         // Behaviour: Quest -> DialogueLine
-        if ((_outNode is QuestNode) && (_inNode is DialogueLineNode))
+        if ((outNode is QuestNode) && (inNode is DialogueLineNode))
         {
-            Quest quest = (QuestNode)_outNode.Quest;
-            LinkedList line = (DialogueLineNode)_inNode.Line;
+            QuestNode questNode = (QuestNode)outNode;
+            DialogueLine line = (inNode as DialogueLineNode).Line;
 
-            // Set the preceding start line of the Quest
-            quest.PrecedingStartLine = line;
+            // Select whether to put the line in nextLeft or nextRight
+            if (selectedOutPoint == questNode.outPointPreceding )
+            {
+                questNode.Quest.PrecedingStartLine = line;
+            }
+            else if (selectedOutPoint == questNode.outPointSucceding)
+            {
+                questNode.Quest.SucceedingStartLine = line;
+            }
 
             // Mark the quest for saving
-            EditorUtility.SetDirty(quest);
+            EditorUtility.SetDirty(questNode.Quest);
         }
 
         // Beahviour: Quest -> Quest
-        if ((_outNode is QuestNode) && (_inNode is QuestNode))
+        if ((outNode is QuestNode) && (inNode is QuestNode))
         {
-            Quest quest = (QuestNode)_outNode.Quest;
+            QuestNode questNode = outNode as QuestNode;
 
-            // Get the index of the selected Connection Point of the outNode 
-            int index = outNode.linkOutPoints.IndexOf(selectedOutPoint);
+            // Get the index of the selected Connection Point of the quest Node 
+            int index = questNode.linkOutPoints.IndexOf(selectedOutPoint);
             
             // Set the link at the index to point to the correct next quest
-            Quest.Link link = quest.Links[index];
-            link.NextQuest = (QuestNode)_inNode.Quest;
-            quest.Links[index] = link;
+            Quest.Link link = questNode.Quest.Links[index];
+            link.NextQuest = (inNode as QuestNode).Quest;
+            questNode.Quest.Links[index] = link;
 
             // Mark the quest for saving
-            EditorUtility.SetDirt(quest);
+            EditorUtility.SetDirty(questNode.Quest);
         }
 
         // Save asset changes

@@ -12,7 +12,6 @@ public class QuestEditor : Editor
 {
     SerializedProperty titleProp;
     SerializedProperty linksProp;
-    SerializedProperty linesProp;
 
     ReorderableList Links;
     
@@ -22,7 +21,6 @@ public class QuestEditor : Editor
         // Load serialized properties
         titleProp = serializedObject.FindProperty("Title");
         linksProp = serializedObject.FindProperty("Links");
-        linesProp = serializedObject.FindProperty("Lines");
 
         (target as Quest).UpdateLinks();
     }
@@ -48,8 +46,6 @@ public class QuestEditor : Editor
                 Debug.LogWarning("Quests can not refer to themselves");
             }
         }
-
-        EditorGUILayout.PropertyField(linesProp);
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();

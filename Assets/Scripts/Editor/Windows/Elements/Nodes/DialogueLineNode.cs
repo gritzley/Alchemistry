@@ -50,7 +50,7 @@ public class DialogueLineNode : Node
         Line.EditorPos = rect.position - parent.rect.position;
 
         // mark Line for savig
-        EditorUtility.SetDirt(Line);
+        EditorUtility.SetDirty(Line);
         AssetDatabase.SaveAssets();
     }
 

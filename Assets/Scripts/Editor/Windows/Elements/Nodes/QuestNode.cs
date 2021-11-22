@@ -13,13 +13,10 @@ public class QuestNode : Node
     public List<ConnectionPoint> linkOutPoints;
 
     public ConnectionPoint outPointSucceding;
-    public ConnectionPoint outPointPreceding
-    {
-        get { return base.outPoint; }
-    }
+    public ConnectionPoint outPointPreceding;
 
     public QuestNode (Quest quest, NodeData nodeData, Action<QuestNode> showDialogue, Action<QuestNode> dragEnd)
-    :base(quest.EditorPos, 100, 50, nodeData)
+    :base(quest.EditorPos, 100, 75, nodeData)
     {
         Quest = quest;
         ShowDialogue = showDialogue;
@@ -30,6 +27,9 @@ public class QuestNode : Node
         {
             linkOutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 25 * (linkOutPoints.Count + 1)));
         }
+
+        outPointPreceding = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 25);
+        outPointSucceding = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 50);
     }
 
     public override void SelectAssociatedObject()
@@ -49,8 +49,9 @@ public class QuestNode : Node
         switch (DialogueEditor.Instance.State)
         {
             case DialogueEditor.WindowState.DialogueView:
-                rect.height = 50;
-                outPoint.Draw();
+                rect.height = 75;
+                outPointPreceding.Draw();
+                outPointSucceding.Draw();
                 break;
 
             case DialogueEditor.WindowState.QuestView:
