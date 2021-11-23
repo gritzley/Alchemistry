@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion 2
   m_EditorClassIdentifier: 
-  Name: Potion 2
+  Name: Potion 2fawfeawfaewf
   Recipe:
   - Ingredient: {fileID: 11400000, guid: 1cd6ed83715f2074b8356c7376bed8dd, type: 2}
     Time: 10

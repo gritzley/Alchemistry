@@ -30,13 +30,14 @@ public class DialogueLineNode : Node
         // Save parent ref
         this.parent = parent;
         // Create the second out point
-        outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 50);
+        outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 75);
+        outPointRight.yPos = 50;
     }
 
     /// <summary>
     /// On select, set the inspector selection to the associated DialogueLine
     /// </summary>
-    public override void SelectAssociatedObject()
+    public override void OnSelection()
     {
         Selection.activeObject = Line;
     }
@@ -62,8 +63,7 @@ public class DialogueLineNode : Node
         // Adjust the look of the node depending on wheter it has answers
         if (Line.HasAnswers)
         {
-            rect.height = 75;
-
+            rect.height = 100;
             outPointLeft.Draw();
         }
         else
@@ -76,5 +76,15 @@ public class DialogueLineNode : Node
         labelStyle.alignment = TextAnchor.UpperCenter;
         labelStyle.padding = new RectOffset(0, 0, 10, 0);
         GUI.Label(rect, Line.Title, labelStyle);
+
+        labelStyle.padding.top += 5;
+        labelStyle.padding.right += 10;
+        labelStyle.alignment = TextAnchor.UpperRight;
+        if (Line.HasAnswers) {
+            labelStyle.padding.top += 25;
+            GUI.Label(rect, "Right Answer", labelStyle);
+            labelStyle.padding.top += 25;
+            GUI.Label(rect, "Left Answer", labelStyle);
+        }
     }
 }

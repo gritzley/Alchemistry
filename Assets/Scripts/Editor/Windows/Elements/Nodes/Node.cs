@@ -43,8 +43,8 @@ public class Node
         // Set references
         rect = new Rect(position.x, position.y, width, height);
         style = nodeData.nodeStyle;
-        inPoint = new ConnectionPoint(this, ConnectionPointType.In, nodeData.inPointStyle, nodeData.OnClickInPoint, height / 2);
-        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, height / 2);
+        inPoint = new ConnectionPoint(this, ConnectionPointType.In, nodeData.inPointStyle, nodeData.OnClickInPoint, 25);
+        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 25);
         defaultNodeStyle = nodeData.nodeStyle;
         selectedNodeStyle = nodeData.selectedNodeStyle;
         OnRemoveNode = nodeData.OnClickRemoveNode;
@@ -66,10 +66,6 @@ public class Node
         GUI.Box(rect, "", style);
     }
 
-    public virtual void SelectAssociatedObject()
-    {
-        // override this
-    }
 
     // On window events
     public bool ProcessEvents(Event e)
@@ -88,7 +84,7 @@ public class Node
                         isSelected = true;
                         style = selectedNodeStyle;
 
-                        SelectAssociatedObject();
+                        OnSelection();
 
                         // Detect Doubleclicks
                         if (EditorApplication.timeSinceStartup - lastClicked < .25)
@@ -141,6 +137,7 @@ public class Node
     // Overidables
     public virtual void OnDragEnd() { }
     public virtual void OnDoubleclick() { }
+    public virtual void OnSelection() { }
 
     // Create a context menu
     public virtual void FillContextMenu(GenericMenu menu)
