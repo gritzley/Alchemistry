@@ -3,15 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class KettleController : MonoBehaviour
+public class KettleController : MonoBehaviour, IClickable
 {
     // Flag for cooking. Set to false to stop cooking
-    public bool cooking = false;
+    bool cooking = false;
     // Field for a new ingredient that is added to the pot
-    public Ingredient NewIngredient;
+    Ingredient NewIngredient;
+
+    public void OnClick(PlayerController player)
+    {
+        // If the player is empty-handed, stop cooking
+        if (player.HeldItem == null)
+        {
+            cooking = false;
+        }
+
+        // if Tthe player is holding an ingredient
+        if (player.HeldItem != null && player.HeldItem is IngredientContainer)
+        {
+            // If the kettle is not already cooking, start now
+            if (!cooking) StartCoroutine(Cooking());
+
+            // Get the ingredient from the container
+            Ingredient ingredient = (player.HeldItem as IngredientContainer).Ingredient;
+            // Add the ingredient to the pot
+            NewIngredient = ingredient;
+            // if the ingredient is used up, destroy it
+            if (ingredient) Destroy(player.HeldItem.gameObject);
+            // remove player reference to item
+            player.HeldItem = null;
+        }
+    }
 
     // Enumerator to handle cooking
-    public IEnumerator Cooking() {
+    private IEnumerator Cooking() {
         // set cooking flag to true
         cooking = true;
 

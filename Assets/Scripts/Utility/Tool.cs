@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : MonoBehaviour
+public class Tool : MonoBehaviour, IClickable
 {
     [System.Serializable]
     public struct Conversion
@@ -32,6 +32,16 @@ public class Tool : MonoBehaviour
                 IngredientContainer.gameObject.transform.rotation = handTransform.rotation;
                 return;
             }
+        }
+    }
+
+    public void OnClick(PlayerController player)
+    {
+        if (player.HeldItem != null && player.HeldItem is IngredientContainer)
+        {
+            IngredientContainer = (IngredientContainer)player.HeldItem;
+            ConvertIngredinet();
+            player.HeldItem = (Pickupable)IngredientContainer;
         }
     }
 

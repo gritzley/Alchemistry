@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickupable : Moveable, IClickable
+public class Pickupable : Moveable
 {
     // The initial rotation of the object
     [HideInInspector] public Quaternion Rotation;
@@ -12,5 +12,5 @@ public class Pickupable : Moveable, IClickable
         // Save initial rotation
         Rotation = transform.rotation;
     }
-
+    
 }
