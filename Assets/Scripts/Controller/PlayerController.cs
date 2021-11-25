@@ -89,6 +89,7 @@ public class PlayerController : Moveable
                     // Get components of the hit gameobject for later reference
                     KettleController kettle = hit.collider.gameObject.GetComponent<KettleController>();
                     ItemSpot spot = hit.collider.gameObject.GetComponent<ItemSpot>();
+                    Tool tool = hit.collider.gameObject.GetComponent<Tool>();
 
                     // Empty-handed behaviour
                     if (heldItem == null)
@@ -102,7 +103,7 @@ public class PlayerController : Moveable
                             // set the spots item to null
                             spot.Item = null;
                             // Attach item to own transform 
-                            heldItem.transform.parent = transform;
+                            heldItem.transform.parent = handTransform;
 
                             // disable input to prevent glitches while taking an item in hand
                             inputDisabled = true;
@@ -163,6 +164,13 @@ public class PlayerController : Moveable
                             // Move item to the spots location with it's original rotation
                             StartCoroutine(spot.Item.MoveTowards(spot.transform.position));
                             StartCoroutine(spot.Item.TurnTowards(spot.Item.Rotation));
+                        }
+
+                        if (tool != null)
+                        {
+                            tool.IngredientContainer = ingredientContainer;
+                            tool.ConvertIngredinet();
+                            heldItem = (Pickupable)tool.IngredientContainer;
                         }
 
                     }

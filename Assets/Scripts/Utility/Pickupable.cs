@@ -7,7 +7,7 @@ public class Pickupable : Moveable, IClickable
     // The initial rotation of the object
     [HideInInspector] public Quaternion Rotation;
 
-    void Start()
+    void OnEnable()
     {
         // Save initial rotation
         Rotation = transform.rotation;

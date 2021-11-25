@@ -7,10 +7,10 @@ public class ItemSpot : MonoBehaviour
     // The item stored in this spot
     [HideInInspector] public Pickupable Item;
 
-
     // Called before first frame
-    void Start() {
-        // Get item and particlesystem
+    void Start()
+    {
+        // Initialize the Item at the beginning of the game.
         Item = GetComponentInChildren<Pickupable>();
     }
 }
