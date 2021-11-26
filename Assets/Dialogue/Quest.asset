@@ -15,18 +15,10 @@ MonoBehaviour:
   Links:
   - Potion: {fileID: 11400000, guid: a4d60f6e7f923ad459b176c08203316b, type: 2}
     NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: a31c029d340019c448597982b8ff3b5b, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 41adf9cc78f6b244c9874d1e197a4033, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: d11acd38ef9d4e140a17728e690aad03, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: ce1dfed425dfc144b852a48fdea122c1, type: 2}
-    NextQuest: {fileID: 0}
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 253, y: 322}
+  EditorPos: {x: 536, y: 171}
   Title: Quest
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
