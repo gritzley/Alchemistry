@@ -5,44 +5,36 @@ using UnityEngine;
 public class Tool : MonoBehaviour, IClickable
 {
     [System.Serializable]
-    public struct Conversion
+    private struct Conversion
     {
-        public Ingredient Input;
-        public Ingredient Output;
+        public Ingredient.Type Input;
+        public GameObject Output;
     }
 
     [SerializeField] private List<Conversion> Conversions;
-    [SerializeField] private GameObject IngredientPrefab;
-
-    public IngredientContainer IngredientContainer;
     
-    public void ConvertIngredinet()
+    public GameObject GetConvertedIngredientPrefab(Ingredient.Type type)
     {
         foreach (Conversion conversion in Conversions)
         {
-            if (conversion.Input == IngredientContainer.Ingredient)
+            if (conversion.Input == type)
             {
-                Transform handTransform = IngredientContainer.gameObject.transform.parent;
-                GameObject newIngredient = Object.Instantiate(IngredientPrefab, handTransform.position, Quaternion.identity);
-                Object.Destroy(IngredientContainer.gameObject);
-                IngredientContainer = newIngredient.GetComponent<IngredientContainer>();
-                Debug.Log("No you aren't");
-                IngredientContainer.Ingredient = conversion.Output;
-                IngredientContainer.gameObject.transform.parent = handTransform;
-                IngredientContainer.gameObject.transform.rotation = handTransform.rotation;
-                return;
+                return conversion.Output;
             }
         }
+        return null;
     }
 
     public void OnClick(PlayerController player)
     {
-        if (player.HeldItem != null && player.HeldItem is IngredientContainer)
+        if (player.HeldItem != null && player.HeldItem is Ingredient)
         {
-            IngredientContainer = (IngredientContainer)player.HeldItem;
-            ConvertIngredinet();
-            player.HeldItem = (Pickupable)IngredientContainer;
+            GameObject prefab = GetConvertedIngredientPrefab((player.HeldItem as Ingredient).type);
+            GameObject ingredient = Object.Instantiate(prefab, player.HandTransform.position, Quaternion.identity);
+            Object.Destroy(player.HeldItem.gameObject);
+            player.HeldItem = ingredient.GetComponent<Ingredient>();
+            ingredient.transform.parent = player.HandTransform;
+            ingredient.transform.rotation = player.HandTransform.rotation;
         }
     }
-
 }

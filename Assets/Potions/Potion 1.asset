@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Potion 1
   Recipe:
-  - Ingredient: {fileID: 11400000, guid: 261cd82713157174b83d52a9f6e7dc39, type: 2}
+  - Ingredient: 0
     Time: 10
     ErrorMargin: 5
-  - Ingredient: {fileID: 11400000, guid: 1cd6ed83715f2074b8356c7376bed8dd, type: 2}
+  - Ingredient: 1
     Time: 10
     ErrorMargin: 5

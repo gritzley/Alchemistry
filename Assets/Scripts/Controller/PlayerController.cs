@@ -38,6 +38,7 @@ public class PlayerController : Moveable
         // Init Hand
         HandTransform = transform.Find("Hand");
     }
+
     // Called every frame
     void Update()
     { 

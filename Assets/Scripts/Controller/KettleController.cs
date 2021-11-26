@@ -19,19 +19,21 @@ public class KettleController : MonoBehaviour, IClickable
         }
 
         // if Tthe player is holding an ingredient
-        if (player.HeldItem != null && player.HeldItem is IngredientContainer)
+        if (player.HeldItem != null && player.HeldItem is Ingredient)
         {
             // If the kettle is not already cooking, start now
             if (!cooking) StartCoroutine(Cooking());
 
             // Get the ingredient from the container
-            Ingredient ingredient = (player.HeldItem as IngredientContainer).Ingredient;
+            Ingredient ingredient = (player.HeldItem as Ingredient);
             // Add the ingredient to the pot
             NewIngredient = ingredient;
+
             // if the ingredient is used up, destroy it
-            if (ingredient) Destroy(player.HeldItem.gameObject);
-            // remove player reference to item
-            player.HeldItem = null;
+            if (ingredient.DestroyOnUse)
+            {
+                player.HeldItem = null;
+            }
         }
     }
 
@@ -61,7 +63,7 @@ public class KettleController : MonoBehaviour, IClickable
                 // Create a new step
                 Potion.Step step = new Potion.Step();
                 // Set step ingredient
-                step.Ingredient = NewIngredient;
+                step.Ingredient = NewIngredient.type;
 
                 // If this is not the first step, set the previous steps cooking time
                 if (Steps.Count > 0)
@@ -77,6 +79,12 @@ public class KettleController : MonoBehaviour, IClickable
 
                 // reset timer
                 time = 0;
+
+                // if the ingredient is used up, destroy it
+                if (NewIngredient.DestroyOnUse)
+                {
+                    Destroy(NewIngredient.gameObject);
+                }
 
                 // Set new ingredient to NULL again
                 NewIngredient = null;

@@ -15,7 +15,7 @@ public class Potion : ScriptableObject
     [System.Serializable] public struct Step 
     {
         // The ingredient to be added
-        public Ingredient Ingredient;
+        public Ingredient.Type Ingredient;
         // The time it needs to cook before the next step
         public float Time;
 
