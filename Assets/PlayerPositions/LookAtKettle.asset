@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2696721b595797f4f8f6d54e1cca6db1, type: 3}
-  m_Name: StartPos
+  m_Name: LookAtKettle
   m_EditorClassIdentifier: 
-  North: {fileID: 11400000, guid: 589b3b6cd0397be42b098d33c89f156f, type: 2}
-  East: {fileID: 11400000, guid: bbd3973a49b4be14f80270c0b24f110f, type: 2}
+  North: {fileID: 0}
+  East: {fileID: 0}
   South: {fileID: 0}
-  West: {fileID: 0}
-  Position: {x: 0, y: 2, z: -2}
-  Pitch: 0
-  TurnDisabled: 0
+  West: {fileID: 11400000, guid: 60f9aeafe2bec9b47b741f9768c3faf2, type: 2}
+  Position: {x: 2.5, y: 2, z: -2}
+  Pitch: 60
+  TurnDisabled: 1
