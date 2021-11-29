@@ -18,6 +18,6 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 0}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 266, y: 188}
+  EditorPos: {x: 138, y: 156}
   Title: Quest 1
   Lines: []

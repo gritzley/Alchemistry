@@ -10,40 +10,22 @@ public class QuestNode : Node
     public Quest Quest;
 
     // Actions for showing this quests dialogue and for OnDragEnd
-    private Action<QuestNode> ShowDialogue;
+    private Action<QuestNode> OnClickShowDialogue;
     private Action<QuestNode> DragEnd;
 
-    // A list of connectionPoints for the links
-    public List<ConnectionPoint> linkOutPoints;
-
     // outpoints for preceding and succeding lines
-    public ConnectionPoint outPointSucceding;
-    public ConnectionPoint outPointPreceding;
-
-    private float currentHeight
-    {
-        get { return 25 * (linkOutPoints.Count + 1) + 25; }
-    }
+    public ConnectionPoint outPointPreceding { get { return outPoints[0]; } }
+    public ConnectionPoint outPointSucceding { get { return outPoints[1]; } }
 
     // Constructor
-    public QuestNode (Quest quest, NodeData nodeData, Action<QuestNode> showDialogue, Action<QuestNode> dragEnd)
-    :base(quest.EditorPos, 100, 75, nodeData)
+    public QuestNode (Quest quest, NodeData nodeData, Action<QuestNode> onClickShowDialogue, Action<QuestNode> dragEnd)
+    :base(quest.EditorPos, 100, nodeData)
     {
         // Set variables
         Quest = quest;
-        ShowDialogue = showDialogue;
+        OnClickShowDialogue = onClickShowDialogue;
         DragEnd = dragEnd;
-
-        // Fill linkOutPoints with links
-        linkOutPoints = new List<ConnectionPoint>();
-        foreach (Quest.Link link in Quest.Links)
-        {
-            linkOutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, currentHeight));
-        }
-
-        // Set the preceding and succeding out points
-        outPointPreceding = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 50);
-        outPointSucceding = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 75);
+        SetOutNodeCount(Quest.Links.Count);
     }
 
     /// <summary>
@@ -69,7 +51,7 @@ public class QuestNode : Node
     /// </summary>
     public override void OnDoubleclick()
     {
-        ShowDialogue(this);
+        OnClickShowDialogue(this);
     }
 
     /// <summary>
@@ -77,31 +59,7 @@ public class QuestNode : Node
     /// </summary>
     public override void Draw()
     {
-        // Draw Nodes
-        switch (DialogueEditor.Instance.State)
-        {
-            case DialogueEditor.WindowState.DialogueView:
-                // In DialogueView, this has a fixed height and number of outputs
-                // Also there is no in point
-                rect.height = 100;
-                outPointPreceding.Draw();
-                outPointSucceding.Draw();
-                break;
-
-            case DialogueEditor.WindowState.QuestView:
-                // In QuestView, the height and number of outpoints depends on the number of links
-                rect.height = currentHeight;
-                inPoint.Draw();
-                foreach (ConnectionPoint point in linkOutPoints)
-                {
-                    point.Draw();
-                }
-                break;
-        }
-
-        // Draw own box
-        GUI.Box(rect, "", style);
-
+        base.Draw();
 
         // Create a label with the boxes title
         GUIStyle labelStyle = new GUIStyle(GUI.skin.label);
@@ -126,7 +84,7 @@ public class QuestNode : Node
                 labelStyle.padding.top += 25;
                 GUI.Label(rect, "Succeeding Dialogue", labelStyle);
 
-                rect.width = 140;
+                rect.width = 150;
                 break;
 
             case DialogueEditor.WindowState.QuestView:
@@ -137,6 +95,7 @@ public class QuestNode : Node
                     GUI.Label(rect, link.Potion.Name, labelStyle);
 
                     // Increase label width if neccessary
+                    rect.width = 100;
                     size = labelStyle.CalcSize( new GUIContent( link.Potion.Name ) );
                     rect.width = Mathf.Max(rect.width, size.x + 20);
                 }
@@ -153,16 +112,8 @@ public class QuestNode : Node
     {
         if (DialogueEditor.Instance.State == DialogueEditor.WindowState.QuestView)
         {
-            menu.AddItem(new GUIContent("Open Dialogue"), false, OnClickShowDialogue);
+            menu.AddItem(new GUIContent("Open Dialogue"), false, () => { OnClickShowDialogue(this); });
         }
         base.FillContextMenu(menu);
-    }
-
-    /// <summary>
-    /// Gets called when clicking on the show dialogue option in the context menu
-    /// </summary>
-    private void OnClickShowDialogue()
-    {
-        ShowDialogue(this);
     }
 }

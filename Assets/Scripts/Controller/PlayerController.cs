@@ -77,16 +77,15 @@ public class PlayerController : Moveable
             // Handle Mouseclick Event
             if (Input.GetMouseButtonDown(0))
             {
-                // Get a ray from the camera through the cursor
+                // Perform the raycast and store the result in hit. If a clickable was hit, handle the hit
                 Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
-                // Initialize a raycast hit
                 RaycastHit hit;
-                // Perform the raycast and store the result in hit. If anything was hit, handle the hit
                 if (Physics.Raycast(ray, out hit))
                 {
                     hit.collider.gameObject.GetComponent<IClickable>()?.OnClick(this);
                 }
             }
+
         }
     }
 
@@ -98,6 +97,8 @@ public class PlayerController : Moveable
     {
         // Pitch cardinal direction by the amount from new pos
         Vector3 targetDirection = Vector3.Normalize(Quaternion.Euler(newPos.Pitch, 0, 0) * cardinalDirection);
+
+        Debug.Log(transform.forward);
 
         // Move to position
         StartCoroutine(MoveTowards(newPos.Position));
@@ -115,7 +116,7 @@ public class PlayerController : Moveable
     void TurnCorner (float dir)
     {
         // Normalize the direction
-        dir /= Mathf.Abs(dir);
+        dir = Mathf.Sign(dir);
         
         // Set the target rotation to 90 degrees in the specified direction around the y axis
         cardinalDirection = Quaternion.Euler(0, dir * 90, 0) * cardinalDirection;

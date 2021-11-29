@@ -2,7 +2,19 @@ fileFormatVersion: 2
 guid: 7b3e57875a548a14a88678f7c2d6949e
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 5123049292739782464
+    second: Kettle|HangerAction
+  - first:
+      74: 533138689866658656
+    second: Kettle|KettleAction
+  - first:
+      74: -7189781220581170526
+    second: Hanger|HangerAction
+  - first:
+      74: 4688507509440173221
+    second: Hanger|KettleAction
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,10 +54,10 @@ ModelImporter:
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
-    importLights: 1
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -70,8 +82,8 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    blendShapeNormalImportMode: 0
+    normalSmoothingSource: 2
   referencedClips: []
   importAnimation: 1
   humanDescription:

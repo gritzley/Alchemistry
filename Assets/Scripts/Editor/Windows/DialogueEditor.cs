@@ -77,31 +77,8 @@ public class DialogueEditor : EditorWindow
         // Instantiate the Editor
         Instance = this;
 
-        // Set all the styles
-        nodeStyle = new GUIStyle();
-        nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
-        nodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-        selectedNodeStyle = new GUIStyle();
-        selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
-        selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-        inPointStyle = new GUIStyle();
-        inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left.png") as Texture2D;
-        inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left on.png") as Texture2D;
-        inPointStyle.border = new RectOffset(4, 4, 12, 12);
-
-        outPointStyle = new GUIStyle();
-        outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
-        outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
-        outPointStyle.border = new RectOffset(4, 4, 12, 12);
-
         // Initialize default node data
         defaultNodeData = new NodeData();
-        defaultNodeData.nodeStyle = nodeStyle;
-        defaultNodeData.selectedNodeStyle = selectedNodeStyle;
-        defaultNodeData.inPointStyle = inPointStyle;
-        defaultNodeData.outPointStyle = outPointStyle;
         defaultNodeData.OnClickInPoint = OnClickInPoint;
         defaultNodeData.OnClickOutPoint = OnClickOutPoint;
         defaultNodeData.OnClickRemoveNode = RemoveNode;
@@ -159,7 +136,7 @@ public class DialogueEditor : EditorWindow
                 {
                     // Create a connection. It's not hard
                     selectedInPoint = GetNodeByQuest(next).inPoint;
-                    selectedOutPoint = node.linkOutPoints[i];
+                    selectedOutPoint = node.outPoints[i];
                     CreateConnection();
                 }
             }
@@ -195,6 +172,7 @@ public class DialogueEditor : EditorWindow
 
         // Add the QuestNode with a connection to the first DialogueLineNode
         nodes.Add(questNode);
+        questNode.SetOutNodeCount(2);
         if (questNode.Quest.PrecedingStartLine != null)
         {
             selectedOutPoint = questNode.outPointPreceding;
@@ -239,6 +217,8 @@ public class DialogueEditor : EditorWindow
     /// </summary>
     private void DialogueToQuestView()
     {
+        currentQuestNode.SetOutNodeCount(currentQuestNode.Quest.Links.Count);
+        
         // Throw an error if the editor is not in dialogue view
         if (State != WindowState.DialogueView)
         {
@@ -650,7 +630,7 @@ public class DialogueEditor : EditorWindow
             List<Connection> connectionsToRemove = new List<Connection>();
             for (int i = 0; i < connections.Count; i++)
             {
-                if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
+                if (connections[i].inPoint.node == node || connections[i].outPoint.node == node)
                 {
                     connectionsToRemove.Add(connections[i]);
                 }
@@ -777,7 +757,7 @@ public class DialogueEditor : EditorWindow
             // Get a reference to the outNode
             Quest quest = (outNode as QuestNode).Quest;
             // Determine the index of the connection point the connection is coming from
-            int index = (outNode as QuestNode).linkOutPoints.IndexOf(connection.outPoint);
+            int index = (outNode as QuestNode).outPoints.IndexOf(connection.outPoint);
             
             // Set the link at the index to point to null
             Quest.Link link = quest.Links[index];
@@ -854,7 +834,7 @@ public class DialogueEditor : EditorWindow
             QuestNode questNode = outNode as QuestNode;
 
             // Get the index of the selected Connection Point of the quest Node 
-            int index = questNode.linkOutPoints.IndexOf(selectedOutPoint);
+            int index = questNode.outPoints.IndexOf(selectedOutPoint);
             
             // Set the link at the index to point to the correct next quest
             Quest.Link link = questNode.Quest.Links[index];

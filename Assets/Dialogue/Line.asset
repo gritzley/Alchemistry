@@ -16,7 +16,7 @@ MonoBehaviour:
   Text: 
   AnswerLeft: 
   AnswerRight: 
-  HasAnswers: 1
+  HasAnswers: 0
   NextLeft: {fileID: 0}
   NextRight: {fileID: 0}
-  EditorPos: {x: 268, y: 36}
+  EditorPos: {x: 269, y: 0}

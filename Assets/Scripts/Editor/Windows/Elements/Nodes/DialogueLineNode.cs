@@ -10,28 +10,21 @@ public class DialogueLineNode : Node
     // Reference to parent node
     private QuestNode parent;
 
-    // Create a second out point for the left side answer
-    public ConnectionPoint outPointLeft;
-    // Create a reference for the right side answer that really just points to the normal out Point
-    public ConnectionPoint outPointRight
-    {
-        get { return base.outPoint; }
-    }
+    // easier refrences to the out points
+    public ConnectionPoint outPointLeft { get { return base.outPoints[1]; } }
+    public ConnectionPoint outPointRight { get { return base.outPoints[0]; } }
+
     /// <summary>
     /// Create a new DialogueLineNode from a line and a set of node data
     /// </summary>
     /// <param name="line">The associated DialogueLine</param>
     /// <param name="nodeData">A NodeData Object to use for the node</param>
     public DialogueLineNode(QuestNode parent, DialogueLine line, NodeData nodeData)
-    :base(line.EditorPos + parent.rect.position, 100, 50, nodeData)
+    :base(line.EditorPos + parent.rect.position, 100, nodeData)
     {
-        // Save line ref
         Line = line;
-        // Save parent ref
         this.parent = parent;
-        // Create the second out point
-        outPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 75);
-        outPointRight.yPos = 50;
+        SetOutNodeCount(2);
     }
 
     /// <summary>
@@ -61,17 +54,11 @@ public class DialogueLineNode : Node
     public override void Draw()
     {
         // Adjust the look of the node depending on wheter it has answers
-        if (Line.HasAnswers)
-        {
-            rect.height = 100;
-            outPointLeft.Draw();
-        }
-        else
-        {
-            rect.height = 50;
-        }
+        SetOutNodeCount(Line.HasAnswers ? 2 : 1);
         // draw the base
         base.Draw();
+
+        // Draw Node Content
         GUIStyle labelStyle = new GUIStyle(GUI.skin.label);
         labelStyle.alignment = TextAnchor.UpperCenter;
         labelStyle.padding = new RectOffset(0, 0, 10, 0);

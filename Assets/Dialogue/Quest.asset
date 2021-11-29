@@ -18,7 +18,7 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 536, y: 171}
+  EditorPos: {x: 372, y: 159}
   Title: Quest
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}

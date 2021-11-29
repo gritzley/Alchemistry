@@ -1,13 +1,11 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public struct NodeData
 {
-    public GUIStyle nodeStyle;
-    public GUIStyle selectedNodeStyle;
-    public GUIStyle inPointStyle;
-    public GUIStyle outPointStyle;
     public Action<ConnectionPoint> OnClickInPoint;
     public Action<ConnectionPoint> OnClickOutPoint;
     public Action<Node> OnClickRemoveNode;
@@ -22,32 +20,71 @@ public class Node
     public bool isDragged;
     public bool isSelected;
 
-    // Refs for connection points
+    // References for connection points
     public ConnectionPoint inPoint;
-    public ConnectionPoint outPoint;
+    public List<ConnectionPoint> outPoints;
 
     // Styles
-    public GUIStyle style;
+    public GUIStyle inPointStyle;
+    public GUIStyle outPointStyle;
     public GUIStyle defaultNodeStyle;
-    public GUIStyle selectedNodeStyle; 
+    public GUIStyle selectedNodeStyle;
+    public GUIStyle style;
 
     // On Remove method
-    public Action<Node> OnRemoveNode;
+    public Action<ConnectionPoint> OnClickInPoint;
+    public Action<ConnectionPoint> OnClickOutPoint;
+    public Action<Node> OnClickRemoveNode;
 
     // Saves the last time this was clicked to detect doubleclicks
     private double lastClicked;
+    private float currentHeight { get { return 50 + outPoints.Count * 25; } }
 
     // Create a new Node
-    public Node(Vector2 position, float width, float height, NodeData nodeData)
+    public Node(Vector2 position, float width, NodeData nodeData)
     {
-        // Set references
-        rect = new Rect(position.x, position.y, width, height);
-        style = nodeData.nodeStyle;
-        inPoint = new ConnectionPoint(this, ConnectionPointType.In, nodeData.inPointStyle, nodeData.OnClickInPoint, 25);
-        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, nodeData.outPointStyle, nodeData.OnClickOutPoint, 25);
-        defaultNodeStyle = nodeData.nodeStyle;
-        selectedNodeStyle = nodeData.selectedNodeStyle;
-        OnRemoveNode = nodeData.OnClickRemoveNode;
+        // Set all the styles
+        defaultNodeStyle = new GUIStyle();
+        defaultNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
+        defaultNodeStyle.border = new RectOffset(12, 12, 12, 12);
+
+        selectedNodeStyle = new GUIStyle();
+        selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
+        selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
+
+        inPointStyle = new GUIStyle();
+        inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left.png") as Texture2D;
+        inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left on.png") as Texture2D;
+        inPointStyle.border = new RectOffset(4, 4, 12, 12);
+
+        outPointStyle = new GUIStyle();
+        outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
+        outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
+        outPointStyle.border = new RectOffset(4, 4, 12, 12);
+
+        style = defaultNodeStyle;
+
+        // Set Actions
+        OnClickRemoveNode = nodeData.OnClickRemoveNode;
+        OnClickOutPoint = nodeData.OnClickOutPoint;
+        OnClickInPoint = nodeData.OnClickInPoint;
+
+        inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, 50);
+        SetOutNodeCount(1);
+
+        rect = new Rect(position.x, position.y, width, 0);
+    }
+
+    // Set the number of out nodes
+    public void SetOutNodeCount (int count)
+    {
+        outPoints = new List<ConnectionPoint>();
+        for (int i = 0; i < count; i++)
+        {
+            ConnectionPoint outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, currentHeight);
+            outPoints.Add(outPoint);
+        }
+        rect.height = currentHeight;
     }
 
     // Move the Node to a position;
@@ -59,9 +96,12 @@ public class Node
     // Draw window
     public virtual void Draw()
     {
-        // Draw children
+        // Draw ConnectionPoints
         inPoint.Draw();
-        outPoint.Draw();
+        foreach (ConnectionPoint outPoint in outPoints)
+        {
+            outPoint.Draw();
+        }
         // Draw own box
         GUI.Box(rect, "", style);
     }
@@ -72,11 +112,10 @@ public class Node
     {
         switch (e.type)
         {
-
             case EventType.MouseDown:
+                // on leftclick, make node selected and dragged
                 if (e.button == 0)
                 {
-                    // on leftclick, make node selected and dragged
                     if (rect.Contains(e.mousePosition))
                     {
                         isDragged = true;
@@ -102,7 +141,7 @@ public class Node
                 }
 
                 // on node rightclicks
-                if (e.button == 1 && isSelected && rect.Contains(e.mousePosition))
+                if (e.button == 1 && rect.Contains(e.mousePosition))
                 {
                     GenericMenu genericMenu = new GenericMenu();
                     FillContextMenu(genericMenu);
@@ -143,15 +182,6 @@ public class Node
     public virtual void FillContextMenu(GenericMenu menu)
     {
         // Just a remove button
-        menu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
-    }
-
-    // Remove node method
-    private void OnClickRemoveNode()
-    {
-        if (OnRemoveNode != null)
-        {
-            OnRemoveNode(this);
-        }
+        menu.AddItem(new GUIContent("Remove node"), false, () => { OnClickRemoveNode(this); });
     }
 }

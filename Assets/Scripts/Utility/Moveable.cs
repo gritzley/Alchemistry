@@ -91,7 +91,7 @@ public class Moveable : MonoBehaviour
     /// Coroutine that moves the player to a target position in world space
     /// </summary>
     /// <param name="targetPosition">The positiont the player is supposed to move to</param>
-    public IEnumerator MoveTowards(Vector3 targetPosition)
+    public virtual IEnumerator MoveTowards(Vector3 targetPosition)
     {
         if (!movementDisabled)
         {
