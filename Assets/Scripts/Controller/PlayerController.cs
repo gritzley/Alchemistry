@@ -54,8 +54,6 @@ public class PlayerController : Moveable
                     TurnCorner(Input.GetAxisRaw("Turn"));   
                 }
             }
-            
-
 
             // On Move Buttons (W and S)
             if (Input.GetButtonDown("Move"))
@@ -96,9 +94,9 @@ public class PlayerController : Moveable
     void MoveToPos (PlayerPosition newPos)
     {
         // Pitch cardinal direction by the amount from new pos
-        Vector3 targetDirection = Vector3.Normalize(Quaternion.Euler(newPos.Pitch, 0, 0) * cardinalDirection);
-
-        Debug.Log(transform.forward);
+        float pitchLat = newPos.Pitch * Mathf.Abs(cardinalDirection.z);
+        float pitchLon = newPos.Pitch * -Mathf.Abs(cardinalDirection.x);
+        Vector3 targetDirection = Vector3.Normalize(Quaternion.Euler(pitchLat, 0, pitchLon) * cardinalDirection);
 
         // Move to position
         StartCoroutine(MoveTowards(newPos.Position));
