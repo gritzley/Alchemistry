@@ -1,0 +1,4164 @@
+fileFormatVersion: 2
+guid: b8d40a16fd3e4f04d8476fda8fd6389b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1675913918456740320
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_0
+  - first:
+      213: 5313778440564295415
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_1
+  - first:
+      213: 273077713198316783
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_2
+  - first:
+      213: -5703299085103792518
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_3
+  - first:
+      213: 5931036261602340804
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_4
+  - first:
+      213: 5432371693175715550
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_5
+  - first:
+      213: -839260551902404035
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_6
+  - first:
+      213: 2553295477909306763
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_7
+  - first:
+      213: -4312155398448334144
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_8
+  - first:
+      213: -5068074447813453195
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_9
+  - first:
+      213: 5750656062958917900
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_10
+  - first:
+      213: 3725020482872504940
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_11
+  - first:
+      213: 8636883301119394737
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_12
+  - first:
+      213: -7039803174915770018
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_13
+  - first:
+      213: -3018017995918673885
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_14
+  - first:
+      213: -6135403437345001768
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_15
+  - first:
+      213: 4235810747099368909
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_16
+  - first:
+      213: 4271727698425592020
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_17
+  - first:
+      213: 3634935745803512783
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_18
+  - first:
+      213: -3969400536850698560
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_19
+  - first:
+      213: -1584430857692280299
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_20
+  - first:
+      213: 5941381182810585581
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_21
+  - first:
+      213: -457840048884442227
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_22
+  - first:
+      213: -1984305437792992503
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_23
+  - first:
+      213: -2780568591087223857
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_24
+  - first:
+      213: 4617927005409897657
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_25
+  - first:
+      213: -211036222021250664
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_26
+  - first:
+      213: -4356745442983854758
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_27
+  - first:
+      213: 4488756360680970167
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_28
+  - first:
+      213: -4908448236883818301
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_29
+  - first:
+      213: -7922314932367581775
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_30
+  - first:
+      213: -3380405501651943446
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_31
+  - first:
+      213: 4318724824906129185
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_32
+  - first:
+      213: 6291613968990918354
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_33
+  - first:
+      213: 260492831772350851
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_34
+  - first:
+      213: 1755504839860960251
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_35
+  - first:
+      213: -6987368257639792701
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_36
+  - first:
+      213: -156167382483974698
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_37
+  - first:
+      213: 8199475499417966174
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_38
+  - first:
+      213: -4287886964022674921
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_39
+  - first:
+      213: -630080733631160818
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_40
+  - first:
+      213: 7855615865731272153
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_41
+  - first:
+      213: -7428793536056557323
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_42
+  - first:
+      213: 3071429487337317494
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_43
+  - first:
+      213: 5443692464446565347
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_44
+  - first:
+      213: -2641389180769212610
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_45
+  - first:
+      213: 1490756952638233814
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_46
+  - first:
+      213: -7392812678724690278
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_47
+  - first:
+      213: 6823455448580979509
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_48
+  - first:
+      213: -6770311334479867758
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_49
+  - first:
+      213: -3542389914475958613
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_50
+  - first:
+      213: -5917074870483300345
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_51
+  - first:
+      213: 1718833377384664942
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_52
+  - first:
+      213: -1405691351846173182
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_53
+  - first:
+      213: 9110881031611926520
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_54
+  - first:
+      213: -2824472344322965176
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_55
+  - first:
+      213: 835618861922768512
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_56
+  - first:
+      213: 2743338640531829191
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_57
+  - first:
+      213: -5488231158033352448
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_58
+  - first:
+      213: -2870955217069904216
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_59
+  - first:
+      213: 2410632173153857353
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_60
+  - first:
+      213: -3901638387849400067
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_61
+  - first:
+      213: 3562695632543440918
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_62
+  - first:
+      213: -5250217806350339303
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_63
+  - first:
+      213: 1719997956640706501
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_64
+  - first:
+      213: -8942211882962835725
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_65
+  - first:
+      213: 5821874940182247516
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_66
+  - first:
+      213: 7043576854183213426
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_67
+  - first:
+      213: -3086511070501710634
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_68
+  - first:
+      213: -8488623183379396931
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_69
+  - first:
+      213: -6427029309076696658
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_70
+  - first:
+      213: 4637241410938956563
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_71
+  - first:
+      213: 875120386257055327
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_72
+  - first:
+      213: -2828019309881867937
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_73
+  - first:
+      213: -2247812866656578746
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_74
+  - first:
+      213: -1738908140364473138
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_75
+  - first:
+      213: -6211050915831957632
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_76
+  - first:
+      213: -6625635167241326872
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_77
+  - first:
+      213: 1299108818391048780
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_78
+  - first:
+      213: 8467067616206736597
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_79
+  - first:
+      213: -666941367891969779
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_80
+  - first:
+      213: 4851944597060290946
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_81
+  - first:
+      213: 7261016916130321777
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_82
+  - first:
+      213: -535707514797737066
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_83
+  - first:
+      213: 8046346806932285534
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_84
+  - first:
+      213: 3764295773347979990
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_85
+  - first:
+      213: 2265746655577215548
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_86
+  - first:
+      213: 740570478286252433
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_87
+  - first:
+      213: 5133566060903871099
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_88
+  - first:
+      213: 4628232966415226482
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_89
+  - first:
+      213: 5490132053123130106
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_90
+  - first:
+      213: -9128943454471357409
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_91
+  - first:
+      213: 2090811562845352918
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_92
+  - first:
+      213: -1570484496807998211
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_93
+  - first:
+      213: -1877631920047631279
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_94
+  - first:
+      213: 5158527790746191887
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_95
+  - first:
+      213: 709402891348386640
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_96
+  - first:
+      213: 6599159077388475879
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_97
+  - first:
+      213: -1620340939683901710
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_98
+  - first:
+      213: 7061436083989234401
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_99
+  - first:
+      213: -4587342062780963058
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_100
+  - first:
+      213: -924802585560786674
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_101
+  - first:
+      213: 6467897334914603335
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_102
+  - first:
+      213: -5128836570929895384
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_103
+  - first:
+      213: 7424199214291118331
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_104
+  - first:
+      213: -2643996800754364632
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_105
+  - first:
+      213: 8992634200255087328
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_106
+  - first:
+      213: 1926641862262611304
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_107
+  - first:
+      213: 7570156438619138896
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_108
+  - first:
+      213: 1519498862731951438
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_109
+  - first:
+      213: 890355905522722975
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_110
+  - first:
+      213: -7624370304397480430
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_111
+  - first:
+      213: 4017263544202056850
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_112
+  - first:
+      213: 2645587153094092915
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_113
+  - first:
+      213: 784202671563265065
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_114
+  - first:
+      213: -5808839150438612487
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_115
+  - first:
+      213: -1158590305429532410
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_116
+  - first:
+      213: -2255612243488870626
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_117
+  - first:
+      213: -485111029362373117
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_118
+  - first:
+      213: 2917961502703160354
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_119
+  - first:
+      213: -6399356944183074044
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_120
+  - first:
+      213: 8774676937382490792
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_121
+  - first:
+      213: -8446618689337167662
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_122
+  - first:
+      213: 1499729107797971253
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_123
+  - first:
+      213: 3841804111764248682
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_124
+  - first:
+      213: -7782898272433633776
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_125
+  - first:
+      213: -8347071301754351492
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_126
+  - first:
+      213: 6226092053087461064
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_127
+  - first:
+      213: -533103723407167422
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_128
+  - first:
+      213: -8825383172554141763
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_129
+  - first:
+      213: 163405077268330862
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_130
+  - first:
+      213: 8280120722383200291
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_131
+  - first:
+      213: 1184385457814111824
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_132
+  - first:
+      213: -1808148472678163888
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_133
+  - first:
+      213: 5810896971096306016
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_134
+  - first:
+      213: 8548502019749381068
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_135
+  - first:
+      213: -2099372811503902796
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_136
+  - first:
+      213: -743386369990410932
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_137
+  - first:
+      213: -3597569116032922877
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_138
+  - first:
+      213: -3034775690234587059
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_139
+  - first:
+      213: -6262001223068332855
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_140
+  - first:
+      213: -6924936310578906250
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_141
+  - first:
+      213: 8132917171312451918
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_142
+  - first:
+      213: 1849987860386123120
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_143
+  - first:
+      213: -6713965324291645864
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_144
+  - first:
+      213: -4717316888900736641
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_145
+  - first:
+      213: 5366534912787510108
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_146
+  - first:
+      213: -701382385906174134
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_147
+  - first:
+      213: -5305372332246163293
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_148
+  - first:
+      213: 5071094751719646681
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_149
+  - first:
+      213: 4568787012431875491
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_150
+  - first:
+      213: 1596860737707633688
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_151
+  - first:
+      213: 8830641415933595462
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_152
+  - first:
+      213: -5034789747341090786
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_153
+  - first:
+      213: -1259054805058566387
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_154
+  - first:
+      213: 484947935005225963
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_155
+  - first:
+      213: 8754357842811604206
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_156
+  - first:
+      213: -9166201033189851630
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_157
+  - first:
+      213: -2375233744488175449
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_158
+  - first:
+      213: 5356042123472968833
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_159
+  - first:
+      213: 8786987927888520063
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_160
+  - first:
+      213: -24206292754368732
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_161
+  - first:
+      213: 7525766939264945194
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_162
+  - first:
+      213: 7913073576280709892
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_163
+  - first:
+      213: 3510945682591996975
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_164
+  - first:
+      213: -1725239303056336819
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_165
+  - first:
+      213: -8230989594246572110
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_166
+  - first:
+      213: -2546091311991749948
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_167
+  - first:
+      213: -237772453266924346
+    second: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_168
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e93fb754da024710800000000000000
+      internalID: 1675913918456740320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6c6fc86555eb940800000000000000
+      internalID: 5313778440564295415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecf24bbbba2ac300800000000000000
+      internalID: 273077713198316783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ef39013bfc9d0b0800000000000000
+      internalID: -5703299085103792518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfa4c25e064f4250800000000000000
+      internalID: 5931036261602340804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_5
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed630a3e549a36b40800000000000000
+      internalID: 5432371693175715550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_6
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32ebd189f85a54f0800000000000000
+      internalID: -839260551902404035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_7
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d356f85b02f6320800000000000000
+      internalID: 2553295477909306763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca343b03852824c0800000000000000
+      internalID: -4312155398448334144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_9
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a58da34259aa9b0800000000000000
+      internalID: -5068074447813453195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_10
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09dc12983f6ecf40800000000000000
+      internalID: 5750656062958917900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_11
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c627ba6a46ee1b330800000000000000
+      internalID: 3725020482872504940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_12
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 830.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b389b92a9f5cd770800000000000000
+      internalID: 8636883301119394737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e597a769f489d4e90800000000000000
+      internalID: -7039803174915770018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328f7837f98dd16d0800000000000000
+      internalID: -3018017995918673885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de275b941baadaa0800000000000000
+      internalID: -6135403437345001768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdc3a4ae6f98ca30800000000000000
+      internalID: 4235810747099368909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_17
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8bad985b9384b30800000000000000
+      internalID: 4271727698425592020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_18
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbecf55dc2e17230800000000000000
+      internalID: 3634935745803512783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_19
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cee4c51e3bd9e8c0800000000000000
+      internalID: -3969400536850698560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_20
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a85149788f20ae0800000000000000
+      internalID: -1584430857692280299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_21
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de97d9cf4b6047250800000000000000
+      internalID: 5941381182810585581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_22
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b9b4ab6ec65a9f0800000000000000
+      internalID: -457840048884442227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_23
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9030976b7b45674e0800000000000000
+      internalID: -1984305437792992503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_24
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb33a6399f6969d0800000000000000
+      internalID: -2780568591087223857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_25
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 761.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bce324052c261040800000000000000
+      internalID: 4617927005409897657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891dea79caf321df0800000000000000
+      internalID: -211036222021250664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_27
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d35264a1bb983c0800000000000000
+      internalID: -4356745442983854758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_28
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b71aa9a0244b4e30800000000000000
+      internalID: 4488756360680970167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_29
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8c52aa550b1ebb0800000000000000
+      internalID: -4908448236883818301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_30
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd15711b884e0290800000000000000
+      internalID: -7922314932367581775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_31
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef724d3b136611d0800000000000000
+      internalID: -3380405501651943446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_32
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fd03fb8513feb30800000000000000
+      internalID: 4318724824906129185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_33
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6d695029d405750800000000000000
+      internalID: 6291613968990918354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_34
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3899350b9d47d9300800000000000000
+      internalID: 260492831772350851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_35
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb346dc95ecc5810800000000000000
+      internalID: 1755504839860960251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_36
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf3a802791e70f90800000000000000
+      internalID: -6987368257639792701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_37
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d54a81d79e25ddf0800000000000000
+      internalID: -156167382483974698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_38
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 692.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56935726836ac170800000000000000
+      internalID: 8199475499417966174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a7660468d5e74c0800000000000000
+      internalID: -4287886964022674921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 624
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ed81c39e08147f0800000000000000
+      internalID: -630080733631160818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_41
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 624
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddc5d05201c40d60800000000000000
+      internalID: 7855615865731272153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_42
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 625
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f081ad63af97e890800000000000000
+      internalID: -7428793536056557323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_43
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674a66978d8ef9a20800000000000000
+      internalID: 3071429487337317494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_44
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebeec95471eb8b40800000000000000
+      internalID: 5443692464446565347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_45
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37e0b6e886e75bd0800000000000000
+      internalID: -2641389180769212610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_46
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc1270dc8b30b410800000000000000
+      internalID: 1490756952638233814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_47
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e5c999904776990800000000000000
+      internalID: -7392812678724690278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_48
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b7f590498c1be50800000000000000
+      internalID: 6823455448580979509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_49
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290d68146b50b02a0800000000000000
+      internalID: -6770311334479867758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_50
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeebb32427e6dec0800000000000000
+      internalID: -3542389914475958613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_51
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 623.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700d37b51c352eda0800000000000000
+      internalID: -5917074870483300345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f091799d58ad710800000000000000
+      internalID: 1718833377384664942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_53
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206ce55c92bfd7ce0800000000000000
+      internalID: -1405691351846173182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7c218d60a507e70800000000000000
+      internalID: 9110881031611926520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_55
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84107b61e557dc8d0800000000000000
+      internalID: -2824472344322965176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_56
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086d5887de6b89b00800000000000000
+      internalID: 835618861922768512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_57
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1b08f65fb421620800000000000000
+      internalID: 2743338640531829191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_58
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009f034f6d2e5d3b0800000000000000
+      internalID: -5488231158033352448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_59
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae6e78e0715828d0800000000000000
+      internalID: -2870955217069904216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_60
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fa6fc7039447120800000000000000
+      internalID: 2410632173153857353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_61
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0753ade889ad9c0800000000000000
+      internalID: -3901638387849400067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_62
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61066944dcc317130800000000000000
+      internalID: 3562695632543440918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_63
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913be03d8ba7327b0800000000000000
+      internalID: -5250217806350339303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_64
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 554.7692
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf87f35709aed710800000000000000
+      internalID: 1719997956640706501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f629b99ba1e6e380800000000000000
+      internalID: -8942211882962835725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_66
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58bf4899647bc050800000000000000
+      internalID: 5821874940182247516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_67
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279f0c594dfcfb160800000000000000
+      internalID: 7043576854183213426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_68
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d45f6fc8828a25d0800000000000000
+      internalID: -3086511070501710634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_69
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6868a703a523a80800000000000000
+      internalID: -8488623183379396931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_70
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1957f25ea9ec6a0800000000000000
+      internalID: -6427029309076696658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_71
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b6fbc7e7aca5040800000000000000
+      internalID: 4637241410938956563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_72
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eed8eca5d052c00800000000000000
+      internalID: 875120386257055327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_73
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51cb80db6bd0c8d0800000000000000
+      internalID: -2828019309881867937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_74
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643d1617b1a2ec0e0800000000000000
+      internalID: -2247812866656578746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_75
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc5a8c62482ed7e0800000000000000
+      internalID: -1738908140364473138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_76
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087b8ff791aedc9a0800000000000000
+      internalID: -6211050915831957632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_77
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 485.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eeae356be30d04a0800000000000000
+      internalID: -6625635167241326872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42a6cc569c570210800000000000000
+      internalID: 1299108818391048780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_79
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc4731f221118570800000000000000
+      internalID: 8467067616206736597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_80
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0939c80c5c8eb6f0800000000000000
+      internalID: -666941367891969779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_81
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28987a187e1955340800000000000000
+      internalID: 4851944597060290946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_82
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175dc0a2a6054c460800000000000000
+      internalID: 7261016916130321777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_83
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b39f48ad8c098f0800000000000000
+      internalID: -535707514797737066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_84
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e582cce1acd5aaf60800000000000000
+      internalID: 8046346806932285534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_85
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d229efcf077d3430800000000000000
+      internalID: 3764295773347979990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_86
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3295bc249c817f10800000000000000
+      internalID: 2265746655577215548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_87
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199a4612de8074a00800000000000000
+      internalID: 740570478286252433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_88
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b723d2332271e3740800000000000000
+      internalID: 5133566060903871099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_89
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2769eec8c59ca3040800000000000000
+      internalID: 4628232966415226482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_90
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 416.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2e36ca30ed03c40800000000000000
+      internalID: 5490132053123130106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c7b9d9b4a7f4180800000000000000
+      internalID: -9128943454471357409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_92
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d33dafe90e040d10800000000000000
+      internalID: 2090811562845352918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_93
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc4082cba4843ae0800000000000000
+      internalID: -1570484496807998211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_94
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15450a287bf41f5e0800000000000000
+      internalID: -1877631920047631279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_95
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f084863d1b5c69740800000000000000
+      internalID: 5158527790746191887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_96
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053a47dcb2e48d900800000000000000
+      internalID: 709402891348386640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_97
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edd800973ce49b50800000000000000
+      internalID: 6599159077388475879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_98
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe4e1310846389e0800000000000000
+      internalID: -1620340939683901710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_99
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2cd4e84b24ff160800000000000000
+      internalID: 7061436083989234401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_100
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07abbcd2bc7650c0800000000000000
+      internalID: -4587342062780963058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_101
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e095940c2f07a23f0800000000000000
+      internalID: -924802585560786674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_102
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749d7439b5692c950800000000000000
+      internalID: 6467897334914603335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_103
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 347.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828e0beff46b2d8b0800000000000000
+      internalID: -5128836570929895384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf86e8da9dd080760800000000000000
+      internalID: 7424199214291118331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_105
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f44cf0be2ae4bd0800000000000000
+      internalID: -2643996800754364632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_106
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2cb3df8214ccc70800000000000000
+      internalID: 8992634200255087328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_107
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d5f81e09eccba10800000000000000
+      internalID: 1926641862262611304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_108
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ba70a2c299e0960800000000000000
+      internalID: 7570156438619138896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_109
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d7fbd3a28561510800000000000000
+      internalID: 1519498862731951438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_110
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f986a509afd2b5c00800000000000000
+      internalID: 890355905522722975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_111
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ee9529a9bc03690800000000000000
+      internalID: -7624370304397480430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_112
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2945a49b8ef20c730800000000000000
+      internalID: 4017263544202056850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_113
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378a282bf7307b420800000000000000
+      internalID: 2645587153094092915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_114
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924d076cc2c02ea00800000000000000
+      internalID: 784202671563265065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_115
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f189b8b19bd26fa0800000000000000
+      internalID: -5808839150438612487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_116
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 278.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60159a4714cdbefe0800000000000000
+      internalID: -1158590305429532410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fe2d38d9472b0e0800000000000000
+      internalID: -2255612243488870626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_118
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e4b3ac61a8449f0800000000000000
+      internalID: -485111029362373117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_119
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c03e4d68eae7820800000000000000
+      internalID: 2917961502703160354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_120
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403e907b3cae037a0800000000000000
+      internalID: -6399356944183074044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_121
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2fe7f2f2ae5c970800000000000000
+      internalID: 8774676937382490792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_122
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0f1ecdd0597ca80800000000000000
+      internalID: -8446618689337167662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_123
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5319c997dab10d410800000000000000
+      internalID: 1499729107797971253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_124
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68d7522c74d05530800000000000000
+      internalID: 3841804111764248682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_125
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016879cb1479df390800000000000000
+      internalID: -7782898272433633776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_126
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70131030ee392c80800000000000000
+      internalID: -8347071301754351492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_127
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce192b2cb5876650800000000000000
+      internalID: 6226092053087461064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_128
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240b0e1fcf80a98f0800000000000000
+      internalID: -533103723407167422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_129
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 209.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf433173c0f58580800000000000000
+      internalID: -8825383172554141763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69f2115d08844200800000000000000
+      internalID: 163405077268330862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_131
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32060035de5e8e270800000000000000
+      internalID: 8280120722383200291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_132
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056062a7c48cf6010800000000000000
+      internalID: 1184385457814111824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_133
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a5ad84b8a28e6e0800000000000000
+      internalID: -1808148472678163888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_134
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061b69cf10474a050800000000000000
+      internalID: 5810896971096306016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_135
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc30fd88b4162a670800000000000000
+      internalID: 8548502019749381068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_136
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf52370d878dd2e0800000000000000
+      internalID: -2099372811503902796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_137
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dbaddf806fea5f0800000000000000
+      internalID: -743386369990410932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_138
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b01ff13fdd21ec0800000000000000
+      internalID: -3597569116032922877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_139
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d489392b69f42e5d0800000000000000
+      internalID: -3034775690234587059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_140
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc43fba017e819a0800000000000000
+      internalID: -6262001223068332855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_141
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b7dbb8d1fa5ef90800000000000000
+      internalID: -6924936310578906250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_142
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 140.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41e0c7c31dedd070800000000000000
+      internalID: 8132917171312451918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d8919482a7ca910800000000000000
+      internalID: 1849987860386123120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_144
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e5e431c1433d2a0800000000000000
+      internalID: -6713965324291645864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_145
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79ee107849b88eb0800000000000000
+      internalID: -4717316888900736641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_146
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c537e6fe113c97a40800000000000000
+      internalID: 5366534912787510108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_147
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47b854af603446f0800000000000000
+      internalID: -701382385906174134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_148
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0284f09f78f56b0800000000000000
+      internalID: -5305372332246163293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_149
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5e8921fc5206640800000000000000
+      internalID: 5071094751719646681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_150
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad8b62d497976f30800000000000000
+      internalID: 4568787012431875491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_151
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ce4d26160392610800000000000000
+      internalID: 1596860737707633688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_152
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f039fb49dbc8a70800000000000000
+      internalID: 8830641415933595462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_153
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10a4f67665d02ab0800000000000000
+      internalID: -5034789747341090786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_154
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d074cb75350f68ee0800000000000000
+      internalID: -1259054805058566387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_155
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 71.76923
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3bb88d391eab600800000000000000
+      internalID: 484947935005225963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecc071531abd7970800000000000000
+      internalID: 8754357842811604206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_157
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e76e499bc1bc080800000000000000
+      internalID: -9166201033189851630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_158
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8e2417e79790fd0800000000000000
+      internalID: -2375233744488175449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_159
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c92ab0feb745a40800000000000000
+      internalID: 5356042123472968833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_160
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73e07707f6a1f970800000000000000
+      internalID: 8786987927888520063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_161
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427fb0741800aaff0800000000000000
+      internalID: -24206292754368732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_162
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c04457825e07860800000000000000
+      internalID: 7525766939264945194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_163
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bddbb0e72e0dd60800000000000000
+      internalID: 7913073576280709892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_164
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c569c1f7269b030800000000000000
+      internalID: 3510945682591996975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_165
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48d8cc9ef7be08e0800000000000000
+      internalID: -1725239303056336819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_166
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b71ffcd296a5cd80800000000000000
+      internalID: -8230989594246572110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_167
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2060701777aacd0800000000000000
+      internalID: -2546091311991749948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: png-clipart-sprite-open-source-unicode-typefaces-handwriting-font-text-font-angle-text_168
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 2.7692337
+        width: 69.23077
+        height: 69.23077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccd6a9a63343bcf0800000000000000
+      internalID: -237772453266924346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
