@@ -11,8 +11,8 @@ public class DialogueLineNode : Node
     private QuestNode parent;
 
     // easier refrences to the out points
-    public ConnectionPoint outPointLeft { get { return base.outPoints[1]; } }
     public ConnectionPoint outPointRight { get { return base.outPoints[0]; } }
+    public ConnectionPoint outPointLeft { get { return base.outPoints[1]; } }
 
     /// <summary>
     /// Create a new DialogueLineNode from a line and a set of node data
@@ -24,7 +24,7 @@ public class DialogueLineNode : Node
     {
         Line = line;
         this.parent = parent;
-        SetOutNodeCount(2);
+        SetOutPointCount(2);
     }
 
     /// <summary>
@@ -53,8 +53,7 @@ public class DialogueLineNode : Node
     /// </summary>
     public override void Draw()
     {
-        // Adjust the look of the node depending on wheter it has answers
-        SetOutNodeCount(Line.HasAnswers ? 2 : 1);
+        displayedOutPoints = Line.HasAnswers ? 2 : 1;
         // draw the base
         base.Draw();
 

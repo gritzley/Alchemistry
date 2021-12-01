@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line
+  m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
+  m_Name: Potion 2
   m_EditorClassIdentifier: 
-  Title: Line
-  Text: 
-  AnswerLeft: 
-  AnswerRight: 
-  HasAnswers: 0
-  NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
-  EditorPos: {x: 269, y: 0}
+  Name: ddwafawfefwfewaf
+  Recipe: []

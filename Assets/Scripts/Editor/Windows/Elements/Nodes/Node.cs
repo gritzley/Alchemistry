@@ -38,7 +38,8 @@ public class Node
 
     // Saves the last time this was clicked to detect doubleclicks
     private double lastClicked;
-    private float currentHeight { get { return 50 + outPoints.Count * 25; } }
+    private float currentHeight { get { return 50 + displayedOutPoints * 25; } }
+    public float displayedOutPoints = 0;
 
     // Create a new Node
     public Node(Vector2 position, float width, NodeData nodeData)
@@ -70,21 +71,21 @@ public class Node
         OnClickInPoint = nodeData.OnClickInPoint;
 
         inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, 50);
-        SetOutNodeCount(1);
 
         rect = new Rect(position.x, position.y, width, 0);
     }
 
     // Set the number of out nodes
-    public void SetOutNodeCount (int count)
+    public void SetOutPointCount (int count)
     {
         outPoints = new List<ConnectionPoint>();
+        displayedOutPoints = 0;
         for (int i = 0; i < count; i++)
         {
             ConnectionPoint outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, currentHeight);
             outPoints.Add(outPoint);
+            displayedOutPoints++;
         }
-        rect.height = currentHeight;
     }
 
     // Move the Node to a position;
@@ -96,11 +97,12 @@ public class Node
     // Draw window
     public virtual void Draw()
     {
+        rect.height = currentHeight;
         // Draw ConnectionPoints
         inPoint.Draw();
-        foreach (ConnectionPoint outPoint in outPoints)
+        for (int i = 0; i < Mathf.Min(displayedOutPoints, outPoints.Count); i++)
         {
-            outPoint.Draw();
+            outPoints[i].Draw();
         }
         // Draw own box
         GUI.Box(rect, "", style);
