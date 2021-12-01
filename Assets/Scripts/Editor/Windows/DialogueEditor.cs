@@ -94,6 +94,15 @@ public class DialogueEditor : EditorWindow
     }
 
     /// <summary>
+    /// Called when the Editor Window is disabled
+    /// </summary>
+    private void OnDisable()
+    {
+        // Deinstantiate
+        Instance = null;
+    }
+
+    /// <summary>
     /// Show all quests from an array
     /// </summary>
     /// <param name="quests">An arra of quests</param>
@@ -172,7 +181,7 @@ public class DialogueEditor : EditorWindow
 
         // Add the QuestNode with a connection to the first DialogueLineNode
         nodes.Add(questNode);
-        questNode.SetOutNodeCount(2);
+        questNode.displayedOutPoints = 2;
         if (questNode.Quest.PrecedingStartLine != null)
         {
             selectedOutPoint = questNode.outPointPreceding;
@@ -217,7 +226,7 @@ public class DialogueEditor : EditorWindow
     /// </summary>
     private void DialogueToQuestView()
     {
-        currentQuestNode.SetOutNodeCount(currentQuestNode.Quest.Links.Count);
+        currentQuestNode.displayedOutPoints = currentQuestNode.Quest.Links.Count;
         
         // Throw an error if the editor is not in dialogue view
         if (State != WindowState.DialogueView)
@@ -277,13 +286,84 @@ public class DialogueEditor : EditorWindow
         return null;
     }
 
-    /// <summary>
-    /// Called when the Editor Window is disabled
-    /// </summary>
-    private void OnDisable()
+    public void UpdateQuestNode(Quest quest)
     {
-        // Deinstantiate
-        Instance = null;
+        GetNodeByQuest(quest)?.UpdateContent();
+    }
+    public void UpdateAllQuestNodes()
+    {
+        foreach (QuestNode node in questNodes)
+        {
+            node.UpdateContent();
+        }
+    }
+
+    /// <summary>
+    /// Create a new DialogueLine Asset and a Node for it
+    /// </summary>
+    /// <param name="position"> Vector2 of the position to create the Node at</param>
+    private void CreateNewDialogueLine(Vector2 position)
+    {
+        // Get a unique path for a line
+        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Line.asset");
+
+        // Create the new asset
+        DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
+        AssetDatabase.CreateAsset(line, path);
+
+        // Add the Dialogue Line to the currently viewed Quest
+        // If this line throws an error, you are trying to create a new dialogue line when not in dialogue view
+        currentQuestNode.Quest.Lines.Add(line);
+        // Mark the currently viewed quest to be saved
+        EditorUtility.SetDirty(currentQuestNode.Quest);
+
+        // Set the lines inital title
+        line.Title = line.name;
+        // The Lines position is always relative to the questNode
+        line.EditorPos = position - currentQuestNode.Quest.EditorPos;
+        // Mark the line to be saved
+        EditorUtility.SetDirty(line);
+
+        // Save changes
+        AssetDatabase.SaveAssets();
+
+        // Create a node for the line
+        DialogueLineNode node = new DialogueLineNode(currentQuestNode, line, defaultNodeData);
+
+        // Add node to lists
+        nodes.Add(node);
+        dialogueLineNodes.Add(node);
+    }
+
+    /// <summary>
+    /// Create a new Quest Asset and a Node for it
+    /// </summary>
+    /// <param name="position"> Vector2 of the position to create the Node at</param>
+    private void CreateNewQuest(Vector2 position)
+    {
+        // Get a unique path for for a quest
+        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Quest.asset");
+
+        // Create the new asset
+        Quest quest = ScriptableObject.CreateInstance<Quest>();
+        AssetDatabase.CreateAsset(quest, path);
+
+        // set the quests initial title and position
+        quest.Title = quest.name;
+        quest.EditorPos = position;
+
+        // Mark quest asset to be saved
+        EditorUtility.SetDirty(quest);
+
+        // Save changes to assets
+        AssetDatabase.SaveAssets();
+
+        // Create a node for the quest
+        QuestNode node = new QuestNode(quest, defaultNodeData, ShowQuestDialogue, OnQuestNodeDragEnd);
+
+        // add the node to lists
+        nodes.Add(node);
+        questNodes.Add(node);
     }
 
     /// <summary>
@@ -457,74 +537,6 @@ public class DialogueEditor : EditorWindow
         Handles.color = Color.white;
         // Stop Drawing
         Handles.EndGUI();
-    }
-
-    /// <summary>
-    /// Create a new DialogueLine Asset and a Node for it
-    /// </summary>
-    /// <param name="position"> Vector2 of the position to create the Node at</param>
-    private void CreateNewDialogueLine(Vector2 position)
-    {
-        // Get a unique path for a line
-        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Line.asset");
-
-        // Create the new asset
-        DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
-        AssetDatabase.CreateAsset(line, path);
-
-        // Add the Dialogue Line to the currently viewed Quest
-        // If this line throws an error, you are trying to create a new dialogue line when not in dialogue view
-        currentQuestNode.Quest.Lines.Add(line);
-        // Mark the currently viewed quest to be saved
-        EditorUtility.SetDirty(currentQuestNode.Quest);
-
-        // Set the lines inital title
-        line.Title = line.name;
-        // The Lines position is always relative to the questNode
-        line.EditorPos = position - currentQuestNode.Quest.EditorPos;
-        // Mark the line to be saved
-        EditorUtility.SetDirty(line);
-
-        // Save changes
-        AssetDatabase.SaveAssets();
-
-        // Create a node for the line
-        DialogueLineNode node = new DialogueLineNode(currentQuestNode, line, defaultNodeData);
-
-        // Add node to lists
-        nodes.Add(node);
-        dialogueLineNodes.Add(node);
-    }
-
-    /// <summary>
-    /// Create a new Quest Asset and a Node for it
-    /// </summary>
-    /// <param name="position"> Vector2 of the position to create the Node at</param>
-    private void CreateNewQuest(Vector2 position)
-    {
-        // Get a unique path for for a quest
-        string path = AssetDatabase.GenerateUniqueAssetPath($"{dialoguePath}/Quest.asset");
-
-        // Create the new asset
-        Quest quest = ScriptableObject.CreateInstance<Quest>();
-        AssetDatabase.CreateAsset(quest, path);
-
-        // set the quests initial title and position
-        quest.Title = quest.name;
-        quest.EditorPos = position;
-
-        // Mark quest asset to be saved
-        EditorUtility.SetDirty(quest);
-
-        // Save changes to assets
-        AssetDatabase.SaveAssets();
-
-        // Create a node for the quest
-        QuestNode node = new QuestNode(quest, defaultNodeData, ShowQuestDialogue, OnQuestNodeDragEnd);
-
-        // add the node to lists
-        nodes.Add(node);
-        questNodes.Add(node);
     }
 
     /// <summary>
@@ -710,7 +722,6 @@ public class DialogueEditor : EditorWindow
     /// <param name="connection"></param>
     private void RemoveConnection(Connection connection)
     {
-
         // Get references to the in and out nodes
         Node outNode = connection.outPoint.node;
         Node inNode = connection.inPoint.node;
@@ -794,12 +805,15 @@ public class DialogueEditor : EditorWindow
             DialogueLineNode lineNode = (DialogueLineNode)outNode;
             DialogueLine line = (inNode as DialogueLineNode).Line;
 
+            Debug.Log(selectedOutPoint == lineNode.outPointRight);
+            Debug.Log(selectedOutPoint == lineNode.outPointLeft);
+
             // Select whether to put the line in nextLeft or nextRight
-            if (selectedOutPoint == lineNode.outPointLeft )
+            if (selectedOutPoint == lineNode.outPointRight)
             {
-                lineNode.Line.NextLeft = line;
+                lineNode.Line.NextRight = line;
             }
-            else if (selectedOutPoint == lineNode.outPointRight)
+            else if (selectedOutPoint == lineNode.outPointLeft)
             {
                 lineNode.Line.NextRight = line;
             }

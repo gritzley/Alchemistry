@@ -17,6 +17,8 @@ public class QuestNode : Node
     public ConnectionPoint outPointPreceding { get { return outPoints[0]; } }
     public ConnectionPoint outPointSucceding { get { return outPoints[1]; } }
 
+    private float dialogueViewWidth, questViewWidth;
+
     // Constructor
     public QuestNode (Quest quest, NodeData nodeData, Action<QuestNode> onClickShowDialogue, Action<QuestNode> dragEnd)
     :base(quest.EditorPos, 100, nodeData)
@@ -25,7 +27,26 @@ public class QuestNode : Node
         Quest = quest;
         OnClickShowDialogue = onClickShowDialogue;
         DragEnd = dragEnd;
-        SetOutNodeCount(Quest.Links.Count);
+        UpdateContent();
+    }
+
+    public void UpdateContent()
+    {
+        Debug.Log(Quest.Links.Count);
+        SetOutPointCount(Mathf.Max(Quest.Links.Count, 2));
+        displayedOutPoints = Quest.Links.Count;
+
+        // Set size to fit title
+        float titleWidth = new GUIStyle().CalcSize(new GUIContent(Quest.Title)).x;
+        dialogueViewWidth = Mathf.Max(150, titleWidth + 20);
+        questViewWidth = Mathf.Max(100, titleWidth + 20);
+
+        foreach (Quest.Link link in Quest.Links)
+        {
+            // Increase width if neccessary
+            float potionNameWidth = new GUIStyle().CalcSize(new GUIContent(link.Potion.Name)).x;
+            questViewWidth = Mathf.Max(questViewWidth, potionNameWidth + 20);
+        }
     }
 
     /// <summary>
@@ -67,10 +88,6 @@ public class QuestNode : Node
         labelStyle.padding = new RectOffset(0, 0, 10, 0);
         GUI.Label(rect, Quest.Title, labelStyle);
 
-        // Increase Size to fit title, if neccessary
-        Vector2 size = labelStyle.CalcSize( new GUIContent( Quest.Title ) );
-        rect.width = Mathf.Max(rect.width, size.x + 20);
-
         // Draw Node Labels
         labelStyle.padding.top += 5;
         labelStyle.padding.right += 10;
@@ -79,25 +96,21 @@ public class QuestNode : Node
         {
             case DialogueEditor.WindowState.DialogueView:
                 // In DialogueView there are two labels and a fixed width
+                rect.width = dialogueViewWidth;
                 labelStyle.padding.top += 25;
                 GUI.Label(rect, "Preceeding Dialogue", labelStyle);
                 labelStyle.padding.top += 25;
                 GUI.Label(rect, "Succeeding Dialogue", labelStyle);
-
-                rect.width = 150;
                 break;
 
             case DialogueEditor.WindowState.QuestView:
                 // In QuestView, there is a flexible amount of nodes and width
+                rect.width = questViewWidth;
                 foreach (Quest.Link link in Quest.Links)
                 {
+                    // set label
                     labelStyle.padding.top += 25;
                     GUI.Label(rect, link.Potion.Name, labelStyle);
-
-                    // Increase label width if neccessary
-                    rect.width = 100;
-                    size = labelStyle.CalcSize( new GUIContent( link.Potion.Name ) );
-                    rect.width = Mathf.Max(rect.width, size.x + 20);
                 }
                 break;
         }

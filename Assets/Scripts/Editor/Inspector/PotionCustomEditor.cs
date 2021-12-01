@@ -1,9 +1,7 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEditorInternal;
-using System.Collections;
+using System.Linq;
 
 [CustomEditor(typeof(Potion))]
 [CanEditMultipleObjects]
@@ -65,6 +63,16 @@ public class PotionEditor : Editor
                 GUIContent.none
             );
         };
+
+        if (DialogueEditor.IsOpen)
+        {
+            // AssetDatabase.FindAssets("t:Quest")
+            // .Select( e => AssetDatabase.GUIDToAssetPath(e))
+            // .Select( e => (Quest)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
+            // .ToList()
+            // .ForEach( e => (e as Quest).UpdateLinks());
+            DialogueEditor.Instance.UpdateAllQuestNodes();
+        }
     }
 
     // This gets called every frame that the inspector is drawn

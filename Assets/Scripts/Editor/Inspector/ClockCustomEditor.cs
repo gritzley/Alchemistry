@@ -2,9 +2,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
 using UnityEditor.UIElements;
-using UnityEditorInternal;
-using System.Collections;
-
 // This Editor is mostly used because unity can normally not display properties with getters and setters
 [CustomEditor(typeof(ClockController))]
 [CanEditMultipleObjects]

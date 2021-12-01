@@ -1,9 +1,6 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEditorInternal;
-using System.Collections;
 
 [CustomEditor(typeof(Tool))]
 [CanEditMultipleObjects]
