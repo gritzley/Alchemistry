@@ -93,6 +93,7 @@ public class PlayerController : Moveable
     /// <param name="newPos">The new PlayerPosition</param>
     void MoveToPos (PlayerPosition newPos)
     {
+        InputDisabled = true;
         // Pitch cardinal direction by the amount from new pos
         float pitchLat = newPos.Pitch * Mathf.Abs(cardinalDirection.z);
         float pitchLon = newPos.Pitch * -Mathf.Abs(cardinalDirection.x);
@@ -113,6 +114,7 @@ public class PlayerController : Moveable
     /// <param name="dir">The turn direction. 1 for clockwise and -1 for anticlockwise</param>
     void TurnCorner (float dir)
     {
+        // InputDisabled = true;
         // Normalize the direction
         dir = Mathf.Sign(dir);
         
@@ -121,5 +123,10 @@ public class PlayerController : Moveable
 
         // Turn towards that rotation
         StartCoroutine(TurnTowards(cardinalDirection));
+    }
+
+    public override void OnMovementEnd()
+    {
+        InputDisabled = false;
     }
 }
