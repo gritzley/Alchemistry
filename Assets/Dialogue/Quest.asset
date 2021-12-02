@@ -13,16 +13,12 @@ MonoBehaviour:
   m_Name: Quest
   m_EditorClassIdentifier: 
   Links:
-  - Potion: {fileID: 11400000, guid: a4d60f6e7f923ad459b176c08203316b, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 40d01b1c069dce94b855bb9926ba657d, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 0c6dc1f17fb3c014da632fec21ed7d96, type: 2}
+  - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
     NextQuest: {fileID: 0}
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 241, y: 267}
+  EditorPos: {x: 367, y: 198}
   Title: Centaur
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
