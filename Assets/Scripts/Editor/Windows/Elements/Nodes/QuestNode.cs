@@ -32,7 +32,6 @@ public class QuestNode : Node
 
     public void UpdateContent()
     {
-        Debug.Log(Quest.Links.Count);
         SetOutPointCount(Mathf.Max(Quest.Links.Count, 2));
         displayedOutPoints = Quest.Links.Count;
 

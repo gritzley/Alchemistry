@@ -24,13 +24,11 @@ public class KettleController : MonoBehaviour, IClickable
             // If the kettle is not already cooking, start now
             if (!cooking) StartCoroutine(Cooking());
 
-            // Get the ingredient from the container
-            Ingredient ingredient = (player.HeldItem as Ingredient);
             // Add the ingredient to the pot
-            NewIngredient = ingredient;
+            NewIngredient = (player.HeldItem as Ingredient);
 
             // if the ingredient is used up, destroy it
-            if (ingredient.DestroyOnUse)
+            if (NewIngredient.DestroyOnUse)
             {
                 player.HeldItem = null;
             }

@@ -99,7 +99,7 @@ public class DialogueEditor : EditorWindow
     private void OnDisable()
     {
         // Deinstantiate
-        Instance = null;
+        if (IsOpen) Instance = null;
     }
 
     /// <summary>
