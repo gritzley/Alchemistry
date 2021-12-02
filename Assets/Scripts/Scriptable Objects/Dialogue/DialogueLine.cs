@@ -19,7 +19,7 @@ public class DialogueLine : ScriptableObject
     public string AnswerRight;
 
     // If false, answers will not be displayed and next line will be NextRight
-    public bool HasAnswers = true;
+    public bool HasAnswers = false;
 
     // References to the next Lines for left and right answer option
     public DialogueLine NextLeft;

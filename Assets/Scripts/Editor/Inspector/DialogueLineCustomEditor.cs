@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEditorInternal;
+using UnityEngine;
 
 [CustomEditor(typeof(DialogueLine))]
 [CanEditMultipleObjects]
@@ -49,8 +50,9 @@ public class DialogueLineEditor : Editor
 
         if (hasAnswersProp.boolValue)
         {
-            EditorGUILayout.PropertyField(answerLeftProp);
-            EditorGUILayout.PropertyField(answerRightProp);
+            EditorStyles.textField.wordWrap = true;
+            answerRightProp.stringValue = EditorGUILayout.TextArea(answerRightProp.stringValue);
+            answerLeftProp.stringValue = EditorGUILayout.TextArea(answerLeftProp.stringValue);
         }
         if (hasAnswerPreviousValue != hasAnswersProp.boolValue && DialogueEditor.IsOpen)
         {
