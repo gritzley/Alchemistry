@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 16
+  m_EditorClassIdentifier: 
+  Title: Q1_L14_Tombstone
+  Text: I can already see the big ceremony. The blooming flower arrangement, the
+    big imposing tombstone. Ahh, how wonderful his grave will look on my yard
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 9ade93a1ef8e3a84b8764862e903c2fe, type: 2}
+  EditorPos: {x: 1900, y: -4}
