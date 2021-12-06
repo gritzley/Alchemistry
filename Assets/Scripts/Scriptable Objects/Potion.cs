@@ -4,9 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Potion", menuName = "Potion")]
 public class Potion : ScriptableObject
 {
-    // The name of the potion
-    public string Name;
-    
     // Struct for one step of the recipe
     [System.Serializable] public struct Step 
     {
@@ -20,14 +17,6 @@ public class Potion : ScriptableObject
 
     // The list of steps required to make the potion
     public List<Step> Recipe;
-
-    void OnEnable()
-    {
-        if (Name == "")
-        {
-            Name = name;
-        }
-    }
     // Validate wheter a given list of steps matches this potions recipe
     public bool ValidateSteps(List<Step> steps)
     {

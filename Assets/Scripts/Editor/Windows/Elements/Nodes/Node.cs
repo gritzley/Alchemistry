@@ -71,6 +71,7 @@ public class Node
         OnClickInPoint = nodeData.OnClickInPoint;
 
         inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, 50);
+        outPoints = new List<ConnectionPoint>();
 
         rect = new Rect(position.x, position.y, width, 0);
     }
@@ -78,13 +79,24 @@ public class Node
     // Set the number of out nodes
     public void SetOutPointCount (int count)
     {
-        outPoints = new List<ConnectionPoint>();
-        displayedOutPoints = 0;
-        for (int i = 0; i < count; i++)
+        if (count > outPoints.Count)
         {
-            ConnectionPoint outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, currentHeight);
-            outPoints.Add(outPoint);
-            displayedOutPoints++;
+            for (int i = outPoints.Count; i < count; i++)
+            {
+                ConnectionPoint outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, currentHeight);
+                outPoints.Add(outPoint);
+                displayedOutPoints++;
+            }
+        }
+        else
+        {
+            outPoints.GetRange(count, outPoints.Count - count).ForEach(e =>
+            {
+                Connection connection = (e as ConnectionPoint).connection;
+                connection?.OnClickRemoveConnection(connection);
+            });
+            displayedOutPoints = count;
+            outPoints.RemoveRange(count, outPoints.Count - count);
         }
     }
 

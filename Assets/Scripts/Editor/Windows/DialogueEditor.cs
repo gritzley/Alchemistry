@@ -769,10 +769,13 @@ public class DialogueEditor : EditorWindow
             // Determine the index of the connection point the connection is coming from
             int index = (outNode as QuestNode).outPoints.IndexOf(connection.outPoint);
             
-            // Set the link at the index to point to null
-            Quest.Link link = quest.Links[index];
-            link.NextQuest = null;
-            quest.Links[index] = link;  
+            if (index > 0 && index < quest.Links.Count)
+            {
+                // Set the link at the index to point to null
+                Quest.Link link = quest.Links[index];
+                link.NextQuest = null;
+                quest.Links[index] = link;  
+            }
             
             // Mark the edited quest for saving
             EditorUtility.SetDirty(quest);          

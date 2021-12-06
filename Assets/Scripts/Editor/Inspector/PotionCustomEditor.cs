@@ -18,7 +18,6 @@ public class PotionEditor : Editor
     void OnEnable()
     {
         // Load properties
-        nameProp = serializedObject.FindProperty("Name");
         recipeProp = serializedObject.FindProperty("Recipe");
 
         // create the reorderable list
@@ -64,7 +63,6 @@ public class PotionEditor : Editor
             );
         };
 
-        Debug.Log("'ello");
         if (DialogueEditor.IsOpen)
         {
             DialogueEditor.Instance.UpdateAllQuestNodes();
@@ -74,7 +72,6 @@ public class PotionEditor : Editor
 
     void OnDisable()
     {
-        Debug.Log("byeee");
         if (DialogueEditor.IsOpen)
         {
             DialogueEditor.Instance.UpdateAllQuestNodes();
@@ -87,9 +84,6 @@ public class PotionEditor : Editor
     {
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
-
-        // Add a property field for the name to the layout
-        EditorGUILayout.PropertyField(nameProp);
 
         // Add the reorderable list to the layout
         Recipe.DoLayoutList();

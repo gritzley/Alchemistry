@@ -115,7 +115,7 @@ public class KettleController : MonoBehaviour, IClickable
         }
         // Otherwise, make the one potion that fits the recipe
         else {
-            Debug.Log(Potions[0].Name);
+            Debug.Log(Potions[0].name);
         }
     }
 }

@@ -34,7 +34,7 @@ public class QuestEditor : Editor
             SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
             Potion potion = (Potion)element.FindPropertyRelative("Potion").objectReferenceValue;
             SerializedProperty nextQuestProp = element.FindPropertyRelative("NextQuest");
-            EditorGUILayout.PropertyField(nextQuestProp, new GUIContent(potion.Name));
+            EditorGUILayout.PropertyField(nextQuestProp, new GUIContent(potion.name));
 
             if (nextQuestProp.objectReferenceValue == target)
             {

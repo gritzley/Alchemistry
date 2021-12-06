@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -32,6 +30,8 @@ public class QuestNode : Node
 
     public void UpdateContent()
     {
+        // Update Link Counts
+        Quest.UpdateLinks();
         SetOutPointCount(Mathf.Max(Quest.Links.Count, 2));
         displayedOutPoints = Quest.Links.Count;
 
@@ -43,7 +43,7 @@ public class QuestNode : Node
         foreach (Quest.Link link in Quest.Links)
         {
             // Increase width if neccessary
-            float potionNameWidth = new GUIStyle().CalcSize(new GUIContent(link.Potion.Name)).x;
+            float potionNameWidth = new GUIStyle().CalcSize(new GUIContent(link.Potion.name)).x;
             questViewWidth = Mathf.Max(questViewWidth, potionNameWidth + 20);
         }
     }
@@ -109,7 +109,7 @@ public class QuestNode : Node
                 {
                     // set label
                     labelStyle.padding.top += 25;
-                    GUI.Label(rect, link.Potion.Name, labelStyle);
+                    GUI.Label(rect, link.Potion.name, labelStyle);
                 }
                 break;
         }
