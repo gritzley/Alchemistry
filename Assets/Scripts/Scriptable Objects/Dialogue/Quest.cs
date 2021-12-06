@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEditor;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "Quest", menuName = "Quest")]
 public class Quest : ScriptableObject
 {
-
     // Struct for Links, that link a Potion to a new quest
     [System.Serializable]
     public struct Link

@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "DialogueLine", menuName = "DialogueLine")]
 public class DialogueLine : ScriptableObject
 {
     // Title is for editor only
