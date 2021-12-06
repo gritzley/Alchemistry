@@ -47,8 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationTime: 0.3
   currentPosition: {fileID: 0}
-  handPosition: {x: 0.75, y: -0.6, z: 1}
-  handRotation: {x: 20, y: 0, z: 20}
+  HandTransform: {fileID: 0}
+  HeldItem: {fileID: 0}
+  InputDisabled: 0
 --- !u!1 &7156095258332516863
 GameObject:
   m_ObjectHideFlags: 0
