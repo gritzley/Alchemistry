@@ -485,6 +485,16 @@ public class DialogueEditor : EditorWindow
                     isDragging = false;
                 }
                 break;
+
+            case EventType.ScrollWheel:
+                foreach(Node node in nodes) {
+                    Vector2 newPos = node.rect.position;
+                    newPos -= Event.current.mousePosition;
+                    newPos *= 1f - 0.1f * Mathf.Sign(Event.current.delta.y);
+                    newPos += Event.current.mousePosition;
+                    node.rect.position = newPos;
+                }
+                break;
         }
 
         // If the window changed in any way, redraw it.
