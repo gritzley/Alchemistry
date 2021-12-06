@@ -40,7 +40,7 @@ public class DialogueLineEditor : Editor
 
         // Add a property field for title and text
         EditorGUILayout.PropertyField(titleProp);
-        EditorGUILayout.PropertyField(textProp);
+        textProp.stringValue = EditorGUILayout.TextArea(textProp.stringValue);
 
         bool hasAnswerPreviousValue = hasAnswersProp.boolValue;
 

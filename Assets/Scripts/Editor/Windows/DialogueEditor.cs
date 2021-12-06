@@ -98,6 +98,7 @@ public class DialogueEditor : EditorWindow
     /// </summary>
     private void OnDisable()
     {
+        AssetDatabase.SaveAssets();
         // Deinstantiate
         if (IsOpen) Instance = null;
     }
@@ -126,13 +127,13 @@ public class DialogueEditor : EditorWindow
         }
 
         // Draw the connections
-        DrawQuestViewConnections();
+        CreateQuestNodeConnections();
     }
 
     /// <summary>
     /// Draw the connections between all displayed questNodes
     /// </summary>
-    private void DrawQuestViewConnections()
+    private void CreateQuestNodeConnections()
     {
         // Loop through all links in all questNodes
         foreach (QuestNode node in questNodes)
@@ -144,9 +145,7 @@ public class DialogueEditor : EditorWindow
                 if (next != null)
                 {
                     // Create a connection. It's not hard
-                    selectedInPoint = GetNodeByQuest(next).inPoint;
-                    selectedOutPoint = node.outPoints[i];
-                    CreateConnection();
+                    CreateConnection(node.outPoints[i], GetNodeByQuest(next).inPoint);
                 }
             }
         }
@@ -184,15 +183,11 @@ public class DialogueEditor : EditorWindow
         questNode.displayedOutPoints = 2;
         if (questNode.Quest.PrecedingStartLine != null)
         {
-            selectedOutPoint = questNode.outPointPreceding;
-            selectedInPoint = GetNodeByDialogueLine(questNode.Quest.PrecedingStartLine).inPoint;
-            CreateConnection();
+            CreateConnection(questNode.outPointPreceding, GetNodeByDialogueLine(questNode.Quest.PrecedingStartLine).inPoint);
         }
         if (questNode.Quest.SucceedingStartLine != null)
         {
-            selectedOutPoint = questNode.outPointSucceding;
-            selectedInPoint = GetNodeByDialogueLine(questNode.Quest.SucceedingStartLine).inPoint;
-            CreateConnection();
+            CreateConnection(questNode.outPointSucceding, GetNodeByDialogueLine(questNode.Quest.SucceedingStartLine).inPoint);
         }
 
         // Assign node connections
@@ -203,17 +198,11 @@ public class DialogueEditor : EditorWindow
             // Set connections to the left and right, if applicable
             if (line.NextRight != null)
             {
-                selectedOutPoint = node.outPointRight;
-                DialogueLineNode nextNode = GetNodeByDialogueLine(line.NextRight);
-                selectedInPoint = nextNode.inPoint;
-                CreateConnection();
+                CreateConnection(node.outPointRight, GetNodeByDialogueLine(line.NextRight).inPoint);
             }
             if (line.NextLeft != null)
             {
-                DialogueLineNode nextNode = GetNodeByDialogueLine(line.NextLeft);
-                selectedOutPoint = node.outPointLeft;
-                selectedInPoint = nextNode.inPoint;
-                CreateConnection();
+                CreateConnection(node.outPointLeft, GetNodeByDialogueLine(line.NextLeft).inPoint);
             }
 
             // Clear whatever selected in and out points remain
@@ -245,7 +234,7 @@ public class DialogueEditor : EditorWindow
         State = WindowState.QuestView;
 
         // Draw the connections between the quests
-        DrawQuestViewConnections();
+        CreateQuestNodeConnections();
     }
 
     /// <summary>
@@ -491,8 +480,8 @@ public class DialogueEditor : EditorWindow
                     {
                         node.Quest.EditorPos = node.rect.position;
                         EditorUtility.SetDirty(node.Quest);
-                        AssetDatabase.SaveAssets();
                     }
+                    AssetDatabase.SaveAssets();
                     isDragging = false;
                 }
                 break;
@@ -559,7 +548,7 @@ public class DialogueEditor : EditorWindow
             // If the nodes are not the same, create the connection
             if (selectedOutPoint.node != selectedInPoint.node)
             {
-                CreateConnection();
+                SetNewConnection();
             }
 
             // cleanup
@@ -583,7 +572,7 @@ public class DialogueEditor : EditorWindow
             // If the nodes are not the same, create the point
             if (selectedOutPoint.node != selectedInPoint.node)
             {
-                CreateConnection();
+                SetNewConnection();
             }
 
             // cleanup
@@ -793,7 +782,7 @@ public class DialogueEditor : EditorWindow
     /// <summary>
     /// Create a connection between the selectedInPoint and the selectedOutPoint
     /// </summary>
-    private void CreateConnection()
+    private void SetNewConnection()
     {
         // get in and out node
         Node outNode = selectedOutPoint.node;
@@ -862,12 +851,23 @@ public class DialogueEditor : EditorWindow
         // Save asset changes
         AssetDatabase.SaveAssets();
 
-        // Create connection
-        Connection connection = new Connection(selectedInPoint, selectedOutPoint, RemoveConnection);
+        // Create the actual Connection
+        CreateConnection(selectedOutPoint, selectedInPoint);
+    }
+
+    /// <summary>
+    /// Create a connection between an inPoint and an outPoint
+    /// </summary>
+    /// <param name="outPoint">The outPoint</param>
+    /// <param name="inPoint">The inPoint</param>
+    private void CreateConnection(ConnectionPoint outPoint, ConnectionPoint inPoint)
+    {
+        // Create the connection
+        Connection connection = new Connection(inPoint, outPoint, RemoveConnection);
 
         // Reference connection in the connection points
-        selectedInPoint.connection = connection;
-        selectedOutPoint.connection = connection;
+        inPoint.connection = connection;
+        outPoint.connection = connection;
 
         // Finally add connection to list
         connections.Add(connection);
