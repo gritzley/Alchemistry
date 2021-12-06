@@ -12,7 +12,7 @@ public class PlayerController : Moveable
     Vector3 cardinalDirection;
 
     // Reference to the camera
-    Camera Camera;
+    Camera fpCamera;
 
     // Reference to the transform where held items are placed
     public Transform HandTransform;
@@ -24,7 +24,7 @@ public class PlayerController : Moveable
     // Called once at the start of the game
     void Start()
     {
-        Camera = GetComponentInChildren<Camera>();
+        fpCamera = GetComponentInChildren<Camera>();
         // Set positiont o start position
         transform.position = currentPosition.Position;
 
@@ -37,6 +37,8 @@ public class PlayerController : Moveable
 
         // Init Hand
         HandTransform = transform.Find("Hand");
+
+        Debug.Log(Camera.main);
     }
 
     // Called every frame
@@ -76,7 +78,7 @@ public class PlayerController : Moveable
             if (Input.GetMouseButtonDown(0))
             {
                 // Perform the raycast and store the result in hit. If a clickable was hit, handle the hit
-                Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
+                Ray ray = fpCamera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
