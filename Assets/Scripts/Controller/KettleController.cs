@@ -10,6 +10,15 @@ public class KettleController : MonoBehaviour, IClickable
     // Field for a new ingredient that is added to the pot
     Ingredient NewIngredient;
 
+    Light Light;
+    ParticleSystem Orchestra; 
+
+    public void OnEnable()
+    {
+        Light = GetComponentInChildren<Light>();
+        Orchestra = GetComponentInChildren<ParticleSystem>();
+    }
+
     public void OnClick(PlayerController player)
     {
         // If the player is empty-handed, stop cooking

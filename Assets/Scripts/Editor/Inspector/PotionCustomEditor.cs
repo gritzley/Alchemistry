@@ -64,14 +64,21 @@ public class PotionEditor : Editor
             );
         };
 
+        Debug.Log("'ello");
         if (DialogueEditor.IsOpen)
         {
-            // AssetDatabase.FindAssets("t:Quest")
-            // .Select( e => AssetDatabase.GUIDToAssetPath(e))
-            // .Select( e => (Quest)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
-            // .ToList()
-            // .ForEach( e => (e as Quest).UpdateLinks());
             DialogueEditor.Instance.UpdateAllQuestNodes();
+            EditorWindow.GetWindow<DialogueEditor>().Repaint();
+        }
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("byeee");
+        if (DialogueEditor.IsOpen)
+        {
+            DialogueEditor.Instance.UpdateAllQuestNodes();
+            EditorWindow.GetWindow<DialogueEditor>().Repaint();
         }
     }
 
