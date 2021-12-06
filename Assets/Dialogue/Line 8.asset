@@ -19,5 +19,5 @@ MonoBehaviour:
   AnswerRight: Discretion is one of my most valued qualities
   HasAnswers: 1
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 569d3394664a4134f81288d010893b48, type: 2}
+  NextRight: {fileID: 11400000, guid: 304cbc7febc1c3c4290183aa6ad6880c, type: 2}
   EditorPos: {x: 1059, y: -15}

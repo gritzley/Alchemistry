@@ -18,5 +18,5 @@ MonoBehaviour:
   AnswerRight: A pleasure to meet you,  grave tender
   HasAnswers: 1
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
+  NextRight: {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}
   EditorPos: {x: 312, y: -10}

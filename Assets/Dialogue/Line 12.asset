@@ -21,4 +21,4 @@ MonoBehaviour:
   HasAnswers: 0
   NextLeft: {fileID: 0}
   NextRight: {fileID: 11400000, guid: 368b3835cf5c94a4ab28f060ab1f87e9, type: 2}
-  EditorPos: {x: 1433, y: -3}
+  EditorPos: {x: 1433, y: 0}

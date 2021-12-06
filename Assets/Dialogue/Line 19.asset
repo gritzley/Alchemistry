@@ -20,4 +20,4 @@ MonoBehaviour:
   HasAnswers: 0
   NextLeft: {fileID: 0}
   NextRight: {fileID: 11400000, guid: 8909d0510b96ac843ba4d9c546ef5706, type: 2}
-  EditorPos: {x: 2249, y: -4}
+  EditorPos: {x: 2296, y: 1}

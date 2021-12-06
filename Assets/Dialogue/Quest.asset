@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Links:
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
+    NextQuest: {fileID: 11400000, guid: 95e8e76ce5acce94ab6768648bc60a38, type: 2}
+  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
+    NextQuest: {fileID: 11400000, guid: 25408b62b507e4d438b72463655ecc28, type: 2}
+  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
     NextQuest: {fileID: 0}
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 367, y: 198}
-  Title: Centaur
+  EditorPos: {x: 146, y: 109}
+  Title: The Last Race
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   - {fileID: 11400000, guid: 63dd9bd673846754a8fca69df4262eff, type: 2}
