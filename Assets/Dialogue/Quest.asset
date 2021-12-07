@@ -62,7 +62,7 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: -231.39606, y: -502.83746}
+  EditorPos: {x: -197.95642, y: -478.45367}
   Title: The Last Race
   Lines:
   - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
