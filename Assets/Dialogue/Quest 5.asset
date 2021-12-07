@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 1
+  m_Name: Quest 5
   m_EditorClassIdentifier: 
   Links:
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
@@ -62,6 +62,6 @@ MonoBehaviour:
   PrecedingStartLine: {fileID: 0}
   SucceedingStartLine: {fileID: 0}
   CurrentLine: {fileID: 0}
-  EditorPos: {x: 60.43112, y: 161.84946}
-  Title: How to kill a dragon
+  EditorPos: {x: 223.14496, y: -29.912048}
+  Title: Dead but sus
   Lines: []
