@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "Branch", menuName = "Branch")]
 public class DialogueBranch : ScriptableObject
 {
     [System.Serializable]
