@@ -226,9 +226,8 @@ public class DialogueEditor : EditorWindow
         // as questNodes are not cleared when going to dialogueView, we can just do this
         nodes = questNodes.Select( node => (Node)node).ToList();
 
-        // reset connections, dialogueLineNodes and currentQuestNode
+        // reset connections and currentQuestNode
         connections = new List<Connection>();
-        dialogueLineNodes = new List<DialogueLineNode>();
         currentQuestNode = null;
         // Set the window state
         State = WindowState.QuestView;
@@ -245,16 +244,9 @@ public class DialogueEditor : EditorWindow
     private DialogueLineNode GetNodeByDialogueLine(DialogueLine line)
     {
         // Go through all nodes, if one matches, return it;
-        foreach (DialogueLineNode node in dialogueLineNodes)
-        {
-            if (node.Line == line)
-            {
-                return node;
-            }
-        }
-
-        // If all fails return null
-        return null;
+        return (DialogueLineNode)nodes
+        .Where( e => ((DialogueLineNode)e).Line == line)
+        .First();
     }
 
     /// <summary>
@@ -264,15 +256,9 @@ public class DialogueEditor : EditorWindow
     /// <returns>The QuestNode with this quest</returns>
     private QuestNode GetNodeByQuest(Quest quest)
     {
-        foreach (QuestNode node in questNodes)
-        {
-            if (node.Quest == quest)
-            {
-                return node;
-            }
-        }
-
-        return null;
+        return questNodes
+        .Where( e => e.Quest == quest )
+        .First();
     }
 
     public void UpdateQuestNode(Quest quest)
@@ -476,6 +462,8 @@ public class DialogueEditor : EditorWindow
             case EventType.MouseUp:
                 if (isDragging)
                 {
+                    // i constantly forgt this so i have to write this in bold:
+                    // THIS ONLY FIRES WHEN DRAGGING THE SCREEN 
                     foreach (QuestNode node in questNodes)
                     {
                         node.Quest.EditorPos = node.rect.position;
@@ -558,7 +546,7 @@ public class DialogueEditor : EditorWindow
             // If the nodes are not the same, create the connection
             if (selectedOutPoint.node != selectedInPoint.node)
             {
-                SetNewConnection();
+                connections.Add(Connection.SetNewConnection(selectedInPoint, selectedOutPoint, RemoveConnection));
             }
 
             // cleanup
@@ -582,7 +570,7 @@ public class DialogueEditor : EditorWindow
             // If the nodes are not the same, create the point
             if (selectedOutPoint.node != selectedInPoint.node)
             {
-                SetNewConnection();
+                connections.Add(Connection.SetNewConnection(selectedInPoint, selectedOutPoint, RemoveConnection));
             }
 
             // cleanup
@@ -613,13 +601,14 @@ public class DialogueEditor : EditorWindow
                 EditorUtility.SetDirty(questNode.Quest);
             }
             // Modify the dialogue lines editor positions by the inverse drag vector to preserve the relative position
-            foreach (DialogueLineNode dialogueLineNode in dialogueLineNodes)
+            foreach (DialogueLineNode dialogueLineNode in node.nodes.Where(e => e is DialogueLineNode).Select(e => e as DialogueLineNode))
             {
                 dialogueLineNode.Line.EditorPos -= dragVector;
                 // Mark the asset as dirty
                 EditorUtility.SetDirty(dialogueLineNode.Line);
             }
         }
+        
         // Save the new Editor Position of the dragged quest node
         node.Quest.EditorPos = node.rect.position;
         // Mark the asset as dirty
@@ -634,27 +623,19 @@ public class DialogueEditor : EditorWindow
     /// <param name="node">The node to be removed</param>
     private void RemoveNode(Node node)
     {
-        // If there are connections, clear the ones connected to this one
-        if (connections != null)
+
+        // Go through connections and check if they include the removed node
+        List<Connection> connectionsToRemove = new List<Connection>();
+        for (int i = 0; i < connections.Count; i++)
         {
-            // Go through connections and check if they include the removed node
-            List<Connection> connectionsToRemove = new List<Connection>();
-            for (int i = 0; i < connections.Count; i++)
+            if (connections[i].inPoint.node == node || connections[i].outPoint.node == node)
             {
-                if (connections[i].inPoint.node == node || connections[i].outPoint.node == node)
-                {
-                    connectionsToRemove.Add(connections[i]);
-                }
+                connectionsToRemove.Add(connections[i]);
             }
-
-            // remove the nodes you found
-            for (int i = 0; i < connectionsToRemove.Count; i++)
-            {
-                RemoveConnection(connectionsToRemove[i]);
-            }
-
-            // cleanup
-            connectionsToRemove = null;
+        }
+        for (int i = 0; i < connectionsToRemove.Count; i++)
+        {
+            RemoveConnection(connectionsToRemove[i]);
         }
 
         // Remove associated dialogue line assets
@@ -721,151 +702,8 @@ public class DialogueEditor : EditorWindow
     /// <param name="connection"></param>
     private void RemoveConnection(Connection connection)
     {
-        // Get references to the in and out nodes
-        Node outNode = connection.outPoint.node;
-        Node inNode = connection.inPoint.node;
-
-        // Behaviour for a connection between two dialogue lines
-        if (outNode is DialogueLineNode)
-        {
-            // Find out if the connection is on the left or right output and set the relevant reference in the DialogueLine to null
-            DialogueLineNode lineNode = (DialogueLineNode)outNode;
-            if (connection.outPoint == lineNode.outPointLeft)
-            {
-                lineNode.Line.NextLeft = null;
-            }
-            if (connection.outPoint == lineNode.outPointRight)
-            {
-                lineNode.Line.NextRight = null;
-            }
-
-            // Mark the edited line for saving
-            EditorUtility.SetDirty(lineNode.Line);
-        }
-
-        // Behaviour for a connection between a questNode and a DialogueLIne
-        if ((outNode is QuestNode) && (inNode is DialogueLineNode))
-        {
-            QuestNode questNode = (QuestNode)outNode;
-            // Find out if the connection is on the preceding or succeding output and set the relevant reference in the Quest to null
-            if (connection.outPoint == questNode.outPointPreceding)
-            {
-                questNode.Quest.PrecedingStartLine = null;
-            }
-            if (connection.outPoint == questNode.outPointSucceding)
-            {
-                questNode.Quest.SucceedingStartLine = null;
-            }
-            
-            // Mark the edited quest for saving
-            EditorUtility.SetDirty(questNode.Quest);
-        }
-
-        // Behaviour for a connection between two quests
-        if ((outNode is QuestNode) && (inNode is QuestNode))
-        {
-            // Get a reference to the outNode
-            Quest quest = (outNode as QuestNode).Quest;
-            // Determine the index of the connection point the connection is coming from
-            int index = (outNode as QuestNode).outPoints.IndexOf(connection.outPoint);
-            
-            if (index > 0 && index < quest.Links.Count)
-            {
-                // Set the link at the index to point to null
-                Quest.Link link = quest.Links[index];
-                link.NextQuest = null;
-                quest.Links[index] = link;  
-            }
-            
-            // Mark the edited quest for saving
-            EditorUtility.SetDirty(quest);          
-        }
-
-        // Save changes to assets
-        AssetDatabase.SaveAssets();
-
-        // remove connectionpoints references to connection;
-        connection.inPoint.connection = null;
-        connection.outPoint.connection = null;
-        
-        // Finally remove the conenction
+        connection.Remove();
         connections.Remove(connection);
-    }
-
-    /// <summary>
-    /// Create a connection between the selectedInPoint and the selectedOutPoint
-    /// </summary>
-    private void SetNewConnection()
-    {
-        // get in and out node
-        Node outNode = selectedOutPoint.node;
-        Node inNode = selectedInPoint.node;
-
-        // Behaviour: DialogueLine -> DialogueLine
-        if ((outNode is DialogueLineNode) && (inNode is DialogueLineNode))
-        {
-            DialogueLineNode lineNode = (DialogueLineNode)outNode;
-            DialogueLine line = (inNode as DialogueLineNode).Line;
-
-            Debug.Log(selectedOutPoint == lineNode.outPointRight);
-            Debug.Log(selectedOutPoint == lineNode.outPointLeft);
-
-            // Select whether to put the line in nextLeft or nextRight
-            if (selectedOutPoint == lineNode.outPointRight)
-            {
-                lineNode.Line.NextRight = line;
-            }
-            else if (selectedOutPoint == lineNode.outPointLeft)
-            {
-                lineNode.Line.NextRight = line;
-            }
-            
-            // Mark the out Dialogue Line for saving 
-            EditorUtility.SetDirty(lineNode.Line);
-        }
-
-        // Behaviour: Quest -> DialogueLine
-        if ((outNode is QuestNode) && (inNode is DialogueLineNode))
-        {
-            QuestNode questNode = (QuestNode)outNode;
-            DialogueLine line = (inNode as DialogueLineNode).Line;
-
-            // Select whether to put the line in nextLeft or nextRight
-            if (selectedOutPoint == questNode.outPointPreceding )
-            {
-                questNode.Quest.PrecedingStartLine = line;
-            }
-            else if (selectedOutPoint == questNode.outPointSucceding)
-            {
-                questNode.Quest.SucceedingStartLine = line;
-            }
-
-            // Mark the quest for saving
-            EditorUtility.SetDirty(questNode.Quest);
-        }
-
-        // Beahviour: Quest -> Quest
-        if ((outNode is QuestNode) && (inNode is QuestNode))
-        {
-            QuestNode questNode = outNode as QuestNode;
-
-            // Get the index of the selected Connection Point of the quest Node 
-            int index = questNode.outPoints.IndexOf(selectedOutPoint);
-            
-            // Set the link at the index to point to the correct next quest
-            Quest.Link link = questNode.Quest.Links[index];
-            link.NextQuest = (inNode as QuestNode).Quest;
-            questNode.Quest.Links[index] = link;
-
-            // Mark the quest for saving
-            EditorUtility.SetDirty(questNode.Quest);
-        }
-
-        // Save asset changes
-        AssetDatabase.SaveAssets();
-
-        // Create the actual Connection
-        CreateConnection(selectedOutPoint, selectedInPoint);
     }
 
     /// <summary>
