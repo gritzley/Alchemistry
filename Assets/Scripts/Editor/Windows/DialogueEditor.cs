@@ -352,17 +352,18 @@ public class DialogueEditor : EditorWindow
 
         GUI.Label(new Rect(0, 0, 100, 100), State.ToString(), new GUIStyle());
 
+        // Draw all connections on the screen
+        for (int i = 0; i < connections.Count; i++)
+        {
+            connections[i].Draw();
+        }
+        
         // Draw all nodes on the screen
         for (int i = 0; i < nodes.Count; i++)
         {
             nodes[i].Draw();
         }
 
-        // Draw all connections on the screen
-        for (int i = 0; i < connections.Count; i++)
-        {
-            connections[i].Draw();
-        }
 
         // Draw a line from mouse to SelectedInPoint if the user still has to select an outPoint
         if (selectedInPoint != null && selectedOutPoint == null)
@@ -601,7 +602,7 @@ public class DialogueEditor : EditorWindow
                 EditorUtility.SetDirty(questNode.Quest);
             }
             // Modify the dialogue lines editor positions by the inverse drag vector to preserve the relative position
-            foreach (DialogueLineNode dialogueLineNode in node.nodes.Where(e => e is DialogueLineNode).Select(e => e as DialogueLineNode))
+            foreach (DialogueLineNode dialogueLineNode in nodes.Where(e => e is DialogueLineNode).Select(e => e as DialogueLineNode))
             {
                 dialogueLineNode.Line.EditorPos -= dragVector;
                 // Mark the asset as dirty
