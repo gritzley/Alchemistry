@@ -29,8 +29,8 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void OnEnable()
     {
-        // Set the Editor to the center of the Screen
-        offset = new Vector2(0,0);
+        // Set the last logged position
+        offset = new Vector2(PlayerPrefs.GetFloat("StoryEditorOffsetX", 0), PlayerPrefs.GetFloat("StoryEditorOffsetY", 0));
 
         // Collect Quest Assets
         nodes = AssetDatabase.FindAssets("t:Quest", new string[] { "Assets/Dialogue" })
@@ -61,10 +61,11 @@ public class StoryEditor : EditorWindow
         switch (Event.current.type)
         {
             case EventType.MouseDrag:
-                // If Left Mouse Button is clicked, drags
+
+                // ---- DRAG ----
                 if (Event.current.button == 0)
                 {
-                    // Set the view to dragging mode
+                    // Set flag
                     isDragging = true;
 
                     // Move the position in the view
@@ -75,10 +76,25 @@ public class StoryEditor : EditorWindow
                     GUI.changed = true;
                 }
                 break;
+
+            case EventType.MouseUp:
+
+                // ---- DRAG END ----
+                if (isDragging)
+                {
+                    // Set flag
+                    isDragging = false;
+
+                    // Save Editor Position
+                    PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
+                    PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
+                }
+                break;
         }
 
         // ---- DRAW NODES & CONNECTIONS ----
         nodes.ForEach( e => e.Draw(offset) );
+        nodes.ForEach( e => e.Connections.ForEach( e => e.Draw()));
 
         // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();

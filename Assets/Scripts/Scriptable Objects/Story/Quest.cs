@@ -29,11 +29,20 @@ public class Quest : StoryNode
 
     // ---- EDITOR ----
     // A reference to all lines that are associatec with this quest, even if not connected to the dialogue tree
-    public List<DialogueLine> Lines;
-    // The Title of the Quest
-    public string Title;
-    // The Position in the editor
-    public Vector2 EditorPos;
+    List<DialogueLine> Lines;
+    ConnectionPoint InPoint;
+    List<ConnectionPoint> OutPoints;
+
+    public override List<Connection> Connections
+    {
+        get
+        {
+            return Links
+            .Where( e => e.NextQuest != null )
+            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isSelected ? i : 0].Center))
+            .ToList();
+        }
+    }
 
     // Constructor
     public Quest() : base()
@@ -41,15 +50,13 @@ public class Quest : StoryNode
         // Init Lists
         Links = new List<Link>();
         Lines = new List<DialogueLine>();
+
     }
     public override void OnEnable()
     {
         base.OnEnable();
-
-        Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
-        Size.y = 40;
-
         UpdateLinks();
+        InPoint = new ConnectionPoint(this, ConnectionPointType.In);
     }
 
     /// <summary>
@@ -88,11 +95,38 @@ public class Quest : StoryNode
 
         // Set this Quests Links to the new links
         Links = links;
+
+        OutPoints = Links
+        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, i))
+        .ToList();
     }
 
     public override void Draw(Vector2 offset)
     {
-        base.Draw(offset);
-        GUI.Label(rect, Title, LabelStyle);
+        InPoint.Draw();
+        if (isSelected)
+        {
+            OutPoints.ForEach( e => e.Draw() );
+            Size.x = 0;
+            Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(Title)).x) );
+            Size.y = 40 + Links.Count * 25; 
+            base.Draw(offset);
+            LabelStyle.alignment = TextAnchor.UpperRight;
+            for (int i = 0; i < Links.Count; i++)
+            {
+                Rect labelRect = rect;
+                labelRect.position += new Vector2(0, 25 * i);
+                GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
+            }
+        }
+        else
+        {
+            OutPoints[0].Draw();
+            Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
+            Size.y = 40; 
+            base.Draw(offset);
+            LabelStyle.alignment = TextAnchor.UpperCenter;
+            GUI.Label(rect, Title, LabelStyle);
+        }
     }
 }

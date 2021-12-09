@@ -3,9 +3,6 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueLine : ScriptableObject
 {
-    // Title is for editor only
-    public string Title;
-
     // Text of the line
     public string Text;
 
