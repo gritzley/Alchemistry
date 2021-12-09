@@ -60,6 +60,7 @@ public class StoryEditor : EditorWindow
         nodes.ForEach( e => e.Draw(offset) );
 
         // ---- PROCESS EVENTS ----
+        nodes.ForEach( e => e.ProcessEvent(Event.current));
         switch (Event.current.type)
         {
             case EventType.MouseDrag:

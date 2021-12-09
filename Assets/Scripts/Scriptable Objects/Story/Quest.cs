@@ -49,7 +49,6 @@ public class Quest : StoryNode
         Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
         Size.y = 40;
 
-        Position = EditorPos;
         UpdateLinks();
     }
 
