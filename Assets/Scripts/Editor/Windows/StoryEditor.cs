@@ -56,9 +56,6 @@ public class StoryEditor : EditorWindow
         DrawGrid(20, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
 
-        // ---- DRAW NODES & CONNECTIONS ----
-        nodes.ForEach( e => e.Draw(offset) );
-
         // ---- PROCESS EVENTS ----
         nodes.ForEach( e => e.ProcessEvent(Event.current));
         switch (Event.current.type)
@@ -79,6 +76,9 @@ public class StoryEditor : EditorWindow
                 }
                 break;
         }
+
+        // ---- DRAW NODES & CONNECTIONS ----
+        nodes.ForEach( e => e.Draw(offset) );
 
         // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();
