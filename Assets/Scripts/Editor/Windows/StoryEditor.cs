@@ -5,11 +5,13 @@ using System.Linq;
 
 public class StoryEditor : EditorWindow
 {
-    // The position in the view the window is focusing on
-    Vector2 viewPosition;
+    // The amount of offset the Window has
+    Vector2 offset;
 
     // Flag to see whether the view is currently being dragged
     bool isDragging;
+
+    List<StoryNode> nodes;
 
     /// <summary>
     /// Add a Menu Item to open the window
@@ -28,7 +30,13 @@ public class StoryEditor : EditorWindow
     private void OnEnable()
     {
         // Set the Editor to the center of the Screen
-        viewPosition = new Vector2(0,0);
+        offset = new Vector2(0,0);
+
+        // Collect Quest Assets
+        nodes = AssetDatabase.FindAssets("t:Quest", new string[] { "Assets/Dialogue" })
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (StoryNode)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
+        .ToList();
     }
 
     /// <summary>
@@ -44,15 +52,18 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void OnGUI()
     {
-        // ------------------- DRAW GRID ------------------
+        // ---- DRAW GRID ----
         DrawGrid(20, 0.2f, Color.gray);
         DrawGrid(100, 0.4f, Color.gray);
 
-        // ------------------- PROCESS EVENTS -------------
+        // ---- DRAW NODES & CONNECTIONS ----
+        nodes.ForEach( e => e.Draw(offset) );
+
+        // ---- PROCESS EVENTS ----
         switch (Event.current.type)
         {
             case EventType.MouseDrag:
-                // If Left Mouse Button is clicked, drag
+                // If Left Mouse Button is clicked, drags
                 if (Event.current.button == 0)
                 {
                     // Set the view to dragging mode
@@ -60,7 +71,7 @@ public class StoryEditor : EditorWindow
 
                     // Move the position in the view
                     Vector2 drag = Event.current.delta;
-                    viewPosition += drag;
+                    offset += drag;
 
                     // Log window changes so we get a repaint
                     GUI.changed = true;
@@ -89,7 +100,7 @@ public class StoryEditor : EditorWindow
         // Set color
         Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
 
-        Vector3 gridPosition = new Vector3(viewPosition.x % gridSpacing, viewPosition.y % gridSpacing, 0);
+        Vector3 gridPosition = new Vector3(offset.x % gridSpacing, offset.y % gridSpacing, 0);
 
         // Draw Lines
         for (int i = 0; i < widthDivs; i++)

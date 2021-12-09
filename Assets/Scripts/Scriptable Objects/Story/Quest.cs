@@ -4,8 +4,18 @@ using UnityEngine;
 using UnityEditor;
 
 [System.Serializable]
-public class Quest : ScriptableObject
+public class Quest : StoryNode
 {
+
+    // ---- STORY TREE ----
+    // The First Line of the dialogue before the choice of potion
+    public DialogueLine PrecedingStartLine;
+    // The first line of the dialogue after the choice of potion
+    public DialogueLine SucceedingStartLine;
+    // The current Line
+    public DialogueLine CurrentLine;
+
+    // ---- LINKS ----
     // Struct for Links, that link a Potion to a new quest
     [System.Serializable]
     public struct Link
@@ -17,32 +27,29 @@ public class Quest : ScriptableObject
     // A List of Links for this quest
     public List<Link> Links;
 
-    // The First Line of the dialogue before the choice of potion
-    public DialogueLine PrecedingStartLine;
-    // The first line of the dialogue after the choice of potion
-    public DialogueLine SucceedingStartLine;
-
-    // The current Line
-    public DialogueLine CurrentLine;
-
-    // Stuff for the Editor
-
-    // The Position in the editor
-    public Vector2 EditorPos;
-    // The Title of the Quest
-    public string Title;
+    // ---- EDITOR ----
     // A reference to all lines that are associatec with this quest, even if not connected to the dialogue tree
     public List<DialogueLine> Lines;
+    // The Title of the Quest
+    public string Title;
+    // The Position in the editor
+    public Vector2 EditorPos;
 
     // Constructor
-    public Quest()
+    public Quest() : base()
     {
-        // Init Links
+        // Init Lists
         Links = new List<Link>();
         Lines = new List<DialogueLine>();
     }
-    void OnEnable()
+    public override void OnEnable()
     {
+        base.OnEnable();
+
+        Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
+        Size.y = 40;
+
+        Position = EditorPos;
         UpdateLinks();
     }
 
@@ -82,5 +89,11 @@ public class Quest : ScriptableObject
 
         // Set this Quests Links to the new links
         Links = links;
+    }
+
+    public override void Draw(Vector2 offset)
+    {
+        base.Draw(offset);
+        GUI.Label(rect, Title, LabelStyle);
     }
 }

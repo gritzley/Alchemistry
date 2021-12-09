@@ -11,7 +11,7 @@ public class Potion : ScriptableObject
         public Ingredient.Type Ingredient;
         // The time it needs to cook before the next step
         public float Time;
-
+        // The amount of time one can be off the intended time
         public float ErrorMargin;
     }
 
