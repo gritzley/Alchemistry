@@ -93,8 +93,8 @@ public class StoryEditor : EditorWindow
         }
 
         // ---- DRAW NODES & CONNECTIONS ----
-        nodes.ForEach( e => e.Draw(offset) );
         nodes.ForEach( e => e.Connections.ForEach( e => e.Draw()));
+        nodes.ForEach( e => e.Draw(offset) );
 
         // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();
