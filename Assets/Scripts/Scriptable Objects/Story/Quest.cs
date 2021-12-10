@@ -96,6 +96,7 @@ public class Quest : StoryNode
         // Set this Quests Links to the new links
         Links = links;
 
+        // Create enough Out nodes for all potions
         OutPoints = Links
         .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, i))
         .ToList();
@@ -104,14 +105,14 @@ public class Quest : StoryNode
     public override void Draw(Vector2 offset)
     {
         InPoint.Draw();
+        // ---- NODE UNFOLDED ----
         if (isSelected)
         {
             OutPoints.ForEach( e => e.Draw() );
             Size.x = 0;
-            Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(Title)).x) );
+            Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
             Size.y = 40 + Links.Count * 25; 
             base.Draw(offset);
-            LabelStyle.alignment = TextAnchor.UpperRight;
             for (int i = 0; i < Links.Count; i++)
             {
                 Rect labelRect = rect;
@@ -119,13 +120,13 @@ public class Quest : StoryNode
                 GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
             }
         }
+        /// ---- NODE FOLDED ----
         else
         {
             OutPoints[0].Draw();
             Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
-            Size.y = 40; 
+            Size.y = 40;
             base.Draw(offset);
-            LabelStyle.alignment = TextAnchor.UpperCenter;
             GUI.Label(rect, Title, LabelStyle);
         }
     }
