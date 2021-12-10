@@ -40,14 +40,6 @@ public class StoryEditor : EditorWindow
     }
 
     /// <summary>
-    /// Deinitialize Window
-    /// </summary>
-    private void OnDisable()
-    {
-
-    }
-
-    /// <summary>
     /// OnGUI is called whenever the window is being drawn. This is essentially the main function of the Window
     /// </summary>
     private void OnGUI()
@@ -112,14 +104,11 @@ public class StoryEditor : EditorWindow
         int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);
         int heightDivs = Mathf.CeilToInt(position.height / gridSpacing);
 
-        // Begin drawing
         Handles.BeginGUI();
-        // Set color
         Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
 
         Vector3 gridPosition = new Vector3(offset.x % gridSpacing, offset.y % gridSpacing, 0);
 
-        // Draw Lines
         for (int i = 0; i < widthDivs; i++)
         {
             Handles.DrawLine(new Vector3(gridSpacing * i, -gridSpacing, 0) + gridPosition, new Vector3(gridSpacing * i, position.height, 0f) + gridPosition);
@@ -129,9 +118,7 @@ public class StoryEditor : EditorWindow
             Handles.DrawLine(new Vector3(-gridSpacing, gridSpacing * j, 0) + gridPosition, new Vector3(position.width, gridSpacing * j, 0f) + gridPosition);
         }
 
-        // Reset color
         Handles.color = Color.white;
-        // Stop Drawing
         Handles.EndGUI();
     }
 }
