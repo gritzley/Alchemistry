@@ -50,13 +50,12 @@ public class Quest : StoryNode
         // Init Lists
         Links = new List<Link>();
         Lines = new List<DialogueLine>();
-
     }
     public override void OnEnable()
     {
         base.OnEnable();
         UpdateLinks();
-        InPoint = new ConnectionPoint(this, ConnectionPointType.In);
+        InPoint = new ConnectionPoint(this, ConnectionPointType.In, () => { SelectInPoint(); });
     }
 
     /// <summary>
@@ -96,10 +95,53 @@ public class Quest : StoryNode
         // Set this Quests Links to the new links
         Links = links;
 
+
         // Create enough Out nodes for all potions
         OutPoints = Links
-        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, i))
+        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => { SelectOutPoint(i); }, i))
         .ToList();
+    }
+
+    private void SelectOutPoint(int i)
+    {
+        if (ConnectionPoint.selectedInPoint != null)
+        {
+            if (ConnectionPoint.selectedInPoint.Parent is Quest)
+            {
+                Link link = Links[i];
+                link.NextQuest = (Quest)ConnectionPoint.selectedInPoint.Parent;
+                Links[i] = link;
+                ConnectionPoint.selectedInPoint = null;
+            }
+        }
+        else
+        {
+            ConnectionPoint.selectedOutPoint = OutPoints[i];
+        }
+    }
+
+    private void SelectInPoint()
+    {
+        ConnectionPoint outPoint = ConnectionPoint.selectedOutPoint;
+        if (outPoint != null)
+        {
+            if (outPoint.Parent is Quest)
+            {
+                Quest.Link link = ((Quest)outPoint.Parent).Links[outPoint.Index];
+                link.NextQuest = this;
+                ((Quest)outPoint.Parent).Links[outPoint.Index] = link;
+                ConnectionPoint.selectedOutPoint = null;
+            }
+        }
+        else
+        {
+            ConnectionPoint.selectedInPoint = InPoint;
+        }
+    }
+
+    public override void OnClick()
+    {
+        Selection.activeObject = this;
     }
 
     public override void Draw(Vector2 offset)
@@ -111,7 +153,7 @@ public class Quest : StoryNode
             OutPoints.ForEach( e => e.Draw() );
             Size.x = 0;
             Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
-            Size.y = 40 + Links.Count * 25; 
+            Size.y = 15 + Links.Count * 25; 
             base.Draw(offset);
             for (int i = 0; i < Links.Count; i++)
             {
@@ -129,5 +171,19 @@ public class Quest : StoryNode
             base.Draw(offset);
             GUI.Label(rect, Title, LabelStyle);
         }
+    }
+
+    public override void ProcessEvent(Event e)
+    {
+        InPoint.ProcessEvent(e);
+        if (isSelected)
+        {
+            OutPoints.ForEach( p => p.ProcessEvent(e));
+        }
+        else
+        {
+            OutPoints[0].ProcessEvent(e);
+        }
+        base.ProcessEvent(e);
     }
 }

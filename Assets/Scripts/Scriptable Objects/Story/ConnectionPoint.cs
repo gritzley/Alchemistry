@@ -1,20 +1,26 @@
+using System;
 using UnityEngine;
 using UnityEditor;
 public enum ConnectionPointType { In, Out }
 
 public class ConnectionPoint
 {
-    public Vector2 Center { get { return rect.center; } } 
+    public static ConnectionPoint selectedInPoint, selectedOutPoint;
+    public Vector2 Center { get { return rect.center; } }
+    public StoryNode Parent { get { return parent; } }
+    public int Index { get { return index; } }
+    StoryNode parent;
     ConnectionPointType type;
     GUIStyle style;
-    StoryNode parent;
     Rect rect;
     int index;
-    public ConnectionPoint(StoryNode parent, ConnectionPointType type, int index = 0)
+    Action OnClick;
+    public ConnectionPoint(StoryNode parent, ConnectionPointType type, Action OnClick, int index = 0)
     {
         this.parent = parent;
         this.type = type;
         this.index = index;
+        this.OnClick = OnClick;
         style = new GUIStyle();
         switch (type)
         {
@@ -33,14 +39,27 @@ public class ConnectionPoint
         rect = new Rect(0, 0, 10, 20);
     }
 
+    public void ProcessEvent(Event e)
+    {
+        switch (e.type)
+        {
+            case EventType.MouseDown:
+                if (rect.Contains(e.mousePosition))
+                {
+                    OnClick();
+                    e.Use();
+                }
+                break;
+        }
+        
+    }
+
     public void Draw()
     {
-        float xPos = type == ConnectionPointType.In ? parent.rect.xMin : parent.rect .xMax - 10;
+        float xPos = type == ConnectionPointType.In ? parent.rect.xMin - 2 : parent.rect .xMax - 8;
         float yPos = parent.rect.yMin + 10 + index * 25;
         rect.position = new Vector2(xPos, yPos);
-        if (GUI.Button(rect, "", style))
-        {
 
-        }
+        GUI.Button(rect, "", style);
     }
 }

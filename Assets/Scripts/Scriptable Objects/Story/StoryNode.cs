@@ -45,10 +45,12 @@ public abstract class StoryNode : ScriptableObject
                 if (rect.Contains(e.mousePosition))
                 {
                     isSelected = true;
+                    OnClick();
                     if (e.button == 0)
                     {
                         isDragging = true;
                     }
+                    e.Use();
                 }
                 else if (isSelected)
                 {
@@ -89,4 +91,6 @@ public abstract class StoryNode : ScriptableObject
         // Draw own box
         GUI.Box(rect, "", isSelected ? selectedStyle : style);
     }
+
+    public virtual void OnClick() { }
 }
