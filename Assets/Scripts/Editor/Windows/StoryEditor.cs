@@ -52,6 +52,11 @@ public class StoryEditor : EditorWindow
         nodes.ForEach( e => e.ProcessEvent(Event.current));
         switch (Event.current.type)
         {
+            case EventType.MouseDown:
+                ConnectionPoint.selectedInPoint = null;
+                ConnectionPoint.selectedOutPoint = null;
+                break;
+
             case EventType.MouseDrag:
 
                 // ---- DRAG ----
@@ -88,6 +93,17 @@ public class StoryEditor : EditorWindow
         nodes.ForEach( e => e.Connections.ForEach( e => e.Draw()));
         nodes.ForEach( e => e.Draw(offset) );
 
+        if (ConnectionPoint.selectedInPoint != null && ConnectionPoint.selectedOutPoint == null)
+        {
+            new Connection(ConnectionPoint.selectedInPoint.Center, Event.current.mousePosition).Draw();
+            GUI.changed = true; // Set this to redraw
+        }
+        if (ConnectionPoint.selectedOutPoint != null && ConnectionPoint.selectedInPoint == null)
+        {
+            new Connection(Event.current.mousePosition, ConnectionPoint.selectedOutPoint.Center).Draw();
+            GUI.changed = true; // Set this to redraw
+        }
+
         // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();
     }
@@ -98,7 +114,7 @@ public class StoryEditor : EditorWindow
     /// <param name="gridSpacing">The spacing between the grids line</param>
     /// <param name="gridOpacity">The opacity of the grids lines</param>
     /// <param name="gridColor">The color of the girds lines</param>
-    private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
+    void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
     {
         // calculate how many lines to draw
         int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);

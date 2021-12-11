@@ -17,8 +17,6 @@ public class DialogueBranchEditor : Editor
         linksProp = serializedObject.FindProperty("Links");
 
         (target as DialogueBranch).UpdateLinks();
-
-        Debug.Log(linksProp);
     }
 
     public override void OnInspectorGUI()
