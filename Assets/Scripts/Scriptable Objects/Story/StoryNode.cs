@@ -7,12 +7,11 @@ using UnityEngine;
 public abstract class StoryNode : ScriptableObject
 {
     GUIStyle style, selectedStyle;
-    bool isDragging;
     // Size and Position in Editor
     public Vector2 Position, Size;
     public GUIStyle LabelStyle;
     public Rect rect;
-    public bool isSelected;
+    public bool isDragging;
     public string Title;
     public abstract List<Connection> Connections { get; }
 
@@ -40,17 +39,12 @@ public abstract class StoryNode : ScriptableObject
     {
         switch(e.type)
         {
-            // ---- MOUSE CLICKS ----
+            // ---- DAG START ----
             case EventType.MouseDown:
-                if (rect.Contains(e.mousePosition))
+                isDragging = rect.Contains(e.mousePosition);
+                if (isDragging)
                 {
-                    isSelected = true;
-                    OnClick();
-                    if (e.button == 0)
-                    {
-                        isDragging = true;
-                    }
-                    e.Use();
+                    Selection.activeObject = this;
                 }
                 break;
 
@@ -58,8 +52,6 @@ public abstract class StoryNode : ScriptableObject
             case EventType.MouseDrag:
                 if (isDragging)
                 {
-                    isDragging = true;
-
                     // Move the position in the view
                     Position += Event.current.delta;
 
@@ -84,8 +76,6 @@ public abstract class StoryNode : ScriptableObject
     {
         rect = new Rect(Position + offset, Size);
         // Draw own box
-        GUI.Box(rect, "", isSelected ? selectedStyle : style);
+        GUI.Box(rect, "", Selection.activeObject == this ? selectedStyle : style);
     }
-
-    public virtual void OnClick() { }
 }

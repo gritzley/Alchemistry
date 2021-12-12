@@ -11,6 +11,7 @@ public class StoryEditor : EditorWindow
     // Flag to see whether the view is currently being dragged
     bool isDragging;
     List<StoryNode> nodes;
+    List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
 
     /// <summary>
     /// Add a Menu Item to open the window
@@ -55,7 +56,8 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDown:
                 ConnectionPoint.selectedInPoint = null;
                 ConnectionPoint.selectedOutPoint = null;
-                nodes.ForEach( e => e.isSelected = false);
+                questNodes.ForEach( e => e.isUnfolded = false );
+                GUI.changed = true;
                 break;
 
             case EventType.MouseDrag:

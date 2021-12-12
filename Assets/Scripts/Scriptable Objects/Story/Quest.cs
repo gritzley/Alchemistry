@@ -33,21 +33,23 @@ public class Quest : StoryNode
     ConnectionPoint InPoint;
     List<ConnectionPoint> OutPoints;
 
+    public bool isUnfolded;
+
     public override List<Connection> Connections
     {
         get
         {
             return Links
             .Where( e => e.NextQuest != null )
-            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isSelected ? i : 0].Center, () => {
-                if (isSelected) {
+            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => {
+                if (isUnfolded) {
                     Link link = Links[i];
                     link.NextQuest = null;
                     Links[i] = link;
                 }
                 else
                 {
-                    isSelected = true;
+                    isUnfolded = true;
                 }
             }))
             .ToList();
@@ -113,7 +115,10 @@ public class Quest : StoryNode
 
     private void SelectLinkOutPoint(int i)
     {
-        if (ConnectionPoint.selectedInPoint != null)
+        if (!isUnfolded) {
+            isUnfolded = true;
+        }
+        else if (ConnectionPoint.selectedInPoint != null)
         {
             if (ConnectionPoint.selectedInPoint.Parent is Quest)
             {
@@ -148,18 +153,13 @@ public class Quest : StoryNode
         }
     }
 
-    public override void OnClick()
-    {
-        Selection.activeObject = this;
-    }
-
     public override void Draw(Vector2 offset)
     {
         InPoint.Draw();
         Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
 
         // ---- NODE UNFOLDED ----
-        if (isSelected)
+        if (isUnfolded)
         {
             OutPoints.ForEach( e => e.Draw() );
             Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
@@ -185,6 +185,15 @@ public class Quest : StoryNode
     public override void ProcessEvent(Event e)
     {
         InPoint.ProcessEvent(e);
+        if (isUnfolded)
+        {
+            OutPoints.ForEach( p => p.ProcessEvent(e));
+        }
+        else
+        {
+            OutPoints[0].ProcessEvent(e);
+        }
+        base.ProcessEvent(e);
         switch(e.type)
         {
             case EventType.MouseDown:
@@ -195,22 +204,14 @@ public class Quest : StoryNode
                         SelectInPoint();
                         e.Use();
                     }
-                    else if (!isSelected)
+                    else
                     {
-                        isSelected = true;
+                        isUnfolded = true;
+                        GUI.changed = true;
                         e.Use();
                     }
                 }
                 break;
         }
-        if (isSelected)
-        {
-            OutPoints.ForEach( p => p.ProcessEvent(e));
-        }
-        else
-        {
-            OutPoints[0].ProcessEvent(e);
-        }
-        base.ProcessEvent(e);
     }
 }
