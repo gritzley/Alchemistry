@@ -48,6 +48,7 @@ public class StoryEditor : EditorWindow
         DrawGrid(100, 0.4f, Color.gray);
 
         // ---- PROCESS EVENTS ----
+        nodes.ForEach( e => e.Connections.ForEach( e => e.ProcessEvent(Event.current)));
         nodes.ForEach( e => e.ProcessEvent(Event.current));
         switch (Event.current.type)
         {

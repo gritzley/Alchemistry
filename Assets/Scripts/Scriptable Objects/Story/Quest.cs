@@ -39,7 +39,17 @@ public class Quest : StoryNode
         {
             return Links
             .Where( e => e.NextQuest != null )
-            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isSelected ? i : 0].Center))
+            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isSelected ? i : 0].Center, () => {
+                if (isSelected) {
+                    Link link = Links[i];
+                    link.NextQuest = null;
+                    Links[i] = link;
+                }
+                else
+                {
+                    isSelected = true;
+                }
+            }))
             .ToList();
         }
     }
@@ -185,11 +195,14 @@ public class Quest : StoryNode
                         SelectInPoint();
                         e.Use();
                     }
-                    
+                    else if (!isSelected)
+                    {
+                        isSelected = true;
+                        e.Use();
+                    }
                 }
                 break;
         }
-        base.ProcessEvent(e);
         if (isSelected)
         {
             OutPoints.ForEach( p => p.ProcessEvent(e));
@@ -198,5 +211,6 @@ public class Quest : StoryNode
         {
             OutPoints[0].ProcessEvent(e);
         }
+        base.ProcessEvent(e);
     }
 }
