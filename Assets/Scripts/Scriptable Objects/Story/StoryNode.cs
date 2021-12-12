@@ -44,18 +44,16 @@ public abstract class StoryNode : ScriptableObject
             case EventType.MouseDown:
                 if (rect.Contains(e.mousePosition))
                 {
-                    isSelected = true;
+                    if (!isSelected)
+                    {
+                        isSelected = true;
+                        e.Use();
+                    }
                     OnClick();
                     if (e.button == 0)
                     {
                         isDragging = true;
                     }
-                    e.Use();
-                }
-                else if (isSelected)
-                {
-                    isSelected = false;
-                    GUI.changed = true;
                 }
                 break;
 

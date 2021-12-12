@@ -15,6 +15,7 @@ public class ConnectionPoint
     Rect rect;
     int index;
     Action OnClick;
+    Action OnRemove;
     public ConnectionPoint(StoryNode parent, ConnectionPointType type, Action OnClick, int index = 0)
     {
         this.parent = parent;

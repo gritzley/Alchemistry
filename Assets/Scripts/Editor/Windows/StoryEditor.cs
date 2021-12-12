@@ -10,7 +10,6 @@ public class StoryEditor : EditorWindow
 
     // Flag to see whether the view is currently being dragged
     bool isDragging;
-
     List<StoryNode> nodes;
 
     /// <summary>
@@ -55,6 +54,7 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDown:
                 ConnectionPoint.selectedInPoint = null;
                 ConnectionPoint.selectedOutPoint = null;
+                nodes.ForEach( e => e.isSelected = false);
                 break;
 
             case EventType.MouseDrag:

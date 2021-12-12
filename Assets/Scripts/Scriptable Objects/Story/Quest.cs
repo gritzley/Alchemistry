@@ -95,14 +95,13 @@ public class Quest : StoryNode
         // Set this Quests Links to the new links
         Links = links;
 
-
-        // Create enough Out nodes for all potions
+        // Create enough Out points for all potions
         OutPoints = Links
-        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => { SelectOutPoint(i); }, i))
+        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => { SelectLinkOutPoint(i); }, i))
         .ToList();
     }
 
-    private void SelectOutPoint(int i)
+    private void SelectLinkOutPoint(int i)
     {
         if (ConnectionPoint.selectedInPoint != null)
         {
@@ -147,13 +146,14 @@ public class Quest : StoryNode
     public override void Draw(Vector2 offset)
     {
         InPoint.Draw();
+        Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
+
         // ---- NODE UNFOLDED ----
         if (isSelected)
         {
             OutPoints.ForEach( e => e.Draw() );
-            Size.x = 0;
             Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
-            Size.y = 15 + Links.Count * 25; 
+            Size.y = 15 + OutPoints.Count * 25; 
             base.Draw(offset);
             for (int i = 0; i < Links.Count; i++)
             {
@@ -166,7 +166,6 @@ public class Quest : StoryNode
         else
         {
             OutPoints[0].Draw();
-            Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
             Size.y = 40;
             base.Draw(offset);
             GUI.Label(rect, Title, LabelStyle);
@@ -176,6 +175,21 @@ public class Quest : StoryNode
     public override void ProcessEvent(Event e)
     {
         InPoint.ProcessEvent(e);
+        switch(e.type)
+        {
+            case EventType.MouseDown:
+                if (rect.Contains(e.mousePosition))
+                {
+                    if (ConnectionPoint.selectedOutPoint != null)
+                    {
+                        SelectInPoint();
+                        e.Use();
+                    }
+                    
+                }
+                break;
+        }
+        base.ProcessEvent(e);
         if (isSelected)
         {
             OutPoints.ForEach( p => p.ProcessEvent(e));
@@ -184,6 +198,5 @@ public class Quest : StoryNode
         {
             OutPoints[0].ProcessEvent(e);
         }
-        base.ProcessEvent(e);
     }
 }
