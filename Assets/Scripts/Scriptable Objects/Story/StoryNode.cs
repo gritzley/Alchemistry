@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -13,6 +14,8 @@ public abstract class StoryNode : ScriptableObject
     public bool isDragging;
     public string Title;
     public abstract List<Connection> Connections { get; }
+
+    public Action<StoryNode> OnRemove;
 
     public StoryNode() {
         
@@ -83,22 +86,38 @@ public abstract class StoryNode : ScriptableObject
                 break;
         }
     }
-    public virtual void Draw(Vector2 offset)
+
+    /// <summary>
+    /// Draws the Node on screen
+    /// </summary>
+    /// <param name="offset">The window offset, needed to draw the node at the correct place</param>
+    /// <param name="state">The index of the current viewState. This is only relevant for overrides so we overwrite this and drop it</param>
+    public virtual void Draw(Vector2 offset, int state = 0)
     {
         rect = new Rect(Position + offset, Size);
         // Draw own box
         GUI.Box(rect, "", Selection.activeObject == this ? selectedStyle : style);
     }
 
+    /// <summary>
+    /// This is where we define the content for this nodes contet menu
+    /// By defautl this only adds a "Remove Node" button
+    /// Overwrite this to add more buttons
+    /// </summary>
+    /// <param name="contextMenu">A reference to the context Menu. Fill it by calling AddItem on it</param>
     public virtual void FillContextMenu(GenericMenu contextMenu)
     {
         contextMenu.AddItem(new GUIContent("Remove Node"), false, Remove);
         GUI.changed = true;
     }
 
+    /// <summary>
+    /// Removes this Nodes Asset from the AssetDatabase and calls the OnRemove Action to handle additional OnRemove Stuff
+    /// </summary>
     public virtual void Remove()
     {
         AssetDatabase.DeleteAsset($"Assets/Dialogue/{this.name}.asset");
         AssetDatabase.SaveAssets();
+        OnRemove?.Invoke(this);
     }
 }

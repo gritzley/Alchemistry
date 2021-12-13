@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class DialogueLine : ScriptableObject
+public class DialogueLine : StoryNode
 {
     // Text of the line
     public string Text;
@@ -19,4 +20,9 @@ public class DialogueLine : ScriptableObject
 
     // Position in Editor (relative to parent quest node)
     public Vector2 EditorPos = Vector2.zero;
+
+    public override List<Connection> Connections
+    {
+        get => new List<Connection>();
+    }
 }

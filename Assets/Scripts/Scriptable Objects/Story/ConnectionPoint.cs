@@ -14,8 +14,8 @@ public class ConnectionPoint
     GUIStyle style;
     Rect rect;
     int index;
-    Action OnClick;
-    public ConnectionPoint(StoryNode parent, ConnectionPointType type, Action OnClick, int index = 0)
+    Action<int> OnClick;
+    public ConnectionPoint(StoryNode parent, ConnectionPointType type, Action<int> OnClick, int index = 0)
     {
         this.parent = parent;
         this.type = type;
@@ -46,7 +46,7 @@ public class ConnectionPoint
             case EventType.MouseDown:
                 if (rect.Contains(e.mousePosition))
                 {
-                    OnClick();
+                    OnClick(index);
                     e.Use();
                 }
                 break;

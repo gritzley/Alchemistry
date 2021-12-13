@@ -3,9 +3,16 @@ using UnityEditor;
 using System.Collections.Generic;
 using System.Linq;
 
+[System.Serializable]
 public class StoryEditor : EditorWindow
 {
+    public enum ViewState
+    {
+        QuestView,
+        DialogueView
+    }
     Vector2 offset;
+    ViewState viewState;
     bool isDragging;
     List<StoryNode> nodes;
     List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
@@ -27,6 +34,7 @@ public class StoryEditor : EditorWindow
     private void OnEnable()
     {
         offset = new Vector2(PlayerPrefs.GetFloat("StoryEditorOffsetX", 0), PlayerPrefs.GetFloat("StoryEditorOffsetY", 0));
+        ViewQuests();
     }
 
     /// <summary>
@@ -34,6 +42,7 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void ViewQuests()
     {
+        viewState = ViewState.QuestView;
         // There is no simple way to get all assets of a certain type.
         // Instead we are getting a list of all internal references to quest assets in a list of directories
         // which we convert to actual paths, which we then use to load the actual assets.
@@ -41,20 +50,29 @@ public class StoryEditor : EditorWindow
         .Select( e => {
             string path = AssetDatabase.GUIDToAssetPath(e);
             Quest quest = (Quest)AssetDatabase.LoadAssetAtPath(path, typeof(Quest));
-            quest.OnRemove = () => RemoveQuestFromView(quest);
+            quest.OnRemove = RemoveNodeFromView;
+            quest.ViewDialogue = ViewQuestDialogue;
 
             return (StoryNode)quest;
         })
         .ToList();
     }
 
+    private void ViewQuestDialogue(Quest quest)
+    {
+        viewState = ViewState.DialogueView;
+        nodes = new List<StoryNode>();
+        nodes.Add(quest);
+        nodes.AddRange(quest.Lines);
+    }
+
     /// <summary>
     /// Removes a quest from the current node view
     /// </summary>
     /// <param name="quest"> The quest to be removed</param>
-    private void RemoveQuestFromView(Quest quest)
+    private void RemoveNodeFromView(StoryNode node)
     {
-        nodes.Remove(quest);
+        nodes.Remove(node);
     }
 
     /// <summary>
@@ -70,7 +88,8 @@ public class StoryEditor : EditorWindow
 
         quest.Title = quest.name;
         quest.Position = position;
-        quest.OnRemove = () => RemoveQuestFromView(quest);
+        quest.OnRemove = RemoveNodeFromView;
+        quest.ViewDialogue = ViewQuestDialogue;
 
         EditorUtility.SetDirty(quest);
         AssetDatabase.SaveAssets();
@@ -144,7 +163,7 @@ public class StoryEditor : EditorWindow
 
         // ---- DRAW NODES & CONNECTIONS ----
         nodes.ForEach( e => e.Connections.ForEach( e => e.Draw()));
-        nodes.ForEach( e => e.Draw(offset) );
+        nodes.ForEach( e => e.Draw(offset, (int)viewState) );
 
         if (ConnectionPoint.selectedInPoint != null && ConnectionPoint.selectedOutPoint == null)
         {

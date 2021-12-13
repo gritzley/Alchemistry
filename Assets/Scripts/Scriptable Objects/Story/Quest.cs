@@ -30,37 +30,33 @@ public class Quest : StoryNode
 
     // ---- EDITOR ----
     // A reference to all lines that are associatec with this quest, even if not connected to the dialogue tree
-    List<DialogueLine> Lines;
     ConnectionPoint InPoint;
     List<ConnectionPoint> OutPoints;
+    public List<DialogueLine> Lines;
     public bool isUnfolded;
-    public Action OnRemove;
+    public Action<Quest> ViewDialogue;
 
     public override List<Connection> Connections
     {
-        get
+        get 
         {
-            return Links
-            .Where( e => e.NextQuest != null )
-            .Select( (e, i) => new Connection(e.NextQuest.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => {
-                if (isUnfolded) {
-                    Link link = Links[i];
-                    link.NextQuest = null;
-                    Links[i] = link;
-                }
-                else
+            List<Connection> connections = new List<Connection>();
+
+            foreach(Link link in Links)
+            {
+                if (link.NextQuest != null)
                 {
-                    isUnfolded = true;
+                    int i = Links.IndexOf(link);
+                    connections.Add(new Connection(link.NextQuest.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => ClickConnection(i) ));
                 }
-            }))
-            .ToList();
+            }
+
+            return connections;
         }
     }
 
-    // Constructor
     public Quest() : base()
     {
-        // Init Lists
         Links = new List<Link>();
         Lines = new List<DialogueLine>();
     }
@@ -77,42 +73,23 @@ public class Quest : StoryNode
     /// </summary>
     public void UpdateLinks()
     {
-        // Get all Potion assets and put them in a list
         List<Potion> potions = AssetDatabase.FindAssets("t:Potion")
         .Select( e => AssetDatabase.GUIDToAssetPath(e))
         .Select( e => (Potion)AssetDatabase.LoadAssetAtPath(e, typeof(Potion)))
         .ToList();
 
-        // Craete a new Link list 
-        List<Link> links = new List<Link>();
+        Links.RemoveAll( e => !potions.Contains(e.Potion));
 
-        // Add old Links if the potion still exists
-        foreach (Link link in Links)
+        potions
+        .Except( Links.Where(e => potions.Contains(e.Potion)).Select(e => e.Potion) )
+        .ToList()
+        .ForEach( e => Links.Add(new Link() {Potion = e}));
+
+        OutPoints = new List<ConnectionPoint>();
+        for (int i = 0; i < Links.Count; i++)
         {
-            if (potions.Contains(link.Potion))
-            {
-                links.Add(link);
-                // Remove the potions from the potion list, we made earlier
-                potions.Remove(link.Potion);
-            }
+            OutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, SelectLinkOutPoint, i));
         }
-        
-        // Each Potion that is still in the list, does not have a link in the potion
-        foreach (Potion potion in potions)
-        {
-            // Add links to these potions that point to nothing 
-            Link link = new Link();
-            link.Potion = potion;
-            links.Add(link);
-        }
-
-        // Set this Quests Links to the new links
-        Links = links;
-
-        // Create enough Out points for all potions
-        OutPoints = Links
-        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => SelectLinkOutPoint(i), i))
-        .ToList();
     }
 
     private void SelectLinkOutPoint(int i)
@@ -138,7 +115,7 @@ public class Quest : StoryNode
         }
     }
 
-    private void SelectInPoint()
+    private void SelectInPoint(int i = 0)
     {
         ConnectionPoint outPoint = ConnectionPoint.selectedOutPoint;
         // 
@@ -160,33 +137,59 @@ public class Quest : StoryNode
         }
     }
 
-    public override void Draw(Vector2 offset)
+    public void ClickConnection(int i)
     {
-        InPoint.Draw();
-        Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
-
-        // ---- NODE UNFOLDED ----
-        if (isUnfolded)
-        {
-            OutPoints.ForEach( e => e.Draw() );
-            Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
-            Size.y = 15 + OutPoints.Count * 25; 
-            base.Draw(offset);
-            for (int i = 0; i < Links.Count; i++)
-            {
-                Rect labelRect = rect;
-                labelRect.position += new Vector2(0, 25 * i);
-                GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
-            }
+        if (isUnfolded) {
+            Link link = Links[i];
+            link.NextQuest = null;
+            Links[i] = link;
         }
-
-        /// ---- NODE FOLDED ----
         else
         {
-            OutPoints[0].Draw();
-            Size.y = 40;
-            base.Draw(offset);
-            GUI.Label(rect, Title, LabelStyle);
+            isUnfolded = true;
+        }
+    }
+
+    public override void Draw(Vector2 offset, int state)
+    {
+        Size.x = LabelStyle.CalcSize(new GUIContent(Title)).x;
+
+        switch (state)
+        {
+            // ---- QUEST VIEW ----
+            case 0:
+                InPoint.Draw();
+
+                // ---- NODE UNFOLDED ----
+                if (isUnfolded)
+                {
+                    OutPoints.ForEach( e => e.Draw() );
+                    Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
+                    Size.y = 15 + OutPoints.Count * 25; 
+                    base.Draw(offset);
+                    for (int i = 0; i < Links.Count; i++)
+                    {
+                        Rect labelRect = rect;
+                        labelRect.position += new Vector2(0, 25 * i);
+                        GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
+                    }
+                }
+                /// ---- NODE FOLDED ----
+                else
+                {
+                    OutPoints[0].Draw();
+                    Size.y = 40;
+                    base.Draw(offset);
+                    GUI.Label(rect, Title, LabelStyle);
+                }
+                break;
+
+            case 1:
+                OutPoints[0].Draw();
+                OutPoints[1].Draw();
+                Size.y = 65;
+                base.Draw(offset);
+                break;
         }
     }
 
@@ -229,15 +232,9 @@ public class Quest : StoryNode
         }
     }
 
-    public override void Remove()
-    {
-        base.Remove();
-        OnRemove?.Invoke();
-    }
-
     public override void FillContextMenu(GenericMenu contextMenu)
     {
-        contextMenu.AddItem(new GUIContent("Open Dialogue"), false, () => {});
+        contextMenu.AddItem(new GUIContent("Open Dialogue"), false, () => ViewDialogue?.Invoke(this));
         base.FillContextMenu(contextMenu);
     }
 }
