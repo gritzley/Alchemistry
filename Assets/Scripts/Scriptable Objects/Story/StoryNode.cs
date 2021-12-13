@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -39,12 +38,24 @@ public abstract class StoryNode : ScriptableObject
     {
         switch(e.type)
         {
-            // ---- DAG START ----
             case EventType.MouseDown:
-                isDragging = rect.Contains(e.mousePosition);
-                if (isDragging)
+            // ---- DRAG START ----
+                if (e.button == 0)
                 {
-                    Selection.activeObject = this;
+                    isDragging = rect.Contains(e.mousePosition);
+                    if (isDragging)
+                    {
+                        Selection.activeObject = this;
+                    }
+                }
+
+            // ---- CONTEXT MENU ----
+                if (e.button == 1 && rect.Contains(e.mousePosition))
+                {
+                    GenericMenu contextMenu = new GenericMenu();
+                    FillContextMenu(contextMenu);
+                    contextMenu.ShowAsContext();
+                    e.Use();
                 }
                 break;
 
@@ -77,5 +88,17 @@ public abstract class StoryNode : ScriptableObject
         rect = new Rect(Position + offset, Size);
         // Draw own box
         GUI.Box(rect, "", Selection.activeObject == this ? selectedStyle : style);
+    }
+
+    public virtual void FillContextMenu(GenericMenu contextMenu)
+    {
+        contextMenu.AddItem(new GUIContent("Remove Node"), false, Remove);
+        GUI.changed = true;
+    }
+
+    public virtual void Remove()
+    {
+        AssetDatabase.DeleteAsset($"Assets/Dialogue/{this.name}.asset");
+        AssetDatabase.SaveAssets();
     }
 }

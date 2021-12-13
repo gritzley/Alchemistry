@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -32,8 +33,8 @@ public class Quest : StoryNode
     List<DialogueLine> Lines;
     ConnectionPoint InPoint;
     List<ConnectionPoint> OutPoints;
-
     public bool isUnfolded;
+    public Action OnRemove;
 
     public override List<Connection> Connections
     {
@@ -65,9 +66,10 @@ public class Quest : StoryNode
     }
     public override void OnEnable()
     {
+        isUnfolded = false;
         base.OnEnable();
         UpdateLinks();
-        InPoint = new ConnectionPoint(this, ConnectionPointType.In, () => { SelectInPoint(); });
+        InPoint = new ConnectionPoint(this, ConnectionPointType.In, SelectInPoint);
     }
 
     /// <summary>
@@ -109,7 +111,7 @@ public class Quest : StoryNode
 
         // Create enough Out points for all potions
         OutPoints = Links
-        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => { SelectLinkOutPoint(i); }, i))
+        .Select( (e, i) => new ConnectionPoint(this, ConnectionPointType.Out, () => SelectLinkOutPoint(i), i))
         .ToList();
     }
 
@@ -126,6 +128,8 @@ public class Quest : StoryNode
                 link.NextQuest = (Quest)ConnectionPoint.selectedInPoint.Parent;
                 Links[i] = link;
                 ConnectionPoint.selectedInPoint = null;
+                EditorUtility.SetDirty(this);
+                AssetDatabase.SaveAssets();
             }
         }
         else
@@ -137,6 +141,7 @@ public class Quest : StoryNode
     private void SelectInPoint()
     {
         ConnectionPoint outPoint = ConnectionPoint.selectedOutPoint;
+        // 
         if (outPoint != null)
         {
             if (outPoint.Parent is Quest)
@@ -145,6 +150,8 @@ public class Quest : StoryNode
                 link.NextQuest = this;
                 ((Quest)outPoint.Parent).Links[outPoint.Index] = link;
                 ConnectionPoint.selectedOutPoint = null;
+                EditorUtility.SetDirty(this);
+                AssetDatabase.SaveAssets();
             }
         }
         else
@@ -172,6 +179,7 @@ public class Quest : StoryNode
                 GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
             }
         }
+
         /// ---- NODE FOLDED ----
         else
         {
@@ -184,6 +192,7 @@ public class Quest : StoryNode
 
     public override void ProcessEvent(Event e)
     {
+        // ---- CONECTION POINT EVENTS ----
         InPoint.ProcessEvent(e);
         if (isUnfolded)
         {
@@ -193,25 +202,42 @@ public class Quest : StoryNode
         {
             OutPoints[0].ProcessEvent(e);
         }
+
+        // ---- BASE EVENTS ----
         base.ProcessEvent(e);
+        
+        // ---- ADDITIONAL CLICK EVENTS ----
         switch(e.type)
         {
             case EventType.MouseDown:
-                if (rect.Contains(e.mousePosition))
+                if (e.button == 0 && rect.Contains(e.mousePosition))
                 {
+                    // Connect pending OutPoint
                     if (ConnectionPoint.selectedOutPoint != null)
                     {
                         SelectInPoint();
-                        e.Use();
                     }
+                    // Unfold Node
                     else
                     {
                         isUnfolded = true;
                         GUI.changed = true;
-                        e.Use();
                     }
+                    e.Use();
                 }
                 break;
         }
+    }
+
+    public override void Remove()
+    {
+        base.Remove();
+        OnRemove?.Invoke();
+    }
+
+    public override void FillContextMenu(GenericMenu contextMenu)
+    {
+        contextMenu.AddItem(new GUIContent("Open Dialogue"), false, () => {});
+        base.FillContextMenu(contextMenu);
     }
 }

@@ -5,10 +5,7 @@ using System.Linq;
 
 public class StoryEditor : EditorWindow
 {
-    // The amount of offset the Window has
     Vector2 offset;
-
-    // Flag to see whether the view is currently being dragged
     bool isDragging;
     List<StoryNode> nodes;
     List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
@@ -29,14 +26,55 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void OnEnable()
     {
-        // Set the last logged position
         offset = new Vector2(PlayerPrefs.GetFloat("StoryEditorOffsetX", 0), PlayerPrefs.GetFloat("StoryEditorOffsetY", 0));
+    }
 
-        // Collect Quest Assets
+    /// <summary>
+    /// View all the Quest Assets in the Assets/Dialogue Path as Nodes
+    /// </summary>
+    private void ViewQuests()
+    {
+        // There is no simple way to get all assets of a certain type.
+        // Instead we are getting a list of all internal references to quest assets in a list of directories
+        // which we convert to actual paths, which we then use to load the actual assets.
         nodes = AssetDatabase.FindAssets("t:Quest", new string[] { "Assets/Dialogue" })
-        .Select( e => AssetDatabase.GUIDToAssetPath(e))
-        .Select( e => (StoryNode)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
+        .Select( e => {
+            string path = AssetDatabase.GUIDToAssetPath(e);
+            Quest quest = (Quest)AssetDatabase.LoadAssetAtPath(path, typeof(Quest));
+            quest.OnRemove = () => RemoveQuestFromView(quest);
+
+            return (StoryNode)quest;
+        })
         .ToList();
+    }
+
+    /// <summary>
+    /// Removes a quest from the current node view
+    /// </summary>
+    /// <param name="quest"> The quest to be removed</param>
+    private void RemoveQuestFromView(Quest quest)
+    {
+        nodes.Remove(quest);
+    }
+
+    /// <summary>
+    /// Add a new Quest to the Assets/Dialogue/ directory
+    /// </summary>
+    /// <param name="position"></param>
+    private void AddQuest(Vector2 position)
+    {
+        // GenerateUniqueAssetPath increments the name until a unused name is found
+        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Quest.asset");
+        Quest quest = ScriptableObject.CreateInstance<Quest>();
+        AssetDatabase.CreateAsset(quest, path);
+
+        quest.Title = quest.name;
+        quest.Position = position;
+        quest.OnRemove = () => RemoveQuestFromView(quest);
+
+        EditorUtility.SetDirty(quest);
+        AssetDatabase.SaveAssets();
+        nodes.Add(quest);
     }
 
     /// <summary>
@@ -54,10 +92,28 @@ public class StoryEditor : EditorWindow
         switch (Event.current.type)
         {
             case EventType.MouseDown:
-                ConnectionPoint.selectedInPoint = null;
-                ConnectionPoint.selectedOutPoint = null;
-                questNodes.ForEach( e => e.isUnfolded = false );
-                GUI.changed = true;
+                // ---- WINDOW CLICK ----
+                if (Event.current.button == 0)
+                {
+                    ConnectionPoint.selectedInPoint = null;
+                    ConnectionPoint.selectedOutPoint = null;
+                    questNodes.ForEach(e => e.isUnfolded = false );
+                        
+                    // Tell Unity to redraw the window 
+                    GUI.changed = true;
+                }
+
+                // ---- WINDOW CONTEXT MENU ----
+                if (Event.current.button == 1)
+                {
+                    
+                    GenericMenu contextMenu = new GenericMenu();
+                    // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
+                    // Therefore we must save the mouse position when creatigng the context menu.
+                    Vector2 pos = Event.current.mousePosition - offset;
+                    contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                    contextMenu.ShowAsContext();
+                }
                 break;
 
             case EventType.MouseDrag:
@@ -65,14 +121,11 @@ public class StoryEditor : EditorWindow
                 // ---- DRAG ----
                 if (Event.current.button == 0)
                 {
-                    // Set flag
                     isDragging = true;
-
-                    // Move the position in the view
                     Vector2 drag = Event.current.delta;
                     offset += drag;
 
-                    // Log window changes so we get a repaint
+                    // Tell Unity to redraw the window
                     GUI.changed = true;
                 }
                 break;
@@ -82,10 +135,7 @@ public class StoryEditor : EditorWindow
                 // ---- DRAG END ----
                 if (isDragging)
                 {
-                    // Set flag
                     isDragging = false;
-
-                    // Save Editor Position
                     PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
                     PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
                 }
@@ -99,15 +149,18 @@ public class StoryEditor : EditorWindow
         if (ConnectionPoint.selectedInPoint != null && ConnectionPoint.selectedOutPoint == null)
         {
             new Connection(ConnectionPoint.selectedInPoint.Center, Event.current.mousePosition).Draw();
-            GUI.changed = true; // Set this to redraw
+            
+            // Tell Unity to redraw the window
+            GUI.changed = true;
         }
         if (ConnectionPoint.selectedOutPoint != null && ConnectionPoint.selectedInPoint == null)
         {
             new Connection(Event.current.mousePosition, ConnectionPoint.selectedOutPoint.Center).Draw();
-            GUI.changed = true; // Set this to redraw
+            
+            // Tell Unity to redraw the window
+            GUI.changed = true;
         }
 
-        // If the window changed in any way, redraw it.
         if (GUI.changed) Repaint();
     }
 
@@ -119,7 +172,6 @@ public class StoryEditor : EditorWindow
     /// <param name="gridColor">The color of the girds lines</param>
     void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
     {
-        // calculate how many lines to draw
         int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);
         int heightDivs = Mathf.CeilToInt(position.height / gridSpacing);
 
