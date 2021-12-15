@@ -24,7 +24,7 @@ public class PotionBranch : DialogueNode
     }
     public override void OnEnable()
     {
-        Title = "Branch";
+        Title = "Potion Branch";
         UpdateLinks();
         base.OnEnable();
     }

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 5
   m_EditorClassIdentifier: 
-  Position: {x: 390, y: 215}
-  Size: {x: 74, y: 65}
+  Position: {x: 568, y: 278}
+  Size: {x: 76, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,28 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 248
-    y: 294
-    width: 74
-    height: 65
+    x: 426
+    y: 357
+    width: 76
+    height: 40
   isDragging: 0
-  Title: Quest
-  PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
-  SucceedingStartLine: {fileID: 0}
-  CurrentLine: {fileID: 0}
-  Links:
-  - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextQuest: {fileID: 0}
-  DialogueNodes:
-  - {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
-  - {fileID: 11400000, guid: 63dd9bd673846754a8fca69df4262eff, type: 2}
-  - {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}
-  - {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
-  - {fileID: 11400000, guid: ce1f58f72265ba14ba8f8ed241ed4435, type: 2}
-  - {fileID: 11400000, guid: bfa7986a05c6e4c4a829c86a7f905817, type: 2}
-  - {fileID: 11400000, guid: 61bef5be61e8d3a4e8eff775ecf5367d, type: 2}
-  isUnfolded: 1
+  Title: Line 5
+  ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
+  Text: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 0}
