@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 4
+  m_Script: {fileID: 11500000, guid: b9d92e05b3a9cf048854121965885cf4, type: 3}
+  m_Name: Branch
   m_EditorClassIdentifier: 
-  Position: {x: 338, y: 21}
+  Position: {x: 722, y: 127}
   Size: {x: 134, y: 90}
   LabelStyle:
     m_Name: 
@@ -83,20 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 802
-    y: 220
+    x: 722
+    y: 127
     width: 134
     height: 90
   isDragging: 0
-  Title: i am good now
-  PrecedingStartLine: {fileID: 0}
-  SucceedingStartLine: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  Title: Branch
+  ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextQuest: {fileID: 0}
+    NextLine: {fileID: 11400000, guid: 63dd9bd673846754a8fca69df4262eff, type: 2}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextQuest: {fileID: 0}
+    NextLine: {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextQuest: {fileID: 0}
+    NextLine: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
   isUnfolded: 1

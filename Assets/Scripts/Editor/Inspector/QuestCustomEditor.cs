@@ -8,15 +8,16 @@ public class QuestEditor : Editor
 {
     SerializedProperty titleProp;
     SerializedProperty linksProp;
+    SerializedProperty nodesProp;
 
     ReorderableList Links;
     
     // This gets called when the inspector is opened
     void OnEnable()
     {
-        // Load serialized properties
         titleProp = serializedObject.FindProperty("Title");
         linksProp = serializedObject.FindProperty("Links");
+        nodesProp = serializedObject.FindProperty("DialogueNodes");
 
         (target as Quest).UpdateLinks();
     }
@@ -28,6 +29,7 @@ public class QuestEditor : Editor
 
         // Create a property field for the start prop
         EditorGUILayout.PropertyField(titleProp);
+        EditorGUILayout.PropertyField(nodesProp);
 
         for (int i = 0 ; i < linksProp.arraySize; i++)
         {
@@ -46,7 +48,4 @@ public class QuestEditor : Editor
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();
     }
-
-    
-
 }

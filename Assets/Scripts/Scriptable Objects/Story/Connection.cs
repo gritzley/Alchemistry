@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class Connection
 {
-    // References to connection points
     public Vector2 InPos;
     public Vector2 OutPos;
 
-    // Reference to remove method
-    public Action OnClickRemoveConnection;
+    public Action OnClickButton;
 
-    // Create a new Connection
-    public Connection(Vector2 inPos, Vector2 outPos, Action onClickRemoveConnection = null)
+    public Connection(Vector2 inPos, Vector2 outPos, Action onClickButton = null)
     {
-        // Set connection Pos references
         InPos = inPos;
         OutPos = outPos;
-        OnClickRemoveConnection = onClickRemoveConnection;
+        OnClickButton = onClickButton;
     }
 
-    // This is called whenever the screen gets redrawn
     public void Draw()
     {
-        // Draw a smooth curve between the two Poss
         Handles.DrawBezier(
             InPos,
             OutPos,
@@ -34,7 +28,6 @@ public class Connection
             2f
         );
 
-        // Draw a Button in the middle of the curve that removes the connection
         Handles.Button((InPos + OutPos) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap);
     }
 
@@ -46,9 +39,9 @@ public class Connection
                 if (new Rect((InPos + OutPos) * 0.5f - new Vector2(4,4), new Vector2(8,8)).Contains(e.mousePosition))
                 {
                     e.Use();
-                    if (OnClickRemoveConnection != null)
+                    if (OnClickButton != null)
                     {
-                        OnClickRemoveConnection();
+                        OnClickButton();
                     }
                 }
                 break;

@@ -13,6 +13,9 @@ public class DialogueLineEditor : Editor
     SerializedProperty answerLeftProp;
     SerializedProperty answerRightProp;
 
+    SerializedProperty nextLeftProp;
+    SerializedProperty nextRightProp;
+
     // Reorderable list for the recipe
     ReorderableList Recipe;
 
@@ -25,6 +28,8 @@ public class DialogueLineEditor : Editor
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
         answerRightProp = serializedObject.FindProperty("AnswerRight");
+        nextRightProp = serializedObject.FindProperty("NextRight");
+        nextLeftProp = serializedObject.FindProperty("NextLeft");
 
     }
 
@@ -42,6 +47,8 @@ public class DialogueLineEditor : Editor
 
         // Toggle for hasAnswer
         EditorGUILayout.PropertyField(hasAnswersProp);
+        EditorGUILayout.PropertyField(nextLeftProp);
+        EditorGUILayout.PropertyField(nextRightProp);
 
 
         if (hasAnswersProp.boolValue)

@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
-[CustomEditor(typeof(DialogueBranch))]
+[CustomEditor(typeof(PotionBranch))]
 [CanEditMultipleObjects]
-public class DialogueBranchEditor : Editor
+public class PotionBranchEditor : Editor
 {
     SerializedProperty linksProp;
  
@@ -16,7 +16,7 @@ public class DialogueBranchEditor : Editor
         // Load serialized properties
         linksProp = serializedObject.FindProperty("Links");
 
-        (target as DialogueBranch).UpdateLinks();
+        (target as PotionBranch).UpdateLinks();
     }
 
     public override void OnInspectorGUI()

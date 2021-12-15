@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +34,6 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void OnEnable()
     {
-        offset = new Vector2(PlayerPrefs.GetFloat("StoryEditorOffsetX", 0), PlayerPrefs.GetFloat("StoryEditorOffsetY", 0));
         ViewQuests();
     }
 
@@ -52,10 +52,10 @@ public class StoryEditor : EditorWindow
             Quest quest = (Quest)AssetDatabase.LoadAssetAtPath(path, typeof(Quest));
             quest.OnRemove = RemoveNodeFromView;
             quest.ViewDialogue = ViewQuestDialogue;
-
             return (StoryNode)quest;
         })
         .ToList();
+        offset = Vector2.zero;
     }
 
     private void ViewQuestDialogue(Quest quest)
@@ -63,7 +63,8 @@ public class StoryEditor : EditorWindow
         viewState = ViewState.DialogueView;
         nodes = new List<StoryNode>();
         nodes.Add(quest);
-        nodes.AddRange(quest.Lines);
+        nodes.AddRange(quest.DialogueNodes);
+        quest.isUnfolded = true;
     }
 
     /// <summary>
@@ -77,23 +78,79 @@ public class StoryEditor : EditorWindow
 
     /// <summary>
     /// Add a new Quest to the Assets/Dialogue/ directory
+    /// This Method assumes that you are in QuestView
     /// </summary>
     /// <param name="position"></param>
     private void AddQuest(Vector2 position)
     {
+        if (viewState != ViewState.QuestView) throw new Exception("You tried to add a new Quest even though you are not in QuestView");
         // GenerateUniqueAssetPath increments the name until a unused name is found
         string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Quest.asset");
         Quest quest = ScriptableObject.CreateInstance<Quest>();
         AssetDatabase.CreateAsset(quest, path);
 
+        // We need to add some parameters of the quest because scriptableObjets don't pass stuff to constructors
         quest.Title = quest.name;
         quest.Position = position;
         quest.OnRemove = RemoveNodeFromView;
         quest.ViewDialogue = ViewQuestDialogue;
 
+        // Changes made to the line after creating it must be saved
         EditorUtility.SetDirty(quest);
         AssetDatabase.SaveAssets();
         nodes.Add(quest);
+    }
+
+    /// <summary>
+    /// Add a new DialogueLine to the Assets/Dialogue directory
+    /// This Method assumes that you are in DialogueView
+    /// </summary>
+    /// <param name="mousePosition">The current mousePosition</param>
+    private void AddDialogueLine(Vector2 mousePosition)
+    {
+        if (viewState != ViewState.DialogueView) throw new Exception("You tried to add a new DialogueLine even though you are not in DialogueViews");
+        Quest currentQuest = (Quest)nodes[0];
+
+        // Create an asset with a unique name
+        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Line.asset");
+        DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
+        AssetDatabase.CreateAsset(line, path);
+
+        // We need to add some parameters of the line because scriptableObjets don't pass stuff to constructors
+        line.Title = line.name;
+        line.Position = mousePosition;
+        line.OnRemove = RemoveNodeFromView;
+        line.ParentQuest = currentQuest;
+        currentQuest.DialogueNodes.Add(line);
+
+        // Changes made to the line after creating it must be saved
+        EditorUtility.SetDirty(line);
+        EditorUtility.SetDirty(currentQuest);
+        AssetDatabase.SaveAssets();
+        nodes.Add(line);
+    }
+
+    private void AddDialogueBranch(Vector2 mousePosition)
+    {
+        // Fail if not in DialogueView
+        if (viewState != ViewState.DialogueView) throw new Exception("You tried to add a new DialogueBranch even though you are not in DialogueViews");
+        Quest currentQuest = (Quest)nodes[0];
+
+        // Create an asset with a unique name
+        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Branch.asset");
+        PotionBranch branch = ScriptableObject.CreateInstance<PotionBranch>();
+        AssetDatabase.CreateAsset(branch, path);
+
+        branch.Position = mousePosition;
+        branch.OnRemove = RemoveNodeFromView;
+        branch.ParentQuest = currentQuest;
+        currentQuest.DialogueNodes.Add(branch);
+
+        // Changes made to the line after creating it must be saved
+        EditorUtility.SetDirty(branch);
+        EditorUtility.SetDirty(currentQuest);
+        AssetDatabase.SaveAssets();
+        nodes.Add(branch);
     }
 
     /// <summary>
@@ -106,8 +163,8 @@ public class StoryEditor : EditorWindow
         DrawGrid(100, 0.4f, Color.gray);
 
         // ---- PROCESS EVENTS ----
-        nodes.ForEach( e => e.Connections.ForEach( e => e.ProcessEvent(Event.current)));
-        nodes.ForEach( e => e.ProcessEvent(Event.current));
+        nodes.ForEach( e => e.GetOutConnections((int)viewState).ForEach( e => e.ProcessEvent(Event.current)));
+        nodes.ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
         switch (Event.current.type)
         {
             case EventType.MouseDown:
@@ -116,7 +173,16 @@ public class StoryEditor : EditorWindow
                 {
                     ConnectionPoint.selectedInPoint = null;
                     ConnectionPoint.selectedOutPoint = null;
-                    questNodes.ForEach(e => e.isUnfolded = false );
+                    if (viewState == ViewState.QuestView) questNodes.ForEach(e => e.isUnfolded = false );
+                    if (viewState == ViewState.DialogueView)
+                    {
+                        questNodes.ForEach(
+                            e => e.DialogueNodes
+                            .Where( e => e is PotionBranch)
+                            .ToList()
+                            .ForEach( e => (e as PotionBranch).isUnfolded = false )
+                        );
+                    }
                         
                     // Tell Unity to redraw the window 
                     GUI.changed = true;
@@ -130,7 +196,18 @@ public class StoryEditor : EditorWindow
                     // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
                     // Therefore we must save the mouse position when creatigng the context menu.
                     Vector2 pos = Event.current.mousePosition - offset;
-                    contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                    switch(viewState)
+                    {
+                        case ViewState.DialogueView:
+                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => AddDialogueLine(pos));
+                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => AddDialogueBranch(pos));
+                            contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
+                            break;
+
+                        case ViewState.QuestView:
+                            contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                            break;
+                    }
                     contextMenu.ShowAsContext();
                 }
                 break;
@@ -138,7 +215,7 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDrag:
 
                 // ---- DRAG ----
-                if (Event.current.button == 0)
+                if (Event.current.button == 2)
                 {
                     isDragging = true;
                     Vector2 drag = Event.current.delta;
@@ -161,8 +238,8 @@ public class StoryEditor : EditorWindow
                 break;
         }
 
-        // ---- DRAW NODES & CONNECTIONS ----
-        nodes.ForEach( e => e.Connections.ForEach( e => e.Draw()));
+        // ---- DRAW NODES & GetConnections((int)viewState) ----
+        nodes.ForEach( e => e.GetOutConnections((int)viewState).ForEach( e => e.Draw()));
         nodes.ForEach( e => e.Draw(offset, (int)viewState) );
 
         if (ConnectionPoint.selectedInPoint != null && ConnectionPoint.selectedOutPoint == null)

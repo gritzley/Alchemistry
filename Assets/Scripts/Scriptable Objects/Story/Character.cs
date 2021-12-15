@@ -7,7 +7,7 @@ public class Character : ScriptableObject
     public Quest StartQuest;
     Quest currentQuest;
 
-    public DialogueLine CurrentDialogueLine
+    public DialogueNode CurrentDialogueLine
     {
         get { return currentQuest.CurrentLine; }
     }
