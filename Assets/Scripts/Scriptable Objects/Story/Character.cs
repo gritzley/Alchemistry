@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Character", menuName = "Character")]
 public class Character : ScriptableObject
 {
     // The name of the character
@@ -10,7 +7,7 @@ public class Character : ScriptableObject
     public Quest StartQuest;
     Quest currentQuest;
 
-    public DialogueLine CurrentDialogueLine
+    public DialogueNode CurrentDialogueLine
     {
         get { return currentQuest.CurrentLine; }
     }

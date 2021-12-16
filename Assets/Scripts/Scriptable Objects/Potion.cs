@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "Potion", menuName = "Potion")]
 public class Potion : ScriptableObject
@@ -11,7 +13,7 @@ public class Potion : ScriptableObject
         public Ingredient.Type Ingredient;
         // The time it needs to cook before the next step
         public float Time;
-
+        // The amount of time one can be off the intended time
         public float ErrorMargin;
     }
 
@@ -42,6 +44,14 @@ public class Potion : ScriptableObject
 
         // If it's not out by now, the recipe is correct
         return true;
+    }
+
+    public static List<Potion> GetAllPotionAssets()
+    {
+        return AssetDatabase.FindAssets("t:Potion")
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (Potion)AssetDatabase.LoadAssetAtPath(e, typeof(Potion)))
+        .ToList();
     }
 
 }

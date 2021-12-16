@@ -13,6 +13,9 @@ public class DialogueLineEditor : Editor
     SerializedProperty answerLeftProp;
     SerializedProperty answerRightProp;
 
+    SerializedProperty nextLeftProp;
+    SerializedProperty nextRightProp;
+
     // Reorderable list for the recipe
     ReorderableList Recipe;
 
@@ -25,11 +28,9 @@ public class DialogueLineEditor : Editor
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
         answerRightProp = serializedObject.FindProperty("AnswerRight");
+        nextRightProp = serializedObject.FindProperty("NextRight");
+        nextLeftProp = serializedObject.FindProperty("NextLeft");
 
-        if (DialogueEditor.IsOpen)
-        {
-            EditorWindow.GetWindow<DialogueEditor>().Repaint();
-        }
     }
 
     // This gets called every frame that the inspector is drawn
@@ -46,6 +47,8 @@ public class DialogueLineEditor : Editor
 
         // Toggle for hasAnswer
         EditorGUILayout.PropertyField(hasAnswersProp);
+        EditorGUILayout.PropertyField(nextLeftProp);
+        EditorGUILayout.PropertyField(nextRightProp);
 
 
         if (hasAnswersProp.boolValue)
@@ -53,10 +56,6 @@ public class DialogueLineEditor : Editor
             EditorStyles.textField.wordWrap = true;
             answerRightProp.stringValue = EditorGUILayout.TextArea(answerRightProp.stringValue);
             answerLeftProp.stringValue = EditorGUILayout.TextArea(answerLeftProp.stringValue);
-        }
-        if (hasAnswerPreviousValue != hasAnswersProp.boolValue && DialogueEditor.IsOpen)
-        {
-            EditorWindow.GetWindow<DialogueEditor>().Repaint();
         }
 
         // Apply all changes made to serialized properties

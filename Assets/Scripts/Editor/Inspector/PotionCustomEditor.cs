@@ -62,21 +62,6 @@ public class PotionEditor : Editor
                 GUIContent.none
             );
         };
-
-        if (DialogueEditor.IsOpen)
-        {
-            DialogueEditor.Instance.UpdateAllQuestNodes();
-            EditorWindow.GetWindow<DialogueEditor>().Repaint();
-        }
-    }
-
-    void OnDisable()
-    {
-        if (DialogueEditor.IsOpen)
-        {
-            DialogueEditor.Instance.UpdateAllQuestNodes();
-            EditorWindow.GetWindow<DialogueEditor>().Repaint();
-        }
     }
 
     // This gets called every frame that the inspector is drawn
