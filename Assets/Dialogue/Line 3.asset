@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 3
   m_EditorClassIdentifier: 
-  Position: {x: 903, y: 238}
-  Size: {x: 76.66667, y: 40}
+  Position: {x: 786, y: 257}
+  Size: {x: 97.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 903
-    y: 238
-    width: 76.66667
+    x: 682
+    y: 161
+    width: 97.6
     height: 40
   isDragging: 0
-  Title: Line 3
+  Title: Been long
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 
+  Text: 'It''s been a long time since I heard someone calling it a
+
+    pleasure
+    to meet me.'
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

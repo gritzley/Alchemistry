@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line
   m_EditorClassIdentifier: 
-  Position: {x: 570, y: 183}
-  Size: {x: 65.333336, y: 40}
+  Position: {x: 542, y: 220}
+  Size: {x: 95.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,16 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 405
-    y: 179
-    width: 65.333336
+    x: 420
+    y: 163
+    width: 95.2
     height: 40
   isDragging: 0
-  Title: Line
+  Title: Good day
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 
+  Text: Good day, potion trader.
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: bfa7986a05c6e4c4a829c86a7f905817, type: 2}
+  NextRight: {fileID: 11400000, guid: 63dd9bd673846754a8fca69df4262eff, type: 2}

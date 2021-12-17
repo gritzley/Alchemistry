@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 4
   m_EditorClassIdentifier: 
-  Position: {x: 1069, y: 178}
-  Size: {x: 76.66667, y: 40}
+  Position: {x: 900, y: 232}
+  Size: {x: 100.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,16 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 904
-    y: 174
-    width: 76.66667
+    x: 575
+    y: 232
+    width: 100.8
     height: 40
   isDragging: 0
-  Title: Line 4
+  Title: Profession
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 
+  Text: "My profession isn't as satisfying as it used to be. \r\nNot many people
+    are keen on dying these days."
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 61bef5be61e8d3a4e8eff775ecf5367d, type: 2}

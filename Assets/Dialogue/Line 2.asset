@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 2
   m_EditorClassIdentifier: 
-  Position: {x: 899, y: 168}
-  Size: {x: 76, y: 40}
+  Position: {x: 786, y: 203}
+  Size: {x: 90.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 899
-    y: 168
-    width: 76
+    x: 418
+    y: 109
+    width: 90.4
     height: 40
   isDragging: 0
-  Title: Line 2
+  Title: Services
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 
+  Text: I know my services aren't as high in demand as they used to be.
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

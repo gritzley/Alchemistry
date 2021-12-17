@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d92e05b3a9cf048854121965885cf4, type: 3}
-  m_Name: Branch
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 14
   m_EditorClassIdentifier: 
-  Position: {x: 685, y: 180}
-  Size: {x: 134, y: 90}
+  Position: {x: 1816, y: 267}
+  Size: {x: 145.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 348
-    y: 209
-    width: 134
-    height: 90
+    x: 670
+    y: 219
+    width: 145.6
+    height: 40
   isDragging: 0
-  Title: Branch
+  Title: deadliest obstacle
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Links:
-  - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextLine: {fileID: 11400000, guid: 63dd9bd673846754a8fca69df4262eff, type: 2}
-  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextLine: {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}
-  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextLine: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
-  isUnfolded: 1
+  Text: 'He is the defending champion of the deadliest obstacle race. '
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: c0bc8d1c36457a64db7a66271ab08a4b, type: 2}

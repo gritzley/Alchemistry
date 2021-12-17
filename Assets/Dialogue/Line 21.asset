@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 1
+  m_Name: Line 21
   m_EditorClassIdentifier: 
-  Position: {x: 650, y: 221}
-  Size: {x: 108.8, y: 65}
+  Position: {x: 2751, y: 232}
+  Size: {x: 90.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,16 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 282
-    y: 127
-    width: 108.8
-    height: 65
+    x: 732
+    y: 156
+    width: 90.4
+    height: 40
   isDragging: 0
-  Title: Introduction
+  Title: stagnant
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: I'm Rumo the local Grave tender.
-  AnswerLeft: A pleasure to meet you, Grave tender.
-  AnswerRight: We have a Grave tender around here?
-  HasAnswers: 1
-  NextLeft: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
-  NextRight: {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}
+  Text: 'The races are growing stagnant.
+
+    He achieved everything he dreamed of.'
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 42cf1124f29031248a165d0417f07fbb, type: 2}
