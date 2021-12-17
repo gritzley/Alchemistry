@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 6
+  m_Name: Line 27
   m_EditorClassIdentifier: 
-  Position: {x: 1164, y: 228}
-  Size: {x: 84.8, y: 40}
+  Position: {x: 3258, y: 252}
+  Size: {x: 83.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -84,16 +84,16 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 839
-    y: 228
-    width: 84.8
+    y: 177
+    width: 83.2
     height: 40
   isDragging: 0
-  Title: Undead
+  Title: carload
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "And don't get me started on all the undead, who have the boldness to come
-    back as ghosts, zombies or other \r\ndeath resisting troublemakers."
+  Text: Of course there's gonna be a cartload of preperations to do once everythings
+    is taken care of.
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: afe98d0b0360e054aafac6c9a1fb2be3, type: 2}
+  NextRight: {fileID: 0}

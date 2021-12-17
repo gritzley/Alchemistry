@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 6
+  m_Name: Line 11
   m_EditorClassIdentifier: 
-  Position: {x: 1164, y: 228}
-  Size: {x: 84.8, y: 40}
+  Position: {x: 1721, y: 240}
+  Size: {x: 72.8, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,19 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 839
-    y: 228
-    width: 84.8
-    height: 40
+    x: 575
+    y: 192
+    width: 72.8
+    height: 65
   isDragging: 0
-  Title: Undead
+  Title: Atrius
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "And don't get me started on all the undead, who have the boldness to come
-    back as ghosts, zombies or other \r\ndeath resisting troublemakers."
-  AnswerLeft: 
-  AnswerRight: 
-  HasAnswers: 0
+  Text: 'There''s a centaur, you may have heard of him.
+
+    Atrius the unbeatable
+    sun of the Race of Quick Demise.'
+  AnswerLeft: Atrius sounds familiar...
+  AnswerRight: 'Sun of the what? '
+  HasAnswers: 1
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: afe98d0b0360e054aafac6c9a1fb2be3, type: 2}
+  NextRight: {fileID: 11400000, guid: ea125ed9a53491844950cc18337965e2, type: 2}

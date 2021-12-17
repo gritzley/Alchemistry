@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 6
+  m_Name: Line 26
   m_EditorClassIdentifier: 
-  Position: {x: 1164, y: 228}
-  Size: {x: 84.8, y: 40}
+  Position: {x: 3334, y: 192}
+  Size: {x: 73.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 839
-    y: 228
-    width: 84.8
+    x: 915
+    y: 117
+    width: 73.6
     height: 40
   isDragging: 0
-  Title: Undead
+  Title: Adorn
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "And don't get me started on all the undead, who have the boldness to come
-    back as ghosts, zombies or other \r\ndeath resisting troublemakers."
+  Text: Even so they hurt, they'll sacrifice part of themselves to adorn the dead.
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: afe98d0b0360e054aafac6c9a1fb2be3, type: 2}
+  NextRight: {fileID: 11400000, guid: 536fcb64a299dd54090909e787f6b75f, type: 2}

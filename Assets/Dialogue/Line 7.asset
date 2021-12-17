@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 902
-    y: 133
+    x: 945
+    y: 227
     width: 106.4
     height: 40
   isDragging: 0
   Title: Appropriate
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: The only way they'll stay in their appropriate grave, is if they lived a
-    fulfilled life.
+  Text: "The only way they'll stay in their appropriate grave, \nis if they lived
+    a fulfilled life."
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
