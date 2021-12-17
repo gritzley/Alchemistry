@@ -8,6 +8,7 @@ public class DialogueLineEditor : Editor
 {
     // Serialized properties for recipe and name
     SerializedProperty titleProp;
+    SerializedProperty notesProp;
     SerializedProperty textProp;
     SerializedProperty hasAnswersProp;
     SerializedProperty answerLeftProp;
@@ -24,6 +25,7 @@ public class DialogueLineEditor : Editor
     {
         // Load properties
         titleProp = serializedObject.FindProperty("Title");
+        notesProp = serializedObject.FindProperty("Notes");
         textProp = serializedObject.FindProperty("Text");
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
@@ -41,22 +43,25 @@ public class DialogueLineEditor : Editor
 
         // Add a property field for title and text
         EditorGUILayout.PropertyField(titleProp);
+        EditorGUILayout.LabelField("Text");
         textProp.stringValue = EditorGUILayout.TextArea(textProp.stringValue);
 
         bool hasAnswerPreviousValue = hasAnswersProp.boolValue;
 
         // Toggle for hasAnswer
         EditorGUILayout.PropertyField(hasAnswersProp);
-        EditorGUILayout.PropertyField(nextLeftProp);
-        EditorGUILayout.PropertyField(nextRightProp);
-
 
         if (hasAnswersProp.boolValue)
         {
             EditorStyles.textField.wordWrap = true;
+            EditorGUILayout.LabelField("Right Answer (This is the upper ConnectionPoint");
             answerRightProp.stringValue = EditorGUILayout.TextArea(answerRightProp.stringValue);
+            EditorGUILayout.LabelField("Left Answer (This is the lower ConnectionPoint");
             answerLeftProp.stringValue = EditorGUILayout.TextArea(answerLeftProp.stringValue);
         }
+
+        EditorGUILayout.LabelField("Notes");
+        notesProp.stringValue = EditorGUILayout.TextArea(notesProp.stringValue);
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();

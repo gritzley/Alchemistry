@@ -1487,10 +1487,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -634.6666259765625,
-            "y": 101.33333587646485,
-            "width": 192.66665649414063,
-            "height": 142.0
+            "x": -634.0000610351563,
+            "y": 100.66665649414063,
+            "width": 208.00003051757813,
+            "height": 326.66668701171877
         }
     },
     "m_Slots": [
@@ -1594,7 +1594,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
@@ -2612,16 +2612,16 @@
     "m_Type": "UnityEditor.ShaderGraph.DivideNode",
     "m_ObjectId": "8b8a1a439ea341aba4422e05fa2ded7e",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "fd6184f793ef49ccb02ebc64dca3d1fb"
     },
     "m_Name": "Divide",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -351.3333740234375,
-            "y": 101.33333587646485,
-            "width": 126.66667175292969,
+            "x": -291.3333435058594,
+            "y": 12.000005722045899,
+            "width": 126.66667938232422,
             "height": 118.0
         }
     },
@@ -3547,10 +3547,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -351.3333435058594,
-            "y": 442.6667175292969,
-            "width": 140.6666717529297,
-            "height": 141.99998474121095
+            "x": -325.33343505859377,
+            "y": 681.3333740234375,
+            "width": 141.3333282470703,
+            "height": 142.0
         }
     },
     "m_Slots": [

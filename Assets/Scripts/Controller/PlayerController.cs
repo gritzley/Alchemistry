@@ -37,8 +37,6 @@ public class PlayerController : Moveable
 
         // Init Hand
         HandTransform = transform.Find("Hand");
-
-        Debug.Log(Camera.main);
     }
 
     // Called every frame
