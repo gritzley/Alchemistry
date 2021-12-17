@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueLine : DialogueNode
 {
     public string Text;
-
+    public string Notes;
     public string AnswerLeft;
     public string AnswerRight;
 
