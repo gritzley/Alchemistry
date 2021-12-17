@@ -9,9 +9,10 @@ public class Quest : StoryNode
 {
 
     // ---- STORY TREE ----
-    public DialogueNode PrecedingStartLine;
-    public DialogueNode SucceedingStartLine;
-    public DialogueNode CurrentLine;
+    public DialogueNode PrecedingStartNode;
+    public DialogueNode SucceedingStartNode;
+    public DialogueLine CurrentLine;
+    public Character ParentCharacter;
 
     // ---- LINKS ----
     [System.Serializable]
@@ -44,6 +45,7 @@ public class Quest : StoryNode
         isUnfolded = false;
         base.OnEnable();
         UpdateLinks();
+        CurrentLine = PrecedingStartNode.NextLine;
     }
 
     /// <summary>
@@ -111,11 +113,11 @@ public class Quest : StoryNode
                     {
                         // Connect to Right
                         case 0:
-                            PrecedingStartLine = (inPoint.Parent as DialogueNode);
+                            PrecedingStartNode = (inPoint.Parent as DialogueNode);
                             break;
                         // Connect to Left
                         case 1:
-                            SucceedingStartLine = (inPoint.Parent as DialogueNode);
+                            SucceedingStartNode = (inPoint.Parent as DialogueNode);
                             break;
                     }
             }
@@ -247,13 +249,13 @@ public class Quest : StoryNode
             
             // ---- CONNECTION IN DIALOGUEVIEW ----
             case 1:
-                if (PrecedingStartLine != null)
+                if (PrecedingStartNode != null)
                 {
-                    connections.Add(new Connection(PrecedingStartLine.InPoint.Center, OutPoints[0].Center, () => PrecedingStartLine = null));
+                    connections.Add(new Connection(PrecedingStartNode.InPoint.Center, OutPoints[0].Center, () => PrecedingStartNode = null));
                 }
-                if (SucceedingStartLine != null)
+                if (SucceedingStartNode != null)
                 {
-                    connections.Add(new Connection(SucceedingStartLine.InPoint.Center, OutPoints[1].Center, () => SucceedingStartLine = null));
+                    connections.Add(new Connection(SucceedingStartNode.InPoint.Center, OutPoints[1].Center, () => SucceedingStartNode = null));
                 }
                 break;
         }

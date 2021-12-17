@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 11
   m_EditorClassIdentifier: 
   Position: {x: 1721, y: 240}
-  Size: {x: 72.8, y: 65}
+  Size: {x: 72.66667, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 575
-    y: 192
-    width: 72.8
+    x: 578
+    y: 228
+    width: 72.66667
     height: 65
   isDragging: 0
   Title: Atrius
@@ -94,6 +94,7 @@ MonoBehaviour:
 
     Atrius the unbeatable
     sun of the Race of Quick Demise.'
+  Notes: 
   AnswerLeft: Atrius sounds familiar...
   AnswerRight: 'Sun of the what? '
   HasAnswers: 1

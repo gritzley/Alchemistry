@@ -7,4 +7,6 @@ public abstract class DialogueNode : StoryNode
         ParentQuest.DialogueNodes.Remove(this);
         base.Remove();
     }
+
+    public abstract DialogueLine NextLine { get; }
 }

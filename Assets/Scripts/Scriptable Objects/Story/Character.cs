@@ -1,16 +1,26 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Character : ScriptableObject
+[ExecuteInEditMode]
+public class Character : MonoBehaviour
 {
-    // The name of the character
+    Quest currentQuest;
+    TextDisplay textDisplay;
     public string Name;
     public Quest StartQuest;
     public List<Quest> Quests;
-    Quest currentQuest;
+    public Potion LastGivenPotion;
+
 
     public DialogueNode CurrentDialogueLine
     {
         get { return currentQuest.CurrentLine; }
+    }
+
+    void OnEnable()
+    {
+        textDisplay = GetComponentInChildren<TextDisplay>();
+
+        textDisplay.DisplayText(StartQuest.CurrentLine.Text);
     }
 }

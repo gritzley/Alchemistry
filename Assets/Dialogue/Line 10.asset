@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 10
   m_EditorClassIdentifier: 
   Position: {x: 1568, y: 271}
-  Size: {x: 93.6, y: 40}
+  Size: {x: 94.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 841
-    y: 268
-    width: 93.6
+    x: 363
+    y: 223
+    width: 94.66667
     height: 40
   isDragging: 0
   Title: Splendid!
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: Splendid! Then we don't need to hold up with moral trvilalities.
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

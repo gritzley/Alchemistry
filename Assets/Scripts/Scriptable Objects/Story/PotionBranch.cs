@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 [System.Serializable]
 public class PotionBranch : DialogueNode
@@ -10,13 +11,34 @@ public class PotionBranch : DialogueNode
     public struct Link
     {
         public Potion Potion;
-        public DialogueLine NextLine;
+        public DialogueNode NextNode;
     }
     public List<Link> Links;
 
     public List<ConnectionPoint> OutPoints;
     
     public bool isUnfolded;
+
+    public override DialogueLine NextLine
+    {
+        get
+        {
+            if (ParentQuest.ParentCharacter.LastGivenPotion != null)
+            {
+                foreach (Link link in Links)
+                {
+                    if (ParentQuest.ParentCharacter.LastGivenPotion == link.Potion)
+                    {
+                        return link.NextNode.NextLine;
+                    }
+                }
+                throw new NullReferenceException("You have given the character a potion that does not exist? How did you even do that?");
+            }
+            else {
+                throw new NullReferenceException("There is no last given potion yet you are trying to access it.");
+            }
+        }
+    }
 
     public PotionBranch()
     {
@@ -34,10 +56,10 @@ public class PotionBranch : DialogueNode
         List<Connection> connections = new List<Connection>();
         foreach(Link link in Links)
         {
-            if (link.NextLine != null)
+            if (link.NextNode != null)
             {
                 int i = Links.IndexOf(link);
-                connections.Add(new Connection(link.NextLine.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => ClickConnection(i) ));
+                connections.Add(new Connection(link.NextNode.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => ClickConnection(i) ));
             }
         }
         return connections;
@@ -48,7 +70,7 @@ public class PotionBranch : DialogueNode
         if (isUnfolded)
         {
             Link link = Links[i];
-            link.NextLine = null;
+            link.NextNode = null;
             Links[i] = link;
         }
         else
@@ -69,10 +91,10 @@ public class PotionBranch : DialogueNode
             // Create a Connection to another node
 
             // ---- CONNECTION TO QUEST NODE ----
-            if (inPoint.Parent is DialogueLine)
+            if (inPoint.Parent is DialogueNode)
             {
                 Link link = Links[i];
-                link.NextLine = (DialogueLine)inPoint.Parent;
+                link.NextNode = (DialogueNode)inPoint.Parent;
                 Links[i] = link;
                 EditorUtility.SetDirty(this);
                 AssetDatabase.SaveAssets();

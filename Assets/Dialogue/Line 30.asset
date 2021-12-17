@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 30
   m_EditorClassIdentifier: 
   Position: {x: 3706, y: 231}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 69.333336, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,15 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 758
-    y: 99
-    width: 68.8
+    x: 806
+    y: 186
+    width: 69.333336
     height: 40
   isDragging: 0
   Title: drink
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: "The next Quick Demise race is tomorrow.\nThen I will have the opportunity
     to pour something him in \nhis refreshment drink."
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
