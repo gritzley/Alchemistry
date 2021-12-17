@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest
   m_EditorClassIdentifier: 
   Position: {x: 438, y: 213}
-  Size: {x: 85.6, y: 65}
+  Size: {x: 202.4, y: 590}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -2510
-    y: 81
-    width: 85.6
-    height: 65
+    x: 393
+    y: 61
+    width: 202.4
+    height: 590
   isDragging: 0
   Title: Centaur
   PrecedingStartLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
