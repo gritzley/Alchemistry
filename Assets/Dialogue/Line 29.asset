@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 28
+  m_Name: Line 29
   m_EditorClassIdentifier: 
-  Position: {x: 3442, y: 231}
-  Size: {x: 114.4, y: 40}
+  Position: {x: 3588, y: 231}
+  Size: {x: 87.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,19 +83,21 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 494
+    x: 640
     y: 99
-    width: 114.4
+    width: 87.2
     height: 40
   isDragging: 0
-  Title: locker stable
+  Title: Suspect
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'Back to the topic, I have some frineds in the course crew,
+  Text: 'They mustn''t suspect any external influences.
 
-    who can
-    grant me access to his stable.'
+    It''d be ideal if his
+    passing seems like some sort of a....
+
+    tragic accident.'
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 03926cd038dbe824eaea110c72a0ef07, type: 2}
+  NextRight: {fileID: 0}
