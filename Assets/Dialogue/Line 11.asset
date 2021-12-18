@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 11
   m_EditorClassIdentifier: 
-  Position: {x: 1721, y: 240}
+  Position: {x: 1727, y: 238}
   Size: {x: 72.66667, y: 65}
   LabelStyle:
     m_Name: 
@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 578
-    y: 228
+    x: 694
+    y: 303
     width: 72.66667
     height: 65
   isDragging: 0

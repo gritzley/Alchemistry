@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 20
   m_EditorClassIdentifier: 
   Position: {x: 2645, y: 234}
-  Size: {x: 84.8, y: 40}
+  Size: {x: 86, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 884
-    y: 229
-    width: 84.8
+    x: 479
+    y: 252
+    width: 86
     height: 40
   isDragging: 0
   Title: Nobody
@@ -93,6 +93,7 @@ MonoBehaviour:
   Text: 'Thenceforth he just kept winning.
 
     Nobody can beat him.'
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

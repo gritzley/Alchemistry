@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 14
   m_EditorClassIdentifier: 
   Position: {x: 1816, y: 267}
-  Size: {x: 145.6, y: 40}
+  Size: {x: 146.66666, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 670
-    y: 219
-    width: 145.6
+    x: 542
+    y: 316
+    width: 146.66666
     height: 40
   isDragging: 0
   Title: deadliest obstacle
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: 'He is the defending champion of the deadliest obstacle race. '
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

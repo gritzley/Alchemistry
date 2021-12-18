@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 21
   m_EditorClassIdentifier: 
-  Position: {x: 2751, y: 232}
-  Size: {x: 90.4, y: 40}
+  Position: {x: 2753, y: 231}
+  Size: {x: 90.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 732
-    y: 156
-    width: 90.4
+    x: 587
+    y: 249
+    width: 90.66667
     height: 40
   isDragging: 0
   Title: stagnant
@@ -93,6 +93,7 @@ MonoBehaviour:
   Text: 'The races are growing stagnant.
 
     He achieved everything he dreamed of.'
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

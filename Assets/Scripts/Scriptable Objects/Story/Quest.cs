@@ -45,7 +45,7 @@ public class Quest : StoryNode
         isUnfolded = false;
         base.OnEnable();
         UpdateLinks();
-        CurrentLine = PrecedingStartNode.NextLine;
+        CurrentLine = PrecedingStartNode?.NextLine;
     }
 
     /// <summary>

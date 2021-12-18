@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 24
   m_EditorClassIdentifier: 
   Position: {x: 3115, y: 232}
-  Size: {x: 100.8, y: 65}
+  Size: {x: 100.66667, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 696
-    y: 157
-    width: 100.8
+    x: 666
+    y: 242
+    width: 100.66667
     height: 65
   isDragging: 0
   Title: tombstone
@@ -94,6 +94,7 @@ MonoBehaviour:
 
     Blooming flower arrangments,
     a big imposing tombstone...'
+  Notes: 
   AnswerLeft: Seems like you have already everything planned.
   AnswerRight: Aren't flowers your...you know...
   HasAnswers: 1
