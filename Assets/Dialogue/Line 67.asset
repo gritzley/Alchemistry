@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 64
+  m_Name: Line 67
   m_EditorClassIdentifier: 
-  Position: {x: 2012, y: 1}
-  Size: {x: 79.2, y: 40}
+  Position: {x: 2336, y: -1}
+  Size: {x: 78.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,22 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 980
-    y: 137
-    width: 79.2
+    x: 915
+    y: 160
+    width: 78.4
     height: 40
   isDragging: 0
-  Title: remain
+  Title: ghouls
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: The story of his life and death will always remain in the hearts of friends
-    and foes a like.
-  Notes: 
+  Text: "I have my ghouls helping me out carrying different \nvariations of coffins."
+  Notes: I want later to explain the difference between ghouls and zombies- Zombies
+    are corpses who catched a disease that brings their body back to live and whatever
+    is left from their breain. While ghouls are corpses that souls ist borught back
+    to awaken the body which only happens through magic. This also accompanied by
+    an bounding spell which enslaves a ghoul to a master a bound which almost can't
+    be broken.
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: a5cb541fd4c6add49918b6d646cea204, type: 2}
+  NextRight: {fileID: 11400000, guid: 3c68289f10dd7f2428c193d9e56e3841, type: 2}

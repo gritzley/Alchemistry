@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 64
+  m_Name: Line 66
   m_EditorClassIdentifier: 
-  Position: {x: 2012, y: 1}
-  Size: {x: 79.2, y: 40}
+  Position: {x: 2230, y: -4}
+  Size: {x: 93.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 980
-    y: 137
-    width: 79.2
+    x: 809
+    y: 157
+    width: 93.6
     height: 40
   isDragging: 0
-  Title: remain
+  Title: delighted
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: The story of his life and death will always remain in the hearts of friends
-    and foes a like.
+  Text: "I am truly blooming! \nI'm so busy with preperation for the funeral!\r"
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: a5cb541fd4c6add49918b6d646cea204, type: 2}
+  NextRight: {fileID: 11400000, guid: 1978cf43cbecd9c40b16f2e960d96073, type: 2}
