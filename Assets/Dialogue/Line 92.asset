@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 88
+  m_Name: Line 92
   m_EditorClassIdentifier: 
-  Position: {x: 4610, y: -22}
-  Size: {x: 60.8, y: 40}
+  Position: {x: 4807, y: -4}
+  Size: {x: 82.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 784
-    y: 166
-    width: 60.8
+    x: 981
+    y: 184
+    width: 82.4
     height: 40
   isDragging: 0
-  Title: last
+  Title: Line 92
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "Hmm...no. We never know when the time comes for us, they aleardy live like
-    every moment is their last.\r"
+  Text: 
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 4cbecedae6b173144acf1b4b959e13ac, type: 2}
+  NextRight: {fileID: 0}

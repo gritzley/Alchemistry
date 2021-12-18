@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 90
   m_EditorClassIdentifier: 
-  Position: {x: 4713, y: -18}
+  Position: {x: 4708, y: -26}
   Size: {x: 78.4, y: 40}
   LabelStyle:
     m_Name: 
@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 985
-    y: 144
+    x: 882
+    y: 162
     width: 78.4
     height: 40
   isDragging: 0
@@ -96,4 +96,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 648d162ca7fc00444bfc1a148edac491, type: 2}
