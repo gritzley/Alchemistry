@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [System.Serializable]
 public class DialogueLine : DialogueNode
@@ -76,6 +77,8 @@ public class DialogueLine : DialogueNode
                         break;
                 }
             }
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
             ConnectionPoint.selectedInPoint = null;
             ConnectionPoint.selectedOutPoint = null;
         }

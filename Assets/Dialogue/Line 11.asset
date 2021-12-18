@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 694
-    y: 303
+    x: 551
+    y: 246
     width: 72.66667
     height: 65
   isDragging: 0
@@ -98,5 +98,5 @@ MonoBehaviour:
   AnswerLeft: Atrius sounds familiar...
   AnswerRight: 'Sun of the what? '
   HasAnswers: 1
-  NextLeft: {fileID: 0}
+  NextLeft: {fileID: 11400000, guid: f294bb2eca7ea3e4684902fcb8993e2f, type: 2}
   NextRight: {fileID: 11400000, guid: ea125ed9a53491844950cc18337965e2, type: 2}

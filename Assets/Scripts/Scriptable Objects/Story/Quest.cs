@@ -103,8 +103,6 @@ public class Quest : StoryNode
                 Link link = Links[i];
                 link.NextQuest = (Quest)inPoint.Parent;
                 Links[i] = link;
-                EditorUtility.SetDirty(this);
-                AssetDatabase.SaveAssets();
             }
 
             if (inPoint.Parent is DialogueNode)
@@ -121,6 +119,8 @@ public class Quest : StoryNode
                             break;
                     }
             }
+            EditorUtility.SetDirty(this);
+            AssetDatabase.SaveAssets();
 
             ConnectionPoint.selectedInPoint = null;
             ConnectionPoint.selectedOutPoint = null;

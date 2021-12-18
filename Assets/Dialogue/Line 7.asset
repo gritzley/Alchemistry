@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 7
   m_EditorClassIdentifier: 
   Position: {x: 1270, y: 227}
-  Size: {x: 106.4, y: 40}
+  Size: {x: 107.333336, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 945
-    y: 227
-    width: 106.4
+    x: 731
+    y: 256
+    width: 107.333336
     height: 40
   isDragging: 0
   Title: Appropriate
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: "The only way they'll stay in their appropriate grave, \nis if they lived
     a fulfilled life."
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 0977c0d9782707843ab1c88e12d1b9db, type: 2}
