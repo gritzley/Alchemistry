@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 76
+  m_Name: Line 82
   m_EditorClassIdentifier: 
-  Position: {x: 3233, y: 4}
-  Size: {x: 76, y: 40}
+  Position: {x: 3924, y: 2}
+  Size: {x: 98.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,20 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 840
-    y: 174
-    width: 76
+    x: 771
+    y: 245
+    width: 98.4
     height: 40
   isDragging: 0
-  Title: booze
+  Title: excessive
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'He made his fortune producing booze.
-
-    All of this citys liquor trade
-    is run by him and his underlings.'
-  Notes: 'Introduce Name of city? '
+  Text: 'This liquor supposedly gets rid of the inconvenciens of excessive drinking. '
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 3aaf98d1149a2f5428a47e0ed387e566, type: 2}
+  NextRight: {fileID: 11400000, guid: d974406f31cdadd43bea95b61f025100, type: 2}
