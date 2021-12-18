@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 72
+  m_Name: Line 76
   m_EditorClassIdentifier: 
-  Position: {x: 2783, y: 9}
-  Size: {x: 97.6, y: 40}
+  Position: {x: 3233, y: 4}
+  Size: {x: 76, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -84,19 +84,19 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 895
-    y: 198
-    width: 97.6
+    y: 214
+    width: 76
     height: 40
   isDragging: 0
-  Title: freespace
+  Title: booze
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'I''ll not let you go out of buisness as long as I''m still here.
+  Text: 'He made his fortune producing booze.
 
-    You
-    see there is still a free space at our loce cementry.'
-  Notes: 
+    All of this citys liquor trade
+    is run by him and his underlings.'
+  Notes: 'Introduce Name of city? '
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: efe081edecf3c57428444db157a9ce28, type: 2}
+  NextRight: {fileID: 0}

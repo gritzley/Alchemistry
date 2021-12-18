@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 72
+  m_Name: Line 74
   m_EditorClassIdentifier: 
-  Position: {x: 2783, y: 9}
-  Size: {x: 97.6, y: 40}
+  Position: {x: 3025, y: 5}
+  Size: {x: 94.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,20 +83,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 895
-    y: 198
-    width: 97.6
+    x: 687
+    y: 215
+    width: 94.4
     height: 40
   isDragging: 0
-  Title: freespace
+  Title: merchant
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'I''ll not let you go out of buisness as long as I''m still here.
+  Text: 'There is a dragon skin, you probably know of him: Balbador the Golden tooth, 
+    an influential merchant.
 
-    You
-    see there is still a free space at our loce cementry.'
+'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: efe081edecf3c57428444db157a9ce28, type: 2}
+  NextRight: {fileID: 11400000, guid: fad619b1a35b8c145892b4abdc654783, type: 2}
