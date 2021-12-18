@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 23
   m_EditorClassIdentifier: 
   Position: {x: 2978, y: 231}
-  Size: {x: 98.4, y: 40}
+  Size: {x: 98.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 811
-    y: 139
-    width: 98.4
+    x: 936
+    y: 249
+    width: 98.66667
     height: 40
   isDragging: 0
   Title: retirement
@@ -94,6 +94,7 @@ MonoBehaviour:
 
     A grand finale
     for his story.'
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

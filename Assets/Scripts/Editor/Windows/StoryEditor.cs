@@ -43,18 +43,11 @@ public class StoryEditor : EditorWindow
     private void ViewQuests()
     {
         viewState = ViewState.QuestView;
-        // There is no simple way to get all assets of a certain type.
-        // Instead we are getting a list of all internal references to quest assets in a list of directories
-        // which we convert to actual paths, which we then use to load the actual assets.
-        nodes = AssetDatabase.FindAssets("t:Quest", new string[] { "Assets/Dialogue" })
-        .Select( e => {
-            string path = AssetDatabase.GUIDToAssetPath(e);
-            Quest quest = (Quest)AssetDatabase.LoadAssetAtPath(path, typeof(Quest));
+        nodes = GameManager.Instance.test_Character.Quests.Select( quest => {
             quest.OnRemove = RemoveNodeFromView;
             quest.ViewDialogue = ViewQuestDialogue;
             return (StoryNode)quest;
-        })
-        .ToList();
+        }).ToList();
         offset = Vector2.zero;
     }
 

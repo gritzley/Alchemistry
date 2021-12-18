@@ -29,7 +29,6 @@ public class QuestEditor : Editor
 
         // Create a property field for the start prop
         EditorGUILayout.PropertyField(titleProp);
-        EditorGUILayout.PropertyField(nodesProp);
 
         for (int i = 0 ; i < linksProp.arraySize; i++)
         {

@@ -31,8 +31,6 @@ public class TextDisplay : MonoBehaviour
         {
             DestroyImmediate(letter.gameObject);
         }
-        
-        DisplayText("<wiggle>waddup<endwiggle>, <white>my <bob>nibba<endbob>!");
     }
 
     public void DisplayText(string text)

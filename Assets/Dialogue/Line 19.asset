@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 19
   m_EditorClassIdentifier: 
-  Position: {x: 2250, y: 241}
+  Position: {x: 2242, y: 240}
   Size: {x: 104, y: 40}
   LabelStyle:
     m_Name: 
@@ -83,14 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 708
-    y: 178
+    x: 521
+    y: 171
     width: 104
     height: 40
   isDragging: 0
   Title: effortlessly
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: Atrius is doing both effortlessly
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

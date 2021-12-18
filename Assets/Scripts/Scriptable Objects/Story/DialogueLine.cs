@@ -17,6 +17,8 @@ public class DialogueLine : DialogueNode
 
     public ConnectionPoint OutPointRight, OutPointLeft;
 
+    public override DialogueLine NextLine { get { return this; } }
+
     /// <summary>
     /// Return a list of outConnections from this to 
     /// </summary>
