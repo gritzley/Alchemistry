@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &2974906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-  m_PrefabInstance: {fileID: 433992647}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867d2d96f686f804c8bb92d4a3db5de3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &433992647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,26 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-      propertyPath: Name
-      value: Gravetender
-      objectReference: {fileID: 0}
-    - target: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-      propertyPath: Quests.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-      propertyPath: Quests.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-    - target: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-      propertyPath: Quests.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-    - target: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
-      propertyPath: Quests.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
 --- !u!1 &441532760
@@ -804,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Potions: []
-  test_Character: {fileID: 2974906}
+  test_Character: {fileID: 5351716042225905113, guid: 610185136a9be03479c1d0c6f72a26e4, type: 3}
 --- !u!4 &1384027330
 Transform:
   m_ObjectHideFlags: 0
@@ -1360,19 +1329,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000011312896
+      value: -0.00019929682
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000011312896
+      value: -0.00019929682
       objectReference: {fileID: 0}
     - target: {fileID: 5381074387192464348, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_StaticShadowCaster
@@ -1396,19 +1365,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.69840115
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.11061587
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.69840115
       objectReference: {fileID: 0}
     - target: {fileID: 6308896981663387617, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.11061587
       objectReference: {fileID: 0}
     - target: {fileID: 7422586892581342517, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_Name

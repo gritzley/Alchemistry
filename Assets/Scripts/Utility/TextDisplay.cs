@@ -29,6 +29,7 @@ public class TextDisplay : MonoBehaviour
         // Creating the letters in EditMode aswell means, that there is no cleanup. Therefore we have to clean them up ourselves
         foreach(Letter letter in GetComponentsInChildren<Letter>())
         {
+            letter.transform.parent = null;
             DestroyImmediate(letter.gameObject);
         }
     }
