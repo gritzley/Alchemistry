@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 87
+  m_Name: Line 90
   m_EditorClassIdentifier: 
-  Position: {x: 4490, y: -5}
-  Size: {x: 60.8, y: 65}
+  Position: {x: 4713, y: -18}
+  Size: {x: 78.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,19 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 762
-    y: 157
-    width: 60.8
-    height: 65
+    x: 985
+    y: 144
+    width: 78.4
+    height: 40
   isDragging: 0
-  Title: ask
+  Title: weeds
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: Hmm...? You look like you want to ask something
-  Notes: Should I add a questions were you tell him about you relationship with Golden
-    tooths or your opinion? cause our witch is def buying from him or one of his
-    man...
-  AnswerLeft: Why are you doing this?
-  AnswerRight: Don't you feel bad for ending these lifes?
-  HasAnswers: 1
-  NextLeft: {fileID: 11400000, guid: 9e9a220e716cbf143b88d5f9775cca18, type: 2}
-  NextRight: {fileID: 11400000, guid: 2099fb7a5cda2ab41add980ceda92cd4, type: 2}
+  Text: They're taking up space for life to blossom. I'm just pulling weeds.
+  Notes: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 0}
