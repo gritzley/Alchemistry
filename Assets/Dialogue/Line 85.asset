@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 83
+  m_Name: Line 85
   m_EditorClassIdentifier: 
-  Position: {x: 4042, y: -1}
-  Size: {x: 104, y: 40}
+  Position: {x: 4292, y: -3}
+  Size: {x: 60, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 889
-    y: 242
-    width: 104
+    x: 681
+    y: 274
+    width: 60
     height: 40
   isDragging: 0
-  Title: ceremonial
+  Title: slip
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: At the banquet Golden Tooth will drink first a cup of this booze. A ceremonial
-    act that will build trust in his product.
+  Text: "And he's still oweing me a favour. \nHe will probably have the chance to
+    slip something into\nthis new booze."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: c3fef64c562536042adfda8a6a42c22d, type: 2}
+  NextRight: {fileID: 11400000, guid: 1d83668f3c51bf543be27f740bb5380e, type: 2}
