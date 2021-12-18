@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 2
   m_EditorClassIdentifier: 
   Position: {x: 566, y: -115}
-  Size: {x: 81.6, y: 65}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -3260
-    y: 73
-    width: 81.6
-    height: 65
+    x: 505
+    y: 153
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: Dragon
   PrecedingStartNode: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}

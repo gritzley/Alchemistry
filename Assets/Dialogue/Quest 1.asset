@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 1
   m_EditorClassIdentifier: 
   Position: {x: 623, y: -168}
-  Size: {x: 202.4, y: 640}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,13 +83,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 647
-    y: 141
+    x: 562
+    y: 100
     width: 202.4
-    height: 640
+    height: 615
   isDragging: 0
   Title: Suspect
-  PrecedingStartNode: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
+  PrecedingStartNode: {fileID: 0}
   SucceedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 0}
   ParentCharacter: {fileID: 0}
@@ -122,8 +122,6 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
     NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 4add36e04f5568241b87a22cb42e302b, type: 2}
-    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
@@ -144,13 +142,5 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes:
-  - {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
-  - {fileID: 11400000, guid: 80a13fbef76ba21479d3fdd5e8623c99, type: 2}
-  - {fileID: 11400000, guid: 4b5537e5151772347a1954a531b532f7, type: 2}
-  - {fileID: 11400000, guid: 8304de4a0fe0b564384ce3bbc3a65cc7, type: 2}
-  - {fileID: 11400000, guid: 073dbffbc2ddf704281f268881341f3e, type: 2}
-  - {fileID: 11400000, guid: c3c0a7ce80285d94492deb471dfb3709, type: 2}
-  - {fileID: 11400000, guid: 3ca29c05a93984a4a863956e4c0e3631, type: 2}
-  - {fileID: 11400000, guid: d4d3445c562607a4cb8ba9062b0d3023, type: 2}
+  DialogueNodes: []
   isUnfolded: 1

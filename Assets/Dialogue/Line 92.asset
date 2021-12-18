@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 92
   m_EditorClassIdentifier: 
   Position: {x: 4807, y: -4}
-  Size: {x: 82.4, y: 40}
+  Size: {x: 87.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 981
-    y: 184
-    width: 82.4
+    x: 932
+    y: 179
+    width: 87.2
     height: 40
   isDragging: 0
-  Title: Line 92
+  Title: doforme
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 
+  Text: So is there something you can do for me?
   Notes: 
   AnswerLeft: 
   AnswerRight: 
