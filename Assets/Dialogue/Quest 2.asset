@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -292
-    y: 85
+    x: -291
+    y: 72
     width: 81.6
     height: 65
   isDragging: 0
@@ -178,4 +178,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ceac7ecaf2ee40947b17a99a833d690d, type: 2}
   - {fileID: 11400000, guid: abe8ed9085ec1f143b667248dc9a2335, type: 2}
   - {fileID: 11400000, guid: 3fead90597a365f4aad4a80eb145509e, type: 2}
+  - {fileID: 11400000, guid: 2aaca9685362d7546af68d7bd6f33370, type: 2}
   isUnfolded: 1

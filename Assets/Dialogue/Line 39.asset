@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 39
   m_EditorClassIdentifier: 
   Position: {x: 1271, y: 85}
-  Size: {x: 164.8, y: 40}
+  Size: {x: 83.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,12 +83,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 413
-    y: 285
-    width: 164.8
+    x: 165
+    y: 269
+    width: 83.2
     height: 40
   isDragging: 0
-  Title: WobblyConciousness
+  Title: Wobbly
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
   Text: According to the newspaper he seemed a bit shaky when he entered the racing
     box.

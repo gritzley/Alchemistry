@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 873
-    y: 328
+    x: 477
+    y: 311
     width: 96.8
     height: 40
   isDragging: 0
@@ -96,4 +96,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 2aaca9685362d7546af68d7bd6f33370, type: 2}
