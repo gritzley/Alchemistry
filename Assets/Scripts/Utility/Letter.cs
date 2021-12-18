@@ -5,8 +5,8 @@ using System;
 [ExecuteInEditMode]
 public class Letter : MonoBehaviour
 {
+    public char Character;
     SpriteRenderer spriteRenderer;
-
     float bobbingAmount = 0.03f;
     float bobbingSpeed;
     float bobbingStartTime;
@@ -47,6 +47,7 @@ public class Letter : MonoBehaviour
         inPlay = (!Application.isEditor || EditorApplication.isPlaying) ? 1 : 0;
     }
 
+    [ExecuteInEditMode]
     void Update()
     {
         transform.position = transform.parent.position + transform.parent.rotation * Position;

@@ -15,8 +15,11 @@ public class TextDisplay : MonoBehaviour
 
     public GameObject LetterPrefab;
 
+    public Vector3 Offset;
+
     float letterSpacing = 0.01f;
-    float textSpeed = 12.0f;
+    float textSpeed = 30.0f;
+    float maxLineWidth = 5.0f;
 
     Sprite[] sprites;
 
@@ -27,7 +30,12 @@ public class TextDisplay : MonoBehaviour
         sprites = Resources.LoadAll<Sprite>(FontTex.name);
 
         // Creating the letters in EditMode aswell means, that there is no cleanup. Therefore we have to clean them up ourselves
-        foreach(Letter letter in GetComponentsInChildren<Letter>())
+        ClearLetters();
+    }
+
+    void ClearLetters()
+    {
+        foreach(Letter letter in GetComponentsInChildren<Letter>(true))
         {
             letter.transform.parent = null;
             DestroyImmediate(letter.gameObject);
@@ -42,16 +50,22 @@ public class TextDisplay : MonoBehaviour
 
     IEnumerator DisplayText()
     {
-        Regex regex = new Regex($"((<(?<command>\\w*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[{CharacterString}]+?))");
+        ClearLetters();
 
-        // We calculate the leftmost bound and then draw the letters from there, moving further right with each letter.
-        // This is basically like a cursor
+        // This filters the text into a MatchCollection. Each Match contains either a command or a single letter that is to be displayed
+        // These matches can be used to iterate over the text letter by letter
+        // MatchGroups: "command" and "character"
+        // Note: The Characterstring contains all characters contained in the FontTexture and acts as a filter for unsupported characters.s
+        Regex regex = new Regex($"((<(?<command>\\w*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[{CharacterString}\\n]+?))");
         MatchCollection matches = regex.Matches(text);
-        Queue<Letter> letters = new Queue<Letter>();
-        float leftBound = 0;
+
+        // Flags for how letters are rendered
+        // These are the standard settings for text
         Color color = Color.white;
         bool isBobbing = false;
         bool isWiggling = false;
+
+        List<Letter> letters = new List<Letter>();
         foreach (Match match in matches)
         {
             if (match.Groups["character"].Success)
@@ -60,23 +74,49 @@ public class TextDisplay : MonoBehaviour
                 go.transform.parent = transform;
                 go.SetActive(false);
                 Letter letter = go.GetComponent<Letter>();
-                letter.Sprite = GetSpriteForCharacter(match.Groups["character"].Value.ToCharArray()[0]);
-                leftBound += (letter.Width + letterSpacing) / 2;
-                letters.Enqueue(letter);
+                letter.Character = match.Groups["character"].Value[0];
+                if (letter.Character != '\n') letter.Sprite = GetSpriteForCharacter(letter.Character);
+                letters.Add(letter);
             }
         }
+        int charIndex = 0;
+        int lastBreakIndex = 0;
+        int nextSpaceIndex = letters.FindIndex(0, letters.Count, e => e.Character == ' ' || e.Character == '\n');
+        float lineWidth = 0;
         foreach (Match match in matches)
         {
             if (match.Groups["character"].Success)
             {
-
-                Letter letter = letters.Dequeue();
+                Letter letter = letters[charIndex];
                 letter.Color = color;
-                letter.Position = Vector3.left * leftBound + Vector3.right * letter.Width / 2;
+
+                if (charIndex++ == nextSpaceIndex && charIndex < letters.Count)
+                {
+                    nextSpaceIndex = letters.FindIndex(charIndex, letters.Count - charIndex, e => e.Character == ' ' || e.Character == '\n');
+                    if (nextSpaceIndex == -1) nextSpaceIndex = letters.Count;
+                    float wordWidth = letters
+                    .GetRange(charIndex, nextSpaceIndex - charIndex)
+                    .Select( e => e.Width + letterSpacing)
+                    .Sum();
+
+                    if (lineWidth + wordWidth > maxLineWidth || letters[charIndex - 1].Character == '\n')
+                    {
+                        letters.GetRange(0, charIndex - 1).ForEach( e => e.Position += Vector3.up * 0.1f);
+                        lastBreakIndex = charIndex;
+                        lineWidth = 0;
+                    }
+                    lineWidth += wordWidth;
+                }
+
+                float leftCursor = letters.GetRange(lastBreakIndex, charIndex - lastBreakIndex).Select( e => e.Width + letterSpacing).Sum() / 2;
+                letters.GetRange(lastBreakIndex, charIndex - lastBreakIndex).ForEach( e => {
+                    e.Position = Vector3.left * leftCursor + Vector3.right * e.Width / 2 + Offset;
+                    leftCursor -= e.Width + letterSpacing;
+                });
+
                 if (isBobbing) letter.StartBobbing();
                 if (isWiggling) letter.StartWiggle();
                 letter.gameObject.SetActive(true);
-                leftBound -= (letter.Width + letterSpacing);
                 if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
             }
             if (match.Groups["command"].Success)
@@ -100,6 +140,9 @@ public class TextDisplay : MonoBehaviour
                         break;
                     case "endwiggle":
                         isWiggling = false;
+                        break;
+                    case "textspeed":
+                        textSpeed = Single.Parse(match.Groups["value"].Value);
                         break;
                 }
             }

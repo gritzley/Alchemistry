@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3124278672356755137}
   - component: {fileID: 3124278672356755136}
   - component: {fileID: 5351716042225905113}
+  - component: {fileID: 7030587413575855288}
   m_Layer: 0
   m_Name: Gravetender
   m_TagString: Untagged
@@ -28,10 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3124278672356755139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3124278672575505606}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3124278672356755139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 867d2d96f686f804c8bb92d4a3db5de3, type: 3}
+  m_Script: {fileID: 11500000, guid: d69bba3afe33fb146b860e7a81819509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Gravetender
@@ -118,44 +118,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
   - {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   LastGivenPotion: {fileID: 0}
---- !u!1 &3124278672575505601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3124278672575505606}
-  - component: {fileID: 3124278672575505607}
-  m_Layer: 0
-  m_Name: TextDisplay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3124278672575505606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3124278672575505601}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3124278672356755143}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3124278672575505607
+--- !u!114 &7030587413575855288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3124278672575505601}
+  m_GameObject: {fileID: 3124278672356755139}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bc46de6061fbd46b82184b6ac115c8, type: 3}
@@ -165,3 +134,4 @@ MonoBehaviour:
   CharacterString: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^
     _abcdefghijklmnopqrstuvwxyz{|}~ \xE7\xFC\xE9\xE2\xE4\xE0a\xE7\xEA\xE8\xEB\xEF\xEE\xEC\xE4a\xE9\xE6\xE6\xF4\xF6\xF2\xFB\xF9"
   LetterPrefab: {fileID: 9150542689550925434, guid: 1efb2fda11ae14e41b08851f0c3f11ed, type: 3}
+  Offset: {x: 0, y: 0.75, z: 0}

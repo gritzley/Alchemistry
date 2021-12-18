@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public List<Potion> Potions;
 
-    public Character test_Character;
+    public CharacterController test_Character;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.

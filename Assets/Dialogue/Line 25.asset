@@ -90,10 +90,9 @@ MonoBehaviour:
   isDragging: 0
   Title: Ancestors
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'Ancestors? There are treated with the utmost care so that
-
-    they live
-    on when I cut their blossom.'
+  Text: <textspeed=4>Ancestors?<textspeed=40> There are treated with the <wiggle>utmost<endwiggle>
+    care so that they live on when I <red>cut their blossom.
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
