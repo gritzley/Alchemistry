@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest
   m_EditorClassIdentifier: 
   Position: {x: 268, y: -115}
-  Size: {x: 86.66667, y: 65}
+  Size: {x: 202.4, y: 640}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 491
-    y: 99
-    width: 86.66667
-    height: 65
+    x: 292
+    y: 194
+    width: 202.4
+    height: 640
   isDragging: 0
   Title: Centaur
   PrecedingStartNode: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   ParentCharacter: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
