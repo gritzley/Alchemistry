@@ -32,7 +32,6 @@ public class DialogueLineEditor : Editor
         answerRightProp = serializedObject.FindProperty("AnswerRight");
         nextRightProp = serializedObject.FindProperty("NextRight");
         nextLeftProp = serializedObject.FindProperty("NextLeft");
-
     }
 
     // This gets called every frame that the inspector is drawn
@@ -62,6 +61,11 @@ public class DialogueLineEditor : Editor
 
         EditorGUILayout.LabelField("Notes");
         notesProp.stringValue = EditorGUILayout.TextArea(notesProp.stringValue);
+
+        if (GUILayout.Button("Test Dialogue"))
+        {
+            GameManager.Instance.test_Character.Say(textProp.stringValue);
+        }
 
         // Apply all changes made to serialized properties
         serializedObject.ApplyModifiedProperties();

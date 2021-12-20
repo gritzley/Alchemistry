@@ -34,7 +34,20 @@ public class StoryEditor : EditorWindow
     /// </summary>
     private void OnEnable()
     {
-        ViewQuests();
+        if (GameManager.Instance == null)
+        {
+            Debug.LogWarning("There is no GameManager Instance!");
+        }
+        else if (GameManager.Instance.test_Character == null)
+        {
+            Debug.LogWarning("There is no test_character assigned in the GameManager");
+        }
+        else
+        {
+            ViewQuests();
+            offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
+            offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
+        }
     }
 
     /// <summary>
@@ -208,7 +221,7 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDrag:
 
                 // ---- DRAG ----
-                if (Event.current.button == 2)
+                if (Event.current.button == 0)
                 {
                     isDragging = true;
                     Vector2 drag = Event.current.delta;

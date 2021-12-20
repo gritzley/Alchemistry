@@ -12,7 +12,7 @@ public class Quest : StoryNode
     public DialogueNode PrecedingStartNode;
     public DialogueNode SucceedingStartNode;
     public DialogueLine CurrentLine;
-    public Character ParentCharacter;
+    public CharacterController ParentCharacter;
 
     // ---- LINKS ----
     [System.Serializable]
