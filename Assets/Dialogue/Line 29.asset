@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 29
   m_EditorClassIdentifier: 
-  Position: {x: 3588, y: 231}
-  Size: {x: 87.2, y: 40}
+  Position: {x: 3588, y: 232}
+  Size: {x: 87.33333, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,9 +83,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 640
-    y: 99
-    width: 87.2
+    x: 459
+    y: 68
+    width: 87.33333
     height: 40
   isDragging: 0
   Title: Suspect
@@ -96,8 +96,9 @@ MonoBehaviour:
     passing seems like some sort of a....
 
     tragic accident.'
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 5e8d3bc4e17480744b553a7815f4a133, type: 2}
