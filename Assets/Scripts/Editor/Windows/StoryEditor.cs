@@ -208,7 +208,7 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDrag:
 
                 // ---- DRAG ----
-                if (Event.current.button == 2)
+                if (Event.current.button == 0)
                 {
                     isDragging = true;
                     Vector2 drag = Event.current.delta;
