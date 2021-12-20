@@ -17,9 +17,10 @@ public class TextDisplay : MonoBehaviour
 
     public Vector3 Offset;
 
-    float letterSpacing = 0.01f;
-    float textSpeed = 30.0f;
-    float maxLineWidth = 5.0f;
+    public float letterSpacing = 0.01f;
+    public float lineSpacing = 0.1f;
+    public float textSpeed = 30.0f;
+    public float maxLineWidth = 5.0f;
 
     Sprite[] sprites;
 
@@ -101,7 +102,7 @@ public class TextDisplay : MonoBehaviour
 
                     if (lineWidth + wordWidth > maxLineWidth || letters[charIndex - 1].Character == '\n')
                     {
-                        letters.GetRange(0, charIndex - 1).ForEach( e => e.Position += Vector3.up * 0.1f);
+                        letters.GetRange(0, charIndex - 1).ForEach( e => e.Position += Vector3.up * lineSpacing);
                         lastBreakIndex = charIndex;
                         lineWidth = 0;
                     }
