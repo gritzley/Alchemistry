@@ -38,7 +38,7 @@ public class StoryEditor : EditorWindow
         {
             Debug.LogWarning("There is no GameManager Instance!");
         }
-        else if (GameManager.Instance.test_Character == null)
+        else if (GameManager.Instance.CurrentCustomer == null)
         {
             Debug.LogWarning("There is no test_character assigned in the GameManager");
         }
@@ -56,7 +56,7 @@ public class StoryEditor : EditorWindow
     private void ViewQuests()
     {
         viewState = ViewState.QuestView;
-        nodes = GameManager.Instance.test_Character.Quests.Select( quest => {
+        nodes = GameManager.Instance.CurrentCustomer.Quests.Select( quest => {
             quest.OnRemove = RemoveNodeFromView;
             quest.ViewDialogue = ViewQuestDialogue;
             return (StoryNode)quest;
@@ -159,6 +159,25 @@ public class StoryEditor : EditorWindow
         nodes.Add(branch);
     }
 
+    private void GoToMiddleOfNodes()
+    {
+        offset = Vector2.zero;
+        foreach(StoryNode node in nodes)
+        {
+            offset += node.Position;
+        }
+        offset /= nodes.Count;
+        offset -= position.size / 2;
+        offset *= -1;
+    }
+
+    private void GoToFirstNode()
+    {
+        offset = nodes[0].Position;
+        offset -= position.size / 2;
+        offset *= -1;
+    }
+
     /// <summary>
     /// OnGUI is called whenever the window is being drawn. This is essentially the main function of the Window
     /// </summary>
@@ -208,10 +227,12 @@ public class StoryEditor : EditorWindow
                             contextMenu.AddItem(new GUIContent("Add Line"), false, () => AddDialogueLine(pos));
                             contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => AddDialogueBranch(pos));
                             contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
+                            contextMenu.AddItem(new GUIContent("I am lost, take me back to nodes"), false, GoToFirstNode);
                             break;
 
                         case ViewState.QuestView:
                             contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                            contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
                             break;
                     }
                     contextMenu.ShowAsContext();

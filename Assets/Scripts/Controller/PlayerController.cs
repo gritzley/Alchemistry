@@ -4,25 +4,14 @@ using UnityEngine;
 
 public class PlayerController : Moveable
 {
-    // The current PlayerPosition
-    // Also used to set the inital PlayerPosition
     [SerializeField] PlayerPosition currentPosition;
-
-    // The cardinal direction the player is facing in
     Vector3 cardinalDirection;
-
-    // Reference to the camera
     Camera fpCamera;
-
-    // Reference to the transform where held items are placed
     public Transform HandTransform;
-    // The current held item
     public Pickupable HeldItem;
-    // Flag to disable inputs when moving or turning to stop weird behavior from happening
-    public bool InputDisabled = false;
+    [HideInInspector] public bool InAction;
 
-    // Called once at the start of the game
-    void Start()
+    void OnEnable()
     {
         fpCamera = GetComponentInChildren<Camera>();
         // Set positiont o start position
@@ -39,51 +28,29 @@ public class PlayerController : Moveable
         HandTransform = transform.Find("Hand");
     }
 
-    // Called every frame
-    void Update()
-    { 
-        // INPUTS
-        if (!InputDisabled)
+    public void Turn() {
+        if (!InAction && !currentPosition.TurnDisabled)
         {
-            // On Turn Buttons (A and D)
-            if (Input.GetButtonDown("Turn"))
-            {
-                // Playerposition can disable turning. This is usefull for "special" positions where you look at things.
-                if (!currentPosition.TurnDisabled)
-                {
-                    TurnCorner(Input.GetAxisRaw("Turn"));   
-                }
-            }
+            TurnCorner(Input.GetAxisRaw("Turn"));   
+        }
+    }
 
-            // On Move Buttons (W and S)
-            if (Input.GetButtonDown("Move"))
-            {
-                // Multiply the current facing direction by -1 when moving backwards
-                Vector3 moveDirection = cardinalDirection * Input.GetAxisRaw("Move");
-                // Get the next position in the given direction
-                PlayerPosition nextPos = currentPosition.GetNextPosition(moveDirection);
-                // If there is a next position, move there
-                if (nextPos != null)
-                {
-                    MoveToPos(nextPos);
-                }
-            }
+    public void Move(float sign) {
+        Vector3 moveDirection = cardinalDirection * sign;
+        PlayerPosition nextPos = currentPosition.GetNextPosition(moveDirection);
+        if (!InAction && nextPos != null)
+        {
+            MoveToPos(nextPos);
+        }
+    }
 
-
-
-
-            // Handle Mouseclick Event
-            if (Input.GetMouseButtonDown(0))
-            {
-                // Perform the raycast and store the result in hit. If a clickable was hit, handle the hit
-                Ray ray = fpCamera.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    hit.collider.gameObject.GetComponent<IClickable>()?.OnClick(this);
-                }
-            }
-
+    public void Interact()
+    {
+        Ray ray = fpCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (!InAction && Physics.Raycast(ray, out hit))
+        {
+            hit.collider.gameObject.GetComponent<IClickable>()?.OnClick(this);
         }
     }
 
@@ -93,7 +60,6 @@ public class PlayerController : Moveable
     /// <param name="newPos">The new PlayerPosition</param>
     void MoveToPos (PlayerPosition newPos)
     {
-        InputDisabled = true;
         // Pitch cardinal direction by the amount from new pos
         float pitchLat = newPos.Pitch * Mathf.Abs(cardinalDirection.z);
         float pitchLon = newPos.Pitch * -Mathf.Abs(cardinalDirection.x);
@@ -114,7 +80,6 @@ public class PlayerController : Moveable
     /// <param name="dir">The turn direction. 1 for clockwise and -1 for anticlockwise</param>
     void TurnCorner (float dir)
     {
-        // InputDisabled = true;
         // Normalize the direction
         dir = Mathf.Sign(dir);
         
@@ -123,10 +88,5 @@ public class PlayerController : Moveable
 
         // Turn towards that rotation
         StartCoroutine(TurnTowards(cardinalDirection));
-    }
-
-    public override void OnMovementEnd()
-    {
-        InputDisabled = false;
     }
 }

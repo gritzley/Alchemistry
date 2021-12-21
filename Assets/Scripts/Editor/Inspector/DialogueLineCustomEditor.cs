@@ -20,10 +20,8 @@ public class DialogueLineEditor : Editor
     // Reorderable list for the recipe
     ReorderableList Recipe;
 
-    // This gets called when the inspector is opened
     void OnEnable()
     {
-        // Load properties
         titleProp = serializedObject.FindProperty("Title");
         notesProp = serializedObject.FindProperty("Notes");
         textProp = serializedObject.FindProperty("Text");
@@ -34,22 +32,17 @@ public class DialogueLineEditor : Editor
         nextLeftProp = serializedObject.FindProperty("NextLeft");
     }
 
-    // This gets called every frame that the inspector is drawn
     public override void OnInspectorGUI()
     {
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
 
-        // Add a property field for title and text
         EditorGUILayout.PropertyField(titleProp);
         EditorGUILayout.LabelField("Text");
         textProp.stringValue = EditorGUILayout.TextArea(textProp.stringValue);
 
         bool hasAnswerPreviousValue = hasAnswersProp.boolValue;
-
-        // Toggle for hasAnswer
         EditorGUILayout.PropertyField(hasAnswersProp);
-
         if (hasAnswersProp.boolValue)
         {
             EditorStyles.textField.wordWrap = true;
@@ -64,7 +57,7 @@ public class DialogueLineEditor : Editor
 
         if (GUILayout.Button("Test Dialogue"))
         {
-            GameManager.Instance.test_Character.Say(textProp.stringValue);
+            GameManager.Instance.CurrentCustomer.Say(textProp.stringValue);
         }
 
         // Apply all changes made to serialized properties

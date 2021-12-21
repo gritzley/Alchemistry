@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     public Potion LastGivenPotion;
 
 
-    public DialogueNode CurrentDialogueLine
+    public DialogueLine CurrentDialogueLine
     {
         get { return currentQuest.CurrentLine; }
     }
@@ -20,11 +20,22 @@ public class CharacterController : MonoBehaviour
     void OnEnable()
     {
         textDisplay = GetComponent<TextDisplay>();
-        Say(StartQuest.CurrentLine.Text);
+        currentQuest = StartQuest;
+        Say(currentQuest.CurrentLine.Text);
+
     }
 
     public void Say(string text)
     {
         textDisplay.DisplayText(text);
+    }
+
+    public void ReceiveAnswer(int answer)
+    {
+        bool didDialogueAdvance = currentQuest.AdvanceDialogue(answer);
+        if (didDialogueAdvance)
+        {
+            Say(CurrentDialogueLine.Text);
+        }
     }
 }

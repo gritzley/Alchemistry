@@ -106,7 +106,7 @@ public class KettleController : MonoBehaviour, IClickable
         Steps[Steps.Count - 1] = lastStep;
 
         // Filter out Potions that don't fit the recipe
-        List<Potion> Potions = GameManager.Instance.Potions.Where( e => e.ValidateSteps(Steps) ).ToList();
+        List<Potion> Potions = Potion.GetAllPotionAssets().Where( e => e.ValidateSteps(Steps) ).ToList();
         
         // If there are no or several potions that fit the recipe, make a failed potion
         if (Potions.Count != 1)
