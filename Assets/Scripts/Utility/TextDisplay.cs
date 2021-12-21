@@ -26,12 +26,12 @@ public class TextDisplay : MonoBehaviour
 
     string text;
 
-    void OnEnable()
+    void Awake()
     {
-        sprites = Resources.LoadAll<Sprite>(FontTex.name);
-
         // Creating the letters in EditMode aswell means, that there is no cleanup. Therefore we have to clean them up ourselves
+        // We must do this in Awake because otherwise, if we try to display somethign in OnEnable, from this parent, it gets erased immdiately
         ClearLetters();
+        sprites = Resources.LoadAll<Sprite>(FontTex.name);
     }
 
     void ClearLetters()
@@ -130,6 +130,22 @@ public class TextDisplay : MonoBehaviour
                     case "white":
                         color = Color.white;
                         break;
+                    case "blue":
+                        color = Color.blue;
+                        break;
+                    case "yellow":
+                        color = Color.yellow;
+                        break;
+                    case "green":
+                        color = Color.green;
+                        break;
+                    case "black":
+                        color = Color.black;
+                        break;
+                    case "grey":
+                    case "gray":
+                        color = Color.grey;
+                        break;
                     case "bob":
                         isBobbing = true;
                         break;
@@ -156,6 +172,7 @@ public class TextDisplay : MonoBehaviour
         // The CharacterString is the "text" of the Font Texture, when written as a word. That way, the nth letter in the string
         // is the nth sprite in the spritesheet.
         int i = CharacterString.IndexOf(char.ToLower(c));
-        return sprites[i];
+        // This is a branchless way of saying: "Take the sprite for the character, or take the '?' sprite, if you don't find it"
+        return sprites[i + (Math.Sign(i) - 1) / 2 * CharacterString.IndexOf('?')];
     }
 }

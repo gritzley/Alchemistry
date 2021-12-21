@@ -86,6 +86,28 @@ public class Quest : StoryNode
         }
     }
 
+    public bool AdvanceDialogue(int i = 0)
+    {
+        Debug.Log(i);
+        switch (i)
+        {
+            case 0:
+                CurrentLine = CurrentLine.NextRight.NextLine;
+                break;
+            case 1:
+                if (CurrentLine.HasAnswers)
+                {
+                    CurrentLine = CurrentLine.NextLeft.NextLine;
+                }
+                else
+                {
+                    return false;
+                }
+                break;
+        }
+        return true;
+    }
+
     public override void OnOutPointClick(int i)
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;

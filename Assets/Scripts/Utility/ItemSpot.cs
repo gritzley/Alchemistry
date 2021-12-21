@@ -24,7 +24,7 @@ public class ItemSpot : MonoBehaviour, IClickable
             Item.transform.parent = player.HandTransform;
 
             // disable input to prevent glitches while taking an item in hand
-            player.InputDisabled = true;
+            player.InAction = true;
 
             // Move item to position and rotation of handTransform
             StartCoroutine(Item.MoveTowards(player.HandTransform.position));
@@ -37,7 +37,7 @@ public class ItemSpot : MonoBehaviour, IClickable
             // after item animation ends.
             IEnumerator coroutine () {
                 yield return new WaitForSeconds(player.HeldItem.animationTime);
-                player.InputDisabled = false;
+                player.InAction = false;
             }
             StartCoroutine(coroutine());
         }

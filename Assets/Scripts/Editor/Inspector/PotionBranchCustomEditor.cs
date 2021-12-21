@@ -13,9 +13,7 @@ public class PotionBranchEditor : Editor
     // This gets called when the inspector is opened
     void OnEnable()
     {
-        // Load serialized properties
         linksProp = serializedObject.FindProperty("Links");
-
         (target as PotionBranch).UpdateLinks();
     }
 
