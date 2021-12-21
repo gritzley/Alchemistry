@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class KettleController : MonoBehaviour, IClickable
+public class KettleController : Clickable
 {
     // Flag for cooking. Set to false to stop cooking
     bool cooking = false;
@@ -19,7 +19,7 @@ public class KettleController : MonoBehaviour, IClickable
         Orchestra = GetComponentInChildren<ParticleSystem>();
     }
 
-    public void OnClick(PlayerController player)
+    public override void OnClick(PlayerController player)
     {
         // If the player is empty-handed, stop cooking
         if (player.HeldItem == null)

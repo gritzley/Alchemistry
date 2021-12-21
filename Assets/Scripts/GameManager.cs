@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     // Instance of GameManager
     public static GameManager Instance;
-    public CharacterController CurrentCustomer;
+    public CustomerController CurrentCustomer;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.

@@ -56,7 +56,7 @@ public class StoryEditor : EditorWindow
     private void ViewQuests()
     {
         viewState = ViewState.QuestView;
-        nodes = GameManager.Instance.CurrentCustomer.Quests.Select( quest => {
+        nodes = GameManager.Instance.CurrentCustomer.CustomerDefinition.Quests.Select( quest => {
             quest.OnRemove = RemoveNodeFromView;
             quest.ViewDialogue = ViewQuestDialogue;
             return (StoryNode)quest;
@@ -100,6 +100,8 @@ public class StoryEditor : EditorWindow
         quest.Position = position;
         quest.OnRemove = RemoveNodeFromView;
         quest.ViewDialogue = ViewQuestDialogue;
+        quest.Customer = GameManager.Instance.CurrentCustomer.CustomerDefinition;
+        GameManager.Instance.CurrentCustomer.CustomerDefinition.Quests.Add(quest);
 
         // Changes made to the line after creating it must be saved
         EditorUtility.SetDirty(quest);

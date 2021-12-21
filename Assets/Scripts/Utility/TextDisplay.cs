@@ -7,21 +7,22 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 [ExecuteInEditMode]
-public class TextDisplay : MonoBehaviour
+public class TextDisplay : Clickable
 {
     public Texture2D FontTex;
+    public Sprite ErrorCharacterSprite;
     [TextArea]
     public string CharacterString;
 
     public GameObject LetterPrefab;
 
     public Vector3 Offset;
-
     public float letterSpacing = 0.01f;
     public float lineSpacing = 0.1f;
     public float textSpeed = 30.0f;
     public float maxLineWidth = 5.0f;
 
+    public Action OnClickCallback;
     Sprite[] sprites;
 
     string text;
@@ -34,8 +35,16 @@ public class TextDisplay : MonoBehaviour
         sprites = Resources.LoadAll<Sprite>(FontTex.name);
     }
 
-    void ClearLetters()
+    void OnEnable()
     {
+        BoxCollider collider = GetComponent<BoxCollider>();
+        collider.center = Offset;
+        collider.size = new Vector3(maxLineWidth, 1, 1);
+    }
+
+    public void ClearLetters()
+    {
+        StopAllCoroutines();
         foreach(Letter letter in GetComponentsInChildren<Letter>(true))
         {
             letter.transform.parent = null;
@@ -43,15 +52,29 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-    public void DisplayText(string text)
+    public override void OnClick(PlayerController _)
     {
-        this.text = text;
-        StartCoroutine(DisplayText());
+        OnClickCallback?.Invoke();
     }
 
-    IEnumerator DisplayText()
+    void OnMouseEnter()
+    {
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+    }
+
+    void OnMouseExit()
+    {
+        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+    }
+
+    public void DisplayText(string text, Action callback = null)
     {
         ClearLetters();
+        StartCoroutine(DisplayTextCoroutine(text, callback));
+    }
+
+    IEnumerator DisplayTextCoroutine(string text, Action callback = null)
+    {
 
         // This filters the text into a MatchCollection. Each Match contains either a command or a single letter that is to be displayed
         // These matches can be used to iterate over the text letter by letter
@@ -164,15 +187,22 @@ public class TextDisplay : MonoBehaviour
                 }
             }
         }
+
+        callback?.Invoke();
         yield return null;
     }
 
     Sprite GetSpriteForCharacter(char c)
     {
-        // The CharacterString is the "text" of the Font Texture, when written as a word. That way, the nth letter in the string
-        // is the nth sprite in the spritesheet.
-        int i = CharacterString.IndexOf(char.ToLower(c));
-        // This is a branchless way of saying: "Take the sprite for the character, or take the '?' sprite, if you don't find it"
-        return sprites[i + (Math.Sign(i) - 1) / 2 * CharacterString.IndexOf('?')];
+        if (CharacterString.Contains(char.ToLower(c)))
+        {
+            // The CharacterString is the "text" of the Font Texture, when written as a word. That way, the nth letter in the string
+            // is the nth sprite in the spritesheet.
+            int i = CharacterString.IndexOf(char.ToLower(c));
+            return sprites[i];
+        }
+        else {
+            return ErrorCharacterSprite;
+        }
     }
 }

@@ -1,8 +1,11 @@
-public interface IClickable
+using UnityEngine;
+
+public abstract class Clickable : MonoBehaviour
 {
     /// <summary>
     /// On Click bhaviour for this Object
     /// </summary>
     /// <param name="player">Reference to the Player who clicked the item</param>
-    void OnClick(PlayerController player);
+    public abstract void OnClick(PlayerController player);
+
 }

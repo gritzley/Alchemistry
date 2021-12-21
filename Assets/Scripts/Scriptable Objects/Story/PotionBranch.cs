@@ -23,11 +23,11 @@ public class PotionBranch : DialogueNode
     {
         get
         {
-            if (ParentQuest.ParentCharacter.LastGivenPotion != null)
+            if (GameManager.Instance.CurrentCustomer.LastGivenPotion != null)
             {
                 foreach (Link link in Links)
                 {
-                    if (ParentQuest.ParentCharacter.LastGivenPotion == link.Potion)
+                    if (GameManager.Instance.CurrentCustomer.LastGivenPotion == link.Potion)
                     {
                         return link.NextNode.NextLine;
                     }

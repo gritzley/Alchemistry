@@ -50,7 +50,7 @@ public class PlayerController : Moveable
         RaycastHit hit;
         if (!InAction && Physics.Raycast(ray, out hit))
         {
-            hit.collider.gameObject.GetComponent<IClickable>()?.OnClick(this);
+            hit.collider.gameObject.GetComponent<Clickable>()?.OnClick(this);
         }
     }
 

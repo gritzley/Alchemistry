@@ -12,7 +12,7 @@ public class Quest : StoryNode
     public DialogueNode PrecedingStartNode;
     public DialogueNode SucceedingStartNode;
     public DialogueLine CurrentLine;
-    public CharacterController ParentCharacter;
+    public CustomerDefinition Customer;
 
     // ---- LINKS ----
     [System.Serializable]
@@ -88,7 +88,6 @@ public class Quest : StoryNode
 
     public bool AdvanceDialogue(int i = 0)
     {
-        Debug.Log(i);
         switch (i)
         {
             case 0:
@@ -250,6 +249,7 @@ public class Quest : StoryNode
         {
             node.Remove();
         }
+        Customer.Quests.Remove(this);
         base.Remove();
     }
     public override List<Connection> GetOutConnections(int state)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : MonoBehaviour, IClickable
+public class Tool : Clickable
 {
     [System.Serializable]
     private struct Conversion
@@ -25,7 +25,7 @@ public class Tool : MonoBehaviour, IClickable
         return null;
     }
 
-    public void OnClick(PlayerController player)
+    public override void OnClick(PlayerController player)
     {
         if (player.HeldItem != null && player.HeldItem is Ingredient)
         {

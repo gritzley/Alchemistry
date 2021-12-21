@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSpot : MonoBehaviour, IClickable
+public class ItemSpot : Clickable
 {
     // The item stored in this spot
     [SerializeField] private Pickupable Item;
@@ -14,7 +14,7 @@ public class ItemSpot : MonoBehaviour, IClickable
         Item = GetComponentInChildren<Pickupable>();
     }
 
-    public void OnClick(PlayerController player)
+    public override void OnClick(PlayerController player)
     {
         // Pick up items
         if (player.HeldItem == null && Item != null)
@@ -58,4 +58,6 @@ public class ItemSpot : MonoBehaviour, IClickable
             player.HeldItem = null;
         }
     }
+
+    public void OnHover(PlayerController player) {}
 }
