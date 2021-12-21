@@ -107,6 +107,19 @@ public class Quest : StoryNode
         return true;
     }
 
+    public Quest GetNextQuest(Potion potion)
+    {
+        foreach (Link link in Links)
+        {
+            if (link.Potion == potion)
+            {
+                return link.NextQuest;
+            }
+        }
+        Debug.LogWarning($"Quest {name} has no link for potion {potion.name}.");
+        return null;
+    }
+
     public override void OnOutPointClick(int i)
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;

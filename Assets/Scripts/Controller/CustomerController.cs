@@ -11,6 +11,7 @@ public class CustomerController : MonoBehaviour
     public Potion LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
     Quest currentQuest;
+    bool isReceivingPotion;
 
     public DialogueLine CurrentDialogueLine
     {
@@ -20,18 +21,22 @@ public class CustomerController : MonoBehaviour
     void OnEnable()
     {
         currentQuest = CustomerDefinition.StartQuest;
-        HandleDialogueLine(CurrentDialogueLine);
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
+        HandleDialogueLine(CurrentDialogueLine);
     }
 
     void HandleDialogueLine(DialogueLine line)
     {
         LeftAnswerTextDisplay.ClearLetters();
         RightAnswerTextDisplay.ClearLetters();
-        
+
         Action displayAnswers = null;
-        if (line.HasAnswers)
+        if (line.NextRight == null)
+        {
+            isReceivingPotion = true;
+        }
+        else if (line.HasAnswers)
         {
             displayAnswers = () => {
                 LeftAnswerTextDisplay.DisplayText(line.AnswerLeft);
@@ -50,6 +55,16 @@ public class CustomerController : MonoBehaviour
     public void Say(string text, Action callback = null)
     {
         MainTextDisplay.DisplayText(text, callback);
+    }
+
+    public void ReceivePotion(Potion potion)
+    {
+        if (isReceivingPotion)
+        {
+            currentQuest = currentQuest.GetNextQuest(potion);
+            LastGivenPotion = potion;
+            HandleDialogueLine(CurrentDialogueLine);
+        }
     }
 
     public void ReceiveAnswer(int answer)

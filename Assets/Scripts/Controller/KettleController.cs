@@ -116,6 +116,7 @@ public class KettleController : Clickable
         // Otherwise, make the one potion that fits the recipe
         else {
             Debug.Log(Potions[0].name);
+            GameManager.Instance.CurrentCustomer.ReceivePotion(Potions[0]);
         }
     }
 }
