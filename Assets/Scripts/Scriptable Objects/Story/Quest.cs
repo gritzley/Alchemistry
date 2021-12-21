@@ -264,6 +264,7 @@ public class Quest : StoryNode
         }
         Customer.Quests.Remove(this);
         base.Remove();
+        AssetDatabase.SaveAssets();
     }
     public override List<Connection> GetOutConnections(int state)
     {
