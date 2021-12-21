@@ -13,7 +13,7 @@ public class TextDisplay : Clickable
     public Sprite ErrorCharacterSprite;
     [TextArea]
     public string CharacterString;
-
+    public int CharPixelHeight= 20;
     public GameObject LetterPrefab;
 
     public Vector3 Offset;
@@ -37,8 +37,14 @@ public class TextDisplay : Clickable
 
     void OnEnable()
     {
+        GameObject go = PrefabUtility.InstantiatePrefab(LetterPrefab) as GameObject;
+        Letter letter = go.GetComponent<Letter>();
+        letter.Sprite = sprites[0];
+        float spriteHeight = letter.Height;
+        DestroyImmediate(go);
+
         BoxCollider collider = GetComponent<BoxCollider>();
-        collider.center = Offset;
+        collider.center = Offset + Vector3.up / 2 + Vector3.down * spriteHeight / 2;
         collider.size = new Vector3(maxLineWidth, 1, 1);
     }
 

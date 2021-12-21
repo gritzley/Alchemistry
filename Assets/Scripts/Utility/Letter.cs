@@ -32,6 +32,11 @@ public class Letter : MonoBehaviour
         get { return spriteRenderer.bounds.size.x; }
     }
 
+    public float Height
+    {
+        get { return spriteRenderer.bounds.size.y; }
+    }
+
     float time
     {
         get { return Time.time * inPlay; }
