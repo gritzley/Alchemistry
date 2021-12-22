@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 2
   m_EditorClassIdentifier: 
   Position: {x: 579, y: -111}
-  Size: {x: 205.33333, y: 615}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,16 +83,16 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 460
-    y: 100
-    width: 205.33333
+    x: 691
+    y: 122
+    width: 202.4
     height: 615
   isDragging: 0
   Title: Dragon
   PrecedingStartNode: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
   SucceedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
-  ParentCharacter: {fileID: 0}
+  Customer: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 0}
