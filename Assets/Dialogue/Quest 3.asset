@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 3
   m_EditorClassIdentifier: 
   Position: {x: 571, y: -31}
-  Size: {x: 83.2, y: 65}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 287
-    y: 177
-    width: 83.2
-    height: 65
+    x: 574
+    y: 138
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: Zombie
   PrecedingStartNode: {fileID: 11400000, guid: 06f09efc89bfcb840b59edb966cef679, type: 2}
@@ -185,4 +185,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12d1d0e8cddfb414cbb86189c9a2dd37, type: 2}
   - {fileID: 11400000, guid: 6b842e11a32618a45a8abba7d9dc8a0c, type: 2}
   - {fileID: 11400000, guid: 1b3f7303e1a3bfa44b3f5bcf1d8d5df2, type: 2}
+  - {fileID: 11400000, guid: 1d49503e1f8801241a480d87b12e326a, type: 2}
   isUnfolded: 1

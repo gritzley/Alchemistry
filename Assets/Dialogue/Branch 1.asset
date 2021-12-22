@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d92e05b3a9cf048854121965885cf4, type: 3}
   m_Name: Branch 1
   m_EditorClassIdentifier: 
-  Position: {x: 1072, y: -54}
+  Position: {x: 1070, y: -67}
   Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 361
-    y: 51
+    x: 577
+    y: 135
     width: 202.4
     height: 615
   isDragging: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
     NextNode: {fileID: 11400000, guid: a493238a9cd2dde46be068f90667f042, type: 2}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 1d49503e1f8801241a480d87b12e326a, type: 2}
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}

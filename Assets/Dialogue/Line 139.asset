@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 135
+  m_Name: Line 139
   m_EditorClassIdentifier: 
-  Position: {x: 808, y: -220}
-  Size: {x: 65.6, y: 40}
+  Position: {x: 1432, y: -168}
+  Size: {x: 115.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 535
-    y: 113
-    width: 65.6
+    x: 939
+    y: 36
+    width: 115.2
     height: 40
   isDragging: 0
-  Title: here
+  Title: Flame breath
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: Did the news already reach you here?
+  Text: Flame breath
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: f95cb929ceb5d904ba450ddb4b767639, type: 2}
+  NextRight: {fileID: 0}
