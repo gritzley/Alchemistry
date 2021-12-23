@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 143
   m_EditorClassIdentifier: 
-  Position: {x: 1303, y: 170}
+  Position: {x: 1303, y: 153}
   Size: {x: 72.8, y: 40}
   LabelStyle:
     m_Name: 
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 802
-    y: 296
+    x: 484
+    y: 224
     width: 72.8
     height: 40
   isDragging: 0
   Title: Mana
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
-  Text: 
+  Text: He won the race without any interferences.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: c5dc3601c25f2c843b7b29251733fc87, type: 2}

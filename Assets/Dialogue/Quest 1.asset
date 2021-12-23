@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 1
   m_EditorClassIdentifier: 
   Position: {x: 570, y: -187}
-  Size: {x: 87.2, y: 65}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 121
-    y: 56
-    width: 87.2
-    height: 65
+    x: 562
+    y: 71
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: Suspect
   PrecedingStartNode: {fileID: 11400000, guid: 3db09c5156d96444d94d82285fc58a12, type: 2}
   SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: 3db09c5156d96444d94d82285fc58a12, type: 2}
   Customer: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
@@ -153,5 +153,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3180dcea7b77de94fb1bf8571af325ce, type: 2}
   - {fileID: 11400000, guid: 5af4e545334039849bbf59cfe01fd9cb, type: 2}
   - {fileID: 11400000, guid: ea0d1f161aedf2647a834195cd2cfe7a, type: 2}
-  - {fileID: 11400000, guid: be29ed3010b34bb4f8626efd3fd12b73, type: 2}
+  - {fileID: 0}
   isUnfolded: 1
