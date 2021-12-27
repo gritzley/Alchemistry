@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 1
   m_EditorClassIdentifier: 
   Position: {x: 570, y: -187}
-  Size: {x: 87.33333, y: 40}
+  Size: {x: 87.2, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 506
-    y: 94
-    width: 87.33333
-    height: 40
+    x: -464
+    y: 191
+    width: 87.2
+    height: 65
   isDragging: 0
   Title: Suspect
   PrecedingStartNode: {fileID: 11400000, guid: 3db09c5156d96444d94d82285fc58a12, type: 2}
@@ -153,4 +153,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3180dcea7b77de94fb1bf8571af325ce, type: 2}
   - {fileID: 11400000, guid: 5af4e545334039849bbf59cfe01fd9cb, type: 2}
   - {fileID: 11400000, guid: ea0d1f161aedf2647a834195cd2cfe7a, type: 2}
-  isUnfolded: 0
+  - {fileID: 11400000, guid: 158f158a465a35a42b01eb995e81c093, type: 2}
+  - {fileID: 11400000, guid: 2e2d2e251641aae438d280f376df7018, type: 2}
+  - {fileID: 11400000, guid: dae7f148dfb7fbd419ebae33a4fac9ed, type: 2}
+  - {fileID: 11400000, guid: c89206edd85733d438b68e86230c75cb, type: 2}
+  - {fileID: 11400000, guid: 752e3718143fe0c41b9a07ba49f7237e, type: 2}
+  - {fileID: 11400000, guid: d10405d070737d849973f34a9caa6994, type: 2}
+  - {fileID: 11400000, guid: 0e6f61a91d1436344b30563c9ca91d89, type: 2}
+  - {fileID: 11400000, guid: d522e0ac0ef27c84fbfaf26eb98722b8, type: 2}
+  - {fileID: 11400000, guid: 47454b4bf5817b8419e3198c5c1f0524, type: 2}
+  - {fileID: 11400000, guid: 4e887ad8f3c13374aba8976b6ed8423e, type: 2}
+  - {fileID: 11400000, guid: bffe5dc856b65fe4a86d0256b7fc774c, type: 2}
+  isUnfolded: 1

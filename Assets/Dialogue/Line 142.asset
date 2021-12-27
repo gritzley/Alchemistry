@@ -83,17 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 977
-    y: 123
+    x: 418
+    y: 301
     width: 76.8
     height: 40
   isDragging: 0
   Title: Giants
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 
+  Text: "When crouching through the gas filled tunnel Atrius burst through the \nchannel
+    having increased his size."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 47454b4bf5817b8419e3198c5c1f0524, type: 2}

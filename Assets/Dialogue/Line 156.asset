@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 140
+  m_Name: Line 156
   m_EditorClassIdentifier: 
-  Position: {x: 1439, y: -211}
-  Size: {x: 79.2, y: 40}
+  Position: {x: 1557, y: -75}
+  Size: {x: 89.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 818
-    y: 242
-    width: 79.2
+    x: 523
+    y: 304
+    width: 89.6
     height: 40
   isDragging: 0
-  Title: Poison
+  Title: escaped
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: At the beginnig of the race he started chocking
+  Text: The gas escaped out of the tunnel, leading to fainting in the first rows.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 2e2d2e251641aae438d280f376df7018, type: 2}
+  NextRight: {fileID: 11400000, guid: 4e887ad8f3c13374aba8976b6ed8423e, type: 2}
