@@ -8,6 +8,7 @@ public class ToolEditor : Editor
 {
     // Serialized properties for recipe and name
     SerializedProperty conversionsProp;
+    SerializedProperty ingredientPrefabProp;
 
     // Reorderable list for the recipe
     ReorderableList Conversions;
@@ -17,6 +18,7 @@ public class ToolEditor : Editor
     {
         // Load properties
         conversionsProp = serializedObject.FindProperty("Conversions");
+        ingredientPrefabProp = serializedObject.FindProperty("IngredientPrefab");
 
         // create the reorderable list
         Conversions = new ReorderableList(serializedObject, conversionsProp, true, true, true, true);
@@ -58,6 +60,8 @@ public class ToolEditor : Editor
     {
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
+
+        EditorGUILayout.PropertyField(ingredientPrefabProp);
 
         // Add the reorderable list to the layout
         Conversions.DoLayoutList();

@@ -8,7 +8,7 @@ public class KettleController : Clickable
     // Flag for cooking. Set to false to stop cooking
     bool cooking = false;
     // Field for a new ingredient that is added to the pot
-    Ingredient NewIngredient;
+    IngredientDefinition NewIngredient;
 
     Light Light;
     ParticleSystem Orchestra; 
@@ -34,11 +34,12 @@ public class KettleController : Clickable
             if (!cooking) StartCoroutine(Cooking());
 
             // Add the ingredient to the pot
-            NewIngredient = (player.HeldItem as Ingredient);
+            NewIngredient = (player.HeldItem as Ingredient).Definition;
 
             // if the ingredient is used up, destroy it
-            if (NewIngredient.DestroyOnUse)
+            if (NewIngredient.IsConsumable)
             {
+                Destroy(player.HeldItem.gameObject);
                 player.HeldItem = null;
             }
         }
@@ -70,7 +71,7 @@ public class KettleController : Clickable
                 // Create a new step
                 Potion.Step step = new Potion.Step();
                 // Set step ingredient
-                step.Ingredient = NewIngredient.type;
+                step.Ingredient = NewIngredient;
 
                 // If this is not the first step, set the previous steps cooking time
                 if (Steps.Count > 0)
@@ -86,12 +87,6 @@ public class KettleController : Clickable
 
                 // reset timer
                 time = 0;
-
-                // if the ingredient is used up, destroy it
-                if (NewIngredient.DestroyOnUse)
-                {
-                    Destroy(NewIngredient.gameObject);
-                }
 
                 // Set new ingredient to NULL again
                 NewIngredient = null;
