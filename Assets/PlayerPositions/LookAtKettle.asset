@@ -16,6 +16,6 @@ MonoBehaviour:
   East: {fileID: 0}
   South: {fileID: 0}
   West: {fileID: 11400000, guid: 60f9aeafe2bec9b47b741f9768c3faf2, type: 2}
-  Position: {x: 2.5, y: 2, z: -1.5}
+  Position: {x: 2.5, y: 2, z: -2}
   Pitch: 60
   TurnDisabled: 1
