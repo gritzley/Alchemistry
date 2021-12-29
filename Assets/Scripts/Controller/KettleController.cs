@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class KettleController : Clickable
+public class KettleController : Interactible
 {
     // Flag for cooking. Set to false to stop cooking
     bool cooking = false;
@@ -19,7 +19,7 @@ public class KettleController : Clickable
         Orchestra = GetComponentInChildren<ParticleSystem>();
     }
 
-    public override void OnClick(PlayerController player)
+    public override bool OnInteract(PlayerController player)
     {
         // If the player is empty-handed, stop cooking
         if (player.HeldItem == null)
@@ -43,6 +43,7 @@ public class KettleController : Clickable
                 player.HeldItem = null;
             }
         }
+        return true;
     }
 
     // Enumerator to handle cooking

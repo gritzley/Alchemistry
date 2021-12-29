@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : Clickable
+public class Tool : Interactible
 {
     public GameObject IngredientPrefab;
     [System.Serializable]
@@ -26,7 +26,7 @@ public class Tool : Clickable
         return null;
     }
 
-    public override void OnClick(PlayerController player)
+    public override bool OnInteract(PlayerController player)
     {
         if (player.HeldItem != null && player.HeldItem is Ingredient)
         {
@@ -44,5 +44,6 @@ public class Tool : Clickable
             go.transform.position = player.HandTransform.transform.position;
             go.transform.rotation = player.HandTransform.rotation;
         }
+        return true;
     }
 }

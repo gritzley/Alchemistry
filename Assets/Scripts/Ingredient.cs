@@ -5,6 +5,7 @@ using System.Collections;
 public class Ingredient : Pickupable
 {
     public IngredientDefinition Definition;
+
     void OnValidate()
     {
         if (isActiveAndEnabled)
