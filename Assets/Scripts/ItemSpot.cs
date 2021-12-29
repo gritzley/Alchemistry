@@ -17,24 +17,11 @@ public class ItemSpot : Interactible
         if (player.HeldItem == null && Item != null)
         {
             player.HeldItem = Item;
-            Item.transform.parent = player.HandTransform;
-
-            player.InAction = true;
-
-            StartCoroutine(Item.MoveTowards(player.HandTransform.position));
-            StartCoroutine(Item.TurnTowards(player.HandTransform.rotation));
-
-            Item = null;
-
-            // C# does not allow yield return in annonymus functions so we define a new coroutine to reenablee input
-            // after item animation ends.
-            IEnumerator coroutine () {
-                yield return new WaitForSeconds(player.HeldItem.animationTime);
-                player.InAction = false;
-            }
-            StartCoroutine(coroutine());
-
-            Destroy(player.HeldItem.GetComponentInChildren<InteractibleChild>());
+            new Task( MoveItem(player.HandTransform, player) )
+            .Finished += delegate{
+                Item = null;
+                Destroy(player.HeldItem.GetComponentInChildren<InteractibleChild>());
+            };
 
             return true;
         }
@@ -43,17 +30,28 @@ public class ItemSpot : Interactible
         else if (player.HeldItem != null && Item == null)
         {
             Item = player.HeldItem;
-            Item.transform.parent = transform;
+            new Task( MoveItem(transform, player) )
+            .Finished += delegate{
+                player.HeldItem = null;
+                SetChildInteractibleParent();
+            };
 
-            StartCoroutine(Item.MoveTowards(transform.position));
-            StartCoroutine(Item.TurnTowards(Item.Rotation));
-
-            player.HeldItem = null;
-
-            SetChildInteractibleParent();
             return true;
         }
+
         return false;
+    }
+
+    IEnumerator MoveItem (Transform target, PlayerController player)
+    {
+        player.InAction = true;
+        Item.transform.parent = target;
+
+        Task Moving = new Task(Item.MoveTowards(target.position));
+        Task Turning = new Task(Item.TurnTowards(target.rotation));
+
+        while (Moving.Running && Turning.Running) yield return new WaitForSeconds(0.1f);
+        player.InAction = false;
     }
 
     void SetChildInteractibleParent()
