@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 161
+  m_Name: Line 189
   m_EditorClassIdentifier: 
-  Position: {x: 1454.5, y: 96}
-  Size: {x: 127.2, y: 40}
+  Position: {x: 3475.5, y: -44}
+  Size: {x: 72, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,20 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 297
-    y: 457
-    width: 127.2
+    x: 714
+    y: 284
+    width: 72
     height: 40
   isDragging: 0
-  Title: Transformation
+  Title: place
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'On the big racing day chaos ensued as the long-winning favourite Atrius
-
-    suddenly
-    turned into a rodent.'
+  Text: It's not hard to track down the few potion merchants in this city, maybe
+    they'd need a little longer to find this place but eventually...
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: e333775841596a84aaa99e8e639ea366, type: 2}
+  NextRight: {fileID: 11400000, guid: afb728809995e584286128daaad34b5e, type: 2}

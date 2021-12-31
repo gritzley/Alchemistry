@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 161
+  m_Name: Line 188
   m_EditorClassIdentifier: 
-  Position: {x: 1454.5, y: 96}
-  Size: {x: 127.2, y: 40}
+  Position: {x: 3571.5, y: -47}
+  Size: {x: 104, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,20 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 297
-    y: 457
-    width: 127.2
+    x: 816
+    y: 278
+    width: 104
     height: 40
   isDragging: 0
-  Title: Transformation
+  Title: ingredients
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'On the big racing day chaos ensued as the long-winning favourite Atrius
-
-    suddenly
-    turned into a rodent.'
+  Text: They'll probably find some illegal ingredients, or am I mistaken?
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: e333775841596a84aaa99e8e639ea366, type: 2}
+  NextRight: {fileID: 11400000, guid: 6f75ce552a8526645a634c0bb5ad6b42, type: 2}
