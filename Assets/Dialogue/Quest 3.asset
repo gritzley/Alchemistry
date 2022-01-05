@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 3
   m_EditorClassIdentifier: 
-  Position: {x: 571, y: -31}
-  Size: {x: 83.2, y: 65}
+  Position: {x: 517, y: 90}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -76
-    y: 133
-    width: 83.2
-    height: 65
+    x: 380.5
+    y: 543
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: Zombie
   PrecedingStartNode: {fileID: 11400000, guid: 06f09efc89bfcb840b59edb966cef679, type: 2}
