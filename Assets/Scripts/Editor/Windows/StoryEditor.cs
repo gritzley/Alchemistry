@@ -105,6 +105,7 @@ public class StoryEditor : EditorWindow
 
         // Changes made to the line after creating it must be saved
         EditorUtility.SetDirty(quest);
+        EditorUtility.SetDirty(GameManager.Instance.CurrentCustomer.CustomerDefinition);
         AssetDatabase.SaveAssets();
         nodes.Add(quest);
     }
