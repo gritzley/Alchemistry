@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 259
+  m_Name: Line 270
   m_EditorClassIdentifier: 
-  Position: {x: 2991.4287, y: -166.85718}
-  Size: {x: 60.8, y: 65}
+  Position: {x: 3973.4287, y: -148.85718}
+  Size: {x: 77.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 909
-    y: 174
-    width: 60.8
-    height: 65
+    x: 755
+    y: 327
+    width: 77.6
+    height: 40
   isDragging: 0
-  Title: win
+  Title: claims
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: A win for justice and my graveyard.
+  Text: "At least that's what he calls himself and my contacts are supproting his
+    claims.\r"
   Notes: 
-  AnswerLeft: I'm glad I restoked my booze supplies.
-  AnswerRight: And a loose for anyone with jobs in the destilleries.
-  HasAnswers: 1
-  NextLeft: {fileID: 11400000, guid: 35d2f764afc2a664dbe628cdd1492db3, type: 2}
-  NextRight: {fileID: 11400000, guid: ffa354b003f3e4e4f9299503a7436a0f, type: 2}
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: aac83421902448c4294d2e49d4a1ca45, type: 2}
