@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 4
   m_EditorClassIdentifier: 
   Position: {x: 704.5, y: -257}
-  Size: {x: 202.4, y: 615}
+  Size: {x: 202.4, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,13 +83,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 688
-    y: 265
+    x: 254.5
+    y: 220
     width: 202.4
-    height: 615
+    height: 65
   isDragging: 0
   Title: Demi-God (don't kill dragon)
-  PrecedingStartNode: {fileID: 0}
+  PrecedingStartNode: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
   SucceedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -142,5 +142,11 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
+  DialogueNodes:
+  - {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
+  - {fileID: 11400000, guid: 9e27cab7318cd0b4dae31d3f18f4e791, type: 2}
+  - {fileID: 11400000, guid: dd4d3fae2f8b7e0408fcc04d07b84cc3, type: 2}
+  - {fileID: 11400000, guid: 23364ac7558ad9f4991c9c205e8a0756, type: 2}
+  - {fileID: 11400000, guid: 3f3def6fe421b584dac681ec7c02432b, type: 2}
+  - {fileID: 11400000, guid: 0872f2ff896953e4aab4b902270be75e, type: 2}
   isUnfolded: 1
