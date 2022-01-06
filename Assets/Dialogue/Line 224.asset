@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 381
-    y: 299
+    x: 264
+    y: 228
     width: 152
     height: 40
   isDragging: 0
   Title: Potion of Ice Touch
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: When he drew the first cup of his booze
+  Text: He drank his first cup, immeadetly drewing another one.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
