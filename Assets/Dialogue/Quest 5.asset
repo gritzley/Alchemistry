@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -3893.9287
-    y: 299.85718
+    x: 306.0713
+    y: 165.85718
     width: 183.2
     height: 65
   isDragging: 0
   Title: Demi-god (dragon killed)
   PrecedingStartNode: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
-  SucceedingStartNode: {fileID: 0}
+  SucceedingStartNode: {fileID: 11400000, guid: a11fd52da7005744fa7a1fc82d2569af, type: 2}
   CurrentLine: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
@@ -236,4 +236,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f84c147ee362f23429c71fc052edcd0a, type: 2}
   - {fileID: 11400000, guid: ea67edd584919d74491afafb33318503, type: 2}
   - {fileID: 11400000, guid: 5c8509d91d0140e46bfbc804a18b1e50, type: 2}
+  - {fileID: 11400000, guid: a11fd52da7005744fa7a1fc82d2569af, type: 2}
+  - {fileID: 11400000, guid: 3288259aded9b2a40a9c85edea040e54, type: 2}
   isUnfolded: 1
