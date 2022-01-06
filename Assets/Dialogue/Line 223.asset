@@ -83,17 +83,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 371
-    y: 112
+    x: 382.5714
+    y: 128.85718
     width: 145.6
     height: 40
   isDragging: 0
   Title: Potion of Acid Spit
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 
+  Text: 'He took the first chug and  started to cough.
+
+    He chocked out some kind
+    of green slime, which stuck to the tank.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 19127afd7be57454b8fdc721542851c8, type: 2}

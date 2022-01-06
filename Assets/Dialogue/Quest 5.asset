@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -891.5
-    y: 53
+    x: -1377.9287
+    y: 138.85718
     width: 183.2
     height: 65
   isDragging: 0
   Title: Demi-god (dragon killed)
   PrecedingStartNode: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
   SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -176,4 +176,39 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9396a5df54169c84cb00db7633d34a61, type: 2}
   - {fileID: 11400000, guid: 10a34d3b829fc194a98fcbf316eeeb23, type: 2}
   - {fileID: 11400000, guid: 616ed6cae27123d4f871ca19a93e0ae3, type: 2}
+  - {fileID: 11400000, guid: 2e1a9efaf57fa594b830bf3a4c1cae73, type: 2}
+  - {fileID: 11400000, guid: d510c239495ddd84a8f61f26526f0461, type: 2}
+  - {fileID: 11400000, guid: 3f1d4d3a06cf0bb4ba6fabe72c2efc3f, type: 2}
+  - {fileID: 11400000, guid: da702071c68a1ea4aaac90fabbf47b0f, type: 2}
+  - {fileID: 11400000, guid: 19127afd7be57454b8fdc721542851c8, type: 2}
+  - {fileID: 11400000, guid: 8d23b1b05273d994eb9f34ec63390074, type: 2}
+  - {fileID: 11400000, guid: d26a094c18b27b746801451ea279a61b, type: 2}
+  - {fileID: 11400000, guid: 9819386eaeb76a84f8d2bd0ac49dc14d, type: 2}
+  - {fileID: 11400000, guid: ee55a5b599395684683c051182c48178, type: 2}
+  - {fileID: 11400000, guid: 56be5f8b5f58ce74d9000b2d21a23b8a, type: 2}
+  - {fileID: 11400000, guid: a449e27aa80da244da2a7fb339fd7b47, type: 2}
+  - {fileID: 11400000, guid: 01b1b633470f13d4d9bae8ca7c62b5aa, type: 2}
+  - {fileID: 11400000, guid: ee2d7f228acd085438337cc0db4f1d89, type: 2}
+  - {fileID: 11400000, guid: 629d7fab210139e40836cce0906a0432, type: 2}
+  - {fileID: 11400000, guid: 1dbb1bd4aefe29d4a8ac7f31389c7e30, type: 2}
+  - {fileID: 11400000, guid: 56d9ade1a4044594a9d8b68d0dd58b63, type: 2}
+  - {fileID: 11400000, guid: efced6e71d48b734bb10ce0f721e1966, type: 2}
+  - {fileID: 11400000, guid: 53f20c061a5c9c84eb2cbb182f2bc25d, type: 2}
+  - {fileID: 11400000, guid: 744f818639e67ba44b8fa3e00f3e3e22, type: 2}
+  - {fileID: 11400000, guid: 17ab610eb962a2740a91e687faed4a70, type: 2}
+  - {fileID: 11400000, guid: 397dda5513878d645876a24d8c03cbf3, type: 2}
+  - {fileID: 11400000, guid: 175cbfd28af15a647814a1b32ab7d06c, type: 2}
+  - {fileID: 11400000, guid: 592e663ecc00ce24fb7c3b0963ba66d9, type: 2}
+  - {fileID: 11400000, guid: 9ee9af32c54f64d49bf1fa3239385ff2, type: 2}
+  - {fileID: 11400000, guid: d95da72b6a887ea4a98c47c2286333a0, type: 2}
+  - {fileID: 11400000, guid: 0ac93ae41c144934789390f71898b101, type: 2}
+  - {fileID: 11400000, guid: 5d3a8f215bf300b48bf71af987a56e2f, type: 2}
+  - {fileID: 11400000, guid: 794c8475720477d48a61228efe4785a0, type: 2}
+  - {fileID: 11400000, guid: 34b757313d7fa104387d010e01cc8ba3, type: 2}
+  - {fileID: 11400000, guid: cd2a228a65072d842adeaf656cda9640, type: 2}
+  - {fileID: 11400000, guid: 8489808d314b4634bb8982bc5353e2e2, type: 2}
+  - {fileID: 11400000, guid: 22627d2f9b2437f4bb34043ca9ce1bef, type: 2}
+  - {fileID: 11400000, guid: c671f668b6329ba4a8f11bbea89e4240, type: 2}
+  - {fileID: 11400000, guid: d7813f6ebfa0ea143a310980044830fc, type: 2}
+  - {fileID: 11400000, guid: ba3f49c38b6880d4e915da71fd03d115, type: 2}
   isUnfolded: 1
