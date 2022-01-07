@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 307
   m_EditorClassIdentifier: 
-  Position: {x: 2146, y: 117}
-  Size: {x: 91.2, y: 40}
+  Position: {x: 2112, y: 121}
+  Size: {x: 73.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1047
-    y: 442
-    width: 91.2
+    x: 750
+    y: 649
+    width: 73.6
     height: 40
   isDragging: 0
-  Title: Line 307
+  Title: traitor
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: 
+  Text: "Later two dwarves where found hanging from \r\na tree. The word traitor
+    painted on their fore heads."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 786c578dd0804394bbf98e3cb4a0cec4, type: 2}

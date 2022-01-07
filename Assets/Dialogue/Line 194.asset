@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 194
   m_EditorClassIdentifier: 
-  Position: {x: 1030.5, y: -211}
-  Size: {x: 68, y: 40}
+  Position: {x: 4366, y: -298}
+  Size: {x: 92, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 665
-    y: 307
-    width: 68
+    x: 787
+    y: 167
+    width: 92
     height: 40
   isDragging: 0
-  Title: shop
-  ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "You little shop here really looks great today! \nAll the dead plants...love
-    it!"
+  Title: forgotten
+  ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
+  Text: Pfff you know gods come and go. You'll probably being blasphemous to hundreds
+    of forgotten gods every day.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 0edd4a774b48b15448423dd63bfb25eb, type: 2}
+  NextRight: {fileID: 11400000, guid: 88bc086394fac9d439a3a3d3e2a38ba2, type: 2}

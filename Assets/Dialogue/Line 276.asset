@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 276
   m_EditorClassIdentifier: 
   Position: {x: 4691.4287, y: -149.85718}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 98.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,12 +83,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 897
-    y: 346
-    width: 89.6
+    x: 502.4287
+    y: 273.14282
+    width: 98.4
     height: 40
   isDragging: 0
-  Title: Line 276
+  Title: procedure
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   Text: 'So you know the procedure.
 

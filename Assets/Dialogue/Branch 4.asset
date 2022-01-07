@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 362
-    y: 46
+    x: 113
+    y: 247
     width: 202.4
     height: 615
   isDragging: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 31890844aa2b6194a878dcd9afc146ef, type: 2}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 52263d883ddbfc040a78d394b4019460, type: 2}
   isUnfolded: 1
