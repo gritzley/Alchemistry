@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 254.5
-    y: 220
+    x: -397.5
+    y: 68
     width: 202.4
     height: 65
   isDragging: 0
   Title: Demi-God (don't kill dragon)
   PrecedingStartNode: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
   SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -149,4 +149,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 23364ac7558ad9f4991c9c205e8a0756, type: 2}
   - {fileID: 11400000, guid: 3f3def6fe421b584dac681ec7c02432b, type: 2}
   - {fileID: 11400000, guid: 0872f2ff896953e4aab4b902270be75e, type: 2}
+  - {fileID: 11400000, guid: d85e99970b2ebba4d9a895c9ed1f774d, type: 2}
+  - {fileID: 11400000, guid: 2c573a747a93cc747a6093b4980bf6b9, type: 2}
+  - {fileID: 11400000, guid: b2a8d5e27895deb47b488bd7eb52ad48, type: 2}
+  - {fileID: 11400000, guid: 5cfd104f5f9870646b7541ae32be2703, type: 2}
+  - {fileID: 11400000, guid: 9203406d6bc7f0043b4a5faeb10745ee, type: 2}
+  - {fileID: 11400000, guid: d1a98f8be812d104085a205c628b79fc, type: 2}
+  - {fileID: 11400000, guid: badf8ae8d79335f4caa2636d8866499c, type: 2}
+  - {fileID: 11400000, guid: 8e820e146d7eb57469a5ea2abfd6b607, type: 2}
+  - {fileID: 11400000, guid: ed3b7a9c543a60b479a0e89d2180b4bd, type: 2}
+  - {fileID: 11400000, guid: 5bb36f1052cd5a34f88b49ad2b674fa4, type: 2}
+  - {fileID: 11400000, guid: ec28774df1cd3c34aaccff2bfd69256c, type: 2}
+  - {fileID: 11400000, guid: 032aee0a906c38444912da5b67b3f19f, type: 2}
+  - {fileID: 11400000, guid: 2bfad8a2c7831614bb85932929cdf95d, type: 2}
+  - {fileID: 11400000, guid: be1e801fd72da9f4ca1b983784679bbd, type: 2}
+  - {fileID: 11400000, guid: 87d128e9731c5b44989db455c137b5bb, type: 2}
+  - {fileID: 11400000, guid: 05e8a9a0d0d89644082855a121678359, type: 2}
   isUnfolded: 1
