@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 386
+  m_Name: Line 393
   m_EditorClassIdentifier: 
-  Position: {x: 3752, y: -306}
-  Size: {x: 58.4, y: 40}
+  Position: {x: 1428, y: -221}
+  Size: {x: 135.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,19 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1179
-    y: 254
-    width: 58.4
+    x: 702
+    y: 365
+    width: 135.2
     height: 40
   isDragging: 0
-  Title: tea
-  ParentQuest: {fileID: 11400000, guid: 0cacc5312e93c9840a1c993535505e67, type: 2}
-  Text: 'I will serve you the greatest grave dirt tea
-
-    you''ll ever taste.'
+  Title: simple merchant
+  ParentQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+  Text: "Why did I even think you could kill a god, \nif you couldn't get rid of
+    a simple merchant."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 01237c9b8adc03f41b20c70995d06f0c, type: 2}

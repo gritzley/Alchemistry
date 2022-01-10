@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 386
+  m_Name: Line 394
   m_EditorClassIdentifier: 
-  Position: {x: 3752, y: -306}
-  Size: {x: 58.4, y: 40}
+  Position: {x: 1588, y: -220}
+  Size: {x: 119.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,16 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1179
-    y: 254
-    width: 58.4
+    x: 331
+    y: 293
+    width: 119.2
     height: 40
   isDragging: 0
-  Title: tea
-  ParentQuest: {fileID: 11400000, guid: 0cacc5312e93c9840a1c993535505e67, type: 2}
-  Text: 'I will serve you the greatest grave dirt tea
-
-    you''ll ever taste.'
+  Title: acquaintance
+  ParentQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+  Text: My acquaintance told me excatly what happend.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
