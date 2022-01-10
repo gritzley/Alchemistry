@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 1
   m_EditorClassIdentifier: 
-  Position: {x: 555, y: -429}
+  Position: {x: 430, y: -405}
   Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
@@ -83,8 +83,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 415.5
-    y: 25
+    x: 279
+    y: 358
     width: 202.4
     height: 615
   isDragging: 0

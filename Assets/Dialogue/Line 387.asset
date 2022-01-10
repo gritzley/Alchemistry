@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 341
+  m_Name: Line 387
   m_EditorClassIdentifier: 
-  Position: {x: 1216, y: -119}
-  Size: {x: 95.2, y: 40}
+  Position: {x: 3331, y: -383}
+  Size: {x: 60.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,19 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 811
-    y: 349
-    width: 95.2
+    x: 816
+    y: 224
+    width: 60.8
     height: 40
   isDragging: 0
-  Title: Good day
-  ParentQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
-  Text: Good day, my dear witch.
+  Title: drill
+  ParentQuest: {fileID: 11400000, guid: 0cacc5312e93c9840a1c993535505e67, type: 2}
+  Text: 'The typical grave tender drill, just with a
+
+    few more complaining customer.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 09ad18c42aec4c140ac5f7798a98d43a, type: 2}
+  NextRight: {fileID: 11400000, guid: 611907997f26e784cbd011e8568b44ec, type: 2}

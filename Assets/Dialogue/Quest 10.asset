@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 10
   m_EditorClassIdentifier: 
   Position: {x: 1029, y: -335}
-  Size: {x: 202.4, y: 615}
+  Size: {x: 196.8, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,13 +83,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 953
-    y: 139
-    width: 202.4
-    height: 615
+    x: -1529
+    y: 134
+    width: 196.8
+    height: 65
   isDragging: 0
   Title: End5 killed god didnt kill all
-  PrecedingStartNode: {fileID: 0}
+  PrecedingStartNode: {fileID: 11400000, guid: 6a5c630c0a738e14a8a3a2c914252e9f, type: 2}
   SucceedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -142,5 +142,27 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
+  DialogueNodes:
+  - {fileID: 11400000, guid: 6a5c630c0a738e14a8a3a2c914252e9f, type: 2}
+  - {fileID: 11400000, guid: b94406145f380de4fa0bc1b046e09a01, type: 2}
+  - {fileID: 11400000, guid: 044653dee6d38d8419b58177cac9bf01, type: 2}
+  - {fileID: 11400000, guid: 03166d0e693b1ff4a8f42ebe97113ace, type: 2}
+  - {fileID: 11400000, guid: 981d7951f3c075e4ca9b4e55b4a79745, type: 2}
+  - {fileID: 11400000, guid: b6ae5444a48a36849b54b4f4c5daad41, type: 2}
+  - {fileID: 11400000, guid: 02bafa3a6f3b90348897fb2c92d0236b, type: 2}
+  - {fileID: 11400000, guid: a44ef7d3a22b4b346aaefd818967ad6a, type: 2}
+  - {fileID: 11400000, guid: 38c711b4410e05043bc8aa060502ae59, type: 2}
+  - {fileID: 11400000, guid: f38c7ab562bb23b4ea59eb2c5f309126, type: 2}
+  - {fileID: 11400000, guid: 8544b39b5e74d314ba45eff3e358e0b2, type: 2}
+  - {fileID: 11400000, guid: 37899d4ac65ae144481ac0116ea65c26, type: 2}
+  - {fileID: 11400000, guid: 928ce5550958cf044b03334094829f4f, type: 2}
+  - {fileID: 11400000, guid: 142d4a5565b151146b1409084e6c7c98, type: 2}
+  - {fileID: 11400000, guid: b62aa0488cd010e439dd652b2cf9ee0c, type: 2}
+  - {fileID: 11400000, guid: 611907997f26e784cbd011e8568b44ec, type: 2}
+  - {fileID: 11400000, guid: 46c88cbd3a5655c47b7ae445e273bb79, type: 2}
+  - {fileID: 11400000, guid: cc3595ef74cd7c8489ad835ce084b289, type: 2}
+  - {fileID: 11400000, guid: 9777c4b578fb3994c919ddce3a15e8ca, type: 2}
+  - {fileID: 11400000, guid: 7b6c600c2ac145b4b87f247f6fdbb1b0, type: 2}
+  - {fileID: 11400000, guid: 990e25d37e9eba64691f6bdf78710a97, type: 2}
+  - {fileID: 11400000, guid: 5a7887652d3122143a3dcfdb942ae3cf, type: 2}
   isUnfolded: 1

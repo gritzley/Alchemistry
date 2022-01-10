@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 7
   m_EditorClassIdentifier: 
   Position: {x: 1007, y: -120}
-  Size: {x: 168.8, y: 40}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1074
-    y: 291
-    width: 168.8
-    height: 40
+    x: 884
+    y: 357
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: End2 Killed everybody
   PrecedingStartNode: {fileID: 11400000, guid: 4c42a219c0e2f3e468a80602d40a1c12, type: 2}
@@ -173,4 +173,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e7fc048dd52fed4aafb54781c9f8049, type: 2}
   - {fileID: 11400000, guid: 902c4aeeca73baf4bb2580092fad16a6, type: 2}
   - {fileID: 11400000, guid: 589c010a8171b5d43ace76385ad231a8, type: 2}
-  isUnfolded: 0
+  isUnfolded: 1
