@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 5
   m_EditorClassIdentifier: 
-  Position: {x: 694.5, y: -161}
+  Position: {x: 712.5, y: -161}
   Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 652.5
-    y: 223
+    x: 560.5
+    y: 308
     width: 202.4
     height: 615
   isDragging: 0
   Title: Demi-god (dragon killed)
-  PrecedingStartNode: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
+  PrecedingStartNode: {fileID: 0}
   SucceedingStartNode: {fileID: 11400000, guid: a11fd52da7005744fa7a1fc82d2569af, type: 2}
-  CurrentLine: {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
+  CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -143,8 +143,6 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
   DialogueNodes:
-  - {fileID: 11400000, guid: 62c632adfab47cf43bad630fe47c5417, type: 2}
-  - {fileID: 11400000, guid: 1c755461712b32e4ba1501a92842efcf, type: 2}
   - {fileID: 11400000, guid: 0edd4a774b48b15448423dd63bfb25eb, type: 2}
   - {fileID: 11400000, guid: 22742d67b08886147b4d01583c1517ff, type: 2}
   - {fileID: 11400000, guid: 6215677a67e33aa4a9dcf44daf3e9e07, type: 2}

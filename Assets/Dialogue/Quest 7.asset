@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 6
+  m_Name: Quest 7
   m_EditorClassIdentifier: 
-  Position: {x: 719.5, y: -83}
-  Size: {x: 202.4, y: 615}
+  Position: {x: 1006, y: -120}
+  Size: {x: 168.8, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,13 +83,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 732.5
-    y: 420
-    width: 202.4
-    height: 615
+    x: -2627
+    y: 239
+    width: 168.8
+    height: 65
   isDragging: 0
-  Title: Ending1 Sus by dragon
-  PrecedingStartNode: {fileID: 0}
+  Title: End2 Killed everybody
+  PrecedingStartNode: {fileID: 11400000, guid: 4c42a219c0e2f3e468a80602d40a1c12, type: 2}
   SucceedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -142,5 +142,33 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
+  DialogueNodes:
+  - {fileID: 11400000, guid: 4c42a219c0e2f3e468a80602d40a1c12, type: 2}
+  - {fileID: 11400000, guid: 09ad18c42aec4c140ac5f7798a98d43a, type: 2}
+  - {fileID: 11400000, guid: c2f80fc41a208f54283d85a98739d422, type: 2}
+  - {fileID: 11400000, guid: 2d8a4301fc02a8d45b352356a4dccd50, type: 2}
+  - {fileID: 11400000, guid: 2445b469cc493e542a033598f5cc9c96, type: 2}
+  - {fileID: 11400000, guid: 543e84b4ebccff440902c52a73ebc5f9, type: 2}
+  - {fileID: 11400000, guid: 56badb50c01ed0049a072e40ef521ea4, type: 2}
+  - {fileID: 11400000, guid: d838856645a4daf41a91c9d23c469303, type: 2}
+  - {fileID: 11400000, guid: f35938a77cb1fad46b2683c5dc7d3e6d, type: 2}
+  - {fileID: 11400000, guid: 4a287aec5382d0a40a67cbcc0315a96b, type: 2}
+  - {fileID: 11400000, guid: e0998904dc1fa774bbabc16df063f93c, type: 2}
+  - {fileID: 11400000, guid: 013eb24bff8189549b7b88bf46a5712a, type: 2}
+  - {fileID: 11400000, guid: df510ca30d954d249bb7fc1bd40637a3, type: 2}
+  - {fileID: 11400000, guid: d6c3254d813e26943b3e0853f4a2112c, type: 2}
+  - {fileID: 11400000, guid: 43f5c03d200c90a46b44f4e177af7356, type: 2}
+  - {fileID: 11400000, guid: 87698803a5242f643bd1f28e2945096b, type: 2}
+  - {fileID: 11400000, guid: 12a6e7957153ce645af62011eb272eb0, type: 2}
+  - {fileID: 11400000, guid: 41def16432578b6489def05f32aaa7b7, type: 2}
+  - {fileID: 11400000, guid: c6cbb19ae78455c47b2dc4ee8f517ef8, type: 2}
+  - {fileID: 11400000, guid: db75707d13ab4cc4bb325f44f6ab75ad, type: 2}
+  - {fileID: 11400000, guid: 1fd2975b4d3f6f54cb6c31e436278fa3, type: 2}
+  - {fileID: 11400000, guid: c31015cfbe0653c49996df927fb46c33, type: 2}
+  - {fileID: 11400000, guid: f4f7c08ff36d9ec4e9972984c991b4f2, type: 2}
+  - {fileID: 11400000, guid: 24fa89f68b009a448ad8dc19f4e6eb56, type: 2}
+  - {fileID: 11400000, guid: 0bae5cb2478aca146b4656cf2d01afaf, type: 2}
+  - {fileID: 11400000, guid: 06fca93468991a14f95d0eeed06fb720, type: 2}
+  - {fileID: 11400000, guid: 3bd9c8f4cb6e8a645ba9b3e70906d5ae, type: 2}
+  - {fileID: 11400000, guid: 0e7fc048dd52fed4aafb54781c9f8049, type: 2}
   isUnfolded: 1
