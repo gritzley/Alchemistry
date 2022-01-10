@@ -20,13 +20,12 @@ public class Cookbook : MonoBehaviour
 
     void LeftPageClick()
     {
-        Debug.Log("left clicked");
         if (bookHelper.Progress == 0)
         {
             bookHelper.Orientation = -1;
             ToggleOpen();
         }
-        else
+        else if (bookHelper.OpenAmmount == 1)
         {
             bookHelper.PrevPage();
         }
@@ -34,13 +33,12 @@ public class Cookbook : MonoBehaviour
 
     void RightPageClick()
     {
-        Debug.Log("right clicked");
         if (bookHelper.Progress == bookHelper.PageAmmount - 1)
         {
             bookHelper.Orientation = 1;
             ToggleOpen();
         }
-        else
+        else if (bookHelper.OpenAmmount == 1)
         {
             bookHelper.NextPage();
         }
