@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 [ExecuteInEditMode]
-public class TextDisplay : Clickable
+public class TextDisplay : Interactible
 {
     public Texture2D FontTex;
     public Sprite ErrorCharacterSprite;
@@ -58,9 +58,10 @@ public class TextDisplay : Clickable
         }
     }
 
-    public override void OnClick(PlayerController _)
+    public override bool OnInteract(PlayerController _)
     {
         OnClickCallback?.Invoke();
+        return true;
     }
 
     void OnMouseEnter()

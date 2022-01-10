@@ -10,7 +10,7 @@ public class Potion : ScriptableObject
     [System.Serializable] public struct Step 
     {
         // The ingredient to be added
-        public Ingredient.Type Ingredient;
+        public IngredientDefinition Ingredient;
         // The time it needs to cook before the next step
         public float Time;
         // The amount of time one can be off the intended time

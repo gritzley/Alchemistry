@@ -6,5 +6,6 @@ using UnityEngine;
 public class IngredientDefinition : ScriptableObject
 {
     public string Name;
-    public bool Consumable;
+    public bool IsConsumable;
+    public GameObject Model;
 }
