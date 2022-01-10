@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Slippy Oil
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: d9a7f83bab6c1464b86b94e0d9b9e0d3, type: 2}
+    Time: 0
+    ErrorMargin: 10

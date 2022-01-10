@@ -1,13 +1,36 @@
+using UnityEngine;
+using System.Collections;
+
+[ExecuteInEditMode]
 public class Ingredient : Pickupable
 {
-    public enum Type
+    public IngredientDefinition Definition;
+
+    void OnValidate()
     {
-        APPLE,
-        PEPPER,
+        if (isActiveAndEnabled)
+        {
+            StartCoroutine(ReplaceModel());
+        }
     }
-    public Type type;
-    // The name of the ingredient
-    public string Name;
-    // If this is true, putting this in a kettle will destroy the gameobject
-    public bool DestroyOnUse;
+
+    IEnumerator ReplaceModel()
+    {
+        yield return null;
+        foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
+        {
+            DestroyImmediate(mr.gameObject);
+        }
+        if (Definition != null)
+        {
+            AttachModel();
+        }        
+    }
+
+    public void AttachModel()
+    {
+        GameObject go = Instantiate(Definition.Model);
+        go.transform.parent = transform;
+        go.transform.position = transform.position;
+    }
 }
