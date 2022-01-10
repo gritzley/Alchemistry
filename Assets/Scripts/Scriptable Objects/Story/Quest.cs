@@ -91,17 +91,16 @@ public class Quest : StoryNode
         switch (i)
         {
             case 0:
-                CurrentLine = CurrentLine.NextRight.NextLine;
+                if (CurrentLine.NextRight != null)
+                    CurrentLine = CurrentLine.NextRight.NextLine;
+                else
+                    return false;
                 break;
             case 1:
                 if (CurrentLine.HasAnswers)
-                {
                     CurrentLine = CurrentLine.NextLeft.NextLine;
-                }
                 else
-                {
                     return false;
-                }
                 break;
         }
         return true;
