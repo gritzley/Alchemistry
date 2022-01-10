@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System;
 
 [ExecuteInEditMode]
@@ -69,8 +68,7 @@ public class CustomerController : MonoBehaviour
 
     public void ReceiveAnswer(int answer)
     {
-        bool didDialogueAdvance = currentQuest.AdvanceDialogue(answer);
-        if (didDialogueAdvance)
+        if (currentQuest.AdvanceDialogue(answer))
         {
             HandleDialogueLine(CurrentDialogueLine);
         }
