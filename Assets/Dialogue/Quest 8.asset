@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 8
   m_EditorClassIdentifier: 
   Position: {x: 1005, y: -222}
-  Size: {x: 202.4, y: 615}
+  Size: {x: 189.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 815
-    y: 271
-    width: 202.4
-    height: 615
+    x: 1152
+    y: 128
+    width: 189.6
+    height: 40
   isDragging: 0
   Title: End3 didn't kill everybody
   PrecedingStartNode: {fileID: 0}
@@ -143,4 +143,4 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
   DialogueNodes: []
-  isUnfolded: 1
+  isUnfolded: 0

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 349
+  m_Name: Line 368
   m_EditorClassIdentifier: 
-  Position: {x: 2546, y: -114}
-  Size: {x: 84.8, y: 40}
+  Position: {x: 2785, y: -124}
+  Size: {x: 64.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 427
-    y: 440
-    width: 84.8
+    x: 666
+    y: 430
+    width: 64.8
     height: 40
   isDragging: 0
-  Title: witness
+  Title: spot
   ParentQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
-  Text: The whole city will witness this spectacle.
+  Text: "With all these prestigous names on our \ncementry people will be set on
+    a waiting\nlist to get a spot."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: e0998904dc1fa774bbabc16df063f93c, type: 2}
+  NextRight: {fileID: 11400000, guid: 589c010a8171b5d43ace76385ad231a8, type: 2}

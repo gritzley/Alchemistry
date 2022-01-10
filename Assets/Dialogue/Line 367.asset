@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 367
   m_EditorClassIdentifier: 
   Position: {x: 4410, y: -108}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 80, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,12 +83,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 951
-    y: 279
-    width: 90.4
+    x: 1221
+    y: 276
+    width: 80
     height: 40
   isDragging: 0
-  Title: Line 367
+  Title: overdo
   ParentQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   Text: 'Live a fulfilling and long  life.
 
