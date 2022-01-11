@@ -10,6 +10,7 @@ public class KettleController : Interactible
     private Light Light;
     private ParticleSystem Orchestra;
     private List<Potion.Step> Steps;
+    public Potion FailedPotionDefinition;
 
     public void OnEnable()
     {
@@ -62,7 +63,10 @@ public class KettleController : Interactible
         {
             List<Potion> Potions = Potion.GetAllPotionAssets().Where( e => e.ValidateSteps(Steps) ).ToList();
             if (Potions.Count != 1)
+            {
                 Debug.Log("Failed Potion");
+                GameManager.Instance.CurrentCustomer.ReceivePotion(FailedPotionDefinition);
+            }
             else
             {
                 Debug.Log(Potions[0].name);

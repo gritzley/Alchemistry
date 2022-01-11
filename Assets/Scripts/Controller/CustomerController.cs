@@ -1,5 +1,8 @@
 using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 [ExecuteInEditMode]
 public class CustomerController : MonoBehaviour
@@ -11,7 +14,8 @@ public class CustomerController : MonoBehaviour
     public CustomerDefinition CustomerDefinition;
     private Quest currentQuest;
     private bool isReceivingPotion;
-
+    private VisibilityTracker visibilityTracker;
+    private bool isVisible => visibilityTracker.IsVisible;
 
     public DialogueLine CurrentDialogueLine
     {
@@ -24,6 +28,17 @@ public class CustomerController : MonoBehaviour
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
         HandleDialogueLine(CurrentDialogueLine);
+
+        visibilityTracker = GetComponent<VisibilityTracker>();
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("3")) Debug.Log(String.Join(", ",
+            visibilityTracker.childrenTrackers
+            .Where(e => e.IsVisible)
+            .Select(e => e.name)
+            .ToArray()));
     }
 
     void HandleDialogueLine(DialogueLine line)
@@ -32,24 +47,34 @@ public class CustomerController : MonoBehaviour
         RightAnswerTextDisplay.ClearLetters();
 
         Action displayAnswers = null;
-        if (line.NextRight == null)
+        if (line.IsReceivingState)
         {
             isReceivingPotion = true;
+            SetAnswersActive(false, false);
         }
         else if (line.HasAnswers)
         {
-            displayAnswers = () => {
-                LeftAnswerTextDisplay.DisplayText(line.AnswerLeft);
-                RightAnswerTextDisplay.DisplayText(line.AnswerRight);
-            };
+            displayAnswers = () => SetAnswerTexts(line.AnswerLeft, line.AnswerRight);
+            SetAnswersActive(true, true);
         }
         else
         {
-            displayAnswers = () => {
-                RightAnswerTextDisplay.DisplayText("Continue");
-            };
+            displayAnswers = () => SetAnswerTexts(String.Empty, "Continue");
+            SetAnswersActive(false, true);
         }
         Say(line.Text, displayAnswers);
+    }
+    
+    private void SetAnswerTexts(string both) => SetAnswerTexts(both, both);
+    private void SetAnswerTexts(string left, string right)
+    {
+        LeftAnswerTextDisplay.DisplayText(left);
+        RightAnswerTextDisplay.DisplayText(right);
+    }
+    private void SetAnswersActive(bool left, bool right)
+    {
+        LeftAnswerTextDisplay.ClickActive = left;
+        RightAnswerTextDisplay.ClickActive = right;
     }
 
     public void Say(string text, Action callback = null)
@@ -61,9 +86,9 @@ public class CustomerController : MonoBehaviour
     {
         if (isReceivingPotion)
         {
-            currentQuest = currentQuest.GetNextQuest(potion);
             LastGivenPotion = potion;
-            HandleDialogueLine(CurrentDialogueLine);
+            ReceiveAnswer(0);
+            isReceivingPotion = false;
         }
     }
 
@@ -72,6 +97,14 @@ public class CustomerController : MonoBehaviour
         if (currentQuest.AdvanceDialogue(answer))
         {
             HandleDialogueLine(CurrentDialogueLine);
+        }
+        else
+        {
+            MainTextDisplay.ClearLetters();
+            LeftAnswerTextDisplay.ClearLetters();
+            RightAnswerTextDisplay.ClearLetters();
+            currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
+            Debug.Log("Next Quest: " + currentQuest.Title);
         }
     }
 }

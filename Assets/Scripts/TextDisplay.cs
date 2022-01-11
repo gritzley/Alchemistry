@@ -23,6 +23,7 @@ public class TextDisplay : Interactible
     public float maxLineWidth = 5.0f;
 
     public Action OnClickCallback;
+    public bool ClickActive = true;
     private Sprite[] sprites;
     private string text;
 
@@ -59,7 +60,7 @@ public class TextDisplay : Interactible
 
     public override bool OnInteract(PlayerController _)
     {
-        OnClickCallback?.Invoke();
+        if (ClickActive) OnClickCallback?.Invoke();
         return true;
     }
 

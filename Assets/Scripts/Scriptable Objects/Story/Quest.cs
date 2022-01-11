@@ -97,7 +97,7 @@ public class Quest : StoryNode
                     return false;
                 break;
             case 1:
-                if (CurrentLine.HasAnswers)
+                if (CurrentLine.HasAnswers && CurrentLine.NextLeft != null)
                     CurrentLine = CurrentLine.NextLeft.NextLine;
                 else
                     return false;

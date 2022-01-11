@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -12,6 +13,32 @@ public class DialogueLine : DialogueNode
     public string AnswerRight;
 
     public bool HasAnswers = false;
+    private bool _isReceivingState = false;
+    public bool IsReceivingState
+    {
+        get => _isReceivingState;
+        set
+        {
+            if (value == true)
+            {
+                if(ParentQuest.DialogueNodes.Exists( e => e != this && (bool)(e as DialogueLine)?.IsReceivingState))
+                {
+                    throw new Exception("There already is a receiving state in this lines parent quest");
+                }
+                _isReceivingState = true;
+                HasAnswers = false;
+                style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2.png") as Texture2D;
+                selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2 on.png") as Texture2D;
+            }
+            else
+            {
+                _isReceivingState = false;
+                style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
+                selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
+            }
+            GUI.changed = true;
+        }
+    }
 
     public DialogueNode NextLeft;
     public DialogueNode NextRight;

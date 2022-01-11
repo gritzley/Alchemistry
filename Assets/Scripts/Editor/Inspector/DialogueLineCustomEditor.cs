@@ -11,6 +11,7 @@ public class DialogueLineEditor : Editor
     SerializedProperty notesProp;
     SerializedProperty textProp;
     SerializedProperty hasAnswersProp;
+    SerializedProperty isReceivingProp;
     SerializedProperty answerLeftProp;
     SerializedProperty answerRightProp;
 
@@ -26,6 +27,7 @@ public class DialogueLineEditor : Editor
         notesProp = serializedObject.FindProperty("Notes");
         textProp = serializedObject.FindProperty("Text");
         hasAnswersProp = serializedObject.FindProperty("HasAnswers");
+        isReceivingProp = serializedObject.FindProperty("IsReceivingState");
         answerLeftProp = serializedObject.FindProperty("AnswerLeft");
         answerRightProp = serializedObject.FindProperty("AnswerRight");
         nextRightProp = serializedObject.FindProperty("NextRight");
@@ -41,7 +43,6 @@ public class DialogueLineEditor : Editor
         EditorGUILayout.LabelField("Text");
         textProp.stringValue = EditorGUILayout.TextArea(textProp.stringValue);
 
-        bool hasAnswerPreviousValue = hasAnswersProp.boolValue;
         EditorGUILayout.PropertyField(hasAnswersProp);
         if (hasAnswersProp.boolValue)
         {
@@ -51,6 +52,8 @@ public class DialogueLineEditor : Editor
             EditorGUILayout.LabelField("Left Answer (This is the lower ConnectionPoint");
             answerLeftProp.stringValue = EditorGUILayout.TextArea(answerLeftProp.stringValue);
         }
+        DialogueLine line = ((DialogueLine)serializedObject.targetObject);
+        line.IsReceivingState = EditorGUILayout.Toggle(new GUIContent("Is Receiving Potions"), line.IsReceivingState);
 
         EditorGUILayout.LabelField("Notes");
         notesProp.stringValue = EditorGUILayout.TextArea(notesProp.stringValue);

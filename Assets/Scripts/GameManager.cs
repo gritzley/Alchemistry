@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEditor;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class GameManager : MonoBehaviour
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.
         Assert.IsNull(Instance, "There can only be one instance of GameManager");
         Instance = this;
+    }
+
+    public void AdvanceScene()
+    {
+        
     }
 }
