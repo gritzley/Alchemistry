@@ -6,7 +6,6 @@ using System;
 
 public class KettleController : Interactible
 {
-    private bool cooking = false;
     private IngredientDefinition NewIngredient;
     private Light Light;
     private ParticleSystem Orchestra;
@@ -58,8 +57,6 @@ public class KettleController : Interactible
 
     private void FinishPotion(PlayerController player)
     {
-        Debug.Log("Finishing");
-        Debug.Log(String.Join(", ", Steps.Select( e => e.Ingredient.name)));
         LockInLastStep();
         if (Steps.Count > 0)
         {

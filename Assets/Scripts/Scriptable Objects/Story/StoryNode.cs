@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class StoryNode : ScriptableObject
 {
-    GUIStyle style, selectedStyle;
+    public GUIStyle style, selectedStyle;
     public Vector2 Position, Size;
     public GUIStyle LabelStyle;
     public Rect rect;

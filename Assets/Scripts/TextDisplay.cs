@@ -23,9 +23,8 @@ public class TextDisplay : Interactible
     public float maxLineWidth = 5.0f;
 
     public Action OnClickCallback;
-    Sprite[] sprites;
-
-    string text;
+    private Sprite[] sprites;
+    private string text;
 
     void Awake()
     {

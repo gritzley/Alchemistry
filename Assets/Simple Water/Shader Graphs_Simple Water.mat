@@ -102,7 +102,7 @@ Material:
     m_Colors:
     - Color_A271762B: {r: 0.018632093, g: 0.6117647, b: 0, a: 0.36078432}
     - Color_AFFD055F: {r: 0.7454045, g: 0.7454045, b: 0.7454045, a: 1}
-    - Color_E0824245: {r: 0.07891296, g: 0.419485, b: 0.6603774, a: 0.27450982}
+    - Color_E0824245: {r: 0.07843135, g: 0.3266488, b: 0.65882355, a: 0.27450982}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
