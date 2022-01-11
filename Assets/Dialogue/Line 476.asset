@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 450
+  m_Name: Line 476
   m_EditorClassIdentifier: 
-  Position: {x: 3047, y: -143}
-  Size: {x: 91.2, y: 40}
+  Position: {x: 2215, y: -531}
+  Size: {x: 72, y: 65}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1087
-    y: 377
-    width: 91.2
-    height: 40
+    x: 580
+    y: 184
+    width: 72
+    height: 65
   isDragging: 0
-  Title: Body gone
-  ParentQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
-  Text: Fare well, witch.
+  Title: mean
+  ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
+  Text: If you know what I mean.
   Notes: 
-  AnswerLeft: 
-  AnswerRight: 
-  HasAnswers: 0
-  NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  AnswerLeft: Another twist in his story?
+  AnswerRight: Didn't this centaur went through enough.
+  HasAnswers: 1
+  NextLeft: {fileID: 11400000, guid: f9cffe11653db874bb5be211659c9d18, type: 2}
+  NextRight: {fileID: 11400000, guid: 03da22d56bcd1e249b7cbc6fa7972642, type: 2}

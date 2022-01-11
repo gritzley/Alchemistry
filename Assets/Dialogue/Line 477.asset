@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 450
+  m_Name: Line 477
   m_EditorClassIdentifier: 
-  Position: {x: 3047, y: -143}
-  Size: {x: 91.2, y: 40}
+  Position: {x: 2330, y: -528}
+  Size: {x: 90.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1087
-    y: 377
-    width: 91.2
+    x: 861
+    y: 226
+    width: 90.4
     height: 40
   isDragging: 0
-  Title: Body gone
-  ParentQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
-  Text: Fare well, witch.
+  Title: anymore
+  ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
+  Text: 'He won''t care anymore, will he? '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 3e8f27bcf3283674084d892c37d2906d, type: 2}
