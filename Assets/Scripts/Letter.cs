@@ -55,9 +55,12 @@ public class Letter : MonoBehaviour
     [ExecuteInEditMode]
     void Update()
     {
-        transform.position = transform.parent.position + transform.parent.rotation * Position;
-        transform.position += Mathf.Sin((time - bobbingStartTime) * bobbingSpeed) * Vector3.up * bobbingAmount;
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin((time - wiggleStartTime) * wiggleSpeed) * wiggleMaxAngle);
+        if (transform.parent != null)
+        {
+            transform.position = transform.parent.position + transform.parent.rotation * Position;
+            transform.position += Mathf.Sin((time - bobbingStartTime) * bobbingSpeed) * Vector3.up * bobbingAmount;
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin((time - wiggleStartTime) * wiggleSpeed) * wiggleMaxAngle);
+        }
     }
 
     public void StartBobbing(float speed = 3.0f)
