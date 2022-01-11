@@ -64,16 +64,6 @@ public class TextDisplay : Interactible
         return true;
     }
 
-    void OnMouseEnter()
-    {
-        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-    }
-
-    void OnMouseExit()
-    {
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-    }
-
     public void DisplayText(string text, Action callback = null)
     {
         ClearLetters();
