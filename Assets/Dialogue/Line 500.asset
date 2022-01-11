@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 491
+  m_Name: Line 500
   m_EditorClassIdentifier: 
-  Position: {x: 1711, y: -227}
-  Size: {x: 101.6, y: 40}
+  Position: {x: 1843, y: -39}
+  Size: {x: 68.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 703
-    y: 403
-    width: 101.6
+    x: 835
+    y: 591
+    width: 68.8
     height: 40
   isDragging: 0
-  Title: grave yard
+  Title: body
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: He's quiete sturdy and brought him to my grave yard.
+  Text: He escaped and brough the body directly to me.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

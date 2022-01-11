@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 491
+  m_Name: Line 510
   m_EditorClassIdentifier: 
-  Position: {x: 1711, y: -227}
-  Size: {x: 101.6, y: 40}
+  Position: {x: 2603, y: -504}
+  Size: {x: 86.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 703
-    y: 403
-    width: 101.6
+    x: 880
+    y: 246
+    width: 86.4
     height: 40
   isDragging: 0
-  Title: grave yard
+  Title: addition
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: He's quiete sturdy and brought him to my grave yard.
+  Text: 'That would really be an intresting addition to his tale. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 7bd5d175d8d7cdf489d206fd66d69fa9, type: 2}
+  NextRight: {fileID: 11400000, guid: 8e73e5174342fea42b560c44509b7992, type: 2}
