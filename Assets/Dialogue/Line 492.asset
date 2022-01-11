@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 472
+  m_Name: Line 492
   m_EditorClassIdentifier: 
-  Position: {x: 1623, y: 6}
-  Size: {x: 119.2, y: 40}
+  Position: {x: 1352, y: -77}
+  Size: {x: 99.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,19 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 520
-    y: 582
-    width: 119.2
+    x: 734
+    y: 616
+    width: 99.2
     height: 40
   isDragging: 0
-  Title: unpredictable
-  ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: 'Which probably reacted in an
-
-    unpredictable way.'
+  Title: Smallness
+  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
+  Text: 'And the body started shrinking. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 27e21ea4a00fddf4ea8721cad43e6035, type: 2}
+  NextRight: {fileID: 11400000, guid: ffd678b127b44db4f864a25954a953c1, type: 2}

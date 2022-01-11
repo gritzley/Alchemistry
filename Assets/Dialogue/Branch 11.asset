@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 13
+  m_Script: {fileID: 11500000, guid: b9d92e05b3a9cf048854121965885cf4, type: 3}
+  m_Name: Branch 11
   m_EditorClassIdentifier: 
-  Position: {x: 515, y: -525}
-  Size: {x: 101.6, y: 65}
+  Position: {x: 1124, y: -528}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,77 +83,60 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -103
-    y: 168
-    width: 101.6
-    height: 65
+    x: 506
+    y: 165
+    width: 202.4
+    height: 615
   isDragging: 0
-  Title: Body gone
-  PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
-  SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
-  Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  Title: Potion Branch
+  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: d7232e959d791f844bb736f3d51e7840, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 89257179e828c9247a1c870f2e3070be, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 4ce38f32c8daba142b7829edeab5a0df, type: 2}
   - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 50a6465cb9bdff94282e906a0683ea0a, type: 2}
   - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
-    NextQuest: {fileID: 0}
+    NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
-    NextQuest: {fileID: 0}
-  DialogueNodes:
-  - {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
-  - {fileID: 11400000, guid: f06e1b4116377a540ada0e3fd58ec730, type: 2}
-  - {fileID: 11400000, guid: f27c97170069f19428f80914928ca5e9, type: 2}
-  - {fileID: 11400000, guid: 2c99f4bfe94ebbb40af283ac69afea80, type: 2}
-  - {fileID: 11400000, guid: aef6126d36443d343bb75c83916c4383, type: 2}
-  - {fileID: 11400000, guid: 4ce38f32c8daba142b7829edeab5a0df, type: 2}
-  - {fileID: 11400000, guid: 7054fe3ba2f607048833e650ea94f9d5, type: 2}
-  - {fileID: 11400000, guid: d69d7067b06c79c42adcfd9d939e383d, type: 2}
-  - {fileID: 11400000, guid: ba8a64e00028fe4479bc6de272ddd1ec, type: 2}
-  - {fileID: 11400000, guid: 50a6465cb9bdff94282e906a0683ea0a, type: 2}
-  - {fileID: 11400000, guid: ffd678b127b44db4f864a25954a953c1, type: 2}
-  - {fileID: 11400000, guid: 315a9feccdcbb0041946710177380d2d, type: 2}
-  - {fileID: 11400000, guid: d28c82ceff26da3499b31fb0c9bf9a74, type: 2}
+    NextNode: {fileID: 0}
   isUnfolded: 1

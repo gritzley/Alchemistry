@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 483
   m_EditorClassIdentifier: 
   Position: {x: 2687, y: -499}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 87.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,12 +83,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1052
-    y: 216
-    width: 91.2
+    x: 1584
+    y: 77
+    width: 87.2
     height: 40
   isDragging: 0
-  Title: Line 483
+  Title: offer me
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
   Text: So what can you offer me?
   Notes: 
