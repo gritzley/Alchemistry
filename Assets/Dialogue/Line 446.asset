@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 430
+  m_Name: Line 446
   m_EditorClassIdentifier: 
-  Position: {x: 2976, y: -123}
-  Size: {x: 92, y: 65}
+  Position: {x: 2538, y: -143}
+  Size: {x: 91.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,18 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 631
-    y: 221
-    width: 92
-    height: 65
+    x: 839
+    y: 351
+    width: 91.2
+    height: 40
   isDragging: 0
-  Title: Line 430
-  ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: I'll owe you one for the centaurs death so see this a way to keep us both
-    save...
+  Title: Line 446
+  ParentQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
+  Text: So thank you, witch.
   Notes: 
-  AnswerLeft: We probably deserve this.
-  AnswerRight: I'm sorry it had to end that way.
-  HasAnswers: 1
-  NextLeft: {fileID: 11400000, guid: 7cdd0066e2073f34c87a997e99d03895, type: 2}
-  NextRight: {fileID: 11400000, guid: ddc7b92de22aa7943b6670e633df18bc, type: 2}
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 591c93047a023a148b8dc5cfa326f7a4, type: 2}

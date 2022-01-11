@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -1515.5
-    y: 367
+    x: -1635.5
+    y: 264
     width: 171.2
     height: 65
   isDragging: 0
   Title: Ending1 Sus by dragon
   PrecedingStartNode: {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
   SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -140,6 +140,8 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
+    NextQuest: {fileID: 0}
   DialogueNodes:
   - {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
   - {fileID: 11400000, guid: 9538a5b2141f6d24db509b2db0482976, type: 2}
@@ -173,4 +175,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4274001047db8e24cac85a72dce602aa, type: 2}
   - {fileID: 11400000, guid: ddc7b92de22aa7943b6670e633df18bc, type: 2}
   - {fileID: 11400000, guid: cf8c5df1a079bba48bd702f817355fff, type: 2}
+  - {fileID: 11400000, guid: 7cdd0066e2073f34c87a997e99d03895, type: 2}
+  - {fileID: 11400000, guid: b59b80e6101a12c439bbba3244bf93f8, type: 2}
+  - {fileID: 11400000, guid: d645739128cfd4e478a63874d1b8a8b6, type: 2}
+  - {fileID: 11400000, guid: 4404ee1158dc6054684a626c8c3ea36c, type: 2}
+  - {fileID: 11400000, guid: ca5f3a353546fe146bc227e2cc21b28c, type: 2}
   isUnfolded: 1
