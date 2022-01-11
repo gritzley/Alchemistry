@@ -151,11 +151,11 @@ public abstract class StoryNode : ScriptableObject
     /// Action passed to an ConnectionPoint for OnClick Handling
     /// </summary>
     /// <param name="index">The index of the point in this object</param>
-    public abstract void OnOutPointClick(int state);
+    public abstract void OnOutPointClick(int index);
 
     /// <summary>
     /// Get a list of all outgoing connections from this node.
-    /// Since each connection only has one outNode, combining the connections of all nodes givces you a list of all connections
+    /// Combining the connections of all nodes gives you a list of all connections
     /// </summary>
     /// <param name="state">The current state of the window. 0 -> QuestView , 1 -> DialogueView</param>
     /// <returns>All Out Connections of this node</returns>

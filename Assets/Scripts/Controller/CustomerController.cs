@@ -9,8 +9,9 @@ public class CustomerController : MonoBehaviour
     public TextDisplay RightAnswerTextDisplay;
     public Potion LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
-    Quest currentQuest;
-    bool isReceivingPotion;
+    private Quest currentQuest;
+    private bool isReceivingPotion;
+
 
     public DialogueLine CurrentDialogueLine
     {

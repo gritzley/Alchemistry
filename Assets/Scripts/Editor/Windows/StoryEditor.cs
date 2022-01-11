@@ -110,56 +110,39 @@ public class StoryEditor : EditorWindow
         nodes.Add(quest);
     }
 
-    /// <summary>
-    /// Add a new DialogueLine to the Assets/Dialogue directory
-    /// This Method assumes that you are in DialogueView
-    /// </summary>
-    /// <param name="mousePosition">The current mousePosition</param>
-    private void AddDialogueLine(Vector2 mousePosition)
+    private void CreateDialogueNode<T>(Vector2 position) where T : DialogueNode
     {
-        if (viewState != ViewState.DialogueView) throw new Exception("You tried to add a new DialogueLine even though you are not in DialogueViews");
+        if (viewState != ViewState.DialogueView) throw new Exception("You tried to add a new DialogueNode even though you are not in DialogueViews");
         Quest currentQuest = (Quest)nodes[0];
 
-        // Create an asset with a unique name
-        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Line.asset");
-        DialogueLine line = ScriptableObject.CreateInstance<DialogueLine>();
-        AssetDatabase.CreateAsset(line, path);
+        string assetName;
+        switch (typeof(T).Name)
+        {
+            case "DialogueLine": assetName = "Line"; break;
+            case "PotionBranch": assetName = "Branch"; break;
+            case "ReceivingState":
+                assetName = "Receive Potion";
+                if (nodes.FindIndex( e => e is ReceivingState ) != -1)
+                    throw new Exception("There already is a ReceivingState in this Quest");
+                break;
+            default: throw new NotImplementedException("You are trying to create a type of node that the Story Editor does not know about");
+        }
 
-        // We need to add some parameters of the line because scriptableObjets don't pass stuff to constructors
-        line.Title = line.name;
-        line.Position = mousePosition;
-        line.OnRemove = RemoveNodeFromView;
-        line.ParentQuest = currentQuest;
-        currentQuest.DialogueNodes.Add(line);
+        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/{assetName}.asset");
+        T node = ScriptableObject.CreateInstance<T>();
+        AssetDatabase.CreateAsset(node, path);
 
-        // Changes made to the line after creating it must be saved
-        EditorUtility.SetDirty(line);
-        EditorUtility.SetDirty(currentQuest);
-        AssetDatabase.SaveAssets();
-        nodes.Add(line);
-    }
-
-    private void AddDialogueBranch(Vector2 mousePosition)
-    {
-        // Fail if not in DialogueView
-        if (viewState != ViewState.DialogueView) throw new Exception("You tried to add a new DialogueBranch even though you are not in DialogueViews");
-        Quest currentQuest = (Quest)nodes[0];
-
-        // Create an asset with a unique name
-        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Branch.asset");
-        PotionBranch branch = ScriptableObject.CreateInstance<PotionBranch>();
-        AssetDatabase.CreateAsset(branch, path);
-
-        branch.Position = mousePosition;
-        branch.OnRemove = RemoveNodeFromView;
-        branch.ParentQuest = currentQuest;
-        currentQuest.DialogueNodes.Add(branch);
+        node.Title = node.name;
+        node.Position = position;
+        node.OnRemove = RemoveNodeFromView;
+        node.ParentQuest = currentQuest;
+        currentQuest.DialogueNodes.Add(node);
 
         // Changes made to the line after creating it must be saved
-        EditorUtility.SetDirty(branch);
+        EditorUtility.SetDirty(node);
         EditorUtility.SetDirty(currentQuest);
         AssetDatabase.SaveAssets();
-        nodes.Add(branch);
+        nodes.Add(node);
     }
 
     private void GoToMiddleOfNodes()
@@ -176,7 +159,14 @@ public class StoryEditor : EditorWindow
 
     private void GoToFirstNode()
     {
-        offset = nodes[0].Position;
+        offset = nodes.First().Position;
+        offset -= position.size / 2;
+        offset *= -1;
+    }
+
+    private void GoToLastNode()
+    {
+        offset = nodes.Last().Position;
         offset -= position.size / 2;
         offset *= -1;
     }
@@ -227,10 +217,13 @@ public class StoryEditor : EditorWindow
                     switch(viewState)
                     {
                         case ViewState.DialogueView:
-                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => AddDialogueLine(pos));
-                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => AddDialogueBranch(pos));
+                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
+                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
+                            contextMenu.AddItem(new GUIContent("Add Receiving State"), false, () => CreateDialogueNode<ReceivingState>(pos));
+                    
                             contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
-                            contextMenu.AddItem(new GUIContent("I am lost, take me back to nodes"), false, GoToFirstNode);
+                            contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);
+                            contextMenu.AddItem(new GUIContent("I am lost, go to the last node I added"), false, GoToLastNode);
                             break;
 
                         case ViewState.QuestView:
