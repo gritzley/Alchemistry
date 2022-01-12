@@ -32,15 +32,6 @@ public class CustomerController : MonoBehaviour
         visibilityTracker = GetComponent<VisibilityTracker>();
     }
 
-    void Update()
-    {
-        if (Input.GetButtonDown("3")) Debug.Log(String.Join(", ",
-            visibilityTracker.childrenTrackers
-            .Where(e => e.IsVisible)
-            .Select(e => e.name)
-            .ToArray()));
-    }
-
     void HandleDialogueLine(DialogueLine line)
     {
         LeftAnswerTextDisplay.ClearLetters();
@@ -51,6 +42,10 @@ public class CustomerController : MonoBehaviour
         {
             isReceivingPotion = true;
             SetAnswersActive(false, false);
+        }
+        else if (line.NextRight == null)
+        {
+            AdvanceQuest();
         }
         else if (line.HasAnswers)
         {
@@ -86,9 +81,13 @@ public class CustomerController : MonoBehaviour
     {
         if (isReceivingPotion)
         {
+            MainTextDisplay.ClearLetters();
+            LeftAnswerTextDisplay.ClearLetters();
+            RightAnswerTextDisplay.ClearLetters();
             LastGivenPotion = potion;
             ReceiveAnswer(0);
             isReceivingPotion = false;
+            if (CurrentDialogueLine.NextRight == null) AdvanceQuest();
         }
     }
 
@@ -98,13 +97,19 @@ public class CustomerController : MonoBehaviour
         {
             HandleDialogueLine(CurrentDialogueLine);
         }
-        else
-        {
-            MainTextDisplay.ClearLetters();
-            LeftAnswerTextDisplay.ClearLetters();
-            RightAnswerTextDisplay.ClearLetters();
-            currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
-            Debug.Log("Next Quest: " + currentQuest.Title);
-        }
+    }
+
+    private void AdvanceQuest()
+    {
+        Debug.Log("Advancing with " + LastGivenPotion.name);
+        currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
+        new Task(Leave());
+    }
+    private IEnumerator Leave()
+    {
+        while (!isVisible) yield return new WaitForSeconds(0.1f);
+        while (isVisible) yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
+        GameManager.Instance.AdvanceScene();
     }
 }
