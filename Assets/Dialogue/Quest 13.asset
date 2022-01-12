@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 13
   m_EditorClassIdentifier: 
-  Position: {x: 515, y: -525}
-  Size: {x: 101.6, y: 65}
+  Position: {x: 606, y: -522}
+  Size: {x: 202.4, y: 615}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,10 +83,10 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -1547
-    y: 292
-    width: 101.6
-    height: 65
+    x: 526.0833
+    y: 135.23334
+    width: 202.4
+    height: 615
   isDragging: 0
   Title: Body gone
   PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}

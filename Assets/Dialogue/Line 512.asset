@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 512
   m_EditorClassIdentifier: 
-  Position: {x: 2835, y: -532}
-  Size: {x: 88.8, y: 40}
+  Position: {x: 2846, y: -526}
+  Size: {x: 66.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 787
-    y: 282
-    width: 88.8
+    x: 415
+    y: 182
+    width: 66.4
     height: 40
   isDragging: 0
-  Title: Line 512
+  Title: offer
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 
+  Text: So what can you offer me?
   Notes: 
   AnswerLeft: 
   AnswerRight: 
