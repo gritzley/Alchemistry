@@ -90,9 +90,8 @@ MonoBehaviour:
   isDragging: 0
   Title: Suspect
   PrecedingStartNode: {fileID: 11400000, guid: 3db09c5156d96444d94d82285fc58a12, type: 2}
-  SucceedingStartNode: {fileID: 11400000, guid: aeb1b001d803a1a4b8dcadadc475ce1c, type: 2}
   CurrentLine: {fileID: 11400000, guid: 3db09c5156d96444d94d82285fc58a12, type: 2}
-  Customer: {fileID: 0}
+  Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 0}

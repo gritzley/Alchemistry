@@ -92,7 +92,7 @@ MonoBehaviour:
   PrecedingStartNode: {fileID: 11400000, guid: 06f09efc89bfcb840b59edb966cef679, type: 2}
   SucceedingStartNode: {fileID: 11400000, guid: 84ba5d5df127945469bff0f835a01631, type: 2}
   CurrentLine: {fileID: 11400000, guid: 06f09efc89bfcb840b59edb966cef679, type: 2}
-  Customer: {fileID: 0}
+  Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 0}
