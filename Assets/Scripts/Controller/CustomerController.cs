@@ -12,11 +12,7 @@ public class CustomerController : MonoBehaviour
     public CustomerDefinition CustomerDefinition;
     Quest currentQuest;
     bool isReceivingPotion;
-
-    public DialogueLine CurrentDialogueLine
-    {
-        get { return currentQuest.CurrentLine; }
-    }
+    public DialogueLine CurrentDialogueLine => currentQuest.CurrentLine;
 
     void OnEnable()
     {

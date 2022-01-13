@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Assertions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Linq;
 [System.Serializable]
 public class StoryEditor : EditorWindow
 {
+    public static StoryEditor Instance;
+    public static bool IsOpen;
     public enum ViewState
     {
         QuestView,
@@ -29,11 +32,10 @@ public class StoryEditor : EditorWindow
         window.titleContent = new GUIContent("Story Editor");
     }
 
-    /// <summary>
-    /// Initialize Window
-    /// </summary>
     private void OnEnable()
     {
+        Assert.IsNull(Instance, "There can only be one open Story Editor at any time");
+        Instance = this;
         if (GameManager.Instance == null)
         {
             Debug.LogWarning("There is no GameManager Instance!");
@@ -48,6 +50,11 @@ public class StoryEditor : EditorWindow
             offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
             offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
         }
+    }
+
+    private void OnDisable()
+    {
+        Instance = null;
     }
 
     /// <summary>
