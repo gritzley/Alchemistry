@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 125
+  m_Name: Line 525
   m_EditorClassIdentifier: 
-  Position: {x: 3101, y: 57}
-  Size: {x: 83.2, y: 40}
+  Position: {x: 1471, y: 118}
+  Size: {x: 79.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 855
-    y: 297
-    width: 83.2
+    x: 302
+    y: 401
+    width: 79.2
     height: 40
   isDragging: 0
-  Title: fighting
-  ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
-  Text: "It's there home, but fighting with an \ndead body is difficult."
+  Title: Mikael
+  ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
+  Text: 'One of the more brave man tried to approach Mikael anyway. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 033cdf884ce57574393bb969b0d78236, type: 2}
+  NextRight: {fileID: 11400000, guid: 2c1d9797f462c70418fa13906c1eed87, type: 2}
