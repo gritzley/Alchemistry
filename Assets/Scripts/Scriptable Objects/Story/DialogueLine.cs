@@ -21,7 +21,7 @@ public class DialogueLine : DialogueNode
         {
             if (value == true)
             {
-                if(ParentQuest.DialogueNodes.Exists( e => e != this && (bool)(e as DialogueLine)?.IsReceivingState))
+                if (ParentQuest.DialogueNodes.Exists( e => e != this && e is DialogueLine && ((DialogueLine)e).IsReceivingState))
                 {
                     throw new Exception("There already is a receiving state in this lines parent quest");
                 }
