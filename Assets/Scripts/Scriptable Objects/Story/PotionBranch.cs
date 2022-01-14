@@ -17,8 +17,6 @@ public class PotionBranch : DialogueNode
 
     public List<ConnectionPoint> OutPoints;
     
-    public bool isUnfolded;
-
     public override DialogueLine NextLine
     {
         get
@@ -59,7 +57,7 @@ public class PotionBranch : DialogueNode
             if (link.NextNode != null)
             {
                 int i = Links.IndexOf(link);
-                connections.Add(new Connection(link.NextNode.InPoint.Center, OutPoints[isUnfolded ? i : 0].Center, () => ClickConnection(i) ));
+                connections.Add(new Connection(link.NextNode.InPoint.Center, OutPoints[i].Center, () => ClickConnection(i) ));
             }
         }
         return connections;
@@ -67,26 +65,16 @@ public class PotionBranch : DialogueNode
 
     private void ClickConnection(int i)
     {
-        if (isUnfolded)
-        {
-            Link link = Links[i];
-            link.NextNode = null;
-            Links[i] = link;
-        }
-        else
-        {
-            isUnfolded = true;
-        }
+        Link link = Links[i];
+        link.NextNode = null;
+        Links[i] = link;
     }
 
     public override void OnOutPointClick(int i)
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;
 
-        if (!isUnfolded) {
-            isUnfolded = true;
-        }
-        else if (inPoint != null)
+       if (inPoint != null)
         {
             // Create a Connection to another node
 
@@ -115,26 +103,15 @@ public class PotionBranch : DialogueNode
 
         InPoint.Draw();
         // ---- NODE UNFOLDED ----
-        if (isUnfolded)
+        OutPoints.ForEach( e => e.Draw() );
+        Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
+        Size.y = 15 + OutPoints.Count * 25; 
+        base.Draw(offset);
+        for (int i = 0; i < Links.Count; i++)
         {
-            OutPoints.ForEach( e => e.Draw() );
-            Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
-            Size.y = 15 + OutPoints.Count * 25; 
-            base.Draw(offset);
-            for (int i = 0; i < Links.Count; i++)
-            {
-                Rect labelRect = rect;
-                labelRect.position += new Vector2(0, 25 * i);
-                GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
-            }
-        }
-        /// ---- NODE FOLDED ----
-        else
-        {
-            OutPoints[0].Draw();
-            Size.y = 40;
-            base.Draw(offset);
-            GUI.Label(rect, Title, LabelStyle);
+            Rect labelRect = rect;
+            labelRect.position += new Vector2(0, 25 * i);
+            GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
         }
     }
 
@@ -143,21 +120,14 @@ public class PotionBranch : DialogueNode
         base.FillContextMenu(contextMenu);
     }
 
-    public override void ProcessEvent(Event e, int state = 0)
+    public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {
         // ---- CONECTION POINT EVENTS ----
         InPoint.ProcessEvent(e);
-        if (isUnfolded)
-        {
-            OutPoints.ForEach( p => p.ProcessEvent(e));
-        }
-        else
-        {
-            OutPoints[0].ProcessEvent(e);
-        }
+        OutPoints.ForEach( p => p.ProcessEvent(e));
 
         // ---- BASE EVENTS ----
-        base.ProcessEvent(e);
+        base.ProcessEvent(e, state, relatedNodes);
         
         // ---- ADDITIONAL CLICK EVENTS ----
         switch (e.type)
@@ -169,12 +139,6 @@ public class PotionBranch : DialogueNode
                     if (ConnectionPoint.selectedOutPoint != null)
                     {
                         OnInPointClick();
-                    }
-                    // Unfold Node
-                    else
-                    {
-                        isUnfolded = true;
-                        GUI.changed = true;
                     }
                     e.Use();
                 }

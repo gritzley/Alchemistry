@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9a467de2c1c18747a9d80037ffe8008, type: 2}
+  - {fileID: 3511325375820423461, guid: 559f6b43f9ee31a4291b2bd59ecb76b1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9a467de2c1c18747a9d80037ffe8008, type: 2}
+  - {fileID: 3511325375820423461, guid: 559f6b43f9ee31a4291b2bd59ecb76b1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2485635620204523078}
-  m_LocalRotation: {x: -0.000021816617, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.00010798674, y: -0.7071068, z: -0.00010798674, w: 0.7071068}
   m_LocalPosition: {x: 0.000000014901161, y: 0, z: -0.09999992}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children:
@@ -248,7 +248,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5858923965520806923}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.000000014901161, y: 0, z: -0.09999992}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children:
@@ -317,7 +317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9a467de2c1c18747a9d80037ffe8008, type: 2}
+  - {fileID: 3511325375820423461, guid: 559f6b43f9ee31a4291b2bd59ecb76b1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -423,7 +423,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464291402928012194}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.073912784, y: -0.7032332, z: -0.073912784, w: 0.7032332}
   m_LocalPosition: {x: 0.000000014901161, y: 0, z: -0.09999992}
   m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children:

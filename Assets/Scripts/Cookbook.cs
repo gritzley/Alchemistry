@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using com.guinealion.animatedBook;
 
@@ -8,7 +6,6 @@ public class Cookbook : MonoBehaviour
 
     [SerializeField] private BookPageCollider LeftPage;
     [SerializeField] private BookPageCollider RightPage;
-    [SerializeField] private float FoldSpeed = 0.2f;
     private LightweightBookHelper bookHelper;
 
     void Start()

@@ -28,7 +28,8 @@ public class Connection
             2f
         );
 
-        Handles.Button((InPos + OutPos) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap);
+        if (OnClickButton != null)
+            Handles.Button((InPos + OutPos) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap);
     }
 
     public void ProcessEvent(Event e)
@@ -36,11 +37,11 @@ public class Connection
         switch(e.type)
         {
             case EventType.MouseDown:
-                if (new Rect((InPos + OutPos) * 0.5f - new Vector2(4,4), new Vector2(8,8)).Contains(e.mousePosition))
+                if (OnClickButton != null)
                 {
-                    e.Use();
-                    if (OnClickButton != null)
+                    if (new Rect((InPos + OutPos) * 0.5f - new Vector2(4,4), new Vector2(8,8)).Contains(e.mousePosition))
                     {
+                        e.Use();
                         OnClickButton();
                     }
                 }

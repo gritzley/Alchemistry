@@ -23,9 +23,9 @@ public class TextDisplay : Interactible
     public float maxLineWidth = 5.0f;
 
     public Action OnClickCallback;
-    Sprite[] sprites;
-
-    string text;
+    public bool ClickActive = true;
+    private Sprite[] sprites;
+    private string text;
 
     void Awake()
     {
@@ -60,18 +60,8 @@ public class TextDisplay : Interactible
 
     public override bool OnInteract(PlayerController _)
     {
-        OnClickCallback?.Invoke();
+        if (ClickActive) OnClickCallback?.Invoke();
         return true;
-    }
-
-    void OnMouseEnter()
-    {
-        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-    }
-
-    void OnMouseExit()
-    {
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
 
     public void DisplayText(string text, Action callback = null)

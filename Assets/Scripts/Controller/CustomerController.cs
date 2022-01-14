@@ -1,6 +1,8 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 [ExecuteInEditMode]
 public class CustomerController : MonoBehaviour
@@ -10,13 +12,11 @@ public class CustomerController : MonoBehaviour
     public TextDisplay RightAnswerTextDisplay;
     public Potion LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
-    Quest currentQuest;
-    bool isReceivingPotion;
-
-    public DialogueLine CurrentDialogueLine
-    {
-        get { return currentQuest.CurrentLine; }
-    }
+    private Quest currentQuest;
+    private bool isReceivingPotion;
+    private VisibilityTracker visibilityTracker;
+    private bool isVisible => visibilityTracker.IsVisible;
+    public DialogueLine CurrentDialogueLine => currentQuest.CurrentLine;
 
     void OnEnable()
     {
@@ -24,6 +24,8 @@ public class CustomerController : MonoBehaviour
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
         HandleDialogueLine(CurrentDialogueLine);
+
+        visibilityTracker = GetComponent<VisibilityTracker>();
     }
 
     void HandleDialogueLine(DialogueLine line)
@@ -32,24 +34,38 @@ public class CustomerController : MonoBehaviour
         RightAnswerTextDisplay.ClearLetters();
 
         Action displayAnswers = null;
-        if (line.NextRight == null)
+        if (line.IsReceivingState)
         {
             isReceivingPotion = true;
+            SetAnswersActive(false, false);
+        }
+        else if (line.NextRight == null)
+        {
+            AdvanceQuest();
         }
         else if (line.HasAnswers)
         {
-            displayAnswers = () => {
-                LeftAnswerTextDisplay.DisplayText(line.AnswerLeft);
-                RightAnswerTextDisplay.DisplayText(line.AnswerRight);
-            };
+            displayAnswers = () => SetAnswerTexts(line.AnswerLeft, line.AnswerRight);
+            SetAnswersActive(true, true);
         }
         else
         {
-            displayAnswers = () => {
-                RightAnswerTextDisplay.DisplayText("Continue");
-            };
+            displayAnswers = () => SetAnswerTexts(String.Empty, "Continue");
+            SetAnswersActive(false, true);
         }
         Say(line.Text, displayAnswers);
+    }
+    
+    private void SetAnswerTexts(string both) => SetAnswerTexts(both, both);
+    private void SetAnswerTexts(string left, string right)
+    {
+        LeftAnswerTextDisplay.DisplayText(left);
+        RightAnswerTextDisplay.DisplayText(right);
+    }
+    private void SetAnswersActive(bool left, bool right)
+    {
+        LeftAnswerTextDisplay.ClickActive = left;
+        RightAnswerTextDisplay.ClickActive = right;
     }
 
     public void Say(string text, Action callback = null)
@@ -61,18 +77,35 @@ public class CustomerController : MonoBehaviour
     {
         if (isReceivingPotion)
         {
-            currentQuest = currentQuest.GetNextQuest(potion);
+            MainTextDisplay.ClearLetters();
+            LeftAnswerTextDisplay.ClearLetters();
+            RightAnswerTextDisplay.ClearLetters();
             LastGivenPotion = potion;
-            HandleDialogueLine(CurrentDialogueLine);
+            ReceiveAnswer(0);
+            isReceivingPotion = false;
+            if (CurrentDialogueLine.NextRight == null) AdvanceQuest();
         }
     }
 
     public void ReceiveAnswer(int answer)
     {
-        bool didDialogueAdvance = currentQuest.AdvanceDialogue(answer);
-        if (didDialogueAdvance)
+        if (currentQuest.AdvanceDialogue(answer))
         {
             HandleDialogueLine(CurrentDialogueLine);
         }
+    }
+
+    private void AdvanceQuest()
+    {
+        Debug.Log("Advancing with " + LastGivenPotion.name);
+        currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
+        new Task(Leave());
+    }
+    private IEnumerator Leave()
+    {
+        while (!isVisible) yield return new WaitForSeconds(0.1f);
+        while (isVisible) yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
+        GameManager.Instance.AdvanceScene();
     }
 }

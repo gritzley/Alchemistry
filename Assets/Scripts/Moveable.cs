@@ -16,8 +16,9 @@ public class Moveable : MonoBehaviour
     /// Coroutine that turns the player until he is looking in a specified direction
     /// </summary>
     /// <param name="targetDirection">The direction the player is supposed to look at</param>
-    public IEnumerator TurnTowards(Vector3 targetDirection)
+    public IEnumerator TurnTowards(Vector3 targetDirection, float seconds = 0)
     {
+        if (seconds <= 0) seconds = animationTime;
         if (!rotationDisabled)
         {
             // Disable inputs while moving
@@ -56,7 +57,8 @@ public class Moveable : MonoBehaviour
     /// Coroutine that turns the player until his rotation matches a specified quaternion
     /// </summary>
     /// <param name="targetRotation">The desired rotation</param>
-    public IEnumerator TurnTowards(Quaternion targetRotation) {
+    public IEnumerator TurnTowards(Quaternion targetRotation, float seconds = 0) {
+        if (seconds <= 0) seconds = animationTime;
         if (!rotationDisabled)
         {
             // Disable inputs while moving
@@ -93,8 +95,9 @@ public class Moveable : MonoBehaviour
     /// Coroutine that moves the player to a target position in world space
     /// </summary>
     /// <param name="targetPosition">The positiont the player is supposed to move to</param>
-    public virtual IEnumerator MoveTowards(Vector3 targetPosition)
+    public virtual IEnumerator MoveTowards(Vector3 targetPosition, float seconds = 0)
     {
+        if (seconds <= 0) seconds = animationTime;
         if (!movementDisabled)
         {
             // Disable inputs while moving

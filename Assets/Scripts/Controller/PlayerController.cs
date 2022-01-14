@@ -1,16 +1,25 @@
 using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class PlayerController : Moveable
 {
-    [SerializeField] PlayerPosition currentPosition;
-    Vector3 cardinalDirection;
-    Camera fpCamera;
+    public static PlayerController Instance;
+    [SerializeField] private Vector3 lookAtBoardPosition;
+    [SerializeField] private PlayerPosition currentPosition;
+    private Vector3 cardinalDirection;
+    private Camera fpCamera;
     public Transform HandTransform;
     public Pickupable HeldItem;
     [HideInInspector] public bool InAction;
 
+    PlayerController()
+    {
+        Assert.IsNull(Instance, "There can only be one instance of PlayerController");
+        Instance = this;
+    }
     void OnEnable()
     {
         fpCamera = GetComponentInChildren<Camera>();
@@ -95,5 +104,28 @@ public class PlayerController : Moveable
         cardinalDirection = Quaternion.Euler(0, dir * 90, 0) * cardinalDirection;
 
         StartCoroutine(TurnTowards(cardinalDirection));
+    }
+
+    public void LookAtBoard(float seconds = 1.5f, float moveTime = 3.0f) => StartCoroutine(LookAtBoardTask(seconds, moveTime));
+    public IEnumerator LookAtBoardTask(float seconds, float moveTime)
+    {
+        if (!InAction)
+        {
+            InAction = true;
+            Vector3 returnPosition = transform.position;
+            Vector3 returnRotation = transform.forward;
+            Task MoveToBoard = new Task(MoveTowards(lookAtBoardPosition, moveTime));
+            Task TurnToBoard = new Task(TurnTowards(Vector3.right, moveTime));
+
+            while(MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(seconds);
+
+            MoveToBoard = new Task(MoveTowards(returnPosition, moveTime));
+            TurnToBoard = new Task(TurnTowards(returnRotation, moveTime));
+
+            while(MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
+            InAction = false;
+        }
+        yield return null;
     }
 }
