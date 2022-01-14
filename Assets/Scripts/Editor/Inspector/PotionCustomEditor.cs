@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using System.Linq;
 
-[CustomEditor(typeof(Potion))]
+[CustomEditor(typeof(PotionDefinition))]
 [CanEditMultipleObjects]
 public class PotionEditor : Editor
 {
