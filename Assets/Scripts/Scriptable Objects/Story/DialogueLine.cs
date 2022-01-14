@@ -56,14 +56,14 @@ public class DialogueLine : DialogueNode
     {
         List<Connection> connections = new List<Connection>();
 
-        if (NextRight != null)
+        if (NextRight != null && ParentQuest.DialogueNodes.Contains(NextRight))
         {
             connections.Add(new Connection(NextRight.InPoint.Center, OutPointRight.Center, () => OnConnectionClick(0)));
         }
 
         if (HasAnswers)
         {
-            if (NextLeft != null)
+            if (NextLeft != null && ParentQuest.DialogueNodes.Contains(NextRight))
             {
                 connections.Add(new Connection(NextLeft.InPoint.Center, OutPointLeft.Center, () => OnConnectionClick(1)));
             }
@@ -81,6 +81,9 @@ public class DialogueLine : DialogueNode
 
         OutPointRight = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 0);
         OutPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 1);
+
+        if (!ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
+        if (!ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
     }
 
     public override void OnOutPointClick(int index)
@@ -147,12 +150,12 @@ public class DialogueLine : DialogueNode
         base.Draw(offset, state);
         GUI.Label(rect, Title, LabelStyle);
     }
-    public override void ProcessEvent(Event e, int state = 0)
+    public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {
         InPoint.ProcessEvent(e);
         OutPointRight.ProcessEvent(e);
         if (HasAnswers) OutPointLeft.ProcessEvent(e);
-        base.ProcessEvent(e, state);
+        base.ProcessEvent(e, state, relatedNodes);
         switch (e.type)
         {
             case EventType.MouseDown:

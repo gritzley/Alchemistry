@@ -83,18 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 917
-    y: 194
+    x: 855
+    y: 297
     width: 83.2
     height: 40
   isDragging: 0
   Title: fighting
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
-  Text: "It's there home and they won't to stay but fighting with an \ndead body
-    is difficult."
+  Text: "It's there home, but fighting with an \ndead body is difficult."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 033cdf884ce57574393bb969b0d78236, type: 2}

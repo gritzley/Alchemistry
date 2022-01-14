@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Assertions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,22 @@ using System.Linq;
 [System.Serializable]
 public class StoryEditor : EditorWindow
 {
+    public static StoryEditor Instance;
+    public static bool IsOpen;
     public enum ViewState
     {
         QuestView,
         DialogueView
     }
+    Vector2 selectCornerStart, selectCornerEnd;
+    Vector2 selectBoxPos => new Vector2(Mathf.Min(selectCornerEnd.x, selectCornerStart.x), Mathf.Min(selectCornerEnd.y, selectCornerStart.y));
+    Vector2 selectBoxSize => new Vector2(Mathf.Abs(selectCornerEnd.x - selectCornerStart.x), Mathf.Abs(selectCornerEnd.y - selectCornerStart.y));
+    Rect selectionRect => new Rect(selectBoxPos, selectBoxSize);
+    bool drawingSelectionBox;
     Vector2 offset;
     ViewState viewState;
     bool isDragging;
-    List<StoryNode> nodes;
+    List<StoryNode> nodes, selectedNodes;
     List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
 
     /// <summary>
@@ -29,25 +37,26 @@ public class StoryEditor : EditorWindow
         window.titleContent = new GUIContent("Story Editor");
     }
 
-    /// <summary>
-    /// Initialize Window
-    /// </summary>
     private void OnEnable()
     {
+        Assert.IsNull(Instance, "There can only be one open Story Editor at any time");
+        Instance = this;
         if (GameManager.Instance == null)
-        {
             Debug.LogWarning("There is no GameManager Instance!");
-        }
         else if (GameManager.Instance.CurrentCustomer == null)
-        {
             Debug.LogWarning("There is no test_character assigned in the GameManager");
-        }
         else
         {
             ViewQuests();
             offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
             offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
         }
+        selectedNodes = new List<StoryNode>();
+    }
+
+    private void OnDisable()
+    {
+        Instance = null;
     }
 
     /// <summary>
@@ -62,6 +71,7 @@ public class StoryEditor : EditorWindow
             return (StoryNode)quest;
         }).ToList();
         offset = Vector2.zero;
+
     }
 
     private void ViewQuestDialogue(Quest quest)
@@ -70,7 +80,7 @@ public class StoryEditor : EditorWindow
         nodes = new List<StoryNode>();
         nodes.Add(quest);
         nodes.AddRange(quest.DialogueNodes);
-        quest.isUnfolded = true;
+        quest.DialogueNodes.ForEach(e => e.OnRemove = RemoveNodeFromView);
     }
 
     /// <summary>
@@ -79,6 +89,7 @@ public class StoryEditor : EditorWindow
     /// <param name="quest"> The quest to be removed</param>
     private void RemoveNodeFromView(StoryNode node)
     {
+        DeselectAllNodes();
         nodes.Remove(node);
     }
 
@@ -120,11 +131,6 @@ public class StoryEditor : EditorWindow
         {
             case "DialogueLine": assetName = "Line"; break;
             case "PotionBranch": assetName = "Branch"; break;
-            case "ReceivingState":
-                assetName = "Receive Potion";
-                if (nodes.FindIndex( e => e is ReceivingState ) != -1)
-                    throw new Exception("There already is a ReceivingState in this Quest");
-                break;
             default: throw new NotImplementedException("You are trying to create a type of node that the Story Editor does not know about");
         }
 
@@ -181,84 +187,90 @@ public class StoryEditor : EditorWindow
         DrawGrid(100, 0.4f, Color.gray);
 
         // ---- PROCESS EVENTS ----
+
         nodes.ForEach( e => e.GetOutConnections((int)viewState).ForEach( e => e.ProcessEvent(Event.current)));
-        nodes.ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
-        switch (Event.current.type)
+        nodes.Except(selectedNodes).ToList().ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
+        selectedNodes.ForEach(node => node.ProcessEvent(Event.current, (int)viewState, selectedNodes.Where(e => e != node).ToList()));
+        if (!selectedNodes.Exists(e => e.rect.Contains(Event.current.mousePosition)))
         {
-            case EventType.MouseDown:
-                // ---- WINDOW CLICK ----
-                if (Event.current.button == 0)
-                {
-                    ConnectionPoint.selectedInPoint = null;
-                    ConnectionPoint.selectedOutPoint = null;
-                    if (viewState == ViewState.QuestView) questNodes.ForEach(e => e.isUnfolded = false );
-                    if (viewState == ViewState.DialogueView)
+            switch (Event.current.type)
+            {
+
+                case EventType.MouseDown:
+                    // ---- WINDOW CLICK ----
+                    if (Event.current.button == 0)
                     {
-                        questNodes.ForEach(
-                            e => e.DialogueNodes
-                            .Where( e => e is PotionBranch)
-                            .ToList()
-                            .ForEach( e => (e as PotionBranch).isUnfolded = false )
-                        );
+                        ConnectionPoint.selectedInPoint = null;
+                        ConnectionPoint.selectedOutPoint = null;
+                            
+                        // Tell Unity to redraw the window 
+                        GUI.changed = true;
+
+                        selectCornerStart = Event.current.mousePosition;
+                        selectCornerEnd = Event.current.mousePosition;
+                        drawingSelectionBox = true;
                     }
+
+                    // ---- WINDOW CONTEXT MENU ----
+                    if (Event.current.button == 1)
+                    {
                         
-                    // Tell Unity to redraw the window 
-                    GUI.changed = true;
-                }
+                        GenericMenu contextMenu = new GenericMenu();
+                        // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
+                        // Therefore we must save the mouse position when creatigng the context menu.
+                        Vector2 pos = Event.current.mousePosition - offset;
+                        switch(viewState)
+                        {
+                            case ViewState.DialogueView:
+                                contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
+                                contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
+                        
+                                contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
+                                contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);
+                                contextMenu.AddItem(new GUIContent("I am lost, go to the last node I added"), false, GoToLastNode);
+                                break;
 
-                // ---- WINDOW CONTEXT MENU ----
-                if (Event.current.button == 1)
-                {
-                    
-                    GenericMenu contextMenu = new GenericMenu();
-                    // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
-                    // Therefore we must save the mouse position when creatigng the context menu.
-                    Vector2 pos = Event.current.mousePosition - offset;
-                    switch(viewState)
-                    {
-                        case ViewState.DialogueView:
-                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
-                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
-                            contextMenu.AddItem(new GUIContent("Add Receiving State"), false, () => CreateDialogueNode<ReceivingState>(pos));
-                    
-                            contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
-                            contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);
-                            contextMenu.AddItem(new GUIContent("I am lost, go to the last node I added"), false, GoToLastNode);
-                            break;
-
-                        case ViewState.QuestView:
-                            contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
-                            contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
-                            break;
+                            case ViewState.QuestView:
+                                contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                                contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
+                                break;
+                        }
+                        contextMenu.ShowAsContext();
                     }
-                    contextMenu.ShowAsContext();
-                }
-                break;
+                    break;
 
-            case EventType.MouseDrag:
+                case EventType.MouseDrag:
 
-                // ---- DRAG ----
-                if (Event.current.button == 0)
-                {
-                    isDragging = true;
-                    Vector2 drag = Event.current.delta;
-                    offset += drag;
+                    // ---- DRAG ----
+                    if (Event.current.button == 2)
+                    {
+                        isDragging = true;
+                        Vector2 drag = Event.current.delta;
+                        offset += drag;
 
-                    // Tell Unity to redraw the window
-                    GUI.changed = true;
-                }
-                break;
+                        // Tell Unity to redraw the window
+                        GUI.changed = true;
+                    }
+                    if (Event.current.button == 0)
+                    {
+                        selectCornerEnd = Event.current.mousePosition;
+                        GUI.changed = true;
+                    }
+                    break;
 
-            case EventType.MouseUp:
+                case EventType.MouseUp:
 
-                // ---- DRAG END ----
-                if (isDragging)
-                {
-                    isDragging = false;
-                    PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
-                    PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
-                }
-                break;
+                    // ---- DRAG END ----
+                    if (isDragging)
+                    {
+                        isDragging = false;
+                        PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
+                        PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
+                    }
+                    DeselectAllNodes();
+                    HandleSelection();
+                    break;
+            }
         }
 
         // ---- DRAW NODES & GetConnections((int)viewState) ----
@@ -280,8 +292,39 @@ public class StoryEditor : EditorWindow
             GUI.changed = true;
         }
 
+        // ---- DRAW SELECTION BOX ----
+        if (drawingSelectionBox)
+        {
+            GUI.Box(new Rect(selectCornerStart, selectCornerEnd - selectCornerStart), "");
+        }
+
         if (GUI.changed) Repaint();
     }
+
+    private void HandleSelection()
+    {
+        if (drawingSelectionBox)
+        {
+            selectedNodes = nodes.Where(e => selectionRect.Overlaps(e.rect)).ToList();
+            selectedNodes.ForEach(e => e.isSelected = true);
+            if (selectedNodes.Count == 1)
+            {
+                Selection.activeObject = selectedNodes[0];
+            }
+            if (selectedNodes.Count > 1)
+            {
+                Selection.activeObject = null;
+            }
+        }
+
+        drawingSelectionBox = false;
+        GUI.changed = true;
+
+    }
+
+    private void DeselectAllNodes() =>
+        nodes.Where(e => Selection.activeObject != e)
+        .ToList().ForEach(e => e.isSelected = false);
 
     /// <summary>
     /// Draw a grid in the window

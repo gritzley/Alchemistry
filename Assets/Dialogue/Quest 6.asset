@@ -12,8 +12,142 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 6
   m_EditorClassIdentifier: 
-  Position: {x: 705.5, y: -81}
-  Size: {x: 202.4, y: 615}
+  style:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000, type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 12
+      m_Right: 12
+      m_Top: 12
+      m_Bottom: 12
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  selectedStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000, type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 12
+      m_Right: 12
+      m_Top: 12
+      m_Bottom: 12
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  Position: {x: 709.5, y: -70}
+  Size: {x: 172.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,15 +217,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 630.5
-    y: 404
-    width: 202.4
-    height: 615
+    x: 772.29926
+    y: 437.85913
+    width: 172.66667
+    height: 40
   isDragging: 0
   Title: Ending1 Sus by dragon
-  PrecedingStartNode: {fileID: 0}
-  SucceedingStartNode: {fileID: 0}
-  CurrentLine: {fileID: 0}
+  isSelected: 1
+  PrecedingStartNode: {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
+  CurrentLine: {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -142,5 +276,41 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
-  isUnfolded: 1
+  DialogueNodes:
+  - {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
+  - {fileID: 11400000, guid: 9538a5b2141f6d24db509b2db0482976, type: 2}
+  - {fileID: 11400000, guid: e216f3732d37e2a4eb5583b6957487da, type: 2}
+  - {fileID: 11400000, guid: cfc7a764634a435498b4a17ffb9a65f1, type: 2}
+  - {fileID: 11400000, guid: b98ac4303f71e5c4fb661c2de89e4b87, type: 2}
+  - {fileID: 11400000, guid: 4ba7510dc81592a419728e1810d21995, type: 2}
+  - {fileID: 11400000, guid: c89015ab943457743bca7e27ee189f23, type: 2}
+  - {fileID: 11400000, guid: 5e51f9568af5885419c798eb0fb1fbf5, type: 2}
+  - {fileID: 11400000, guid: 8972f761446827f40959a30c5128a5e0, type: 2}
+  - {fileID: 11400000, guid: 5fa6c1d222ee6814f8dce82f8f417c4c, type: 2}
+  - {fileID: 11400000, guid: ebcbf265a4a35834c9123500d88e2f69, type: 2}
+  - {fileID: 11400000, guid: db10cd388044e8d4db005b738fad8b51, type: 2}
+  - {fileID: 11400000, guid: 10fad3e0375d2c04dad0bc65f56610e4, type: 2}
+  - {fileID: 11400000, guid: 21b5d4d05aac8a94384d332846f26342, type: 2}
+  - {fileID: 11400000, guid: bc6b30341c1435140b32a6c7e604d8db, type: 2}
+  - {fileID: 11400000, guid: 352187cc42522f7419d475f12eee1ec4, type: 2}
+  - {fileID: 11400000, guid: baaae375ea18b3e46bdb62dfd84a964d, type: 2}
+  - {fileID: 11400000, guid: 1f98eec173038534981f4535e929a8f3, type: 2}
+  - {fileID: 11400000, guid: 0031ce3f3a5e42c498fbd95609bfa3fa, type: 2}
+  - {fileID: 11400000, guid: ed24816957dc04940be246f78da7ea9d, type: 2}
+  - {fileID: 11400000, guid: eeec7447debaef842b4bdad5a9a66426, type: 2}
+  - {fileID: 11400000, guid: 9a906fe7e39c0e8478c8bfeba251c6cb, type: 2}
+  - {fileID: 11400000, guid: 8873c22488366c9438ef91a6dfd54843, type: 2}
+  - {fileID: 11400000, guid: ad77ceddf46e1b54eb4b5341256bcf93, type: 2}
+  - {fileID: 11400000, guid: 7ae8713489fbb6c4993208639cb1ace6, type: 2}
+  - {fileID: 11400000, guid: a7bd45e229e8ae64d8ef2384c5230007, type: 2}
+  - {fileID: 11400000, guid: d47db20cf4b85794d9a900fae7a91a5e, type: 2}
+  - {fileID: 11400000, guid: 0ac21b77bb5e46e448c02feed9104e5a, type: 2}
+  - {fileID: 11400000, guid: 4ae92b8867a3c3541ba81ecc75f9eaa0, type: 2}
+  - {fileID: 11400000, guid: 4274001047db8e24cac85a72dce602aa, type: 2}
+  - {fileID: 11400000, guid: ddc7b92de22aa7943b6670e633df18bc, type: 2}
+  - {fileID: 11400000, guid: cf8c5df1a079bba48bd702f817355fff, type: 2}
+  - {fileID: 11400000, guid: 7cdd0066e2073f34c87a997e99d03895, type: 2}
+  - {fileID: 11400000, guid: b59b80e6101a12c439bbba3244bf93f8, type: 2}
+  - {fileID: 11400000, guid: d645739128cfd4e478a63874d1b8a8b6, type: 2}
+  - {fileID: 11400000, guid: 4404ee1158dc6054684a626c8c3ea36c, type: 2}
+  - {fileID: 11400000, guid: ca5f3a353546fe146bc227e2cc21b28c, type: 2}

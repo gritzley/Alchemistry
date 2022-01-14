@@ -16,11 +16,7 @@ public class CustomerController : MonoBehaviour
     private bool isReceivingPotion;
     private VisibilityTracker visibilityTracker;
     private bool isVisible => visibilityTracker.IsVisible;
-
-    public DialogueLine CurrentDialogueLine
-    {
-        get { return currentQuest.CurrentLine; }
-    }
+    public DialogueLine CurrentDialogueLine => currentQuest.CurrentLine;
 
     void OnEnable()
     {
