@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 616, y: 66}
-  Size: {x: 124, y: 40}
+  Size: {x: 122.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 690.79926
-    y: 583.85913
-    width: 124
+    x: 401.16284
+    y: 450.27423
+    width: 122.4
     height: 40
   isDragging: 0
   Title: get kidnapped

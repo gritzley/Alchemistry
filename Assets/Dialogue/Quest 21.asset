@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 499, y: 118}
-  Size: {x: 113.333336, y: 40}
+  Size: {x: 114.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 573.79926
-    y: 635.85913
-    width: 113.333336
+    x: 284.16284
+    y: 502.27423
+    width: 114.4
     height: 40
   isDragging: 0
   Title: hurt zombies

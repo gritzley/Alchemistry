@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 371, y: 65}
-  Size: {x: 83.33333, y: 40}
+  Position: {x: 372, y: 64}
+  Size: {x: 83.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 445.79926
-    y: 582.85913
-    width: 83.33333
+    x: 444
+    y: 501
+    width: 83.2
     height: 40
   isDragging: 0
   Title: Zombie

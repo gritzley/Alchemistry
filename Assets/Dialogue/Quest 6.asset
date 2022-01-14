@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 709.5, y: -70}
-  Size: {x: 172.66667, y: 40}
+  Size: {x: 171.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 772.29926
-    y: 437.85913
-    width: 172.66667
+    x: 617.66284
+    y: 887.27423
+    width: 171.2
     height: 40
   isDragging: 0
   Title: Ending1 Sus by dragon
