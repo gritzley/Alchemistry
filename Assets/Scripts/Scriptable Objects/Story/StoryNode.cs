@@ -13,8 +13,8 @@ public abstract class StoryNode : ScriptableObject
     public bool isDragging;
     public string Title;
     public Action<StoryNode> OnRemove;
-
     public ConnectionPoint InPoint;
+    public bool isSelected;
 
     /// <summary>
     /// Set Initial Values when Enabling the Nodes.
@@ -46,18 +46,25 @@ public abstract class StoryNode : ScriptableObject
     /// </summary>
     /// <param name="e">The event</param>
     /// <param name="state">The current state of the window. 0 -> QuestView , 1 -> DialogueView</param>
-    public virtual void ProcessEvent(Event e, int state = 0)
+    public virtual void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {
         switch(e.type)
         {
             case EventType.MouseDown:
             // ---- DRAG START ----
-                if (e.button == 0)
+                if (e.button == 0 && rect.Contains(e.mousePosition))
                 {
-                    isDragging = rect.Contains(e.mousePosition);
-                    if (isDragging)
+                    isDragging = true;
+                    if (relatedNodes == null)
                     {
+                        Debug.Log("noo!");
                         Selection.activeObject = this;
+                        isSelected = true;
+                    }
+                    else
+                    {
+                        Debug.Log("yes");
+                        relatedNodes.ForEach(e => e.isDragging = true);
                     }
                 }
 
@@ -121,8 +128,7 @@ public abstract class StoryNode : ScriptableObject
     public virtual void Draw(Vector2 offset, int state = 0)
     {
         rect = new Rect(Position + offset, Size);
-        // Draw own box
-        GUI.Box(rect, "", Selection.activeObject == this ? selectedStyle : style);
+        GUI.Box(rect, "", isSelected ? selectedStyle : style);
     }
 
     /// <summary>

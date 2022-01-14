@@ -141,14 +141,14 @@ public class Quest : StoryNode
         GUI.Label(rect, Title, LabelStyle);
     }
 
-    public override void ProcessEvent(Event e, int state)
+    public override void ProcessEvent(Event e, int state, List<StoryNode> relatedNodes = null)
     {
         // ---- CONECTION POINT EVENTS ----
         InPoint.ProcessEvent(e);
         OutPoint.ProcessEvent(e);
 
         // ---- BASE EVENTS ----
-        base.ProcessEvent(e);
+        base.ProcessEvent(e, state, relatedNodes);
 
         // disable dragging in DialogueView
         if (state == 1) isDragging = false;
@@ -175,7 +175,7 @@ public class Quest : StoryNode
     }
     public override void Remove()
     {
-        foreach(DialogueNode node in DialogueNodes)
+        foreach(DialogueNode node in DialogueNodes.ToList())
             node.Remove();
 
         Customer.Quests.Remove(this);

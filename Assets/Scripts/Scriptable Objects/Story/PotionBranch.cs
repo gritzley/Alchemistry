@@ -143,7 +143,7 @@ public class PotionBranch : DialogueNode
         base.FillContextMenu(contextMenu);
     }
 
-    public override void ProcessEvent(Event e, int state = 0)
+    public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {
         // ---- CONECTION POINT EVENTS ----
         InPoint.ProcessEvent(e);
@@ -157,7 +157,7 @@ public class PotionBranch : DialogueNode
         }
 
         // ---- BASE EVENTS ----
-        base.ProcessEvent(e);
+        base.ProcessEvent(e, state, relatedNodes);
         
         // ---- ADDITIONAL CLICK EVENTS ----
         switch (e.type)

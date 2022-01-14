@@ -15,10 +15,15 @@ public class StoryEditor : EditorWindow
         QuestView,
         DialogueView
     }
+    Vector2 selectCornerStart, selectCornerEnd;
+    Vector2 selectBoxPos => new Vector2(Mathf.Min(selectCornerEnd.x, selectCornerStart.x), Mathf.Min(selectCornerEnd.y, selectCornerStart.y));
+    Vector2 selectBoxSize => new Vector2(Mathf.Abs(selectCornerEnd.x - selectCornerStart.x), Mathf.Abs(selectCornerEnd.y - selectCornerStart.y));
+    Rect selectionRect => new Rect(selectBoxPos, selectBoxSize);
+    bool drawingSelectionBox;
     Vector2 offset;
     ViewState viewState;
     bool isDragging;
-    List<StoryNode> nodes;
+    List<StoryNode> nodes, selectedNodes;
     List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
 
     /// <summary>
@@ -37,19 +42,16 @@ public class StoryEditor : EditorWindow
         Assert.IsNull(Instance, "There can only be one open Story Editor at any time");
         Instance = this;
         if (GameManager.Instance == null)
-        {
             Debug.LogWarning("There is no GameManager Instance!");
-        }
         else if (GameManager.Instance.CurrentCustomer == null)
-        {
             Debug.LogWarning("There is no test_character assigned in the GameManager");
-        }
         else
         {
             ViewQuests();
             offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
             offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
         }
+        selectedNodes = new List<StoryNode>();
     }
 
     private void OnDisable()
@@ -198,10 +200,16 @@ public class StoryEditor : EditorWindow
         DrawGrid(100, 0.4f, Color.gray);
 
         // ---- PROCESS EVENTS ----
+
         nodes.ForEach( e => e.GetOutConnections((int)viewState).ForEach( e => e.ProcessEvent(Event.current)));
-        nodes.ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
+        nodes.Except(selectedNodes).ToList().ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
+        selectedNodes.ForEach(node => node.ProcessEvent(Event.current, (int)viewState, selectedNodes.Where(e => e != node).ToList()));
         switch (Event.current.type)
         {
+            case EventType.Used:
+                DeselectAllNodes();
+                break;
+
             case EventType.MouseDown:
                 // ---- WINDOW CLICK ----
                 if (Event.current.button == 0)
@@ -221,6 +229,10 @@ public class StoryEditor : EditorWindow
                         
                     // Tell Unity to redraw the window 
                     GUI.changed = true;
+
+                    selectCornerStart = Event.current.mousePosition;
+                    selectCornerEnd = Event.current.mousePosition;
+                    drawingSelectionBox = true;
                 }
 
                 // ---- WINDOW CONTEXT MENU ----
@@ -252,13 +264,18 @@ public class StoryEditor : EditorWindow
             case EventType.MouseDrag:
 
                 // ---- DRAG ----
-                if (Event.current.button == 0)
+                if (Event.current.button == 2)
                 {
                     isDragging = true;
                     Vector2 drag = Event.current.delta;
                     offset += drag;
 
                     // Tell Unity to redraw the window
+                    GUI.changed = true;
+                }
+                if (Event.current.button == 0)
+                {
+                    selectCornerEnd = Event.current.mousePosition;
                     GUI.changed = true;
                 }
                 break;
@@ -272,6 +289,8 @@ public class StoryEditor : EditorWindow
                     PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
                     PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
                 }
+                DeselectAllNodes();
+                HandleSelection();
                 break;
         }
 
@@ -294,8 +313,40 @@ public class StoryEditor : EditorWindow
             GUI.changed = true;
         }
 
+        // ---- DRAW SELECTION BOX ----
+        if (drawingSelectionBox)
+        {
+            GUI.Box(new Rect(selectCornerStart, selectCornerEnd - selectCornerStart), "");
+        }
+
         if (GUI.changed) Repaint();
     }
+
+    private void HandleSelection()
+    {
+        if (drawingSelectionBox)
+        {
+            selectedNodes = nodes.Where(e => selectionRect.Overlaps(e.rect)).ToList();
+            selectedNodes.ForEach(e => e.isSelected = true);
+            if (selectedNodes.Count == 1)
+            {
+                Selection.activeObject = selectedNodes[0];
+            }
+            if (selectedNodes.Count > 1)
+            {
+                Selection.activeObject = null;
+            }
+        }
+
+        drawingSelectionBox = false;
+        GUI.changed = true;
+
+        Debug.Log("selection Handled");
+    }
+
+    private void DeselectAllNodes() =>
+        nodes.Where(e => Selection.activeObject != e)
+        .ToList().ForEach(e => e.isSelected = false);
 
     /// <summary>
     /// Draw a grid in the window

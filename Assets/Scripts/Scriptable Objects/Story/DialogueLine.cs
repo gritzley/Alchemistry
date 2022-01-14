@@ -120,12 +120,12 @@ public class DialogueLine : DialogueNode
         base.Draw(offset, state);
         GUI.Label(rect, Title, LabelStyle);
     }
-    public override void ProcessEvent(Event e, int state = 0)
+    public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {
         InPoint.ProcessEvent(e);
         OutPointRight.ProcessEvent(e);
         if (HasAnswers) OutPointLeft.ProcessEvent(e);
-        base.ProcessEvent(e, state);
+        base.ProcessEvent(e, state, relatedNodes);
         switch (e.type)
         {
             case EventType.MouseDown:
