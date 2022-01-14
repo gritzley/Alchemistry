@@ -71,6 +71,7 @@ public class StoryEditor : EditorWindow
             return (StoryNode)quest;
         }).ToList();
         offset = Vector2.zero;
+
     }
 
     private void ViewQuestDialogue(Quest quest)
@@ -79,6 +80,7 @@ public class StoryEditor : EditorWindow
         nodes = new List<StoryNode>();
         nodes.Add(quest);
         nodes.AddRange(quest.DialogueNodes);
+        quest.DialogueNodes.ForEach(e => e.OnRemove = RemoveNodeFromView);
     }
 
     /// <summary>
@@ -87,7 +89,6 @@ public class StoryEditor : EditorWindow
     /// <param name="quest"> The quest to be removed</param>
     private void RemoveNodeFromView(StoryNode node)
     {
-        Debug.Log("removed a node");
         DeselectAllNodes();
         nodes.Remove(node);
     }
