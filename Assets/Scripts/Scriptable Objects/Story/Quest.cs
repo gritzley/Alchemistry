@@ -46,6 +46,7 @@ public class Quest : StoryNode
         CurrentLine = PrecedingStartNode?.NextLine;
         Size.y = 40;
         OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
+        DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
     }
 
     /// <summary>

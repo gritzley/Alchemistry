@@ -149,7 +149,6 @@ public abstract class StoryNode : ScriptableObject
     {
         AssetDatabase.DeleteAsset($"Assets/Dialogue/{this.name}.asset");
         AssetDatabase.SaveAssets();
-        Debug.Log(OnRemove == null);
         OnRemove?.Invoke(this);
     }
 
