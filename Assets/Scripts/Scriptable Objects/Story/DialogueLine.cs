@@ -82,8 +82,8 @@ public class DialogueLine : DialogueNode
         OutPointRight = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 0);
         OutPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 1);
 
-        if (!ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
-        if (!ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
+        if (ParentQuest?.DialogueNodes != null && !ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
+        if (ParentQuest?.DialogueNodes != null && !ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
     }
 
     public override void OnOutPointClick(int index)

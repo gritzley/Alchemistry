@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 515
+  m_Name: Line 506
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2038, y: 44}
-  Size: {x: 83.33333, y: 40}
+  Position: {x: 885.2007, y: -33.85913}
+  Size: {x: 66.666664, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 993.7993
-    y: 363.85913
-    width: 83.33333
+    x: 569
+    y: 388
+    width: 66.666664
     height: 40
   isDragging: 0
-  Title: missing
+  Title: Safe
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: The downside is that my grave yard now is missing some graves.
+  Text: My zombies are safe and sound roaming my grave yard.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 049dff49efd015241907f9587ace9016, type: 2}

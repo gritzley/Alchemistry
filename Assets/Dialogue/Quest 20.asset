@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 471, y: -26}
+  Position: {x: 492, y: -37}
   Size: {x: 134.66666, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,14 +217,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 545.79926
-    y: 491.85913
+    x: 166.79932
+    y: 346.85913
     width: 134.66666
     height: 40
   isDragging: 0
   Title: don't kidnapped
-  isSelected: 1
-  PrecedingStartNode: {fileID: 0}
+  isSelected: 0
+  PrecedingStartNode: {fileID: 11400000, guid: d068c8a7a79ccdc448545cf44a9fab81, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
@@ -352,3 +352,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16b147e91fe3b3342be3a86bf167d92e, type: 2}
   - {fileID: 11400000, guid: 2ad05166b52044a4b87707fd39c38fa2, type: 2}
   - {fileID: 11400000, guid: 6ca1f55ddba38094cafcd09027a38db4, type: 2}
+  - {fileID: 11400000, guid: d068c8a7a79ccdc448545cf44a9fab81, type: 2}
+  - {fileID: 11400000, guid: ce9a4624cab6ac24c9f79714fbcf556a, type: 2}
+  - {fileID: 11400000, guid: 1600c8ef6f81f58429d260dd917b6499, type: 2}
+  - {fileID: 11400000, guid: 049dff49efd015241907f9587ace9016, type: 2}
+  - {fileID: 11400000, guid: ee8299dea58b82a418142e4539122db5, type: 2}
+  - {fileID: 11400000, guid: 439b84337515c5e4db2aa481c8d1146c, type: 2}
+  - {fileID: 11400000, guid: 38df347e5e9941a458c688622ea97ad4, type: 2}
+  - {fileID: 11400000, guid: 8e73e5174342fea42b560c44509b7992, type: 2}
+  - {fileID: 11400000, guid: 827d5e87194b0fa4796d17d5a0254e7e, type: 2}
