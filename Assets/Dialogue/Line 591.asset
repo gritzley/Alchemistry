@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 588
+  m_Name: Line 591
   m_EditorClassIdentifier: 
-  Position: {x: 2088, y: 507}
-  Size: {x: 76, y: 40}
+  Position: {x: 2523, y: -40}
+  Size: {x: 88.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,19 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1071
-    y: 564
-    width: 76
+    x: 745
+    y: 258
+    width: 88.8
     height: 40
   isDragging: 0
-  Title: notice
+  Title: Line 591
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'In all this chaos I didn''t even notice any
-
-    necromancer scum.'
+  Text: At least one of the many problems guarding a hoarde of undead, could be solved.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
