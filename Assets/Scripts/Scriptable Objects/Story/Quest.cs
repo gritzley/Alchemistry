@@ -66,13 +66,6 @@ public class Quest : StoryNode
         Links = Links.OrderBy(e => e.Potion.name).ToList();
     }
 
-    /// <summary>
-    /// Action to be passed to a Connection between two quests as an OnClick Handle
-    /// </summary>
-    public void ClickQuestConnection(Quest quest)
-    {
-    }
-
     public bool AdvanceDialogue(int i = 0)
     {
         switch (i)

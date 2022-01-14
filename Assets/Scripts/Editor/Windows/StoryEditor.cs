@@ -76,11 +76,12 @@ public class StoryEditor : EditorWindow
 
     private void ViewQuestDialogue(Quest quest)
     {
+        quest.DialogueNodes = quest.DialogueNodes.Where(e => e).ToList();
+        quest.DialogueNodes.ForEach(e => e.OnRemove = RemoveNodeFromView);
         viewState = ViewState.DialogueView;
         nodes = new List<StoryNode>();
         nodes.Add(quest);
         nodes.AddRange(quest.DialogueNodes);
-        quest.DialogueNodes.ForEach(e => e.OnRemove = RemoveNodeFromView);
     }
 
     /// <summary>
@@ -267,8 +268,11 @@ public class StoryEditor : EditorWindow
                         PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
                         PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
                     }
-                    DeselectAllNodes();
-                    HandleSelection();
+                    if (Event.current.button == 0)
+                    {
+                        DeselectAllNodes();
+                        HandleSelection();
+                    }
                     break;
             }
         }

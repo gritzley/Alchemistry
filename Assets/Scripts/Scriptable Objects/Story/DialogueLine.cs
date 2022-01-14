@@ -21,7 +21,7 @@ public class DialogueLine : DialogueNode
         {
             if (value == true)
             {
-                if(ParentQuest.DialogueNodes.Exists( e => e != this && (bool)(e as DialogueLine)?.IsReceivingState))
+                if (ParentQuest.DialogueNodes.Exists( e => e != this && e is DialogueLine && ((DialogueLine)e).IsReceivingState))
                 {
                     throw new Exception("There already is a receiving state in this lines parent quest");
                 }
@@ -82,8 +82,8 @@ public class DialogueLine : DialogueNode
         OutPointRight = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 0);
         OutPointLeft = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, 1);
 
-        if (!ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
-        if (!ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
+        if (ParentQuest?.DialogueNodes != null && !ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
+        if (ParentQuest?.DialogueNodes != null && !ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
     }
 
     public override void OnOutPointClick(int index)

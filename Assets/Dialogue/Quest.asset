@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 268, y: -115}
+  Position: {x: 190, y: -146}
   Size: {x: 86.66667, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,8 +217,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 288
-    y: 285
+    x: 331.79932
+    y: 419.85913
     width: 86.66667
     height: 40
   isDragging: 0
@@ -309,3 +309,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 03926cd038dbe824eaea110c72a0ef07, type: 2}
   - {fileID: 11400000, guid: 5e8d3bc4e17480744b553a7815f4a133, type: 2}
   - {fileID: 11400000, guid: 355239d5ae5f8a648ac57dd1fc491cee, type: 2}
+  - {fileID: 0}
