@@ -7,7 +7,6 @@ using UnityEditorInternal;
 public class PotionBranchEditor : Editor
 {
     SerializedProperty linksProp;
- 
     ReorderableList Links;
     
     // This gets called when the inspector is opened
@@ -26,8 +25,8 @@ public class PotionBranchEditor : Editor
         {
             SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
             Potion potion = (Potion)element.FindPropertyRelative("Potion").objectReferenceValue;
-            SerializedProperty nextLine = element.FindPropertyRelative("NextLine");
-            EditorGUILayout.PropertyField(nextLine, new GUIContent(potion.name));
+            SerializedProperty nextNode = element.FindPropertyRelative("NextNode");
+            EditorGUILayout.PropertyField(nextNode, new GUIContent(potion.name));
         }
 
         // Apply all changes made to serialized properties

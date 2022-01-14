@@ -29,14 +29,14 @@ public class DialogueLine : DialogueNode
     {
         List<Connection> connections = new List<Connection>();
 
-        if (NextRight != null)
+        if (NextRight != null && ParentQuest.DialogueNodes.Contains(NextRight))
         {
             connections.Add(new Connection(NextRight.InPoint.Center, OutPointRight.Center, () => OnConnectionClick(0)));
         }
 
         if (HasAnswers)
         {
-            if (NextLeft != null)
+            if (NextLeft != null && ParentQuest.DialogueNodes.Contains(NextRight))
             {
                 connections.Add(new Connection(NextLeft.InPoint.Center, OutPointLeft.Center, () => OnConnectionClick(1)));
             }

@@ -79,7 +79,6 @@ public class StoryEditor : EditorWindow
         nodes = new List<StoryNode>();
         nodes.Add(quest);
         nodes.AddRange(quest.DialogueNodes);
-        quest.isUnfolded = true;
     }
 
     /// <summary>
@@ -88,6 +87,8 @@ public class StoryEditor : EditorWindow
     /// <param name="quest"> The quest to be removed</param>
     private void RemoveNodeFromView(StoryNode node)
     {
+        Debug.Log("removed a node");
+        DeselectAllNodes();
         nodes.Remove(node);
     }
 
@@ -204,94 +205,84 @@ public class StoryEditor : EditorWindow
         nodes.ForEach( e => e.GetOutConnections((int)viewState).ForEach( e => e.ProcessEvent(Event.current)));
         nodes.Except(selectedNodes).ToList().ForEach( e => e.ProcessEvent(Event.current, (int)viewState));
         selectedNodes.ForEach(node => node.ProcessEvent(Event.current, (int)viewState, selectedNodes.Where(e => e != node).ToList()));
-        switch (Event.current.type)
+        if (!selectedNodes.Exists(e => e.rect.Contains(Event.current.mousePosition)))
         {
-            case EventType.Used:
-                DeselectAllNodes();
-                break;
+            switch (Event.current.type)
+            {
 
-            case EventType.MouseDown:
-                // ---- WINDOW CLICK ----
-                if (Event.current.button == 0)
-                {
-                    ConnectionPoint.selectedInPoint = null;
-                    ConnectionPoint.selectedOutPoint = null;
-                    if (viewState == ViewState.QuestView) questNodes.ForEach(e => e.isUnfolded = false );
-                    if (viewState == ViewState.DialogueView)
+                case EventType.MouseDown:
+                    // ---- WINDOW CLICK ----
+                    if (Event.current.button == 0)
                     {
-                        questNodes.ForEach(
-                            e => e.DialogueNodes
-                            .Where( e => e is PotionBranch)
-                            .ToList()
-                            .ForEach( e => (e as PotionBranch).isUnfolded = false )
-                        );
+                        ConnectionPoint.selectedInPoint = null;
+                        ConnectionPoint.selectedOutPoint = null;
+                            
+                        // Tell Unity to redraw the window 
+                        GUI.changed = true;
+
+                        selectCornerStart = Event.current.mousePosition;
+                        selectCornerEnd = Event.current.mousePosition;
+                        drawingSelectionBox = true;
                     }
+
+                    // ---- WINDOW CONTEXT MENU ----
+                    if (Event.current.button == 1)
+                    {
                         
-                    // Tell Unity to redraw the window 
-                    GUI.changed = true;
+                        GenericMenu contextMenu = new GenericMenu();
+                        // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
+                        // Therefore we must save the mouse position when creatigng the context menu.
+                        Vector2 pos = Event.current.mousePosition - offset;
+                        switch(viewState)
+                        {
+                            case ViewState.DialogueView:
+                                contextMenu.AddItem(new GUIContent("Add Line"), false, () => AddDialogueLine(pos));
+                                contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => AddDialogueBranch(pos));
+                                contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
+                                contextMenu.AddItem(new GUIContent("I am lost, take me back to nodes"), false, GoToFirstNode);
+                                break;
 
-                    selectCornerStart = Event.current.mousePosition;
-                    selectCornerEnd = Event.current.mousePosition;
-                    drawingSelectionBox = true;
-                }
-
-                // ---- WINDOW CONTEXT MENU ----
-                if (Event.current.button == 1)
-                {
-                    
-                    GenericMenu contextMenu = new GenericMenu();
-                    // When clicking the menu item, the mosueposition does not exist anymore, becuase we are not technicaly in the window anymore.
-                    // Therefore we must save the mouse position when creatigng the context menu.
-                    Vector2 pos = Event.current.mousePosition - offset;
-                    switch(viewState)
-                    {
-                        case ViewState.DialogueView:
-                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => AddDialogueLine(pos));
-                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => AddDialogueBranch(pos));
-                            contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
-                            contextMenu.AddItem(new GUIContent("I am lost, take me back to nodes"), false, GoToFirstNode);
-                            break;
-
-                        case ViewState.QuestView:
-                            contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
-                            contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
-                            break;
+                            case ViewState.QuestView:
+                                contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                                contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
+                                break;
+                        }
+                        contextMenu.ShowAsContext();
                     }
-                    contextMenu.ShowAsContext();
-                }
-                break;
+                    break;
 
-            case EventType.MouseDrag:
+                case EventType.MouseDrag:
 
-                // ---- DRAG ----
-                if (Event.current.button == 2)
-                {
-                    isDragging = true;
-                    Vector2 drag = Event.current.delta;
-                    offset += drag;
+                    // ---- DRAG ----
+                    if (Event.current.button == 2)
+                    {
+                        isDragging = true;
+                        Vector2 drag = Event.current.delta;
+                        offset += drag;
 
-                    // Tell Unity to redraw the window
-                    GUI.changed = true;
-                }
-                if (Event.current.button == 0)
-                {
-                    selectCornerEnd = Event.current.mousePosition;
-                    GUI.changed = true;
-                }
-                break;
+                        // Tell Unity to redraw the window
+                        GUI.changed = true;
+                    }
+                    if (Event.current.button == 0)
+                    {
+                        selectCornerEnd = Event.current.mousePosition;
+                        GUI.changed = true;
+                    }
+                    break;
 
-            case EventType.MouseUp:
+                case EventType.MouseUp:
 
-                // ---- DRAG END ----
-                if (isDragging)
-                {
-                    isDragging = false;
-                    PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
-                    PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
-                }
-                DeselectAllNodes();
-                HandleSelection();
-                break;
+                    // ---- DRAG END ----
+                    if (isDragging)
+                    {
+                        isDragging = false;
+                        PlayerPrefs.SetFloat("StoryEditorOffsetX", offset.x);
+                        PlayerPrefs.SetFloat("StoryEditorOffsetY", offset.y);
+                    }
+                    DeselectAllNodes();
+                    HandleSelection();
+                    break;
+            }
         }
 
         // ---- DRAW NODES & GetConnections((int)viewState) ----
@@ -341,7 +332,6 @@ public class StoryEditor : EditorWindow
         drawingSelectionBox = false;
         GUI.changed = true;
 
-        Debug.Log("selection Handled");
     }
 
     private void DeselectAllNodes() =>

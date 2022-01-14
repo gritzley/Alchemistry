@@ -57,15 +57,14 @@ public abstract class StoryNode : ScriptableObject
                     isDragging = true;
                     if (relatedNodes == null)
                     {
-                        Debug.Log("noo!");
                         Selection.activeObject = this;
                         isSelected = true;
                     }
                     else
                     {
-                        Debug.Log("yes");
                         relatedNodes.ForEach(e => e.isDragging = true);
                     }
+                    // e.Use();
                 }
 
             // ---- CONTEXT MENU ----
@@ -84,7 +83,7 @@ public abstract class StoryNode : ScriptableObject
                 {
                     Position += Event.current.delta;
                     GUI.changed = true; // Tell Unity to redraw the window
-                    e.Use();
+                    if (relatedNodes == null) e.Use();
                 }
                 break;
 
@@ -93,7 +92,7 @@ public abstract class StoryNode : ScriptableObject
                 if (isDragging)
                 {
                     isDragging = false;
-                    EditorUtility.SetDirty(this);
+    	                    EditorUtility.SetDirty(this);
                     AssetDatabase.SaveAssets();
                 }
                 break;
@@ -150,6 +149,7 @@ public abstract class StoryNode : ScriptableObject
     {
         AssetDatabase.DeleteAsset($"Assets/Dialogue/{this.name}.asset");
         AssetDatabase.SaveAssets();
+        Debug.Log(OnRemove == null);
         OnRemove?.Invoke(this);
     }
 

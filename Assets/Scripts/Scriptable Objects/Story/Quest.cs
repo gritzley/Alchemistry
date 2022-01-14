@@ -27,7 +27,6 @@ public class Quest : StoryNode
     // ---- EDITOR ----
     private ConnectionPoint OutPoint;
     public List<DialogueNode> DialogueNodes;
-    public bool isUnfolded;
     public Action<Quest> ViewDialogue;
     
     // CONSTRUCTOR
@@ -42,7 +41,6 @@ public class Quest : StoryNode
     /// </summary>
     public override void OnEnable()
     {
-        isUnfolded = false;
         base.OnEnable();
         UpdateLinks();
         CurrentLine = PrecedingStartNode?.NextLine;
@@ -105,9 +103,7 @@ public class Quest : StoryNode
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;
 
-        if (!isUnfolded)
-            isUnfolded = true;
-        else if (inPoint != null)
+        if (inPoint != null)
         {
             // Create a Connection to another node
 
