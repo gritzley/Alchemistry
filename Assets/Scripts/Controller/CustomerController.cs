@@ -10,7 +10,7 @@ public class CustomerController : MonoBehaviour
     public TextDisplay MainTextDisplay;
     public TextDisplay LeftAnswerTextDisplay;
     public TextDisplay RightAnswerTextDisplay;
-    public PotionDefinition LastGivenPotion;
+    public Potion LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
     private Quest currentQuest;
     private bool isReceivingPotion;
@@ -73,7 +73,7 @@ public class CustomerController : MonoBehaviour
         MainTextDisplay.DisplayText(text, callback);
     }
 
-    public void ReceivePotion(PotionDefinition potion)
+    public void ReceivePotion(Potion potion)
     {
         if (isReceivingPotion)
         {

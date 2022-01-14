@@ -10,7 +10,7 @@ public class PotionBranch : DialogueNode
     [System.Serializable]
     public struct Link
     {
-        public PotionDefinition Potion;
+        public Potion Potion;
         public DialogueNode NextNode;
     }
     public List<Link> Links;
@@ -152,7 +152,7 @@ public class PotionBranch : DialogueNode
     public void UpdateLinks()
     {
         // Get all Potion assets and put them in a list
-        List<PotionDefinition> potions = PotionDefinition.GetAllPotionDefinitions();
+        List<Potion> potions = Potion.GetAllPotionAssets();
         
         Links.RemoveAll( e => !potions.Contains(e.Potion));
 

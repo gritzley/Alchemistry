@@ -18,7 +18,7 @@ public class Quest : StoryNode
     [System.Serializable]
     public struct Link
     {
-        public PotionDefinition Potion;
+        public Potion Potion;
         public Quest NextQuest;
     }
 
@@ -54,7 +54,7 @@ public class Quest : StoryNode
     /// </summary>
     public void UpdateLinks()
     {
-        List<PotionDefinition> potions = PotionDefinition.GetAllPotionDefinitions();
+        List<Potion> potions = Potion.GetAllPotionAssets();
 
         Links.RemoveAll( e => !potions.Contains(e.Potion));
 
@@ -93,7 +93,7 @@ public class Quest : StoryNode
         return true;
     }
 
-    public Quest GetNextQuest(PotionDefinition potion)
+    public Quest GetNextQuest(Potion potion)
     {
         foreach (Link link in Links)
             if (link.Potion == potion)
