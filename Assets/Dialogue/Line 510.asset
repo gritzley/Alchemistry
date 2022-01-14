@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 510
   m_EditorClassIdentifier: 
-  Position: {x: 2603, y: -504}
-  Size: {x: 86.4, y: 40}
+  Position: {x: 1556, y: 42}
+  Size: {x: 82.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 880
-    y: 246
-    width: 86.4
+    x: 351
+    y: 361
+    width: 82.4
     height: 40
   isDragging: 0
-  Title: addition
-  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 'That would really be an intresting addition to his tale. '
+  Title: spitting
+  ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
+  Text: When they say George spitting at a solid iron lantern, which immeadetly disintegrated,
+    they turned around faster than a ghost seeing a salt plantage.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

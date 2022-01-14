@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 503
   m_EditorClassIdentifier: 
-  Position: {x: 2136, y: -528}
-  Size: {x: 103.2, y: 40}
+  Position: {x: 3210, y: 56}
+  Size: {x: 64.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,17 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 934
-    y: 196
-    width: 103.2
+    x: 964
+    y: 296
+    width: 64.8
     height: 40
   isDragging: 0
-  Title: belongings
-  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: But to be perfectly sure we should hide something between his belonings,
+  Title: give
+  ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
+  Text: Maybe there's something I could give them?
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: d068c8a7a79ccdc448545cf44a9fab81, type: 2}
+  NextRight: {fileID: 0}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 508
   m_EditorClassIdentifier: 
-  Position: {x: 2731, y: -544}
-  Size: {x: 64.8, y: 40}
+  Position: {x: 1328, y: 41}
+  Size: {x: 91.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,17 +83,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 669
-    y: 273
-    width: 64.8
+    x: 863
+    y: 312
+    width: 91.2
     height: 40
   isDragging: 0
-  Title: way
-  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: Their already on their way.
+  Title: Acid Spit
+  ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
+  Text: 'When the necromancer arrived that night,
+
+    they were unsuspecting of
+    what lay ahead of them.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 827d5e87194b0fa4796d17d5a0254e7e, type: 2}
+  NextRight: {fileID: 11400000, guid: 439b84337515c5e4db2aa481c8d1146c, type: 2}

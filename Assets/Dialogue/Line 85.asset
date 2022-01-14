@@ -83,15 +83,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 681
-    y: 274
+    x: 968.08325
+    y: 311.23334
     width: 60
     height: 40
   isDragging: 0
   Title: slip
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
   Text: "And he's still oweing me a favour. \nHe will probably have the chance to
-    slip something into\nthis new booze."
+    slip something into this new booze."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

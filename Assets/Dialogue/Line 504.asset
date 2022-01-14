@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 504
   m_EditorClassIdentifier: 
-  Position: {x: 2253, y: -530}
-  Size: {x: 76.8, y: 40}
+  Position: {x: 629, y: -33}
+  Size: {x: 95.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -83,14 +83,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1051
-    y: 194
-    width: 76.8
+    x: 867
+    y: 225
+    width: 95.2
     height: 40
   isDragging: 0
-  Title: career
-  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: that makes it look like he helped his racing career a bit
+  Title: Good day
+  ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
+  Text: Good day, my potion brewing friend
   Notes: 
   AnswerLeft: 
   AnswerRight: 
