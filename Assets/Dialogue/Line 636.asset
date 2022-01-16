@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 634
+  m_Name: Line 636
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1609, y: 105}
-  Size: {x: 114.4, y: 40}
+  Position: {x: 1877, y: 104}
+  Size: {x: 61.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 419
-    y: 177
-    width: 114.4
+    x: 710
+    y: 215
+    width: 61.6
     height: 40
   isDragging: 0
-  Title: water mages
-  isSelected: 1
+  Title: half
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: They were flame and water mages in their former lifes.
+  Text: I tried to stop them, but they took almost half of my zombies.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 316e83e8dd8125e40bae64d6b6606193, type: 2}
+  NextRight: {fileID: 11400000, guid: 60b5d79e5f99c124f9cb7605599c0254, type: 2}

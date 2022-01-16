@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 634
+  m_Name: Line 640
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1609, y: 105}
-  Size: {x: 114.4, y: 40}
+  Position: {x: 1702, y: 305}
+  Size: {x: 83.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 419
-    y: 177
-    width: 114.4
+    x: 512
+    y: 377
+    width: 83.2
     height: 40
   isDragging: 0
-  Title: water mages
+  Title: distract
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: They were flame and water mages in their former lifes.
+  Text: 'Running away and moaning, even some of the ghosts were trying to distract
+
+    them.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 316e83e8dd8125e40bae64d6b6606193, type: 2}
+  NextRight: {fileID: 11400000, guid: 385f799e0f2447746b6a6397850d2f99, type: 2}

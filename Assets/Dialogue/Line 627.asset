@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 319
-    y: 327
+    x: 547
+    y: 313
     width: 77.6
     height: 40
   isDragging: 0
   Title: Health
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 
+  Text: When I gave your mixture to my zombies nothin happend.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: e93c0d0beca27fa449c048e0c32e6b57, type: 2}

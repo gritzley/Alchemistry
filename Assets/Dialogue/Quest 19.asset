@@ -217,15 +217,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -521
-    y: 11
+    x: -635
+    y: 156
     width: 122.4
     height: 40
   isDragging: 0
   Title: get kidnapped
   isSelected: 0
   PrecedingStartNode: {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -295,3 +295,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 537c660491539524d8dcc4ab2605abc8, type: 2}
   - {fileID: 11400000, guid: 122adac502e1cda4ba8a6d8faff396e3, type: 2}
   - {fileID: 11400000, guid: b3669fea8b49c904ea6016c0e956802e, type: 2}
+  - {fileID: 11400000, guid: 316e83e8dd8125e40bae64d6b6606193, type: 2}
+  - {fileID: 11400000, guid: 0e35e7d4cd1c2da45a38535a84424dd9, type: 2}
+  - {fileID: 11400000, guid: b8b58a1debcc0814a9e9abb86c2aa563, type: 2}
+  - {fileID: 11400000, guid: e93c0d0beca27fa449c048e0c32e6b57, type: 2}
+  - {fileID: 11400000, guid: 5d91d38f5106b7045b4d881bf590a459, type: 2}
+  - {fileID: 11400000, guid: bfff2fa73701b474e878bae28320e5c9, type: 2}
+  - {fileID: 11400000, guid: 385f799e0f2447746b6a6397850d2f99, type: 2}
+  - {fileID: 11400000, guid: 54a740a7dd0a0a846a14b351359c8dc5, type: 2}
+  - {fileID: 11400000, guid: 60b5d79e5f99c124f9cb7605599c0254, type: 2}
+  - {fileID: 11400000, guid: 6dc12d9f75d83184e97c8d6f5ae3ddc7, type: 2}
