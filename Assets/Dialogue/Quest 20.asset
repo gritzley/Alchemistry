@@ -217,14 +217,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -3714.917
-    y: 240.44446
+    x: 479
+    y: 443
     width: 132.8
     height: 40
   isDragging: 0
   Title: don't kidnapped
-  isSelected: 0
-  PrecedingStartNode: {fileID: 0}
+  isSelected: 1
+  PrecedingStartNode: {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
@@ -378,3 +378,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c33108a1da792549b25230993d8223f, type: 2}
   - {fileID: 11400000, guid: e0bc21f19ebd6ce4a8c01fa633363f37, type: 2}
   - {fileID: 11400000, guid: 1e7883fb7b14b294dae5ef3d8be29ba9, type: 2}
+  - {fileID: 11400000, guid: ce9a4624cab6ac24c9f79714fbcf556a, type: 2}
+  - {fileID: 11400000, guid: 1600c8ef6f81f58429d260dd917b6499, type: 2}
+  - {fileID: 11400000, guid: 049dff49efd015241907f9587ace9016, type: 2}
+  - {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}

@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 984, y: -145}
-  Size: {x: 200, y: 40}
+  Size: {x: 196, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1024.7993
-    y: 570.85913
-    width: 200
+    x: 797
+    y: 293
+    width: 196
     height: 40
   isDragging: 0
   Title: Didn't kill god killed dragon
@@ -291,3 +291,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e8e64f141d51bf4c8c258daa219496a, type: 2}
   - {fileID: 11400000, guid: 984fd47d35baf814f9596eb93d54e1ca, type: 2}
   - {fileID: 11400000, guid: 496fb5e54d1132d4ba1fea60b6312455, type: 2}
+  - {fileID: 0}

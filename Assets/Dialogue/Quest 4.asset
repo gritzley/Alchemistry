@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 711.5, y: -308}
-  Size: {x: 205.33333, y: 40}
+  Size: {x: 202.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 786.29926
-    y: 209.85913
-    width: 205.33333
+    x: 524.5
+    y: 130
+    width: 202.4
     height: 40
   isDragging: 0
   Title: Demi-God (don't kill dragon)
-  isSelected: 0
+  isSelected: 1
   PrecedingStartNode: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
   CurrentLine: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}

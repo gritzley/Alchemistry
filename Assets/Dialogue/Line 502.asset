@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2226, y: -507}
+  Position: {x: 2223, y: -501}
   Size: {x: 64.8, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 359
-    y: 188
+    x: 300
+    y: 275
     width: 64.8
     height: 40
   isDragging: 0
   Title: safe
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
   Text: So he's safe for now.
   Notes: 

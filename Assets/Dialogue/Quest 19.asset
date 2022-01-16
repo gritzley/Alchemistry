@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 616, y: 66}
+  Position: {x: 532, y: 45}
   Size: {x: 122.4, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,14 +217,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 401.16284
-    y: 450.27423
+    x: -521
+    y: 11
     width: 122.4
     height: 40
   isDragging: 0
   Title: get kidnapped
-  isSelected: 1
-  PrecedingStartNode: {fileID: 0}
+  isSelected: 0
+  PrecedingStartNode: {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
@@ -276,4 +276,22 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
+  DialogueNodes:
+  - {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}
+  - {fileID: 11400000, guid: b28345bf85cb73a48af2d316c865f50d, type: 2}
+  - {fileID: 11400000, guid: 126fc311623661149ab8b91a0f9e447c, type: 2}
+  - {fileID: 11400000, guid: 7e3ffbfbc2834ea46af335b33be39c0b, type: 2}
+  - {fileID: 11400000, guid: bcf5eaf5322135f4c8b55899839902d5, type: 2}
+  - {fileID: 11400000, guid: fb4464c770bdc8a48a181773c4ab5be9, type: 2}
+  - {fileID: 11400000, guid: 79e5ffbad9f82c24fa52a4c91d391ba4, type: 2}
+  - {fileID: 11400000, guid: c263dcc9282b78e4db73408152f35647, type: 2}
+  - {fileID: 11400000, guid: 114a6b93b647c65429059d27755a98f8, type: 2}
+  - {fileID: 11400000, guid: d40c6f1d92d02ee4190d2d4208b7c082, type: 2}
+  - {fileID: 11400000, guid: 16ad1a0ef06e2c14996f6eb31b6fb818, type: 2}
+  - {fileID: 11400000, guid: 66de020b26b7c7b4a856c3a6aaa15584, type: 2}
+  - {fileID: 11400000, guid: cf767ecaef6de8c4c828b4231c8ad7e1, type: 2}
+  - {fileID: 11400000, guid: dfcd87886a8a25b44acc1c277e9da707, type: 2}
+  - {fileID: 11400000, guid: 1b1b212d7a2fe2443a31bdbab0ccf4d1, type: 2}
+  - {fileID: 11400000, guid: 537c660491539524d8dcc4ab2605abc8, type: 2}
+  - {fileID: 11400000, guid: 122adac502e1cda4ba8a6d8faff396e3, type: 2}
+  - {fileID: 11400000, guid: b3669fea8b49c904ea6016c0e956802e, type: 2}
