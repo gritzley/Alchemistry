@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 598
+  m_Name: Line 615
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2733.9167, y: -42.444458}
-  Size: {x: 130.4, y: 40}
+  Position: {x: 4643.917, y: -31.444458}
+  Size: {x: 68.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,19 +217,19 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 234
-    y: 140
-    width: 130.4
+    x: 470
+    y: 155
+    width: 68.8
     height: 40
   isDragging: 0
-  Title: howling spiders
+  Title: drink
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "Sweeping dust, finding new homes for \nhowling spiders and polishing grave
-    stones."
-  Notes: "Are holwing spider a thing. \nMaybe need funnier name"
+  Text: "Please, give me something to drink that'll \nhelp me discover this corpses
+    identity."
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: c2db454a43e67474a8fb0dbce6e60948, type: 2}
+  NextRight: {fileID: 0}

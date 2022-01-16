@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 417.0833
-    y: 401.44446
+    x: -3714.917
+    y: 240.44446
     width: 132.8
     height: 40
   isDragging: 0
   Title: don't kidnapped
-  isSelected: 1
+  isSelected: 0
   PrecedingStartNode: {fileID: 0}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -361,4 +361,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 827d5e87194b0fa4796d17d5a0254e7e, type: 2}
   - {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
   - {fileID: 11400000, guid: afda2dcc2c6d73342b20b6e9c3bf36ad, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c2db454a43e67474a8fb0dbce6e60948, type: 2}
+  - {fileID: 11400000, guid: e3408922efc30614abf237553ec85752, type: 2}
+  - {fileID: 11400000, guid: 2efb5953b4e12e74fae8412770818128, type: 2}
+  - {fileID: 11400000, guid: 1351937a21fbc1449b25c3ff48b6f2dd, type: 2}
+  - {fileID: 11400000, guid: 1c0095fde7c913a4fadc657283c2a1f4, type: 2}
+  - {fileID: 11400000, guid: 7651c73c03514ae4aba149808585a538, type: 2}
+  - {fileID: 11400000, guid: 1ddcf740244246945ac51af418f48240, type: 2}
+  - {fileID: 11400000, guid: c571df01cc8b5914aae665981b1ea30c, type: 2}
+  - {fileID: 11400000, guid: 390abfd09dd00e149b5dcb289ce7de9b, type: 2}
+  - {fileID: 11400000, guid: 8cb9e2592df1245419d9208b099686ab, type: 2}
+  - {fileID: 11400000, guid: 08a4904d9bdf3ab4b90d87208fc9426a, type: 2}
+  - {fileID: 11400000, guid: fff65f969792db048a01a058088125e5, type: 2}
+  - {fileID: 11400000, guid: bde691cc3de40fd46b7f493ac62216a3, type: 2}
+  - {fileID: 11400000, guid: 177f213d21f323242a8f2ba8fe15d6c4, type: 2}
+  - {fileID: 11400000, guid: 9c33108a1da792549b25230993d8223f, type: 2}
+  - {fileID: 11400000, guid: e0bc21f19ebd6ce4a8c01fa633363f37, type: 2}
+  - {fileID: 11400000, guid: 1e7883fb7b14b294dae5ef3d8be29ba9, type: 2}
