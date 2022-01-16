@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 607, y: -522}
-  Size: {x: 102.66667, y: 40}
+  Size: {x: 101.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 602
-    y: 191
-    width: 102.66667
+    x: -1260
+    y: 173
+    width: 101.6
     height: 40
   isDragging: 0
   Title: Body gone
-  isSelected: 1
+  isSelected: 0
   PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
   CurrentLine: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -298,3 +298,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7bd5d175d8d7cdf489d206fd66d69fa9, type: 2}
   - {fileID: 11400000, guid: f6a1a751d46c76a4aa03ebd673a0d745, type: 2}
   - {fileID: 11400000, guid: 033cdf884ce57574393bb969b0d78236, type: 2}
+  - {fileID: 11400000, guid: c7e9918a2978f0343ba3a8a4699edbb8, type: 2}
+  - {fileID: 11400000, guid: 0a22d39020510d34c8f63baac04bef04, type: 2}
+  - {fileID: 11400000, guid: 14ee62396d4906d43badcda58b3c5688, type: 2}
+  - {fileID: 11400000, guid: 274c042a12de2d048ad10d04d8469ba4, type: 2}
+  - {fileID: 11400000, guid: 7156849a575849b46a824e7a6a009e7d, type: 2}

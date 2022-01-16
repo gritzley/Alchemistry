@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 476
+  m_Name: Line 594
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2190, y: -533}
-  Size: {x: 108, y: 40}
+  Position: {x: 2555, y: -503}
+  Size: {x: 100.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 774
-    y: 264
-    width: 108
+    x: 688
+    y: 192
+    width: 100.8
     height: 40
   isDragging: 0
-  Title: high ground
+  Title: dangerous
   isSelected: 1
-  ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "If the guard of this city would just come \ndown from their moral high ground."
+  ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
+  Text: 'Continuing with our little project is to
+
+    dangerous for now.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: cfc76ff2d76a0ce408f4cb3e79bcab95, type: 2}
+  NextRight: {fileID: 11400000, guid: 14ee62396d4906d43badcda58b3c5688, type: 2}
