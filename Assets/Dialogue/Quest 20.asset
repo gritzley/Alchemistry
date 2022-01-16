@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 525, y: -9}
+  Position: {x: 514, y: -28}
   Size: {x: 132.8, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,8 +217,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 697
-    y: 258
+    x: 417.0833
+    y: 401.44446
     width: 132.8
     height: 40
   isDragging: 0
@@ -355,8 +355,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ecbc53e8c48a3245aa1c54636c8a3ba, type: 2}
   - {fileID: 11400000, guid: 4c6f1e6cf0d8a68468dd1c195fa062aa, type: 2}
   - {fileID: 11400000, guid: 5a337681293f44047954ad5b8d66a89e, type: 2}
-  - {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
   - {fileID: 11400000, guid: 439b84337515c5e4db2aa481c8d1146c, type: 2}
   - {fileID: 11400000, guid: 38df347e5e9941a458c688622ea97ad4, type: 2}
   - {fileID: 11400000, guid: 8e73e5174342fea42b560c44509b7992, type: 2}
   - {fileID: 11400000, guid: 827d5e87194b0fa4796d17d5a0254e7e, type: 2}
+  - {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
+  - {fileID: 11400000, guid: afda2dcc2c6d73342b20b6e9c3bf36ad, type: 2}
+  - {fileID: 0}

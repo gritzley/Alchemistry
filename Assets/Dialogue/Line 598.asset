@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 591
+  m_Name: Line 598
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2523, y: -42}
-  Size: {x: 90.4, y: 40}
+  Position: {x: 2739.9167, y: -68.44446}
+  Size: {x: 89.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,19 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 388.08325
-    y: 223.44446
-    width: 90.4
+    x: 398
+    y: 288
+    width: 89.6
     height: 40
   isDragging: 0
-  Title: guarding
+  Title: Line 598
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "At least one of the many problems guarding a hoarde of undead, \ncould be
-    solved."
+  Text: 
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
+  NextRight: {fileID: 0}
