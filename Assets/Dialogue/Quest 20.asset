@@ -217,8 +217,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 597
-    y: 428
+    x: 697
+    y: 258
     width: 132.8
     height: 40
   isDragging: 0
@@ -356,3 +356,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c6f1e6cf0d8a68468dd1c195fa062aa, type: 2}
   - {fileID: 11400000, guid: 5a337681293f44047954ad5b8d66a89e, type: 2}
   - {fileID: 11400000, guid: 9ee413e133fd42d47aea745a41aa8a83, type: 2}
+  - {fileID: 11400000, guid: 439b84337515c5e4db2aa481c8d1146c, type: 2}
+  - {fileID: 11400000, guid: 38df347e5e9941a458c688622ea97ad4, type: 2}
+  - {fileID: 11400000, guid: 8e73e5174342fea42b560c44509b7992, type: 2}
+  - {fileID: 11400000, guid: 827d5e87194b0fa4796d17d5a0254e7e, type: 2}
