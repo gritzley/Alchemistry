@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 329
-    y: 559
+    x: 267
+    y: 325
     width: 120.8
     height: 40
   isDragging: 0
   Title: Smoke Breath
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 
+  Text: I gave the zombies your elixer like you told me to.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 396db18ef12758e48922f48380a9700e, type: 2}

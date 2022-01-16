@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 632
+  m_Name: Line 649
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1384, y: 475}
-  Size: {x: 72.8, y: 40}
+  Position: {x: 1937, y: 405}
+  Size: {x: 80, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,19 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 485
-    y: 363
-    width: 72.8
+    x: 628
+    y: 384
+    width: 80
     height: 40
   isDragging: 0
-  Title: Sleep
+  Title: control
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: When I gave them the potion you brewed, they just started to doze off!
+  Text: "But this time they seemed to get control over my zombies. \nLeading them
+    outside with a quich gesture."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: a35c435aba9558f4ca1402ca2c1d9dd9, type: 2}
+  NextRight: {fileID: 11400000, guid: 344b254c940ac3a4b9db7f86e0500f47, type: 2}
