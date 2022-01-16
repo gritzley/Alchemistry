@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 480
+  m_Name: Line 481
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2633, y: -533}
-  Size: {x: 68, y: 40}
+  Position: {x: 2754, y: -532}
+  Size: {x: 68.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,20 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 537
-    y: 142
-    width: 68
+    x: 658
+    y: 143
+    width: 68.8
     height: 40
   isDragging: 0
-  Title: soon
+  Title: glory
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "We won't see each other again any time \nsoon."
+  Text: 'Maybe I''ll find another way to bring
+
+    death it''s glory, maybe I won''t.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: b691fb9d88780a04b904abe6d1be3132, type: 2}
+  NextRight: {fileID: 11400000, guid: 060bd91d57710814e99e888d3c6acf72, type: 2}
