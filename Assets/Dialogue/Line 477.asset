@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 473
+  m_Name: Line 477
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1865, y: -533}
-  Size: {x: 95.2, y: 40}
+  Position: {x: 2326, y: -533}
+  Size: {x: 74.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 243
-    y: 366
-    width: 95.2
+    x: 904
+    y: 418
+    width: 74.4
     height: 40
   isDragging: 0
-  Title: suspicion
+  Title: vision
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "So were free from suspicion for now. \nYou did a good job."
+  Text: 'They can''t see our vision. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 94fc806b30e9c5943b848f4141d73380, type: 2}
+  NextRight: {fileID: 11400000, guid: 6e96490611dd4ba46af462c867a3aded, type: 2}

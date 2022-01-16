@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 2226, y: -507}
-  Size: {x: 64.666664, y: 40}
+  Size: {x: 64.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 880
-    y: 94
-    width: 64.666664
+    x: 468
+    y: 262
+    width: 64.8
     height: 40
   isDragging: 0
   Title: safe
