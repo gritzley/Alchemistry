@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 502
+  m_Name: Line 597
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2226, y: -507}
-  Size: {x: 64.8, y: 40}
+  Position: {x: 2919, y: -500}
+  Size: {x: 68.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 359
-    y: 188
-    width: 64.8
+    x: 1052
+    y: 195
+    width: 68.8
     height: 40
   isDragging: 0
-  Title: safe
+  Title: fruits
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: So he's safe for now.
+  Text: May you work bear you plentiful fruits.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 033cdf884ce57574393bb969b0d78236, type: 2}
+  NextRight: {fileID: 0}

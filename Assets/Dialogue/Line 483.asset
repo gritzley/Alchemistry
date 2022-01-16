@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 2972, y: -533}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 68.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,12 +217,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 876
-    y: 142
-    width: 91.2
+    x: 2402
+    y: 257
+    width: 68.8
     height: 40
   isDragging: 0
-  Title: Line 483
+  Title: fruits
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
   Text: May you work carry fruits.
