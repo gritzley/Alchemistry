@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 3806, y: 71}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 69.333336, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 949
-    y: 382
-    width: 68.8
+    x: 637
+    y: 197
+    width: 69.333336
     height: 40
   isDragging: 0
   Title: night

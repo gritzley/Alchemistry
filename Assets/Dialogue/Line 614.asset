@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 4552.917, y: -26.444458}
-  Size: {x: 69.6, y: 40}
+  Size: {x: 70, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 379
-    y: 160
-    width: 69.6
+    x: 436.917
+    y: 194.55554
+    width: 70
     height: 40
   isDragging: 0
   Title: favor

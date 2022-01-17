@@ -14,8 +14,7 @@ public class PotionBranch : DialogueNode
         public DialogueNode NextNode;
     }
     public List<Link> Links;
-
-    public List<ConnectionPoint> OutPoints;
+    [NonSerialized] public List<ConnectionPoint> OutPoints;
     
     public override DialogueLine NextLine
     {

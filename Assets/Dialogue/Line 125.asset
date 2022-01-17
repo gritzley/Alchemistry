@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 3101, y: 57}
-  Size: {x: 83.2, y: 40}
+  Position: {x: 3101, y: 56}
+  Size: {x: 84, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 609
-    y: 294
-    width: 83.2
+    x: 183
+    y: 177
+    width: 84
     height: 40
   isDragging: 0
   Title: fighting

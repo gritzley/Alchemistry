@@ -6,15 +6,15 @@ using UnityEngine;
 [System.Serializable]
 public abstract class StoryNode : ScriptableObject
 {
-    public GUIStyle style, selectedStyle;
+    [NonSerialized] public GUIStyle style, selectedStyle;
     public Vector2 Position, Size;
-    public GUIStyle LabelStyle;
-    public Rect rect;
-    public bool isDragging;
+    [NonSerialized] public GUIStyle LabelStyle;
+    [NonSerialized] public Rect rect;
+    [NonSerialized] public bool isDragging;
     public string Title;
-    public Action<StoryNode> OnRemove;
-    public ConnectionPoint InPoint;
-    public bool isSelected;
+    [NonSerialized] public Action<StoryNode> OnRemove;
+    [NonSerialized] public ConnectionPoint InPoint;
+    [NonSerialized] public bool isSelected;
 
     /// <summary>
     /// Set Initial Values when Enabling the Nodes.

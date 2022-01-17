@@ -11,7 +11,7 @@ public class Quest : StoryNode
 
     // ---- STORY TREE ----
     public DialogueNode PrecedingStartNode;
-    public DialogueLine CurrentLine;
+    [NonSerialized] public DialogueLine CurrentLine;
     public CustomerDefinition Customer;
 
     // ---- LINKS ----
@@ -25,13 +25,14 @@ public class Quest : StoryNode
     public List<Link> Links;
 
     // ---- EDITOR ----
-    private ConnectionPoint OutPoint;
+    [NonSerialized] private ConnectionPoint OutPoint;
     public List<DialogueNode> DialogueNodes;
-    public Action<Quest> ViewDialogue;
+    [NonSerialized] public Action<Quest> ViewDialogue;
     
     // CONSTRUCTOR
     public Quest() : base()
     {
+        Debug.Log("tst");
         Links = new List<Link>();
         DialogueNodes = new List<DialogueNode>();
     }

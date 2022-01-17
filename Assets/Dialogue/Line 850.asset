@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 28
+  m_Name: Line 850
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 3442, y: 231}
-  Size: {x: 115.333336, y: 40}
+  Position: {x: 3947, y: 222}
+  Size: {x: 102.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,21 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 481
-    y: 212
-    width: 115.333336
+    x: 431
+    y: 234
+    width: 102.66667
     height: 40
   isDragging: 0
-  Title: locker stable
+  Title: Thank you
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'Back to the topic, I have some frineds in the course crew,
-
-    who can
-    grant me access to his stable.'
+  Text: Thank you
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 03926cd038dbe824eaea110c72a0ef07, type: 2}
+  NextRight: {fileID: 0}

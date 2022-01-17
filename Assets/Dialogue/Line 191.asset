@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 3864.5, y: -87}
-  Size: {x: 95.2, y: 40}
+  Size: {x: 95.33333, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,9 +217,9 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 654.5
-    y: 428
-    width: 95.2
+    x: 443.0476
+    y: 227.7381
+    width: 95.33333
     height: 40
   isDragging: 0
   Title: suspicion
