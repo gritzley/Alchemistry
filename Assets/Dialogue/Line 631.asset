@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 346
-    y: 646
+    x: 424
+    y: 522
     width: 86.4
     height: 40
   isDragging: 0
   Title: 'Wobbly '
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 
+  Text: I gave them the your potion and they started acting...funny.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: a81c4caf60a3c774f9b66beb5bfd7d84, type: 2}

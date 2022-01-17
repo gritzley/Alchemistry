@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1877, y: 539}
-  Size: {x: 89.6, y: 40}
+  Position: {x: 1845, y: 536}
+  Size: {x: 72, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,12 +217,12 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 770
-    y: 335
-    width: 89.6
+    x: 646
+    y: 337
+    width: 72
     height: 40
   isDragging: 0
-  Title: Line 659
+  Title: thiefs
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: It was the perfect stage for thiefs and rogues.

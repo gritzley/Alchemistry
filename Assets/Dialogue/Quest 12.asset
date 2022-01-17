@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 595, y: -453}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 125.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -239
-    y: 259
-    width: 90.4
+    x: 497
+    y: -198
+    width: 125.6
     height: 40
   isDragging: 0
-  Title: Less sus
-  isSelected: 0
+  Title: End 8 Less sus
+  isSelected: 1
   PrecedingStartNode: {fileID: 11400000, guid: 1a82a6780d6c93944969497947ef63b1, type: 2}
   CurrentLine: {fileID: 11400000, guid: 1a82a6780d6c93944969497947ef63b1, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -314,3 +314,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e829a0bdd2e7344e9bd6095ca7d636d, type: 2}
   - {fileID: 11400000, guid: 6095a207f18b37c47a148cdb8d99f4ba, type: 2}
   - {fileID: 11400000, guid: 4172829f20575114e87833efd6542bd9, type: 2}
+  - {fileID: 0}

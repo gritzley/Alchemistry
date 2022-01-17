@@ -217,15 +217,15 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 479
-    y: 443
+    x: 416
+    y: 227
     width: 132.8
     height: 40
   isDragging: 0
   Title: don't kidnapped
   isSelected: 1
   PrecedingStartNode: {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
-  CurrentLine: {fileID: 0}
+  CurrentLine: {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -382,3 +382,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1600c8ef6f81f58429d260dd917b6499, type: 2}
   - {fileID: 11400000, guid: 049dff49efd015241907f9587ace9016, type: 2}
   - {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
+  - {fileID: 0}

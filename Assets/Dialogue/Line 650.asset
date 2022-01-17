@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 740
-    y: 385
+    x: 636
+    y: 421
     width: 68.8
     height: 40
   isDragging: 0
   Title: none
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: None of them are left. They took them all.
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: c4d8b00ff3eebdf408a5fa95dcc99d74, type: 2}

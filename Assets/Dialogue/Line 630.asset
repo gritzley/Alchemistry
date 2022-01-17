@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 330
-    y: 610
+    x: 433
+    y: 468
     width: 70.4
     height: 40
   isDragging: 0
   Title: Truth
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 
+  Text: When I gave them the potion .you mixed me, nothing happend.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 6fa80f59eee116142ab260d73fcf17c6, type: 2}

@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2241, y: 544}
-  Size: {x: 89.6, y: 40}
+  Position: {x: 2174, y: 536}
+  Size: {x: 54.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 903
-    y: 377
-    width: 89.6
+    x: 637
+    y: 673
+    width: 54.4
     height: 40
   isDragging: 0
-  Title: Line 662
-  isSelected: 1
+  Title: ok
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 
+  Text: I hope they're okay.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: c4d8b00ff3eebdf408a5fa95dcc99d74, type: 2}

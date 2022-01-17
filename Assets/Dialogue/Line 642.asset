@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 975
-    y: 425
+    x: 535
+    y: 326
     width: 76
     height: 40
   isDragging: 0
   Title: where
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: I don't know where they are right now. I just hope they're ok.
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: c4d8b00ff3eebdf408a5fa95dcc99d74, type: 2}
