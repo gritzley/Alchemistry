@@ -148,7 +148,8 @@ public class TextDisplay : Interactible
             }
             if (match.Groups["command"].Success)
             {
-                float value = Single.Parse(match.Groups["value"].Value);
+                float value;
+                Single.TryParse(match.Groups["value"]?.Value, out value);
                 switch (match.Groups["command"].Value.ToLower())
                 {
                     case "red":
