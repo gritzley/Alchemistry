@@ -9,15 +9,15 @@ public class KettleController : Interactible
     private IngredientDefinition NewIngredient;
     private Light Light;
     private ParticleSystem Orchestra;
-    private List<Potion.Step> Steps;
-    public Potion FailedPotionDefinition;
+    private List<PotionDefinition.Step> Steps;
+    public PotionDefinition FailedPotionDefinition;
 
     public void OnEnable()
     {
         Light = GetComponentInChildren<Light>();
         Orchestra = GetComponentInChildren<ParticleSystem>();
 
-        Steps = new List<Potion.Step>();
+        Steps = new List<PotionDefinition.Step>();
     }
 
     public override bool OnInteract(PlayerController player)
@@ -34,7 +34,7 @@ public class KettleController : Interactible
     private void AddIngredient(Ingredient ingredient)
     {
         LockInLastStep();
-        Potion.Step step = new Potion.Step();
+        PotionDefinition.Step step = new PotionDefinition.Step();
         step.Ingredient = ingredient.Definition;
         step.Time = Time.time;
         Steps.Add(step);
@@ -50,18 +50,22 @@ public class KettleController : Interactible
     {
         if (Steps.Count > 0)
         {
-            Potion.Step last = Steps.Last();
+            PotionDefinition.Step last = Steps.Last();
             last.Time = Time.time - last.Time;
             Steps[Steps.Count - 1] = last;
         }
     }
 
+    /// <summary>
+    /// Finish the current Potion and fill its definiton in the potion held by the player
+    /// </summary>
+    /// <param name="potion"></param>
     private void FinishPotion(PlayerController player)
     {
         LockInLastStep();
         if (Steps.Count > 0)
         {
-            List<Potion> Potions = Potion.GetAllPotionAssets().Where( e => e.ValidateSteps(Steps) ).ToList();
+            List<PotionDefinition> Potions = PotionDefinition.GetAllPotionAssets().Where( e => e.ValidateSteps(Steps) ).ToList();
             if (Potions.Count != 1)
             {
                 Debug.Log("Failed Potion");
@@ -74,6 +78,6 @@ public class KettleController : Interactible
             }
         }
 
-        Steps = new List<Potion.Step>();
+        Steps = new List<PotionDefinition.Step>();
     }
 }

@@ -5,17 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 
 [ExecuteInEditMode]
-public class CustomerController : MonoBehaviour
+public class CustomerController : Interactible
 {
     public TextDisplay MainTextDisplay;
     public TextDisplay LeftAnswerTextDisplay;
     public TextDisplay RightAnswerTextDisplay;
-    public Potion LastGivenPotion;
+    public PotionDefinition LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
-    private Quest currentQuest;
+    public Quest currentQuest;
     private bool isReceivingPotion;
-    private VisibilityTracker visibilityTracker;
-    private bool isVisible => visibilityTracker.IsVisible;
     public DialogueLine CurrentDialogueLine => currentQuest.CurrentLine;
 
     void OnEnable()
@@ -24,10 +22,9 @@ public class CustomerController : MonoBehaviour
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
         HandleDialogueLine(CurrentDialogueLine);
-
-        visibilityTracker = GetComponent<VisibilityTracker>();
     }
 
+    public void HandleCurrentDialogueLine() => HandleDialogueLine(CurrentDialogueLine);
     void HandleDialogueLine(DialogueLine line)
     {
         LeftAnswerTextDisplay.ClearLetters();
@@ -38,10 +35,6 @@ public class CustomerController : MonoBehaviour
         {
             isReceivingPotion = true;
             SetAnswersActive(false, false);
-        }
-        else if (line.NextRight == null)
-        {
-            AdvanceQuest();
         }
         else if (line.HasAnswers)
         {
@@ -73,7 +66,7 @@ public class CustomerController : MonoBehaviour
         MainTextDisplay.DisplayText(text, callback);
     }
 
-    public void ReceivePotion(Potion potion)
+    public void ReceivePotion(PotionDefinition potion)
     {
         if (isReceivingPotion)
         {
@@ -81,31 +74,30 @@ public class CustomerController : MonoBehaviour
             LeftAnswerTextDisplay.ClearLetters();
             RightAnswerTextDisplay.ClearLetters();
             LastGivenPotion = potion;
-            ReceiveAnswer(0);
             isReceivingPotion = false;
-            if (CurrentDialogueLine.NextRight == null) AdvanceQuest();
+            ReceiveAnswer(0);
         }
     }
 
     public void ReceiveAnswer(int answer)
     {
         if (currentQuest.AdvanceDialogue(answer))
-        {
             HandleDialogueLine(CurrentDialogueLine);
-        }
+        else
+            AdvanceQuest();
     }
 
     private void AdvanceQuest()
     {
-        Debug.Log("Advancing with " + LastGivenPotion.name);
         currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
-        new Task(Leave());
-    }
-    private IEnumerator Leave()
-    {
-        while (!isVisible) yield return new WaitForSeconds(0.1f);
-        while (isVisible) yield return new WaitForSeconds(0.1f);
-        gameObject.SetActive(false);
         GameManager.Instance.AdvanceScene();
+    }
+
+    public override bool OnInteract(PlayerController player)
+    {
+        if (isReceivingPotion && (player.HeldItem as Potion)?.Definition != null)
+            ReceivePotion((player.HeldItem as Potion).Definition);
+
+        return true;
     }
 }

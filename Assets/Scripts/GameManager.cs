@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEditor;
 using System;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     // Instance of GameManager
     public static GameManager Instance;
     public CustomerController CurrentCustomer;
-    public List<GameObject> SceneProtagonists;
+    public List<Quest> Quests;
     public GameObject IngredientPrefab;
+    public FadeCamera fade;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.
@@ -19,12 +21,21 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        fade = PlayerController.Instance.GetComponentInChildren<FadeCamera>();
+    }
+
     public void AdvanceScene()
     {
-        if (SceneProtagonists.Count > 0)
-        {
-            SceneProtagonists[0].SetActive(true);
-            SceneProtagonists.RemoveAt(0);
-        }
+        new Task(SceneTransition());
+    }
+
+    private IEnumerator SceneTransition()
+    {
+        fade.Out();
+        yield return new WaitForSeconds(1.5f);
+        CurrentCustomer.HandleCurrentDialogueLine();
+        fade.In();
     }
 }

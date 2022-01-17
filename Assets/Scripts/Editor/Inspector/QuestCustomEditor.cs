@@ -42,7 +42,7 @@ public class QuestEditor : Editor
         for (int i = 0 ; i < linksProp.arraySize; i++)
         {
             SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
-            Potion potion = (Potion)element.FindPropertyRelative("Potion").objectReferenceValue;
+            PotionDefinition potion = (PotionDefinition)element.FindPropertyRelative("Potion").objectReferenceValue;
             SerializedProperty nextQuestProp = element.FindPropertyRelative("NextQuest");
 
             int questIndex = relatedQuests.IndexOf((Quest)nextQuestProp.objectReferenceValue);

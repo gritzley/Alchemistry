@@ -55,6 +55,7 @@ MonoBehaviour:
   lineSpacing: 0.2
   textSpeed: 30
   maxLineWidth: 2
+  ClickActive: 0
 --- !u!65 &6511870616988034377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123,6 +124,7 @@ MonoBehaviour:
   lineSpacing: 0.2
   textSpeed: 30
   maxLineWidth: 2
+  ClickActive: 1
 --- !u!65 &6013263728166105677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -191,6 +193,7 @@ MonoBehaviour:
   lineSpacing: 0.2
   textSpeed: 30
   maxLineWidth: 5
+  ClickActive: 1
 --- !u!65 &8126947039921314141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -215,6 +218,7 @@ GameObject:
   - component: {fileID: 3124278672356755143}
   - component: {fileID: 5351716042225905113}
   - component: {fileID: 1173322987633229907}
+  - component: {fileID: 6418203213499135283}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -268,3 +272,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1f9681c5f170d44bd51b171af3bff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  childrenTrackers: []
+--- !u!65 &6418203213499135283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124278672356755139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.75, y: 3, z: 1}
+  m_Center: {x: 0, y: -1.09, z: 0}

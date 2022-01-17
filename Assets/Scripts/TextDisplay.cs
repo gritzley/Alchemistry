@@ -13,7 +13,6 @@ public class TextDisplay : Interactible
     public Sprite ErrorCharacterSprite;
     [TextArea]
     public string CharacterString;
-    public int CharPixelHeight= 20;
     public GameObject LetterPrefab;
 
     public Vector3 Offset;
@@ -25,18 +24,22 @@ public class TextDisplay : Interactible
     public Action OnClickCallback;
     public bool ClickActive = true;
     private Sprite[] sprites;
-    private string text;
+    public float PPU = 80;
 
     void Awake()
     {
         // Creating the letters in EditMode aswell means, that there is no cleanup. Therefore we have to clean them up ourselves
         // We must do this in Awake because otherwise, if we try to display somethign in OnEnable, from this parent, it gets erased immdiately
         ClearLetters();
-        sprites = Resources.LoadAll<Sprite>(FontTex.name);
+        sprites = Resources
+            .LoadAll<Sprite>(FontTex.name)
+            .Select(e => Sprite.Create(FontTex, e.textureRect, Vector2.one / 2, PPU ))
+            .ToArray();
     }
 
     void OnEnable()
     {
+        // create a single letter for a single frame to get height of a sprite (all letters actually have the same height, despite appearance)
         GameObject go = PrefabUtility.InstantiatePrefab(LetterPrefab) as GameObject;
         Letter letter = go.GetComponent<Letter>();
         letter.Sprite = sprites[0];
@@ -44,8 +47,11 @@ public class TextDisplay : Interactible
         DestroyImmediate(go);
 
         BoxCollider collider = GetComponent<BoxCollider>();
-        collider.center = Offset + Vector3.up / 2 + Vector3.down * spriteHeight / 2;
-        collider.size = new Vector3(maxLineWidth, 1, 1);
+        if (collider != null)
+        {
+            collider.center = Offset + Vector3.up / 2 + Vector3.down * spriteHeight / 2;
+            collider.size = new Vector3(maxLineWidth, 1, 1);
+        }
     }
 
     public void ClearLetters()
@@ -142,6 +148,7 @@ public class TextDisplay : Interactible
             }
             if (match.Groups["command"].Success)
             {
+                float value = Single.Parse(match.Groups["value"].Value);
                 switch (match.Groups["command"].Value.ToLower())
                 {
                     case "red":
@@ -179,7 +186,7 @@ public class TextDisplay : Interactible
                         isWiggling = false;
                         break;
                     case "textspeed":
-                        textSpeed = Single.Parse(match.Groups["value"].Value);
+                        textSpeed = value;
                         break;
                 }
             }

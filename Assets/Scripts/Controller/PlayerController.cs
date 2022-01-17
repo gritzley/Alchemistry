@@ -63,17 +63,18 @@ public class PlayerController : Moveable
             .Where( e => e != null)
             .ToList();
 
+            // we get a list of the 
             int indexOfFirstSolid = interactibles.FindIndex( e => !(e is ItemSpot) );
             if (indexOfFirstSolid == -1)
             {
                 interactibles
-                .FindLastIndex( e => e.OnInteract(this) );
+                .FindLastIndex( e => e.OnInteract(this) ); // this goes through the lsit from the back until an interactible returns true;
             }
             else if (!(bool)interactibles[indexOfFirstSolid].OnInteract(this))
             {
                 interactibles
                 .GetRange(0, indexOfFirstSolid)
-                .FindLastIndex( e => e.OnInteract(this) );
+                .FindLastIndex( e => e.OnInteract(this) ); // same as above, starts at the first solid object hit
             }
         }
     }

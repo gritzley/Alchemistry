@@ -3,8 +3,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
-[CreateAssetMenu(fileName = "Potion", menuName = "Potion")]
-public class Potion : ScriptableObject
+[CreateAssetMenu(fileName = "Potion Definition", menuName = "Potion Definition")]
+public class PotionDefinition : ScriptableObject
 {
     // Struct for one step of the recipe
     [System.Serializable] public struct Step 
@@ -46,11 +46,11 @@ public class Potion : ScriptableObject
         return true;
     }
 
-    public static List<Potion> GetAllPotionAssets()
+    public static List<PotionDefinition> GetAllPotionAssets()
     {
-        return AssetDatabase.FindAssets("t:Potion")
+        return AssetDatabase.FindAssets("t:PotionDefinition")
         .Select( e => AssetDatabase.GUIDToAssetPath(e))
-        .Select( e => (Potion)AssetDatabase.LoadAssetAtPath(e, typeof(Potion)))
+        .Select( e => (PotionDefinition)AssetDatabase.LoadAssetAtPath(e, typeof(PotionDefinition)))
         .ToList();
     }
 

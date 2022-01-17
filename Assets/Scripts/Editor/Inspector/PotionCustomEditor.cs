@@ -3,9 +3,9 @@ using UnityEditor;
 using UnityEditorInternal;
 using System.Linq;
 
-[CustomEditor(typeof(Potion))]
+[CustomEditor(typeof(PotionDefinition))]
 [CanEditMultipleObjects]
-public class PotionEditor : Editor
+public class PotionDefinitionEditor : Editor
 {
     // Serialized properties for recipe and name
     SerializedProperty recipeProp;

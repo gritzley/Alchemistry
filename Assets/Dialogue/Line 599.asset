@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 134
+  m_Name: Line 599
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 678, y: -220}
-  Size: {x: 112.666664, y: 40}
+  Position: {x: 3928.3333, y: 209.5}
+  Size: {x: 90.66667, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 438
-    y: 203
-    width: 112.666664
+    x: 589
+    y: 248
+    width: 90.66667
     height: 40
   isDragging: 0
-  Title: Hello, witch.
+  Title: Line 599
   isSelected: 1
-  ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 
+  ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
+  Text: thx
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 347db7e3dd6fba94c9f4eb95e8cd82de, type: 2}
+  NextRight: {fileID: 0}
