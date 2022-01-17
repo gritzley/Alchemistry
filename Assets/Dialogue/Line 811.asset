@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 450
-    y: 67
+    x: 52
+    y: 130
     width: 89.6
     height: 40
   isDragging: 0
   Title: pleasant
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: I had a really pleasant time.
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 93e58e55ac72bed43ad9f6efb8f191fc, type: 2}

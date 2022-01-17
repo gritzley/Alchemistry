@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1364, y: 339}
+  Position: {x: 1366, y: 346}
   Size: {x: 97.6, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 809
-    y: 350
+    x: 488
+    y: 308
     width: 97.6
     height: 40
   isDragging: 0
   Title: Ice Touch
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: 
+  Text: When I touched the bon it completely froze!
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 6f67834684a0899449c501e04aab3909, type: 2}

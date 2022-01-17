@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1720, y: 154}
+  Position: {x: 1713, y: 164}
   Size: {x: 60.8, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 691
-    y: 130
+    x: 286
+    y: 203
     width: 60.8
     height: 40
   isDragging: 0
   Title: live
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: It was experience I never want to live through again.
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 93e58e55ac72bed43ad9f6efb8f191fc, type: 2}

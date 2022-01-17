@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1371, y: 253}
+  Position: {x: 1354, y: 238}
   Size: {x: 72, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 342
-    y: 229
+    x: 543
+    y: 208
     width: 72
     height: 40
   isDragging: 0
   Title: Flight
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: 
+  Text: I started to hover above the ground!
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 7f8d065e0365f8c4b9a286a0b6aa103c, type: 2}

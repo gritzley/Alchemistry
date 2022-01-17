@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 815
-    y: 635
+    x: 278
+    y: 371
     width: 83.2
     height: 40
   isDragging: 0
   Title: Wobbly
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: 
+  Text: 'May head felt so light suddenly. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 8da47fb29d2547249b0063d169de8911, type: 2}

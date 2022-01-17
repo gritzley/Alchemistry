@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 809
+  m_Name: Line 825
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1367, y: 587}
-  Size: {x: 70.4, y: 40}
+  Position: {x: 1470, y: 400}
+  Size: {x: 78.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,19 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 474
-    y: 316
-    width: 70.4
+    x: 592
+    y: 362
+    width: 78.4
     height: 40
   isDragging: 0
-  Title: Truth
+  Title: ghosts
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: I just felt the urge to tell people the absolute truth in any situation.
+  Text: And I couldn't keep them in so I went around and told these jokes to ghosts
+    and ghouls alike.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 688104c1619705940a6872d2d53b2570, type: 2}
+  NextRight: {fileID: 11400000, guid: fbcd4d484422be4479b2d5773f928f71, type: 2}

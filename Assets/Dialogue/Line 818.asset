@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 1702, y: 205}
-  Size: {x: 88.8, y: 40}
+  Size: {x: 54.4, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 673
-    y: 181
-    width: 88.8
+    x: 275
+    y: 244
+    width: 54.4
     height: 40
   isDragging: 0
-  Title: Line 818
-  isSelected: 1
+  Title: air
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: But it was need breathing fire rings into the air.
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 93e58e55ac72bed43ad9f6efb8f191fc, type: 2}

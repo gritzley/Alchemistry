@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 814
-    y: 314
+    x: 267
+    y: 281
     width: 77.6
     height: 40
   isDragging: 0
   Title: Health
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: 
+  Text: 'I felt great. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 8d9c91444abeb4943991f2a7be5cb91b, type: 2}
