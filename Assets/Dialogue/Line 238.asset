@@ -18,7 +18,7 @@ MonoBehaviour:
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   Text: "After he emptied the cup, he took deep breath and told everyone that\nthey\r
     were the greates scum on earth."
-  Notes: Are we on earth?
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

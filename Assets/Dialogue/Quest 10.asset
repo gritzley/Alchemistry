@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 10
   m_EditorClassIdentifier: 
-  Position: {x: 995, y: -361}
+  Position: {x: 994, y: -361}
   Size: {x: 200.66667, y: 40}
   Title: End5 killed god didnt kill all
   PrecedingStartNode: {fileID: 11400000, guid: 6a5c630c0a738e14a8a3a2c914252e9f, type: 2}
@@ -89,3 +89,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7b6c600c2ac145b4b87f247f6fdbb1b0, type: 2}
   - {fileID: 11400000, guid: 990e25d37e9eba64691f6bdf78710a97, type: 2}
   - {fileID: 11400000, guid: 5a7887652d3122143a3dcfdb942ae3cf, type: 2}
+  - {fileID: 11400000, guid: 649aa762b165ff645b65f39f4fb361bf, type: 2}
