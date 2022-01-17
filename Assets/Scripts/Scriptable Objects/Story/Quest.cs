@@ -32,7 +32,6 @@ public class Quest : StoryNode
     // CONSTRUCTOR
     public Quest() : base()
     {
-        Debug.Log("tst");
         Links = new List<Link>();
         DialogueNodes = new List<DialogueNode>();
     }
@@ -172,7 +171,7 @@ public class Quest : StoryNode
     public override void Remove()
     {
         foreach(DialogueNode node in DialogueNodes.ToList())
-            node.Remove();
+            node?.Remove();
 
         Customer.Quests.Remove(this);
         base.Remove();

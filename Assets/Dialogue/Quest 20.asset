@@ -23,7 +23,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
     NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
-    NextQuest: {fileID: 11400000, guid: 7c2364ce6f2b24d4f884b92de9815f5a, type: 2}
+    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
     NextQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   - Potion: {fileID: 11400000, guid: d7232e959d791f844bb736f3d51e7840, type: 2}
@@ -35,7 +35,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
     NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextQuest: {fileID: 11400000, guid: 7c2364ce6f2b24d4f884b92de9815f5a, type: 2}
+    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
@@ -49,7 +49,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
     NextQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextQuest: {fileID: 11400000, guid: 7c2364ce6f2b24d4f884b92de9815f5a, type: 2}
+    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
     NextQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
