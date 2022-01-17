@@ -217,8 +217,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 574
-    y: 192
+    x: 518
+    y: 273
     width: 62.4
     height: 40
   isDragging: 0

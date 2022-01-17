@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 499, y: 118}
-  Size: {x: 114.4, y: 40}
+  Position: {x: 500, y: 167}
+  Size: {x: 153.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,14 +217,14 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 448.0833
-    y: 430.44446
-    width: 114.4
+    x: 388
+    y: 367
+    width: 153.6
     height: 40
   isDragging: 0
-  Title: hurt zombies
+  Title: End10 hurt zombies
   isSelected: 1
-  PrecedingStartNode: {fileID: 0}
+  PrecedingStartNode: {fileID: 11400000, guid: e4cc4364fb0f62046af34e5c30e024c0, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
@@ -276,4 +276,31 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 0}
-  DialogueNodes: []
+  DialogueNodes:
+  - {fileID: 11400000, guid: e4cc4364fb0f62046af34e5c30e024c0, type: 2}
+  - {fileID: 11400000, guid: 8de3479252d0f7b4189378fda75c032e, type: 2}
+  - {fileID: 11400000, guid: 099c9722bace1a34391645d5847f0a07, type: 2}
+  - {fileID: 11400000, guid: 5a447c6e033088642aaf7bcdd74662bf, type: 2}
+  - {fileID: 11400000, guid: 5174859d8f538184f846ea36a9e3f81d, type: 2}
+  - {fileID: 11400000, guid: 6c650d32bb09da44db4453005563083c, type: 2}
+  - {fileID: 11400000, guid: 5c1289ef4d2050f4494e3389dd289ab7, type: 2}
+  - {fileID: 11400000, guid: 15bff3002df44554b928083d8f6ef237, type: 2}
+  - {fileID: 11400000, guid: 839f852c55f23214684bf030d75bfba1, type: 2}
+  - {fileID: 11400000, guid: 40c7ae1200e15414380231bb5a6968c9, type: 2}
+  - {fileID: 11400000, guid: 3b2eb1677e12dde498b43774e3ddc9f0, type: 2}
+  - {fileID: 11400000, guid: 5e245d3d764e70e44a40a15988992523, type: 2}
+  - {fileID: 11400000, guid: 5ab55f34f4ddea84e92127b722fa0c54, type: 2}
+  - {fileID: 11400000, guid: 0dea2b6a20e8b9341b06723999419ae8, type: 2}
+  - {fileID: 11400000, guid: 69d93e31e154c10499e57035a1d67d43, type: 2}
+  - {fileID: 11400000, guid: 7a4c0b6b01ec3b24a98942983cf129ff, type: 2}
+  - {fileID: 11400000, guid: fd967156182f5464eab081a41c896503, type: 2}
+  - {fileID: 11400000, guid: 36c757d31be7a6c4bb6cf7a3084a9c0a, type: 2}
+  - {fileID: 11400000, guid: e6f53c239efcfa746800960463f5804b, type: 2}
+  - {fileID: 11400000, guid: a233846cf03ca3a41a9638684f22897c, type: 2}
+  - {fileID: 11400000, guid: 1e2a52b502fa8834a860064f18417247, type: 2}
+  - {fileID: 11400000, guid: baa8601d840b9d44cb980c69807ab296, type: 2}
+  - {fileID: 11400000, guid: 4367c6397d66e7b4b9864e94264298b8, type: 2}
+  - {fileID: 11400000, guid: 1d0ad780c6abb2549afb783614174ed9, type: 2}
+  - {fileID: 11400000, guid: b1e0a227d08288c4db56e8277b7cf9ac, type: 2}
+  - {fileID: 11400000, guid: 39f7f226452837f4cb029f6bcbab0e62, type: 2}
+  - {fileID: 11400000, guid: 32679fa48153fb447af699ef4ea6601f, type: 2}

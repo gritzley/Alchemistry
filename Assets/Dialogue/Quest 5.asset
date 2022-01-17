@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 705.5, y: -184}
-  Size: {x: 185.33333, y: 40}
+  Size: {x: 183.2, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,21 +217,21 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 780.29926
-    y: 333.85913
-    width: 185.33333
+    x: 872.5
+    y: 313
+    width: 183.2
     height: 40
   isDragging: 0
   Title: Demi-god (dragon killed)
-  isSelected: 0
-  PrecedingStartNode: {fileID: 0}
+  isSelected: 1
+  PrecedingStartNode: {fileID: 11400000, guid: 0edd4a774b48b15448423dd63bfb25eb, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
     NextQuest: {fileID: 11400000, guid: 40558cba90b231646a03410c10311dbc, type: 2}
   - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
@@ -243,13 +243,13 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
@@ -261,9 +261,9 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
@@ -273,7 +273,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
     NextQuest: {fileID: 11400000, guid: 40558cba90b231646a03410c10311dbc, type: 2}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
-    NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
+    NextQuest: {fileID: 11400000, guid: ee742724a0c014c4eaf0745c0be480bc, type: 2}
   - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
     NextQuest: {fileID: 11400000, guid: f49a2c61f5dee5045b1e3b06d23df23a, type: 2}
   DialogueNodes:

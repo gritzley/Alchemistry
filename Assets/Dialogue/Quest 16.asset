@@ -1,0 +1,329 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
+  m_Name: Quest 16
+  m_EditorClassIdentifier: 
+  style:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000, type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 12
+      m_Right: 12
+      m_Top: 12
+      m_Bottom: 12
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  selectedStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000, type: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 12
+      m_Right: 12
+      m_Top: 12
+      m_Bottom: 12
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  Position: {x: 724, y: 54}
+  Size: {x: 145.6, y: 40}
+  LabelStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_ScaledBackgrounds: []
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 20
+      m_Right: 20
+      m_Top: 10
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 1
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  rect:
+    serializedVersion: 2
+    x: -1632
+    y: 350
+    width: 145.6
+    height: 40
+  isDragging: 0
+  Title: Didn't found grave
+  isSelected: 0
+  PrecedingStartNode: {fileID: 11400000, guid: cdc24244248ae2946b8e9619434a3859, type: 2}
+  CurrentLine: {fileID: 0}
+  Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  Links:
+  - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: d7232e959d791f844bb736f3d51e7840, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 89257179e828c9247a1c870f2e3070be, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
+    NextQuest: {fileID: 0}
+  - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
+    NextQuest: {fileID: 0}
+  DialogueNodes:
+  - {fileID: 11400000, guid: cdc24244248ae2946b8e9619434a3859, type: 2}
+  - {fileID: 11400000, guid: 7a8d56502a4c9f34baf6887a139b4b5e, type: 2}
+  - {fileID: 11400000, guid: 543a787e19d79af4cafe43b9c99b632d, type: 2}
+  - {fileID: 11400000, guid: 9c73f4d038542e8418ae20df88e164d6, type: 2}
+  - {fileID: 11400000, guid: d1f70bd48f008cb49a7f551240bfebe9, type: 2}
+  - {fileID: 11400000, guid: 607089689ca707f42855a98a428a5a3c, type: 2}
+  - {fileID: 11400000, guid: ecb52aaf8f6107c4a9b274ab79a666ec, type: 2}
+  - {fileID: 11400000, guid: 4b68c6a3f26ce18488e8553f815385eb, type: 2}
+  - {fileID: 11400000, guid: 6246ec56c179eef4cb6c0b97e7581ee3, type: 2}
+  - {fileID: 11400000, guid: b8f19f4c0f0d3f7439536a23764e5200, type: 2}
+  - {fileID: 11400000, guid: 5ede1e42e0c06da48a67ce73e37caf28, type: 2}
+  - {fileID: 11400000, guid: a24624a9d9a1a9c4aafe0f46a5d4d253, type: 2}
+  - {fileID: 11400000, guid: 68d1f95c123f9d747bf11de79019838c, type: 2}
+  - {fileID: 11400000, guid: 39f2b423d583b9c44b2899f7dff9933f, type: 2}
+  - {fileID: 11400000, guid: 58b5103905f59a94abd1dd577026322e, type: 2}
+  - {fileID: 11400000, guid: 5b37022798a40ab4893e26f3157816a9, type: 2}
+  - {fileID: 11400000, guid: 2bf1e76b9b691e243b658242dd36bff1, type: 2}
+  - {fileID: 11400000, guid: f1d8b4005353b194dbb14fef6004bcbf, type: 2}
+  - {fileID: 11400000, guid: 04b958a0a071dc54a8802c4b52bd4e60, type: 2}
+  - {fileID: 11400000, guid: af6feb9423a0b0f49881878e86e5a78c, type: 2}
+  - {fileID: 11400000, guid: 7f8d065e0365f8c4b9a286a0b6aa103c, type: 2}
+  - {fileID: 11400000, guid: d4162886dd3efb644a9a5d4d8c6b8377, type: 2}
+  - {fileID: 11400000, guid: 384ad7d15ac723949ae7dbce8c1bb315, type: 2}
+  - {fileID: 11400000, guid: 5053037d432106b40aad539426a63e1b, type: 2}
+  - {fileID: 11400000, guid: 8d9c91444abeb4943991f2a7be5cb91b, type: 2}
+  - {fileID: 11400000, guid: 6f67834684a0899449c501e04aab3909, type: 2}
+  - {fileID: 11400000, guid: 8d5e855531cc2614785e85ffbd44182b, type: 2}
+  - {fileID: 11400000, guid: ecab2e476db01c046ad7346031f4400e, type: 2}
+  - {fileID: 11400000, guid: fbcd4d484422be4479b2d5773f928f71, type: 2}
+  - {fileID: 11400000, guid: bfea62afa40efa14b95c5523c30b1ec4, type: 2}
+  - {fileID: 11400000, guid: fc69d2f832685e34aa6abbb9e21c5e77, type: 2}
+  - {fileID: 11400000, guid: 3058a895b1fbdb948b4aae2d9f5d4a50, type: 2}
+  - {fileID: 11400000, guid: 315453e163bdff44096575c62af8d9d1, type: 2}
+  - {fileID: 11400000, guid: 688104c1619705940a6872d2d53b2570, type: 2}
+  - {fileID: 11400000, guid: 45995668a374bee44b246cbacbbf9f80, type: 2}
+  - {fileID: 11400000, guid: 9db8b08e06d4061429128386fdff80c5, type: 2}
+  - {fileID: 11400000, guid: ab3dd85fc0b7a3c49b881475d04400c1, type: 2}
+  - {fileID: 11400000, guid: 8da47fb29d2547249b0063d169de8911, type: 2}
+  - {fileID: 11400000, guid: e275224a72152244fa3bc8e85711243c, type: 2}
+  - {fileID: 11400000, guid: 0314d7a875b96b14ab3d754497e8b3c1, type: 2}
+  - {fileID: 11400000, guid: 93e58e55ac72bed43ad9f6efb8f191fc, type: 2}
+  - {fileID: 11400000, guid: a783d9a81bf58104e82415773d8b5167, type: 2}
+  - {fileID: 11400000, guid: 95c1e7313e8a37e41a8bc4253890f51b, type: 2}
+  - {fileID: 11400000, guid: a2237c8b5701c484bbb78255618918df, type: 2}
+  - {fileID: 11400000, guid: 9b3a712d4296df544bf1d3b8314bff89, type: 2}
+  - {fileID: 11400000, guid: b993b2e435fc9d141842dac1d22e5955, type: 2}
+  - {fileID: 11400000, guid: 00ee4a5260fa0404c8639bc9267ffb94, type: 2}
+  - {fileID: 11400000, guid: 7d7ca9d0d60e7bb459e00843ee986623, type: 2}
+  - {fileID: 11400000, guid: be016109ca887974badaf441cceeab31, type: 2}
+  - {fileID: 11400000, guid: c471bd167374442419d998ed9f48275a, type: 2}
