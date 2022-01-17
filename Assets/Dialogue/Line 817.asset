@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 817
   m_EditorClassIdentifier: 
   Position: {x: 1451, y: 251}
-  Size: {x: 104.8, y: 40}
+  Size: {x: 106, y: 40}
   Title: connection
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: At first I panicked when I lost the connection to the ground.

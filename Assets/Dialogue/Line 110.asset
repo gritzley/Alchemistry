@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 110
   m_EditorClassIdentifier: 
   Position: {x: 1299, y: 117}
-  Size: {x: 110.4, y: 40}
+  Size: {x: 111.333336, y: 40}
   Title: Potion Truth
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: "After his typical win he suddelny declared was done with \nracing and want

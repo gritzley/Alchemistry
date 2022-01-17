@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 667
   m_EditorClassIdentifier: 
   Position: {x: 1505, y: 627}
-  Size: {x: 88.8, y: 40}
+  Size: {x: 88.66667, y: 40}
   Title: swaying
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: They were swaying even more than usual. Sluring their moans.

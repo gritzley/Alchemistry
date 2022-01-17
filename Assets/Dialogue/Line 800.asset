@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 800
   m_EditorClassIdentifier: 
   Position: {x: 1001, y: 54}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 92, y: 40}
   Title: Line 800
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: "I took the potion you gave me, but unfortunately it didn't help me identifying

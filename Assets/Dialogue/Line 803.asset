@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 803
   m_EditorClassIdentifier: 
   Position: {x: 1369, y: 165}
-  Size: {x: 65.6, y: 40}
+  Size: {x: 66, y: 40}
   Title: Fear
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: The time started to speed up. And I was standing there nothing changed just

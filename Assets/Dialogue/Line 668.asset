@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 668
   m_EditorClassIdentifier: 
   Position: {x: 1625, y: 634}
-  Size: {x: 83.2, y: 40}
+  Size: {x: 84, y: 40}
   Title: running
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: Some of them got into fights while other started running off.

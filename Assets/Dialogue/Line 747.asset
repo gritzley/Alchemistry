@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 747
   m_EditorClassIdentifier: 
   Position: {x: 1904, y: 353}
-  Size: {x: 78.4, y: 40}
+  Size: {x: 78, y: 40}
   Title: names
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: And of course their names!

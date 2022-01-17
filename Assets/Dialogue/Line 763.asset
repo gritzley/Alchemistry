@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 763
   m_EditorClassIdentifier: 
   Position: {x: 1933, y: 490}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: towering
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: The box I found was towering above me!

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 770
   m_EditorClassIdentifier: 
   Position: {x: 1930, y: 539}
-  Size: {x: 104, y: 40}
+  Size: {x: 104.666664, y: 40}
   Title: experience
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: It was really an intresting experience, flying around.

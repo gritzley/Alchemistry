@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 643
   m_EditorClassIdentifier: 
   Position: {x: 1958, y: 100}
-  Size: {x: 78.4, y: 40}
+  Size: {x: 78.66667, y: 40}
   Title: ghouls
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: "Even the ghouls were fighting along my side, for the sake of their undead

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 704
   m_EditorClassIdentifier: 
   Position: {x: 2520, y: 103}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 68.666664, y: 40}
   Title: word
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: I don't want to hear another word.

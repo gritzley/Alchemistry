@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 751
   m_EditorClassIdentifier: 
   Position: {x: 1971, y: 408}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 69.333336, y: 40}
   Title: heap
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: "I inspected it closer and found a heap of differse shiny objects. From my

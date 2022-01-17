@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 661
   m_EditorClassIdentifier: 
   Position: {x: 2054, y: 535}
-  Size: {x: 84.8, y: 40}
+  Size: {x: 84.66667, y: 40}
   Title: Missing
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: But by the end of the night Martha and George were missing...

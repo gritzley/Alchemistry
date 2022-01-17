@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 840
   m_EditorClassIdentifier: 
   Position: {x: 2141, y: 105}
-  Size: {x: 61.6, y: 40}
+  Size: {x: 62, y: 40}
   Title: find
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: I'm sure the name will come up again, when I'll stop trying to find it.

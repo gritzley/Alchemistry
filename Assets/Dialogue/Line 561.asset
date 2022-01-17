@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 561
   m_EditorClassIdentifier: 
   Position: {x: 2014, y: 315}
-  Size: {x: 93.6, y: 40}
+  Size: {x: 94, y: 40}
   Title: bite mark
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "You should have seen his face when he saw a huge bite mark appearing on

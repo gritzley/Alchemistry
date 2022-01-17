@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 5
   m_EditorClassIdentifier: 
   Position: {x: 1027, y: 225}
-  Size: {x: 106.4, y: 40}
+  Size: {x: 107.333336, y: 40}
   Title: Long-living
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: "They either use any means necessary to prolong \ntheir boring lives or are

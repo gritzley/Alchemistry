@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 831
   m_EditorClassIdentifier: 
   Position: {x: 1458, y: 586}
-  Size: {x: 104, y: 40}
+  Size: {x: 104.666664, y: 40}
   Title: inhabitants
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: So I told the my inhabitants that I think of them as family.

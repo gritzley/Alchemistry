@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 844
   m_EditorClassIdentifier: 
   Position: {x: 2560, y: 107}
-  Size: {x: 75.2, y: 40}
+  Size: {x: 75.33333, y: 40}
   Title: savior
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: If you ever swing by I'll make sure to introduce their savior to them.

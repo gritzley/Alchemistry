@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 740
   m_EditorClassIdentifier: 
   Position: {x: 2519, y: 294}
-  Size: {x: 71.2, y: 40}
+  Size: {x: 71.333336, y: 40}
   Title: shiny
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: 'He''s been collecting shiny things for quiet a while. '

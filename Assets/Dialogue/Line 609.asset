@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 609
   m_EditorClassIdentifier: 
   Position: {x: 3987.9167, y: -32.444458}
-  Size: {x: 102.4, y: 40}
+  Size: {x: 102.66667, y: 40}
   Title: sealed box
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "but the real find was a little sealed box, I \nunfortunately couldn't pry

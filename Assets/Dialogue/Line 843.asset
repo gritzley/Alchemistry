@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 843
   m_EditorClassIdentifier: 
   Position: {x: 2433, y: 109}
-  Size: {x: 96, y: 40}
+  Size: {x: 94.66667, y: 40}
   Title: zombioes
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: Thank you for your help with my zombies once again.

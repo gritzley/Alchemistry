@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 712
   m_EditorClassIdentifier: 
   Position: {x: 1224, y: 4}
-  Size: {x: 80, y: 40}
+  Size: {x: 80.66667, y: 40}
   Title: arrived
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I drank the potion you brewed for me right after I arrived at my cemetry.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 107
   m_EditorClassIdentifier: 
   Position: {x: 1438, y: 78}
-  Size: {x: 118.4, y: 40}
+  Size: {x: 119.333336, y: 40}
   Title: obstacle race
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: 'He gave witty answers to the typicsal After-Death-Obstacle-Case interview.

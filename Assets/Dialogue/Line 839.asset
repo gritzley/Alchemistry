@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 839
   m_EditorClassIdentifier: 
   Position: {x: 2028, y: 103}
-  Size: {x: 79.2, y: 40}
+  Size: {x: 80, y: 40}
   Title: unique
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: But at least I had an unique experience.

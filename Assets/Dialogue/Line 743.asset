@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 743
   m_EditorClassIdentifier: 
   Position: {x: 2821, y: 294}
-  Size: {x: 111.2, y: 40}
+  Size: {x: 111.333336, y: 40}
   Title: remorsefully
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I asked him about it and he remorsefully admitted that he stole them!

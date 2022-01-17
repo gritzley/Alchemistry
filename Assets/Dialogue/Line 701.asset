@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 701
   m_EditorClassIdentifier: 
   Position: {x: 2155, y: 133}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 91.33333, y: 40}
   Title: beautiful
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: They are beautfiul, docile creatures.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 678
   m_EditorClassIdentifier: 
   Position: {x: 3192, y: 81}
-  Size: {x: 74.4, y: 40}
+  Size: {x: 74.66667, y: 40}
   Title: loosin
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: I hope some day you will know what loosing that way feels like.

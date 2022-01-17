@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 829
   m_EditorClassIdentifier: 
   Position: {x: 1475, y: 529}
-  Size: {x: 84, y: 40}
+  Size: {x: 84.66667, y: 40}
   Title: gatherd
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: It gatherd around the ground giving my grave yard this creepy foggy mood.

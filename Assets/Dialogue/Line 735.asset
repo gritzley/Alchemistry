@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 735
   m_EditorClassIdentifier: 
   Position: {x: 2028, y: 301}
-  Size: {x: 72, y: 40}
+  Size: {x: 72.66667, y: 40}
   Title: ghoul
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: Then I noticed something strange one of the ghoul was sneaking around behaving

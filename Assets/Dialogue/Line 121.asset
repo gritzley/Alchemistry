@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 121
   m_EditorClassIdentifier: 
   Position: {x: 2650, y: 57}
-  Size: {x: 116, y: 40}
+  Size: {x: 116.666664, y: 40}
   Title: necromancer
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: It's this damn necromancer and vampire crowd. They are also affected by the

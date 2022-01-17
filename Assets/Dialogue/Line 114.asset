@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 114
   m_EditorClassIdentifier: 
   Position: {x: 2048, y: 58}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 68.666664, y: 40}
   Title: story
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: It was probably the right thing to do. Maybe we shouldn't be a part of this

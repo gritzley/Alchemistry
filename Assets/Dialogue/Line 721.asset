@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 721
   m_EditorClassIdentifier: 
   Position: {x: 1694, y: 80}
-  Size: {x: 106.4, y: 40}
+  Size: {x: 106.666664, y: 40}
   Title: green slime
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I spit out a bunch of green slime, which immeadetly ate trough my  lawn.

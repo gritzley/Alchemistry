@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 791
   m_EditorClassIdentifier: 
   Position: {x: 4798, y: 106}
-  Size: {x: 72, y: 40}
+  Size: {x: 72.66667, y: 40}
   Title: invite
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: If you ever around my garden, swing by my friends and I would love to invite

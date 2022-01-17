@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 540
   m_EditorClassIdentifier: 
   Position: {x: 1626, y: 199}
-  Size: {x: 97.6, y: 40}
+  Size: {x: 98, y: 40}
   Title: destroyed
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: They destroyed almost my whole graveyard and some of the nearby houses

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 748
   m_EditorClassIdentifier: 
   Position: {x: 2012, y: 357}
-  Size: {x: 95.2, y: 40}
+  Size: {x: 94.66667, y: 40}
   Title: nameless
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I quickly moved to the nameless grave and there it was!

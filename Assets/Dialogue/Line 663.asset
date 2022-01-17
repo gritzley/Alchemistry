@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 663
   m_EditorClassIdentifier: 
   Position: {x: 1468, y: 581}
-  Size: {x: 83.2, y: 40}
+  Size: {x: 84, y: 40}
   Title: change
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: Their moaning seemed to change a little but that's it.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 93
   m_EditorClassIdentifier: 
   Position: {x: 672, y: -55}
-  Size: {x: 95.2, y: 40}
+  Size: {x: 96.66667, y: 40}
   Title: Good day
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: Good day...potion merchant

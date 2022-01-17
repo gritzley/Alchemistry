@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 675
   m_EditorClassIdentifier: 
   Position: {x: 2803, y: 30}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: contacts
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: "Well, I have to go now. Maybe one of my contacts know where my \nzombies

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 734
   m_EditorClassIdentifier: 
   Position: {x: 1905, y: 302}
-  Size: {x: 101.6, y: 40}
+  Size: {x: 102.66667, y: 40}
   Title: grave yard
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: To be honest I didn't really know what the next step was. So I just waited,

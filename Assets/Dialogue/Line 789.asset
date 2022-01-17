@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 789
   m_EditorClassIdentifier: 
   Position: {x: 4597, y: 107}
-  Size: {x: 86.4, y: 40}
+  Size: {x: 86.66667, y: 40}
   Title: farewell
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: That's a good place to bid my farewell.

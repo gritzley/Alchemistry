@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 769
   m_EditorClassIdentifier: 
   Position: {x: 1851, y: 529}
-  Size: {x: 58.4, y: 40}
+  Size: {x: 58.666664, y: 40}
   Title: bat
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: You truned me into a bat some how!

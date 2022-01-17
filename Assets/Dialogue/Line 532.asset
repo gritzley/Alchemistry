@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 532
   m_EditorClassIdentifier: 
   Position: {x: 1329, y: 143}
-  Size: {x: 72, y: 40}
+  Size: {x: 72.66667, y: 40}
   Title: Flight
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: I never saw a flying zombie!

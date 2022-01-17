@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 96
   m_EditorClassIdentifier: 
   Position: {x: 987, y: -55}
-  Size: {x: 68, y: 40}
+  Size: {x: 68.666664, y: 40}
   Title: alive
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: Why was I suprised to read, that Atrius finished the race outrageously alive.

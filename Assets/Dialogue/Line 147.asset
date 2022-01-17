@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 147
   m_EditorClassIdentifier: 
   Position: {x: 1480, y: 189}
-  Size: {x: 80, y: 40}
+  Size: {x: 80.66667, y: 40}
   Title: danger
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He didn't get hit or hurt once. He almost seemed to predict where the danger

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 519
   m_EditorClassIdentifier: 
   Position: {x: 1655, y: 83}
-  Size: {x: 114.4, y: 40}
+  Size: {x: 115.333336, y: 40}
   Title: rope jumping
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: Some started doing somersaults, others were rope jumping with the graveyard

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 106
   m_EditorClassIdentifier: 
   Position: {x: 1292, y: 82}
-  Size: {x: 130.4, y: 40}
+  Size: {x: 132, y: 40}
   Title: Potion of Laugh
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He won the race and even increased his popularity.

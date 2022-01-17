@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 130
   m_EditorClassIdentifier: 
   Position: {x: 3564, y: 22}
-  Size: {x: 78.4, y: 40}
+  Size: {x: 78.66667, y: 40}
   Title: ghouls
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: While ghouls are corpses which soul or brain got reactivated and are now

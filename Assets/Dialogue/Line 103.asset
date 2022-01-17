@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 103
   m_EditorClassIdentifier: 
   Position: {x: 1293, y: 8}
-  Size: {x: 117.6, y: 40}
+  Size: {x: 119.333336, y: 40}
   Title: Greater voice
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He seemed to speak in a voice the sounded like freshly poured honey.

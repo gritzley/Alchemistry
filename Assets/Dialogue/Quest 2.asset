@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 2
   m_EditorClassIdentifier: 
-  Position: {x: 453, y: -170}
+  Position: {x: 453, y: -171}
   Size: {x: 82.66667, y: 40}
   Title: Dragon
   PrecedingStartNode: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}

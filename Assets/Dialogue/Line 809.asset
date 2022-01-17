@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 809
   m_EditorClassIdentifier: 
   Position: {x: 1367, y: 587}
-  Size: {x: 70.4, y: 40}
+  Size: {x: 70.666664, y: 40}
   Title: Truth
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: I just felt the urge to tell people the absolute truth in any situation.

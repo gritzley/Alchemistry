@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 566
   m_EditorClassIdentifier: 
   Position: {x: 1657, y: 362}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: laughing
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: But instead of clapping, they were snnorting and hoarsley laughing with their

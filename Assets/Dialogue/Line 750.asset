@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 750
   m_EditorClassIdentifier: 
   Position: {x: 1853, y: 407}
-  Size: {x: 90.4, y: 40}
+  Size: {x: 91.33333, y: 40}
   Title: glittering
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: When I did I suddenly saw something glittering between bushes.

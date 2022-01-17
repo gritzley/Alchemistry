@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 116
   m_EditorClassIdentifier: 
   Position: {x: 2136, y: 56}
-  Size: {x: 93.6, y: 40}
+  Size: {x: 94, y: 40}
   Title: decrease
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: Maybe it wouldn't even help the popularity of death but decrease it even

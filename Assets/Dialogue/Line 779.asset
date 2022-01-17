@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 779
   m_EditorClassIdentifier: 
   Position: {x: 3481, y: 104}
-  Size: {x: 96.8, y: 40}
+  Size: {x: 98, y: 40}
   Title: colleauge
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: So I asked around and I found an old colleuge of hers Maliqua.

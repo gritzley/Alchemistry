@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 825
   m_EditorClassIdentifier: 
   Position: {x: 1470, y: 400}
-  Size: {x: 78.4, y: 40}
+  Size: {x: 78, y: 40}
   Title: ghosts
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: And I couldn't keep them in so I went around and told these jokes to ghosts

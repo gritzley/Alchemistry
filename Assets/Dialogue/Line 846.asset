@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 846
   m_EditorClassIdentifier: 
   Position: {x: 2763, y: 110}
-  Size: {x: 73.6, y: 40}
+  Size: {x: 74, y: 40}
   Title: effect
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: May all potions bring you the effect you desire.

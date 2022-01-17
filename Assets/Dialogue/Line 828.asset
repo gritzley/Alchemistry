@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 828
   m_EditorClassIdentifier: 
   Position: {x: 1791, y: 392}
-  Size: {x: 86.4, y: 40}
+  Size: {x: 87.33333, y: 40}
   Title: evening
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: We had a fun evening also a strange one.

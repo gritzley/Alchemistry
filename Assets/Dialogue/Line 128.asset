@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 128
   m_EditorClassIdentifier: 
   Position: {x: 3358, y: 60}
-  Size: {x: 144, y: 40}
+  Size: {x: 146, y: 40}
   Title: Friend of the dead
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: I definetly will, greet them from a friend of the dead.

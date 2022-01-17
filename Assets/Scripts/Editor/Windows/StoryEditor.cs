@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine.Assertions;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 
 [System.Serializable]
@@ -233,6 +234,7 @@ public class StoryEditor : EditorWindow
 
                             case ViewState.QuestView:
                                 contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                                contextMenu.AddItem(new GUIContent("Save all Changes (Debug)"), false, SaveAllChanges);
                                 contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
                                 break;
                         }
@@ -303,6 +305,23 @@ public class StoryEditor : EditorWindow
         }
 
         if (GUI.changed) Repaint();
+    }
+
+    private void SaveAllChanges()
+    {
+        foreach (CustomerDefinition customer in CustomerDefinition.GetAllCustomerDefinitions())
+        {
+            foreach (Quest quest in customer.Quests)
+            {
+                foreach(DialogueNode node in quest.DialogueNodes)
+                {
+                    EditorUtility.SetDirty(node);
+                }
+                EditorUtility.SetDirty(quest);
+            }
+            EditorUtility.SetDirty(customer);
+        }
+        AssetDatabase.SaveAssets();
     }
 
     private void HandleSelection()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 1
   m_EditorClassIdentifier: 
   Position: {x: 650, y: 221}
-  Size: {x: 108.8, y: 65}
+  Size: {x: 110, y: 65}
   Title: Introduction
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: I'm Rumo the local Grave tender.

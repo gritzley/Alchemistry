@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 778
   m_EditorClassIdentifier: 
   Position: {x: 3368, y: 97}
-  Size: {x: 84, y: 40}
+  Size: {x: 84.66667, y: 40}
   Title: harbour
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I knew that most of them are living at the harbour, working with the fisherman.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 588
   m_EditorClassIdentifier: 
   Position: {x: 2088, y: 507}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: notice
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: 'In all this chaos I didn''t even notice any

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 662
   m_EditorClassIdentifier: 
   Position: {x: 2174, y: 536}
-  Size: {x: 54.4, y: 40}
+  Size: {x: 54.666668, y: 40}
   Title: ok
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: I hope they're okay.

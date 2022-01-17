@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 702
   m_EditorClassIdentifier: 
   Position: {x: 2274, y: 131}
-  Size: {x: 100.8, y: 65}
+  Size: {x: 102, y: 65}
   Title: underbelly
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: You can be glad you're protected by this city underbelly.

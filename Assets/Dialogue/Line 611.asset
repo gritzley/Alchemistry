@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 611
   m_EditorClassIdentifier: 
   Position: {x: 4215.917, y: -24.444458}
-  Size: {x: 85.6, y: 40}
+  Size: {x: 85.33333, y: 40}
   Title: remains
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "Maybe there still people out there, who'd \nbe glad knowing where they remains

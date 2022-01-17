@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 630
   m_EditorClassIdentifier: 
   Position: {x: 1375, y: 580}
-  Size: {x: 70.4, y: 40}
+  Size: {x: 70.666664, y: 40}
   Title: Truth
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: When I gave them the potion .you mixed me, nothing happend.

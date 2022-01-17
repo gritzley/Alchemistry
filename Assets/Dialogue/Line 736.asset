@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 736
   m_EditorClassIdentifier: 
   Position: {x: 2120, y: 300}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 69.333336, y: 40}
   Title: pearl
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: He went to one of the graves with a statue a top. There he snatched one of

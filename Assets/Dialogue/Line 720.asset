@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 720
   m_EditorClassIdentifier: 
   Position: {x: 1587, y: 517}
-  Size: {x: 127.2, y: 40}
+  Size: {x: 127.333336, y: 40}
   Title: Transformation
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I suddenly grew leathery ears, and wings sprouted alongside my arms!

@@ -57,7 +57,7 @@ public class Quest : StoryNode
         List<PotionDefinition> potions = PotionDefinition.GetAllPotionAssets();
 
         Links.RemoveAll( e => !potions.Contains(e.Potion));
-
+        
         potions
         .Except( Links.Select(e => e.Potion).Where(e => potions.Contains(e)) )
         .ToList()

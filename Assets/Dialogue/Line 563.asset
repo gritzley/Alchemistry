@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 563
   m_EditorClassIdentifier: 
   Position: {x: 1333, y: 334}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: Laugh
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: To be perfectly honest with you I was quiete shocked myself.

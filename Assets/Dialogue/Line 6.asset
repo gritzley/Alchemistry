@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 6
   m_EditorClassIdentifier: 
   Position: {x: 1164, y: 228}
-  Size: {x: 84.8, y: 40}
+  Size: {x: 86, y: 40}
   Title: Undead
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: "And don't get me started on all the undead, who have the boldness to come

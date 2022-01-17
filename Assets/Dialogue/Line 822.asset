@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 822
   m_EditorClassIdentifier: 
   Position: {x: 1483, y: 302}
-  Size: {x: 96.8, y: 40}
+  Size: {x: 98, y: 40}
   Title: back pain
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: The back pain I had from digging the last few day, vanished.

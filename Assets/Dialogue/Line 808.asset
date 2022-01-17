@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 808
   m_EditorClassIdentifier: 
   Position: {x: 1370, y: 624}
-  Size: {x: 83.2, y: 40}
+  Size: {x: 84, y: 40}
   Title: Wobbly
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: 'May head felt so light suddenly. '

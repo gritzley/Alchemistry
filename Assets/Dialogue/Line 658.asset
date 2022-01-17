@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 658
   m_EditorClassIdentifier: 
   Position: {x: 1752, y: 537}
-  Size: {x: 61.6, y: 40}
+  Size: {x: 62, y: 40}
   Title: city
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: "But it didn't stop there it poured into the city. Changing the narrow alleys

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 624
   m_EditorClassIdentifier: 
   Position: {x: 1602, y: 53}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: gentle
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: 'They took Brenda and George. They were the most gentle

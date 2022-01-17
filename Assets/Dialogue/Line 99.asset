@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 99
   m_EditorClassIdentifier: 
   Position: {x: 1417, y: -57}
-  Size: {x: 64.8, y: 40}
+  Size: {x: 64.666664, y: 40}
   Title: ears
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: The only strange thing was, that he had an extra set of ears when he gave

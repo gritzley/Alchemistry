@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 820
   m_EditorClassIdentifier: 
   Position: {x: 1693, y: 252}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: height
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: It was fascinating looking at my little yard from this height.

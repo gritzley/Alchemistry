@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 537
   m_EditorClassIdentifier: 
   Position: {x: 1327, y: 179}
-  Size: {x: 70.4, y: 40}
+  Size: {x: 71.333336, y: 40}
   Title: Giant
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: I didn't quiet expect this...dimensions

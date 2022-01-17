@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 101
   m_EditorClassIdentifier: 
   Position: {x: 1518, y: -24}
-  Size: {x: 108.8, y: 40}
+  Size: {x: 108.666664, y: 40}
   Title: refreshment
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He'll now switch to tea as a refreshment opportunity during the race

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 786
   m_EditorClassIdentifier: 
   Position: {x: 4281, y: 105}
-  Size: {x: 69.6, y: 40}
+  Size: {x: 70, y: 40}
   Title: order
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: It feels good to finally have things in order at least for the most part.

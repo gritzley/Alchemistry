@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 143
   m_EditorClassIdentifier: 
   Position: {x: 1303, y: 153}
-  Size: {x: 72.8, y: 40}
+  Size: {x: 73.33333, y: 40}
   Title: Mana
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He won the race without any interferences.

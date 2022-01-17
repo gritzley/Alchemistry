@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 719
   m_EditorClassIdentifier: 
   Position: {x: 1577, y: 480}
-  Size: {x: 99.2, y: 40}
+  Size: {x: 98.66667, y: 40}
   Title: Smallness
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: You could have at least warned me! I suddenly started shrinking.

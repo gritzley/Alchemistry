@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 635
   m_EditorClassIdentifier: 
   Position: {x: 1751, y: 104}
-  Size: {x: 108.8, y: 40}
+  Size: {x: 109.333336, y: 40}
   Title: necromaner
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: When they necromancer came, they...probably couldn't believe their luck.

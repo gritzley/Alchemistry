@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 670
   m_EditorClassIdentifier: 
   Position: {x: 1854, y: 633}
-  Size: {x: 96, y: 40}
+  Size: {x: 96.66667, y: 40}
   Title: consoling
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: "While I was consoling him the necromancer came and \nsnatched Lukas and

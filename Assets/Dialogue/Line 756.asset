@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 756
   m_EditorClassIdentifier: 
   Position: {x: 1893, y: 446}
-  Size: {x: 100.8, y: 40}
+  Size: {x: 101.33333, y: 40}
   Title: wandering
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I had a dream, I was wandering along my graves in the middle of night

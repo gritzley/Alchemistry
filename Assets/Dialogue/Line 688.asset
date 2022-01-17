@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 688
   m_EditorClassIdentifier: 
   Position: {x: 1396, y: 249}
-  Size: {x: 65.6, y: 40}
+  Size: {x: 66, y: 40}
   Title: Fear
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: They were cowering, scraming and running around

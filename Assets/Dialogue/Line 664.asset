@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 664
   m_EditorClassIdentifier: 
   Position: {x: 1591, y: 587}
-  Size: {x: 76.8, y: 40}
+  Size: {x: 77.33333, y: 40}
   Title: fought
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: The necromancer came and I fought them alongside the other inhabitants.

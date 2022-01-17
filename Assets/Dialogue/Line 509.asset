@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 509
   m_EditorClassIdentifier: 
   Position: {x: 1450.2007, y: 21.14087}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 92, y: 40}
   Title: Acid Spit
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "When they jumped out of their hiding place an armee of acid spitting \nzombies\r

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 742
   m_EditorClassIdentifier: 
   Position: {x: 2720, y: 295}
-  Size: {x: 79.2, y: 40}
+  Size: {x: 80, y: 40}
   Title: plaque
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: 'I remembered that the grave stone without a name had one of the old silver

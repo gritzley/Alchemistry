@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 113
   m_EditorClassIdentifier: 
   Position: {x: 1920, y: 35}
-  Size: {x: 117.6, y: 40}
+  Size: {x: 117.333336, y: 40}
   Title: grasshoppers
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: Hmm...At least it didn't rain grasshopers.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 104
   m_EditorClassIdentifier: 
   Position: {x: 1428, y: 44}
-  Size: {x: 93.6, y: 40}
+  Size: {x: 94, y: 40}
   Title: interview
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: 'His usual cuts and smaller wounds seemed to be almost completely vanished,

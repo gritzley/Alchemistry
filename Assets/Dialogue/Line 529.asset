@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 529
   m_EditorClassIdentifier: 
   Position: {x: 1951, y: 123}
-  Size: {x: 65.6, y: 40}
+  Size: {x: 66, y: 40}
   Title: rage
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: None of them tried to get close to my zombies. burning with rage.

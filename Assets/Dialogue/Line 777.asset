@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 777
   m_EditorClassIdentifier: 
   Position: {x: 3253, y: 98}
-  Size: {x: 97.6, y: 40}
+  Size: {x: 97.33333, y: 40}
   Title: fragments
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I remebered fragments of a nymph with that name being buried here a long

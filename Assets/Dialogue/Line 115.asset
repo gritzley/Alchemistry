@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 115
   m_EditorClassIdentifier: 
   Position: {x: 1950, y: 99}
-  Size: {x: 81.6, y: 40}
+  Size: {x: 82, y: 40}
   Title: license
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: That's pretty haughty coming from a witch without a license.

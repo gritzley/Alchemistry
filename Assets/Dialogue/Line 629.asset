@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 629
   m_EditorClassIdentifier: 
   Position: {x: 1374, y: 529}
-  Size: {x: 120.8, y: 40}
+  Size: {x: 121.333336, y: 40}
   Title: Smoke Breath
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: I gave the zombies your elixer like you told me to.

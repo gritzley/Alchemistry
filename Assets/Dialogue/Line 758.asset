@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 758
   m_EditorClassIdentifier: 
   Position: {x: 2123, y: 451}
-  Size: {x: 81.6, y: 40}
+  Size: {x: 82, y: 40}
   Title: shining
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: And then I saw it. The nameless grave shining.

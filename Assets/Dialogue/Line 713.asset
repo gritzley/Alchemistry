@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 713
   m_EditorClassIdentifier: 
   Position: {x: 1576, y: 85}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 92, y: 40}
   Title: Acid Spit
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I felt a weird prickle then the urge to vomit.

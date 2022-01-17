@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 98
   m_EditorClassIdentifier: 
   Position: {x: 1289, y: -25}
-  Size: {x: 103.2, y: 40}
+  Size: {x: 104.666664, y: 40}
   Title: Herbal Tea
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He finished his race first place as always.

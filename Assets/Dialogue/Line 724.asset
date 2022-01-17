@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 724
   m_EditorClassIdentifier: 
   Position: {x: 2046, y: 85}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90, y: 40}
   Title: vomiting
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I picked up a silver medaillon. Before vomiting acid again.

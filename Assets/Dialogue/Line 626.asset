@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 626
   m_EditorClassIdentifier: 
   Position: {x: 1373, y: 92}
-  Size: {x: 103.2, y: 40}
+  Size: {x: 104.666664, y: 40}
   Title: Herbal Tea
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: 'After I gave my zombies your potion, they just seemed even more docile

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 112
   m_EditorClassIdentifier: 
   Position: {x: 1835, y: 63}
-  Size: {x: 82.4, y: 65}
+  Size: {x: 82, y: 65}
   Title: mortals
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: 'So in conclusion he''s still with us mortals.

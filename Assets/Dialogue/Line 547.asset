@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 547
   m_EditorClassIdentifier: 
   Position: {x: 1634, y: 234}
-  Size: {x: 104.8, y: 40}
+  Size: {x: 106, y: 40}
   Title: cacophony
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "It was a loud cacophony of strange and \nscary noises."

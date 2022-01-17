@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 767
   m_EditorClassIdentifier: 
   Position: {x: 2416, y: 493}
-  Size: {x: 85.6, y: 40}
+  Size: {x: 86, y: 40}
   Title: climbed
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I climbed inside and in it I found a picture and a name!

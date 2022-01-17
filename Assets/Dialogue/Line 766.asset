@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 766
   m_EditorClassIdentifier: 
   Position: {x: 2279, y: 497}
-  Size: {x: 96, y: 40}
+  Size: {x: 96.66667, y: 40}
   Title: medaillon
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: Inside was a giant silver medaillon...I mean it's a normal sized medaillon.

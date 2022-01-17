@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 4
   m_EditorClassIdentifier: 
   Position: {x: 900, y: 232}
-  Size: {x: 100.8, y: 40}
+  Size: {x: 100.66667, y: 40}
   Title: Profession
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: "My profession isn't as satisfying as it used to be. \r\nNot many people

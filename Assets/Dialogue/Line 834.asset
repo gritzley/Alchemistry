@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 834
   m_EditorClassIdentifier: 
   Position: {x: 1832, y: 583}
-  Size: {x: 91.2, y: 40}
+  Size: {x: 92, y: 40}
   Title: Line 834
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   Text: Maybe then I'll have more visitors.

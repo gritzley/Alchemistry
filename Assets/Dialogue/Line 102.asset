@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 102
   m_EditorClassIdentifier: 
   Position: {x: 1298, y: 45}
-  Size: {x: 116.8, y: 40}
+  Size: {x: 118.666664, y: 40}
   Title: Health potion
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: After whe finished the race, he seemed even in better form than usual.

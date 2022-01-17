@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 146
   m_EditorClassIdentifier: 
   Position: {x: 1305, y: 191}
-  Size: {x: 139.2, y: 40}
+  Size: {x: 139.33334, y: 40}
   Title: Sensitive Senses
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: He finished his race, seeming more sharp than usual.

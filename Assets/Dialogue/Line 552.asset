@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 552
   m_EditorClassIdentifier: 
   Position: {x: 1670, y: 271}
-  Size: {x: 75.2, y: 40}
+  Size: {x: 76, y: 40}
   Title: falling
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: But seeing them falling over trying to gain a stand on the thin ice was the

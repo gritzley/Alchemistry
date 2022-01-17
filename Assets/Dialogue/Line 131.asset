@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 131
   m_EditorClassIdentifier: 
   Position: {x: 3672, y: 21}
-  Size: {x: 68.8, y: 40}
+  Size: {x: 69.333336, y: 40}
   Title: brain
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: Their intelligence and processing power is linked to the condition of their

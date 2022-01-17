@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 577
   m_EditorClassIdentifier: 
   Position: {x: 1455, y: 444}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: kernel
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: I was pretty suprised when they shrinked to the size of a nightsky kernel.

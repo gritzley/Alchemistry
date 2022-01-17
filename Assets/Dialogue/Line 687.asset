@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 687
   m_EditorClassIdentifier: 
   Position: {x: 1389, y: 171}
-  Size: {x: 79.2, y: 40}
+  Size: {x: 79.33333, y: 40}
   Title: Poison
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: My zombies were holwing in pain, throwing up the trash they ate.

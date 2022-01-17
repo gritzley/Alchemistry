@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 797
   m_EditorClassIdentifier: 
   Position: {x: 5252, y: 124}
-  Size: {x: 104.8, y: 40}
+  Size: {x: 105.333336, y: 40}
   Title: remarkable
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I hope you reap the rewards for your remarkable work.

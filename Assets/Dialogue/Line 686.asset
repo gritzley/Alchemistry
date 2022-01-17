@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 686
   m_EditorClassIdentifier: 
   Position: {x: 1049, y: 123}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: Line 686
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: I gave my zombies your potion just like you wanted

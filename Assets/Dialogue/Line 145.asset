@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 145
   m_EditorClassIdentifier: 
   Position: {x: 1495, y: 149}
-  Size: {x: 104.8, y: 40}
+  Size: {x: 105.333336, y: 40}
   Title: grandstand
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: 'They were confused but requested this as an added feature

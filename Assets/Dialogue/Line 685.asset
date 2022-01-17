@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 685
   m_EditorClassIdentifier: 
   Position: {x: 810, y: 120}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: Line 685
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: Actually I don't care for this idle chit-chat.

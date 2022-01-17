@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 784
   m_EditorClassIdentifier: 
   Position: {x: 4067, y: 108}
-  Size: {x: 76, y: 40}
+  Size: {x: 76.66667, y: 40}
   Title: beach
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I tried to make it look like the beach.

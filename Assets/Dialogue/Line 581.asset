@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 581
   m_EditorClassIdentifier: 
   Position: {x: 1926, y: 457}
-  Size: {x: 82.4, y: 40}
+  Size: {x: 82.66667, y: 40}
   Title: as ever
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: Pffff as ever.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 723
   m_EditorClassIdentifier: 
   Position: {x: 1933, y: 88}
-  Size: {x: 78.4, y: 40}
+  Size: {x: 78.66667, y: 40}
   Title: sealed
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I spit the next slime on the sealed box. And went right through the cover.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 625
   m_EditorClassIdentifier: 
   Position: {x: 1709, y: 56}
-  Size: {x: 94.4, y: 40}
+  Size: {x: 94.66667, y: 40}
   Title: creatures
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: 'I doubt the necromancer will treat them with the respect and care,

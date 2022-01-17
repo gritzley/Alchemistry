@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 100
   m_EditorClassIdentifier: 
   Position: {x: 1413, y: -23}
-  Size: {x: 82.4, y: 40}
+  Size: {x: 82.66667, y: 40}
   Title: relaxed
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: "When giving his interview the scribe described him \ncarrying an utterly

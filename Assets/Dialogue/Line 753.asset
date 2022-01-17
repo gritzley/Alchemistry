@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 753
   m_EditorClassIdentifier: 
   Position: {x: 2082, y: 412}
-  Size: {x: 64.8, y: 40}
+  Size: {x: 65.333336, y: 40}
   Title: deal
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I wondered who hid this here but that was something I'd deal with later.

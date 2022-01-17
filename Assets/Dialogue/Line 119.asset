@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 119
   m_EditorClassIdentifier: 
   Position: {x: 2439, y: 55}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90.66667, y: 40}
   Title: cleaning
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   Text: It's really nice finally giving the place a little spring cleaning.

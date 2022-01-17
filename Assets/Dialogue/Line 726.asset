@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 726
   m_EditorClassIdentifier: 
   Position: {x: 2275, y: 86}
-  Size: {x: 64.8, y: 40}
+  Size: {x: 65.333336, y: 40}
   Title: help
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: You couldn't help any other, could you?
