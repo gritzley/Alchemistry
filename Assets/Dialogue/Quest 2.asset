@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 2
   m_EditorClassIdentifier: 
-  Position: {x: 439, y: -139}
+  Position: {x: 453, y: -170}
   Size: {x: 82.66667, y: 40}
   Title: Dragon
   PrecedingStartNode: {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
@@ -64,8 +64,6 @@ MonoBehaviour:
     NextQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
-    NextQuest: {fileID: 0}
   DialogueNodes:
   - {fileID: 11400000, guid: 52b530841b3b84944b3bfca0c9fa40f7, type: 2}
   - {fileID: 11400000, guid: 80a13fbef76ba21479d3fdd5e8623c99, type: 2}
