@@ -147,7 +147,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   Position: {x: 5378, y: 125}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 72.8, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -219,10 +219,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 771
     y: 331
-    width: 89.6
+    width: 72.8
     height: 40
   isDragging: 0
-  Title: Line 798
+  Title: friend
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: May light lead you the way. Farewell, friend.

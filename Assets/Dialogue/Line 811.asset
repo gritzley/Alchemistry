@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 16
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 811
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 724, y: 54}
-  Size: {x: 145.6, y: 40}
+  Position: {x: 1479, y: 91}
+  Size: {x: 89.6, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,84 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -305
-    y: 30
-    width: 145.6
+    x: 450
+    y: 67
+    width: 89.6
     height: 40
   isDragging: 0
-  Title: Didn't found grave
-  isSelected: 0
-  PrecedingStartNode: {fileID: 11400000, guid: cdc24244248ae2946b8e9619434a3859, type: 2}
-  CurrentLine: {fileID: 0}
-  Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
-  Links:
-  - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: d7232e959d791f844bb736f3d51e7840, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 89257179e828c9247a1c870f2e3070be, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
-    NextQuest: {fileID: 0}
-  - Potion: {fileID: 11400000, guid: 198ce2780e5db2245a315871a372a6ba, type: 2}
-    NextQuest: {fileID: 0}
-  DialogueNodes:
-  - {fileID: 11400000, guid: cdc24244248ae2946b8e9619434a3859, type: 2}
-  - {fileID: 11400000, guid: 7a8d56502a4c9f34baf6887a139b4b5e, type: 2}
-  - {fileID: 11400000, guid: 543a787e19d79af4cafe43b9c99b632d, type: 2}
-  - {fileID: 11400000, guid: 9c73f4d038542e8418ae20df88e164d6, type: 2}
-  - {fileID: 11400000, guid: d1f70bd48f008cb49a7f551240bfebe9, type: 2}
-  - {fileID: 11400000, guid: 607089689ca707f42855a98a428a5a3c, type: 2}
-  - {fileID: 11400000, guid: ecb52aaf8f6107c4a9b274ab79a666ec, type: 2}
-  - {fileID: 11400000, guid: 4b68c6a3f26ce18488e8553f815385eb, type: 2}
-  - {fileID: 11400000, guid: 6246ec56c179eef4cb6c0b97e7581ee3, type: 2}
-  - {fileID: 11400000, guid: b8f19f4c0f0d3f7439536a23764e5200, type: 2}
-  - {fileID: 11400000, guid: 5ede1e42e0c06da48a67ce73e37caf28, type: 2}
-  - {fileID: 11400000, guid: a24624a9d9a1a9c4aafe0f46a5d4d253, type: 2}
-  - {fileID: 11400000, guid: 68d1f95c123f9d747bf11de79019838c, type: 2}
-  - {fileID: 11400000, guid: 39f2b423d583b9c44b2899f7dff9933f, type: 2}
-  - {fileID: 11400000, guid: 58b5103905f59a94abd1dd577026322e, type: 2}
-  - {fileID: 11400000, guid: 5b37022798a40ab4893e26f3157816a9, type: 2}
-  - {fileID: 11400000, guid: 2bf1e76b9b691e243b658242dd36bff1, type: 2}
-  - {fileID: 11400000, guid: f1d8b4005353b194dbb14fef6004bcbf, type: 2}
-  - {fileID: 11400000, guid: 04b958a0a071dc54a8802c4b52bd4e60, type: 2}
-  - {fileID: 11400000, guid: 7f8d065e0365f8c4b9a286a0b6aa103c, type: 2}
-  - {fileID: 11400000, guid: af6feb9423a0b0f49881878e86e5a78c, type: 2}
+  Title: pleasant
+  isSelected: 1
+  ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
+  Text: I had a really pleasant time.
+  Notes: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 0}
