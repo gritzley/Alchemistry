@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 499, y: 115}
+  Position: {x: 500, y: 167}
   Size: {x: 153.6, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: -1409
-    y: 193
+    x: 388
+    y: 367
     width: 153.6
     height: 40
   isDragging: 0
   Title: End10 hurt zombies
-  isSelected: 0
+  isSelected: 1
   PrecedingStartNode: {fileID: 11400000, guid: e4cc4364fb0f62046af34e5c30e024c0, type: 2}
   CurrentLine: {fileID: 0}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}

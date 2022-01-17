@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 708
+  m_Name: Line 712
   m_EditorClassIdentifier: 
   style:
     m_Name: 
@@ -146,8 +146,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 2757, y: 137}
-  Size: {x: 85.6, y: 40}
+  Position: {x: 1224, y: 4}
+  Size: {x: 80, y: 40}
   LabelStyle:
     m_Name: 
     m_Normal:
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 672
-    y: 262
-    width: 85.6
+    x: 90
+    y: 52
+    width: 80
     height: 40
   isDragging: 0
-  Title: oblivion
+  Title: arrived
   isSelected: 1
-  ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: I hope you're diving straight to the darkest pits of oblivion, witch.
+  ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
+  Text: I drank the potion you brewed for me right after I arrived at my cemetry.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: e0573873cc256424eb4a8ad372dbe9ed, type: 2}
