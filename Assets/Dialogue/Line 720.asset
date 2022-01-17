@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 773
-    y: 380
+    x: 452
+    y: 221
     width: 127.2
     height: 40
   isDragging: 0
   Title: Transformation
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
-  Text: 
+  Text: I suddenly grew leathery ears, and wings sprouted alongside my arms!
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: b0eab63798347124b9d61e9a7ae1d8dc, type: 2}

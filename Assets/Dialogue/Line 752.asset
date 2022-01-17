@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 1005
-    y: 348
+    x: -351
+    y: 387
     width: 64
     height: 40
   isDragging: 0
   Title: 'pile '
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: Because among the pile of shiny colletible, I found a silver plaque with
     the name of the unkown grave on it!
@@ -232,4 +232,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000}
+  NextRight: {fileID: 11400000, guid: 3d27fc6e70e5df6478c85ee198d54166, type: 2}

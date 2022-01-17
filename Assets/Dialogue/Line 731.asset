@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 819
-    y: 183
+    x: -391
+    y: 95
     width: 64
     height: 40
   isDragging: 0
   Title: was
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: Searching for a name. And there it suddenly was!
   Notes: 
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 3d27fc6e70e5df6478c85ee198d54166, type: 2}

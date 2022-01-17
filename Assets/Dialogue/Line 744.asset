@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 3108, y: 308}
+  Position: {x: 2953, y: 298}
   Size: {x: 82.4, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,8 +217,8 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 2005
-    y: 253
+    x: 641
+    y: 219
     width: 82.4
     height: 40
   isDragging: 0
@@ -231,4 +231,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 3d27fc6e70e5df6478c85ee198d54166, type: 2}

@@ -217,13 +217,13 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 897
-    y: 233
+    x: -297
+    y: 426
     width: 92.8
     height: 40
   isDragging: 0
   Title: pulsating
-  isSelected: 1
+  isSelected: 0
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: Until I reached something squishy, pulsating, I pulled it out, holding...
     a name!
@@ -232,4 +232,4 @@ MonoBehaviour:
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 3d27fc6e70e5df6478c85ee198d54166, type: 2}

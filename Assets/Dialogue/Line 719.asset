@@ -146,7 +146,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  Position: {x: 1578, y: 479}
+  Position: {x: 1577, y: 480}
   Size: {x: 99.2, y: 40}
   LabelStyle:
     m_Name: 
@@ -217,18 +217,18 @@ MonoBehaviour:
     m_StretchHeight: 0
   rect:
     serializedVersion: 2
-    x: 159
-    y: 266
+    x: 418
+    y: 249
     width: 99.2
     height: 40
   isDragging: 0
   Title: Smallness
   isSelected: 1
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
-  Text: 
+  Text: You could have at least warned me! I suddenly started shrinking.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: ae7f4da587fcc1041b70f4f0efc1aba9, type: 2}
