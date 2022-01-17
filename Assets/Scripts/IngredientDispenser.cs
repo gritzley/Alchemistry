@@ -5,7 +5,7 @@ using System;
 
 public class IngredientDispenser : Interactible
 {
-    public GameObject IngredientPrefab;
+    public bool IsEndless;
     public List<GameObject> IngredientModels;
     private List<GameObject> currentlyHeldIngredients;
     private GameObject randomIngredient => currentlyHeldIngredients[new System.Random().Next(currentlyHeldIngredients.Count)];
@@ -19,19 +19,22 @@ public class IngredientDispenser : Interactible
     {
         if (player.HeldItem == null && hasIngredients)
         {
-            GameObject go = UnityEngine.Object.Instantiate(IngredientPrefab);
+            GameObject go = UnityEngine.Object.Instantiate(GameManager.Instance.IngredientPrefab);
             Ingredient ingredient = go.GetComponent<Ingredient>();
             IngredientDefinition ingredientDefinition = ScriptableObject.CreateInstance<IngredientDefinition>();
             ingredientDefinition.IsConsumable = true;
             GameObject harvest = randomIngredient;
-            currentlyHeldIngredients.Remove(harvest);
             ingredientDefinition.Model = harvest;
             ingredient.Definition = ingredientDefinition;
             ingredient.transform.parent = player.HandTransform;
             ingredient.transform.position = player.HandTransform.position;
             ingredient.AttachModel();
             player.HeldItem = ingredient;
-            harvest.SetActive(false);
+            if (!IsEndless)
+            {
+                harvest.SetActive(false);
+                currentlyHeldIngredients.Remove(harvest);
+            }
         }
         return true;
     }

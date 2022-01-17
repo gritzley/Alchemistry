@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public CustomerController CurrentCustomer;
     public List<GameObject> SceneProtagonists;
+    public GameObject IngredientPrefab;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.
