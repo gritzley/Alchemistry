@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 20
   m_EditorClassIdentifier: 
-  Position: {x: 736, y: 57}
+  Position: {x: 735, y: 57}
   Size: {x: 134.66666, y: 40}
   Title: don't kidnapped
   PrecedingStartNode: {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
-    NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
+    NextQuest: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 52fbed83eaad82e4b8c9cc86d0319069, type: 2}
     NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
@@ -61,7 +61,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
     NextQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
-    NextQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
+    NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
   DialogueNodes:
