@@ -38,7 +38,6 @@ public abstract class StoryNode : ScriptableObject
         LabelStyle.padding = new RectOffset(20, 20, 10, 0);
         LabelStyle.normal.textColor = Color.white;
 
-
         NotificationStyle = new GUIStyle();
         NotificationStyle.normal.textColor = Color.white;
         NotificationStyle.padding = new RectOffset(8, 8, 2, 0);
@@ -97,7 +96,7 @@ public abstract class StoryNode : ScriptableObject
                 if (isDragging)
                 {
                     isDragging = false;
-    	                    EditorUtility.SetDirty(this);
+                    EditorUtility.SetDirty(this);
                     AssetDatabase.SaveAssets();
                 }
                 break;
