@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 16
   m_EditorClassIdentifier: 
-  Position: {x: 712, y: 58}
+  Position: {x: 982, y: 129}
   Size: {x: 148, y: 40}
   Title: Didn't found grave
   PrecedingStartNode: {fileID: 11400000, guid: cdc24244248ae2946b8e9619434a3859, type: 2}

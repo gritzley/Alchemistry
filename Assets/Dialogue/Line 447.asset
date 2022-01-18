@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
+  _isReceivingState: 0
   NextLeft: {fileID: 0}
   NextRight: {fileID: 11400000, guid: 4e8e64f141d51bf4c8c258daa219496a, type: 2}

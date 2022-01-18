@@ -22,5 +22,6 @@ MonoBehaviour:
   AnswerLeft: Isn't this killing spree going a little bit too far
   AnswerRight: Aren't you afraid that you will endure divine punishment?
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: ea67edd584919d74491afafb33318503, type: 2}
   NextRight: {fileID: 11400000, guid: f3d4d87c3a8185d498196d2e8631e953, type: 2}

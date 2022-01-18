@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: Greet your wandering souls from me.
   AnswerRight: What is even the difference between a ghoul and a zombie?
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 3e8439feb9763854c83b0939574d61c1, type: 2}
   NextRight: {fileID: 11400000, guid: bee751045f226b14aa310373962153e4, type: 2}

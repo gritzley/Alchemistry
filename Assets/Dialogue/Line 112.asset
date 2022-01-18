@@ -24,5 +24,6 @@ MonoBehaviour:
   AnswerLeft: I wasn't in the mood comitting a crime.
   AnswerRight: Protion crafting isn't excatly reliable science.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 8de92acfeba170d448c16310cd527e64, type: 2}
   NextRight: {fileID: 11400000, guid: 1914b71eae121324f95377aae5491b1d, type: 2}

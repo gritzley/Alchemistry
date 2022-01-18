@@ -24,5 +24,6 @@ MonoBehaviour:
   AnswerLeft: Seems like you have already everything planned.
   AnswerRight: Aren't flowers your...you know...
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 518dd4e1833bbd040881326018ab2fee, type: 2}
   NextRight: {fileID: 11400000, guid: 524632a97fd59e44bad6edad53950a48, type: 2}

@@ -22,5 +22,6 @@ MonoBehaviour:
   AnswerLeft: We probably deserve this.
   AnswerRight: I'm sorry it had to end that way.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 7cdd0066e2073f34c87a997e99d03895, type: 2}
   NextRight: {fileID: 11400000, guid: ddc7b92de22aa7943b6670e633df18bc, type: 2}

@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: Glad I could help you get rid of this scum.
   AnswerRight: So are we finally done now?
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 38c83a973e262bd49a4c594e1d6eb26e, type: 2}
   NextRight: {fileID: 11400000, guid: 5fe4ca17504464242a8e575d536b193d, type: 2}

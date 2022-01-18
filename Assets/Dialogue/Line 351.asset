@@ -25,5 +25,6 @@ MonoBehaviour:
     exit.'
   AnswerRight: I hope this won't end in mass of deaths.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 43f5c03d200c90a46b44f4e177af7356, type: 2}
   NextRight: {fileID: 11400000, guid: df510ca30d954d249bb7fc1bd40637a3, type: 2}

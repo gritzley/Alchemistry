@@ -13,7 +13,7 @@ public class DialogueLine : DialogueNode
     public string AnswerRight;
 
     public bool HasAnswers = false;
-    private bool _isReceivingState = false;
+    [SerializeField] private bool _isReceivingState = false;
     public bool IsReceivingState
     {
         get => _isReceivingState;

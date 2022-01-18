@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 19
   m_EditorClassIdentifier: 
-  Position: {x: 506, y: 68}
+  Position: {x: 736, y: 129}
   Size: {x: 156.66666, y: 40}
   Title: End9 get kidnapped
   PrecedingStartNode: {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}

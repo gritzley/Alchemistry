@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: A pleasure to meet you, Grave tender.
   AnswerRight: We have a Grave tender around here?
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}
   NextRight: {fileID: 11400000, guid: 60ae29f979766b94bb31f019c8b15958, type: 2}

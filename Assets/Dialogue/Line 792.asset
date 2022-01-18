@@ -22,5 +22,6 @@ MonoBehaviour:
   AnswerLeft: I'd be an honor to rest in your garden one day.
   AnswerRight: I don't mind to be forgotten.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 98ea55db2fe5b044fa453ba277f8884b, type: 2}
   NextRight: {fileID: 11400000, guid: 3cb1c8e69144f924a873966a15d83df4, type: 2}

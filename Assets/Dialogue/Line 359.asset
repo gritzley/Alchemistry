@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: I can't promise anything...
   AnswerRight: Of course, I'll be sure to water your soil.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: c31015cfbe0653c49996df927fb46c33, type: 2}
   NextRight: {fileID: 11400000, guid: 1fd2975b4d3f6f54cb6c31e436278fa3, type: 2}

@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: I always had a soft spot for shady merchants.
   AnswerRight: I need his booze too keep my buisness running.
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: b16cc52bce8895e419e18ef34ef81fdc, type: 2}
   NextRight: {fileID: 11400000, guid: 524cba63c039f844dae5cd1f619cd5ca, type: 2}

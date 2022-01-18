@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 13
   m_EditorClassIdentifier: 
-  Position: {x: 582, y: -387}
+  Position: {x: 697, y: -384}
   Size: {x: 135.33334, y: 40}
   Title: End7 Body gone
   PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}

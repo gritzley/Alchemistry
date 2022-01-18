@@ -21,5 +21,6 @@ MonoBehaviour:
   AnswerLeft: Good luck with that.
   AnswerRight: I'm sorry. Can I help you?
   HasAnswers: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 5e12409ce74a2c74bbfc2077df8411e8, type: 2}
   NextRight: {fileID: 11400000, guid: beac3bd5df1c2614d938f59e37fbb233, type: 2}
