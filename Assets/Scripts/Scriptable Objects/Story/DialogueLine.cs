@@ -157,7 +157,7 @@ public class DialogueLine : DialogueNode
         base.Draw(offset, state);
         GUI.Label(rect, Title, LabelStyle);
 
-        if (Notes != String.Empty)
+        if (Notes != String.Empty && Notes != null)
             GUI.Box(new Rect(rect.position + new Vector2 (rect.width - 20, -2), new Vector2(20, 20)), "!", attentionIconStyle);
     }
     public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
