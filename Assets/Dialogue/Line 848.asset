@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 102.66667, y: 40}
   Title: Thank you
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 
+  Text: Thank you
   Notes: 
   AnswerLeft: 
   AnswerRight: 
