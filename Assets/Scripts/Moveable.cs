@@ -49,8 +49,8 @@ public class Moveable : MonoBehaviour
             // Re-enable inouts
             rotationDisabled = false;
         }
-        
-        OnMovementEnd();
+
+        yield return null;
     }
 
     /// <summary>
@@ -87,7 +87,7 @@ public class Moveable : MonoBehaviour
             rotationDisabled = false;
         }
 
-        OnMovementEnd();
+        yield return null;
     }
 
 
@@ -126,8 +126,7 @@ public class Moveable : MonoBehaviour
             movementDisabled = false;
         }
 
-        OnMovementEnd();
+        yield return null;
     }
 
-    public virtual void OnMovementEnd() { }
 }
