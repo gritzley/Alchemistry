@@ -192,6 +192,9 @@ public class TextDisplay : Interactible
                     case "textspeed":
                         textSpeed = value;
                         break;
+                    case "pause":
+                        yield return new WaitForSeconds(value);
+                        break;
                 }
             }
         }
