@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 69.333336, y: 40}
   Title: drink
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "The next Quick Demise race is tomorrow.\nThen I will have the opportunity
-    to pour something him in \nhis refreshment drink."
+  Text: 'The next Race of Quick Demise is tomorrow.
+
+    Then I will have the opportunity
+    to pour something in his drink.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

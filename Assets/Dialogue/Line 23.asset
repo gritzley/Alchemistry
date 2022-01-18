@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 98.66667, y: 40}
   Title: retirement
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'I think he''s ready for his retirement from...life.
+  Text: 'I think he''s ready for his retirement. <pause=0.5> From life. <pause=0.5>
 
-    A grand finale
-    for his story.'
+    A
+    grand finale for his story.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

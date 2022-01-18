@@ -18,7 +18,7 @@ MonoBehaviour:
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: 'Thenceforth he just kept winning.
 
-    Nobody can beat him.'
+    Nobody could ever beat him.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

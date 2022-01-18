@@ -19,10 +19,10 @@ MonoBehaviour:
   Text: 'I can already see the grand ceremony.
 
     Blooming flower arrangments,
-    a big imposing tombstone...'
+    a big imposing tombstone ...'
   Notes: 
-  AnswerLeft: Seems like you have already everything planned.
-  AnswerRight: Aren't flowers your...you know...
+  AnswerLeft: Seems like you already have everything planned.
+  AnswerRight: Aren't flowers your ... you know ...
   HasAnswers: 1
   _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 518dd4e1833bbd040881326018ab2fee, type: 2}

@@ -18,7 +18,8 @@ MonoBehaviour:
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
   Text: 'The races are growing stagnant.
 
-    He achieved everything he dreamed of.'
+    He achieved everything he could have
+    dreamed of.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 146.66666, y: 40}
   Title: deadliest obstacle
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'He is the defending champion of the deadliest obstacle race. '
+  Text: 'He is the defending champion on the deadliest of obstacle races. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

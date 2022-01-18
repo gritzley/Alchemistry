@@ -16,12 +16,13 @@ MonoBehaviour:
   Size: {x: 87.33333, y: 40}
   Title: Suspect
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'They mustn''t suspect any external influences.
+  Text: 'There mustn''t be any suspicion of external influences.
 
-    It''d be ideal if his
-    passing seems like some sort of a....
+    It''d be ideal
+    if his passing seemed like some sort of a <speed=5>...<speed=30>
 
-    tragic accident.'
+    tragic
+    accident.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
