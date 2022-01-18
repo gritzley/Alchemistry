@@ -152,6 +152,7 @@ public class TextDisplay : Interactible
                 Single.TryParse(match.Groups["value"]?.Value, out value);
                 switch (match.Groups["command"].Value.ToLower())
                 {
+                    // colors
                     case "red":
                         color = Color.red;
                         break;
@@ -174,6 +175,7 @@ public class TextDisplay : Interactible
                     case "gray":
                         color = Color.grey;
                         break;
+                    // Animations
                     case "bob":
                         isBobbing = true;
                         break;
@@ -186,6 +188,7 @@ public class TextDisplay : Interactible
                     case "endwiggle":
                         isWiggling = false;
                         break;
+                    // Pacing
                     case "textspeed":
                         textSpeed = value;
                         break;
