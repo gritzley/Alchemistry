@@ -226,7 +226,7 @@ public class StoryEditor : EditorWindow
                             case ViewState.DialogueView:
                                 contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
                                 contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
-                        
+
                                 contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
                                 contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);
                                 contextMenu.AddItem(new GUIContent("I am lost, go to the last node I added"), false, GoToLastNode);
