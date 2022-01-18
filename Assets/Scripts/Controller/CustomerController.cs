@@ -21,7 +21,7 @@ public class CustomerController : Interactible
         currentQuest = CustomerDefinition.StartQuest;
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
-        HandleDialogueLine(CurrentDialogueLine);
+        HandleCurrentDialogueLine();
     }
 
     public void HandleCurrentDialogueLine() => HandleDialogueLine(CurrentDialogueLine);
