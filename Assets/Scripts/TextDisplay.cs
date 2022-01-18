@@ -189,8 +189,21 @@ public class TextDisplay : Interactible
                         isWiggling = false;
                         break;
                     // Pacing
+                    case "speed":
                     case "textspeed":
                         textSpeed = value;
+                        break;
+                    case "crawl":
+                        textSpeed = 5.0f;
+                        break;
+                    case "slow":
+                        textSpeed = 15.0f;
+                        break;
+                    case "normal":
+                        textSpeed = 30.0f;
+                        break;
+                    case "fast":
+                        textSpeed = 60.0f;
                         break;
                     case "pause":
                         yield return new WaitForSeconds(value);
