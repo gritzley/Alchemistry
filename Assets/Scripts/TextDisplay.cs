@@ -83,7 +83,7 @@ public class TextDisplay : Interactible
         // These matches can be used to iterate over the text letter by letter
         // MatchGroups: "command" and "character"
         // Note: The Characterstring contains all characters contained in the FontTexture and acts as a filter for unsupported characters.s
-        Regex regex = new Regex($"((<(?<command>\\w*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[{CharacterString}\\n]+?))");
+        Regex regex = new Regex($"((<(?<command>[\\w]*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[{CharacterString}\\n]+?))");
         MatchCollection matches = regex.Matches(text);
 
         // Flags for how letters are rendered
