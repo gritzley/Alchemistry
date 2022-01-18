@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 1
   m_EditorClassIdentifier: 
-  Position: {x: 650, y: 221}
+  Position: {x: 651, y: 221}
   Size: {x: 110, y: 65}
   Title: Introduction
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: I'm Rumo the local Grave tender.
+  Text: I'm Rumo, the local Gravetender.
   Notes: 
-  AnswerLeft: A pleasure to meet you, Grave tender.
-  AnswerRight: We have a Grave tender around here?
+  AnswerLeft: A pleasure to meet you, Gravetender.
+  AnswerRight: We have a Gravetender around here?
   HasAnswers: 1
   _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 65f5dadeb53100d41bba0a2ac75f5012, type: 2}

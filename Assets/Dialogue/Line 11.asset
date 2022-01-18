@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 11
   m_EditorClassIdentifier: 
-  Position: {x: 1728, y: 236}
+  Position: {x: 1727, y: 236}
   Size: {x: 72.66667, y: 65}
   Title: Atrius
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'There''s a centaur, you may have heard of him.
+  Text: 'There''s a centaur, who you may have heard of:
 
     Atrius the unbeatable
     sun of the Race of Quick Demise.'

@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 86, y: 40}
   Title: Undead
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "And don't get me started on all the undead, who have the boldness to come
-    back as ghosts, zombies or other \r\ndeath resisting troublemakers."
+  Text: "And don't get me started on all the undead, who have the audacity to come
+    back as ghosts, zombies or other \rdeath-resistant troublemakers."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

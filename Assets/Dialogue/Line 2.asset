@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 90.66667, y: 40}
   Title: Services
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: I know my services aren't as high in demand as they used to be.
+  Text: I know, my services aren't as high in demand as they used to be.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

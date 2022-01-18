@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 5
   m_EditorClassIdentifier: 
-  Position: {x: 1027, y: 225}
+  Position: {x: 1027, y: 224}
   Size: {x: 107.333336, y: 40}
   Title: Long-living
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "They either use any means necessary to prolong \ntheir boring lives or are
-    natural long-living."
+  Text: "They either use any means necessary to prolong \ntheir boring lives, or
+    they are natural long-living."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

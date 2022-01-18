@@ -16,8 +16,14 @@ MonoBehaviour:
   Size: {x: 100.66667, y: 40}
   Title: Profession
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "My profession isn't as satisfying as it used to be. \r\nNot many people
-    are keen on dying these days."
+  Text: 'My profession isn''t as satisfying
+
+    as it used to be.<pause=0.5>
+
+    Not
+    many people are keen on
+
+    dying these days.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

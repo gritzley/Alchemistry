@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 94.66667, y: 40}
   Title: Splendid!
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: Splendid! Then we don't need to hold up with moral trvilalities.
+  Text: Splendid! Then we don't need to worry ourselves with moral trvilalities.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
