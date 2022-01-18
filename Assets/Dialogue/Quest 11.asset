@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Quest 11
   m_EditorClassIdentifier: 
   Position: {x: 1006, y: -139}
-  Size: {x: 200, y: 40}
-  Title: Didn't kill god killed dragon
+  Size: {x: 245.33333, y: 40}
+  Title: End 6 - Didn't kill god killed dragon
   PrecedingStartNode: {fileID: 11400000, guid: 0da4b0e3e6a3bcd4592e23afc766e8bd, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Quest 6
   m_EditorClassIdentifier: 
   Position: {x: 695.5, y: -102}
-  Size: {x: 172.66667, y: 40}
-  Title: Ending1 Sus by dragon
+  Size: {x: 190.66667, y: 40}
+  Title: End 1 - Hunted by Dragon
   PrecedingStartNode: {fileID: 11400000, guid: b96fd81fc91c6424fbeba5a5bd09c568, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:

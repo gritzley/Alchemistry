@@ -8,7 +8,7 @@ public abstract class StoryNode : ScriptableObject
 {
     [NonSerialized] public GUIStyle style, selectedStyle;
     public Vector2 Position, Size;
-    [NonSerialized] public GUIStyle LabelStyle;
+    [NonSerialized] public GUIStyle LabelStyle, NotificationStyle;
     [NonSerialized] public Rect rect;
     [NonSerialized] public bool isDragging;
     public string Title;
@@ -32,11 +32,16 @@ public abstract class StoryNode : ScriptableObject
         selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
         selectedStyle.border = new RectOffset(12, 12, 12, 12);
 
-        // The Styl with which Labels are written
+        // The Style with which Labels are written
         LabelStyle = new GUIStyle();
         LabelStyle.alignment = TextAnchor.UpperCenter;
         LabelStyle.padding = new RectOffset(20, 20, 10, 0);
         LabelStyle.normal.textColor = Color.white;
+
+
+        NotificationStyle = new GUIStyle();
+        NotificationStyle.normal.textColor = Color.white;
+        NotificationStyle.padding = new RectOffset(8, 8, 2, 0);
 
         InPoint = new ConnectionPoint(this, ConnectionPointType.In, OnInPointClick, 0);
     }
@@ -97,6 +102,19 @@ public abstract class StoryNode : ScriptableObject
                 }
                 break;
         }
+    }
+
+    public void DrawNotification(int severity = 0)
+    {
+        string path = "builtin skins/darkskin/images/node2.png";
+        switch (severity)
+        {
+            case 1: path = "builtin skins/darkskin/images/node4.png"; break;
+            case 2: path = "builtin skins/darkskin/images/node5.png"; break;
+            case 3: path = "builtin skins/darkskin/images/node6.png"; break;
+        }
+        NotificationStyle.normal.background = EditorGUIUtility.Load(path) as Texture2D;
+        GUI.Box(new Rect(rect.position + new Vector2 (rect.width - 20, -2), new Vector2(20, 20)), "!", NotificationStyle);
     }
 
     /// <summary>

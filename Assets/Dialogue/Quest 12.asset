@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Quest 12
   m_EditorClassIdentifier: 
   Position: {x: 705, y: -429}
-  Size: {x: 125.333336, y: 40}
-  Title: End 8 Less sus
+  Size: {x: 176.66667, y: 40}
+  Title: End 8 - Less suspicious
   PrecedingStartNode: {fileID: 11400000, guid: 1a82a6780d6c93944969497947ef63b1, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   Links:

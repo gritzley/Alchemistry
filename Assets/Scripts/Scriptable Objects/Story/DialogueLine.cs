@@ -14,7 +14,6 @@ public class DialogueLine : DialogueNode
 
     public bool HasAnswers = false;
     [SerializeField] private bool _isReceivingState = false;
-    private GUIStyle attentionIconStyle;
     public bool IsReceivingState
     {
         get => _isReceivingState;
@@ -86,11 +85,6 @@ public class DialogueLine : DialogueNode
         if (NextLeft != null && !ParentQuest.DialogueNodes.Contains(NextLeft)) ParentQuest.DialogueNodes.Add(NextLeft);
         if (NextRight != null && !ParentQuest.DialogueNodes.Contains(NextRight)) ParentQuest.DialogueNodes.Add(NextRight);
 
-        attentionIconStyle = new GUIStyle();
-        attentionIconStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node5.png") as Texture2D;
-        attentionIconStyle.normal.textColor = Color.white;
-        attentionIconStyle.padding = new RectOffset(8, 8, 2, 0);
-
         IsReceivingState = IsReceivingState; // set this to itself so that styles are set. it's stupid but it's quick.
     }
 
@@ -158,8 +152,8 @@ public class DialogueLine : DialogueNode
         base.Draw(offset, state);
         GUI.Label(rect, Title, LabelStyle);
 
-        if (Notes != String.Empty && Notes != null)
-            GUI.Box(new Rect(rect.position + new Vector2 (rect.width - 20, -2), new Vector2(20, 20)), "!", attentionIconStyle);
+        if (Notes != String.Empty && Notes != null) DrawNotification(0);
+        if (Text == null || Text == String.Empty) DrawNotification(2);
     }
     public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
     {

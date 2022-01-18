@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 110.666664, y: 65}
   Title: New Clients
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "I found myself wondering, whether I could rely on your discrete \nservices
-    to aquire new ... clientele."
+  Text: "I found myself <pause=1>wondering, whether I could rely on your discrete
+    \nservices to aquire new ... clientele."
   Notes: 
   AnswerLeft: Discretion is one of my most valued qualities.
   AnswerRight: Uhmm ... excuse me?
