@@ -91,6 +91,7 @@ public class DialogueLine : DialogueNode
         attentionIconStyle.normal.textColor = Color.white;
         attentionIconStyle.padding = new RectOffset(8, 8, 2, 0);
 
+        IsReceivingState = IsReceivingState; // set this to itself so that styles are set. it's stupid but it's quick.
     }
 
     public override void OnOutPointClick(int index)
