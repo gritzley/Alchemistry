@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 107.333336, y: 40}
   Title: Appropriate
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "The only way they'll stay in their appropriate grave, \nis if they lived
+  Text: "The only way they'll stay in their appropriate graves \nis if they lived
     a fulfilled life."
   Notes: 
   AnswerLeft: 
