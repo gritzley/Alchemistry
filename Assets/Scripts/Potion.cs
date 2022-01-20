@@ -9,6 +9,7 @@ public class Potion : Pickupable
 
     void OnEnable()
     {
-        GetComponentInChildren<TextDisplay>()?.DisplayText(Definition.name);
+        if (Definition != null)
+            GetComponentInChildren<DiegeticText>()?.DisplayText(Definition.name);
     }
 }
