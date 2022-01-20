@@ -186,14 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e61cc28b801c1374a9ecfc97bdaa5899, type: 3}
     - target: {fileID: 2821426418191901363, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: Text
-      value: 'My profession isn''t as satisfying
-
-        as it used to be.<pause=0.5>
-
-        Not
-        many people are keen on
-
-        dying these days.'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4701607088338663547, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: m_RootOrder
@@ -241,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5641773837687503152, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 5641773837687503152, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -282,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e61cc28b801c1374a9ecfc97bdaa5899, type: 3}
     - target: {fileID: 2821426418191901363, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: Text
-      value: Continue
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4701607088338663547, guid: 785766967b810414995e6c0c2604fb5b, type: 3}
       propertyPath: m_RootOrder
