@@ -11,7 +11,16 @@ public class Quest : StoryNode
 
     // ---- STORY TREE ----
     public DialogueNode PrecedingStartNode;
-    [NonSerialized] public DialogueLine CurrentLine;
+    private DialogueLine _currentLine;
+    public DialogueLine CurrentLine
+    {
+        get
+        {
+            if (_currentLine == null) _currentLine = PrecedingStartNode?.NextLine;
+            return _currentLine;
+        }
+        set => _currentLine = value;
+    }
     public CustomerDefinition Customer;
 
     // ---- LINKS ----
@@ -43,7 +52,6 @@ public class Quest : StoryNode
     {
         base.OnEnable();
         UpdateLinks();
-        CurrentLine = PrecedingStartNode?.NextLine;
         Size.y = 40;
         OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
         DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
