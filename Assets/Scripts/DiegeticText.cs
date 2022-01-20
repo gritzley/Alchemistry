@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -9,6 +10,8 @@ using UnityEditor;
 
 public class DiegeticText : MonoBehaviour
 {
+    public Action OnClickCallback;
+    public bool ClickActive = true;
     [SerializeField] private Canvas Canvas;
     [SerializeField] private string Text;
     [SerializeField] private Font Font;
@@ -34,17 +37,23 @@ public class DiegeticText : MonoBehaviour
         DisplayText(Text);
     }
 
-    public void DisplayText(string text)
+    public void DisplayText(string text, Action callback = null)
     {
+        Text = text;
         ClearLetters();
         CreateLetters(text);
         AlignLetters();
+        StartCoroutine(TypeText(callback));
     }
-    private void ClearLetters()
+    public void ClearLetters()
     {
-        if (letters != null)
-            foreach(Text letter in Canvas.GetComponentsInChildren<Text>())
-                DestroyImmediate(letter.gameObject);
+        StopAllCoroutines();
+
+        foreach(Text letter in Canvas.GetComponentsInChildren<Text>())
+        {
+            if (EditorApplication.isPlaying) Destroy(letter.gameObject);
+            else DestroyImmediate(letter.gameObject);
+        }
         
         letters = new List<Text>();
     }
@@ -56,6 +65,7 @@ public class DiegeticText : MonoBehaviour
             GameObject ngo = new GameObject("Letter");
             ngo.transform.SetParent(Canvas.transform);
             ngo.transform.position = Canvas.transform.position;
+            ngo.transform.rotation = Canvas.transform.rotation;
             ngo.transform.localScale = Vector3.one;
 
             Text text = ngo.AddComponent<Text>();
@@ -65,8 +75,19 @@ public class DiegeticText : MonoBehaviour
             text.fontSize = FontSize;
             text.enabled = false;
 
+            EventTrigger trigger = ngo.AddComponent<EventTrigger>();
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerDown;
+            entry.callback.AddListener(data => OnPointerDownDelegate((PointerEventData)data));
+            trigger.triggers.Add(entry);
+
             letters.Add(text);
         }
+    }
+
+    public void OnPointerDownDelegate(PointerEventData data)
+    {
+        if (ClickActive) OnClickCallback?.Invoke();
     }
 
     private void AlignLetters()
@@ -114,19 +135,21 @@ public class DiegeticText : MonoBehaviour
             }
             
             float lineHeight = letters[0].preferredHeight * Canvas.transform.localScale.x + lineSpacing;
-            lines.ForEach(e => e.ForEach(e => e.transform.position += e.transform.up * lineHeight));
+            lines.ForEach(e => e.ForEach(e => e.transform.position += e.transform.up * lineHeight / 2));
+            line.ForEach(e => e.transform.position += e.transform.up * lineHeight * lines.Count / -2);
             lines.Add(line);
         }
+    }
 
-        IEnumerator TypeText()
+    IEnumerator TypeText(Action onDone = null)
+    {
+        foreach (Text letter in letters)
         {
-            foreach (Text letter in letters)
-            {
-                letter.enabled = true;
-                if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
-            }
-            yield return null;
+            letter.enabled = true;
+            if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
         }
-        new Task(TypeText());
+        yield return null;
+
+        onDone?.Invoke();
     }
 }

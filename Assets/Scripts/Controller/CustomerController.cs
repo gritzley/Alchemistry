@@ -7,9 +7,9 @@ using System.Linq;
 [ExecuteInEditMode]
 public class CustomerController : Interactible
 {
-    public TextDisplay MainTextDisplay;
-    public TextDisplay LeftAnswerTextDisplay;
-    public TextDisplay RightAnswerTextDisplay;
+    public DiegeticText MainTextDisplay;
+    public DiegeticText LeftAnswerTextDisplay;
+    public DiegeticText RightAnswerTextDisplay;
     public PotionDefinition LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
     public Quest currentQuest;
