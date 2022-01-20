@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System;
+using UnityEditor;
+
 
 public class DiegeticText : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class DiegeticText : MonoBehaviour
     [SerializeField] private string Text;
     [SerializeField] private Font Font;
     [SerializeField] private int FontSize = 50;
+    private float textSpeed = 30;
     private float letterSpacing = 0.01f;
     private float lineSpacing = 0.05f;
     private RectTransform _canvasRect;
@@ -59,6 +63,7 @@ public class DiegeticText : MonoBehaviour
             text.alignment = TextAnchor.MiddleCenter;
             if (Font) text.font = Font;
             text.fontSize = FontSize;
+            text.enabled = false;
 
             letters.Add(text);
         }
@@ -69,6 +74,7 @@ public class DiegeticText : MonoBehaviour
         float GetLetterWidth(Text letter) => letter.preferredWidth * Canvas.transform.localScale.x;
         float GetWordWidth(Text[] word) => word.Select(e => GetLetterWidth(e) + letterSpacing).Sum() - letterSpacing;        
 
+        // Split the text into words;
         int charIndex = 0;
         List<Text[]> words = new List<Text[]>();
         List<List<Text>> lines = new List<List<Text>>();
@@ -83,6 +89,7 @@ public class DiegeticText : MonoBehaviour
             charIndex = nextSpaceIndex;
         }
 
+        // split the words into lines
         int wordIndex = 0;
         while (wordIndex < words.Count)
         {
@@ -91,17 +98,16 @@ public class DiegeticText : MonoBehaviour
             float lineWidth = 0;
             do
             {
-                foreach(Text letter in words[wordIndex])
+                foreach (Text letter in words[wordIndex])
                     line.Add(letter);
+
                 lineWidth += GetWordWidth(words[wordIndex]);
-
                 wordIndex++;
-
             }
             while (wordIndex < words.Count && lineWidth + GetWordWidth(words[wordIndex]) < maxLineWidth);
 
             float cursor = lineWidth / -2;
-            foreach(Text letter in line)
+            foreach (Text letter in line)
             {
                 letter.transform.position += letter.transform.right * (cursor + GetLetterWidth(letter) / 2);
                 cursor += GetLetterWidth(letter) + letterSpacing;
@@ -111,5 +117,16 @@ public class DiegeticText : MonoBehaviour
             lines.ForEach(e => e.ForEach(e => e.transform.position += e.transform.up * lineHeight));
             lines.Add(line);
         }
+
+        IEnumerator TypeText()
+        {
+            foreach (Text letter in letters)
+            {
+                letter.enabled = true;
+                if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+            }
+            yield return null;
+        }
+        new Task(TypeText());
     }
 }
