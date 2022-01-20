@@ -18,9 +18,9 @@ public class DiegeticText : MonoBehaviour
     [SerializeField] private Font Font;
     [SerializeField] private int FontSize = 50;
     [SerializeField] private Color MainColor = Color.white;
-    private float textSpeed = 30;
-    private float letterSpacing = 0.01f;
-    private float lineSpacing = 0.05f;
+    [SerializeField] private float textSpeed = 30;
+    [SerializeField] private float letterSpacing = 0.01f;
+    [SerializeField] private float lineSpacing = 0.05f;
     private RectTransform _canvasRect;
     private float maxLineWidth
     {
