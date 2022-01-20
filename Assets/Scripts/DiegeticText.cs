@@ -103,7 +103,7 @@ public class DiegeticText : MonoBehaviour
             float cursor = lineWidth / -2;
             foreach(Text letter in line)
             {
-                letter.transform.position += letter.transform.right * cursor;
+                letter.transform.position += letter.transform.right * (cursor + GetLetterWidth(letter) / 2);
                 cursor += GetLetterWidth(letter) + letterSpacing;
             }
             
