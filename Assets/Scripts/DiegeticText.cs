@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System;
+using System.Text.RegularExpressions;
 using UnityEditor;
 
 
@@ -16,6 +17,7 @@ public class DiegeticText : MonoBehaviour
     [SerializeField] private string Text;
     [SerializeField] private Font Font;
     [SerializeField] private int FontSize = 50;
+    [SerializeField] private Color MainColor = Color.white;
     private float textSpeed = 30;
     private float letterSpacing = 0.01f;
     private float lineSpacing = 0.05f;
@@ -40,10 +42,13 @@ public class DiegeticText : MonoBehaviour
     public void DisplayText(string text, Action callback = null)
     {
         Text = text;
+        Regex regex = new Regex("((<(?<command>[\\w]*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[\\w.,?!'`\\s\\n]+?))");
+        Match[] matches = regex.Matches(text).Cast<Match>().ToArray();
+
         ClearLetters();
-        CreateLetters(text);
+        CreateLetters(matches.Where(e => e.Groups["character"].Success).Select(e => e.Groups["character"].Value[0]));
         AlignLetters();
-        StartCoroutine(TypeText(callback));
+        StartCoroutine(TypeText(matches, callback));
     }
     public void ClearLetters()
     {
@@ -125,7 +130,7 @@ public class DiegeticText : MonoBehaviour
                 lineWidth += GetWordWidth(words[wordIndex]);
                 wordIndex++;
             }
-            while (wordIndex < words.Count && lineWidth + GetWordWidth(words[wordIndex]) < maxLineWidth);
+            while (wordIndex < words.Count && words[wordIndex][0].text != "\n" && lineWidth + GetWordWidth(words[wordIndex]) < maxLineWidth);
 
             float cursor = lineWidth / -2;
             foreach (Text letter in line)
@@ -141,12 +146,85 @@ public class DiegeticText : MonoBehaviour
         }
     }
 
-    IEnumerator TypeText(Action onDone = null)
+    IEnumerator TypeText(IEnumerable<Match> matches, Action onDone = null)
     {
-        foreach (Text letter in letters)
+        Color color = MainColor;
+        bool isBobbing, isWiggling = false;
+
+        int letterIndex = 0;
+        foreach (Match match in matches)
         {
-            letter.enabled = true;
-            if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+            if (match.Groups["character"].Success)
+            {
+                letters[letterIndex].color = color;
+                letters[letterIndex].enabled = true;
+                letterIndex++;
+                if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+            }
+            if (match.Groups["command"].Success)
+            {
+                float value;
+                Single.TryParse(match.Groups["value"]?.Value, out value);
+                switch (match.Groups["command"].Value.ToLower())
+                {
+                    // colors
+                    case "red":
+                        color = Color.red;
+                        break;
+                    case "white":
+                        color = Color.white;
+                        break;
+                    case "blue":
+                        color = Color.blue;
+                        break;
+                    case "yellow":
+                        color = Color.yellow;
+                        break;
+                    case "green":
+                        color = Color.green;
+                        break;
+                    case "black":
+                        color = Color.black;
+                        break;
+                    case "grey":
+                    case "gray":
+                        color = Color.grey;
+                        break;
+                    // Animations
+                    case "bob":
+                        isBobbing = true;
+                        break;
+                    case "endbob":
+                        isBobbing = false;
+                        break;
+                    case "wiggle":
+                        isWiggling = true;
+                        break;
+                    case "endwiggle":
+                        isWiggling = false;
+                        break;
+                    // Pacing
+                    case "speed":
+                    case "textspeed":
+                        textSpeed = value;
+                        break;
+                    case "crawl":
+                        textSpeed = 5.0f;
+                        break;
+                    case "slow":
+                        textSpeed = 15.0f;
+                        break;
+                    case "normal":
+                        textSpeed = 30.0f;
+                        break;
+                    case "fast":
+                        textSpeed = 60.0f;
+                        break;
+                    case "pause":
+                        yield return new WaitForSeconds(value);
+                        break;
+                }
+            }
         }
         yield return null;
 
