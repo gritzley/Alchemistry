@@ -161,6 +161,8 @@ public class Quest : StoryNode
         if (state == 0) InPoint.Draw();
         base.Draw(offset);
         GUI.Label(rect, Title, LabelStyle);
+
+        if (Links.Exists(e => e.NextQuest == null || !Customer.Quests.Contains(e.NextQuest))) DrawNotification(2);
     }
 
     public override void ProcessEvent(Event e, int state, List<StoryNode> relatedNodes = null)

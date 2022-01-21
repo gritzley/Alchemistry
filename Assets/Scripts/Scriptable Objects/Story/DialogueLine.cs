@@ -154,6 +154,7 @@ public class DialogueLine : DialogueNode
         GUI.Label(rect, Title, LabelStyle);
 
         if (Notes != String.Empty && Notes != null) DrawNotification(0);
+        if (HasAnswers && NextLeft == null) DrawNotification(1);
         if (Text == null || Text == String.Empty) DrawNotification(2);
     }
     public override void ProcessEvent(Event e, int state = 0, List<StoryNode> relatedNodes = null)
