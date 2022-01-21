@@ -21,9 +21,9 @@ public class DiegeticTextEditor : Editor
         fontProperty = serializedObject.FindProperty("Font");
         fontSizeProperty = serializedObject.FindProperty("FontSize");
         canvasProperty = serializedObject.FindProperty("Canvas");
-        lineSpacingProperty = serializedObject.FindProperty("lineSpacing");
-        textSpeedProperty = serializedObject.FindProperty("textSpeed");
-        letterSpacingProperty = serializedObject.FindProperty("letterSpacing");
+        textSpeedProperty = serializedObject.FindProperty("TextSpeed");
+        lineSpacingProperty = serializedObject.FindProperty("LineSpacing");
+        letterSpacingProperty = serializedObject.FindProperty("LetterSpacing");
     }
 
     public override void OnInspectorGUI()

@@ -18,9 +18,9 @@ public class DiegeticText : MonoBehaviour
     [SerializeField] private Font Font;
     [SerializeField] private int FontSize = 50;
     [SerializeField] private Color MainColor = Color.white;
-    [SerializeField] private float textSpeed = 30;
-    [SerializeField] private float letterSpacing = 0.01f;
-    [SerializeField] private float lineSpacing = 0.05f;
+    [SerializeField] private float TextSpeed = 30;
+    [SerializeField] private float LetterSpacing = 0.01f;
+    [SerializeField] private float LineSpacing = 0.05f;
     private RectTransform _canvasRect;
     private float maxLineWidth
     {
@@ -102,7 +102,7 @@ public class DiegeticText : MonoBehaviour
     private void AlignLetters()
     {
         float GetLetterWidth(Text letter) => letter.preferredWidth * Canvas.transform.localScale.x;
-        float GetWordWidth(Text[] word) => word.Select(e => GetLetterWidth(e) + letterSpacing).Sum() - letterSpacing;        
+        float GetWordWidth(Text[] word) => word.Select(e => GetLetterWidth(e) + LetterSpacing).Sum() - LetterSpacing;        
 
         // Split the text into words;
         int charIndex = 0;
@@ -140,10 +140,10 @@ public class DiegeticText : MonoBehaviour
             foreach (Text letter in line)
             {
                 letter.transform.position += letter.transform.right * (cursor + GetLetterWidth(letter) / 2);
-                cursor += GetLetterWidth(letter) + letterSpacing;
+                cursor += GetLetterWidth(letter) + LetterSpacing;
             }
             
-            float lineHeight = letters[0].preferredHeight * Canvas.transform.localScale.x + lineSpacing;
+            float lineHeight = letters[0].preferredHeight * Canvas.transform.localScale.x + LineSpacing;
             lines.ForEach(e => e.ForEach(e => e.transform.position += e.transform.up * lineHeight / 2));
             line.ForEach(e => e.transform.position += e.transform.up * lineHeight * lines.Count / -2);
             lines.Add(line);
@@ -153,7 +153,8 @@ public class DiegeticText : MonoBehaviour
     IEnumerator TypeText(IEnumerable<Match> matches, Action onDone = null)
     {
         Color color = MainColor;
-        bool isBobbing, isWiggling = false;
+        bool isBobbing, isWiggling;
+        float textSpeed = TextSpeed;
 
         int letterIndex = 0;
         foreach (Match match in matches)
@@ -163,11 +164,10 @@ public class DiegeticText : MonoBehaviour
                 letters[letterIndex].color = color;
                 letters[letterIndex].enabled = true;
                 letterIndex++;
-#if !UNITY_EDITOR
-                yield return new WaitForSeconds(1.0f / textSpeed);
-#endif
 #if UNITY_EDITOR
                 if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+#else
+                yield return new WaitForSeconds(1.0f / textSpeed);
 #endif
             }
             if (match.Groups["command"].Success)
@@ -230,7 +230,11 @@ public class DiegeticText : MonoBehaviour
                         textSpeed = 60.0f;
                         break;
                     case "pause":
-                        yield return new WaitForSeconds(value);
+#if UNITY_EDITOR
+                        if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+#else
+                        yield return new WaitForSeconds(1.0f / textSpeed);
+#endif
                         break;
                 }
             }
