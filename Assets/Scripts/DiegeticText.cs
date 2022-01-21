@@ -158,10 +158,13 @@ public class DiegeticText : MonoBehaviour
 
     IEnumerator TypeText(IEnumerable<Match> matches, Action onDone = null)
     {
+
+#if UNITY_EDITOR
+        if (EditorApplication.isPlaying) yield return null;
+        skip = !EditorApplication.isPlaying;
+#else
         yield return null; // this takes us out of the frame of the mousebuttondown event that starts this coroutine
         skip = false;
-#if UNITY_EDITOR
-        skip = !EditorApplication.isPlaying;
 #endif
 
         Color color = MainColor;
