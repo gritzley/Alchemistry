@@ -13,6 +13,8 @@ public class CustomerDefinition : ScriptableObject
     public string Name;
     public Quest StartQuest;
     public List<Quest> Quests;
+
+#if UNITY_EDITOR
     public static List<CustomerDefinition> GetAllCustomerDefinitions()
     {
         return AssetDatabase.FindAssets("t:CustomerDefinition")
@@ -20,5 +22,7 @@ public class CustomerDefinition : ScriptableObject
         .Select( e => (CustomerDefinition)AssetDatabase.LoadAssetAtPath(e, typeof(CustomerDefinition)))
         .ToList();
     }
+#endif
+
 }
 

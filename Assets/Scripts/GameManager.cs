@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public List<Quest> Quests;
     public GameObject IngredientPrefab;
     public FadeCamera fade;
+    public List<PotionDefinition> Potions;
     public GameManager()
     {
         // Instantiate the GameManager. Throw an error if there are multiple GameManagers.
@@ -24,6 +25,9 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         fade = PlayerController.Instance.GetComponentInChildren<FadeCamera>();
+#if UNITY_EDITOR
+        Potions = PotionDefinition.GetAllPotionAssets();
+#endif
     }
 
     public void AdvanceScene()

@@ -14,7 +14,6 @@ public class PotionBranch : DialogueNode
         public DialogueNode NextNode;
     }
     public List<Link> Links;
-    [NonSerialized] public List<ConnectionPoint> OutPoints;
     
     public override DialogueLine NextLine
     {
@@ -36,11 +35,13 @@ public class PotionBranch : DialogueNode
             }
         }
     }
-
     public PotionBranch()
     {
         Links = new List<Link>();
     }
+
+#if UNITY_EDITOR
+    [NonSerialized] public List<ConnectionPoint> OutPoints;
     public override void OnEnable()
     {
         Title = "Potion Branch";
@@ -166,4 +167,7 @@ public class PotionBranch : DialogueNode
             OutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, i));
         }
     }
+
+#endif
+
 }

@@ -65,15 +65,13 @@ public class KettleController : Interactible
         LockInLastStep();
         if (Steps.Count > 0)
         {
-            List<PotionDefinition> Potions = PotionDefinition.GetAllPotionAssets().Where( e => e.ValidateSteps(Steps) ).ToList();
+            List<PotionDefinition> Potions = GameManager.Instance.Potions.Where( e => e.ValidateSteps(Steps) ).ToList();
             if (Potions.Count != 1)
             {
-                Debug.Log("Failed Potion");
                 GameManager.Instance.CurrentCustomer.ReceivePotion(FailedPotionDefinition);
             }
             else
             {
-                Debug.Log(Potions[0].name);
                 GameManager.Instance.CurrentCustomer.ReceivePotion(Potions[0]);
             }
         }

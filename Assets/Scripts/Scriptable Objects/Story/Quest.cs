@@ -33,47 +33,32 @@ public class Quest : StoryNode
 
     public List<Link> Links;
 
+#if UNITY_EDITOR
     // ---- EDITOR ----
     [NonSerialized] private ConnectionPoint OutPoint;
     public List<DialogueNode> DialogueNodes;
     [NonSerialized] public Action<Quest> ViewDialogue;
+
+#endif
     
     // CONSTRUCTOR
     public Quest() : base()
     {
         Links = new List<Link>();
+
+#if UNITY_EDITOR
         DialogueNodes = new List<DialogueNode>();
+#endif
+
     }
 
-    /// <summary>
-    /// Set initial Values when enabling this quest
-    /// </summary>
-    public override void OnEnable()
+#if !UNITY_EDITOR
+
+    public void OnEnable()
     {
-        base.OnEnable();
-        UpdateLinks();
-        Size.y = 40;
-        OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
-        DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
         CurrentLine = PrecedingStartNode.NextLine;
     }
-
-    /// <summary>
-    /// Update the LinkList to include a Link for each Potion asset
-    /// </summary>
-    public void UpdateLinks()
-    {
-        List<PotionDefinition> potions = PotionDefinition.GetAllPotionAssets();
-
-        Links.RemoveAll( e => !potions.Contains(e.Potion));
-        
-        potions
-        .Except( Links.Select(e => e.Potion).Where(e => potions.Contains(e)) )
-        .ToList()
-        .ForEach( e => Links.Add(new Link() { Potion = e }));
-
-        Links = Links.OrderBy(e => e.Potion.name).ToList();
-    }
+#endif
 
     public bool AdvanceDialogue(int i = 0)
     {
@@ -105,6 +90,39 @@ public class Quest : StoryNode
 
         Debug.LogWarning($"Quest {name} has no link for potion {potion.name}.");
         return null;
+    }
+
+
+#if UNITY_EDITOR
+
+    /// <summary>
+    /// Set initial Values when enabling this quest
+    /// </summary>
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        UpdateLinks();
+        Size.y = 40;
+        OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
+        DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
+        CurrentLine = PrecedingStartNode.NextLine;
+    }
+
+    /// <summary>
+    /// Update the LinkList to include a Link for each Potion asset
+    /// </summary>
+    public void UpdateLinks()
+    {
+        List<PotionDefinition> potions = PotionDefinition.GetAllPotionAssets();
+
+        Links.RemoveAll( e => !potions.Contains(e.Potion));
+        
+        potions
+        .Except( Links.Select(e => e.Potion).Where(e => potions.Contains(e)) )
+        .ToList()
+        .ForEach( e => Links.Add(new Link() { Potion = e }));
+
+        Links = Links.OrderBy(e => e.Potion.name).ToList();
     }
 
     public override void OnOutPointClick(int i)
@@ -207,4 +225,6 @@ public class Quest : StoryNode
         }
         return connections;
     }
+#endif
+
 }

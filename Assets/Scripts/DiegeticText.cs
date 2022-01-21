@@ -56,8 +56,12 @@ public class DiegeticText : MonoBehaviour
 
         foreach(Text letter in Canvas.GetComponentsInChildren<Text>())
         {
+#if UNITY_EDITOR
             if (EditorApplication.isPlaying) Destroy(letter.gameObject);
             else DestroyImmediate(letter.gameObject);
+#else
+            Destroy(letter.gameObject);
+#endif
         }
         
         letters = new List<Text>();
@@ -159,7 +163,12 @@ public class DiegeticText : MonoBehaviour
                 letters[letterIndex].color = color;
                 letters[letterIndex].enabled = true;
                 letterIndex++;
+#if !UNITY_EDITOR
+                yield return new WaitForSeconds(1.0f / textSpeed);
+#endif
+#if UNITY_EDITOR
                 if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
+#endif
             }
             if (match.Groups["command"].Success)
             {

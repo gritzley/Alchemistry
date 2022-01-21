@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using System;
 using UnityEngine;
 using UnityEditor;
@@ -63,3 +65,5 @@ public class ConnectionPoint
         GUI.Button(rect, "", style);
     }
 }
+
+#endif

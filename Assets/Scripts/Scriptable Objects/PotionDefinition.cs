@@ -46,6 +46,7 @@ public class PotionDefinition : ScriptableObject
         return true;
     }
 
+#if UNITY_EDITOR
     public static List<PotionDefinition> GetAllPotionAssets()
     {
         return AssetDatabase.FindAssets("t:PotionDefinition")
@@ -53,5 +54,6 @@ public class PotionDefinition : ScriptableObject
         .Select( e => (PotionDefinition)AssetDatabase.LoadAssetAtPath(e, typeof(PotionDefinition)))
         .ToList();
     }
+#endif
 
 }

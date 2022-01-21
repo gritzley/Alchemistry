@@ -11,12 +11,12 @@ public class DialogueLine : DialogueNode
     public string Notes;
     public string AnswerLeft;
     public string AnswerRight;
-
     public bool HasAnswers = false;
     [SerializeField] private bool _isReceivingState = false;
     public bool IsReceivingState
     {
         get => _isReceivingState;
+#if UNITY_EDITOR
         set
         {
             if (value == true)
@@ -38,14 +38,15 @@ public class DialogueLine : DialogueNode
             }
             GUI.changed = true;
         }
+#endif
     }
-
     public DialogueNode NextLeft;
     public DialogueNode NextRight;
+    public override DialogueLine NextLine { get { return this; } }
+
+#if UNITY_EDITOR
 
     public ConnectionPoint OutPointRight, OutPointLeft;
-
-    public override DialogueLine NextLine { get { return this; } }
 
     /// <summary>
     /// Return a list of outConnections from this to 
@@ -176,4 +177,7 @@ public class DialogueLine : DialogueNode
                 break;
         }
     }
+
+#endif
+
 }

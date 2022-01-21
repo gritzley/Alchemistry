@@ -6,6 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public abstract class StoryNode : ScriptableObject
 {
+
+#if UNITY_EDITOR
     [NonSerialized] public GUIStyle style, selectedStyle;
     public Vector2 Position, Size;
     [NonSerialized] public GUIStyle LabelStyle, NotificationStyle;
@@ -182,4 +184,6 @@ public abstract class StoryNode : ScriptableObject
     /// <param name="state">The current state of the window. 0 -> QuestView , 1 -> DialogueView</param>
     /// <returns>All Out Connections of this node</returns>
     public abstract List<Connection> GetOutConnections(int state);
+#endif
+
 }
