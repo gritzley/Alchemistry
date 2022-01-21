@@ -21,6 +21,7 @@ public class DiegeticText : MonoBehaviour
     [SerializeField] private float TextSpeed = 30;
     [SerializeField] private float LetterSpacing = 0.01f;
     [SerializeField] private float LineSpacing = 0.05f;
+    private bool skip;
     private RectTransform _canvasRect;
     private float maxLineWidth
     {
@@ -150,11 +151,15 @@ public class DiegeticText : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) skip = true;
+    }
+
     IEnumerator TypeText(IEnumerable<Match> matches, Action onDone = null)
     {
-        yield return null; // we wait one frame so we let the mousebuttondown event pass that caused this text to appear
-
-        bool skip = false;
+        yield return null; // this takes us out of the frame of the mousebuttondown event that starts this coroutine
+        skip = false;
 #if UNITY_EDITOR
         skip = !EditorApplication.isPlaying;
 #endif
@@ -166,7 +171,6 @@ public class DiegeticText : MonoBehaviour
         int letterIndex = 0;
         foreach (Match match in matches)
         {
-            if (Input.GetMouseButtonDown(0)) skip = true;
             if (match.Groups["character"].Success)
             {
                 letters[letterIndex].color = color;
