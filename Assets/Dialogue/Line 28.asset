@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 28
   m_EditorClassIdentifier: 
-  Position: {x: 3232, y: -119}
+  Position: {x: 3259, y: -114}
   Size: {x: 115.333336, y: 40}
   Title: locker stable
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'But first, his death is paramount. I have some frineds in the course crew,
+  Text: 'But first, his death is paramount.
 
-    who
-    can grant me access to his stable.'
+    I have some friends in the course
+    crew, who can grant me access to his stable.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

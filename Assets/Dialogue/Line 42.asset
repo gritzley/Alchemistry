@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 79.33333, y: 40}
   Title: tumble
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: He aimed for the next jump, when the platform collapsed under his weight
-    leaving him tumbling to the ground.
+  Text: "He aimed for the next jump when, suddenly, \nthe platform collapsed under
+    his weight, leaving him tumbling."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

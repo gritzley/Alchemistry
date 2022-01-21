@@ -16,8 +16,12 @@ MonoBehaviour:
   Size: {x: 68.666664, y: 40}
   Title: brew
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: So if there was something you could brew for me <slow>...<normal> Something
-    that would fit my predicament <slow>...<normal> I'd be eternally grateful.
+  Text: 'So if there was something you could brew for me
+
+    <slow>...<normal> Something
+    that would fit my predicament <slow>...<normal>
+
+    I''d be eternally grateful.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 66, y: 40}
   Title: fight
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: Some sources say he even tired to start a fight with one of his rivals before
-    the race.
+  Text: 'Some sources say, he even tried to start a fight
+
+    with one of his rivals
+    before the race.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

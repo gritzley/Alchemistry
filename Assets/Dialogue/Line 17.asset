@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 132, y: 40}
   Title: former favourite
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: "He was on an unending losing streak. Until one day \nhe won against a fomer
-    favourite."
+  Text: 'He was on an unending losing streak. <pause=0.5>
+
+    Until one day he won
+    against a fomer favourite.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

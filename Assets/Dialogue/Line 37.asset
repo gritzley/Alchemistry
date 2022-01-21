@@ -16,12 +16,11 @@ MonoBehaviour:
   Size: {x: 80.66667, y: 40}
   Title: Energy
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: He outdid himself in the race! Quickly ducking under burning axes, almost
-    dancing through the electro mine field while shooting the crowd blowing kisses.
+  Text: He outdid himself in the race!
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 8c35d82915faef54092a9b2117177d3f, type: 2}
+  NextRight: {fileID: 11400000, guid: 02c1ede8719b14b4bb6e5d679d3a4324, type: 2}

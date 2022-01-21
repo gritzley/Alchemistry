@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 94.66667, y: 40}
   Title: delighted
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "I am truly blooming! \nI'm so busy with preperation for the funeral!\r"
+  Text: "I am truly blooming! \nI'm so busy with preperation for the funeral!."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

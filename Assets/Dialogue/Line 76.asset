@@ -16,10 +16,12 @@ MonoBehaviour:
   Size: {x: 75.33333, y: 40}
   Title: booze
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'He made his fortune producing booze.
+  Text: 'He made his fortune producing spirits.<pause=0.3>
 
-    All of this citys liquor trade
-    is run by him and his underlings.'
+    All of this citys
+    liquor trade is run by him
+
+    and his underlings.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 66, y: 40}
   Title: rope
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'And while balancing on a rope above a pool of hot melted
+  Text: 'And while balancing over a rope above a pool of hot iron,
 
-    iron he dozed
-    of and slipped.'
+    he dozed
+    off <crawl>...<normal> and slipped.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

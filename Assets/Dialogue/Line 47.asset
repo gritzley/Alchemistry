@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 128.66666, y: 40}
   Title: sleep-deprived
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'Maybe he was sleep-deprived from a long night of partying at the wine stellar. '
+  Text: 'Maybe he was sleep-deprived
+
+    from a long night of partying at the wine
+    cellar.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

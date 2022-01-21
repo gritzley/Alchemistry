@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 14
   m_EditorClassIdentifier: 
-  Position: {x: 1709, y: -84}
+  Position: {x: 1774, y: -92}
   Size: {x: 146.66666, y: 40}
   Title: deadliest obstacle
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'He is the defending champion on the deadliest of obstacle races. '
+  Text: 'He is the defending champion of the deadliest of obstacle races. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

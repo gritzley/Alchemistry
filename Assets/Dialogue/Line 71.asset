@@ -16,10 +16,8 @@ MonoBehaviour:
   Size: {x: 68.666664, y: 40}
   Title: work
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'Over? Oh no don''t worry, my alchemist friend.
-
-    I still have work for
-    you!'
+  Text: Over? Oh no, don't worry, my alchemically accomplished acquaintance. I still
+    have work for you!
   Notes: 
   AnswerLeft: 
   AnswerRight: 

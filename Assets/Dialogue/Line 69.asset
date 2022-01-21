@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 99.33333, y: 40}
   Title: ungrateful
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: Of course, how ungrateful I am to the person who made this all possible.
+  Text: 'Of course!<pause=0.3> How ungrateful of me,
+
+    to the person who made
+    all of this possible.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

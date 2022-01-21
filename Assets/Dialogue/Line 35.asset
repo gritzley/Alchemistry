@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 35
   m_EditorClassIdentifier: 
-  Position: {x: 1263, y: -112}
+  Position: {x: 1262, y: -112}
   Size: {x: 88.66667, y: 40}
   Title: AcidSpit
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: During the part of the flying platfroms above the poisond spike pit, he started
-    choking according to the newspaper.
-  Notes: 
+  Text: 'During the part with the flying platforms,
+
+    above the poisond spike
+    pit, he started choking.'
+  Notes: Maybe loose the "according to the newspaper"
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

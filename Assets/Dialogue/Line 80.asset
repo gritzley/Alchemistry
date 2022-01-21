@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 106, y: 40}
   Title: decadence
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: The people will cheer when they're finally released from his greedy claws.
-    He lived a life full of decadence.
+  Text: 'He lived a life full of decadence.
+
+    The people will cheer, when they''re
+    finally released from his greedy claws.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

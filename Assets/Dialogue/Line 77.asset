@@ -16,9 +16,8 @@ MonoBehaviour:
   Size: {x: 104.666664, y: 40}
   Title: undisputed
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'He''s doing everything to keep being the undisputed single
-
-    liquor distributor.'
+  Text: He's doing everything to keep his position as the undisputed king of liquor
+    distribution.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

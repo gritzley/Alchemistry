@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 95.33333, y: 40}
   Title: thankyou
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'My sincerst thank you for you help.
+  Text: 'My sincerst thanks for you help.
 
     We have a promising future together.'
   Notes: 

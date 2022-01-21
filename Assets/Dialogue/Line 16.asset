@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 95.33333, y: 40}
   Title: underdog
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: Even so Atrius was through most of his career an underdog. Or an under ...
+  Text: Even so, Atrius was through most of his career an underdog. Or an under <crawl>...<normal>
     horsehuman.
   Notes: 
   AnswerLeft: 

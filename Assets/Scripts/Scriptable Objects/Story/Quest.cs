@@ -163,6 +163,7 @@ public class Quest : StoryNode
         GUI.Label(rect, Title, LabelStyle);
 
         if (Links.Exists(e => e.NextQuest == null || !Customer.Quests.Contains(e.NextQuest))) DrawNotification(2);
+        
     }
 
     public override void ProcessEvent(Event e, int state, List<StoryNode> relatedNodes = null)

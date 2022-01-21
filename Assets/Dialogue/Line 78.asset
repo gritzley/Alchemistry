@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 97.33333, y: 40}
   Title: monoploy
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: From blackmailing other merchants to murdering possible competition. He will
-    do anything to secure his monoploy.
+  Text: <fast>From blackmailing other merchants to murdering possible competition.<pause=0.5>
+    He will do <slow>anything<normal> to secure his monoploy.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

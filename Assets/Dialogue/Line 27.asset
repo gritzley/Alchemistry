@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 84, y: 40}
   Title: carload
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: Of course there's stilla cartload of preperations to do once everything is
-    taken care of.
+  Text: Of course there's still a cartload of preperations to do once everything
+    is taken care of.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

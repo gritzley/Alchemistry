@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 34
   m_EditorClassIdentifier: 
-  Position: {x: 889, y: -110}
+  Position: {x: 890, y: -110}
   Size: {x: 67.333336, y: 40}
   Title: Died
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "Atrius died on track today. \nThe shining star finally fell"
+  Text: 'Atrius died on track today.<pause=0.3>
+
+    The shining star finally fell.<pause=0.3>'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

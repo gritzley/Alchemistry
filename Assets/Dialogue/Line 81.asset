@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 88, y: 40}
   Title: banquet
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'At the end of the week he''ll hold a banquet in his destillery to reveal
-    his newest creation of booze. '
+  Text: 'At the end of the week, he''ll hold a banquet in his distillery to reveal
+    his newest creation. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

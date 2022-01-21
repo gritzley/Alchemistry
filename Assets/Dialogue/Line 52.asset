@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 52
   m_EditorClassIdentifier: 
-  Position: {x: 1380, y: -29}
+  Position: {x: 1379, y: -33}
   Size: {x: 107.333336, y: 40}
   Title: houndwasp
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "Atrius started screaming \"No Dad, not the rod\".\nHe turned around in panic
-    running  right into a swarm of  hungry hound wasps. \r\n"
+  Text: "Atrius started screaming. <pause=0.3>\"Please Dad, not the rod!\"<pause=0.5>\nHe
+    turned around in panic, running right into a\nswarm of  hungry hound wasps. \r\n"
   Notes: 
   AnswerLeft: 
   AnswerRight: 

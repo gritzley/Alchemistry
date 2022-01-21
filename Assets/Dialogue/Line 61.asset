@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 108, y: 40}
   Title: burning axe
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: When dodging the swinging burning axes he swayed to far to the left and was
-    hit by one right in the head.
+  Text: When dodging the burning swinging axes, he swayed too far to the left and
+    was hit right in the head.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

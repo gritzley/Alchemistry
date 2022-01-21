@@ -10,22 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 45
+  m_Name: Line 19
   m_EditorClassIdentifier: 
-  Position: {x: 1604, y: -68}
-  Size: {x: 76, y: 40}
-  Title: crowd
-  ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'When the judges and press came down to gratualte him,
-
-    He had already
-    passed.
-
-    Still smiling, he stood, his gaze directed to the crowd.'
+  Position: {x: 1531.3611, y: -142.05554}
+  Size: {x: 104, y: 40}
+  Title: Maybe it is
+  ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
+  Text: Or well, maybe it is.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: e1052eabb4157b941a3e95a4a29f04ff, type: 2}
+  NextRight: {fileID: 11400000, guid: 67effd5e2d1e37140a66ac06a67ffd8a, type: 2}

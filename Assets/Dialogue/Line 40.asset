@@ -16,9 +16,10 @@ MonoBehaviour:
   Size: {x: 66, y: 40}
   Title: Fear
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'According to the newspaper, everthing seemed fine at the beginning...when
-    he suddenly went pale as one of my ghost.
+  Text: 'According to the papers, all seemed fine at the beginning<crawl>...<normal>
 
+    when
+    suddenly, Atrius went pale as one of my ghost.
 
 '
   Notes: 

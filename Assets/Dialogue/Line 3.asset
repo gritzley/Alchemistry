@@ -16,12 +16,8 @@ MonoBehaviour:
   Size: {x: 98.66667, y: 40}
   Title: Been long
   ParentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
-  Text: 'It''s been a long time since I
-
-    heard someone calling it a
-
-    pleasure
-    to meet me.'
+  Text: It's been a long time since I heard someone calling it a pleasure to meet
+    me.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

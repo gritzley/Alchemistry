@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 68, y: 40}
   Title: lump
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: He spit out a green and slimly lump, but seemed unfaced by this incinvenience
-    probably rooting in a night filled with wine tasting.
+  Text: 'He spit out a green and slimly lump,
+
+    but seemed unfazed by this inconvenience
+    at first.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
