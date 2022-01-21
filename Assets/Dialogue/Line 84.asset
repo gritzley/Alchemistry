@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 84
   m_EditorClassIdentifier: 
-  Position: {x: 4173, y: -3}
+  Position: {x: 4173, y: -4}
   Size: {x: 91.33333, y: 40}
   Title: transport
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: I know one of the workers who'll transport the big tank of his the booze
-    he's going to drink.
+  Text: I know one of the workers who will transport the liquor.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

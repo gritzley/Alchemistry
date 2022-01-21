@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 98, y: 40}
   Title: excessive
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'This liquor supposedly gets rid of the inconvenciens of excessive drinking. '
+  Text: 'This liquor supposedly gets rid of the inconviniences of excessive drinking. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 78, y: 40}
   Title: weeds
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: They're taking up space for life to blossom. I'm just pulling weeds.
+  Text: 'They''re taking up space where worthwhile life could blossom.
+
+    I''m
+    just pulling weeds.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

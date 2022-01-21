@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 69.333336, y: 40}
   Title: letgo
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "I want to remind the poeple that it's alright to let go. And that there's
+  Text: "I want to remind the poeple that it's alright to let go.\nAnd that there's
     a\r place they can rest."
   Notes: 
   AnswerLeft: 

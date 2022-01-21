@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 60.666664, y: 40}
   Title: last
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "Hmm...no. We never know when the time comes for us, they aleardy live like
-    every moment is their last.\r"
+  Text: "Hmm<crawl>...<normal> No.<pause=0.7> We never know when our time comes.
+    \nThey aleardy live like every moment is their last."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 69.333336, y: 40}
   Title: reign
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: This dragon skin has lived long enough we're going to do the world a favour
-    if we end his reign.
+  Text: 'This Dragonskin has lived long enough.
+
+    We''re going to do the world
+    a favour by ending his reign.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

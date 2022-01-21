@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 87
   m_EditorClassIdentifier: 
-  Position: {x: 4490, y: -5}
+  Position: {x: 4490, y: -6}
   Size: {x: 60.666664, y: 65}
   Title: ask
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: Hmm...? You look like you want to ask something
+  Text: Hmm<crawl>...?<normal> You look like you have a question?
   Notes: 
   AnswerLeft: Why are you doing this?
-  AnswerRight: Don't you feel bad for ending these lifes?
+  AnswerRight: Don't you feel bad for ending these lives?
   HasAnswers: 1
   _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 9e9a220e716cbf143b88d5f9775cca18, type: 2}

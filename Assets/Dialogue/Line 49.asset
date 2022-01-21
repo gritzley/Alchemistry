@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 85
+  m_Name: Line 49
   m_EditorClassIdentifier: 
-  Position: {x: 4292, y: -3}
-  Size: {x: 60, y: 40}
-  Title: slip
+  Position: {x: 5089.1387, y: -11.8888855}
+  Size: {x: 90.66667, y: 40}
+  Title: Perished
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "He owes me a favour. \nThis will be an opportunity to slip something into
-    the cask."
+  Text: When next we meet, Goldentooth will have perished.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 1d83668f3c51bf543be27f740bb5380e, type: 2}
+  NextRight: {fileID: 0}

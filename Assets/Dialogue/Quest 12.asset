@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 12
   m_EditorClassIdentifier: 
-  Position: {x: 705, y: -429}
+  Position: {x: 680, y: -454}
   Size: {x: 176.66667, y: 40}
   Title: End 8 - Less suspicious
   PrecedingStartNode: {fileID: 11400000, guid: 1a82a6780d6c93944969497947ef63b1, type: 2}
