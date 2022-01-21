@@ -152,6 +152,13 @@ public class DiegeticText : MonoBehaviour
 
     IEnumerator TypeText(IEnumerable<Match> matches, Action onDone = null)
     {
+        yield return null; // we wait one frame so we let the mousebuttondown event pass that caused this text to appear
+
+        bool skip = false;
+#if UNITY_EDITOR
+        skip = !EditorApplication.isPlaying;
+#endif
+
         Color color = MainColor;
         bool isBobbing, isWiggling;
         float textSpeed = TextSpeed;
@@ -159,16 +166,14 @@ public class DiegeticText : MonoBehaviour
         int letterIndex = 0;
         foreach (Match match in matches)
         {
+            if (Input.GetMouseButtonDown(0)) skip = true;
             if (match.Groups["character"].Success)
             {
                 letters[letterIndex].color = color;
                 letters[letterIndex].enabled = true;
                 letterIndex++;
-#if UNITY_EDITOR
-                if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
-#else
-                yield return new WaitForSeconds(1.0f / textSpeed);
-#endif
+
+                if (!skip) yield return new WaitForSeconds(1.0f / textSpeed);
             }
             if (match.Groups["command"].Success)
             {
@@ -230,11 +235,7 @@ public class DiegeticText : MonoBehaviour
                         textSpeed = 60.0f;
                         break;
                     case "pause":
-#if UNITY_EDITOR
-                        if (EditorApplication.isPlaying) yield return new WaitForSeconds(1.0f / textSpeed);
-#else
-                        yield return new WaitForSeconds(1.0f / textSpeed);
-#endif
+                        if (!skip) yield return new WaitForSeconds(1.0f / textSpeed);
                         break;
                 }
             }
