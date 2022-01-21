@@ -30,16 +30,33 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-    public void AdvanceScene()
+    public void AdvanceScene(Quest quest)
     {
-        new Task(SceneTransition());
+        new Task(SceneTransition(quest == null));
     }
 
-    private IEnumerator SceneTransition()
+    private IEnumerator SceneTransition(bool isEnding)
     {
+        CurrentCustomer
+        .GetComponentsInChildren<DiegeticText>()
+        .ToList()
+        .ForEach(e => e.ClickActive = false);
+
         fade.Out();
         yield return new WaitForSeconds(1.5f);
-        CurrentCustomer.HandleCurrentDialogueLine();
         fade.In();
+
+        if (isEnding)
+        {
+            CurrentCustomer.gameObject.SetActive(false);
+            PlayerController.Instance.MoveToHiddenMenu(2.0f);
+        }
+        else
+            CurrentCustomer.HandleCurrentDialogueLine();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

@@ -15,6 +15,8 @@ public class PlayerController : Moveable
     public Pickupable HeldItem;
     [HideInInspector] public bool InAction;
 
+    [SerializeField] private Transform hiddenMenuTransform;
+
     PlayerController()
     {
         Assert.IsNull(Instance, "There can only be one instance of PlayerController");
@@ -118,7 +120,7 @@ public class PlayerController : Moveable
             Task MoveToBoard = new Task(MoveTowards(lookAtBoardPosition, moveTime));
             Task TurnToBoard = new Task(TurnTowards(Vector3.right, moveTime));
 
-            while(MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
+            while (MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
             yield return new WaitForSeconds(seconds);
 
             MoveToBoard = new Task(MoveTowards(returnPosition, moveTime));
@@ -129,4 +131,12 @@ public class PlayerController : Moveable
         }
         yield return null;
     }
+
+    public void MoveToTransform(Transform target, float seconds = 0)
+    {
+        if (seconds <= 0) seconds = animationTime;
+        LeanTween.move(gameObject, target.position, seconds);
+        LeanTween.rotate(gameObject, target.rotation.eulerAngles, seconds);
+    }
+    public void MoveToHiddenMenu(float seconds = 0) => MoveToTransform(hiddenMenuTransform, seconds);
 }

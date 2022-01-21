@@ -90,7 +90,7 @@ public class CustomerController : Interactible
     private void AdvanceQuest()
     {
         currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
-        GameManager.Instance.AdvanceScene();
+        GameManager.Instance.AdvanceScene(currentQuest);
     }
 
     public override bool OnInteract(PlayerController player)
