@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 96, y: 40}
   Title: questions
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: "Yes, Of course I wouldn't tell them anything if I'd be caught, but If they'd
-    catch me they probably would send someone here\r to ask questions. "
+  Text: "Yes!<pause=0.5> Of course I wouldn't tell them anything if I was caught.
+    But they'd probably send someone here\r to ask questions."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

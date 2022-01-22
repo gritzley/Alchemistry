@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 80.66667, y: 40}
   Title: burned
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'They unfortunately burned to death, initiating a investigations
+  Text: 'They unfortunately burned to death,
 
-    by
+    initiating a investigations by
     the city guard.'
   Notes: 
   AnswerLeft: 

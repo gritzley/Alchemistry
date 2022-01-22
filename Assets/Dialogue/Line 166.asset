@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 71.333336, y: 40}
   Title: silver
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: Before he could take the next step, he turned into a silver statue
+  Text: 'Before he could take another step,
+
+    he completely transformed into a
+    silver statue.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

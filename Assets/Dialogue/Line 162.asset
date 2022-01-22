@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 96, y: 40}
   Title: Invisibilty
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'Nothing was out of the ordinary at the big obstacle race yesterday,
+  Text: 'Nothing seemed out of the ordinary at the race yesterday,
 
-    when
-    suddenly Atrius the Silverwind just vanished.'
+    when suddenly
+    Atrius the Silverwind just vanished.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

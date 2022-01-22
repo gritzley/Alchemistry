@@ -242,7 +242,7 @@ public class DiegeticText : MonoBehaviour
                         textSpeed = 60.0f;
                         break;
                     case "pause":
-                        if (!skip) yield return new WaitForSeconds(1.0f / textSpeed);
+                        if (!skip) yield return new WaitForSeconds(value);
                         break;
                 }
             }

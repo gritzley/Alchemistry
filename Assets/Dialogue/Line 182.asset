@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 84.66667, y: 40}
   Title: dispose
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: "In worst case you could give me a potion that'll dispose of his body \nentirely..."
+  Text: 'In the worst case you could give me a potion,
+
+    that''ll dispose of his
+    body entirely <crawl>...'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

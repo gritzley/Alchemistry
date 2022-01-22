@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 98.66667, y: 40}
   Title: under city
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'They''ll will start a thorough search.
+  Text: 'They''ll will start a thorough search.<pause=0.5>
 
-    Starting in the under city,
-    I suppose.'
+    Starting here,<pause=0.1>
+    in the under city,<pause=0.1> I suppose.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

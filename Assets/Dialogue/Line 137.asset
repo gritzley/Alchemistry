@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 65.333336, y: 40}
   Title: died
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: The good one is...we succeded. Atrius died.
+  Text: The good one is <crawl>...<normal> we succeded.<pause=0.3> Atrius died.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

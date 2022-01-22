@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 76.66667, y: 40}
   Title: potion
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'When i get acess to the body, I could give him a potion
+  Text: 'When I get acess to the body, I could administer a potion
 
-    that gets rid
-    of our little problem.'
+    that gets
+    rid of our little problem.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

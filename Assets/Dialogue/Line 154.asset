@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 154
   m_EditorClassIdentifier: 
-  Position: {x: 1876, y: -119}
+  Position: {x: 1878, y: -119}
   Size: {x: 90, y: 40}
   Title: crashing
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: He was already out of sight when his body came crashing to the ground.
+  Text: 'He had already been out of sight for some time,
+
+    when his body came
+    crashing to the ground.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

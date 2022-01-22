@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 134
   m_EditorClassIdentifier: 
-  Position: {x: 678, y: -221}
+  Position: {x: 677, y: -221}
   Size: {x: 112.666664, y: 40}
   Title: Hello, witch.
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: Hello,  witch
+  Text: Hello, <pause=0.3>witch
   Notes: 
   AnswerLeft: 
   AnswerRight: 

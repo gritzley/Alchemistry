@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 90.66667, y: 40}
   Title: foul play
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'The bad one:  They''re suspecting foul play.'
+  Text: 'The bad one: They''re suspecting foul play.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
