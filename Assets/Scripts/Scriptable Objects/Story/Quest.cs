@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEditor;
 
 [System.Serializable]
-public class Quest : StoryNode
+public class Quest : SceneNode
 {
 
     // ---- STORY TREE ----
@@ -21,7 +21,6 @@ public class Quest : StoryNode
         }
         set => _currentLine = value;
     }
-    public CustomerDefinition Customer;
 
     // ---- LINKS ----
     [System.Serializable]

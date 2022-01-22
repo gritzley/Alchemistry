@@ -13,6 +13,7 @@ public class CustomerDefinition : ScriptableObject
     public string Name;
     public Quest StartQuest;
     public List<Quest> Quests;
+    public List<NewspaperArticle> Articles;
 
 #if UNITY_EDITOR
     public static List<CustomerDefinition> GetAllCustomerDefinitions()

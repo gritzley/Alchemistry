@@ -71,6 +71,10 @@ public class StoryEditor : EditorWindow
             quest.ViewDialogue = ViewQuestDialogue;
             return (StoryNode)quest;
         }).ToList();
+        nodes.AddRange(GameManager.Instance.CurrentCustomer.CustomerDefinition.Articles.Select( article => {
+            article.OnRemove = RemoveNodeFromView;
+            return (StoryNode)article;
+        }).ToList());
         offset = Vector2.zero;
 
     }
@@ -103,6 +107,7 @@ public class StoryEditor : EditorWindow
     private void AddQuest(Vector2 position)
     {
         if (viewState != ViewState.QuestView) throw new Exception("You tried to add a new Quest even though you are not in QuestView");
+
         // GenerateUniqueAssetPath increments the name until a unused name is found
         string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Quest.asset");
         Quest quest = ScriptableObject.CreateInstance<Quest>();
@@ -121,6 +126,28 @@ public class StoryEditor : EditorWindow
         EditorUtility.SetDirty(GameManager.Instance.CurrentCustomer.CustomerDefinition);
         AssetDatabase.SaveAssets();
         nodes.Add(quest);
+    }
+
+    private void AddArticle(Vector2 position)
+    {
+        if (viewState != ViewState.QuestView) throw new Exception("You tried to add a new Article even though you are not in QuestView");
+
+        // GenerateUniqueAssetPath increments the name until a unused name is found
+        string path = AssetDatabase.GenerateUniqueAssetPath($"Assets/Dialogue/Article.asset");
+        NewspaperArticle article = ScriptableObject.CreateInstance<NewspaperArticle>();
+        AssetDatabase.CreateAsset(article, path);
+
+        article.Title = article.name;
+        article.Position = position;
+        article.OnRemove = RemoveNodeFromView;
+        article.Customer = GameManager.Instance.CurrentCustomer.CustomerDefinition;
+        GameManager.Instance.CurrentCustomer.CustomerDefinition.Articles.Add(article);
+
+        // Changes made to the line after creating it must be saved
+        EditorUtility.SetDirty(article);
+        EditorUtility.SetDirty(GameManager.Instance.CurrentCustomer.CustomerDefinition);
+        AssetDatabase.SaveAssets();
+        nodes.Add(article);
     }
 
     private void CreateDialogueNode<T>(Vector2 position) where T : DialogueNode
@@ -234,6 +261,7 @@ public class StoryEditor : EditorWindow
 
                             case ViewState.QuestView:
                                 contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
+                                contextMenu.AddItem(new GUIContent("Add Article"), false, () => AddArticle(pos));
                                 contextMenu.AddItem(new GUIContent("Save all Changes (Debug)"), false, SaveAllChanges);
                                 contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
                                 break;
