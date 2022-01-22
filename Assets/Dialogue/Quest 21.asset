@@ -15,8 +15,10 @@ MonoBehaviour:
   Position: {x: 727, y: 198}
   Size: {x: 167.33334, y: 40}
   Title: End 10 - Zombies hurt
-  PrecedingStartNode: {fileID: 11400000, guid: e4cc4364fb0f62046af34e5c30e024c0, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  PrecedingStartNode: {fileID: 11400000, guid: e4cc4364fb0f62046af34e5c30e024c0, type: 2}
+  HasReceivingState: 0
+  NextScene: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
     NextQuest: {fileID: 0}

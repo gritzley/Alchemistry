@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d32dc211a2482b4483c889ee6536f93, type: 3}
-  m_Name: Article
+  m_Name: Article 2
   m_EditorClassIdentifier: 
-  Position: {x: 1078.25, y: -332.77777}
-  Size: {x: 177.33333, y: 40}
-  Title: Article 2 - Demigod Sus
+  Position: {x: 695, y: -340}
+  Size: {x: 147.33334, y: 40}
+  Title: Article 1 - Arrested
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
-  Sprite: {fileID: 21300000, guid: 847766a8b3dad9e4f9c2ba25634c2f4a, type: 3}
+  Sprite: {fileID: 21300000, guid: e3d6b13f9f0f7314a914ff3866ddea2e, type: 3}

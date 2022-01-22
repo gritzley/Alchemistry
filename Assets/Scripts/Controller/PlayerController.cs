@@ -11,11 +11,11 @@ public class PlayerController : Moveable
     [SerializeField] private PlayerPosition currentPosition;
     private Vector3 cardinalDirection;
     private Camera fpCamera;
-    public Transform HandTransform;
-    public Pickupable HeldItem;
+    [HideInInspector] public Transform HandTransform;
+    [HideInInspector] public Pickupable HeldItem;
     [HideInInspector] public bool InAction;
-
     [SerializeField] private Transform hiddenMenuTransform;
+    [SerializeField] private Transform boardTransform;
 
     PlayerController()
     {
@@ -139,4 +139,5 @@ public class PlayerController : Moveable
         LeanTween.rotate(gameObject, target.rotation.eulerAngles, seconds);
     }
     public void MoveToHiddenMenu(float seconds = 0) => MoveToTransform(hiddenMenuTransform, seconds);
+    public void MoveToBoard(float seconds = 0) => MoveToTransform(boardTransform, seconds);
 }

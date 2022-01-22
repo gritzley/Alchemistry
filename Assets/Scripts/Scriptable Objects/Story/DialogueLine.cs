@@ -22,16 +22,17 @@ public class DialogueLine : DialogueNode
             if (value == true)
             {
                 if (ParentQuest.DialogueNodes.Exists( e => e != this && e is DialogueLine && ((DialogueLine)e).IsReceivingState))
-                {
                     throw new Exception("There already is a receiving state in this lines parent quest");
-                }
                 _isReceivingState = true;
                 HasAnswers = false;
                 style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2.png") as Texture2D;
                 selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2 on.png") as Texture2D;
+                ParentQuest.HasReceivingState = true;
             }
             else
             {
+                if (!ParentQuest.DialogueNodes.Exists( e => e != this && e is DialogueLine && ((DialogueLine)e).IsReceivingState))
+                    ParentQuest.HasReceivingState = false;
                 _isReceivingState = false;
                 style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
                 selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;

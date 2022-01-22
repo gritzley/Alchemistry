@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 13
   m_EditorClassIdentifier: 
-  Position: {x: 688, y: -399}
+  Position: {x: 689, y: -400}
   Size: {x: 148, y: 40}
   Title: End 7 - Body gone
-  PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  PrecedingStartNode: {fileID: 11400000, guid: 7a1f2fd21b128ef4f9d7b5268032079c, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
     NextQuest: {fileID: 0}

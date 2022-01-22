@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 10
   m_EditorClassIdentifier: 
-  Position: {x: 1011, y: -344}
+  Position: {x: 1079, y: -395}
   Size: {x: 213.33333, y: 40}
   Title: End 5 - killed god didnt kill all
-  PrecedingStartNode: {fileID: 11400000, guid: 6a5c630c0a738e14a8a3a2c914252e9f, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  PrecedingStartNode: {fileID: 11400000, guid: 6a5c630c0a738e14a8a3a2c914252e9f, type: 2}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
     NextQuest: {fileID: 0}

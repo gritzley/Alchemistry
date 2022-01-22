@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 707
   m_EditorClassIdentifier: 
-  Position: {x: 2652, y: 142}
+  Position: {x: 2652, y: 143}
   Size: {x: 69.333336, y: 40}
   Title: done
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
@@ -21,6 +21,6 @@ MonoBehaviour:
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
-  _isReceivingState: 1
+  _isReceivingState: 0
   NextLeft: {fileID: 0}
   NextRight: {fileID: 11400000, guid: 32679fa48153fb447af699ef4ea6601f, type: 2}

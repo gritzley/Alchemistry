@@ -15,8 +15,10 @@ MonoBehaviour:
   Position: {x: 206, y: -166}
   Size: {x: 86.66667, y: 40}
   Title: Centaur
-  PrecedingStartNode: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  PrecedingStartNode: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
+  HasReceivingState: 0
+  NextScene: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
     NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}

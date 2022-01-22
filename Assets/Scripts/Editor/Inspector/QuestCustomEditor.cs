@@ -11,10 +11,11 @@ public class QuestEditor : Editor
     SerializedProperty titleProp;
     SerializedProperty linksProp;
     SerializedProperty nodesProp;
+    SerializedProperty nextProp;
     SerializedProperty customerProp;
 
     ReorderableList Links;
-    List<Quest> relatedQuests;
+    List<SceneNode> relatedScenes;
     
     // This gets called when the inspector is opened
     void OnEnable()
@@ -23,9 +24,14 @@ public class QuestEditor : Editor
         linksProp = serializedObject.FindProperty("Links");
         nodesProp = serializedObject.FindProperty("DialogueNodes");
         customerProp = serializedObject.FindProperty("Customer");
+        nextProp = serializedObject.FindProperty("NextScene");
 
         (target as Quest).UpdateLinks();
-        relatedQuests = ((Quest)serializedObject.targetObject).Customer.Quests.Prepend(null).ToList();
+        CustomerDefinition customer = ((Quest)serializedObject.targetObject).Customer;
+        relatedScenes = new List<SceneNode>();
+        relatedScenes.Add(null);
+        relatedScenes.AddRange(customer.Quests);
+        relatedScenes.AddRange(customer.Articles);
     }
 
     public override void OnInspectorGUI()
@@ -38,27 +44,48 @@ public class QuestEditor : Editor
         EditorGUILayout.PropertyField(customerProp);
         EditorGUILayout.PropertyField(nodesProp);
 
-
-        for (int i = 0 ; i < linksProp.arraySize; i++)
+        if ((serializedObject.targetObject as Quest).HasReceivingState)
         {
-            SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
-            PotionDefinition potion = (PotionDefinition)element.FindPropertyRelative("Potion").objectReferenceValue;
-            SerializedProperty nextQuestProp = element.FindPropertyRelative("NextQuest");
-
-            int questIndex = relatedQuests.IndexOf((Quest)nextQuestProp.objectReferenceValue);
-            int newQuestIndex = EditorGUILayout.Popup(new GUIContent(potion.name), questIndex, relatedQuests.Select(e => e ? e.Title:"None").ToArray());
-            
-            if (questIndex != newQuestIndex)
+            for (int i = 0 ; i < linksProp.arraySize; i++)
             {
-                nextQuestProp.objectReferenceValue = relatedQuests[newQuestIndex];
+                SerializedProperty element = linksProp.GetArrayElementAtIndex(i);
+                PotionDefinition potion = (PotionDefinition)element.FindPropertyRelative("Potion").objectReferenceValue;
+                SerializedProperty nextQuestProp = element.FindPropertyRelative("NextQuest");
+
+                int questIndex = relatedScenes.IndexOf((SceneNode)nextQuestProp.objectReferenceValue);
+                int newQuestIndex = EditorGUILayout.Popup(new GUIContent(potion.name), questIndex, relatedScenes.Select(e => e ? e.Title:"None").ToArray());
+                
+                if (questIndex != newQuestIndex)
+                {
+                    nextQuestProp.objectReferenceValue = relatedScenes[newQuestIndex];
+                    StoryEditor.Instance?.Repaint();
+                }
+
+                // EditorGUILayout.PropertyField(nextQuestProp, new GUIContent(potion.name));
+
+                if (nextQuestProp.objectReferenceValue == target)
+                {
+                    nextQuestProp.objectReferenceValue = null;
+                    Debug.LogWarning("Quests can not refer to themselves");
+                }
+            }
+        }
+        else
+        {
+            int sceneIndex = relatedScenes.IndexOf((SceneNode)nextProp.objectReferenceValue);
+            int newSceneIndex = EditorGUILayout.Popup(new GUIContent("Next Scene"), sceneIndex, relatedScenes.Select(e => e ? e.Title : "None").ToArray());
+            
+            if (sceneIndex != newSceneIndex)
+            {
+                nextProp.objectReferenceValue = relatedScenes[newSceneIndex];
                 StoryEditor.Instance?.Repaint();
             }
 
-            // EditorGUILayout.PropertyField(nextQuestProp, new GUIContent(potion.name));
+            // EditorGUILayout.PropertyField(nextProp, new GUIContent(potion.name));
 
-            if (nextQuestProp.objectReferenceValue == target)
+            if (nextProp.objectReferenceValue == target)
             {
-                nextQuestProp.objectReferenceValue = null;
+                nextProp.objectReferenceValue = null;
                 Debug.LogWarning("Quests can not refer to themselves");
             }
         }

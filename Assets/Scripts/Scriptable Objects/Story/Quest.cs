@@ -22,13 +22,17 @@ public class Quest : SceneNode
         set => _currentLine = value;
     }
 
+    public bool HasReceivingState;
+
     // ---- LINKS ----
     [System.Serializable]
     public struct Link
     {
         public PotionDefinition Potion;
-        public Quest NextQuest;
+        public SceneNode NextQuest;
     }
+
+    public SceneNode NextScene;
 
     public List<Link> Links;
 
@@ -81,14 +85,12 @@ public class Quest : SceneNode
         return false;
     }
 
-    public Quest GetNextQuest(PotionDefinition potion)
+    public SceneNode GetNextScene(PotionDefinition potion)
     {
-        foreach (Link link in Links)
-            if (link.Potion == potion)
-                return link.NextQuest;
-
-        Debug.LogWarning($"Quest {name} has no link for potion {potion.name}.");
-        return null;
+        if (HasReceivingState)
+            return Links.Find(e => e.Potion == potion).NextQuest;
+        else
+            return NextScene;
     }
 
 
@@ -104,6 +106,7 @@ public class Quest : SceneNode
         Size.y = 40;
         OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
         DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
+        HasReceivingState = DialogueNodes.Exists(e => e != null && e is DialogueLine && (e as DialogueLine).IsReceivingState);
         CurrentLine = PrecedingStartNode.NextLine;
     }
 
@@ -128,20 +131,9 @@ public class Quest : SceneNode
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;
 
-        if (inPoint != null)
+        if (inPoint != null && inPoint.Parent is DialogueNode)
         {
-            // Create a Connection to another node
-
-            // ---- CONNECTION TO QUEST NODE ----
-            if (inPoint.Parent is Quest)
-            {
-                Link link = Links[i];
-                link.NextQuest = (Quest)inPoint.Parent;
-                Links[i] = link;
-            }
-
-            if (inPoint.Parent is DialogueNode)
-                PrecedingStartNode = (inPoint.Parent as DialogueNode);
+            PrecedingStartNode = (inPoint.Parent as DialogueNode);
 
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
@@ -161,7 +153,8 @@ public class Quest : SceneNode
         base.Draw(offset);
         GUI.Label(rect, Title, LabelStyle);
 
-        if (Links.Exists(e => e.NextQuest == null || !Customer.Quests.Contains(e.NextQuest))) DrawNotification(2);
+        bool hasEmptyLinks = Links.Exists(e => e.NextQuest == null || !(Customer.Quests.Contains(e.NextQuest) || Customer.Articles.Contains(e.NextQuest)));
+        if (hasEmptyLinks && HasReceivingState) DrawNotification(2);
         
     }
 
@@ -213,10 +206,12 @@ public class Quest : SceneNode
         {
             // ---- CONNECTIONS IN QUESTVIEW ----
             case 0:
-                foreach(Quest quest in Links.Where(e => e.NextQuest).Select(e => e.NextQuest))
-                {
-                    connections.Add(new Connection(quest.InPoint.Center, OutPoint.Center));
-                }
+                if (HasReceivingState)
+                    foreach(SceneNode quest in Links.Where(e => e.NextQuest).Select(e => e.NextQuest))
+                        connections.Add(new Connection(quest.InPoint.Center, OutPoint.Center));
+                else
+                    if (NextScene != null)
+                        connections.Add(new Connection(NextScene.InPoint.Center, OutPoint.Center));
                 break;
             
             // ---- CONNECTION IN DIALOGUEVIEW ----

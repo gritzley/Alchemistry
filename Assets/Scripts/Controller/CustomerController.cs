@@ -89,8 +89,8 @@ public class CustomerController : Interactible
 
     private void AdvanceQuest()
     {
-        currentQuest = currentQuest.GetNextQuest(LastGivenPotion);
-        GameManager.Instance.AdvanceScene(currentQuest);
+        SceneNode scene = currentQuest.GetNextScene(LastGivenPotion);
+        GameManager.Instance.AdvanceScene(scene);
     }
 
     public override bool OnInteract(PlayerController player)
