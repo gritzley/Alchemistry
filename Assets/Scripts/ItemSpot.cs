@@ -1,65 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
-public class ItemSpot : Interactible
+public class ItemSpot : MonoBehaviour
 {
     private Pickupable Item;
-
+    private Collider Collider;
     void Start()
     {
         Item = GetComponentInChildren<Pickupable>();
-        SetChildInteractibleParent();
+        Collider = GetComponent<Collider>();
     }
 
-    public override bool OnInteract(PlayerController player)
+    void OnMouseDown()
     {
-        // REMOVE FROM SPOT
-        if (player.HeldItem == null && Item != null)
+        PlayerController player = PlayerController.Instance;
+        if (PlayerController.Instance.HeldItem != null && Item == null)
+        {
+            player.HeldItem.PickUp(transform);
+            Item = player.HeldItem;
+            player.HeldItem = null;
+        }
+        else if (PlayerController.Instance.HeldItem == null && Item != null)
         {
             player.HeldItem = Item;
-            new Task( MoveItem(player.HandTransform, player) )
-            .Finished += delegate{
-                Item = null;
-                Destroy(player.HeldItem.GetComponentInChildren<InteractibleChild>());
-            };
-
-            return true;
-        }
-
-        // PLACE IN SPOT
-        else if (player.HeldItem != null && Item == null)
-        {
-            Item = player.HeldItem;
-            new Task( MoveItem(transform, player) )
-            .Finished += delegate{
-                player.HeldItem = null;
-                SetChildInteractibleParent();
-            };
-
-            return true;
-        }
-
-        return false;
-    }
-
-    IEnumerator MoveItem (Transform target, PlayerController player)
-    {
-        player.InAction = true;
-        Item.transform.parent = target;
-
-        Task Moving = new Task(Item.MoveTowards(target.position));
-        Task Turning = new Task(Item.TurnTowards(target.rotation));
-
-        while (Moving.Running && Turning.Running) yield return new WaitForSeconds(0.1f);
-        player.InAction = false;
-    }
-
-    void SetChildInteractibleParent()
-    {
-        InteractibleChild child = Item?.GetComponentInChildren<MeshRenderer>()?.gameObject.AddComponent<InteractibleChild>();
-        if (child != null)
-        {
-            child.Parent = this;
+            player.HeldItem.PickUp(player.HandTransform);
+            Item = null;
         }
     }
 }
