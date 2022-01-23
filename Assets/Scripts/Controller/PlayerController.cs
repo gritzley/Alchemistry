@@ -6,17 +6,26 @@ using UnityEngine.Assertions;
 
 public class PlayerController : Moveable
 {
-    public static PlayerController Instance;
-    [SerializeField] private Vector3 lookAtBoardPosition;
+    public static PlayerController Instance;    
     [SerializeField] private PlayerPosition currentPosition;
-    private Vector3 cardinalDirection;
     private Camera fpCamera;
     [HideInInspector] public Transform HandTransform;
     [HideInInspector] public Pickupable HeldItem;
     [HideInInspector] public bool InAction;
-    [SerializeField] private Transform hiddenMenuTransform;
-    [SerializeField] private Transform boardTransform;
-
+    [SerializeField] private PlayerPosition hiddenMenu;
+    [SerializeField] private PlayerPosition board;
+    [SerializeField] private PlayerPosition pauseMenu;
+    private bool _paused = false;
+    public bool Paused
+    {
+        get => _paused;
+        set
+        {
+            _paused = value;
+            InAction = _paused;
+            MoveCamera(_paused ? pauseMenu : currentPosition, 0.5f);
+        }
+    }
     PlayerController()
     {
         Assert.IsNull(Instance, "There can only be one instance of PlayerController");
@@ -25,29 +34,10 @@ public class PlayerController : Moveable
     void OnEnable()
     {
         fpCamera = GetComponentInChildren<Camera>();
-        transform.position = currentPosition.Position;
-
-        cardinalDirection = Vector3.forward;
-        Vector3 initalDirection = Vector3.Normalize(Quaternion.Euler(0, currentPosition.Pitch, 0) * cardinalDirection);
-        transform.rotation = Quaternion.LookRotation(initalDirection);
+        transform.position = currentPosition.transform.position;
+        transform.rotation = currentPosition.transform.rotation;
 
         HandTransform = transform.Find("Hand");
-    }
-
-    public void Turn() {
-        if (!InAction && !currentPosition.TurnDisabled)
-        {
-            TurnCorner(Input.GetAxisRaw("Turn"));   
-        }
-    }
-
-    public void Move(float sign) {
-        Vector3 moveDirection = cardinalDirection * sign;
-        PlayerPosition nextPos = currentPosition.GetNextPosition(moveDirection);
-        if (!InAction && nextPos != null)
-        {
-            MoveToPos(nextPos);
-        }
     }
 
     public void Interact()
@@ -81,63 +71,27 @@ public class PlayerController : Moveable
         }
     }
 
-    /// <summary>
-    /// Move the player to a new PlayerPosition and adjust the camera pitch
-    /// </summary>
-    /// <param name="newPos">The new PlayerPosition</param>
-    void MoveToPos(PlayerPosition newPos)
+    public void Move(Vector3 direction) => MoveToPos(currentPosition.GetNextPosition(direction));
+    void MoveToPos(PlayerPosition newPos, float seconds = 0)
     {
-        float pitchLat = newPos.Pitch * Mathf.Abs(cardinalDirection.z);
-        float pitchLon = newPos.Pitch * -Mathf.Abs(cardinalDirection.x);
-        Vector3 targetDirection = Vector3.Normalize(Quaternion.Euler(pitchLat, 0, pitchLon) * cardinalDirection);
-
-        StartCoroutine(MoveTowards(newPos.Position));
-        StartCoroutine(TurnTowards(targetDirection));
-
+        if (newPos == null) return;
+        
+        if (seconds <= 0) seconds = animationTime;
+        LeanTween.move(gameObject, newPos.transform.position, seconds);
+        LeanTween.rotate(gameObject, newPos.transform.rotation.eulerAngles, seconds);
+        
         currentPosition = newPos;
     }
 
-    /// <summary>
-    /// Turn the player in a 90 degree angle
-    /// </summary>
-    /// <param name="dir">The turn direction. 1 for clockwise and -1 for anticlockwise</param>
-    void TurnCorner (float dir)
-    {
-        dir = Mathf.Sign(dir);
-        cardinalDirection = Quaternion.Euler(0, dir * 90, 0) * cardinalDirection;
-
-        StartCoroutine(TurnTowards(cardinalDirection));
-    }
-
-    public void LookAtBoard(float seconds = 1.5f, float moveTime = 3.0f) => StartCoroutine(LookAtBoardTask(seconds, moveTime));
-    public IEnumerator LookAtBoardTask(float seconds, float moveTime)
-    {
-        if (!InAction)
-        {
-            InAction = true;
-            Vector3 returnPosition = transform.position;
-            Vector3 returnRotation = transform.forward;
-            Task MoveToBoard = new Task(MoveTowards(lookAtBoardPosition, moveTime));
-            Task TurnToBoard = new Task(TurnTowards(Vector3.right, moveTime));
-
-            while (MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
-            yield return new WaitForSeconds(seconds);
-
-            MoveToBoard = new Task(MoveTowards(returnPosition, moveTime));
-            TurnToBoard = new Task(TurnTowards(returnRotation, moveTime));
-
-            while(MoveToBoard.Running || TurnToBoard.Running) yield return new WaitForSeconds(0.2f);
-            InAction = false;
-        }
-        yield return null;
-    }
-
-    public void MoveToTransform(Transform target, float seconds = 0)
+    public void MoveCamera(PlayerPosition position, float seconds = 0) => MoveCamera(position.transform, seconds);
+    public void MoveCamera(Transform target, float seconds = 0) => MoveCamera(target.position, target.rotation, seconds);
+    public void MoveCamera(Vector3 position, Quaternion rotation, float seconds = 0)
     {
         if (seconds <= 0) seconds = animationTime;
-        LeanTween.move(gameObject, target.position, seconds);
-        LeanTween.rotate(gameObject, target.rotation.eulerAngles, seconds);
+        LeanTween.move(fpCamera.gameObject, position, seconds);
+        LeanTween.rotate(fpCamera.gameObject, rotation.eulerAngles, seconds);
     }
-    public void MoveToHiddenMenu(float seconds = 0) => MoveToTransform(hiddenMenuTransform, seconds);
-    public void MoveToBoard(float seconds = 0) => MoveToTransform(boardTransform, seconds);
+    public void LookAtHiddenMenu(float seconds = 0) => MoveCamera(hiddenMenu, seconds);
+    public void LookAtBoard(float seconds = 0) => MoveCamera(board, seconds);
+    public void LookAtPauseMenu(float seconds = 0) => MoveCamera(pauseMenu, seconds);
 }

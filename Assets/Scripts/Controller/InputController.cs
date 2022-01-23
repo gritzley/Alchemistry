@@ -14,16 +14,28 @@ public class InputController : MonoBehaviour
         // INPUTS
         if (!inputDisabled)
         {
-            // On Turn Buttons (A and D)
-            if (Input.GetButtonDown("Turn"))
+            if (Input.GetButtonDown("Forward"))
             {
-                pc.Turn();
+                Debug.Log("Forward");
+                pc.Move(Vector3.forward);
             }
 
-            // On Move Buttons (W and S)
-            if (Input.GetButtonDown("Move"))
+            if (Input.GetButtonDown("Left"))
             {
-                pc.Move(Mathf.Sign(Input.GetAxis("Move")));
+                Debug.Log("Left");
+                pc.Move(Vector3.left);
+            }
+
+            if (Input.GetButtonDown("Back"))
+            {
+                Debug.Log("Back");
+                pc.Move(Vector3.back);
+            }
+
+            if (Input.GetButtonDown("Right"))
+            {
+                Debug.Log("Right");
+                pc.Move(Vector3.right);
             }
 
             // Handle Mouseclick Event
@@ -32,14 +44,21 @@ public class InputController : MonoBehaviour
                 pc.Interact();
             }
 
+            if (Input.GetButtonDown("Pause"))
+            {
+                Debug.Log("pause button pressed");
+                pc.Paused = !pc.Paused;
+            }
 
             if (Input.GetButtonDown("1"))
             {
-                GameManager.Instance.CurrentCustomer.ReceiveAnswer(0);
+                if (!GameManager.Instance.CurrentCustomer.CurrentDialogueLine.IsReceivingState)
+                    GameManager.Instance.CurrentCustomer.ReceiveAnswer(0);
             }
             if (Input.GetButtonDown("2"))
             {
-                GameManager.Instance.CurrentCustomer.ReceiveAnswer(1);
+                if (GameManager.Instance.CurrentCustomer.CurrentDialogueLine.HasAnswers)
+                    GameManager.Instance.CurrentCustomer.ReceiveAnswer(1);
             }
         }
     }

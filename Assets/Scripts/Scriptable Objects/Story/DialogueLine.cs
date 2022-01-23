@@ -29,7 +29,7 @@ public class DialogueLine : DialogueNode
                 selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2 on.png") as Texture2D;
                 ParentQuest.HasReceivingState = true;
             }
-            else
+            else    
             {
                 if (!ParentQuest.DialogueNodes.Exists( e => e != this && e is DialogueLine && ((DialogueLine)e).IsReceivingState))
                     ParentQuest.HasReceivingState = false;

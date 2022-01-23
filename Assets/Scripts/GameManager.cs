@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (scene == null)
         {
             CurrentCustomer.gameObject.SetActive(false);
-            PlayerController.Instance.MoveToHiddenMenu(1.0f);
+            PlayerController.Instance.LookAtHiddenMenu(1.0f);
         }
         else if (scene is Quest)
         {
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         else if (scene is NewspaperArticle)
         {
             CurrentCustomer.gameObject.SetActive(false);
-            PlayerController.Instance.MoveToBoard(1.0f);
+            PlayerController.Instance.LookAtBoard(1.0f);
             BoardLight.enabled = true;
             Article.sprite = (scene as NewspaperArticle).Sprite;
             Article.gameObject.SetActive(true);
