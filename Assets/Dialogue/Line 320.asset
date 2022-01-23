@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 320
   m_EditorClassIdentifier: 
-  Position: {x: 1980, y: -281}
+  Position: {x: 1984, y: -303}
   Size: {x: 101.33333, y: 40}
   Title: beverages
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}

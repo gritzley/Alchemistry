@@ -17,6 +17,8 @@ MonoBehaviour:
   Title: Demi-God (dragon not killed)
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: 182d27cc9365ace45b935d594a6ad1ad, type: 2}
+  HasReceivingState: 1
+  NextScene: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
     NextQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
@@ -122,3 +124,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e086cd3308e02c64e9189d10868cf64d, type: 2}
   - {fileID: 11400000, guid: 9b6fd61785b16274a9536dce931d438d, type: 2}
   - {fileID: 11400000, guid: c63a8caef32da6d448eea9733fcf5bff, type: 2}
+  - {fileID: 11400000, guid: 79ea80492491224418e12dba399ff960, type: 2}
+  - {fileID: 11400000, guid: 84ae26a2d762a694f90a9054c256791b, type: 2}
+  - {fileID: 11400000, guid: b8c4d34133ba13341be8ed09a80fdd96, type: 2}
+  - {fileID: 11400000, guid: 6541c68de9ee6604591688814e930984, type: 2}
