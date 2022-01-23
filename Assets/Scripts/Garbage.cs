@@ -9,6 +9,8 @@ public class Garbage : Interactible
     void OnEnable() 
     {
         Items = new Stack<Pickupable>();
+        foreach (Pickupable item in GetComponentsInChildren<Pickupable>())
+            Items.Push(item);
     }
     public override bool OnInteract(PlayerController player)
     {
