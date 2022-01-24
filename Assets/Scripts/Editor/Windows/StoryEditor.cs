@@ -206,6 +206,11 @@ public class StoryEditor : EditorWindow
         offset *= -1;
     }
 
+    private void RemoveMultiple() {
+        Debug.Log("Goodbye, World!");
+        selectedNodes.ForEach( e => e.Remove() );
+    }
+
     /// <summary>
     /// OnGUI is called whenever the window is being drawn. This is essentially the main function of the Window
     /// </summary>
@@ -265,6 +270,9 @@ public class StoryEditor : EditorWindow
                                 contextMenu.AddItem(new GUIContent("Save all Changes (Debug)"), false, SaveAllChanges);
                                 contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
                                 break;
+                        }
+                        if (selectedNodes.Count != 0) {
+                            contextMenu.AddItem(new GUIContent("Remove all selected nodes"), false, () => RemoveMultiple());
                         }
                         contextMenu.ShowAsContext();
                     }
