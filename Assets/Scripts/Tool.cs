@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tool : Interactible
+public class Tool : MonoBehaviour
 {
     public GameObject IngredientPrefab;
     [System.Serializable]
@@ -13,24 +13,13 @@ public class Tool : Interactible
     }
 
     [SerializeField] private List<Conversion> Conversions;
-    
-    public IngredientDefinition GetConvertedIngredientPrefab(IngredientDefinition input)
-    {
-        foreach (Conversion conversion in Conversions)
-        {
-            if (conversion.Input == input)
-            {
-                return conversion.Output;
-            }
-        }
-        return null;
-    }
 
-    public override bool OnInteract(PlayerController player)
+    public void OnMouseDown()
     {
+        PlayerController player = PlayerController.Instance;
         if (player.HeldItem != null && player.HeldItem is Ingredient)
         {
-            IngredientDefinition definition = GetConvertedIngredientPrefab((player.HeldItem as Ingredient).Definition);
+            IngredientDefinition definition = Conversions.Find(e => e.Input == player.HeldItem).Output;
             
             GameObject go = Object.Instantiate(IngredientPrefab);
             Object.Destroy(player.HeldItem.gameObject);
@@ -44,6 +33,5 @@ public class Tool : Interactible
             go.transform.position = player.HandTransform.transform.position;
             go.transform.rotation = player.HandTransform.rotation;
         }
-        return true;
     }
 }

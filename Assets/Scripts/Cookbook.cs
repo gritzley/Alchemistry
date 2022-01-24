@@ -11,45 +11,7 @@ public class Cookbook : MonoBehaviour
     void Start()
     {
         bookHelper = GetComponent<LightweightBookHelper>();
-        LeftPage.OnClick = LeftPageClick;
-        RightPage.OnClick = RightPageClick;
-    }
-
-    void LeftPageClick()
-    {
-        if (bookHelper.Progress == 0)
-        {
-            bookHelper.Orientation = -1;
-            ToggleOpen();
-        }
-        else if (bookHelper.OpenAmmount == 1)
-        {
-            bookHelper.PrevPage();
-        }
-    }
-
-    void RightPageClick()
-    {
-        if (bookHelper.Progress == bookHelper.PageAmmount - 1)
-        {
-            bookHelper.Orientation = 1;
-            ToggleOpen();
-        }
-        else if (bookHelper.OpenAmmount == 1)
-        {
-            bookHelper.NextPage();
-        }
-    }
-
-    void ToggleOpen()
-    {
-        if (bookHelper.OpenAmmount == 0)
-        {
-            bookHelper.Open();
-        }
-        if (bookHelper.OpenAmmount == 1)
-        {
-            bookHelper.Close();
-        }
+        LeftPage.OnClick = () => bookHelper.PrevPage();
+        RightPage.OnClick = () => bookHelper.NextPage();
     }
 }

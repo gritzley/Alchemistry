@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class IngredientDispenser : Interactible
+public class IngredientDispenser : MonoBehaviour
 {
     public bool IsEndless;
     public List<GameObject> IngredientModels;
@@ -15,8 +15,9 @@ public class IngredientDispenser : Interactible
     {
         currentlyHeldIngredients = IngredientModels;
     }
-    public override bool OnInteract(PlayerController player)
+    public void OnMouseDown()
     {
+        PlayerController player = PlayerController.Instance;
         if (player.HeldItem == null && hasIngredients)
         {
             GameObject go = UnityEngine.Object.Instantiate(GameManager.Instance.IngredientPrefab);
@@ -36,6 +37,5 @@ public class IngredientDispenser : Interactible
                 currentlyHeldIngredients.Remove(harvest);
             }
         }
-        return true;
     }
 }

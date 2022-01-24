@@ -40,37 +40,6 @@ public class PlayerController : Moveable
         HandTransform = transform.Find("Hand");
     }
 
-    public void Interact()
-    {
-        if (!InAction)
-        {
-            Ray ray = fpCamera.ScreenPointToRay(Input.mousePosition);
-
-            Debug.DrawRay(ray.origin, ray.direction, Color.green, 200.0f);
-
-            // Get a list of all interactibles hit, sorted by distance, with the closest first;
-            List<Interactible> interactibles = Physics.RaycastAll(ray)
-            .OrderBy( e => e.distance)
-            .Select( e => e.collider.gameObject.GetComponent<Interactible>())
-            .Where( e => e != null)
-            .ToList();
-
-            // we get a list of the 
-            int indexOfFirstSolid = interactibles.FindIndex( e => !(e is ItemSpot) );
-            if (indexOfFirstSolid == -1)
-            {
-                interactibles
-                .FindLastIndex( e => e.OnInteract(this) ); // this goes through the lsit from the back until an interactible returns true;
-            }
-            else if (!(bool)interactibles[indexOfFirstSolid].OnInteract(this))
-            {
-                interactibles
-                .GetRange(0, indexOfFirstSolid)
-                .FindLastIndex( e => e.OnInteract(this) ); // same as above, starts at the first solid object hit
-            }
-        }
-    }
-
     public void Move(Vector3 direction) => MoveToPos(currentPosition.GetNextPosition(direction));
     void MoveToPos(PlayerPosition newPos, float seconds = 0)
     {

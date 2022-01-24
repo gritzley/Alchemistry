@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-public class KettleController : Interactible
+public class KettleController : MonoBehaviour
 {
     private IngredientDefinition NewIngredient;
     private Light Light;
@@ -20,15 +20,15 @@ public class KettleController : Interactible
         Steps = new List<PotionDefinition.Step>();
     }
 
-    public override bool OnInteract(PlayerController player)
+    public void OnMouseDown()
     {
+        PlayerController player = PlayerController.Instance;
+
         if (player.HeldItem == null)
             FinishPotion(player);
 
         if (player.HeldItem != null && player.HeldItem is Ingredient)
             AddIngredient((player.HeldItem as Ingredient));
-
-        return true;
     }
 
     private void AddIngredient(Ingredient ingredient)
