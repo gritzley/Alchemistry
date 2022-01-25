@@ -157,7 +157,8 @@ public class Quest : SceneNode
         if (!isProofread) DrawNotification(1);
         bool hasEmptyLinks = Links.Exists(e => e.NextQuest == null || !(Customer.Quests.Contains(e.NextQuest) || Customer.Articles.Contains(e.NextQuest)));
         if (hasEmptyLinks && HasReceivingState) DrawNotification(2);
-        
+        bool hasUnconnectedPotionBranch = DialogueNodes.Exists(e => e is PotionBranch && (e as PotionBranch).FilteredLinks.Exists(e => e.NextNode == null));
+        if (hasUnconnectedPotionBranch) DrawNotification(2);
     }
 
     public override void ProcessEvent(Event e, int state, List<StoryNode> relatedNodes = null)
