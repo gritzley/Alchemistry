@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 62.666664, y: 40}
   Title: part
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: But for now, we should part our ways here.
+  Text: But for now, we should part ways.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

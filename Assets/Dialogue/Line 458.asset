@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 458
   m_EditorClassIdentifier: 
   Position: {x: 1697, y: -289}
-  Size: {x: 80.66667, y: 40}
-  Title: athlete
+  Size: {x: 66, y: 40}
+  Title: dark
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "He seemed as healthy as expected for a \nathlete."
+  Text: The investigation is completely in the dark, with no further leads.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -360,7 +360,7 @@ public class StoryEditor : EditorWindow
             selectedNodes.ForEach(e => e.isSelected = true);
             if (selectedNodes.Count == 1)
             {
-                Selection.activeObject = selectedNodes[0];
+                selectedNodes[0].Select();
             }
             if (selectedNodes.Count > 1)
             {

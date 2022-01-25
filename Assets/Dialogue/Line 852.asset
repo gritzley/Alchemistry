@@ -16,13 +16,15 @@ MonoBehaviour:
   Size: {x: 74, y: 40}
   Title: Agree
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: 'The attendants all agreed: It was a most pleasant evening.
+  Text: 'The rest of the eveing turned out most pleasantly.
 
-    Conversation
-    was lighthearted and those who drank of the liqour were
+    Those who drank
+    of the liqour were
 
-    not only free of
-    subsequent headaches, but felt decideldy at ease aswell.'
+    not only free of subsequent headaches,
+
+    but felt
+    decideldy at ease aswell.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

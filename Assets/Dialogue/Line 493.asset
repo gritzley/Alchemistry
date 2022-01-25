@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 110, y: 40}
   Title: cherry petal
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 'Growing smaller to the size of a cherry petal. '
+  Text: 'It grew smaller, to the size of a cherry petal. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

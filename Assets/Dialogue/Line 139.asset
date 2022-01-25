@@ -16,10 +16,12 @@ MonoBehaviour:
   Size: {x: 116, y: 40}
   Title: Flame breath
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'In mid-race Atrius suddenly shot fire through his nostrils,
+  Text: 'Mid-race, Atrius suddenly began
 
-    setting
-    himself and Grogor the Yeti on fire. '
+    shooting fire through his nostrils,
+
+    igniting
+    himself and Grogor the fair Yeti.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

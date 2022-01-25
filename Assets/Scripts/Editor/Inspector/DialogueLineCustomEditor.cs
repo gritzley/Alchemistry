@@ -60,10 +60,7 @@ public class DialogueLineEditor : Editor
 
         if (GUILayout.Button("Test Dialogue"))
         {
-            GameManager.Instance.CurrentCustomer.currentQuest.CurrentLine = null; // this resets the currentQuest
-            GameManager.Instance.CurrentCustomer.currentQuest = ((DialogueLine)serializedObject.targetObject).ParentQuest;
-            GameManager.Instance.CurrentCustomer.currentQuest.CurrentLine = (DialogueLine)serializedObject.targetObject;
-            GameManager.Instance.CurrentCustomer.HandleCurrentDialogueLine();
+            ((DialogueLine)serializedObject.targetObject).TestDialogueLine();
         }
 
         // Apply all changes made to serialized properties

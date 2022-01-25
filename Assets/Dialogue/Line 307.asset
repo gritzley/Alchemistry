@@ -17,7 +17,7 @@ MonoBehaviour:
   Title: traitor
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
   Text: "Later two dwarves where found hanging from \r\na tree. The word traitor
-    painted on their fore heads."
+    painted on their foreheads."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

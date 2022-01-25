@@ -16,9 +16,7 @@ MonoBehaviour:
   Size: {x: 120.666664, y: 40}
   Title: unpredictable
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: 'Which probably reacted in an
-
-    unpredictable way.'
+  Text: Which must have reacted in an unpredicted way.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

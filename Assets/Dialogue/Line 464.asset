@@ -16,11 +16,11 @@ MonoBehaviour:
   Size: {x: 139.33334, y: 40}
   Title: Sensitive Senses
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: He started shaking for a while then lay still.
+  Text: There was little effect when I poured the potion.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 0eac1426edfe24a46a2bb0304ec10c0f, type: 2}
+  NextRight: {fileID: 11400000, guid: 577aa035b79ea894b987df63797c296a, type: 2}

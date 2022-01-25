@@ -93,10 +93,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e5d8586c6882d6841bbbf0b68d8295bd, type: 2}
   - {fileID: 11400000, guid: c8667d56ad3d32b40bce1df0484a2a12, type: 2}
   - {fileID: 11400000, guid: af5773c8628a8cd4784bb157ecc9bece, type: 2}
-  - {fileID: 11400000, guid: 52263d883ddbfc040a78d394b4019460, type: 2}
-  - {fileID: 11400000, guid: 5dd3b7c18e7027d45934f9d1f34ec80a, type: 2}
-  - {fileID: 11400000, guid: 3a445fd5a4818aa48a50017bb8786676, type: 2}
-  - {fileID: 11400000, guid: 8057e8ab572837b4798b39f0d0e5e63f, type: 2}
   - {fileID: 11400000, guid: 786c578dd0804394bbf98e3cb4a0cec4, type: 2}
   - {fileID: 11400000, guid: a937f8afad1f4a24292eacfa8d2ade0f, type: 2}
   - {fileID: 11400000, guid: 524cba63c039f844dae5cd1f619cd5ca, type: 2}
@@ -128,3 +124,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 84ae26a2d762a694f90a9054c256791b, type: 2}
   - {fileID: 11400000, guid: b8c4d34133ba13341be8ed09a80fdd96, type: 2}
   - {fileID: 11400000, guid: 6541c68de9ee6604591688814e930984, type: 2}
+  isProofread: 0

@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 106.666664, y: 40}
   Title: green slime
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "Then it started coughing up a green slime, \nwhich immeadetly corrode itself
-    through \nhis body. "
+  Text: 'Then, the corpse started emitting a slimey green
+
+    substance, which immediately
+    ate through the body.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

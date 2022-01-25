@@ -16,8 +16,7 @@ MonoBehaviour:
   Size: {x: 76.66667, y: 40}
   Title: potion
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "The friend of mine sneaked in and \nadministerd the body the potion you
-    gave\nto me."
+  Text: I was able to sneak in to the morgue and administer the potion you gave me.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

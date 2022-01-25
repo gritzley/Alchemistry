@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 84, y: 40}
   Title: floating
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'Instead he started hovering above the ground,
+  Text: 'He instead began hovering close to the ground,
 
-    then slowly started floating
-    upward.'
+    before assuming an upward
+    trajectory.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

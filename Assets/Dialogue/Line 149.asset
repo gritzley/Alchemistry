@@ -16,7 +16,9 @@ MonoBehaviour:
   Size: {x: 72, y: 40}
   Title: Foam
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: Sickly purple foam was oozing out of his mouth and nose.
+  Text: 'Sickly purple foam oozed
+
+    from his mouth and nostrils.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

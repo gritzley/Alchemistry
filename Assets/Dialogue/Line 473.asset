@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 473
   m_EditorClassIdentifier: 
-  Position: {x: 1865, y: -533}
+  Position: {x: 1864, y: -535}
   Size: {x: 95.33333, y: 40}
   Title: suspicion
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "So were free from suspicion for now. \nYou did a good job."
+  Text: "So we're free from suspicion for now. \nYou did a good job."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 94.66667, y: 40}
   Title: merchant
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: Good day, potion merchant
+  Text: Good day, potion merchant.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

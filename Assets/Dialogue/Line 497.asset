@@ -16,7 +16,9 @@ MonoBehaviour:
   Size: {x: 78, y: 40}
   Title: smoke
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: Soon the whole room was filled with thick grey smoke.
+  Text: 'Soon the whole room was filled with
+
+    thick grey fumes.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

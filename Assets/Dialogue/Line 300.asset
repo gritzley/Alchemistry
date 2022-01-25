@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 128.66666, y: 40}
   Title: Potion of Sleep
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: 'When he chuged the first cup of the booze he started
+  Text: 'When he chuged the first cup of the booze
 
-    yawning. '
+    he started yawning.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

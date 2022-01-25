@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 76.66667, y: 40}
   Title: higher
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'He started flying higher and higher,
+  Text: 'Atrius started flying higher and higher,
 
-    seemingly not in control of his
-    ascent.'
+    seemingly not in control of
+    his ascent.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

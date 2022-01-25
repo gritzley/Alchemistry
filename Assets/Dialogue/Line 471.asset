@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 91.33333, y: 40}
   Title: accident
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "But when the examaniton results came in,\nI was relieved to heear that they
-    \r\nconnect this little accident to the \nmind-altering substances they found
-    in \nhis blood. "
+  Text: "But when the examaniton results came in,\nI was relieved to hear that they
+    \rconnect this\nlittle accident to mind-altering substances they\nfound in his
+    blood. "
   Notes: 
   AnswerLeft: 
   AnswerRight: 
