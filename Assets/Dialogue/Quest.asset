@@ -37,7 +37,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
     NextQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
+    NextQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
