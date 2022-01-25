@@ -82,6 +82,10 @@ public class StoryEditor : EditorWindow
     {
         quest.DialogueNodes = quest.DialogueNodes.Where(e => e).ToList();
         quest.DialogueNodes.ForEach(e => e.OnRemove = RemoveNodeFromView);
+
+        foreach(PotionBranch branch in quest.DialogueNodes.Where(e => e is PotionBranch))
+            branch.UpdateLinks();
+
         viewState = ViewState.DialogueView;
         nodes = new List<StoryNode>();
         nodes.Add(quest);

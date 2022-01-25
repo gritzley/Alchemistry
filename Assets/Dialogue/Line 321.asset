@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 321
   m_EditorClassIdentifier: 
-  Position: {x: 2453, y: -253}
+  Position: {x: 2503, y: -254}
   Size: {x: 98, y: 40}
   Title: colleauge
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: Maybe comissioning you to kill a remotley related colleauge wasn't best practice...
+  Text: Maybe comissioning you to kill a remotley related colleauge wasn't a good
+    idea.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
