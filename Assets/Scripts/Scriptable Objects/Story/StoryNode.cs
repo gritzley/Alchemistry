@@ -74,7 +74,7 @@ public abstract class StoryNode : ScriptableObject
                 }
 
             // ---- CONTEXT MENU ----
-                if (e.button == 1 && rect.Contains(e.mousePosition))
+                if (e.button == 1 && rect.Contains(e.mousePosition) && relatedNodes == null)
                 {
                     GenericMenu contextMenu = new GenericMenu();
                     FillContextMenu(contextMenu);
