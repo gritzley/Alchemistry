@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d32dc211a2482b4483c889ee6536f93, type: 3}
   m_Name: Article 4
   m_EditorClassIdentifier: 
-  Position: {x: 1012, y: -24}
+  Position: {x: 890, y: -78}
   Size: {x: 172.66667, y: 40}
   Title: Article 5 - Goldentooth
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}

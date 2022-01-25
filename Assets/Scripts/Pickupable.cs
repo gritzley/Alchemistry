@@ -2,15 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickupable : Moveable
+public class Pickupable : MonoBehaviour
 {
-    // The initial rotation of the object
     [HideInInspector] public Quaternion Rotation;
-
     void OnEnable()
     {
-        // Save initial rotation
         Rotation = transform.rotation;
     }
-    
+    public WaitForSeconds PickUp(Transform newParent)
+    {
+        transform.parent = newParent;
+        transform.LeanMoveLocal(Vector3.zero, 0.15f);
+        return new WaitForSeconds(0.15f);
+    }
+    public void OnMouseDown()
+    {
+        if (PlayerController.Instance.HeldItem == null)
+        {
+            PickUp(PlayerController.Instance.HandTransform);
+            PlayerController.Instance.HeldItem = this;
+        }
+    }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d32dc211a2482b4483c889ee6536f93, type: 3}
   m_Name: Article 2
   m_EditorClassIdentifier: 
-  Position: {x: 692, y: -348}
+  Position: {x: 628, y: -330}
   Size: {x: 147.33334, y: 40}
   Title: Article 1 - Arrested
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}

@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
+    void Start()
+    {
+        CurrentCustomer.gameObject.SetActive(true);
+    }
+
     public void AdvanceScene(SceneNode scene)
     {
         new Task(SceneTransition(scene));

@@ -22,9 +22,6 @@ public class InputController : MonoBehaviour
 
             if (Input.GetButtonDown("Right")) pc.Move(Vector3.right);
 
-            // Handle Mouseclick Event
-            if (Input.GetMouseButtonDown(0)) pc.Interact();
-
             if (Input.GetButtonDown("Pause")) pc.Paused = !pc.Paused;
 
             if (Input.GetButtonDown("1"))

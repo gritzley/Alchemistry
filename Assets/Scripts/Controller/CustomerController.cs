@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 [ExecuteInEditMode]
-public class CustomerController : Interactible
+public class CustomerController : MonoBehaviour
 {
     public DiegeticText MainTextDisplay;
     public DiegeticText LeftAnswerTextDisplay;
@@ -93,11 +93,11 @@ public class CustomerController : Interactible
         GameManager.Instance.AdvanceScene(scene);
     }
 
-    public override bool OnInteract(PlayerController player)
+    public void OnMouseDown()
     {
+        PlayerController player = PlayerController.Instance;
+
         if (isReceivingPotion && (player.HeldItem as Potion)?.Definition != null)
             ReceivePotion((player.HeldItem as Potion).Definition);
-
-        return true;
     }
 }
