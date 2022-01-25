@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class PlayerController : Moveable
+public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance;    
     [SerializeField] private PlayerPosition currentPosition;
@@ -16,6 +16,7 @@ public class PlayerController : Moveable
     [SerializeField] private PlayerPosition board;
     [SerializeField] private PlayerPosition pauseMenu;
     private bool _paused = false;
+    [SerializeField] private float moveTime = 0.5f;
     public bool Paused
     {
         get => _paused;
@@ -45,7 +46,7 @@ public class PlayerController : Moveable
     {
         if (newPos == null) return;
         
-        if (seconds <= 0) seconds = animationTime;
+        if (seconds <= 0) seconds = moveTime;
         LeanTween.move(gameObject, newPos.transform.position, seconds);
         LeanTween.rotate(gameObject, newPos.transform.rotation.eulerAngles, seconds);
         
@@ -56,7 +57,7 @@ public class PlayerController : Moveable
     public void MoveCamera(Transform target, float seconds = 0) => MoveCamera(target.position, target.rotation, seconds);
     public void MoveCamera(Vector3 position, Quaternion rotation, float seconds = 0)
     {
-        if (seconds <= 0) seconds = animationTime;
+        if (seconds <= 0) seconds = moveTime;
         LeanTween.move(fpCamera.gameObject, position, seconds);
         LeanTween.rotate(fpCamera.gameObject, rotation.eulerAngles, seconds);
     }
