@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 174
   m_EditorClassIdentifier: 
-  Position: {x: 2142.5, y: -90}
+  Position: {x: 2141.5, y: -91}
   Size: {x: 110.666664, y: 40}
   Title: examination
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: So they brought his body in for examination.
+  Text: The city guard brought his body in for examination.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

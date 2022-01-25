@@ -16,11 +16,11 @@ MonoBehaviour:
   Size: {x: 108, y: 40}
   Title: unapetizing
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'An unapetizing death for someone who''s
+  Text: 'How a fellow photosynthesist can swallow
 
-    nutured by sunlight like myself.'
-  Notes: I don'texactly know what that means? Why is the centaur nurtured by the
-    sun?
+    the taste of flesh, I shall
+    never understand.'
+  Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0

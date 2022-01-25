@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 66, y: 40}
   Title: fault
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "It's now considered an accident that was \nprobably his own fault."
+  Text: "His death is now considered an accident that was \nprobably his own fault."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

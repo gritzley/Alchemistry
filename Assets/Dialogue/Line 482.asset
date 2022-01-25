@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 86.66667, y: 40}
   Title: farewell
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: Farewell, potion dealer
+  Text: Farewell, potion dealer.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

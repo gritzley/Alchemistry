@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 295
   m_EditorClassIdentifier: 
-  Position: {x: 1692, y: -180}
+  Position: {x: 1692, y: -181}
   Size: {x: 136, y: 40}
   Title: Potion of Energy
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: "He drank hsi first cup, then gave an energizes speech \nabout the new advantages
+  Text: "He drank his first cup, then gave an energizes speech\nabout the new advantages
     of this booze, \nwhile doing squats."
   Notes: 
   AnswerLeft: 

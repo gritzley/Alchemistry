@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 60.666664, y: 40}
   Title: low
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: 'Anyway we should lay low for a while. '
+  Text: 'Anyway, we should lay low for a while. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

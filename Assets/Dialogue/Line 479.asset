@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 87.33333, y: 40}
   Title: delayed
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: 'The grand return of death will be delayed
+  Text: 'Death''s grand return shall be delayed
 
     to another day.'
   Notes: 

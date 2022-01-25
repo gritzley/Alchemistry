@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 71
   m_EditorClassIdentifier: 
-  Position: {x: 2591, y: 34}
+  Position: {x: 2599, y: 31}
   Size: {x: 68.666664, y: 40}
   Title: work
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: Over? Oh no, don't worry, my alchemically accomplished acquaintance. I still
-    have work for you!
+  Text: 'Over? Oh no, don''t worry, my
+
+    alchemically accomplished acquaintance.
+
+    I
+    still have work for you!'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

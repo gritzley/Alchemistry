@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 76, y: 40}
   Title: hiding
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 'So I''m hiding it right now in one of my crypts and one of the ghosts is
-    guarding him. '
+  Text: 'I''m hiding Atrius right now in one of my crypts. One of the ghosts is guarding
+    him. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

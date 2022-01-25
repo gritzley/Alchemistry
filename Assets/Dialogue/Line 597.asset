@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 597
   m_EditorClassIdentifier: 
-  Position: {x: 2920, y: -500}
+  Position: {x: 2921, y: -499}
   Size: {x: 68.666664, y: 40}
   Title: fruits
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: May you work bear you plentiful fruits.
+  Text: May you work bear plentiful fruits.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -13,6 +13,7 @@ public class QuestEditor : Editor
     SerializedProperty nodesProp;
     SerializedProperty nextProp;
     SerializedProperty customerProp;
+    SerializedProperty proofreadProp;
 
     ReorderableList Links;
     List<SceneNode> relatedScenes;
@@ -25,6 +26,7 @@ public class QuestEditor : Editor
         nodesProp = serializedObject.FindProperty("DialogueNodes");
         customerProp = serializedObject.FindProperty("Customer");
         nextProp = serializedObject.FindProperty("NextScene");
+        proofreadProp = serializedObject.FindProperty("isProofread");
 
         (target as Quest).UpdateLinks();
         CustomerDefinition customer = ((Quest)serializedObject.targetObject).Customer;
@@ -43,6 +45,7 @@ public class QuestEditor : Editor
         EditorGUILayout.PropertyField(titleProp);
         EditorGUILayout.PropertyField(customerProp);
         EditorGUILayout.PropertyField(nodesProp);
+        EditorGUILayout.PropertyField(proofreadProp);
 
         if ((serializedObject.targetObject as Quest).HasReceivingState)
         {

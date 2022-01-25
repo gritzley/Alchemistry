@@ -16,7 +16,8 @@ MonoBehaviour:
   Size: {x: 109.333336, y: 40}
   Title: high ground
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "If the guard of this city would just come \ndown from their moral high ground."
+  Text: There's be no need for this secrecy, if the city guard just abandoned their
+    silly moralism.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

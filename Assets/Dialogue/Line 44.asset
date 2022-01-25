@@ -16,8 +16,12 @@ MonoBehaviour:
   Size: {x: 77.33333, y: 40}
   Title: record
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: When he had passed the finish line, he had set a new breathtaking record.
-    He stood there smiling and winking.
+  Text: 'When he had passed the finish line,
+
+    he had set a new breathtaking record.
+
+    He
+    stood there smiling and winking.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

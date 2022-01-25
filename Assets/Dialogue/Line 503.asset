@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 80.66667, y: 40}
   Title: funeral
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: When the time is right I''ll give him the funeral he deserves.
+  Text: When the time is right, I'll give him the funeral he deserves.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

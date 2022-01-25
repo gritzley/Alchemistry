@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 494
   m_EditorClassIdentifier: 
-  Position: {x: 1668, y: -57}
+  Position: {x: 1680, y: -57}
   Size: {x: 86.66667, y: 40}
   Title: pockets
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 'My friend just stuffed him into
-
-    one of the pockets in his coat.'
+  Text: I just stuffed it into my pocket and walked right out of there, no questions
+    asked.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: d28c82ceff26da3499b31fb0c9bf9a74, type: 2}
+  NextRight: {fileID: 11400000, guid: 7bd5d175d8d7cdf489d206fd66d69fa9, type: 2}

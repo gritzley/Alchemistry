@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 309
   m_EditorClassIdentifier: 
-  Position: {x: 1871, y: 273}
+  Position: {x: 1873, y: 271}
   Size: {x: 89.33333, y: 40}
   Title: old days
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: "He was down his fith cup when he begann telling \nstories about\r the old
-    days."
+  Text: "He was on his fith cup when he begann\ntelling stories about\r \"the old
+    days\"."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

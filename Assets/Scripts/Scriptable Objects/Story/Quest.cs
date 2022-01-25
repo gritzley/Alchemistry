@@ -41,6 +41,7 @@ public class Quest : SceneNode
     [NonSerialized] private ConnectionPoint OutPoint;
     public List<DialogueNode> DialogueNodes;
     [NonSerialized] public Action<Quest> ViewDialogue;
+    [SerializeField] private bool isProofread;
 
 #endif
     
@@ -153,6 +154,7 @@ public class Quest : SceneNode
         base.Draw(offset);
         GUI.Label(rect, Title, LabelStyle);
 
+        if (!isProofread) DrawNotification(1);
         bool hasEmptyLinks = Links.Exists(e => e.NextQuest == null || !(Customer.Quests.Contains(e.NextQuest) || Customer.Articles.Contains(e.NextQuest)));
         if (hasEmptyLinks && HasReceivingState) DrawNotification(2);
         

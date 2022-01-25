@@ -63,8 +63,7 @@ public abstract class StoryNode : ScriptableObject
                     isDragging = true;
                     if (relatedNodes == null)
                     {
-                        Selection.activeObject = this;
-                        isSelected = true;
+                        Select();
                     }
                     else
                     {
@@ -103,6 +102,12 @@ public abstract class StoryNode : ScriptableObject
                 }
                 break;
         }
+    }
+
+    public virtual void Select()
+    {
+        Selection.activeObject = this;
+        isSelected = true;
     }
 
     public void DrawNotification(int severity = 0)

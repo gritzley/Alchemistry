@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 91.33333, y: 40}
   Title: intended
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: 'Seems like this new magical booze didn''t work like
+  Text: 'Seems like this new magical booze
 
-    intended.'
+    didn''t work like intended.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 
