@@ -129,7 +129,7 @@ Material:
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
     - _Open: 1
-    - _Pages: 3
+    - _Pages: 10
     - _Progress: 0
     - _ProgressThreshold: 0.02
     - _QueueOffset: 0
@@ -140,7 +140,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Rows: 3
+    - _Rows: 6
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
