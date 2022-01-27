@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 208
   m_EditorClassIdentifier: 
-  Position: {x: 2236, y: 154}
+  Position: {x: 2201, y: 24}
   Size: {x: 70, y: 40}
   Title: tooth
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: His mouth open wide revealing a golden row teeth.
+  Text: His mouth opened wide, revealing a row of golden teeth.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

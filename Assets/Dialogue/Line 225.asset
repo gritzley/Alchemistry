@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 225
   m_EditorClassIdentifier: 
-  Position: {x: 2164.25, y: 62.5}
+  Position: {x: 2133.25, y: -41.5}
   Size: {x: 76.66667, y: 40}
   Title: colder
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: Touching the tap, the air seemed to turn colder around him.
+  Text: When he touched the tap, the air seemed to turn colder around him.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

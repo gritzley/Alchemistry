@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 108.666664, y: 40}
   Title: confiscated
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "So they confisicated all of the booze the could get and \nclosed his destilleries\r. "
+  Text: "So they confisicated everything they could find and \nclosed his distilleries\r."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

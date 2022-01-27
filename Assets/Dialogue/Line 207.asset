@@ -12,14 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 207
   m_EditorClassIdentifier: 
-  Position: {x: 2135, y: 157}
+  Position: {x: 2098, y: 24}
   Size: {x: 65.333336, y: 40}
   Title: gold
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'He was slowly coverd in a layer of golden alloy.
-
-    Turning into an image
-    of pure glittering gold.'
+  Text: A shimmer slowly crept up his skin, leaving a glittering golden surface.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

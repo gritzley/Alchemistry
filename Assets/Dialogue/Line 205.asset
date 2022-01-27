@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 205
   m_EditorClassIdentifier: 
-  Position: {x: 2568, y: 117}
+  Position: {x: 2524, y: -3}
   Size: {x: 100, y: 40}
   Title: Mage toss
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "The Mage toss appeared quickly after, that preventing any more \ndamage
-    trapping him in a flask."
+  Text: The Mage toss appeared quickly after, preventing further damage by trapping
+    the beast in a flask of magical glass.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

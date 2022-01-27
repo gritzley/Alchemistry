@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 241
   m_EditorClassIdentifier: 
-  Position: {x: 2458.4287, y: 307.14282}
+  Position: {x: 2411.4287, y: 125.14282}
   Size: {x: 101.33333, y: 40}
   Title: angry mob
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "He only came to the third, before they formed an angry mob and \nattacked
-    with  full force."
+  Text: He didn't get very far, before an angry mob stormed the stage, attacking
+    him with full force.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

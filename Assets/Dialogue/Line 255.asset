@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 255
   m_EditorClassIdentifier: 
-  Position: {x: 2280.4287, y: 17.142822}
+  Position: {x: 2243.4287, y: -73.85718}
   Size: {x: 64.666664, y: 40}
   Title: ears
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "The guard went dizzy, people started screaming \ncovering their ears."
+  Text: 'The guards went dizzy, people started
+
+    screaming and covering their
+    ears.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

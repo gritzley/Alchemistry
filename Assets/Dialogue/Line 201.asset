@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 201
   m_EditorClassIdentifier: 
-  Position: {x: 2125, y: 115}
+  Position: {x: 2081, y: -5}
   Size: {x: 87.33333, y: 40}
   Title: big tank
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   Text: 'At first nothing unusal happend.
 
-    But then two feverish yellow eyes
-    appeared in the big tank. '
+    But then two feverishly yellow eyes
+    appeared
+
+    in the big tank. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

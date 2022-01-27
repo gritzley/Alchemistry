@@ -18,8 +18,10 @@ MonoBehaviour:
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   Text: 'So you know the procedure.
 
-    We should make it look like an accident
-    or like a intentional miracle from one of the gods.'
+    We should make it look like an accident.
+
+    Or
+    like a miracle form another god.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

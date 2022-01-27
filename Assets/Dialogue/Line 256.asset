@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 256
   m_EditorClassIdentifier: 
-  Position: {x: 2371.4287, y: 18.142822}
+  Position: {x: 2334.4287, y: -72.85718}
   Size: {x: 76.66667, y: 40}
   Title: hitting
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "An dwarf ended this ear bleeding concert by hitting him \nhard enough in
-    the head\r he sank dead to the ground."
+  Text: A dwarf ended this cacophony by hitting him over the head hard enough, that
+    he dropped dead.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

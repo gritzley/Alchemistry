@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 128.66666, y: 40}
   Title: little something
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: Done? I mean yes mostly there is just a little something...
+  Text: Done? I mean yes mostly there is just one little something ...
   Notes: 
   AnswerLeft: 
   AnswerRight: 

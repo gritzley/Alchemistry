@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 217
   m_EditorClassIdentifier: 
-  Position: {x: 2780, y: 258}
+  Position: {x: 2734, y: 76}
   Size: {x: 68.666664, y: 40}
   Title: puffs
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: The only thing left of were blood stained white puffs of fur.
+  Text: The only thing left were some white blood stained tufts of fur.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

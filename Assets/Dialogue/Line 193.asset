@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 193
   m_EditorClassIdentifier: 
-  Position: {x: 4153, y: -291}
+  Position: {x: 4155, y: -294}
   Size: {x: 88.66667, y: 40}
   Title: services
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: In some kind of holy ritual at the start of his church services, then giving
-    the cup to his followers.
+  Text: I know he is performing some kind of holy miracle at his church services,
+    where he is drinking from a cup that he passes to his followers.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

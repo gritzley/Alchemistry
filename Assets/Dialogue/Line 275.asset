@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 106, y: 40}
   Title: mausoleum
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "I will dedicate him a mausoleum at my grave yard so splendid, the mortals
-    and gods\r will stay in a row to die to get such magnificent resting ground."
+  Text: "I will dedicate to him, a mausoleum so splendid, that mortals and gods\r
+    alike will stand in line to come to rest at my graveyard."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

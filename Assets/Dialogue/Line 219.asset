@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 219
   m_EditorClassIdentifier: 
-  Position: {x: 1979, y: -20}
+  Position: {x: 1948, y: -105}
   Size: {x: 132.66666, y: 40}
   Title: Potion of Giants
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "After he took a gulp, he suddenly seemed to grow a few inches. \nThen a
-    foot. Then three at a time."
+  Text: After he took a gulp, he suddenly seemed to grow a few inches.<pause=0.3>
+    Then a foot.<pause=0.3> Then three at a time.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

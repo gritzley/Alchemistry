@@ -16,10 +16,12 @@ MonoBehaviour:
   Size: {x: 60.666664, y: 65}
   Title: win
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: A win for justice and my graveyard.
+  Text: 'A win for justice.<pause=0.5>
+
+    And my graveyard.<pause=0.5>'
   Notes: 
-  AnswerLeft: I'm glad I restoked my booze supplies.
-  AnswerRight: And a loose for anyone with jobs in the destilleries.
+  AnswerLeft: I'm glad I restocked my booze supplies before this
+  AnswerRight: And a loose for anyone with a job in the distilleries.
   HasAnswers: 1
   _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 35d2f764afc2a664dbe628cdd1492db3, type: 2}

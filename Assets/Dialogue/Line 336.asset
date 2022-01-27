@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 78, y: 40}
   Title: guests
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: It's the last one. After that people will die on voluntarly just to be a
-    part of my wonderful yard full a famous and special guests.
+  Text: It's the last one. After that people will die voluntarly, just to be a part
+    of my wonderful yard full of famous and special souls.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

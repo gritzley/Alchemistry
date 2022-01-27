@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 220
   m_EditorClassIdentifier: 
-  Position: {x: 2146, y: -21}
+  Position: {x: 2115, y: -106}
   Size: {x: 106, y: 40}
   Title: real dragon
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "Their were screams about a real dragon and people crying that \nhe was losing
-    control. "
+  Text: 'There were screams about a full dragon and people crying, that he was losing
+    control. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
