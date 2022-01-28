@@ -15,9 +15,9 @@ public class ItemSpot : MonoBehaviour
     void OnMouseDown()
     {
         if (PlayerController.Instance.HeldItem != null && Item == null)
-            TakeItem();
+            StartCoroutine(TakeItem());
         else if (PlayerController.Instance.HeldItem == null && Item != null)
-            GiveItem();
+            StartCoroutine(GiveItem());
     }
 
     IEnumerator GiveItem()
