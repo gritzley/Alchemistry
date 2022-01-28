@@ -25,17 +25,23 @@ public class IngredientDispenser : Clickable
             Ingredient ingredient = go.GetComponent<Ingredient>();
             GameObject harvest = randomIngredient;
             Definition.Model = harvest;
+            ingredient.transform.parent = harvest.transform;
+            ingredient.transform.localPosition = Vector3.zero;
             ingredient.Definition = Definition;
-            ingredient.transform.parent = player.HandTransform;
-            ingredient.transform.position = player.HandTransform.position;
             ingredient.AttachModel();
-            player.HeldItem = ingredient;
             if (!IsEndless)
             {
                 harvest.SetActive(false);
                 currentlyHeldIngredients.Remove(harvest);
             }
             Definition.Model = null;
+            StartCoroutine(GiveIngredientToPlayer(ingredient));
         }
+    }
+
+    private IEnumerator GiveIngredientToPlayer(Ingredient ingredient)
+    {
+        yield return ingredient.PickUp(PlayerController.Instance.HandTransform);
+        PlayerController.Instance.HeldItem = ingredient;
     }
 }
