@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private Camera fpCamera;
     [HideInInspector] public Transform HandTransform;
     [HideInInspector] public Pickupable HeldItem;
-    [HideInInspector] public bool InAction;
     [SerializeField] private PlayerPosition hiddenMenu;
     [SerializeField] private PlayerPosition board;
     [SerializeField] private PlayerPosition pauseMenu;
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
         set
         {
             _paused = value;
-            InAction = _paused;
             MoveCamera(_paused ? pauseMenu : currentPosition, 0.5f);
         }
     }
@@ -44,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public void Move(Vector3 direction) => MoveToPos(currentPosition.GetNextPosition(direction));
     void MoveToPos(PlayerPosition newPos, float seconds = 0)
     {
-        if (newPos == null) return;
+        if (newPos == null || Paused) return;
         
         if (seconds <= 0) seconds = moveTime;
         LeanTween.move(gameObject, newPos.transform.position, seconds);
