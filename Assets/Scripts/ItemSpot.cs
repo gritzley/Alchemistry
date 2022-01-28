@@ -5,6 +5,7 @@ public class ItemSpot : MonoBehaviour
 {
     private Pickupable Item;
     private Collider Collider;
+    public Transform TransitionSpot;
     void Start()
     {
         Item = GetComponentInChildren<Pickupable>();
@@ -13,18 +14,27 @@ public class ItemSpot : MonoBehaviour
 
     void OnMouseDown()
     {
-        PlayerController player = PlayerController.Instance;
         if (PlayerController.Instance.HeldItem != null && Item == null)
-        {
-            player.HeldItem.PickUp(transform);
-            Item = player.HeldItem;
-            player.HeldItem = null;
-        }
+            TakeItem();
         else if (PlayerController.Instance.HeldItem == null && Item != null)
-        {
-            player.HeldItem = Item;
-            player.HeldItem.PickUp(player.HandTransform);
-            Item = null;
-        }
+            GiveItem();
+    }
+
+    IEnumerator GiveItem()
+    {
+        PlayerController.Instance.HeldItem = Item;
+        Item = null;
+        if (TransitionSpot != null)
+            yield return PlayerController.Instance.HeldItem.PickUp(TransitionSpot);
+        yield return PlayerController.Instance.HeldItem.PickUp(PlayerController.Instance.HandTransform);
+    }
+
+    IEnumerator TakeItem()
+    {
+        Item = PlayerController.Instance.HeldItem;
+        PlayerController.Instance.HeldItem = null;
+        if (TransitionSpot != null)
+            yield return Item.PickUp(TransitionSpot);
+        yield return Item.PickUp(transform);
     }
 }

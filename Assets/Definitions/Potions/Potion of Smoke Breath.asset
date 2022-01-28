@@ -15,7 +15,7 @@ MonoBehaviour:
   Recipe:
   - Ingredient: {fileID: 11400000, guid: 322852124b032b74390ef4abb80e43a8, type: 2}
     Time: 30
-    ErrorMargin: 3
+    ErrorMargin: 10
   - Ingredient: {fileID: 11400000, guid: 37ac86072ad180c4aa0e1ee460a8d6e5, type: 2}
     Time: 0
     ErrorMargin: 10000

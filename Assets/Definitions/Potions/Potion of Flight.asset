@@ -24,4 +24,4 @@ MonoBehaviour:
     ErrorMargin: 10000
   - Ingredient: {fileID: 11400000, guid: 87d05ec30b7024147a187051a00ac83a, type: 2}
     Time: 30
-    ErrorMargin: 3
+    ErrorMargin: 10

@@ -21,7 +21,7 @@ MonoBehaviour:
     ErrorMargin: 10000
   - Ingredient: {fileID: 11400000, guid: 51125588384bc924191fb0e68d8b1c18, type: 2}
     Time: 30
-    ErrorMargin: 3
+    ErrorMargin: 10
   - Ingredient: {fileID: 11400000, guid: 4976786b0967660419a68c5bedfd4b1a, type: 2}
     Time: 0
     ErrorMargin: 10000
