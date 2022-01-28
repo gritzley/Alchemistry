@@ -143,9 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6217d623976f74382a996dac772271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTime: 0.15
   Rotation: {x: 0, y: 0, z: 0, w: 0}
-  Definition: {fileID: 0}
+  Definition: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
 --- !u!1 &8959575792861167356
 GameObject:
   m_ObjectHideFlags: 0
