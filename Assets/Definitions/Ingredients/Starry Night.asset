@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed424534ae8546f469f412763aa7db4a, type: 3}
   m_Name: Starry Night
   m_EditorClassIdentifier: 
-  IsConsumable: 0
-  Model: {fileID: 0}
+  IsConsumable: 1
+  Model: {fileID: 919132149155446097, guid: f44982b3dbfbc2e4d9ee0319c59c2435, type: 3}

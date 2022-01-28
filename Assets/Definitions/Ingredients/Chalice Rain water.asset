@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Chalice Rain water
   m_EditorClassIdentifier: 
   IsConsumable: 0
-  Model: {fileID: 0}
+  Model: {fileID: 919132149155446097, guid: 894c11622dc5094439e2ccda69941d16, type: 3}

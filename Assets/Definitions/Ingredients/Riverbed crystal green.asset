@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed424534ae8546f469f412763aa7db4a, type: 3}
   m_Name: Riverbed crystal green
   m_EditorClassIdentifier: 
-  IsConsumable: 0
+  IsConsumable: 1
   Model: {fileID: 0}

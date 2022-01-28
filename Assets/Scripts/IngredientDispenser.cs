@@ -35,6 +35,7 @@ public class IngredientDispenser : Clickable
                 harvest.SetActive(false);
                 currentlyHeldIngredients.Remove(harvest);
             }
+            Definition.Model = null;
         }
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed424534ae8546f469f412763aa7db4a, type: 3}
   m_Name: Corrosive Swallow Feather
   m_EditorClassIdentifier: 
-  IsConsumable: 0
-  Model: {fileID: 0}
+  IsConsumable: 1
+  Model: {fileID: 919132149155446097, guid: dc62378b1f5b81f4d9471210717b8834, type: 3}
