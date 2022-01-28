@@ -9,11 +9,11 @@ public class Pickupable : MonoBehaviour
     {
         Rotation = transform.rotation;
     }
-    public WaitForSeconds PickUp(Transform newParent)
+    public WaitForSeconds PickUp(Transform newParent, float seconds = 0.15f)
     {
         transform.parent = newParent;
-        transform.LeanMoveLocal(Vector3.zero, 0.15f);
-        return new WaitForSeconds(0.15f);
+        transform.LeanMoveLocal(Vector3.zero, seconds);
+        return new WaitForSeconds(seconds);
     }
     public void OnMouseDown()
     {
