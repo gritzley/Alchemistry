@@ -11,6 +11,7 @@ public class KettleController : MonoBehaviour
     private ParticleSystem Orchestra;
     private List<PotionDefinition.Step> Steps;
     public PotionDefinition FailedPotionDefinition;
+    public GameObject PotionPrefab;
 
     public void OnEnable()
     {
@@ -64,16 +65,18 @@ public class KettleController : MonoBehaviour
     {
         LockInLastStep();
         if (Steps.Count > 0)
-        {
+        {            
+            PotionDefinition finishedPotionDefiniton = FailedPotionDefinition;
             List<PotionDefinition> Potions = GameManager.Instance.Potions.Where( e => e.ValidateSteps(Steps) ).ToList();
-            if (Potions.Count != 1)
-            {
-                GameManager.Instance.CurrentCustomer.ReceivePotion(FailedPotionDefinition);
-            }
-            else
-            {
-                GameManager.Instance.CurrentCustomer.ReceivePotion(Potions[0]);
-            }
+            if (Potions.Count == 1) finishedPotionDefiniton = Potions[0];
+
+            GameObject go = Instantiate(PotionPrefab);
+            go.transform.parent = player.HandTransform;
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localEulerAngles = Vector3.zero;
+
+            Potion finishedPotion = go.GetComponent<Potion>();
+            player.HeldItem = finishedPotion;
         }
 
         Steps = new List<PotionDefinition.Step>();
