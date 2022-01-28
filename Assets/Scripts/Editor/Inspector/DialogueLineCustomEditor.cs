@@ -53,7 +53,13 @@ public class DialogueLineEditor : Editor
             answerLeftProp.stringValue = EditorGUILayout.TextArea(answerLeftProp.stringValue);
         }
         DialogueLine line = ((DialogueLine)serializedObject.targetObject);
-        line.IsReceivingState = EditorGUILayout.Toggle(new GUIContent("Is Receiving Potions"), line.IsReceivingState);
+        bool newIsReceiving = EditorGUILayout.Toggle(new GUIContent("Is Receiving Potions"), line.IsReceivingState);
+        if (line.IsReceivingState != newIsReceiving)
+        {
+            line.IsReceivingState = newIsReceiving;
+            EditorUtility.SetDirty(line);
+            AssetDatabase.SaveAssets();
+        }
 
         EditorGUILayout.LabelField("Notes");
         notesProp.stringValue = EditorGUILayout.TextArea(notesProp.stringValue);
