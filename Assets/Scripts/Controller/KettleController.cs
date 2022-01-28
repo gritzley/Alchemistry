@@ -68,6 +68,7 @@ public class KettleController : MonoBehaviour
         {            
             PotionDefinition finishedPotionDefiniton = FailedPotionDefinition;
             List<PotionDefinition> Potions = GameManager.Instance.Potions.Where( e => e.ValidateSteps(Steps) ).ToList();
+
             if (Potions.Count == 1) finishedPotionDefiniton = Potions[0];
 
             GameObject go = Instantiate(PotionPrefab);
@@ -76,6 +77,8 @@ public class KettleController : MonoBehaviour
             go.transform.localEulerAngles = Vector3.zero;
 
             Potion finishedPotion = go.GetComponent<Potion>();
+            finishedPotion.Definition = finishedPotionDefiniton;
+            finishedPotion.UpdateName();
             player.HeldItem = finishedPotion;
         }
 

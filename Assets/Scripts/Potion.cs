@@ -9,7 +9,8 @@ public class Potion : Pickupable
 
     void OnEnable()
     {
-        if (Definition != null)
-            GetComponentInChildren<DiegeticText>()?.DisplayText(Definition.name);
+        if (Definition != null) UpdateName();
     }
+
+    public void UpdateName() => GetComponentInChildren<DiegeticText>()?.DisplayText(Definition.name);
 }
