@@ -42,6 +42,15 @@ public class KettleController : MonoBehaviour
             yield return ingredient.PickUp(TransitionPoint, animationTime);
             yield return ingredient.PickUp(transform, animationTime);
         }
+        else
+        {
+            yield return ingredient.PickUp(TransitionPoint, animationTime);
+            ingredient.transform.LeanRotateX(90, 0.2f);
+            yield return new WaitForSeconds(0.5f);
+            ingredient.transform.LeanRotateX(0, 0.2f);
+            yield return new WaitForSeconds(0.5f);
+            yield return ingredient.PickUp(PlayerController.Instance.HandTransform);
+        }
 
         LockInLastStep();
         PotionDefinition.Step step = new PotionDefinition.Step();
