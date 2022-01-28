@@ -98,6 +98,10 @@ public class CustomerController : MonoBehaviour
         PlayerController player = PlayerController.Instance;
 
         if (isReceivingPotion && (player.HeldItem as Potion)?.Definition != null)
+        {
             ReceivePotion((player.HeldItem as Potion).Definition);
+            Destroy(player.HeldItem.gameObject);
+            player.HeldItem = null;
+        }
     }
 }
