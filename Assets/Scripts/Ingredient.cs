@@ -31,6 +31,6 @@ public class Ingredient : Pickupable
     {
         GameObject go = Instantiate(Definition.Model);
         go.transform.parent = transform;
-        go.transform.position += transform.position;
+        go.transform.localPosition = Vector3.zero;
     }
 }
