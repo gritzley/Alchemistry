@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Camera fpCamera;
     [HideInInspector] public Transform HandTransform;
     [HideInInspector] public Pickupable HeldItem;
-    [SerializeField] private PlayerPosition hiddenMenu;
+    [SerializeField] private PlayerPosition endMenu;
     [SerializeField] private PlayerPosition board;
     [SerializeField] private PlayerPosition pauseMenu;
     private bool _paused = false;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Move(Vector3 direction) => MoveToPos(currentPosition.GetNextPosition(direction));
-    void MoveToPos(PlayerPosition newPos, float seconds = 0)
+    public void MoveToPos(PlayerPosition newPos, float seconds = 0)
     {
         if (newPos == null || Paused) return;
         
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         LeanTween.move(fpCamera.gameObject, position, seconds);
         LeanTween.rotate(fpCamera.gameObject, rotation.eulerAngles, seconds);
     }
-    public void LookAtHiddenMenu(float seconds = 0) => MoveCamera(hiddenMenu, seconds);
+    public void LookAtEndMenu(float seconds = 0) => MoveCamera(endMenu, seconds);
     public void LookAtBoard(float seconds = 0) => MoveCamera(board, seconds);
     public void LookAtPauseMenu(float seconds = 0) => MoveCamera(pauseMenu, seconds);
 }

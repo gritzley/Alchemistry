@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         if (scene == null)
         {
             CurrentCustomer.gameObject.SetActive(false);
-            PlayerController.Instance.LookAtHiddenMenu(1.0f);
+            PlayerController.Instance.LookAtEndMenu(1.0f);
         }
         else if (scene is Quest)
         {
