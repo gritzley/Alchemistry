@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hero's Cap
   m_EditorClassIdentifier: 
   IsConsumable: 0
-  Model: {fileID: 0}
+  Model: {fileID: 919132149155446097, guid: 75234b2ce45f76046bfbfbe0e4b23e4e, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Golden Tooth's Booze
   m_EditorClassIdentifier: 
   IsConsumable: 0
-  Model: {fileID: 0}
+  Model: {fileID: 919132149155446097, guid: afadd7d370c2a1745a68bbaeae4f100b, type: 3}
