@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Wobbly Consience
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 37ac86072ad180c4aa0e1ee460a8d6e5, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: 0a8d1f2fe636102488c171d9d3c2bfad, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: b2228116c03dd28498c6bc00485300f0, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 9a9d1397f91fa9c4a9cbbb42027c26a0, type: 2}
+    Time: 0
+    ErrorMargin: 10000

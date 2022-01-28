@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Flame breath
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: e8162e9980e78fd4e98bf00460eae253, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 11c4708d80b7b0942b5226be71b83988, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: 322852124b032b74390ef4abb80e43a8, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: b2228116c03dd28498c6bc00485300f0, type: 2}
+    Time: 0
+    ErrorMargin: 10000

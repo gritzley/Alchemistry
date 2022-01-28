@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Mana
   m_EditorClassIdentifier: 
-  Name: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 33571275197969443a1430521df4f2a4, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: 9ee3932bc3b25fe4cb66da7bea74ba2c, type: 2}
+    Time: 0
+    ErrorMargin: 100000
+  - Ingredient: {fileID: 11400000, guid: f87a08f726e1fa548b3ae7af9f89ef34, type: 2}
+    Time: 0
+    ErrorMargin: 100000
+  - Ingredient: {fileID: 11400000, guid: d91faff0a6dab0241908f9cc2e29e66b, type: 2}
+    Time: 0
+    ErrorMargin: 100000

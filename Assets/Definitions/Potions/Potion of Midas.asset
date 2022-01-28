@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Midas
   m_EditorClassIdentifier: 
-  Name: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: b2228116c03dd28498c6bc00485300f0, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: de0f113384c2ca943ab638a0e2de2832, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: e8575988c59ceb048ada6d32afe09d29, type: 2}
+    Time: 0
+    ErrorMargin: 10000

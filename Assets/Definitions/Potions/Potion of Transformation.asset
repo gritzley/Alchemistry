@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Transformation
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 1cf2368cce3c7574bbefa6af29bb85e1, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: c4c933c15630b75439da28a6f84de807, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 63edb7d8c8d49714fb8579c11dc74693, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: f6bbdfc97f35dc34db184019a70cfd12, type: 2}
+    Time: 0
+    ErrorMargin: 10000

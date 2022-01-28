@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Herbal Tea
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 1e7dc928829b6a84d9808faab1108e9e, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: d91faff0a6dab0241908f9cc2e29e66b, type: 2}
+    Time: 30
+    ErrorMargin: 5
+  - Ingredient: {fileID: 11400000, guid: 709247fa76dedeb4aac90b535ae7ce90, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 11c4708d80b7b0942b5226be71b83988, type: 2}
+    Time: 0
+    ErrorMargin: 10000

@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Smallness
   m_EditorClassIdentifier: 
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 1cf2368cce3c7574bbefa6af29bb85e1, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: a104522fafda15f458885726576c8b17, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
+    Time: 0
+    ErrorMargin: 10000
+  - Ingredient: {fileID: 11400000, guid: e8162e9980e78fd4e98bf00460eae253, type: 2}
+    Time: 0
+    ErrorMargin: 10000

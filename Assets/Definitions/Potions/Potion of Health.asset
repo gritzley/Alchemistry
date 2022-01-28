@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f75016755fa34886f8dafeb17ab6f, type: 3}
   m_Name: Potion of Health
   m_EditorClassIdentifier: 
-  Name: Potion of Health
-  Recipe: []
+  Recipe:
+  - Ingredient: {fileID: 11400000, guid: 51125588384bc924191fb0e68d8b1c18, type: 2}
+    Time: 0
+    ErrorMargin: 100000
+  - Ingredient: {fileID: 11400000, guid: 1cf2368cce3c7574bbefa6af29bb85e1, type: 2}
+    Time: 0
+    ErrorMargin: 100000
+  - Ingredient: {fileID: 11400000, guid: 11c4708d80b7b0942b5226be71b83988, type: 2}
+    Time: 30
+    ErrorMargin: 3
+  - Ingredient: {fileID: 11400000, guid: 0a8d1f2fe636102488c171d9d3c2bfad, type: 2}
+    Time: 0
+    ErrorMargin: 10000
