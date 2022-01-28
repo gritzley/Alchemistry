@@ -7,6 +7,7 @@ public class IngredientDispenser : Clickable
 {
     public bool IsEndless;
     public List<GameObject> IngredientModels;
+    public IngredientDefinition Definition;
     private List<GameObject> currentlyHeldIngredients;
     private GameObject randomIngredient => currentlyHeldIngredients[new System.Random().Next(currentlyHeldIngredients.Count)];
     private bool hasIngredients => currentlyHeldIngredients.Count > 0;
@@ -22,11 +23,9 @@ public class IngredientDispenser : Clickable
         {
             GameObject go = UnityEngine.Object.Instantiate(GameManager.Instance.IngredientPrefab);
             Ingredient ingredient = go.GetComponent<Ingredient>();
-            IngredientDefinition ingredientDefinition = ScriptableObject.CreateInstance<IngredientDefinition>();
-            ingredientDefinition.IsConsumable = true;
             GameObject harvest = randomIngredient;
-            ingredientDefinition.Model = harvest;
-            ingredient.Definition = ingredientDefinition;
+            Definition.Model = harvest;
+            ingredient.Definition = Definition;
             ingredient.transform.parent = player.HandTransform;
             ingredient.transform.position = player.HandTransform.position;
             ingredient.AttachModel();
