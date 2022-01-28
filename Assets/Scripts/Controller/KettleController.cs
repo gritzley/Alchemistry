@@ -80,7 +80,7 @@ public class KettleController : MonoBehaviour
             if (Potions.Count == 1) finishedPotionDefiniton = Potions[0];
 
             GameObject go = Instantiate(PotionPrefab);
-            go.transform.parent = player.HandTransform;
+            go.transform.parent = transform;
             go.transform.localPosition = Vector3.zero;
             go.transform.localEulerAngles = Vector3.zero;
 
@@ -88,8 +88,15 @@ public class KettleController : MonoBehaviour
             finishedPotion.Definition = finishedPotionDefiniton;
             finishedPotion.UpdateName();
             player.HeldItem = finishedPotion;
+
+            StartCoroutine(GivePotionToPlayer(finishedPotion));
         }
 
         Steps = new List<PotionDefinition.Step>();
+    }
+    private IEnumerator GivePotionToPlayer(Potion potion)
+    {
+        yield return potion.PickUp(TransitionPoint);
+        yield return potion.PickUp(PlayerController.Instance.HandTransform);
     }
 }

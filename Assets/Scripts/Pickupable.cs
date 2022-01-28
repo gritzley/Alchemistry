@@ -13,6 +13,7 @@ public class Pickupable : MonoBehaviour
     {
         transform.parent = newParent;
         transform.LeanMoveLocal(Vector3.zero, seconds);
+        transform.LeanRotate(newParent.transform.rotation.eulerAngles, seconds);
         return new WaitForSeconds(seconds);
     }
     public void OnMouseDown()
