@@ -34,11 +34,14 @@ public class KettleController : MonoBehaviour
             AddIngredient((player.HeldItem as Ingredient));
     }
 
-    private void AddIngredient(Ingredient ingredient) => StartCoroutine(TakeIngredient(ingredient));
-    private IEnumerator TakeIngredient(Ingredient ingredient)
+    private void AddIngredient(Ingredient ingredient) => StartCoroutine(AddIngredientCoroutine(ingredient));
+    private IEnumerator AddIngredientCoroutine(Ingredient ingredient)
     {
-        yield return ingredient.PickUp(TransitionPoint, animationTime);
-        yield return ingredient.PickUp(transform, animationTime);
+        if (ingredient.Definition.IsConsumable)
+        {
+            yield return ingredient.PickUp(TransitionPoint, animationTime);
+            yield return ingredient.PickUp(transform, animationTime);
+        }
 
         LockInLastStep();
         PotionDefinition.Step step = new PotionDefinition.Step();
