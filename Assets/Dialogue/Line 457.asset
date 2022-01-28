@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 457
   m_EditorClassIdentifier: 
-  Position: {x: 1578, y: -288}
+  Position: {x: 1579, y: -288}
   Size: {x: 99.33333, y: 40}
   Title: chemicals
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "But my friend told me the\r the result of the \nexamanition didn't find
-    any toxic or other \nhints of dangeous chemicals in his body."
+  Text: 'But the examinations revealed no traces of
+
+    dangerous chemicals in his
+    body.
+
+    He was a regular, albeit extremely healthy, centaur.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

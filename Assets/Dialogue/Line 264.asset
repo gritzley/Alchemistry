@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 96, y: 40}
   Title: best wine
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'For our friend Golden Tooth I''ll have the best of wine and beer I can get. '
+  Text: 'For our friend Goldentooth I''ll have the best of wine and beer I can get. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

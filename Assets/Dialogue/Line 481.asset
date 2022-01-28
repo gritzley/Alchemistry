@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 69.333336, y: 40}
   Title: glory
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: 'Maybe I''ll find another way to bring
+  Text: 'Maybe I''ll find another way to reintroduce
 
-    death it''s glory, maybe I won''t.'
+    deaths glory to this world.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

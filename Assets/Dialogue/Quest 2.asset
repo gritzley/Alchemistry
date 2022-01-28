@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 2
   m_EditorClassIdentifier: 
-  Position: {x: 448, y: -168}
+  Position: {x: 448, y: -169}
   Size: {x: 82.66667, y: 40}
   Title: Dragon
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
@@ -128,3 +128,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d17f236ec660a5c4dbaba72fe6a2ab10, type: 2}
   - {fileID: 11400000, guid: 02c1ede8719b14b4bb6e5d679d3a4324, type: 2}
   - {fileID: 11400000, guid: a91b7d5c4cc173d4f902b1f04f5a96fe, type: 2}
+  isProofread: 1

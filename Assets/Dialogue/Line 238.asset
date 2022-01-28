@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 238
   m_EditorClassIdentifier: 
-  Position: {x: 2142.4287, y: 310.14282}
+  Position: {x: 2096.4287, y: 128.14282}
   Size: {x: 70.666664, y: 40}
   Title: scum
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "After he emptied the cup, he took deep breath and told everyone that\nthey\r
-    were the greates scum on earth."
+  Text: "After he emptied the cup, he took deep breath and told the assmbled guests,
+    that they\r were the greates scum on earth."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

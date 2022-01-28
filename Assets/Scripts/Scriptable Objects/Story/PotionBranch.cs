@@ -14,6 +14,7 @@ public class PotionBranch : DialogueNode
         public DialogueNode NextNode;
     }
     public List<Link> Links;
+    public List<Link> FilteredLinks;
     
     public override DialogueLine NextLine
     {
@@ -52,11 +53,11 @@ public class PotionBranch : DialogueNode
     public override List<Connection> GetOutConnections(int state = 0)
     {
         List<Connection> connections = new List<Connection>();
-        foreach(Link link in Links)
+        foreach(Link link in FilteredLinks)
         {
             if (link.NextNode != null)
             {
-                int i = Links.IndexOf(link);
+                int i = FilteredLinks.IndexOf(link);
                 connections.Add(new Connection(link.NextNode.InPoint.Center, OutPoints[i].Center, () => ClickConnection(i) ));
             }
         }
@@ -65,9 +66,9 @@ public class PotionBranch : DialogueNode
 
     private void ClickConnection(int i)
     {
-        Link link = Links[i];
+        Link link = FilteredLinks[i];
         link.NextNode = null;
-        Links[i] = link;
+        FilteredLinks[i] = link;
     }
 
     public override void OnOutPointClick(int i)
@@ -81,9 +82,9 @@ public class PotionBranch : DialogueNode
             // ---- CONNECTION TO QUEST NODE ----
             if (inPoint.Parent is DialogueNode)
             {
-                Link link = Links[i];
+                Link link = FilteredLinks[i];
                 link.NextNode = (DialogueNode)inPoint.Parent;
-                Links[i] = link;
+                FilteredLinks[i] = link;
                 EditorUtility.SetDirty(this);
                 AssetDatabase.SaveAssets();
             }
@@ -104,14 +105,14 @@ public class PotionBranch : DialogueNode
         InPoint.Draw();
         // ---- NODE UNFOLDED ----
         OutPoints.ForEach( e => e.Draw() );
-        Links.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
+        FilteredLinks.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
         Size.y = 15 + OutPoints.Count * 25; 
         base.Draw(offset);
-        for (int i = 0; i < Links.Count; i++)
+        for (int i = 0; i < FilteredLinks.Count; i++)
         {
             Rect labelRect = rect;
             labelRect.position += new Vector2(0, 25 * i);
-            GUI.Label(labelRect, Links[i].Potion.name, LabelStyle);
+            GUI.Label(labelRect, FilteredLinks[i].Potion.name, LabelStyle);
         }
     }
 
@@ -159,10 +160,24 @@ public class PotionBranch : DialogueNode
         potions
         .Except( Links.Where(e => potions.Contains(e.Potion)).Select(e => e.Potion) )
         .ToList()
-        .ForEach( e => Links.Add(new Link() {Potion = e}));
+        .ForEach( e => Links.Add(new Link() {Potion = e}));     
+
+        List<PotionDefinition> PossiblePotions = new List<PotionDefinition>();
+        List<Quest> OtherCustomerQuests = ParentQuest.Customer.Quests.Where(e => e != this).ToList();
+        foreach (Quest quest in OtherCustomerQuests) 
+        {
+            foreach (Quest.Link link in quest.Links)
+            {
+                if (link.NextQuest == ParentQuest && !PossiblePotions.Contains(link.Potion))
+                {
+                    PossiblePotions.Add(link.Potion);
+                }
+            }
+        }
+        FilteredLinks = Links.Where(e => PossiblePotions.Contains(e.Potion)).ToList();
 
         OutPoints = new List<ConnectionPoint>();
-        for (int i = 0; i < Links.Count; i++)
+        for (int i = 0; i < FilteredLinks.Count; i++)
         {
             OutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, i));
         }

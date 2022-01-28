@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 68, y: 40}
   Title: soon
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "We won't see each other again any time \nsoon."
+  Text: We should not see each other again any time soon.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

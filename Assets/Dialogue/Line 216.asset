@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 216
   m_EditorClassIdentifier: 
-  Position: {x: 1973, y: -179}
+  Position: {x: 1971, y: -234}
   Size: {x: 79.33333, y: 40}
   Title: Poison
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'After he took a chug from the cup his red scaly skin turned grey. '
+  Text: 'After he took a chug from the cup and his red scaly skin turned grey. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 62, y: 40}
   Title: god
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: 'You see there is this newly ascending...I guess you could say god? '
+  Text: 'You see there is this newly ascending <crawl>...<normal>
+
+    I guess you
+    could say he is a god? '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

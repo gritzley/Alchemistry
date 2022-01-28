@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 101.33333, y: 40}
   Title: dangerous
   ParentQuest: {fileID: 11400000, guid: 26b5b2747a58aa0428027fecc35f5e31, type: 2}
-  Text: 'Continuing with our little project is to
+  Text: 'Continuing with our little project
 
-    dangerous for now.'
+    would be too dangerous for now.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

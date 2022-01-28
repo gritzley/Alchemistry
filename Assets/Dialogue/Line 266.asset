@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 96.66667, y: 65}
   Title: fire works
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: I'll probably should reinstate the fire works too.
+  Text: I should probably reinstate the fire works aswell.
   Notes: 
   AnswerLeft: Glad I could help you get rid of this scum.
   AnswerRight: So are we finally done now?

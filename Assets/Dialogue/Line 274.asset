@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 82, y: 40}
   Title: withers
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: So I think it's time that this fast grown flowers withers away.
+  Text: So I think it's time that this flourishing flower finally withers.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

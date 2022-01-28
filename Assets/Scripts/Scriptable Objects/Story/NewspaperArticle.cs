@@ -36,6 +36,11 @@ public class NewspaperArticle : SceneNode
         selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2 on.png") as Texture2D;
     }
 
-#endif
+    public override void Remove()
+    {
+        Customer.Articles.Remove(this);
+        base.Remove();
+    }
 
+#endif
 }

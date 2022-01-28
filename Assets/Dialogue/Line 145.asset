@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 145
   m_EditorClassIdentifier: 
-  Position: {x: 1495, y: 149}
+  Position: {x: 1521, y: 134}
   Size: {x: 105.333336, y: 40}
   Title: grandstand
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}

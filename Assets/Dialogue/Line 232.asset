@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 232
   m_EditorClassIdentifier: 
-  Position: {x: 1970.4286, y: -59.857178}
+  Position: {x: 1948.4286, y: -134.85718}
   Size: {x: 128, y: 40}
   Title: Potion of Flight
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 245
   m_EditorClassIdentifier: 
-  Position: {x: 2205.4287, y: -101.85718}
+  Position: {x: 2185.4287, y: -168.85718}
   Size: {x: 76.66667, y: 40}
   Title: heavy
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "Some of the guard later told that they heard him whisper: \n\"No, no it
-    wasn't my fault.\" \"Mom why?\" and \"He's too heavy.\""
+  Text: "Some of the guard later said they heard him whisper: \n\"It wasn't my fault!\",
+    \"Mom why?\"\nand \"He's too heavy.\""
   Notes: 
   AnswerLeft: 
   AnswerRight: 

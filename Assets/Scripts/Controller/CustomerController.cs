@@ -21,7 +21,7 @@ public class CustomerController : MonoBehaviour
         currentQuest = CustomerDefinition.StartQuest;
         RightAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(0);
         LeftAnswerTextDisplay.OnClickCallback = () => ReceiveAnswer(1);
-        HandleCurrentDialogueLine();
+        if (isActiveAndEnabled) HandleCurrentDialogueLine();
     }
 
     public void HandleCurrentDialogueLine() => HandleDialogueLine(CurrentDialogueLine);

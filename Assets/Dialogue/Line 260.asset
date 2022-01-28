@@ -16,8 +16,7 @@ MonoBehaviour:
   Size: {x: 102.66667, y: 40}
   Title: destilleries
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'Ah they will come around. There be''ll new destilleries up soon, to work
-    in. '
+  Text: Ah they will come around. There be'll new distilleries up soon.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

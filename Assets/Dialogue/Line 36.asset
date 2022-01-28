@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 95.33333, y: 40}
   Title: IceTouch
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'According to the nespaper, he seemed as agile as ever,
+  Text: 'According to the nespaper, he seemed as agile
 
-    when he was
-    mastering the parkour. '
+    as ever, when he was
+    running the parkour. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

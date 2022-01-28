@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 102, y: 40}
   Title: goverment
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "Or maybe this time around the goverment will seize control\r over the booze
-    market. We'll see.\r"
+  Text: "Or maybe this time around the goverment will seize control\r of the booze
+    market.<pause=0.5> We'll see.\r"
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -180,6 +180,15 @@ public class DialogueLine : DialogueNode
         }
     }
 
+    public void TestDialogueLine()
+    {
+        if (!EditorApplication.isPlaying) return;
+        GameManager.Instance.CurrentCustomer.currentQuest.CurrentLine = null; // this resets the currentQuest
+        GameManager.Instance.CurrentCustomer.currentQuest = ParentQuest;
+        GameManager.Instance.CurrentCustomer.currentQuest.CurrentLine = this;
+        GameManager.Instance.CurrentCustomer.HandleCurrentDialogueLine();
+    }
+
 #endif
 
 }

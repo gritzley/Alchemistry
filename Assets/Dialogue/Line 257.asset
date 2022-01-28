@@ -16,7 +16,8 @@ MonoBehaviour:
   Size: {x: 101.33333, y: 40}
   Title: side effect
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "They affiliate it to a side effect in his newest booze \ncreation. "
+  Text: Everyone assumes that this whole situation was caused by a side effect of
+    that booze of his.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

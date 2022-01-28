@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 251
   m_EditorClassIdentifier: 
-  Position: {x: 2261.4287, y: 226.14282}
+  Position: {x: 2241.4287, y: 52.142822}
   Size: {x: 88, y: 40}
   Title: screams
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "In this smoke weapons were glittering and screams \nwere heard throughout"
+  Text: Weapons flashed amidts the smoke and screams could be heard.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

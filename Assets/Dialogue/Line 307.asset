@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 307
   m_EditorClassIdentifier: 
-  Position: {x: 2112, y: 121}
+  Position: {x: 2129, y: -187}
   Size: {x: 74, y: 40}
   Title: traitor
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
   Text: "Later two dwarves where found hanging from \r\na tree. The word traitor
-    painted on their fore heads."
+    painted on their foreheads."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

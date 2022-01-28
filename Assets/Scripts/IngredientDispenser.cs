@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class IngredientDispenser : MonoBehaviour
+public class IngredientDispenser : Clickable
 {
     public bool IsEndless;
     public List<GameObject> IngredientModels;
@@ -15,7 +15,7 @@ public class IngredientDispenser : MonoBehaviour
     {
         currentlyHeldIngredients = IngredientModels;
     }
-    public void OnMouseDown()
+    public override void OnClick()
     {
         PlayerController player = PlayerController.Instance;
         if (player.HeldItem == null && hasIngredients)

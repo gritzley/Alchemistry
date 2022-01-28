@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 98, y: 40}
   Title: holy ritual
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: In some kind of holy ritual at the start of his church services, then giving
-    the cup to his followers.
+  Text: I know he is performing some kind of holy miracle at his church services,
+    where he is drinking from a cup that he passes to his followers.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

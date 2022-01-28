@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest
   m_EditorClassIdentifier: 
-  Position: {x: 206, y: -166}
+  Position: {x: 206, y: -167}
   Size: {x: 86.66667, y: 40}
   Title: Centaur
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: 0d142e664c782914db68536875f5d6fa, type: 2}
-  HasReceivingState: 0
+  HasReceivingState: 1
   NextScene: {fileID: 0}
   Links:
   - Potion: {fileID: 11400000, guid: 3dc95d3cd76719e4cb24948d9f665d89, type: 2}
@@ -37,7 +37,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
     NextQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
+    NextQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
     NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
@@ -45,7 +45,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
     NextQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
   - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
-    NextQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
+    NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
     NextQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
@@ -100,3 +100,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8e2dd2e290298be4e957711039ff1a48, type: 2}
   - {fileID: 11400000, guid: 29412dd090b37d4479a718e479fd817b, type: 2}
   - {fileID: 11400000, guid: 2761f6931732f7a41b20d07d5f8b7823, type: 2}
+  isProofread: 1

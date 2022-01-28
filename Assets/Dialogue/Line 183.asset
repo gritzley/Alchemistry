@@ -16,9 +16,9 @@ MonoBehaviour:
   Size: {x: 80.66667, y: 40}
   Title: priority
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'That''d be unfortunate, but protecting us from getting
+  Text: 'That''d be unfortunate, but protecting us from
 
-    caught is my
+    getting caught is my
     highest priority.'
   Notes: 
   AnswerLeft: 

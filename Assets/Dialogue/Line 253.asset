@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 253
   m_EditorClassIdentifier: 
-  Position: {x: 1981.4286, y: 16.142822}
+  Position: {x: 1944.4286, y: -74.85718}
   Size: {x: 175.33333, y: 40}
   Title: Potion of Greater Voice
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'He drank down his first cup then with a booming voice
+  Text: 'He drank down his first cup then held his speech<pause=0.5>
 
-    he held his speech.'
+    at a volume,
+    that was just barely endurable.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

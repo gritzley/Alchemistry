@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 118, y: 40}
   Title: decomposing
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: "Decomposing the whole body \r\nof the centaur and even parts of the stone
-    \ntable he lay on!"
+  Text: 'The remains were completely destroyed <crawl>...<normal>
+
+    along with
+    parts of the table below.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

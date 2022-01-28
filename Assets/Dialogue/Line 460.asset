@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 460
   m_EditorClassIdentifier: 
   Position: {x: 1433, y: -171}
-  Size: {x: 58, y: 40}
-  Title: fell
+  Size: {x: 106.666664, y: 40}
+  Title: No autopsy
   ParentQuest: {fileID: 11400000, guid: 7b70a2bdda97acb4aa68a19e270a9bc3, type: 2}
-  Text: He almost fell onto my acquaintance.
+  Text: They will not be able to perform an autopsy on him now.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

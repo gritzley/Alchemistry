@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 221
   m_EditorClassIdentifier: 
-  Position: {x: 2280, y: -20}
+  Position: {x: 2249, y: -105}
   Size: {x: 90, y: 40}
   Title: crushing
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'By this time, he was crushing furniture and people a like.
-
-    Alcohol
-    flooded the place.'
+  Text: By this time, he was crushing furniture and people alike. The crushed booze-tank
+    flooded the place.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

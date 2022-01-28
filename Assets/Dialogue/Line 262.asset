@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 102, y: 40}
   Title: goverment
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: There always be booze to be distilled.
+  Text: There will always be booze to be distilled.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

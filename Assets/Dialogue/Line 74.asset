@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 74
   m_EditorClassIdentifier: 
-  Position: {x: 3025, y: 5}
+  Position: {x: 3026, y: 5}
   Size: {x: 94.66667, y: 40}
   Title: merchant
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: 'There is a Dragonskin, you probably know of him:<pause=0.5>
+  Text: 'There is a Dragonskin - You probably know of him:<pause=0.5>
 
     Balbador
     Goldentooth, an influential merchant.'

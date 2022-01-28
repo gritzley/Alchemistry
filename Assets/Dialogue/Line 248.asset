@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 248
   m_EditorClassIdentifier: 
-  Position: {x: 2526.4287, y: -100.85718}
+  Position: {x: 2504.4287, y: -159.85718}
   Size: {x: 67.333336, y: 40}
   Title: slain
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'Chaos ensued and in this chaos the fire breathing dragon was slain
-
-    by
-    one of his own guards.'
+  Text: Chaos ensued! In the midst of it, the fire breathing dragon was slain by
+    his own guard.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

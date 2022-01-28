@@ -16,7 +16,9 @@ MonoBehaviour:
   Size: {x: 72.66667, y: 40}
   Title: place
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: 'It''s not hard to track down this city''s few potion merchants.<pause=0.4>
+  Text: 'It''s not hard to track down the few
+
+    potion merchants in this city.<pause=0.4>
 
     Maybe
     they wouldn''t find this place right away,

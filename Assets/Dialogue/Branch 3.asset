@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Branch 3
   m_EditorClassIdentifier: 
   Position: {x: 1725, y: -225}
-  Size: {x: 205.33333, y: 590}
+  Size: {x: 182.66667, y: 315}
   Title: Potion Branch
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
   Links:
@@ -63,3 +63,28 @@ MonoBehaviour:
     NextNode: {fileID: 11400000, guid: ee2d7f228acd085438337cc0db4f1d89, type: 2}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextNode: {fileID: 0}
+  FilteredLinks:
+  - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
+    NextNode: {fileID: 11400000, guid: b89c793aa5706ae478dd933b6931c78c, type: 2}
+  - Potion: {fileID: 11400000, guid: 04436e26fc426c2459bf13503fffc59f, type: 2}
+    NextNode: {fileID: 11400000, guid: 10a34d3b829fc194a98fcbf316eeeb23, type: 2}
+  - Potion: {fileID: 11400000, guid: 89257179e828c9247a1c870f2e3070be, type: 2}
+    NextNode: {fileID: 11400000, guid: 744f818639e67ba44b8fa3e00f3e3e22, type: 2}
+  - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
+    NextNode: {fileID: 11400000, guid: 9819386eaeb76a84f8d2bd0ac49dc14d, type: 2}
+  - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
+    NextNode: {fileID: 11400000, guid: 1b4863316c32a554093f4fdf5b81d3a2, type: 2}
+  - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
+    NextNode: {fileID: 11400000, guid: 34b757313d7fa104387d010e01cc8ba3, type: 2}
+  - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
+    NextNode: {fileID: 11400000, guid: 616ed6cae27123d4f871ca19a93e0ae3, type: 2}
+  - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
+    NextNode: {fileID: 11400000, guid: 7cebe7c5d97a1b4428a9759afaadab0a, type: 2}
+  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
+    NextNode: {fileID: 11400000, guid: a88f2746abf5fd148b81c52aee30385e, type: 2}
+  - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
+    NextNode: {fileID: 11400000, guid: d95da72b6a887ea4a98c47c2286333a0, type: 2}
+  - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
+    NextNode: {fileID: 11400000, guid: 75bebf3a17b916c4da104f7f6f4f16f9, type: 2}
+  - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
+    NextNode: {fileID: 11400000, guid: ee2d7f228acd085438337cc0db4f1d89, type: 2}

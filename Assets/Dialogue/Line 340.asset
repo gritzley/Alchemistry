@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 340
   m_EditorClassIdentifier: 
-  Position: {x: 4893, y: -267}
+  Position: {x: 4893, y: -269}
   Size: {x: 88, y: 40}
   Title: god less
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: I'll be back soon. Hopefully there will be a god less, who walks among us.
+  Text: I'll be back soon. Hopefully, there will be one less god, walking among us.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

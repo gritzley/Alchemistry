@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 45
   m_EditorClassIdentifier: 
-  Position: {x: 1604, y: -68}
+  Position: {x: 1603, y: -68}
   Size: {x: 76, y: 40}
   Title: crowd
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
@@ -21,7 +21,7 @@ MonoBehaviour:
     He had already
     passed.
 
-    Still smiling, he stood, his gaze directed to the crowd.'
+    Smiling, he stood, his gaze directed to the crowd.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

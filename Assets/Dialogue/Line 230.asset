@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 230
   m_EditorClassIdentifier: 
-  Position: {x: 2255.4287, y: -147.85718}
+  Position: {x: 2235.4287, y: -199.85718}
   Size: {x: 84, y: 40}
   Title: flooded
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: The banquet and it's guest were flooded.
+  Text: The banquet and its guest were flooded.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

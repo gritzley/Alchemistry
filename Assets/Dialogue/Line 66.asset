@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 66
   m_EditorClassIdentifier: 
-  Position: {x: 2230, y: -4}
+  Position: {x: 2230, y: -5}
   Size: {x: 94.66667, y: 40}
   Title: delighted
   ParentQuest: {fileID: 11400000, guid: 8616d53ee1a359a47a138b0cffc00603, type: 2}
-  Text: "I am truly blooming! \nI'm so busy with preperation for the funeral!."
+  Text: "I am truly blooming! \nI'm so busy with preperation for the funeral!"
   Notes: 
   AnswerLeft: 
   AnswerRight: 

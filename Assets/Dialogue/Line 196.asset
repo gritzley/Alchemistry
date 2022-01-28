@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 196
   m_EditorClassIdentifier: 
-  Position: {x: 1230.5, y: -212}
+  Position: {x: 1224.5, y: -200}
   Size: {x: 100.66667, y: 40}
   Title: commerce
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'Everybody who has say in this city commerce was there. '
+  Text: Everyone who is someone is commerce was there.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

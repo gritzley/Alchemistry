@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 213
   m_EditorClassIdentifier: 
-  Position: {x: 2422, y: 270}
+  Position: {x: 2376, y: 88}
   Size: {x: 80.66667, y: 40}
   Title: hungry
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "As some of his hungry guest with sharp teeth rushed at the Balbador \nin
-    his adorable rabbit form."
+  Text: Some of his hungrier guest, with sharp teeth, rushed at  Goldentooth in his
+    adorable rabbit form.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

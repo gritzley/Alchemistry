@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 310
   m_EditorClassIdentifier: 
-  Position: {x: 1982, y: 270}
+  Position: {x: 1995, y: -121}
   Size: {x: 82.66667, y: 40}
   Title: knights
   ParentQuest: {fileID: 11400000, guid: d3e78a591e7114d4baf9a9d29e1ba818, type: 2}
-  Text: "Stealing princesses in his old days and roasting young \nknights."
+  Text: Stealing princesses and roasting young knights.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

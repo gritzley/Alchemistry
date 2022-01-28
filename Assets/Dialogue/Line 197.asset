@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 197
   m_EditorClassIdentifier: 
-  Position: {x: 1363, y: -211}
+  Position: {x: 1364, y: -201}
   Size: {x: 106.666664, y: 40}
   Title: unattended
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: "I-I mean of course everyone who had the time to leave there shop \nunattended."
+  Text: I mean of course, everyone who had the time to leave their shop unattended.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
