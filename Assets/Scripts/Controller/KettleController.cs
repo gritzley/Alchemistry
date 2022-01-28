@@ -12,6 +12,8 @@ public class KettleController : MonoBehaviour
     private List<PotionDefinition.Step> Steps;
     public PotionDefinition FailedPotionDefinition;
     public GameObject PotionPrefab;
+    public Transform TransitionPoint;
+    private float animationTime = 0.2f;
 
     public void OnEnable()
     {
@@ -32,8 +34,12 @@ public class KettleController : MonoBehaviour
             AddIngredient((player.HeldItem as Ingredient));
     }
 
-    private void AddIngredient(Ingredient ingredient)
+    private void AddIngredient(Ingredient ingredient) => StartCoroutine(TakeIngredient(ingredient));
+    private IEnumerator TakeIngredient(Ingredient ingredient)
     {
+        yield return ingredient.PickUp(TransitionPoint, animationTime);
+        yield return ingredient.PickUp(transform, animationTime);
+
         LockInLastStep();
         PotionDefinition.Step step = new PotionDefinition.Step();
         step.Ingredient = ingredient.Definition;
@@ -42,6 +48,8 @@ public class KettleController : MonoBehaviour
 
         if (ingredient.Definition.IsConsumable)
             Destroy(ingredient.gameObject);
+        
+        yield return null;
     }
 
     /// <summary>
