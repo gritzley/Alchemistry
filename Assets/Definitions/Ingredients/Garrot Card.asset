@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Garrot Card
   m_EditorClassIdentifier: 
   IsConsumable: 1
-  Model: {fileID: 0}
+  Model: {fileID: 919132149155446097, guid: 036314720dc56024db1761bb51cf7455, type: 3}
