@@ -63,3 +63,12 @@ MonoBehaviour:
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextNode: {fileID: 0}
+  FilteredLinks:
+  - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
+    NextNode: {fileID: 11400000, guid: 352187cc42522f7419d475f12eee1ec4, type: 2}
+  - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
+    NextNode: {fileID: 11400000, guid: 5e51f9568af5885419c798eb0fb1fbf5, type: 2}
+  - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
+    NextNode: {fileID: 11400000, guid: 9a906fe7e39c0e8478c8bfeba251c6cb, type: 2}
+  - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
+    NextNode: {fileID: 11400000, guid: db10cd388044e8d4db005b738fad8b51, type: 2}

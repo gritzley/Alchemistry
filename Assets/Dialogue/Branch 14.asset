@@ -63,3 +63,10 @@ MonoBehaviour:
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextNode: {fileID: 0}
+  FilteredLinks:
+  - Potion: {fileID: 11400000, guid: 89ce7bb8af027c8479ceb4a25eb3829b, type: 2}
+    NextNode: {fileID: 11400000, guid: 6c650d32bb09da44db4453005563083c, type: 2}
+  - Potion: {fileID: 11400000, guid: 89257179e828c9247a1c870f2e3070be, type: 2}
+    NextNode: {fileID: 11400000, guid: 5c1289ef4d2050f4494e3389dd289ab7, type: 2}
+  - Potion: {fileID: 11400000, guid: 64fdabb82571b7946a888800dd1cb752, type: 2}
+    NextNode: {fileID: 11400000, guid: 15bff3002df44554b928083d8f6ef237, type: 2}
