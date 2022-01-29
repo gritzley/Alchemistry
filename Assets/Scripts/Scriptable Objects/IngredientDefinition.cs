@@ -6,5 +6,5 @@ using UnityEngine;
 public class IngredientDefinition : ScriptableObject
 {
     public bool IsConsumable;
-    public GameObject Model;
+    public bool IsStackable;
 }

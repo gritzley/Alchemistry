@@ -21,20 +21,13 @@ public class IngredientDispenser : Clickable
         PlayerController player = PlayerController.Instance;
         if (player.HeldItem == null && hasIngredients)
         {
-            GameObject go = UnityEngine.Object.Instantiate(GameManager.Instance.IngredientPrefab);
-            Ingredient ingredient = go.GetComponent<Ingredient>();
             GameObject harvest = randomIngredient;
-            Definition.Model = harvest;
-            ingredient.transform.parent = harvest.transform;
-            ingredient.transform.localPosition = Vector3.zero;
+            GameObject go = Instantiate(harvest);
+            go.transform.position = harvest.transform.position;
+            go.transform.rotation = harvest.transform.rotation;
+            Ingredient ingredient = go.AddComponent<Ingredient>();
             ingredient.Definition = Definition;
-            ingredient.AttachModel();
-            if (!IsEndless)
-            {
-                harvest.SetActive(false);
-                currentlyHeldIngredients.Remove(harvest);
-            }
-            Definition.Model = null;
+            if (!IsEndless) harvest.SetActive(false);
             StartCoroutine(GiveIngredientToPlayer(ingredient));
         }
     }
