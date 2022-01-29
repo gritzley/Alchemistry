@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickupable : MonoBehaviour
+public class Pickupable : Clickable
 {
-    [HideInInspector] public Quaternion Rotation;
-    void OnEnable()
-    {
-        Rotation = transform.rotation;
-    }
     public WaitForSeconds PickUp(Transform newParent, float seconds = 0.15f)
     {
         transform.parent = newParent;
@@ -16,7 +11,7 @@ public class Pickupable : MonoBehaviour
         transform.LeanRotate(newParent.transform.rotation.eulerAngles, seconds);
         return new WaitForSeconds(seconds);
     }
-    public void OnMouseDown()
+    public override void OnClick()
     {
         if (PlayerController.Instance.HeldItem == null)
         {

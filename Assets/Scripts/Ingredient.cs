@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 [ExecuteInEditMode]
 public class Ingredient : Pickupable
@@ -32,5 +33,18 @@ public class Ingredient : Pickupable
         GameObject go = Instantiate(Definition.Model);
         go.transform.parent = transform;
         go.transform.localPosition = Vector3.zero;
+
+        SendClickEvent sce = go.AddComponent<SendClickEvent>();
+        sce.Recipient = this;
+        MeshCollider mc = go.GetComponent<MeshCollider>();
+        if (mc != null) mc.convex = true;
+        
+        foreach (MeshCollider _mc in go.GetComponentsInChildren<MeshCollider>())
+        {
+            _mc.convex = true;
+            SendClickEvent _sce = _mc.gameObject.AddComponent<SendClickEvent>();
+            _sce.Recipient = this;
+        }
+
     }
 }
