@@ -26,22 +26,17 @@ public class WorkSurface : MonoBehaviour
         Vector3 direction;
         float distance;
         foreach (Collider collider in GetComponentsInChildren<MeshCollider>())
-        {
-            Debug.Log(collider.transform.position);
-            Debug.Log(position);
             if (Physics.ComputePenetration(
                 collider, collider.transform.position, transform.rotation * collider.transform.localRotation,
                 itemCollider, position, transform.rotation * itemCollider.transform.localRotation,
                 out direction, out distance))
                     yield break;
-        }
         
         PlayerController.Instance.HeldItem = null;
         item.transform.LeanRotate(Vector3.zero, 0.15f);
         item.transform.LeanMove(position, 0.15f);
         item.transform.parent = transform;
         yield return new WaitForSeconds(0.15f);
-
     }
 
 }
