@@ -52,7 +52,7 @@ MonoBehaviour:
   LeftAnswerTextDisplay: {fileID: 2732745438690377513}
   RightAnswerTextDisplay: {fileID: 1686845502093469038}
   LastGivenPotion: {fileID: 0}
-  CustomerDefinition: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
+  CustomerDefinition: {fileID: 0}
   currentQuest: {fileID: 11400000, guid: 82c8ef47ac42f434b9e37882e6961985, type: 2}
 --- !u!114 &1173322987633229907
 MonoBehaviour:

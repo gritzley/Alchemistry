@@ -12,7 +12,7 @@ public class CustomerController : MonoBehaviour
     public DiegeticText RightAnswerTextDisplay;
     public PotionDefinition LastGivenPotion;
     public CustomerDefinition CustomerDefinition;
-    public Quest currentQuest;
+    [HideInInspector] public Quest currentQuest;
     private bool isReceivingPotion;
     public DialogueLine CurrentDialogueLine => currentQuest.CurrentLine;
 
