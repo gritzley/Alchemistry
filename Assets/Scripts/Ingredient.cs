@@ -33,11 +33,15 @@ public class Ingredient : Pickupable
         else base.OnClick();
     }
 
-    public void AddToStack(Ingredient ingredient, bool animatePath = true)
+    public void AddToStack(Ingredient ingredient, bool animatePath = true, float offset = 0.01f)
     {
         StackedIngredients.Push(ingredient);
         ingredient.transform.parent = transform;
-        Vector3 calculatedLocalPosition = Vector3.up * GetComponentInChildren<MeshCollider>().bounds.size.y * (StackedIngredients.Count);
+        Vector3 calculatedLocalPosition =
+            Vector3.up * GetComponentInChildren<MeshCollider>().bounds.size.y * (StackedIngredients.Count)
+            + Vector3.left * Random.Range(-offset, offset)
+            + Vector3.forward * Random.Range(-offset, offset);
+
 #if UNITY_EDITOR
         animatePath &= EditorApplication.isPlaying;
 #endif

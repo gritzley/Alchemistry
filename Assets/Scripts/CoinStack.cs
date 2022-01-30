@@ -17,16 +17,16 @@ public class CoinStack : MonoBehaviour
 
     IEnumerator UpdateStackSize()
     {
-        if (Count < 1) yield break;
+        int newCount = (int) Mathf.Max(1, Count);
         yield return null;
         int coinCount = BaseCoin.GetComponentsInChildren<Ingredient>().Count();
-        if (Count > coinCount)
-            for (int i = 0; i < Count - coinCount; i++)
+        if (newCount > coinCount)
+            for (int i = 0; i < newCount - coinCount; i++)
             {
                 BaseCoin.AddToStack(Instantiate(CoinPrefab).GetComponent<Ingredient>(), false);
             }
-        else if (Count < coinCount)
-            for (int i = 0; i < coinCount - Count; i++)
+        else if (newCount < coinCount)
+            for (int i = 0; i < coinCount - newCount; i++)
                 DestroyImmediate(BaseCoin.RemoveHighestFromStack().gameObject);
 
         yield return null;
