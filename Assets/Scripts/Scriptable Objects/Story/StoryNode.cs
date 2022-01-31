@@ -162,6 +162,7 @@ public abstract class StoryNode : ScriptableObject
     /// <param name="contextMenu">A reference to the context Menu. Fill it by calling AddItem on it</param>
     public virtual void FillContextMenu(GenericMenu contextMenu)
     {
+        contextMenu.AddItem(new GUIContent("Copy Node"), false, Copy);
         contextMenu.AddItem(new GUIContent("Remove Node"), false, Remove);
         GUI.changed = true;
     }
@@ -174,6 +175,11 @@ public abstract class StoryNode : ScriptableObject
         AssetDatabase.DeleteAsset($"Assets/Dialogue/{this.name}.asset");
         AssetDatabase.SaveAssets();
         OnRemove?.Invoke(this);
+    }
+    
+    public virtual void Copy()
+    {
+        GUIUtility.systemCopyBuffer = ToString();
     }
 
     /// <summary>
