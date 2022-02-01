@@ -6,12 +6,6 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class WorkSurface : MonoBehaviour
 {
-    public Vector3 Size;
-    public BoxCollider Surface;
-    public BoxCollider LeftBounds;
-    public BoxCollider RightBounds;
-    public BoxCollider UpperBounds;
-    public BoxCollider BackBounds;
     void OnMouseDown()
     {
         if (PlayerController.Instance.HeldItem != null)
@@ -25,34 +19,38 @@ public class WorkSurface : MonoBehaviour
     IEnumerator PlaceItem(Vector3 position)
     {
         Pickupable item = PlayerController.Instance.HeldItem;
-        Collider itemCollider = item.GetComponentInChildren<MeshCollider>();
+
 
         Vector3 direction;
         float distance;
-        foreach (Collider collider in GetComponentsInChildren<MeshCollider>())
-            if (Physics.ComputePenetration(
-                collider, collider.transform.position, transform.rotation * collider.transform.localRotation,
-                itemCollider, position, transform.rotation * itemCollider.transform.localRotation,
-                out direction, out distance))
-                    yield break;
+        foreach( Collider itemCollider in item.GetComponentsInChildren<MeshCollider>())
+        {
+            Vector3 calculatedBoundsPosition = position + Vector3.up * itemCollider.bounds.extents.y;
+            foreach (Collider collider in Physics.OverlapBox(calculatedBoundsPosition, itemCollider.bounds.extents, transform.rotation).Where( e => e.gameObject != gameObject))
+            {
+                bool convex = false;
+                if (collider is MeshCollider)
+                {
+                    convex = (collider as MeshCollider).convex;
+                    (collider as MeshCollider).convex = true;
+                }            
+                bool intersects = Physics.ComputePenetration(
+                    collider, collider.transform.position, transform.rotation * collider.transform.localRotation,
+                    itemCollider, position, transform.rotation * itemCollider.transform.localRotation,
+                    out direction, out distance);
+
+                if (collider is MeshCollider)
+                    (collider as MeshCollider).convex = convex;
+
+                if (intersects) yield break;
+            }
+        }
         
         PlayerController.Instance.HeldItem = null;
         item.transform.LeanRotate(Vector3.zero, 0.15f);
         item.transform.LeanMove(position, 0.15f);
         item.transform.parent = transform;
+        Pickupable.SetLayerRecursively(item.gameObject, 0);
         yield return new WaitForSeconds(0.15f);
-    }
-
-    void OnValidate()
-    {
-        Surface.size = new Vector3(Size.x, 0, Size.z);
-        LeftBounds.size = new Vector3(0, Size.y, Size.z);
-        RightBounds.size = new Vector3(0, Size.y, Size.z);
-        BackBounds.size = new Vector3(Size.x, Size.y, 0);
-        UpperBounds.size = new Vector3(Size.x, 0, Size.z);
-        LeftBounds.transform.localPosition = new Vector3(Size.x / -2, Size.y / 2, 0);
-        RightBounds.transform.localPosition = new Vector3(Size.x / 2, Size.y / 2, 0);
-        BackBounds.transform.localPosition = new Vector3(0, Size.y / 2, Size.z / 2);
-        UpperBounds.transform.localPosition = new Vector3(0, Size.y, 0);
     }
 }
