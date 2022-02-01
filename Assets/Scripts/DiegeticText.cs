@@ -38,8 +38,6 @@ public class DiegeticText : MonoBehaviour
 
     public void DisplayText(string text, Action callback = null)
     {
-        Debug.Log($"{name} showing text \"{text}\"");
-
         Text = text;
         Regex regex = new Regex("((<(?<command>[\\w]*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[\\w.,?!':\"\\-`\\s\\n]+?))");
         Match[] matches = regex.Matches(text).Cast<Match>().ToArray();
