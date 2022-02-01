@@ -14,6 +14,7 @@ public class CustomerDefinition : ScriptableObject
     public Quest StartQuest;
     public List<Quest> Quests;
     public List<NewspaperArticle> Articles;
+    public IEnumerable<StoryNode> StoryNodes => new[] {Quests.Cast<StoryNode>(), Articles.Cast<StoryNode>()}.SelectMany(e => e);
 
 #if UNITY_EDITOR
     public static List<CustomerDefinition> GetAllCustomerDefinitions()
