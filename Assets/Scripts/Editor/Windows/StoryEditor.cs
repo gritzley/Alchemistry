@@ -26,6 +26,7 @@ public class StoryEditor : EditorWindow
     bool isDragging;
     List<StoryNode> nodes, selectedNodes;
     List<Quest> questNodes { get { return nodes.Where( e => e is Quest).Select( e => e as Quest).ToList(); } }
+    CustomerDefinition CurrentCustomer;
 
     /// <summary>
     /// Add a Menu Item to open the window
@@ -44,11 +45,12 @@ public class StoryEditor : EditorWindow
         Instance = this;
         if (GameManager.Instance == null)
             Debug.LogWarning("There is no GameManager Instance!");
-        else if (GameManager.Instance.CurrentCustomer == null)
-            Debug.LogWarning("There is no test_character assigned in the GameManager");
         else
         {
-            ViewQuests();
+            if (GameManager.Instance.CurrentCustomer != null)
+                ViewCustomerQuests(GameManager.Instance.CurrentCustomer.CustomerDefinition);
+            else
+                ViewCustomerQuests(CustomerDefinition.GetAllCustomerDefinitions()[0]);
             offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
             offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
         }
@@ -63,18 +65,16 @@ public class StoryEditor : EditorWindow
     /// <summary>
     /// View all the Quest Assets in the Assets/Dialogue Path as Nodes
     /// </summary>
-    private void ViewQuests()
+    private void ViewCustomerQuests(CustomerDefinition customer)
     {
+        CurrentCustomer = customer;
         viewState = ViewState.QuestView;
-        nodes = GameManager.Instance.CurrentCustomer.CustomerDefinition.Quests.Select( quest => {
-            quest.OnRemove = RemoveNodeFromView;
-            quest.ViewDialogue = ViewQuestDialogue;
-            return (StoryNode)quest;
-        }).ToList();
-        nodes.AddRange(GameManager.Instance.CurrentCustomer.CustomerDefinition.Articles.Select( article => {
-            article.OnRemove = RemoveNodeFromView;
-            return (StoryNode)article;
-        }).ToList());
+        nodes = new List<StoryNode>(customer.StoryNodes);
+        foreach (StoryNode node in nodes)
+        {
+            node.OnRemove = RemoveNodeFromView;
+            if (node is Quest) (node as Quest).ViewDialogue = ViewQuestDialogue;
+        }
         offset = Vector2.zero;
     }
 
@@ -121,12 +121,12 @@ public class StoryEditor : EditorWindow
         quest.Position = position;
         quest.OnRemove = RemoveNodeFromView;
         quest.ViewDialogue = ViewQuestDialogue;
-        quest.Customer = GameManager.Instance.CurrentCustomer.CustomerDefinition;
-        GameManager.Instance.CurrentCustomer.CustomerDefinition.Quests.Add(quest);
+        quest.Customer = CurrentCustomer;
+        CurrentCustomer.Quests.Add(quest);
 
         // Changes made to the line after creating it must be saved
         EditorUtility.SetDirty(quest);
-        EditorUtility.SetDirty(GameManager.Instance.CurrentCustomer.CustomerDefinition);
+        EditorUtility.SetDirty(CurrentCustomer);
         AssetDatabase.SaveAssets();
         nodes.Add(quest);
     }
@@ -143,12 +143,12 @@ public class StoryEditor : EditorWindow
         article.Title = article.name;
         article.Position = position;
         article.OnRemove = RemoveNodeFromView;
-        article.Customer = GameManager.Instance.CurrentCustomer.CustomerDefinition;
-        GameManager.Instance.CurrentCustomer.CustomerDefinition.Articles.Add(article);
+        article.Customer = CurrentCustomer;
+        CurrentCustomer.Articles.Add(article);
 
         // Changes made to the line after creating it must be saved
         EditorUtility.SetDirty(article);
-        EditorUtility.SetDirty(GameManager.Instance.CurrentCustomer.CustomerDefinition);
+        EditorUtility.SetDirty(CurrentCustomer);
         AssetDatabase.SaveAssets();
         nodes.Add(article);
     }
@@ -265,7 +265,7 @@ public class StoryEditor : EditorWindow
                             contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
                             contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
 
-                            contextMenu.AddItem(new GUIContent("Return to Quest View"), false, ViewQuests);
+                            contextMenu.AddItem(new GUIContent("Return to Quest View"), false, () => ViewCustomerQuests(CurrentCustomer));
                             contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);
                             contextMenu.AddItem(new GUIContent("I am lost, go to the last node I added"), false, GoToLastNode);
                             break;
@@ -273,8 +273,12 @@ public class StoryEditor : EditorWindow
                         case ViewState.QuestView:
                             contextMenu.AddItem(new GUIContent("Add Quest"), false, () => AddQuest(pos));
                             contextMenu.AddItem(new GUIContent("Add Article"), false, () => AddArticle(pos));
-                            contextMenu.AddItem(new GUIContent("Save all Changes (Debug)"), false, SaveAllChanges);
+
+                            foreach(CustomerDefinition customer in CustomerDefinition.GetAllCustomerDefinitions().Where(e => e != CurrentCustomer))
+                                contextMenu.AddItem(new GUIContent($"Change Customer/{customer.name}"), false, () => ViewCustomerQuests(customer));
+
                             contextMenu.AddItem(new GUIContent("I am lost, take me back to the nodes"), false, GoToMiddleOfNodes);
+                            contextMenu.AddItem(new GUIContent("Save all Changes (Debug)"), false, SaveAllChanges);
                             break;
                     }                        
                     contextMenu.ShowAsContext();

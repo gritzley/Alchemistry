@@ -108,7 +108,7 @@ public class Quest : SceneNode
         OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);
         DialogueNodes = DialogueNodes.Where(e => e != null).ToList(); // thus the grand culling began
         HasReceivingState = DialogueNodes.Exists(e => e != null && e is DialogueLine && (e as DialogueLine).IsReceivingState);
-        CurrentLine = PrecedingStartNode.NextLine;
+        CurrentLine = PrecedingStartNode?.NextLine;
     }
 
     /// <summary>

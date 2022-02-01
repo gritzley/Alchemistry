@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff10759b2f5d54f9819bc91e74e8bc, type: 3}
   m_Name: God Aspirant
   m_EditorClassIdentifier: 
-  Name: 
-  StartQuest: {fileID: 0}
-  Quests: []
+  Name: God Aspirant
+  StartQuest: {fileID: 11400000, guid: fdaada35bceeeb240912a65a214e99ce, type: 2}
+  Quests:
+  - {fileID: 11400000, guid: fdaada35bceeeb240912a65a214e99ce, type: 2}
   Articles: []

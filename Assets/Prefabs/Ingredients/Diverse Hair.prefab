@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -127301571374028258, guid: f5843d8498cd87747ae52ee91550a352, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f5843d8498cd87747ae52ee91550a352, type: 3}
       propertyPath: m_Name
@@ -100,11 +100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182244660871480619, guid: f5843d8498cd87747ae52ee91550a352, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5716792858448069402, guid: f5843d8498cd87747ae52ee91550a352, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5843d8498cd87747ae52ee91550a352, type: 3}

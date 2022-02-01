@@ -35,13 +35,11 @@ public class DiegeticText : MonoBehaviour
     }
     private Vector3 Offset = Vector3.zero;
     private List<Text> letters;
-    private void OnEnable()
-    {
-        DisplayText(Text);
-    }
 
     public void DisplayText(string text, Action callback = null)
     {
+        Debug.Log($"{name} showing text \"{text}\"");
+
         Text = text;
         Regex regex = new Regex("((<(?<command>[\\w]*?)(=(?<value>\\d+(\\.\\d+)?))?>)|(?<character>[\\w.,?!':\"\\-`\\s\\n]+?))");
         Match[] matches = regex.Matches(text).Cast<Match>().ToArray();

@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182244660871480619, guid: 75234b2ce45f76046bfbfbe0e4b23e4e, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75234b2ce45f76046bfbfbe0e4b23e4e, type: 3}
