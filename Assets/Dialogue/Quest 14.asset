@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
-  m_Name: Quest 9
+  m_Name: Quest 14
   m_EditorClassIdentifier: 
-  Position: {x: 412, y: 289}
-  Size: {x: 232.8, y: 40}
-  Title: Test Quest 1 (you can delete this)
+  Position: {x: 689, y: 291}
+  Size: {x: 119.2, y: 40}
+  Title: Get Followers
   Customer: {fileID: 11400000, guid: 8e62d08ccfbdc8f46b0a16013e68f23f, type: 2}
-  PrecedingStartNode: {fileID: 11400000, guid: 21cf30c3cf9a57248a67073db1c38855, type: 2}
+  PrecedingStartNode: {fileID: 0}
   HasReceivingState: 0
   NextScene: {fileID: 0}
   Links:
@@ -67,11 +67,28 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: f1044c1fb306441428c3d04cefe7cd74, type: 2}
     NextQuest: {fileID: 0}
   DialogueNodes:
-  - {fileID: 11400000, guid: 21cf30c3cf9a57248a67073db1c38855, type: 2}
-  - {fileID: 11400000, guid: 7682c250b52071041b7ad4147fe6f044, type: 2}
-  - {fileID: 11400000, guid: 351563e8f897c134185346958a9a9885, type: 2}
-  - {fileID: 11400000, guid: 255b2916e601e124a9090dc1e22e978b, type: 2}
-  - {fileID: 11400000, guid: 19352a8ae1bf7c24fa8c1bd3eb192e32, type: 2}
-  - {fileID: 11400000, guid: 1e2f945b3c6cbda448dbad9b34f06f11, type: 2}
-  - {fileID: 11400000, guid: 3cd371420e9a7f04f8412c84e6677686, type: 2}
-  isProofread: 1
+  - {fileID: 11400000, guid: 582fbdd4c994748418edb9e7b45cb561, type: 2}
+  - {fileID: 11400000, guid: 16cef85b57256a54f8b42bac244e4bb0, type: 2}
+  - {fileID: 11400000, guid: c6ca1a7dec09ce540a3c41905947ac94, type: 2}
+  - {fileID: 11400000, guid: e0cc21b2322e5514d83b63870c32a052, type: 2}
+  - {fileID: 11400000, guid: 8f88313c63d8a3340a50c5780a405e76, type: 2}
+  - {fileID: 11400000, guid: 05adc8ea0368164428a62394f23c421e, type: 2}
+  - {fileID: 11400000, guid: 9b4c81106ac27394393af5851d16869e, type: 2}
+  - {fileID: 11400000, guid: a7f07a02f8a5a774f988d4edccad9451, type: 2}
+  - {fileID: 11400000, guid: 1f904f67655a7fc42ba5cef2d9e71c37, type: 2}
+  - {fileID: 11400000, guid: b43b687786a3fee4cb088f9f05ea9707, type: 2}
+  - {fileID: 11400000, guid: d885c80639d0b5a40adabd3fa1c3e9da, type: 2}
+  - {fileID: 11400000, guid: 4a09632a465030546a90cc888ced0100, type: 2}
+  - {fileID: 11400000, guid: dad44e3fc0dd3d34a9454d982c88891f, type: 2}
+  - {fileID: 11400000, guid: 3d9d3f66295f61e418374b6aaef7d033, type: 2}
+  - {fileID: 11400000, guid: 010bf5db1e3eda246a51379399e36dd7, type: 2}
+  - {fileID: 11400000, guid: c7248502b18ae3d4c8dbf8c1ca83cbb2, type: 2}
+  - {fileID: 11400000, guid: 206d1ecc9a85858479c10e4b3416edf9, type: 2}
+  - {fileID: 11400000, guid: 9c593395cb4392c459598428be8ec764, type: 2}
+  - {fileID: 11400000, guid: c78728e14373a064dad70f5b1c4322af, type: 2}
+  - {fileID: 11400000, guid: 53c85cc548cb0a04e8c0bc5d4e1e457b, type: 2}
+  - {fileID: 11400000, guid: 6bb1986070b87634aa5ef5a2d99a4f43, type: 2}
+  - {fileID: 11400000, guid: 6eff3386489e20f4e8f1e5a7534bea46, type: 2}
+  - {fileID: 11400000, guid: d062228b5617ddf40a005f96ecc977bf, type: 2}
+  - {fileID: 11400000, guid: db4c9fefef207ba4bbe88a610806fa11, type: 2}
+  isProofread: 0
