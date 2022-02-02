@@ -12,7 +12,7 @@ public class SetVariableNode : DialogueNode
         get
         {
             VariablesManager.SetVariable(Key, Value);
-            return NextNode.NextLine;
+            return NextNode?.NextLine;
         }
     }
     [HideInInspector] public DialogueNode NextNode;

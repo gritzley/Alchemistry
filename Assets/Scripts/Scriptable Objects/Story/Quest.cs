@@ -69,14 +69,14 @@ public class Quest : SceneNode
         switch (i)
         {
             case 0:
-                if (CurrentLine.NextRight != null)
+                if (CurrentLine.NextRight != null && CurrentLine.NextRight.NextLine != null)
                 {
                     CurrentLine = CurrentLine.NextRight.NextLine;
                     return true;
                 }
                 break;
             case 1:
-                if (CurrentLine.HasAnswers && CurrentLine.NextLeft != null)
+                if (CurrentLine.HasAnswers && CurrentLine.NextLeft != null && CurrentLine.NextLeft.NextLine != null)
                 {
                     CurrentLine = CurrentLine.NextLeft.NextLine;
                     return true;
