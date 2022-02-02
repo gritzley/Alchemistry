@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 862
   m_EditorClassIdentifier: 
   Position: {x: 2974, y: 310}
-  Size: {x: 89.6, y: 40}
-  Title: Line 862
+  Size: {x: 78.4, y: 40}
+  Title: inspire
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: But that isn't even the end of it, I noticed that the poeple around me also
     had epihanies. I was inspiring them to open their eyes for the first time.

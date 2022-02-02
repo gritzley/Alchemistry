@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 861
   m_EditorClassIdentifier: 
   Position: {x: 2854, y: 308}
-  Size: {x: 88.8, y: 40}
-  Title: Line 861
+  Size: {x: 82.4, y: 40}
+  Title: ascend
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I knew in this moment that had to become a go. It was my destiny, the use
     the power of potions to ascend among my fellow deities.

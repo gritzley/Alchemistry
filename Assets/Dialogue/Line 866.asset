@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 866
   m_EditorClassIdentifier: 
-  Position: {x: 3438, y: 301}
-  Size: {x: 89.6, y: 40}
-  Title: Line 866
+  Position: {x: 3471, y: 292}
+  Size: {x: 64.8, y: 40}
+  Title: help
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I'll just need a little help from you.
   Notes: 
@@ -23,4 +23,4 @@ MonoBehaviour:
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: a6c3b2b42f79f3f4cb3a8b719093ed9d, type: 2}

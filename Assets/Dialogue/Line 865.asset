@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 865
   m_EditorClassIdentifier: 
   Position: {x: 3322, y: 294}
-  Size: {x: 89.6, y: 40}
-  Title: Line 865
+  Size: {x: 116.8, y: 40}
+  Title: blaspehmous
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I'll let this blasmephous comment slide this time. I'll prove to you that
     I'm more than capable of being your god.

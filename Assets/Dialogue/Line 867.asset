@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 857
+  m_Name: Line 867
   m_EditorClassIdentifier: 
-  Position: {x: 2384, y: 306}
-  Size: {x: 87.2, y: 40}
-  Title: partying
+  Position: {x: 2243, y: 339}
+  Size: {x: 90.4, y: 40}
+  Title: godhood
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
-  Text: I was out late at night partying, when I encounterd a dubious man, who was
-    selling illegal potions in a corner at the street.
+  Text: Let me tell you a stroy that'll prove my claim to godhood without a doubt.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: c7248502b18ae3d4c8dbf8c1ca83cbb2, type: 2}
+  NextRight: {fileID: 11400000, guid: 010bf5db1e3eda246a51379399e36dd7, type: 2}

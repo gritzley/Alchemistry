@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 864
   m_EditorClassIdentifier: 
-  Position: {x: 3219, y: 308}
+  Position: {x: 3189, y: 301}
   Size: {x: 90.4, y: 65}
-  Title: Line 864
+  Title: capacity
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
-  Text: I jist know I'm destined to become a new god. I was gifted to enhance the
+  Text: I just know I'm destined to become a new god. I was gifted to enhance the
     power of potions far beyond the capacity of mortals.
   Notes: 
   AnswerLeft: I'm sorry to have ever doubted you.
   AnswerRight: ...you're not serious are you?
   HasAnswers: 1
   _isReceivingState: 0
-  NextLeft: {fileID: 0}
+  NextLeft: {fileID: 11400000, guid: aacce1a1287f3444ab6b5193afdbda5d, type: 2}
   NextRight: {fileID: 11400000, guid: d062228b5617ddf40a005f96ecc977bf, type: 2}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 858
   m_EditorClassIdentifier: 
   Position: {x: 2501, y: 305}
-  Size: {x: 89.6, y: 40}
-  Title: Line 858
+  Size: {x: 76, y: 40}
+  Title: potion
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I was curious, I never tried a potion myself and the night was still young.
   Notes: 

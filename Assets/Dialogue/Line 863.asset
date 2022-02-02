@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 863
   m_EditorClassIdentifier: 
   Position: {x: 3097, y: 304}
-  Size: {x: 90.4, y: 40}
-  Title: Line 863
+  Size: {x: 73.6, y: 40}
+  Title: affect
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: The trader told me the potion would only affect me for two hours, but I was
     in this advanced state of mind for two days!

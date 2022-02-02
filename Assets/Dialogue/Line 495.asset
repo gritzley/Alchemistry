@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 495
   m_EditorClassIdentifier: 
-  Position: {x: 2126, y: 292}
+  Position: {x: 2127, y: 292}
   Size: {x: 84, y: 65}
   Title: protege
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
@@ -23,5 +23,5 @@ MonoBehaviour:
   AnswerRight: I really don't want to be further involved with your delusions.
   HasAnswers: 1
   _isReceivingState: 0
-  NextLeft: {fileID: 0}
+  NextLeft: {fileID: 11400000, guid: 9f20d4f49974e5e4795c23a547b3a3ad, type: 2}
   NextRight: {fileID: 11400000, guid: 3d9d3f66295f61e418374b6aaef7d033, type: 2}

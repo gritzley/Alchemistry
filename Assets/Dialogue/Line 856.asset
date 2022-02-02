@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 856
   m_EditorClassIdentifier: 
   Position: {x: 2247, y: 273}
-  Size: {x: 89.6, y: 40}
-  Title: Line 856
+  Size: {x: 76, y: 40}
+  Title: secret
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I can't really blame you for still having doubts. Let me tell you a little
     secret about a power I recently discoverd
