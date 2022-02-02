@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 9
   m_EditorClassIdentifier: 
-  Position: {x: 322, y: 258}
+  Position: {x: 322, y: 257}
   Size: {x: 234.66667, y: 40}
   Title: Test Quest 1 (you can delete this)
   Customer: {fileID: 11400000, guid: 8e62d08ccfbdc8f46b0a16013e68f23f, type: 2}
@@ -68,4 +68,10 @@ MonoBehaviour:
     NextQuest: {fileID: 0}
   DialogueNodes:
   - {fileID: 11400000, guid: 21cf30c3cf9a57248a67073db1c38855, type: 2}
+  - {fileID: 11400000, guid: 7682c250b52071041b7ad4147fe6f044, type: 2}
+  - {fileID: 11400000, guid: 351563e8f897c134185346958a9a9885, type: 2}
+  - {fileID: 11400000, guid: 255b2916e601e124a9090dc1e22e978b, type: 2}
+  - {fileID: 11400000, guid: 19352a8ae1bf7c24fa8c1bd3eb192e32, type: 2}
+  - {fileID: 11400000, guid: 1e2f945b3c6cbda448dbad9b34f06f11, type: 2}
+  - {fileID: 11400000, guid: 3cd371420e9a7f04f8412c84e6677686, type: 2}
   isProofread: 1

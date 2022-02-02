@@ -75,7 +75,7 @@ public class PotionBranch : DialogueNode
     {
         ConnectionPoint inPoint = ConnectionPoint.selectedInPoint;
 
-       if (inPoint != null)
+        if (inPoint != null)
         {
             // Create a Connection to another node
 

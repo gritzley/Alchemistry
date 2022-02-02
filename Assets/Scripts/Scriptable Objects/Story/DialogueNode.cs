@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class DialogueNode : StoryNode
 {
-    public Quest ParentQuest;
+    [HideInInspector] public Quest ParentQuest;
 
 #if UNITY_EDITOR
 

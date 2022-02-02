@@ -163,6 +163,8 @@ public class StoryEditor : EditorWindow
         {
             case "DialogueLine": assetName = "Line"; break;
             case "PotionBranch": assetName = "Branch"; break;
+            case "SetVariableNode": assetName = "SetVar"; break;
+            case "CheckVariableNode": assetName = "CheckVar"; break;
             default: throw new NotImplementedException("You are trying to create a type of node that the Story Editor does not know about");
         }
 
@@ -262,8 +264,10 @@ public class StoryEditor : EditorWindow
                     else switch(viewState)
                     {
                         case ViewState.DialogueView:
-                            contextMenu.AddItem(new GUIContent("Add Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
-                            contextMenu.AddItem(new GUIContent("Add Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
+                            contextMenu.AddItem(new GUIContent("Add/Dialogue Line"), false, () => CreateDialogueNode<DialogueLine>(pos));
+                            contextMenu.AddItem(new GUIContent("Add/Potion Branch"), false, () => CreateDialogueNode<PotionBranch>(pos));
+                            contextMenu.AddItem(new GUIContent("Add/Set Variable Node"), false, () => CreateDialogueNode<SetVariableNode>(pos));
+                            contextMenu.AddItem(new GUIContent("Add/Check Variable Node"), false, () => CreateDialogueNode<CheckVariableNode>(pos));
 
                             contextMenu.AddItem(new GUIContent("Return to Quest View"), false, () => ViewCustomerQuests(CurrentCustomer));
                             contextMenu.AddItem(new GUIContent("I am lost, go back to the start"), false, GoToFirstNode);

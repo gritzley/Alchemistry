@@ -9,14 +9,14 @@ public abstract class StoryNode : ScriptableObject
 
 #if UNITY_EDITOR
     [NonSerialized] public GUIStyle style, selectedStyle;
-    public Vector2 Position, Size;
+    [HideInInspector] public Vector2 Position, Size = new Vector2(40, 40);
     [NonSerialized] public GUIStyle LabelStyle, NotificationStyle;
     [NonSerialized] public Rect rect;
     [NonSerialized] public bool isDragging;
     public string Title;
     [NonSerialized] public Action<StoryNode> OnRemove;
     [NonSerialized] public ConnectionPoint InPoint;
-    [NonSerialized] public bool isSelected;
+    [NonSerialized] public bool isSelected = false;
 
     /// <summary>
     /// Set Initial Values when Enabling the Nodes.
@@ -162,7 +162,7 @@ public abstract class StoryNode : ScriptableObject
     /// <param name="contextMenu">A reference to the context Menu. Fill it by calling AddItem on it</param>
     public virtual void FillContextMenu(GenericMenu contextMenu)
     {
-        contextMenu.AddItem(new GUIContent("Remove Node"), false, Remove);
+        contextMenu.AddItem(new GUIContent("Remove Node/Are you sure? You can't undo this./I'm sure."), false, Remove);
         GUI.changed = true;
     }
 

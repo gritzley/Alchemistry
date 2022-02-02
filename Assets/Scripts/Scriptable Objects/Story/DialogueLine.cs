@@ -115,6 +115,7 @@ public class DialogueLine : DialogueNode
             AssetDatabase.SaveAssets();
             ConnectionPoint.selectedInPoint = null;
             ConnectionPoint.selectedOutPoint = null;
+            Debug.Log(Title);
         }
         else
         {
