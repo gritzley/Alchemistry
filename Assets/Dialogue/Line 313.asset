@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 313
   m_EditorClassIdentifier: 
   Position: {x: 1097, y: 291}
-  Size: {x: 89.6, y: 40}
+  Size: {x: 90, y: 40}
   Title: new god
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I'm sorry if I'm to straight forward, but are you perhaps in search of a

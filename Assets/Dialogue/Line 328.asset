@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 328
   m_EditorClassIdentifier: 
   Position: {x: 1412, y: 290}
-  Size: {x: 99.2, y: 40}
+  Size: {x: 100, y: 40}
   Title: especially
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: 'You want a god that especially support your needs. '
