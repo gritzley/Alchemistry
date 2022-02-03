@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 167
+  m_Name: Line 314
   m_EditorClassIdentifier: 
-  Position: {x: 1793.5, y: -110}
-  Size: {x: 100.66667, y: 40}
-  Title: inspecting
+  Position: {x: 1575.8333, y: -46.833374}
+  Size: {x: 90.66667, y: 40}
+  Title: Line 314
   ParentQuest: {fileID: 11400000, guid: c4103fd57a9547f45a79f876c34a4420, type: 2}
-  Text: Now the city guard are inspecting this case.
+  Text: 
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 493a971da15a8ef458614175cbfab064, type: 2}
+  NextRight: {fileID: 0}
