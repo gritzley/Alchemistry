@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Line 874
   m_EditorClassIdentifier: 
   Position: {x: 4006, y: 320}
-  Size: {x: 90.4, y: 40}
-  Title: Line 874
+  Size: {x: 84, y: 40}
+  Title: protege
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
-  Text: 
+  Text: 'And I''ll leave the choice to you my protege, witch which power I should
+    attract my new follower, my '
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 7cf1f3d4d47ea4f458990a368d58f7ab, type: 2}
