@@ -47,10 +47,24 @@ public class StoryEditor : EditorWindow
             Debug.LogWarning("There is no GameManager Instance!");
         else
         {
-            if (GameManager.Instance.CurrentCustomer != null)
-                ViewCustomerQuests(GameManager.Instance.CurrentCustomer.CustomerDefinition);
-            else
-                ViewCustomerQuests(CustomerDefinition.GetAllCustomerDefinitions()[0]);
+
+            int viewstate = PlayerPrefs.GetInt("StoryEditorViewState");
+            if (viewState == ViewState.QuestView)
+            {
+                int customerIndex = PlayerPrefs.GetInt("StoryEditorCustomerIndex");
+                List<CustomerDefinition> customers = CustomerDefinition.GetAllCustomerDefinitions();
+                if (customerIndex < customers.Count)
+                    ViewCustomerQuests(customers[customerIndex]);
+                else if (GameManager.Instance.CurrentCustomer != null)
+                    ViewCustomerQuests(GameManager.Instance.CurrentCustomer.CustomerDefinition);
+                else
+                    ViewCustomerQuests(customers[0]);
+            }
+            if (viewState == ViewState.DialogueView)
+            {
+                int questIndex = PlayerPrefs.GetInt("StoryEditorQuestIndex");
+                ViewQuestDialogue(Quest.GetAllQuestAssets()[questIndex]);
+            }
             offset.x = PlayerPrefs.GetFloat("StoryEditorOffsetX");
             offset.y = PlayerPrefs.GetFloat("StoryEditorOffsetY");
         }
@@ -76,6 +90,8 @@ public class StoryEditor : EditorWindow
             if (node is Quest) (node as Quest).ViewDialogue = ViewQuestDialogue;
         }
         offset = Vector2.zero;
+        PlayerPrefs.SetInt("StoryEditorCustomerIndex", CustomerDefinition.GetAllCustomerDefinitions().IndexOf(CurrentCustomer));
+        PlayerPrefs.SetInt("StoryEditorViewState", (int)ViewState.QuestView);
     }
 
     private void ViewQuestDialogue(Quest quest)
@@ -90,6 +106,8 @@ public class StoryEditor : EditorWindow
         nodes = new List<StoryNode>();
         nodes.Add(quest);
         nodes.AddRange(quest.DialogueNodes);
+        PlayerPrefs.SetInt("StoryEditorQuestIndex", Quest.GetAllQuestAssets().IndexOf(quest));
+        PlayerPrefs.SetInt("StoryEditorViewState", (int)ViewState.DialogueView);
     }
 
     /// <summary>

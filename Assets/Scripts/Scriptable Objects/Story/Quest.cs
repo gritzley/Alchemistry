@@ -225,6 +225,14 @@ public class Quest : SceneNode
         }
         return connections;
     }
+
+    public static List<Quest> GetAllQuestAssets()
+    {
+        return AssetDatabase.FindAssets("t:Quest")
+        .Select( e => AssetDatabase.GUIDToAssetPath(e))
+        .Select( e => (Quest)AssetDatabase.LoadAssetAtPath(e, typeof(Quest)))
+        .ToList();
+    }
 #endif
 
 }
