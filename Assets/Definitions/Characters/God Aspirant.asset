@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: God Aspirant
   m_EditorClassIdentifier: 
   Name: God Aspirant
-  StartQuest: {fileID: 11400000, guid: fdaada35bceeeb240912a65a214e99ce, type: 2}
+  StartQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Quests:
-  - {fileID: 11400000, guid: fdaada35bceeeb240912a65a214e99ce, type: 2}
+  - {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Articles: []
