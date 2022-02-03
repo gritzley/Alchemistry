@@ -16,4 +16,9 @@ MonoBehaviour:
   StartQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Quests:
   - {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
+  - {fileID: 11400000, guid: af1483a6226e84e439958e010aa87a41, type: 2}
+  - {fileID: 11400000, guid: dee116fb0b6a45b4aa5a8a9dc140fe11, type: 2}
+  - {fileID: 11400000, guid: a6c5f690b0e09124e8e13ebad2b54749, type: 2}
+  - {fileID: 11400000, guid: 0d92dad037fa06b41854eeedfe197d22, type: 2}
+  - {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Articles: []
