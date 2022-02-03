@@ -48,6 +48,9 @@ public class PotionBranch : DialogueNode
         Title = "Potion Branch";
         UpdateLinks();
         base.OnEnable();
+        
+        style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node4.png") as Texture2D;
+        selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node4 on.png") as Texture2D;
     }
 
     public override List<Connection> GetOutConnections(int state = 0)
