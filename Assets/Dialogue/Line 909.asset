@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 906
+  m_Name: Line 909
   m_EditorClassIdentifier: 
-  Position: {x: 2142.6667, y: 476.09998}
-  Size: {x: 112, y: 40}
-  Title: annoucment
+  Position: {x: 2049.6667, y: 514.1}
+  Size: {x: 97.6, y: 40}
+  Title: manevour
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: Then I made my annoucment as a new burning start in the pantheon and the
-    crowded cheered.
+  Text: Doing acrobatic flight manevour and letting surrounding objects float.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 32966169dbe723d4d8dc56d64b430a09, type: 2}

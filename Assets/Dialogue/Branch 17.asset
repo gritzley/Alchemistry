@@ -79,11 +79,11 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: a202750c13eea4f45ad2cd555b07fa49, type: 2}
     NextNode: {fileID: 11400000, guid: 4ff070bd84095454cba58399028727c9, type: 2}
   - Potion: {fileID: 11400000, guid: f38fb329b139fc44c9e4add46dd46328, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 290c435f249c86e4a95a10bfda3de0fb, type: 2}
   - Potion: {fileID: 11400000, guid: 87fa81e6e68687f4990e052a9d9cc5c4, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 1ec0ae45078c7e44b8c8f800e5ced891, type: 2}
   - Potion: {fileID: 11400000, guid: fb138f77849ed124daf4fbe605c3f612, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 104e96d273467c646bc1496a03206a1b, type: 2}
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: 8d68938b2deb205449082b4aebac10dc, type: 2}
