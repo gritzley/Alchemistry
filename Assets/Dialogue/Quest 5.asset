@@ -158,4 +158,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c8509d91d0140e46bfbc804a18b1e50, type: 2}
   - {fileID: 11400000, guid: a11fd52da7005744fa7a1fc82d2569af, type: 2}
   - {fileID: 11400000, guid: 3288259aded9b2a40a9c85edea040e54, type: 2}
-  isProofread: 0
+  isProofread: 1
