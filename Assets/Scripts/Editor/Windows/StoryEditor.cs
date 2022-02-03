@@ -176,6 +176,7 @@ public class StoryEditor : EditorWindow
         node.Position = position;
         node.OnRemove = RemoveNodeFromView;
         node.ParentQuest = currentQuest;
+        if (node is PotionBranch) (node as PotionBranch).UpdateLinks();
         currentQuest.DialogueNodes.Add(node);
 
         // Changes made to the line after creating it must be saved

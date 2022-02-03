@@ -106,9 +106,14 @@ public class PotionBranch : DialogueNode
         // ---- NODE UNFOLDED ----
         OutPoints.ForEach( e => e.Draw() );
         FilteredLinks.ForEach( e => Size.x = Mathf.Max(Size.x, LabelStyle.CalcSize(new GUIContent(e.Potion.name)).x) );
-        Size.y = 15 + OutPoints.Count * 25; 
+        Size.y = Mathf.Max(40, 15 + OutPoints.Count * 25); 
         base.Draw(offset);
-        for (int i = 0; i < FilteredLinks.Count; i++)
+        if (FilteredLinks.Count == 0)
+        {
+            Size.x = LabelStyle.CalcSize(new GUIContent("No Potions lead here")).x;
+            GUI.Label(rect, "No Potions lead here", LabelStyle);
+        }
+        else for (int i = 0; i < FilteredLinks.Count; i++)
         {
             Rect labelRect = rect;
             labelRect.position += new Vector2(0, 25 * i);
@@ -163,14 +168,17 @@ public class PotionBranch : DialogueNode
         .ForEach( e => Links.Add(new Link() {Potion = e}));     
 
         List<PotionDefinition> PossiblePotions = new List<PotionDefinition>();
-        List<Quest> OtherCustomerQuests = ParentQuest.Customer.Quests.Where(e => e != this).ToList();
-        foreach (Quest quest in OtherCustomerQuests) 
+        if (ParentQuest != null)
         {
-            foreach (Quest.Link link in quest.Links)
+            List<Quest> OtherCustomerQuests = ParentQuest.Customer.Quests.Where(e => e != this).ToList();
+            foreach (Quest quest in OtherCustomerQuests) 
             {
-                if (link.NextQuest == ParentQuest && !PossiblePotions.Contains(link.Potion))
+                foreach (Quest.Link link in quest.Links)
                 {
-                    PossiblePotions.Add(link.Potion);
+                    if (link.NextQuest == ParentQuest && !PossiblePotions.Contains(link.Potion))
+                    {
+                        PossiblePotions.Add(link.Potion);
+                    }
                 }
             }
         }
