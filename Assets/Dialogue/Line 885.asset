@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 885
+  m_EditorClassIdentifier: 
+  Position: {x: 2043, y: 340}
+  Size: {x: 76, y: 40}
+  Title: cough
+  ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
+  Text: The crowd around me started to cough and cringe.
+  Notes: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  _isReceivingState: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: a2571c8a731edf54993f48ae496cf8e5, type: 2}
