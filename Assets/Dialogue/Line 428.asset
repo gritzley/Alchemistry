@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 428
   m_EditorClassIdentifier: 
   Position: {x: 2731, y: -123}
-  Size: {x: 91.33333, y: 40}
-  Title: Line 428
+  Size: {x: 86.66667, y: 40}
+  Title: warning
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'So that''s a warning. I will lay low for a while. '
+  Text: That is a friendly warning to an associate. I will lay low for a while.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 92.66667, y: 40}
   Title: Line 434
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: ' I''ll be the own master of my fate. '
+  Text: 'I''ll be the master of my fate. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

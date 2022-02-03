@@ -16,10 +16,10 @@ MonoBehaviour:
   Size: {x: 116.666664, y: 40}
   Title: blashepmous
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: 'Pfff you know gods come and go.
+  Text: 'Pfff. <pause=0.4> You know gods come and go.<pause=0.2>
 
-    You''re probably blaspheming against
-    hundreds of forgotten gods every day.'
+    You''re probably
+    blaspheming against hundreds of forgotten gods every day.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

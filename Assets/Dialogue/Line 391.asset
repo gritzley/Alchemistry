@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 391
   m_EditorClassIdentifier: 
-  Position: {x: 1218, y: -218}
+  Position: {x: 1223, y: -224}
   Size: {x: 74, y: 40}
   Title: trader
   ParentQuest: {fileID: 11400000, guid: 64b883e41f9ca68408aec2a0014fdade, type: 2}
-  Text: Hello...potion trader.
+  Text: Hello <crawl>...<potion trader.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

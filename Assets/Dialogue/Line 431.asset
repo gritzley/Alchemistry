@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 431
   m_EditorClassIdentifier: 
-  Position: {x: 3101, y: -131}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 431
+  Position: {x: 3108, y: -136}
+  Size: {x: 119.333336, y: 40}
+  Title: don't be sorry
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'Don''t be. The branches of lives branch in many directions. '
+  Text: 'Don''t be. <pause=0.3>
+
+    Life branches in many unforseen directions. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

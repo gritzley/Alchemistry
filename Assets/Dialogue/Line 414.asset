@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 414
   m_EditorClassIdentifier: 
-  Position: {x: 2063, y: 344}
+  Position: {x: 2025, y: 0}
   Size: {x: 85.33333, y: 40}
   Title: glimmer
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'When his guest saw his predicment their appeared wolfish glimmer in their
-    eyes. '
+  Text: 'When his guests saw his predicament, a wolfish gleam appeared in many eyes. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

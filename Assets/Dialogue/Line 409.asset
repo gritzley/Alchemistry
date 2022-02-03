@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 409
   m_EditorClassIdentifier: 
-  Position: {x: 1941, y: 198}
+  Position: {x: 1916, y: -75}
   Size: {x: 83.33333, y: 40}
   Title: audible
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'There was a great confusion he wasn''t there but his voice was still audible. '
+  Text: There was grat confusion when despite his lack of visibility, his voice remained
+    audible.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

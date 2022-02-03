@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 430
   m_EditorClassIdentifier: 
-  Position: {x: 2976, y: -123}
-  Size: {x: 92.66667, y: 65}
-  Title: Line 430
+  Position: {x: 3000, y: -126}
+  Size: {x: 64.666664, y: 65}
+  Title: i o u
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: I'll owe you one for the centaurs death so see this a way to keep us both
-    save...
+  Text: I owe you one, for the centaurs death. so look at this as a way to keep us
+    both save <crawl>...
   Notes: 
   AnswerLeft: We probably deserve this.
   AnswerRight: I'm sorry it had to end that way.

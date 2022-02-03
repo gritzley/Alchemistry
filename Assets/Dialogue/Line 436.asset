@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 92, y: 40}
   Title: Line 436
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "We all have to be ready to live every day \r\nto the fullest until our time
-    ends."
+  Text: "We'd all do best to live every day \r\nto the fullest until our blossom
+    withers."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

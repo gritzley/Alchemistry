@@ -16,7 +16,10 @@ MonoBehaviour:
   Size: {x: 96.66667, y: 40}
   Title: isn't dead
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: As you may or not have heard, Golden Tooths isn't dead.
+  Text: 'As you may or not have heard, Goldentooth is alive. <pause=0.3>
+
+    And
+    he is angry.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

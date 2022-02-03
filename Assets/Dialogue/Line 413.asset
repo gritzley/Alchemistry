@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 413
   m_EditorClassIdentifier: 
-  Position: {x: 1941, y: 347}
+  Position: {x: 1903, y: 3}
   Size: {x: 76, y: 40}
   Title: thumb
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "His body got smaller and smaller until he was only as\r big as a thumb. "
+  Text: 'His body grew smaller and smaller until he was nly the size of a thumb. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

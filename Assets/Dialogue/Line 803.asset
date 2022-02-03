@@ -16,8 +16,10 @@ MonoBehaviour:
   Size: {x: 66, y: 40}
   Title: Fear
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
-  Text: The time started to speed up. And I was standing there nothing changed just
-    time went on. Unable to die.
+  Text: 'When I drank, time started to speed up.
+
+    I could do nothing but stand
+    there, as everything around me died, while I was consigned to eternity.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

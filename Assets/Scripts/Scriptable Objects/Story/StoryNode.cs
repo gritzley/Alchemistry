@@ -26,13 +26,13 @@ public abstract class StoryNode : ScriptableObject
     {
         // This is the default style of a node
         style = new GUIStyle();
-        style.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
         style.border = new RectOffset(12, 12, 12, 12);
 
         // This is the style used for a selected Node
         selectedStyle = new GUIStyle();
-        selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
         selectedStyle.border = new RectOffset(12, 12, 12, 12);
+
+        SetBoxColor("Blue");
 
         // The Style with which Labels are written
         LabelStyle = new GUIStyle();
@@ -189,6 +189,24 @@ public abstract class StoryNode : ScriptableObject
     /// <param name="state">The current state of the window. 0 -> QuestView , 1 -> DialogueView</param>
     /// <returns>All Out Connections of this node</returns>
     public abstract List<Connection> GetOutConnections(int state);
+
+    private void SetBoxColor(string color)
+    {
+        int nodeStyleIndex = 1;
+        switch (color)
+        {
+            case "Turquise":
+            case "Lightgreen": nodeStyleIndex = 2; break;
+            case "Green":
+            case "Darkgreen": nodeStyleIndex = 3; break;
+            case "Yellow": nodeStyleIndex = 4; break;
+            case "Orange":
+            case "Gold": nodeStyleIndex = 5; break;
+            case "Red": nodeStyleIndex = 6; break;
+        }
+        style.normal.background = EditorGUIUtility.Load($"builtin skins/darkskin/images/node{nodeStyleIndex}.png") as Texture2D;
+        selectedStyle.normal.background = EditorGUIUtility.Load($"builtin skins/darkskin/images/node{nodeStyleIndex} on.png") as Texture2D;
+    }
 #endif
 
 }

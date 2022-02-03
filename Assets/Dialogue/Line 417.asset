@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 417
   m_EditorClassIdentifier: 
-  Position: {x: 1935, y: 50}
-  Size: {x: 90, y: 40}
-  Title: Line 417
+  Position: {x: 1923, y: -116}
+  Size: {x: 91.33333, y: 40}
+  Title: BurstFire
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: He took a chug from the cup. Then caughed, suddenly fire burst through his
-    mouth.
+  Text: 'He took a chug from the cup adnd coughed.<pause=0.4>
+
+    Suddenly fire
+    burst through his mouth.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

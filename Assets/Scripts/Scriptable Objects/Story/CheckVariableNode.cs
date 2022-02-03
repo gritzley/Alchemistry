@@ -43,6 +43,7 @@ public class CheckVariableNode : DialogueNode
         selectedStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node2 on.png") as Texture2D;
 
         if (Key == null && SetVariableNode.AllVariables.Count() > 0) Key = SetVariableNode.AllVariables.First();
+
     }
 
     public void UpdateOutPoints()
@@ -53,7 +54,7 @@ public class CheckVariableNode : DialogueNode
         for (int i = 0; i < Values.Count; i++)
             OutPoints.Add(new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick, i));
 
-        Size.y = 15 + 25 * Values.Count;
+        Size.y = Mathf.Max(15 + 25 * Values.Count, 40);
 
         GUI.changed = true;
     }

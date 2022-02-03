@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 88.66667, y: 40}
   Title: enemies
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: Especially the under city is in his focus cause he has many enemies here..
+  Text: He has many enemies in the undercity, so we have to tread lightly, down here.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
