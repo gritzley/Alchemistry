@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 420
   m_EditorClassIdentifier: 
-  Position: {x: 2297, y: 43}
-  Size: {x: 92, y: 40}
-  Title: Line 420
+  Position: {x: 2268, y: -117}
+  Size: {x: 100, y: 40}
+  Title: resistance
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "Golden Tooth didn't die in the fire because of his natural fire resistance,
-    but losing the whole destillery and some of his valued clients.\r"
+  Text: Goldentooth didn't die in the fire, because of te dragonskins natural resistance
+    to heat. He did loose a whole distillery and some valuable clients though.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

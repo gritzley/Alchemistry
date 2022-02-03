@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 602
   m_EditorClassIdentifier: 
-  Position: {x: 3201.9167, y: -37.444458}
+  Position: {x: 3285.9167, y: 87.55554}
   Size: {x: 80, y: 40}
   Title: peeled
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}

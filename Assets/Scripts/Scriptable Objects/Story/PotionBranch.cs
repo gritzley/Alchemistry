@@ -155,15 +155,30 @@ public class PotionBranch : DialogueNode
     /// </summary>
     public void UpdateLinks()
     {
+
+        
+
         // Get all Potion assets and put them in a list
         List<PotionDefinition> potions = PotionDefinition.GetAllPotionAssets();
         
         Links.RemoveAll( e => !potions.Contains(e.Potion));
 
-        potions
-        .Except( Links.Where(e => potions.Contains(e.Potion)).Select(e => e.Potion) )
-        .ToList()
-        .ForEach( e => Links.Add(new Link() {Potion = e}));     
+        foreach(PotionDefinition potion in potions)
+        {
+            if (!Links.Exists(e => e.Potion == potion))
+            {
+                Links.Add(new Link() {Potion = potion});
+            }
+            else if (FilteredLinks.Exists(e => e.Potion == potion))
+            {
+                Link link = new Link()
+                {
+                    Potion = potion,
+                    NextNode = FilteredLinks.Find(e => e.Potion == potion).NextNode
+                };
+                Links[Links.FindIndex(e => e.Potion == potion)] = link;
+            }
+        }
 
         List<PotionDefinition> PossiblePotions = new List<PotionDefinition>();
         List<Quest> OtherCustomerQuests = ParentQuest.Customer.Quests.Where(e => e != this).ToList();

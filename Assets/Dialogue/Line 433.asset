@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 92.66667, y: 40}
   Title: Line 433
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "Maybe we do. I don't care about deserving\n or not deserving."
+  Text: Perhaps we do.<pause=0.3> I care little.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

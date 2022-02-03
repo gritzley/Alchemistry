@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 609
   m_EditorClassIdentifier: 
-  Position: {x: 3987.9167, y: -32.444458}
+  Position: {x: 4065.917, y: 93.55554}
   Size: {x: 102.66667, y: 40}
   Title: sealed box
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}

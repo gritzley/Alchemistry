@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 402
   m_EditorClassIdentifier: 
-  Position: {x: 903, y: -84}
+  Position: {x: 903, y: -85}
   Size: {x: 82.66667, y: 40}
   Title: dweller
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "Quick, potion dweller. \nI don't have much time"
+  Text: "Quick, potion dabbler. \nI don't have much time."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

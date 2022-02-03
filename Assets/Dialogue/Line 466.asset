@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 565
+  m_Name: Line 466
   m_EditorClassIdentifier: 
-  Position: {x: 1555, y: 271}
-  Size: {x: 79.33333, y: 40}
-  Title: groans
-  ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "There groans always seemed to have a...structure. They made conscious pauses
-    \nlike when bards do after they do their bits awaiting their applause."
+  Position: {x: 1659, y: 31}
+  Size: {x: 91.33333, y: 40}
+  Title: Line 466
+  ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}
+  Text: I mostly forgot about the grave and just chatted with some of the graveyard
+    denizenz.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 9f542142053bfc948a9e9b3daf4d7ce2, type: 2}
+  NextRight: {fileID: 11400000, guid: 93e58e55ac72bed43ad9f6efb8f191fc, type: 2}

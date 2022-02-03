@@ -128,8 +128,8 @@ Material:
     - _MetallicStrength: 0
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
-    - _Open: 0
-    - _Pages: 3
+    - _Open: 1
+    - _Pages: 10
     - _Progress: 0
     - _ProgressThreshold: 0.02
     - _QueueOffset: 0

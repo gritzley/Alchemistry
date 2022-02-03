@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 426
   m_EditorClassIdentifier: 
-  Position: {x: 2166, y: 228}
+  Position: {x: 2141, y: -45}
   Size: {x: 91.33333, y: 40}
   Title: Line 426
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'They started laughing, calling
+  Text: 'They started laughing, calling him names.<pause=0.4>
 
-    him names. He took that personal.'
+    He took that personally.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

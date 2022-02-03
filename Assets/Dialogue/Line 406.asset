@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 100.66667, y: 40}
   Title: commerce
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'Everybody who has something to say in commerce was at the revealing banquet. '
+  Text: Everyone who is someone in comemrce was there.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 598
   m_EditorClassIdentifier: 
-  Position: {x: 2733.9167, y: -42.444458}
+  Position: {x: 2795.9167, y: 97.55554}
   Size: {x: 130.66666, y: 40}
   Title: howling spiders
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
