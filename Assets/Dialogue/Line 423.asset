@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 423
   m_EditorClassIdentifier: 
-  Position: {x: 2520, y: -122}
+  Position: {x: 2521, y: -69}
   Size: {x: 62, y: 40}
   Title: city
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'Now he''s searching through the whole city for hints or a suspect. '
+  Text: "Now he's searching through the whole city for hints.<pause=0.2> \nOr a suspect. "
   Notes: 
   AnswerLeft: 
   AnswerRight: 

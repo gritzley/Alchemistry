@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 429
   m_EditorClassIdentifier: 
   Position: {x: 2855, y: -123}
-  Size: {x: 91.33333, y: 40}
-  Title: Line 429
+  Size: {x: 119.333336, y: 40}
+  Title: cease comms
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: I think it's best if we refrain from speaking to each other.
+  Text: I think it'd be best if we ceased communications.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

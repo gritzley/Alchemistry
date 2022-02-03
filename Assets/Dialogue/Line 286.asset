@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 90, y: 40}
   Title: shrinked
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: Hopefully our pantheon will have shrunken by then.
+  Text: Hopefully, our pantheon will have shrunken by then.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

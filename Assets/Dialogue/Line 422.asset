@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 422
   m_EditorClassIdentifier: 
-  Position: {x: 1818, y: 232}
+  Position: {x: 1793, y: -41}
   Size: {x: 76.66667, y: 40}
   Title: Laugh
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: 'He emptied his booze cup and then hold his speech. '
+  Text: 'He emptied his booze cup and then held his speech. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

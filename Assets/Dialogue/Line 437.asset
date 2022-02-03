@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Line 437
   m_EditorClassIdentifier: 
   Position: {x: 3480, y: -97}
-  Size: {x: 92, y: 40}
-  Title: Line 437
+  Size: {x: 86.66667, y: 40}
+  Title: farewell
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: I'll be going now. Farewell, potion dealer.
+  Text: 'I''ll be going now.<pause=0.5>
+
+    Farewell, potion dealer.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

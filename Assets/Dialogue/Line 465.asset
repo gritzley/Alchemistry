@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 465
   m_EditorClassIdentifier: 
   Position: {x: 1616, y: 289}
-  Size: {x: 110.4, y: 65}
+  Size: {x: 111.333336, y: 65}
   Title: aspiring god
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: I chose you to be the first follower of this aspiring god.

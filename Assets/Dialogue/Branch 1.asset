@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d92e05b3a9cf048854121965885cf4, type: 3}
   m_Name: Branch 1
   m_EditorClassIdentifier: 
-  Position: {x: 1068, y: -51}
+  Position: {x: 1073, y: -45}
   Size: {x: 194.66667, y: 240}
   Title: Potion Branch
   ParentQuest: {fileID: 11400000, guid: 4d6bd91761a8d0342b4e678091a3f822, type: 2}
@@ -73,7 +73,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: af835f3d800fd7d428473574f05aee6d, type: 2}
     NextNode: {fileID: 11400000, guid: adee50b8c6af7f144910b3572c2ed60c, type: 2}
   - Potion: {fileID: 11400000, guid: 1ce53e7b60d17f446bd7bd9accfaca04, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: d6bde0f08c7f93e42b67a3a8eed35ed9, type: 2}
   - Potion: {fileID: 11400000, guid: 652dc0bb2196e1c4b843c0a63b1e8787, type: 2}
     NextNode: {fileID: 11400000, guid: a493238a9cd2dde46be068f90667f042, type: 2}
   - Potion: {fileID: 11400000, guid: ca8e19fbfcb7b52428f632c1e7d2f590, type: 2}
@@ -81,4 +81,4 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: b5b8cc528ac3db94491ce4039fdab5df, type: 2}
     NextNode: {fileID: 11400000, guid: 3bcf38a9054cb1e46a814892d72bd465, type: 2}
   - Potion: {fileID: 11400000, guid: 3f5a062f04802ac4d864433cc43abe44, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 669f610acc81c584c978976ec296d7ba, type: 2}

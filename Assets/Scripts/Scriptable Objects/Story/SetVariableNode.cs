@@ -7,7 +7,14 @@ using System.Linq;
 
 public class SetVariableNode : DialogueNode
 {
-    public override DialogueLine NextLine => NextNode.NextLine;
+    public override DialogueLine NextLine
+    {
+        get
+        {
+            VariablesManager.SetVariable(Key, Value);
+            return NextNode?.NextLine;
+        }
+    }
     [HideInInspector] public DialogueNode NextNode;
     public ConnectionPoint OutPoint;
     public string Key, Value;

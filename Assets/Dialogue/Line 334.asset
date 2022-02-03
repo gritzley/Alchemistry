@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 334
   m_EditorClassIdentifier: 
   Position: {x: 1529, y: 291}
-  Size: {x: 58.4, y: 40}
+  Size: {x: 58.666664, y: 40}
   Title: ME
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: The solution for you problems is ME, my enchanting friend

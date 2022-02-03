@@ -40,6 +40,8 @@ public class DialogueLineEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(titleProp);
+        EditorGUILayout.PropertyField(nextRightProp);
+        EditorGUILayout.PropertyField(nextLeftProp);
         EditorGUILayout.LabelField("Text");
         textProp.stringValue = EditorGUILayout.TextArea(textProp.stringValue);
 

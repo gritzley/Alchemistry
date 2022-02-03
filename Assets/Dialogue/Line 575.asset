@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 575
   m_EditorClassIdentifier: 
-  Position: {x: 2096, y: 413}
+  Position: {x: 2112, y: 323}
   Size: {x: 66, y: 40}
   Title: gate
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}

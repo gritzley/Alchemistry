@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 408
   m_EditorClassIdentifier: 
-  Position: {x: 1821, y: 200}
+  Position: {x: 1796, y: -74}
   Size: {x: 99.33333, y: 40}
   Title: Invisibility
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "He hold his speech while taking chugs out of his cup with the booze, when
-    he suddenly just...disseapered. \r"
+  Text: "He held his speech while drinking from his cup,\nwhen suddenly,<pause=0.3>
+    he vanished. \r"
   Notes: 
   AnswerLeft: 
   AnswerRight: 

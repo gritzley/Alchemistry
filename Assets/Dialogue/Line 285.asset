@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 69.333336, y: 40}
   Title: back
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: I'm grateful. I'll be back soon.
+  Text: I'm grateful.<pause=0.3> I'll be back soon.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 509
   m_EditorClassIdentifier: 
-  Position: {x: 1450.2007, y: 21.14087}
+  Position: {x: 1394.2007, y: -63.85913}
   Size: {x: 92, y: 40}
   Title: Acid Spit
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "When they jumped out of their hiding place an armee of acid spitting \nzombies\r
-    all turned their way."
+  Text: "When the necromancers jumped out of their hiding place an army of acid spitting
+    \nzombies\r all turned their way."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

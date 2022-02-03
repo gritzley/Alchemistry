@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 419
   m_EditorClassIdentifier: 
-  Position: {x: 2175, y: 44}
-  Size: {x: 90, y: 40}
-  Title: Line 419
+  Position: {x: 2146, y: -116}
+  Size: {x: 77.33333, y: 40}
+  Title: Chaos
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: "Chaos ensued as the fire spread through the room guest were fleeing. \r"
+  Text: 'Chaos ensued, as the fire spread through the room.
+
+    The attendents were
+    running in every direction.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

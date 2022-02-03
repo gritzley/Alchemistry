@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 421
   m_EditorClassIdentifier: 
-  Position: {x: 2417, y: 43}
-  Size: {x: 90, y: 40}
-  Title: Line 421
+  Position: {x: 2388, y: -117}
+  Size: {x: 116, y: 40}
+  Title: dragons rage
   ParentQuest: {fileID: 11400000, guid: a0822d90785ec4d408ab41f6198281a4, type: 2}
-  Text: He's enraged beyond reason
+  Text: He is raging mad. I've never seen him act so true to his draconic origins.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 95.33333, y: 40}
   Title: voluntary
   ParentQuest: {fileID: 11400000, guid: 3cde8d7458d83274bb7b34dbf504e280, type: 2}
-  Text: It's the last one. After that people will die voluntarly, just to be a part
-    of my wonderful yard full of famous and special souls.
+  Text: It's the last one. After that, people will die voluntarly, just to be a part
+    of my wonderful yard.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

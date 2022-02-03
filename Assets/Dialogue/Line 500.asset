@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 500
   m_EditorClassIdentifier: 
   Position: {x: 1753, y: 327}
-  Size: {x: 71.2, y: 40}
+  Size: {x: 71.333336, y: 40}
   Title: Lyxlo
   ParentQuest: {fileID: 11400000, guid: 9429b35d57480e649b241fb80f467ee5, type: 2}
   Text: "An excellent question! I didn't think of a name yet. It should be fitting
