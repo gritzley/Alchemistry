@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 923
   m_EditorClassIdentifier: 
   Position: {x: 2071.5, y: 623}
-  Size: {x: 90.4, y: 40}
-  Title: Line 923
+  Size: {x: 104, y: 40}
+  Title: headaches
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: I also helped people with mild headaches and upset tomaches
+  Text: I also helped people with mild headaches and upset stomaches.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

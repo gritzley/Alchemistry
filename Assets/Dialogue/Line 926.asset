@@ -16,7 +16,7 @@ MonoBehaviour:
   Size: {x: 89.6, y: 40}
   Title: Line 926
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: 
+  Text: Now this song is the newest hit around the local bards
   Notes: 
   AnswerLeft: 
   AnswerRight: 

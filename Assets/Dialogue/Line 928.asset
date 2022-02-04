@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 921
+  m_Name: Line 928
   m_EditorClassIdentifier: 
-  Position: {x: 1824.5, y: 620}
-  Size: {x: 77.6, y: 40}
-  Title: Health
+  Position: {x: 2177.5, y: 665}
+  Size: {x: 89.6, y: 40}
+  Title: Line 928
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: I felt warm power floating through my body.
+  Text: "The grand finale was an giant ice thron with ornaments,\n I made. Sitting
+    on it I declared my divinity."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 3df239ccd4001664bb5675f0e690d61b, type: 2}
+  NextRight: {fileID: 11400000, guid: 0e5f166c42710d6469efb6b919412445, type: 2}

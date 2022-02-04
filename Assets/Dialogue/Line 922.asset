@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 922
   m_EditorClassIdentifier: 
   Position: {x: 1938.5, y: 623}
-  Size: {x: 89.6, y: 40}
-  Title: Line 922
+  Size: {x: 82.4, y: 40}
+  Title: healing
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: "I found some sick and hurt people among the crowd which I blessed \nwith
     my healing."

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 921
+  m_Name: Line 935
   m_EditorClassIdentifier: 
-  Position: {x: 1824.5, y: 620}
-  Size: {x: 77.6, y: 40}
-  Title: Health
+  Position: {x: 1818.5, y: 736}
+  Size: {x: 91.2, y: 40}
+  Title: Laughter
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: I felt warm power floating through my body.
+  Text: I felt my mind opening to great realms of comedic gold in that instant.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 3df239ccd4001664bb5675f0e690d61b, type: 2}
+  NextRight: {fileID: 11400000, guid: fa8f7fb7ef4a15e4a806fb32b2c9a63c, type: 2}

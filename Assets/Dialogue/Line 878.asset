@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 89.6, y: 40}
   Title: Line 878
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: On the day of Praise and Offering I drank the potion you gave to me and walked
-    out in front of crow at the big plaza.
+  Text: "On the day of Praise and Offering I drank the potion you gave to me \nand
+    walked out in front of crow at the big plaza."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
