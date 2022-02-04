@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 1010
+  m_Name: Line 1017
   m_EditorClassIdentifier: 
-  Position: {x: 3437.5, y: 332}
-  Size: {x: 101.6, y: 40}
-  Title: appreciate
+  Position: {x: 4289.5, y: 333}
+  Size: {x: 78.4, y: 40}
+  Title: angles
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: One of the gods didn't appreciate the enthusiam with which I was welcomed
-    by the mortals as I'd hoped.
+  Text: There different kind of angles to approach this situation.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: dc9d85b1e35d8c144a55d8906df354b4, type: 2}
+  NextRight: {fileID: 11400000, guid: 84d781111c3b7f24080f19aa99fd260e, type: 2}

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 1010
+  m_Name: Line 1021
   m_EditorClassIdentifier: 
-  Position: {x: 3437.5, y: 332}
-  Size: {x: 101.6, y: 40}
-  Title: appreciate
+  Position: {x: 4780.5, y: 339}
+  Size: {x: 65.6, y: 65}
+  Title: trust
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: One of the gods didn't appreciate the enthusiam with which I was welcomed
-    by the mortals as I'd hoped.
+  Text: The choice is for you to make my protege. I'll trust whatever you decide
+    is right.
   Notes: 
-  AnswerLeft: 
-  AnswerRight: 
-  HasAnswers: 0
+  AnswerLeft: So you would be cool with anything?
+  AnswerRight: Why am I the one who should decide?
+  HasAnswers: 1
   _isReceivingState: 0
-  NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: dc9d85b1e35d8c144a55d8906df354b4, type: 2}
+  NextLeft: {fileID: 11400000, guid: b67b8b544af6f4448bf22c0512246e3e, type: 2}
+  NextRight: {fileID: 11400000, guid: 7cfd0ac91fe6ca348890da6da0e4d798, type: 2}

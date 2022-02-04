@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 1010
+  m_Name: Line 1023
   m_EditorClassIdentifier: 
-  Position: {x: 3437.5, y: 332}
-  Size: {x: 101.6, y: 40}
-  Title: appreciate
+  Position: {x: 4907.5, y: 370}
+  Size: {x: 93.6, y: 40}
+  Title: infleunce
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: One of the gods didn't appreciate the enthusiam with which I was welcomed
-    by the mortals as I'd hoped.
+  Text: Anything that does help me tell a intresting legend afterwards to expand
+    my influence.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: dc9d85b1e35d8c144a55d8906df354b4, type: 2}
+  NextRight: {fileID: 11400000, guid: 63b5798e89201604695677bc1e662382, type: 2}
