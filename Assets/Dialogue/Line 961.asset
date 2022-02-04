@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 958
+  m_Name: Line 961
   m_EditorClassIdentifier: 
-  Position: {x: 1818.5, y: 880}
-  Size: {x: 72.8, y: 40}
-  Title: Sleep
+  Position: {x: 1911.5, y: 878}
+  Size: {x: 88.8, y: 40}
+  Title: Line 961
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: I suddenly felt a warm numbness fill my body.
+  Text: When the crow saw they started yawning and the complete plaza was asleep.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: d51384fb49f012b4998d8ca97a2c3e43, type: 2}
+  NextRight: {fileID: 11400000, guid: 784cd2e9d9bd26c47aa4e726030f7842, type: 2}

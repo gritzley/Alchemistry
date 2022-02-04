@@ -101,7 +101,7 @@ MonoBehaviour:
   - Potion: {fileID: 11400000, guid: 1087f2f083368ce4aaa7ad43a99716cb, type: 2}
     NextNode: {fileID: 11400000, guid: eaab1d7b90d67bd499bf57cf96b6ca3a, type: 2}
   - Potion: {fileID: 11400000, guid: e24c4223fd15017489c4aaa70cf637f9, type: 2}
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 13eb15c5f391de4459aea69da26c9cb0, type: 2}
   - Potion: {fileID: 11400000, guid: 892d5bbbc396406428ebbf8e69f1c865, type: 2}
     NextNode: {fileID: 0}
   - Potion: {fileID: 11400000, guid: e8f443f4554c5be4bb838364be500885, type: 2}
