@@ -382,6 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &13053645
 GameObject:
@@ -543,6 +545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &17878828
 PrefabInstance:
@@ -947,6 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!4 &41324947 stripped
 Transform:
@@ -1808,6 +1814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &146909588
 GameObject:
@@ -1950,6 +1958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &170404465
 PrefabInstance:
@@ -2068,6 +2078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &179345957
 GameObject:
@@ -2113,6 +2125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &182690836
 GameObject:
@@ -2158,6 +2172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &188059284
 PrefabInstance:
@@ -2260,6 +2276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &202189911
 GameObject:
@@ -3337,6 +3355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &283164718
 GameObject:
@@ -3673,6 +3693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &312617333
 GameObject:
@@ -4051,6 +4073,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &344075318 stripped
 GameObject:
@@ -4276,6 +4300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &379422676 stripped
 GameObject:
@@ -5247,6 +5273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &448857768
 GameObject:
@@ -5389,6 +5417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &454994239
 GameObject:
@@ -5561,6 +5591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &465655746
 GameObject:
@@ -5606,6 +5638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &488565006
 GameObject:
@@ -5845,6 +5879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!4 &506879834 stripped
 Transform:
@@ -6003,6 +6039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!224 &537951643 stripped
 RectTransform:
@@ -7191,6 +7229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &770795998
 GameObject:
@@ -7790,6 +7830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &814161249
 GameObject:
@@ -8140,6 +8182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!4 &822265647 stripped
 Transform:
@@ -8393,6 +8437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &869411319
 GameObject:
@@ -8883,6 +8929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &884068751
 GameObject:
@@ -8928,6 +8976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &885571095 stripped
 GameObject:
@@ -9153,7 +9203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920718564}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10273,6 +10323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1040536613
 GameObject:
@@ -10751,6 +10803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1076335915
 GameObject:
@@ -11955,6 +12009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1218873829
 GameObject:
@@ -12670,6 +12726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &1291293148
 PrefabInstance:
@@ -13000,6 +13058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1337468448 stripped
 GameObject:
@@ -13245,6 +13305,8 @@ GameObject:
   - component: {fileID: 1384027330}
   - component: {fileID: 1384027329}
   - component: {fileID: 1384027331}
+  - component: {fileID: 1384027332}
+  - component: {fileID: 1384027333}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13296,6 +13358,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9468272186bb40741bd790696e7e1857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1384027332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384027328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8672295bb6d0f419a126c00422f367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384027333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384027328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4adafacc0f6cb944cbf044b930a8cdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quests: []
 --- !u!1 &1384655112
 GameObject:
   m_ObjectHideFlags: 0
@@ -15012,6 +15099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1415488066
 GameObject:
@@ -15505,6 +15594,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1534437750
 GameObject:
@@ -15550,6 +15641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &1544649922
 PrefabInstance:
@@ -16077,6 +16170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1581520429
 GameObject:
@@ -16298,6 +16393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1585226322
 GameObject:
@@ -16880,6 +16977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1660167843
 GameObject:
@@ -17852,6 +17951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1778722324
 GameObject:
@@ -17994,6 +18095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1781764984 stripped
 GameObject:
@@ -18546,6 +18649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1855567412
 GameObject:
@@ -18829,6 +18934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1001 &1871153230
 PrefabInstance:
@@ -19388,6 +19495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1908554557
 GameObject:
@@ -19638,6 +19747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1660167844}
     m_Modifications:
+    - target: {fileID: 5406511880857216588, guid: c5f5bc695ae6e0d48a3ac38b4d0f6ca6, type: 3}
+      propertyPath: PageTurnSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5371ea2d11b048c4b97d6f5fabc3e176, type: 3}
     - target: {fileID: 5674381389951739833, guid: c5f5bc695ae6e0d48a3ac38b4d0f6ca6, type: 3}
       propertyPath: _pagePairs
       value: 11
@@ -19736,6 +19849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1939418667
 GameObject:
@@ -19781,6 +19896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &1942571952
 GameObject:
@@ -20281,6 +20398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &2038011702 stripped
 GameObject:
@@ -21068,6 +21187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!4 &2072071595 stripped
 Transform:
@@ -22196,6 +22317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6693a91f9c7d2049a28bcbb0008a7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnTableSound: {fileID: 0}
+  PickUpSound: {fileID: 0}
   Definition: {fileID: 11400000, guid: 72095392b2ea83f4b92b8e6a091e1ee4, type: 2}
 --- !u!1 &2145311630
 GameObject:
@@ -22381,7 +22504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.000006170671
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -22389,7 +22512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000006170671
       objectReference: {fileID: 0}
     - target: {fileID: 5381074387192464348, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_StaticShadowCaster

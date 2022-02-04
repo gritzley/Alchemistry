@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: Rotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 2100089991560665298, guid: 826cc3f916faa574e949d3e32d95367e, type: 3}
+      propertyPath: OnTableSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f9405524c0f94e45b2a72661a27b07d, type: 3}
     - target: {fileID: 4091032097099349572, guid: 826cc3f916faa574e949d3e32d95367e, type: 3}
       propertyPath: m_Name
       value: Gold Coin

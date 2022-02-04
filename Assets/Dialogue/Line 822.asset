@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 822
   m_EditorClassIdentifier: 
-  Position: {x: 1491, y: 190}
+  Position: {x: 1511, y: 197}
   Size: {x: 98, y: 40}
   Title: back pain
   ParentQuest: {fileID: 11400000, guid: 5ffcb13a9b954024abf1652b234a37d2, type: 2}

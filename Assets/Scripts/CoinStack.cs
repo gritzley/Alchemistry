@@ -23,7 +23,7 @@ public class CoinStack : MonoBehaviour
         if (newCount > coinCount)
             for (int i = 0; i < newCount - coinCount; i++)
             {
-                BaseCoin.AddToStack(Instantiate(CoinPrefab).GetComponent<Ingredient>(), false);
+                BaseCoin.AddToStack((PrefabUtility.InstantiatePrefab(CoinPrefab) as GameObject).GetComponent<Ingredient>(), false);
             }
         else if (newCount < coinCount)
             for (int i = 0; i < coinCount - newCount; i++)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894942ffa8ac0b045ad22e78f593e9b9, type: 3}
   m_Name: Quest 10
   m_EditorClassIdentifier: 
-  Position: {x: 904, y: -306}
+  Position: {x: 1146, y: -297}
   Size: {x: 222.66667, y: 40}
   Title: End 5 - killed CENTAUR + GOD
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}

@@ -5,12 +5,20 @@ using System.Linq;
 
 public class Pickupable : Clickable
 {
+    public AudioClip OnTableSound, PickUpSound;
     public WaitForSeconds PickUp(Transform newParent, float seconds = 0.15f)
     {
         if (newParent == PlayerController.Instance.HandTransform)
+        {
             SetLayerRecursively(gameObject, 2);
+            AudioManager.PlaySoundAtLocationOnBeat(PickUpSound, transform.position);
+        }
         else
+        {
             SetLayerRecursively(gameObject, 0);
+            AudioManager.PlaySoundAtLocationOnBeat(OnTableSound, transform.position);
+
+        }
 
         transform.parent = newParent;
         transform.LeanMoveLocal(Vector3.zero, seconds);
