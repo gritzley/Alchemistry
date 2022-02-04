@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 966
+  m_Name: Line 978
   m_EditorClassIdentifier: 
-  Position: {x: 1938.5, y: 923}
+  Position: {x: 2284.5, y: 1011}
   Size: {x: 89.6, y: 40}
-  Title: Line 966
+  Title: Line 978
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: The people were quiet amused by my attempts to declatre myself as my new
-    god.
+  Text: I definetly impressed the animal lover out there.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 905da57eb1621dd40bd3717ba0f2c1f8, type: 2}
+  NextRight: {fileID: 0}

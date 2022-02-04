@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 955
   m_EditorClassIdentifier: 
-  Position: {x: 2606.5, y: 815}
-  Size: {x: 89.6, y: 40}
-  Title: Line 955
+  Position: {x: 2677.5, y: 327}
+  Size: {x: 69.6, y: 40}
+  Title: Thief
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: 
+  Text: Now I have a group of thiefs, assassins and other good-for-nothings of the
+    underworld follow me around.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 9b0dc2e751a59384e8012fb3aeef74c4, type: 2}

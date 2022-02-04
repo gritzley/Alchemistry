@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 966
+  m_Name: Line 983
   m_EditorClassIdentifier: 
-  Position: {x: 1938.5, y: 923}
-  Size: {x: 89.6, y: 40}
-  Title: Line 966
+  Position: {x: 1808.5, y: 1095}
+  Size: {x: 128, y: 40}
+  Title: Consciousness
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: The people were quiet amused by my attempts to declatre myself as my new
-    god.
+  Text: I felt the power of emotions and feelings overwhelm me.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 905da57eb1621dd40bd3717ba0f2c1f8, type: 2}
+  NextRight: {fileID: 11400000, guid: dacc3ec7af5858e4a86ba7ca9d4c8b67, type: 2}

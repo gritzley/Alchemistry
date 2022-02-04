@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 966
+  m_Name: Line 988
   m_EditorClassIdentifier: 
-  Position: {x: 1938.5, y: 923}
-  Size: {x: 89.6, y: 40}
-  Title: Line 966
+  Position: {x: 2777.5, y: 327}
+  Size: {x: 76.8, y: 40}
+  Title: patron
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: The people were quiet amused by my attempts to declatre myself as my new
-    god.
+  Text: An...intresting crowd to attract, but I don't judge. There i also life where
+    the sun doesnt reach. And this life found their patron.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 905da57eb1621dd40bd3717ba0f2c1f8, type: 2}
+  NextRight: {fileID: 11400000, guid: b264e9888455ee349a9cf0637c543e10, type: 2}
