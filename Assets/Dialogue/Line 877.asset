@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 877
   m_EditorClassIdentifier: 
   Position: {x: 1309, y: 279}
-  Size: {x: 89.6, y: 40}
-  Title: Line 877
+  Size: {x: 72.8, y: 40}
+  Title: debut
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: You probably already heard about my debut yesterday. But don't worry I saved
     the exclusive story just for you.

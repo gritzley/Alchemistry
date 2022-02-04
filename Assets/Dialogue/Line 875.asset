@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 875
   m_EditorClassIdentifier: 
   Position: {x: 1072, y: 275}
-  Size: {x: 89.6, y: 40}
-  Title: Line 875
+  Size: {x: 86.4, y: 40}
+  Title: morning
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: Good morning.
   Notes: 
