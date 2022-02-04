@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 928
   m_EditorClassIdentifier: 
-  Position: {x: 2177.5, y: 665}
-  Size: {x: 89.6, y: 40}
-  Title: Line 928
+  Position: {x: 2164.5, y: 659}
+  Size: {x: 79.2, y: 40}
+  Title: divinty
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: "The grand finale was an giant ice thron with ornaments,\n I made. Sitting
     on it I declared my divinity."

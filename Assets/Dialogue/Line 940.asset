@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 940
   m_EditorClassIdentifier: 
-  Position: {x: 2391.5, y: 731}
-  Size: {x: 91.2, y: 40}
-  Title: Line 940
+  Position: {x: 2373.5, y: 737}
+  Size: {x: 113.6, y: 40}
+  Title: personalities
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: 'My grand finale was a sketch were I played 8 different people all with
 

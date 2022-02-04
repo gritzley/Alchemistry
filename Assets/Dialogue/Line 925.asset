@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 925
   m_EditorClassIdentifier: 
-  Position: {x: 2313.5, y: 622}
-  Size: {x: 89.6, y: 40}
-  Title: Line 925
+  Position: {x: 2289.5, y: 622}
+  Size: {x: 86.4, y: 40}
+  Title: admired
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: There were thankful and admired there new god.
   Notes: 

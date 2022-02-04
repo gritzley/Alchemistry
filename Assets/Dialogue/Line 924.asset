@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 924
   m_EditorClassIdentifier: 
   Position: {x: 2198.5, y: 622}
-  Size: {x: 90.4, y: 40}
-  Title: Line 924
+  Size: {x: 65.6, y: 40}
+  Title: boat
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: Just to make sure to get as many in the boat as pssoible
   Notes: 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 937
   m_EditorClassIdentifier: 
-  Position: {x: 2049.5, y: 734}
-  Size: {x: 90.4, y: 40}
-  Title: Line 937
+  Position: {x: 2029.5, y: 736}
+  Size: {x: 87.2, y: 40}
+  Title: laughter
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: I already had the first laughter here and there but I was far from done.
   Notes: 

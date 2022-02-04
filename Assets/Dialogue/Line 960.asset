@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
-  m_Name: Line 939
+  m_Name: Line 960
   m_EditorClassIdentifier: 
-  Position: {x: 2276.5, y: 736}
-  Size: {x: 75.2, y: 40}
-  Title: fellow
+  Position: {x: 2304.5, y: 845}
+  Size: {x: 90.4, y: 40}
+  Title: Line 960
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
-  Text: 'A brilliant parody of the famous legend of one of my fellow gods. The
-
-    crowd
-    was already in tears by this point.'
+  Text: I showed them other places far away, letting them hear the cry of unidentified
+    species.
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: 2f97c5720db1f304cbd44f07a65cb057, type: 2}
+  NextRight: {fileID: 0}
