@@ -18,7 +18,6 @@ public class CheckVariableNode : DialogueNode
                 return null;
         }
     }
-    public List<ConnectionPoint> OutPoints;
     public string Key;
     public List<string> Values;
 
@@ -35,6 +34,7 @@ public class CheckVariableNode : DialogueNode
     }
 
 #if UNITY_EDITOR
+    public List<ConnectionPoint> OutPoints;
     public override void OnEnable()
     {
         base.OnEnable();

@@ -7,8 +7,8 @@ using UnityEditorInternal;
 public class ToolEditor : Editor
 {
     // Serialized properties for recipe and name
-    SerializedProperty conversionsProp;
-    SerializedProperty ingredientPrefabProp;
+    SerializedProperty conversionsProperty;
+    SerializedProperty spotProperty;
 
     // Reorderable list for the recipe
     ReorderableList Conversions;
@@ -17,11 +17,11 @@ public class ToolEditor : Editor
     void OnEnable()
     {
         // Load properties
-        conversionsProp = serializedObject.FindProperty("Conversions");
-        ingredientPrefabProp = serializedObject.FindProperty("IngredientPrefab");
+        conversionsProperty = serializedObject.FindProperty("Conversions");
+        spotProperty = serializedObject.FindProperty("IngredientSpot");
 
         // create the reorderable list
-        Conversions = new ReorderableList(serializedObject, conversionsProp, true, true, true, true);
+        Conversions = new ReorderableList(serializedObject, conversionsProperty, true, true, true, true);
 
         // Define how the Unity should display elements in the list by overriding the exposed callback
         Conversions.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
@@ -60,9 +60,8 @@ public class ToolEditor : Editor
     {
         // Update the serialized Object. Always do this before working with the object
         serializedObject.Update();
-
-        EditorGUILayout.PropertyField(ingredientPrefabProp);
-
+        
+        EditorGUILayout.PropertyField(spotProperty);
         // Add the reorderable list to the layout
         Conversions.DoLayoutList();
 

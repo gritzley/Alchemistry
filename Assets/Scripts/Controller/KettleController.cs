@@ -12,7 +12,7 @@ public class KettleController : MonoBehaviour
     private List<PotionDefinition.Step> Steps;
     public PotionDefinition FailedPotionDefinition;
     public GameObject PotionPrefab;
-    public Transform TransitionPoint;
+    public Transform TransitionPoint, PouringPoint;
     private float animationTime = 0.2f;
 
     public void OnEnable()
@@ -44,7 +44,7 @@ public class KettleController : MonoBehaviour
         }
         else
         {
-            yield return ingredient.PickUp(TransitionPoint, animationTime);
+            yield return ingredient.PickUp(PouringPoint, animationTime);
             ingredient.transform.LeanRotateX(90, 0.2f);
             yield return new WaitForSeconds(0.5f);
             ingredient.transform.LeanRotateX(0, 0.2f);

@@ -16,10 +16,10 @@ public class SetVariableNode : DialogueNode
         }
     }
     [HideInInspector] public DialogueNode NextNode;
-    public ConnectionPoint OutPoint;
     public string Key, Value;
 
 #if UNITY_EDITOR
+    public ConnectionPoint OutPoint;
     public override void OnEnable()
     {
         OutPoint = new ConnectionPoint(this, ConnectionPointType.Out, OnOutPointClick);

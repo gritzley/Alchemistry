@@ -33,12 +33,14 @@ public class Garbage : MonoBehaviour
 
     private IEnumerator ReturnItem()
     {
-        PlayerController player = PlayerController.Instance;
+        if (Items.Count > 0)
+        {
+            PlayerController player = PlayerController.Instance;
 
-        player.HeldItem = Items.Pop();
+            player.HeldItem = Items.Pop();
 
-        yield return player.HeldItem.PickUp(receiverPoint);
-        yield return player.HeldItem.PickUp(player.HandTransform);
-
+            yield return player.HeldItem.PickUp(receiverPoint);
+            yield return player.HeldItem.PickUp(player.HandTransform);
+        }
     }
 }

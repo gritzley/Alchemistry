@@ -28,7 +28,11 @@ public class IngredientDispenser : Clickable
             go.transform.rotation = harvest.transform.rotation;
             Ingredient ingredient = go.AddComponent<Ingredient>();
             ingredient.Definition = Definition;
-            if (!IsEndless) harvest.SetActive(false);
+            if (!IsEndless)
+            {
+                harvest.SetActive(false);
+                currentlyHeldIngredients.Remove(harvest);
+            }
             StartCoroutine(GiveIngredientToPlayer(ingredient));
         }
     }
