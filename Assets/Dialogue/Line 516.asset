@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Line 516
   m_EditorClassIdentifier: 
   Position: {x: 1348, y: -10}
-  Size: {x: 80.66667, y: 40}
+  Size: {x: 80, y: 40}
   Title: Energy
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'I don''t know what you did to my zombies,
-
-    but it dfinetly worked.'
+  Text: I don't know what you did to my zombies, but it worked.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

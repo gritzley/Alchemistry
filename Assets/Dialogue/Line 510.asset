@@ -16,8 +16,8 @@ MonoBehaviour:
   Size: {x: 81.6, y: 40}
   Title: George
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: When they saw George disintegrating a lantern by spitting at it, they turned
-    around faster than a ghost at a saltworks.
+  Text: "When they saw George disintegrating a lantern by spitting at it, \nthey
+    turned around faster than a ghost at a saltworks."
   Notes: 
   AnswerLeft: 
   AnswerRight: 
