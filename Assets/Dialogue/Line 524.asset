@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 524
   m_EditorClassIdentifier: 
-  Position: {x: 1326, y: 24}
+  Position: {x: 1326, y: 23}
   Size: {x: 120.666664, y: 40}
   Title: Flame BReath
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}

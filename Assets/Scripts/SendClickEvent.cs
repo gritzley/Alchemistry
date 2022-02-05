@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SendClickToParent : MonoBehaviour
+public class SendClickEvent : MonoBehaviour
 {
     public Clickable Recipient;
-    void OnMouseDown() => Recipient.OnClick();
+    void OnMouseDown()
+    {
+        if (Recipient.IsClickable)
+            Recipient.OnClick();
+    }
 }

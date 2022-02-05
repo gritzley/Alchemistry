@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _open: 1
   _orientation: -1
-  _pagePairs: 4
+  _pagePairs: 15
   _progress: 0
   updateEveryFrame: 0
   m_meshRenderer: {fileID: 5675273091550042203}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftPage: {fileID: 341049164998401231}
   RightPage: {fileID: 8185703139688451934}
-  FoldSpeed: 0.2
+  PageTurnSound: {fileID: 0}
 --- !u!1 &5705613100158290649
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5705732870330472417}
   m_LocalRotation: {x: -0.50000006, y: 0.4999999, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.999718, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0.21, z: 0.296}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 5708915458572652853}

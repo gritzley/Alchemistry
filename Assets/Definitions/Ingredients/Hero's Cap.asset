@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed424534ae8546f469f412763aa7db4a, type: 3}
   m_Name: Hero's Cap
   m_EditorClassIdentifier: 
-  IsConsumable: 0
-  Model: {fileID: 919132149155446097, guid: 75234b2ce45f76046bfbfbe0e4b23e4e, type: 3}
+  IsConsumable: 1
+  IsStackable: 0
