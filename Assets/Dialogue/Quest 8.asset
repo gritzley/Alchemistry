@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 8
   m_EditorClassIdentifier: 
   Position: {x: 1147, y: -359}
-  Size: {x: 209.33333, y: 40}
+  Size: {x: 205.6, y: 40}
   Title: End 3 - killed only CENTAUR
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: 3dc6ed4d4f694e744af89dd3a6f015e3, type: 2}

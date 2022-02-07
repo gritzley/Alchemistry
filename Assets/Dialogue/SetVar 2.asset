@@ -15,7 +15,7 @@ MonoBehaviour:
   Position: {x: 1399, y: 257.5}
   Size: {x: 89.33333, y: 40}
   Title: SetVar 2
-  ParentQuest: {fileID: 11400000, guid: fdaada35bceeeb240912a65a214e99ce, type: 2}
+  ParentQuest: {fileID: 0}
   NextNode: {fileID: 0}
   Key: nooo
   Value: fawfe

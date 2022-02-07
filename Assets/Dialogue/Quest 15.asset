@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 15
   m_EditorClassIdentifier: 
   Position: {x: 900, y: 7}
-  Size: {x: 113.333336, y: 40}
+  Size: {x: 112, y: 40}
   Title: Found grave
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: 6698aff5854ba1648bcdb6988b058d60, type: 2}
