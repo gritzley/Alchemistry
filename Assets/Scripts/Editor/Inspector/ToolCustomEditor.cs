@@ -10,6 +10,8 @@ public class ToolEditor : Editor
     SerializedProperty conversionsProperty;
     SerializedProperty inputSpotProperty;
     SerializedProperty outputSpotProperty;
+    SerializedProperty delayProperty;
+    SerializedProperty durationProperty;
 
     // Reorderable list for the recipe
     ReorderableList Conversions;
@@ -21,7 +23,11 @@ public class ToolEditor : Editor
         conversionsProperty = serializedObject.FindProperty("Conversions");
         inputSpotProperty = serializedObject.FindProperty("InputSpot");
         outputSpotProperty = serializedObject.FindProperty("OutputSpot");
+        delayProperty = serializedObject.FindProperty("TransformationDelay");
+        durationProperty = serializedObject.FindProperty("TransformationDuration");
 
+        // create the reorderable list
+        // create the reorderable list
         // create the reorderable list
         Conversions = new ReorderableList(serializedObject, conversionsProperty, true, true, true, true);
 
@@ -65,6 +71,8 @@ public class ToolEditor : Editor
         
         EditorGUILayout.PropertyField(inputSpotProperty);
         EditorGUILayout.PropertyField(outputSpotProperty);
+        EditorGUILayout.PropertyField(delayProperty);
+        EditorGUILayout.PropertyField(durationProperty);
         // Add the reorderable list to the layout
         Conversions.DoLayoutList();
 

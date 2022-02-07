@@ -8211,7 +8211,7 @@ PrefabInstance:
     - target: {fileID: 6269150775214862958, guid: 56ab7dc891148e2409fc95684e2dffe8, type: 3}
       propertyPath: Conversions.Array.data[0].Input
       value: 
-      objectReference: {fileID: 11400000, guid: 6aa7311b452ddb8418db38115dcc71dc, type: 2}
+      objectReference: {fileID: 11400000, guid: d9a7f83bab6c1464b86b94e0d9b9e0d3, type: 2}
     - target: {fileID: 6269150775214862958, guid: 56ab7dc891148e2409fc95684e2dffe8, type: 3}
       propertyPath: Conversions.Array.data[0].Output
       value: 
@@ -27914,7 +27914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000016455122
+      value: -0.000037024027
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -27922,7 +27922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503257413152816456, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000016455122
+      value: -0.000037024027
       objectReference: {fileID: 0}
     - target: {fileID: 5381074387192464348, guid: 3ee03a676876e674d970ca5b9b6ec56b, type: 3}
       propertyPath: m_StaticShadowCaster

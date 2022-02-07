@@ -16,6 +16,8 @@ public class Tool : Clickable
     private Animator animator;
     private Ingredient input, output;
     public Transform InputSpot, OutputSpot;
+    public float TransformationDelay = 0.75f;
+    public float TransformationDuration = 0.75f;
 
     void OnEnable()
     {
@@ -60,10 +62,10 @@ public class Tool : Clickable
             output.IsClickable = false;
 
             animator.Play("ToolMainAnimation", -1, 0f);
-            yield return new WaitForSeconds(0.75f);
-            input.transform.LeanScale(Vector3.zero, 0.75f);
-            output.transform.LeanScale(Vector3.one, 0.75f);
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(TransformationDelay);
+            input.transform.LeanScale(Vector3.zero, TransformationDuration);
+            output.transform.LeanScale(Vector3.one, TransformationDuration);
+            yield return new WaitForSeconds(TransformationDuration);
 
             input = null;
             output.IsClickable = true;
