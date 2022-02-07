@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 523
   m_EditorClassIdentifier: 
   Position: {x: 2119, y: 1}
-  Size: {x: 60.666664, y: 40}
+  Size: {x: 60.8, y: 40}
   Title: see
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: I think we won't see any of them for quiet a while.
+  Text: I think we won't see any of them for quite a while.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

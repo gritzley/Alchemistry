@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Line 578
   m_EditorClassIdentifier: 
   Position: {x: 1590, y: 361}
-  Size: {x: 86.66667, y: 40}
+  Size: {x: 86.4, y: 40}
   Title: pockets
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: I quickly catched them all securing them in deep pockets. I also dropped
-    them some mice meat to keep them happy.
+  Text: I quickly caught them all, securing them deep in my pockets. I also dropped
+    them some mice meat to keep them occupied.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Line 536
   m_EditorClassIdentifier: 
   Position: {x: 1712, y: 71}
-  Size: {x: 102.66667, y: 40}
+  Size: {x: 101.6, y: 40}
   Title: grave yard
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: Well some of my zobies are still airborne but the rest is comfortingly hovering
-    around my grave yard.
+  Text: Some of my zombies are still airborne, but the rest is comfortingly hovering
+    around my graveyard.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

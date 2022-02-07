@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 848
   m_EditorClassIdentifier: 
   Position: {x: 4854, y: 94}
-  Size: {x: 102.66667, y: 40}
+  Size: {x: 101.6, y: 40}
   Title: Thank you
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: Thank you

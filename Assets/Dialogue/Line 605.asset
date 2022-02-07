@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 605
   m_EditorClassIdentifier: 
   Position: {x: 3640.9167, y: 85.55554}
-  Size: {x: 86.66667, y: 40}
+  Size: {x: 86.4, y: 40}
   Title: unkown
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "A grave stone without a name, an unkown \ncorpse, "
+  Text: "A grave stone without a name, an unkown \ncorpse..."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

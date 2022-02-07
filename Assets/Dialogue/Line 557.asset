@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 557
   m_EditorClassIdentifier: 
   Position: {x: 1553, y: 232}
-  Size: {x: 99.33333, y: 40}
+  Size: {x: 98.4, y: 40}
   Title: teleported
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: I thought maybe the potion teleported them somewhere
+  Text: I thought maybe the potion teleported them somewhere.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

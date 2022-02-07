@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 541
   m_EditorClassIdentifier: 
   Position: {x: 1761, y: 111}
-  Size: {x: 96.66667, y: 40}
+  Size: {x: 96.8, y: 40}
   Title: townsfolk
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: The townsfolk are angry and I have to take respnsibility for that.
+  Text: "The townsfolk are angry. \nI have to take responsibility for that."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

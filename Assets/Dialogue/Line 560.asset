@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 560
   m_EditorClassIdentifier: 
   Position: {x: 1901, y: 230}
-  Size: {x: 74, y: 40}
+  Size: {x: 73.6, y: 40}
   Title: Alfred
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: But not before Alfred chomped on the wand on of this fellas.
+  Text: But not before Alfred chomped on the wand from one of these fellas.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

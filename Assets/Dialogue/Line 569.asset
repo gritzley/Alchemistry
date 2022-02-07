@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 569
   m_EditorClassIdentifier: 
   Position: {x: 1351, y: 303}
-  Size: {x: 139.33334, y: 40}
+  Size: {x: 139.2, y: 40}
   Title: Sensitive Senses
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'After they took their potions myundead friends, where in constant state
+  Text: 'After they took their potions my undead friends, were in a constant state
     of high alert. '
   Notes: 
   AnswerLeft: 

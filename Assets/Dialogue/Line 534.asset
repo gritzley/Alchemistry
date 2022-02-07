@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Line 534
   m_EditorClassIdentifier: 
   Position: {x: 1523, y: 74}
-  Size: {x: 91.33333, y: 40}
+  Size: {x: 90.4, y: 40}
   Title: reaching
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: I'll never forget the image of a bunch of necromancer trying to jump, reaching
-    one George who just passed by him.
+  Text: 'I''ll never forget the image of a bunch of necromancer jumping up and down,
+    while
+
+    reaching for George who just passed them by.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

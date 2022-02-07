@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 546
   m_EditorClassIdentifier: 
   Position: {x: 1523, y: 141}
-  Size: {x: 86, y: 40}
+  Size: {x: 85.6, y: 40}
   Title: howling
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: Some of them were making other strange noises, like howling wind or the howling
+  Text: Some of them were making other strange noises, like howling wind or the wailing
     of our ghosts.
   Notes: 
   AnswerLeft: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 576
   m_EditorClassIdentifier: 
   Position: {x: 1354, y: 348}
-  Size: {x: 98.66667, y: 40}
+  Size: {x: 99.2, y: 40}
   Title: Smallness
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: I'm happy I found them all again.

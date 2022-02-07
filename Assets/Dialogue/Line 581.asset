@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 581
   m_EditorClassIdentifier: 
   Position: {x: 1942, y: 367}
-  Size: {x: 82.66667, y: 40}
+  Size: {x: 82.4, y: 40}
   Title: as ever
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: Pffff as ever.
+  Text: As if I would ever do something so cruel to my precious friends.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

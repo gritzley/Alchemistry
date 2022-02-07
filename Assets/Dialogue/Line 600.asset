@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Line 600
   m_EditorClassIdentifier: 
   Position: {x: 3092.9167, y: 91.55554}
-  Size: {x: 82, y: 40}
+  Size: {x: 82.4, y: 40}
   Title: flowers
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: 'I planted new flowers and plants on their
 
-    graves, '
+    graves.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

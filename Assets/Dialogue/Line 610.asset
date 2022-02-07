@@ -18,7 +18,8 @@ MonoBehaviour:
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: 'I really want to give this grave it''s name
 
-    back.'
+    back. My honor as a gravetender
+    demands it.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

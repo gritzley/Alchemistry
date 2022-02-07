@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 587
   m_EditorClassIdentifier: 
   Position: {x: 1985, y: 411}
-  Size: {x: 58.666664, y: 40}
+  Size: {x: 58.4, y: 40}
   Title: fun
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: Which was actually kind of fun.
+  Text: Which was actually quite fun.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

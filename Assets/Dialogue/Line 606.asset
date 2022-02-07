@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 606
   m_EditorClassIdentifier: 
   Position: {x: 3743.9167, y: 86.55554}
-  Size: {x: 84.66667, y: 40}
+  Size: {x: 84, y: 40}
   Title: prevent
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "is something we grave tender have to \nprevent at all cost."
+  Text: "That's something we gravetender have to \nprevent at all cost."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 528
   m_EditorClassIdentifier: 
   Position: {x: 1837, y: 36}
-  Size: {x: 88, y: 40}
+  Size: {x: 87.2, y: 40}
   Title: laughter
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: I couldn't hold myself from laughter.
+  Text: I was shaking with laughter.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

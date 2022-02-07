@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 572
   m_EditorClassIdentifier: 
   Position: {x: 1767, y: 322}
-  Size: {x: 86, y: 40}
+  Size: {x: 85.6, y: 40}
   Title: howling
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: They were extremly excited, howling, digging the earth and bumping into each
+  Text: They were very excited, howling, digging the earth and bumping into each
     other.
   Notes: 
   AnswerLeft: 

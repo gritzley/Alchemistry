@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Line 524
   m_EditorClassIdentifier: 
   Position: {x: 1326, y: 23}
-  Size: {x: 120.666664, y: 40}
+  Size: {x: 120, y: 40}
   Title: Flame BReath
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'When the necromancer arrived their greeted by a horde of flame breathing
-
-    zombies.'
+  Text: When the necromancer arrived, they were greeted by a horde of flame breathing
+    zombies.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

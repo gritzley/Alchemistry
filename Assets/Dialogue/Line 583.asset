@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Line 583
   m_EditorClassIdentifier: 
   Position: {x: 1522, y: 404}
-  Size: {x: 84.66667, y: 40}
+  Size: {x: 84.8, y: 40}
   Title: animals
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: My zombies all just turned into different animals they were all quiet confused
+  Text: My zombies all just turned into different animals. They were all terribly
+    confused.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

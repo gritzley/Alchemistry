@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 607
   m_EditorClassIdentifier: 
   Position: {x: 3857.9167, y: 87.55554}
-  Size: {x: 84, y: 40}
+  Size: {x: 83.2, y: 40}
   Title: identify
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: "So I dug up the grave, in hope of finding \nsomething to identify the body."
