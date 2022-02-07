@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 696
   m_EditorClassIdentifier: 
-  Position: {x: 1899, y: 131}
-  Size: {x: 99.33333, y: 40}
+  Position: {x: 1880, y: 118}
+  Size: {x: 99.2, y: 40}
   Title: earths soil
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: What on the earths soil did you do to them?
+  Text: What on this earths soil did you do to them?
   Notes: 
   AnswerLeft: 
   AnswerRight: 

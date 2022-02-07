@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 671
   m_EditorClassIdentifier: 
   Position: {x: 2324, y: 34}
-  Size: {x: 69.333336, y: 40}
+  Size: {x: 68.8, y: 40}
   Title: fairly
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: I really hope that wheree ver they are there safe and are treated fairly.
+  Text: I hope that wherever they are safe and treated well.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

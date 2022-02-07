@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 643
   m_EditorClassIdentifier: 
-  Position: {x: 1958, y: 100}
-  Size: {x: 78.66667, y: 40}
+  Position: {x: 1954, y: 90}
+  Size: {x: 78.4, y: 40}
   Title: ghouls
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: "Even the ghouls were fighting along my side, for the sake of their undead
-    \nbrothers."
+  Text: Even the ghouls were fighting alongside me for the sake of their undead brothers.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

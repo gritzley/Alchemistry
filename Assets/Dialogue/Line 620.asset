@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 620
   m_EditorClassIdentifier: 
-  Position: {x: 906, y: 47}
-  Size: {x: 91.33333, y: 40}
-  Title: Line 620
+  Position: {x: 942, y: 36}
+  Size: {x: 75.2, y: 40}
+  Title: useful
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: 'Why didn''t you give me something useful? '
   Notes: 

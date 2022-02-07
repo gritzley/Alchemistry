@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 623
   m_EditorClassIdentifier: 
-  Position: {x: 1484, y: 53}
-  Size: {x: 112.666664, y: 40}
+  Position: {x: 1480, y: 43}
+  Size: {x: 112.8, y: 40}
   Title: motionlessly
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: 'When the necromancers came some of them flew into their pens while others
-
-    just
-    stared at them motionlessly.'
+  Text: "When the necromancers arrived, some of\n them flew into their pens while
+    others just \nstared at them motionlessly."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

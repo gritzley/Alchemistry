@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 773
   m_EditorClassIdentifier: 
-  Position: {x: 2281, y: 540}
-  Size: {x: 83.33333, y: 40}
+  Position: {x: 2274, y: 275}
+  Size: {x: 83.2, y: 40}
   Title: strange
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: There seemed to be a bunch of strange objects located in one of the bubbleberry

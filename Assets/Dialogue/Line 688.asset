@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 688
   m_EditorClassIdentifier: 
-  Position: {x: 1396, y: 249}
-  Size: {x: 66, y: 40}
+  Position: {x: 1369, y: 167}
+  Size: {x: 65.6, y: 40}
   Title: Fear
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: They were cowering, scraming and running around
+  Text: They were cowering, screaming and running around.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 644
   m_EditorClassIdentifier: 
-  Position: {x: 2065, y: 107}
-  Size: {x: 83.33333, y: 40}
+  Position: {x: 2061, y: 97}
+  Size: {x: 84, y: 40}
   Title: useless
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: 'But it was useless. '

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 698
   m_EditorClassIdentifier: 
-  Position: {x: 1614, y: 503}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 698
+  Position: {x: 1581, y: 212}
+  Size: {x: 98.4, y: 40}
+  Title: decorated
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: My grave yard is now decorated with my friends.
+  Text: My graveyard is now decorated with my friends.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

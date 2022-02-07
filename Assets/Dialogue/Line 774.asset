@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 774
   m_EditorClassIdentifier: 
-  Position: {x: 2396, y: 535}
-  Size: {x: 65.333336, y: 40}
+  Position: {x: 2395, y: 276}
+  Size: {x: 64.8, y: 40}
   Title: fpile
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: When I later turned back into my flowery self, I checked this place and found

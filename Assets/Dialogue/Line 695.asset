@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 695
   m_EditorClassIdentifier: 
-  Position: {x: 1736, y: 250}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 695
+  Position: {x: 1709, y: 168}
+  Size: {x: 79.2, y: 40}
+  Title: staring
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: Leo doesn't move at all. He's just staring.
+  Text: Leo doesn't move at all. He's just staring into a distance. Lifeless eyes
+    drawn to nothing.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

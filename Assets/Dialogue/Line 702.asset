@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 702
   m_EditorClassIdentifier: 
-  Position: {x: 2274, y: 131}
-  Size: {x: 102, y: 65}
+  Position: {x: 2246, y: 115}
+  Size: {x: 100.8, y: 65}
   Title: underbelly
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: You can be glad you're protected by this city underbelly.
   Notes: 
   AnswerLeft: Be careful who you threaten down here.
-  AnswerRight: I'm sorry. I didn't mean to.
+  AnswerRight: I'm sorry. I didn't mean to...
   HasAnswers: 1
   _isReceivingState: 0
   NextLeft: {fileID: 11400000, guid: 1d0ad780c6abb2549afb783614174ed9, type: 2}

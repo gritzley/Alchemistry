@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 699
   m_EditorClassIdentifier: 
-  Position: {x: 1731, y: 501}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 699
+  Position: {x: 1698, y: 210}
+  Size: {x: 65.6, y: 40}
+  Title: Why
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: Why?
   Notes: 

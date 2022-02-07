@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 661
   m_EditorClassIdentifier: 
-  Position: {x: 2054, y: 535}
-  Size: {x: 84.66667, y: 40}
+  Position: {x: 2065, y: 235}
+  Size: {x: 84.8, y: 40}
   Title: Missing
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: But by the end of the night Martha and George were missing...
+  Text: But by the end of the night, Martha and George were missing...
   Notes: 
   AnswerLeft: 
   AnswerRight: 

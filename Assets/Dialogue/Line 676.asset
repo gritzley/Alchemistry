@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 676
   m_EditorClassIdentifier: 
   Position: {x: 2934, y: 35}
-  Size: {x: 90.66667, y: 65}
+  Size: {x: 89.6, y: 65}
   Title: Line 676
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: Maybe it's not too late yet.

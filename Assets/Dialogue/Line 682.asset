@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 682
   m_EditorClassIdentifier: 
   Position: {x: 3431, y: 41}
-  Size: {x: 96.66667, y: 40}
+  Size: {x: 95.2, y: 40}
   Title: Good bye
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: Goodbye, potion trader.

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 758
   m_EditorClassIdentifier: 
-  Position: {x: 2123, y: 451}
-  Size: {x: 82, y: 40}
+  Position: {x: 2116, y: 186}
+  Size: {x: 81.6, y: 40}
   Title: shining
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: And then I saw it. The nameless grave shining.

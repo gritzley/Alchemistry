@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 672
   m_EditorClassIdentifier: 
   Position: {x: 2438, y: 31}
-  Size: {x: 65.333336, y: 40}
+  Size: {x: 64.8, y: 40}
   Title: help
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: You potion didn't help at all!

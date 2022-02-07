@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 770
   m_EditorClassIdentifier: 
-  Position: {x: 1930, y: 539}
-  Size: {x: 104.666664, y: 40}
+  Position: {x: 1923, y: 274}
+  Size: {x: 104, y: 40}
   Title: experience
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: It was really an intresting experience, flying around.

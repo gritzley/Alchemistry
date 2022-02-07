@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 663
   m_EditorClassIdentifier: 
-  Position: {x: 1468, y: 581}
-  Size: {x: 84, y: 40}
+  Position: {x: 1490, y: 260}
+  Size: {x: 83.2, y: 40}
   Title: change
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: Their moaning seemed to change a little but that's it.
+  Text: Their moaning seemed to change a little, but that was it.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

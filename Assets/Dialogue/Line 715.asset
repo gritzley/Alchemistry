@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 715
   m_EditorClassIdentifier: 
-  Position: {x: 1572, y: 303}
-  Size: {x: 99.33333, y: 40}
+  Position: {x: 1565, y: 38}
+  Size: {x: 98.4, y: 40}
   Title: Invisibility
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: First I didn't notice any differnce. But when I looked down I noticed that

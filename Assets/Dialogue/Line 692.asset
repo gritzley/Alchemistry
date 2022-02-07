@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 692
   m_EditorClassIdentifier: 
-  Position: {x: 1738, y: 169}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 692
+  Position: {x: 1727, y: 119}
+  Size: {x: 64.8, y: 40}
+  Title: pain
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: 'None of the necromancer went any where near them.
+  Text: 'None of the necromancers went anywhere near them.
 
     But they''re still
     in pain!'

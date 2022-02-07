@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Line 707
   m_EditorClassIdentifier: 
   Position: {x: 2652, y: 143}
-  Size: {x: 69.333336, y: 40}
+  Size: {x: 68.8, y: 40}
   Title: done
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
   Text: I'm done here.

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 650
   m_EditorClassIdentifier: 
-  Position: {x: 2049, y: 406}
-  Size: {x: 69.333336, y: 40}
+  Position: {x: 2205, y: 155}
+  Size: {x: 68.8, y: 40}
   Title: none
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
   Text: None of them are left. They took them all.

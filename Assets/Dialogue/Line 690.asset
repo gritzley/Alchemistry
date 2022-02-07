@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 690
   m_EditorClassIdentifier: 
-  Position: {x: 1499, y: 171}
-  Size: {x: 91.33333, y: 40}
-  Title: Line 690
+  Position: {x: 1487, y: 121}
+  Size: {x: 97.6, y: 40}
+  Title: recognize
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: They were also far more aggresive than usual I couldn't even recognize them.
+  Text: They were also far more aggressive than usual I couldn't even recognize them!
   Notes: 
   AnswerLeft: 
   AnswerRight: 
