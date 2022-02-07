@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 7
   m_EditorClassIdentifier: 
   Position: {x: 1144, y: -121}
-  Size: {x: 194, y: 40}
+  Size: {x: 191.2, y: 40}
   Title: End 2 - killed EVERYBODY
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: 4c42a219c0e2f3e468a80602d40a1c12, type: 2}

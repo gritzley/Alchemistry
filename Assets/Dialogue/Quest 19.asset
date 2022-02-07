@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 19
   m_EditorClassIdentifier: 
   Position: {x: 649, y: 57}
-  Size: {x: 171.33333, y: 40}
+  Size: {x: 168.8, y: 40}
   Title: End 9 - Get kidnapped
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: f2baa03f3a908564e81b18b4a68f49b3, type: 2}
