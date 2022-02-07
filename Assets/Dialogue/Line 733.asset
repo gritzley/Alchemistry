@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 733
   m_EditorClassIdentifier: 
-  Position: {x: 1795, y: 305}
-  Size: {x: 88.66667, y: 40}
+  Position: {x: 1788, y: 40}
+  Size: {x: 88, y: 40}
   Title: invisible
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: 'So I''m concluded that I was invisble. '

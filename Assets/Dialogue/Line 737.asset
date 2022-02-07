@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 737
   m_EditorClassIdentifier: 
-  Position: {x: 2213, y: 299}
-  Size: {x: 76, y: 40}
+  Position: {x: 2206, y: 34}
+  Size: {x: 75.2, y: 40}
   Title: hiding
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: "I followed him, and I saw him hiding this Pearl ornament in a heap of glittering

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 545
   m_EditorClassIdentifier: 
   Position: {x: 1413, y: 134}
-  Size: {x: 78, y: 40}
+  Size: {x: 78.4, y: 40}
   Title: moans
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: My zombies were forming choirs with moans.
+  Text: My zombies were forming moaning choirs.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

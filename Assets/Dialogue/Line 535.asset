@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 535
   m_EditorClassIdentifier: 
   Position: {x: 1636, y: 69}
-  Size: {x: 54.666668, y: 40}
+  Size: {x: 54.4, y: 40}
   Title: lift
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: After two hours of hoping around and trying to lift each other up, they finally
+  Text: After two hours of hoping around, trying to lift each other up, they finally
     gave up.
   Notes: 
   AnswerLeft: 

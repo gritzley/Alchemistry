@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 772
   m_EditorClassIdentifier: 
-  Position: {x: 2167, y: 540}
-  Size: {x: 94, y: 40}
+  Position: {x: 2160, y: 275}
+  Size: {x: 93.6, y: 40}
   Title: absorbed
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I was totally absorbed in being a bat when suddenly my ultrasound waves were

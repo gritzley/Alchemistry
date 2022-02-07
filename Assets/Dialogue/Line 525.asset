@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 525
   m_EditorClassIdentifier: 
   Position: {x: 1469, y: 32}
-  Size: {x: 80, y: 40}
+  Size: {x: 79.2, y: 40}
   Title: Mikael
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'One of the more brave man tried to approach Mikael anyway. '
+  Text: 'One of the braver ones tried to approach Mikael anyway. '
   Notes: 
   AnswerLeft: 
   AnswerRight: 

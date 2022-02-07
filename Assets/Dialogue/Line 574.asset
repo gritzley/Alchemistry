@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Line 574
   m_EditorClassIdentifier: 
   Position: {x: 1997, y: 321}
-  Size: {x: 79.33333, y: 40}
+  Size: {x: 79.2, y: 40}
   Title: friends
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'I told him to get out and If I ever see him or any off his friends again
-    I let the zombies
+  Text: 'I told him to get out and If I ever see him or any of his friends again
+    I''ll let my zombies
 
     play with him.'
   Notes: 

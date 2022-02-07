@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Line 573
   m_EditorClassIdentifier: 
   Position: {x: 1873, y: 321}
-  Size: {x: 110, y: 40}
+  Size: {x: 110.4, y: 40}
   Title: whimmering
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'When I found my way through thw crowd and looked inside the stumb,
+  Text: 'When I found my way through the crowd and looked inside the trunk,
 
     I
-    found an whimmering necromancer looking up to me.'
+    found a whimpering necromancer looking up at me.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

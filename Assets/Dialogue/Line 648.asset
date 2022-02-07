@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 648
   m_EditorClassIdentifier: 
-  Position: {x: 1820, y: 406}
-  Size: {x: 101.33333, y: 40}
+  Position: {x: 1846, y: 160}
+  Size: {x: 102.4, y: 40}
   Title: fly swarms
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: "I don't know how they could use this much magic, normally they just \nsummoned
-    small fly swarms to try to distract me."
+  Text: "I don't know how they could use this much magic...usually they  \nsummoned
+    small fly swarms to try to distract me. "
   Notes: 
   AnswerLeft: 
   AnswerRight: 
   HasAnswers: 0
   _isReceivingState: 0
   NextLeft: {fileID: 0}
-  NextRight: {fileID: 11400000, guid: a14cf48a7fb1aa24db8cc10ec93c2516, type: 2}
+  NextRight: {fileID: 11400000, guid: 1a94a29c214b2db458800254d5b11628, type: 2}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 931
+  m_EditorClassIdentifier: 
+  Position: {x: 1933.5, y: 697}
+  Size: {x: 72, y: 40}
+  Title: plaza
+  ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
+  Text: "First I was quiet irritated as well as the people at the plaza \nwho tried
+    to locate the voice, that was calling their name."
+  Notes: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  _isReceivingState: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 6f6f1c460f42ebc45bb7148a6ee3a3b2, type: 2}

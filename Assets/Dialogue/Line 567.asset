@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Line 567
   m_EditorClassIdentifier: 
   Position: {x: 1788, y: 271}
-  Size: {x: 94.66667, y: 40}
+  Size: {x: 93.6, y: 40}
   Title: adorable!
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: It was utterly...adorable! I heard them sometimes making that but never recognized
-    it as laughter!
+  Text: "It was utterly...adorable! \nI heard them sometimes making that noise, but
+    never recognized it as laughter!"
   Notes: 
   AnswerLeft: 
   AnswerRight: 

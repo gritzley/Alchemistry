@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 686
   m_EditorClassIdentifier: 
-  Position: {x: 1049, y: 123}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 686
+  Position: {x: 1059, y: 137}
+  Size: {x: 88.8, y: 40}
+  Title: zombies
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: I gave my zombies your potion just like you wanted
+  Text: I gave my zombies your potion just like you wanted!
   Notes: 
   AnswerLeft: 
   AnswerRight: 

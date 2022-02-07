@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 730
   m_EditorClassIdentifier: 
-  Position: {x: 1827, y: 134}
-  Size: {x: 95.33333, y: 40}
+  Position: {x: 1824, y: 7}
+  Size: {x: 96, y: 40}
   Title: memories
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
   Text: I concentrated on the grave, reaching into the deepest parts in my memories.

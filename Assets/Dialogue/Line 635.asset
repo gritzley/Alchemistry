@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 635
   m_EditorClassIdentifier: 
-  Position: {x: 1751, y: 104}
-  Size: {x: 109.333336, y: 40}
+  Position: {x: 1747, y: 94}
+  Size: {x: 108.8, y: 40}
   Title: necromaner
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: When they necromancer came, they...probably couldn't believe their luck.
+  Text: When the necromancer arrived, they...couldn't believe their luck.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

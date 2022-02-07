@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 571
   m_EditorClassIdentifier: 
   Position: {x: 1650, y: 316}
-  Size: {x: 100.66667, y: 40}
+  Size: {x: 100.8, y: 40}
   Title: tree stumb
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: Then they suddenly all turned around and darted at a hollow tree stump gather
+  Text: Then they suddenly all turned around and darted at a hollow tree stump, gathering
     around it.
   Notes: 
   AnswerLeft: 

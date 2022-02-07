@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Line 559
   m_EditorClassIdentifier: 
   Position: {x: 1790, y: 230}
-  Size: {x: 88.66667, y: 40}
+  Size: {x: 88, y: 40}
   Title: invisivle
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: They were just invisible. So when they arrived and just heard groaning, they
-    left spooked.
+  Text: "So when the necromancer arrived and just heard unidentified \ngroaning,
+    they left spooked."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

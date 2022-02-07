@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 685
   m_EditorClassIdentifier: 
-  Position: {x: 810, y: 120}
-  Size: {x: 90.66667, y: 40}
-  Title: Line 685
+  Position: {x: 909, y: 95}
+  Size: {x: 87.2, y: 40}
+  Title: Actually
   ParentQuest: {fileID: 11400000, guid: 69b0a45e83ef9f545b8c83aa1836378a, type: 2}
-  Text: Actually I don't care for this idle chit-chat.
+  Text: Actually, I don't care for this false politeness.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

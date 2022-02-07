@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 599
   m_EditorClassIdentifier: 
-  Position: {x: 2968.9167, y: 82.55554}
-  Size: {x: 100.66667, y: 40}
+  Position: {x: 2956.9167, y: 95.55554}
+  Size: {x: 100, y: 40}
   Title: old graves
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "While I was doing that I found some old \ngraves, I nearly forgot."
+  Text: "While I was doing that I found some old graves,\n I nearly forgot about."
   Notes: 
   AnswerLeft: 
   AnswerRight: 

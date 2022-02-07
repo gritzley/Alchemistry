@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 588
   m_EditorClassIdentifier: 
-  Position: {x: 2104, y: 417}
-  Size: {x: 76.66667, y: 40}
+  Position: {x: 2062, y: 416}
+  Size: {x: 76, y: 40}
   Title: notice
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: 'In all this chaos I didn''t even notice any

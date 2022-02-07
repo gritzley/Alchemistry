@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest 20
   m_EditorClassIdentifier: 
   Position: {x: 653, y: 12}
-  Size: {x: 158.66666, y: 40}
+  Size: {x: 156, y: 40}
   Title: Don't get kidnapped
   Customer: {fileID: 11400000, guid: b96f66eb64414fd40a0599748ea596eb, type: 2}
   PrecedingStartNode: {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
@@ -173,4 +173,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 049dff49efd015241907f9587ace9016, type: 2}
   - {fileID: 11400000, guid: a16295552c391484ea0693c785a102e5, type: 2}
   - {fileID: 11400000, guid: 9b15ff06525b1e34188399b02d4ece4f, type: 2}
-  isProofread: 0
+  isProofread: 1

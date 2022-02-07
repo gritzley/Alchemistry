@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 638
   m_EditorClassIdentifier: 
-  Position: {x: 1469, y: 303}
-  Size: {x: 82.66667, y: 40}
+  Position: {x: 1491, y: 123}
+  Size: {x: 82.4, y: 40}
   Title: strolled
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: They just idly strolled along my garden, getting in fights with the ghouls.
+  Text: They just idly strolled along in my garden, getting in fights with the ghouls.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

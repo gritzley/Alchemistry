@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 553
   m_EditorClassIdentifier: 
-  Position: {x: 1793, y: 185}
-  Size: {x: 58.666664, y: 40}
+  Position: {x: 1773, y: 182}
+  Size: {x: 58.4, y: 40}
   Title: run
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: At the end they just tried to get one safr ground and run away.
+  Text: In the end, they just tried to get back on safe ground to run away.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

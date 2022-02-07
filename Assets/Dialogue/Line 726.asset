@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 726
   m_EditorClassIdentifier: 
-  Position: {x: 2275, y: 86}
-  Size: {x: 65.333336, y: 40}
+  Position: {x: 2272, y: -32}
+  Size: {x: 64.8, y: 40}
   Title: help
   ParentQuest: {fileID: 11400000, guid: 8e4300ab69b5b6f4ebb1a3f26e21c5d9, type: 2}
-  Text: You couldn't help any other, could you?
+  Text: You couldn't find any other way to help me, could you?
   Notes: 
   AnswerLeft: 
   AnswerRight: 

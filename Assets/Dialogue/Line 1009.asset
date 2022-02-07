@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
+  m_Name: Line 1009
+  m_EditorClassIdentifier: 
+  Position: {x: 3341.5, y: 332}
+  Size: {x: 66.4, y: 40}
+  Title: after
+  ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
+  Text: Which bring me to a rather unfortunate event that happend right after my
+    succesful debut as god.
+  Notes: 
+  AnswerLeft: 
+  AnswerRight: 
+  HasAnswers: 0
+  _isReceivingState: 0
+  NextLeft: {fileID: 0}
+  NextRight: {fileID: 11400000, guid: 8852d04298d6cba4c808f2cdae2c2d6d, type: 2}

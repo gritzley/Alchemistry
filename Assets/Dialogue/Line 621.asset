@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 621
   m_EditorClassIdentifier: 
-  Position: {x: 1024, y: 49}
-  Size: {x: 89.33333, y: 40}
-  Title: Line 621
+  Position: {x: 1036, y: 68}
+  Size: {x: 83.2, y: 40}
+  Title: chance
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: They didn't stand a chance when the necromancers came
+  Text: They didn't stand a chance when the necromancers came.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

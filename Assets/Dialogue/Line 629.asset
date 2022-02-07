@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 629
   m_EditorClassIdentifier: 
-  Position: {x: 1374, y: 529}
-  Size: {x: 121.333336, y: 40}
+  Position: {x: 1377, y: 224}
+  Size: {x: 120.8, y: 40}
   Title: Smoke Breath
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: I gave the zombies your elixer like you told me to.
+  Text: 'I gave the zombies your
+
+    elixir as you told me to.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

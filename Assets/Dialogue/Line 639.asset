@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 639
   m_EditorClassIdentifier: 
-  Position: {x: 1588, y: 301}
-  Size: {x: 66, y: 40}
+  Position: {x: 1603, y: 125}
+  Size: {x: 65.6, y: 40}
   Title: tried
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: Then the necromancer came, my zombie tried to resist.
+  Text: 'Then the necromancer came.
+
+    My zombie tried to resist...'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

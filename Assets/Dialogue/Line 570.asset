@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Line 570
   m_EditorClassIdentifier: 
   Position: {x: 1529, y: 317}
-  Size: {x: 77.33333, y: 40}
+  Size: {x: 78.4, y: 40}
   Title: lizards
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'Jumping at lizards hiding in bushes, running off to smell flowers and mushroms,
+  Text: 'Jumping at lizards hiding in bushes, running off to smell flowers and mushrooms,
 
     focusing
-    on a tower far off town anf getting excited.'
+    on a tower far off the town and getting excited.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 615
   m_EditorClassIdentifier: 
   Position: {x: 4741.917, y: 96.55554}
-  Size: {x: 69.333336, y: 40}
+  Size: {x: 68.8, y: 40}
   Title: drink
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "Please, give me something to drink that'll \nhelp me discover this corpses
+  Text: "Please, give me something to drink that'll \nhelp me discover this corpse's
     identity."
   Notes: 
   AnswerLeft: 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Line 876
   m_EditorClassIdentifier: 
   Position: {x: 1192, y: 276}
-  Size: {x: 89.6, y: 40}
-  Title: Line 876
+  Size: {x: 93.6, y: 40}
+  Title: sunbathe
   ParentQuest: {fileID: 11400000, guid: 221339589534ce647ae395c194c04a0c, type: 2}
   Text: How are you today? I think it's an rather marvellous morning to sunbathe
     in my presence.

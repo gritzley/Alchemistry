@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 641
   m_EditorClassIdentifier: 
-  Position: {x: 1831, y: 303}
-  Size: {x: 72, y: 40}
+  Position: {x: 1821, y: 125}
+  Size: {x: 71.2, y: 40}
   Title: Harry
   ParentQuest: {fileID: 11400000, guid: d13ba7a0dd3793a49a760700a93991f8, type: 2}
-  Text: But there were to many in the end they just snatched Molly, Harry and Fred.
+  Text: But there were too many in the end. They just snatched Molly, Harry and Fred.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

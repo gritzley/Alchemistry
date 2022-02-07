@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Line 601
   m_EditorClassIdentifier: 
   Position: {x: 3194.9167, y: 87.55554}
-  Size: {x: 75.33333, y: 40}
+  Size: {x: 75.2, y: 40}
   Title: tidbits
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: 'trying to match the little tidbits i rememberd
+  Text: 'I was trying to match the little tidbits i rememberd
 
-    about their life.'
+    about their lifes.'
   Notes: 
   AnswerLeft: 
   AnswerRight: 

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 549
   m_EditorClassIdentifier: 
   Position: {x: 1328, y: 164}
-  Size: {x: 94.66667, y: 40}
+  Size: {x: 93.6, y: 40}
   Title: Ice touch
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: When i gave them the potion everything around them froze
+  Text: After I gave them your potion, everythign around them was covered in ice.
   Notes: 
   AnswerLeft: 
   AnswerRight: 

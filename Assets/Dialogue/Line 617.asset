@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43f9d9c8c580fa42a8ce5ff6a453d09, type: 3}
   m_Name: Line 617
   m_EditorClassIdentifier: 
-  Position: {x: 599, y: 89}
-  Size: {x: 102.66667, y: 40}
-  Title: "\xB4Good day"
+  Position: {x: 832, y: -32}
+  Size: {x: 98.4, y: 40}
+  Title: Good day.
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
   Text: Good day, my friend.
   Notes: 

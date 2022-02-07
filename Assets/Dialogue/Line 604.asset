@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Line 604
   m_EditorClassIdentifier: 
   Position: {x: 3511.9167, y: 87.55554}
-  Size: {x: 113.333336, y: 40}
+  Size: {x: 113.6, y: 40}
   Title: embarassing
   ParentQuest: {fileID: 11400000, guid: 587e0cfafd127f04e97f96ae077bde0c, type: 2}
-  Text: "I know, it's embarassing thing for a grave \ntender to say..."
+  Text: I know, it's embarassing thing for a gravetender to say...
   Notes: 
   AnswerLeft: 
   AnswerRight: 
