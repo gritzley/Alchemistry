@@ -15,7 +15,7 @@ public class Tool : Clickable
     [SerializeField] private List<Conversion> Conversions;
     private Animator animator;
     private Ingredient input, output;
-    public Transform IngredientSpot;
+    public Transform InputSpot, OutputSpot;
 
     void OnEnable()
     {
@@ -39,13 +39,12 @@ public class Tool : Clickable
     IEnumerator PutItemInTool(Ingredient ingredient)
     {   
         input = ingredient;
-        yield return ingredient.PickUp(IngredientSpot);
+        yield return ingredient.PickUp(InputSpot);
     }
 
     IEnumerator TransformItem()
     {
         Conversion[] conversions = Conversions.Where(e => e.Input == input.Definition).ToArray();
-        Debug.Log(conversions.Length);
         if (conversions.Length == 1)
         {
             input.IsClickable = false;
@@ -54,7 +53,7 @@ public class Tool : Clickable
 #else
             GameObject go = Instantiate(conversions[0].Output) as GameObject;
 #endif
-            go.transform.parent = IngredientSpot;
+            go.transform.parent = OutputSpot;
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale = Vector3.zero;
             output = go.GetComponent<Ingredient>();
